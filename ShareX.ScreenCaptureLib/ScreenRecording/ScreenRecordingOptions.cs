@@ -44,6 +44,7 @@ namespace ShareX.ScreenCaptureLib
         public Rectangle CaptureArea { get; set; }
         public float Duration { get; set; }
         public bool DrawCursor { get; set; }
+        public bool CaptureHDREnabled { get; set; }
         public FFmpegOptions FFmpeg { get; set; } = new FFmpegOptions();
 
         public string GetFFmpegCommands()
@@ -98,7 +99,17 @@ namespace ShareX.ScreenCaptureLib
             {
                 if (FFmpeg.IsVideoSourceSelected)
                 {
-                    if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.GDIGrab.Value, StringComparison.OrdinalIgnoreCase))
+                    if (ShouldUseDDAGrab())
+                    {
+                        if (FFmpeg.IsAudioSourceSelected)
+                        {
+                            AppendInputDevice(args, "dshow", true);
+                            args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
+                        }
+
+                        AppendDDAGrabVideoInput(args, framerate);
+                    }
+                    else if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.GDIGrab.Value, StringComparison.OrdinalIgnoreCase))
                     {
                         if (FFmpeg.IsAudioSourceSelected)
                         {
@@ -120,58 +131,6 @@ namespace ShareX.ScreenCaptureLib
                         args.Append($"-video_size {width}x{height} ");
                         args.Append($"-draw_mouse {cursor} ");
                         args.Append("-i desktop ");
-                    }
-                    else if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.DDAGrab.Value, StringComparison.OrdinalIgnoreCase))
-                    {
-                        if (FFmpeg.IsAudioSourceSelected)
-                        {
-                            AppendInputDevice(args, "dshow", true);
-                            args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
-                        }
-
-                        Screen[] screens = Screen.AllScreens.OrderBy(x => !x.Primary).ToArray();
-                        int monitorIndex = 0;
-                        Rectangle captureArea = screens[0].Bounds;
-                        int maxIntersectionArea = 0;
-
-                        for (int i = 0; i < screens.Length; i++)
-                        {
-                            Screen screen = screens[i];
-                            Rectangle intersection = Rectangle.Intersect(screen.Bounds, CaptureArea);
-                            int intersectionArea = intersection.Width * intersection.Height;
-
-                            if (intersectionArea > maxIntersectionArea)
-                            {
-                                maxIntersectionArea = intersectionArea;
-
-                                monitorIndex = i;
-                                captureArea = new Rectangle(intersection.X - screen.Bounds.X, intersection.Y - screen.Bounds.Y, intersection.Width, intersection.Height);
-                            }
-                        }
-
-                        if (FFmpeg.IsEvenSizeRequired)
-                        {
-                            captureArea = CaptureHelpers.EvenRectangleSize(captureArea);
-                        }
-
-                        // https://ffmpeg.org/ffmpeg-filters.html#ddagrab
-                        AppendInputDevice(args, "lavfi", false);
-                        args.Append("-i ddagrab=");
-                        args.Append($"output_idx={monitorIndex}:"); // DXGI Output Index to capture.
-                        args.Append($"draw_mouse={DrawCursor.ToString().ToLowerInvariant()}:"); // Whether to draw the mouse cursor.
-                        args.Append($"framerate={framerate}:"); // Framerate at which the desktop will be captured.
-                        args.Append($"offset_x={captureArea.X}:"); // Horizontal offset of the captured video.
-                        args.Append($"offset_y={captureArea.Y}:"); // Vertical offset of the captured video.
-                        args.Append($"video_size={captureArea.Width}x{captureArea.Height}:"); // Specify the size of the captured video.
-                        args.Append("output_fmt=bgra"); // Desired filter output format.
-
-                        if (FFmpeg.VideoCodec != FFmpegVideoCodec.h264_nvenc && FFmpeg.VideoCodec != FFmpegVideoCodec.hevc_nvenc)
-                        {
-                            args.Append(",hwdownload");
-                            args.Append(",format=bgra");
-                        }
-
-                        args.Append(" ");
                     }
                     else
                     {
@@ -336,6 +295,77 @@ namespace ShareX.ScreenCaptureLib
             args.Append($"\"{output}\"");
 
             return args.ToString();
+        }
+
+        private bool ShouldUseDDAGrab()
+        {
+            if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.DDAGrab.Value, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            return CaptureHDREnabled &&
+                FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.GDIGrab.Value, StringComparison.OrdinalIgnoreCase);
+        }
+
+        private void AppendDDAGrabVideoInput(StringBuilder args, string framerate)
+        {
+            Screen[] screens = Screen.AllScreens.OrderBy(x => !x.Primary).ToArray();
+            int monitorIndex = 0;
+            Rectangle captureArea = screens[0].Bounds;
+            int maxIntersectionArea = 0;
+
+            for (int i = 0; i < screens.Length; i++)
+            {
+                Screen screen = screens[i];
+                Rectangle intersection = Rectangle.Intersect(screen.Bounds, CaptureArea);
+                int intersectionArea = intersection.Width * intersection.Height;
+
+                if (intersectionArea > maxIntersectionArea)
+                {
+                    maxIntersectionArea = intersectionArea;
+
+                    monitorIndex = i;
+                    captureArea = new Rectangle(intersection.X - screen.Bounds.X, intersection.Y - screen.Bounds.Y, intersection.Width, intersection.Height);
+                }
+            }
+
+            if (FFmpeg.IsEvenSizeRequired)
+            {
+                captureArea = CaptureHelpers.EvenRectangleSize(captureArea);
+            }
+
+            // https://ffmpeg.org/ffmpeg-filters.html#ddagrab
+            AppendInputDevice(args, "lavfi", false);
+            args.Append("-i ddagrab=");
+            args.Append($"output_idx={monitorIndex}:");
+            args.Append($"draw_mouse={DrawCursor.ToString().ToLowerInvariant()}:");
+            args.Append($"framerate={framerate}:");
+            args.Append($"offset_x={captureArea.X}:");
+            args.Append($"offset_y={captureArea.Y}:");
+            args.Append($"video_size={captureArea.Width}x{captureArea.Height}:");
+
+            if (CaptureHDREnabled)
+            {
+                // Prefer scRGB (RGBA16F) from DXGI, tonemap to SDR bgra for encoding.
+                args.Append("output_fmt=16bit");
+                args.Append(",hwdownload,format=gbrpf32le");
+                args.Append(",zscale=transfer=linear:npl=100");
+                args.Append(",tonemap=tonemap=bt2390:desat=0");
+                args.Append(",format=bgra");
+            }
+            else
+            {
+                args.Append("output_fmt=bgra");
+
+                if (FFmpeg.VideoCodec != FFmpegVideoCodec.h264_nvenc && FFmpeg.VideoCodec != FFmpegVideoCodec.hevc_nvenc)
+                {
+                    args.Append(",hwdownload");
+                    args.Append(",format=bgra");
+                }
+            }
+
+            args.Append(" ");
         }
 
         private void AppendInputDevice(StringBuilder args, string inputDevice, bool audioSource)

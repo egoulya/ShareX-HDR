@@ -285,7 +285,8 @@ namespace ShareX
                                 Duration = duration,
                                 OutputPath = path,
                                 CaptureArea = captureRectangle,
-                                DrawCursor = taskSettings.CaptureSettings.ScreenRecordShowCursor
+                                DrawCursor = taskSettings.CaptureSettings.ScreenRecordShowCursor,
+                                CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled
                             };
 
                             Screenshot screenshot = TaskHelpers.GetScreenshot(taskSettings);
