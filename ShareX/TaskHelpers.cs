@@ -2418,7 +2418,8 @@ namespace ShareX
                 CaptureShadow = taskSettings.CaptureSettings.CaptureShadow,
                 ShadowOffset = taskSettings.CaptureSettings.CaptureShadowOffset,
                 AutoHideTaskbar = taskSettings.CaptureSettings.CaptureAutoHideTaskbar,
-                HDRScreenshotColorCorrection = taskSettings.CaptureSettings.HDRScreenshotColorCorrection
+                HDRScreenshotColorCorrection = taskSettings.CaptureSettings.HDRScreenshotColorCorrection,
+                CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled
             };
 
             return screenshot;
