@@ -117,7 +117,7 @@ namespace ShareX.HelpersLib
             bool result = errorCode == 0;
             if (!result && ShowError)
             {
-                OutputBox.Show(Output.ToString(), Resources.FFmpegError, true);
+                OutputBoxWindowIntegration.Show(Output.ToString(), Localization.Strings.FFmpegCLIManager_Error_title, true);
             }
             return result;
         }
