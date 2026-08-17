@@ -180,9 +180,10 @@ ShareX is available from the official website, GitHub releases, Microsoft Store 
 For the safest download options, use the official links below.
 
 ## Links
+* This fork (ShareX-HDR): https://github.com/egoulya/ShareX-HDR
 * Official website: https://getsharex.com
 * Downloads: https://getsharex.com/downloads
-* GitHub: https://github.com/ShareX/ShareX
+* Upstream GitHub: https://github.com/ShareX/ShareX
 * Changelog: https://getsharex.com/changelog
 * Screenshots: https://getsharex.com/screenshots
 * Privacy policy: https://getsharex.com/privacy-policy
@@ -193,6 +194,8 @@ For the safest download options, use the official links below.
 * Steam page: https://store.steampowered.com/app/400040/ShareX/
 * Microsoft Store page: https://apps.microsoft.com/detail/9nblggh4z1sp
 * ShareX related projects on GitHub: https://github.com/topics/sharex
+* Psyda HDR fork: https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix
+* License: [LICENSE.txt](./LICENSE.txt)
 
 ## Documents
 * Image effects: https://getsharex.com/image-effects
