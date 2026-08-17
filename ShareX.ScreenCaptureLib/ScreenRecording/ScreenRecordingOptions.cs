@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -41,10 +41,12 @@ namespace ShareX.ScreenCaptureLib
         public string InputPath { get; set; }
         public string OutputPath { get; set; }
         public int FPS { get; set; }
+        public int GIFFPS { get; set; }
         public Rectangle CaptureArea { get; set; }
         public float Duration { get; set; }
         public bool DrawCursor { get; set; }
         public bool CaptureHDREnabled { get; set; }
+        public bool HdrDxgiPipeRecording { get; set; }
         public FFmpegOptions FFmpeg { get; set; } = new FFmpegOptions();
 
         public string GetFFmpegCommands()
@@ -84,6 +86,50 @@ namespace ShareX.ScreenCaptureLib
             return commands.Trim();
         }
 
+        public string GetFFmpegHdrDxgiPipeArgs(int width, int height)
+        {
+            StringBuilder args = new StringBuilder();
+            string framerate = FPS.ToString(CultureInfo.InvariantCulture);
+
+            args.Append("-hide_banner -loglevel error -nostdin ");
+
+            if (FFmpeg.IsAudioSourceSelected)
+            {
+                AppendInputDevice(args, "dshow", true);
+                args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
+            }
+
+            args.Append($"-f rawvideo -pix_fmt bgr24 -video_size {width}x{height} -framerate {framerate} -i pipe:0 ");
+
+            if (FFmpeg.IsAudioSourceSelected)
+            {
+                args.Append("-map 1:v:0 -map 0:a? ");
+            }
+            else
+            {
+                args.Append("-map 0:v:0 ");
+            }
+
+            if (!string.IsNullOrEmpty(FFmpeg.UserArgs))
+            {
+                args.Append(FFmpeg.UserArgs + " ");
+            }
+
+            AppendVideoEncodingArgs(args, framerate, isHdrTonemapPass: false);
+            args.Append("-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range pc ");
+
+            if (Duration > 0)
+            {
+                args.Append($"-t {Duration.ToString("0.0", CultureInfo.InvariantCulture)} ");
+            }
+
+            args.Append("-y ");
+            string outputExtension = IsLossless ? "mp4" : FFmpeg.Extension;
+            args.Append($"\"{Path.ChangeExtension(OutputPath, outputExtension)}\"");
+
+            return args.ToString();
+        }
+
         public string GetFFmpegArgs(bool isCustom = false)
         {
             if (IsRecording && !FFmpeg.IsVideoSourceSelected && !FFmpeg.IsAudioSourceSelected)
@@ -107,7 +153,14 @@ namespace ShareX.ScreenCaptureLib
                             args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
                         }
 
-                        AppendDDAGrabVideoInput(args, framerate);
+                        if (CaptureHDREnabled && IsLossless)
+                        {
+                            AppendDDAGrabFilterComplex(args, framerate);
+                        }
+                        else
+                        {
+                            AppendDDAGrabVideoInput(args, framerate);
+                        }
                     }
                     else if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.GDIGrab.Value, StringComparison.OrdinalIgnoreCase))
                     {
@@ -167,101 +220,7 @@ namespace ShareX.ScreenCaptureLib
 
             if (FFmpeg.IsVideoSourceSelected)
             {
-                if (IsLossless || FFmpeg.VideoCodec != FFmpegVideoCodec.apng)
-                {
-                    string videoCodec;
-
-                    if (IsLossless)
-                    {
-                        videoCodec = FFmpegVideoCodec.libx264.ToString();
-                    }
-                    else if (FFmpeg.VideoCodec == FFmpegVideoCodec.libvpx_vp9)
-                    {
-                        videoCodec = "libvpx-vp9";
-                    }
-                    else
-                    {
-                        videoCodec = FFmpeg.VideoCodec.ToString();
-                    }
-
-                    args.Append($"-c:v {videoCodec} ");
-                    args.Append($"-r {framerate} "); // output FPS
-                }
-
-                if (IsLossless)
-                {
-                    args.Append($"-preset {FFmpegPreset.ultrafast} ");
-                    args.Append($"-tune {FFmpegTune.zerolatency} ");
-                    args.Append("-qp 0 ");
-                }
-                else
-                {
-                    switch (FFmpeg.VideoCodec)
-                    {
-                        case FFmpegVideoCodec.libx264: // https://trac.ffmpeg.org/wiki/Encode/H.264
-                        case FFmpegVideoCodec.libx265: // https://trac.ffmpeg.org/wiki/Encode/H.265
-                            args.Append($"-preset {FFmpeg.x264_Preset} ");
-                            if (IsRecording) args.Append($"-tune {FFmpegTune.zerolatency} ");
-                            if (FFmpeg.x264_Use_Bitrate)
-                            {
-                                args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
-                            }
-                            else
-                            {
-                                args.Append($"-crf {FFmpeg.x264_CRF} ");
-                            }
-                            args.Append("-pix_fmt yuv420p "); // -pix_fmt yuv420p required otherwise can't stream in Chrome
-                            args.Append("-movflags +faststart "); // This will move some information to the beginning of your file and allow the video to begin playing before it is completely downloaded by the viewer
-                            break;
-                        case FFmpegVideoCodec.libvpx: // https://trac.ffmpeg.org/wiki/Encode/VP8
-                        case FFmpegVideoCodec.libvpx_vp9: // https://trac.ffmpeg.org/wiki/Encode/VP9
-                            if (IsRecording) args.Append("-deadline realtime ");
-                            args.Append($"-b:v {FFmpeg.VPx_Bitrate}k ");
-                            args.Append("-pix_fmt yuv420p "); // -pix_fmt yuv420p required otherwise causing issues in Chrome related to WebM transparency support
-                            break;
-                        case FFmpegVideoCodec.libxvid: // https://trac.ffmpeg.org/wiki/Encode/MPEG-4
-                            args.Append($"-qscale:v {FFmpeg.XviD_QScale} ");
-                            break;
-                        case FFmpegVideoCodec.h264_nvenc: // https://trac.ffmpeg.org/wiki/HWAccelIntro#NVENC
-                        case FFmpegVideoCodec.hevc_nvenc:
-                            args.Append($"-preset {FFmpeg.NVENC_Preset} ");
-                            args.Append($"-tune {FFmpeg.NVENC_Tune} ");
-                            args.Append($"-b:v {FFmpeg.NVENC_Bitrate}k ");
-                            args.Append("-movflags +faststart "); // This will move some information to the beginning of your file and allow the video to begin playing before it is completely downloaded by the viewer
-                            break;
-                        case FFmpegVideoCodec.h264_amf:
-                        case FFmpegVideoCodec.hevc_amf:
-                            args.Append($"-usage {FFmpeg.AMF_Usage} ");
-                            args.Append($"-quality {FFmpeg.AMF_Quality} ");
-                            args.Append($"-b:v {FFmpeg.AMF_Bitrate}k ");
-                            args.Append("-pix_fmt yuv420p ");
-                            break;
-                        case FFmpegVideoCodec.h264_qsv: // https://trac.ffmpeg.org/wiki/Hardware/QuickSync
-                        case FFmpegVideoCodec.hevc_qsv:
-                            args.Append($"-preset {FFmpeg.QSV_Preset} ");
-                            args.Append($"-b:v {FFmpeg.QSV_Bitrate}k ");
-                            break;
-                        case FFmpegVideoCodec.libwebp: // https://www.ffmpeg.org/ffmpeg-codecs.html#libwebp
-                            args.Append("-lossless 0 ");
-                            args.Append("-preset default ");
-                            args.Append("-loop 0 ");
-                            break;
-                        case FFmpegVideoCodec.apng:
-                            args.Append("-f apng ");
-                            args.Append("-plays 0 ");
-                            break;
-                    }
-
-                    switch (FFmpeg.VideoCodec)
-                    {
-                        case FFmpegVideoCodec.libx265:
-                        case FFmpegVideoCodec.hevc_nvenc:
-                        case FFmpegVideoCodec.hevc_amf:
-                        case FFmpegVideoCodec.hevc_qsv:
-                            args.Append("-tag:v hvc1 "); // https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility
-                            break;
-                    }
-                }
+                AppendVideoEncodingArgs(args, framerate, isHdrTonemapPass: false);
             }
 
             if (FFmpeg.IsAudioSourceSelected)
@@ -297,21 +256,190 @@ namespace ShareX.ScreenCaptureLib
             return args.ToString();
         }
 
-        private bool ShouldUseDDAGrab()
+        private void AppendVideoEncodingArgs(StringBuilder args, string framerate, bool isHdrTonemapPass)
         {
-            if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.DDAGrab.Value, StringComparison.OrdinalIgnoreCase))
+            if (IsLossless || FFmpeg.VideoCodec != FFmpegVideoCodec.apng)
             {
-                return true;
+                if (!(IsLossless && CaptureHDREnabled && IsRecording && !HdrDxgiPipeRecording))
+                {
+                    string videoCodec;
+
+                    if (IsLossless)
+                    {
+                        videoCodec = FFmpegVideoCodec.libx264.ToString();
+                    }
+                    else if (FFmpeg.VideoCodec == FFmpegVideoCodec.libvpx_vp9)
+                    {
+                        videoCodec = "libvpx-vp9";
+                    }
+                    else
+                    {
+                        videoCodec = FFmpeg.VideoCodec.ToString();
+                    }
+
+                    args.Append($"-c:v {videoCodec} ");
+                }
+
+                if (!isHdrTonemapPass)
+                {
+                    args.Append($"-r {framerate} "); // output FPS
+                }
             }
 
-            return CaptureHDREnabled &&
-                FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.GDIGrab.Value, StringComparison.OrdinalIgnoreCase);
+            if (IsLossless)
+            {
+                if (CaptureHDREnabled && IsRecording && !HdrDxgiPipeRecording)
+                {
+                    // gbrpf32le needs ffv1 v4 (experimental/disabled in bundled FFmpeg). Use gbrp16le v3 instead.
+                    args.Append("-c:v ffv1 -level 3 -pix_fmt gbrp16le -color_primaries bt709 -color_trc linear -colorspace bt709 -color_range pc ");
+                }
+                else
+                {
+                    args.Append($"-preset {FFmpegPreset.ultrafast} ");
+                    args.Append($"-tune {FFmpegTune.zerolatency} ");
+                    args.Append("-qp 0 ");
+                }
+            }
+            else
+            {
+                switch (FFmpeg.VideoCodec)
+                {
+                    case FFmpegVideoCodec.libx264: // https://trac.ffmpeg.org/wiki/Encode/H.264
+                    case FFmpegVideoCodec.libx265: // https://trac.ffmpeg.org/wiki/Encode/H.265
+                        args.Append($"-preset {FFmpeg.x264_Preset} ");
+                        if (IsRecording && !isHdrTonemapPass) args.Append($"-tune {FFmpegTune.zerolatency} ");
+                        if (FFmpeg.x264_Use_Bitrate)
+                        {
+                            args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
+                        }
+                        else
+                        {
+                            args.Append($"-crf {FFmpeg.x264_CRF} ");
+                        }
+                        args.Append("-pix_fmt yuv420p "); // -pix_fmt yuv420p required otherwise can't stream in Chrome
+                        if (isHdrTonemapPass)
+                        {
+                            args.Append("-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range pc ");
+                        }
+
+                        args.Append("-movflags +faststart "); // This will move some information to the beginning of your file and allow the video to begin playing before it is completely downloaded by the viewer
+                        break;
+                    case FFmpegVideoCodec.libvpx: // https://trac.ffmpeg.org/wiki/Encode/VP8
+                    case FFmpegVideoCodec.libvpx_vp9: // https://trac.ffmpeg.org/wiki/Encode/VP9
+                        if (IsRecording && !isHdrTonemapPass) args.Append("-deadline realtime ");
+                        args.Append($"-b:v {FFmpeg.VPx_Bitrate}k ");
+                        args.Append("-pix_fmt yuv420p "); // -pix_fmt yuv420p required otherwise causing issues in Chrome related to WebM transparency support
+                        break;
+                    case FFmpegVideoCodec.libxvid: // https://trac.ffmpeg.org/wiki/Encode/MPEG-4
+                        args.Append($"-qscale:v {FFmpeg.XviD_QScale} ");
+                        break;
+                    case FFmpegVideoCodec.h264_nvenc: // https://trac.ffmpeg.org/wiki/HWAccelIntro#NVENC
+                    case FFmpegVideoCodec.hevc_nvenc:
+                        args.Append($"-preset {FFmpeg.NVENC_Preset} ");
+                        args.Append($"-tune {FFmpeg.NVENC_Tune} ");
+                        args.Append($"-b:v {FFmpeg.NVENC_Bitrate}k ");
+                        args.Append("-movflags +faststart "); // This will move some information to the beginning of your file and allow the video to begin playing before it is completely downloaded by the viewer
+                        break;
+                    case FFmpegVideoCodec.h264_amf:
+                    case FFmpegVideoCodec.hevc_amf:
+                        args.Append($"-usage {FFmpeg.AMF_Usage} ");
+                        args.Append($"-quality {FFmpeg.AMF_Quality} ");
+                        args.Append($"-b:v {FFmpeg.AMF_Bitrate}k ");
+                        args.Append("-pix_fmt yuv420p ");
+                        break;
+                    case FFmpegVideoCodec.h264_qsv: // https://trac.ffmpeg.org/wiki/Hardware/QuickSync
+                    case FFmpegVideoCodec.hevc_qsv:
+                        args.Append($"-preset {FFmpeg.QSV_Preset} ");
+                        args.Append($"-b:v {FFmpeg.QSV_Bitrate}k ");
+                        break;
+                    case FFmpegVideoCodec.libwebp: // https://www.ffmpeg.org/ffmpeg-codecs.html#libwebp
+                        args.Append("-lossless 0 ");
+                        args.Append("-preset default ");
+                        args.Append("-loop 0 ");
+                        break;
+                    case FFmpegVideoCodec.apng:
+                        args.Append("-f apng ");
+                        args.Append("-plays 0 ");
+                        break;
+                }
+
+                switch (FFmpeg.VideoCodec)
+                {
+                    case FFmpegVideoCodec.libx265:
+                    case FFmpegVideoCodec.hevc_nvenc:
+                    case FFmpegVideoCodec.hevc_amf:
+                    case FFmpegVideoCodec.hevc_qsv:
+                        args.Append("-tag:v hvc1 "); // https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility
+                        break;
+                }
+            }
         }
 
-        private void AppendDDAGrabVideoInput(StringBuilder args, string framerate)
+        private void AppendDDAGrabFilterComplex(StringBuilder args, string framerate)
+        {
+            args.Append("-filter_complex \"");
+            args.Append(BuildDDAGrabGraph(framerate, forFilterComplex: true));
+            args.Append("\" ");
+
+            if (FFmpeg.IsAudioSourceSelected)
+            {
+                args.Append("-map \"[v]\" -map 0:a ");
+            }
+            else
+            {
+                args.Append("-map \"[v]\" ");
+            }
+        }
+
+        private string BuildDDAGrabGraph(string framerate, bool forFilterComplex)
+        {
+            Rectangle captureArea = GetDDAGrabCaptureArea(out int monitorIndex);
+
+            StringBuilder graph = new StringBuilder();
+
+            if (forFilterComplex)
+            {
+                graph.Append("ddagrab=");
+            }
+
+            graph.Append($"output_idx={monitorIndex}:");
+            graph.Append($"draw_mouse={DrawCursor.ToString().ToLowerInvariant()}:");
+            graph.Append($"framerate={framerate}:");
+            graph.Append($"offset_x={captureArea.X}:");
+            graph.Append($"offset_y={captureArea.Y}:");
+            graph.Append($"video_size={captureArea.Width}x{captureArea.Height}:");
+
+            if (CaptureHDREnabled)
+            {
+                float normScale = Screenshot.GetSdrWhiteNormalizationScale();
+                string scale = normScale.ToString("0.######", CultureInfo.InvariantCulture);
+
+                graph.Append("output_fmt=rgbaf16,hwdownload,format=rgbaf16,format=gbrpf32le,");
+                graph.Append($"colorchannelmixer=rr={scale}:gg={scale}:bb={scale},");
+                graph.Append("format=gbrp16le");
+            }
+            else
+            {
+                graph.Append("output_fmt=bgra");
+
+                if (FFmpeg.VideoCodec != FFmpegVideoCodec.h264_nvenc && FFmpeg.VideoCodec != FFmpegVideoCodec.hevc_nvenc)
+                {
+                    graph.Append(",hwdownload,format=bgra");
+                }
+            }
+
+            if (forFilterComplex)
+            {
+                graph.Append("[v]");
+            }
+
+            return graph.ToString();
+        }
+
+        private Rectangle GetDDAGrabCaptureArea(out int monitorIndex)
         {
             Screen[] screens = Screen.AllScreens.OrderBy(x => !x.Primary).ToArray();
-            int monitorIndex = 0;
+            monitorIndex = 0;
             Rectangle captureArea = screens[0].Bounds;
             int maxIntersectionArea = 0;
 
@@ -335,6 +463,28 @@ namespace ShareX.ScreenCaptureLib
                 captureArea = CaptureHelpers.EvenRectangleSize(captureArea);
             }
 
+            return captureArea;
+        }
+
+        private bool ShouldUseDDAGrab()
+        {
+            if (CaptureHDREnabled)
+            {
+                return true;
+            }
+
+            if (FFmpeg.VideoSource.Equals(FFmpegCaptureDevice.DDAGrab.Value, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void AppendDDAGrabVideoInput(StringBuilder args, string framerate)
+        {
+            Rectangle captureArea = GetDDAGrabCaptureArea(out int monitorIndex);
+
             // https://ffmpeg.org/ffmpeg-filters.html#ddagrab
             AppendInputDevice(args, "lavfi", false);
             args.Append("-i ddagrab=");
@@ -347,12 +497,9 @@ namespace ShareX.ScreenCaptureLib
 
             if (CaptureHDREnabled)
             {
-                // Prefer scRGB (RGBA16F) from DXGI, tonemap to SDR bgra for encoding.
-                args.Append("output_fmt=16bit");
-                args.Append(",hwdownload,format=gbrpf32le");
-                args.Append(",zscale=transfer=linear:npl=100");
-                args.Append(",tonemap=tonemap=bt2390:desat=0");
-                args.Append(",format=bgra");
+                args.Append("output_fmt=rgbaf16");
+                args.Append(",hwdownload");
+                args.Append(",format=rgbaf16");
             }
             else
             {

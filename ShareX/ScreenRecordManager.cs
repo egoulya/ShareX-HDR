@@ -96,19 +96,23 @@ namespace ShareX
                 taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding = true;
             }
 
+            TaskSettingsCapture captureSettings = taskSettings.CaptureSettingsReference;
+            int maxMonitorHz = CaptureHelpers.GetMaximumMonitorRefreshRate();
             int fps;
+            bool hdrRecording = captureSettings.CaptureHDREnabled;
 
-            if (taskSettings.CaptureSettings.FFmpegOptions.VideoCodec == FFmpegVideoCodec.gif)
+            if (captureSettings.FFmpegOptions.VideoCodec == FFmpegVideoCodec.gif)
             {
-                fps = taskSettings.CaptureSettings.GIFFPS;
+                fps = CaptureHelpers.ClampGIFFPS(captureSettings.GIFFPS);
             }
             else
             {
-                fps = taskSettings.CaptureSettings.ScreenRecordFPS;
+                fps = CaptureHelpers.ClampRecordingFPS(captureSettings.ScreenRecordFPS);
             }
 
-            DebugHelper.WriteLine("Starting screen recording. Video encoder: \"{0}\", Audio encoder: \"{1}\", FPS: {2}",
-                taskSettings.CaptureSettings.FFmpegOptions.VideoCodec.GetDescription(), taskSettings.CaptureSettings.FFmpegOptions.AudioCodec.GetDescription(), fps);
+            DebugHelper.WriteLine("Starting screen recording. Video encoder: \"{0}\", Audio encoder: \"{1}\", FPS: {2} (monitor max {3} Hz){4}",
+                captureSettings.FFmpegOptions.VideoCodec.GetDescription(), captureSettings.FFmpegOptions.AudioCodec.GetDescription(), fps, maxMonitorHz,
+                hdrRecording ? ", HDR: DXGI capture + direct encode" : "");
 
             if (!TaskHelpers.CheckFFmpeg(taskSettings))
             {
@@ -207,6 +211,8 @@ namespace ShareX
                 try
                 {
                     string extension;
+                    bool hdrRecording = taskSettings.CaptureSettings.CaptureHDREnabled;
+
                     if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding)
                     {
                         extension = "mp4";
@@ -328,7 +334,8 @@ namespace ShareX
                     DebugHelper.WriteException(e);
                 }
 
-                if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding && !abortRequested && screenRecorder != null && File.Exists(path))
+                if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding &&
+                    !abortRequested && screenRecorder != null && File.Exists(path))
                 {
                     recordForm.ChangeState(ScreenRecordState.Encoding);
 
@@ -404,7 +411,10 @@ namespace ShareX
 
         private static void ScreenRecorder_EncodingProgressChanged(int progress)
         {
-            recordForm.ChangeStateProgress(progress);
+            if (recordForm != null && !recordForm.IsDisposed)
+            {
+                recordForm.InvokeSafe(() => recordForm.ChangeStateProgress(progress));
+            }
         }
 
         private static string ProcessTwoPassEncoding(string input, TaskMetadata metadata, TaskSettings taskSettings, bool deleteInputFile = true)

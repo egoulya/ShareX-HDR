@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -41,50 +41,85 @@ namespace ShareX.HelpersLib
 
         public virtual int Open(string path, string args = null)
         {
-            if (File.Exists(path))
+            if (!StartProcess(path, args))
             {
-                using (process = new Process())
-                {
-                    ProcessStartInfo psi = new ProcessStartInfo()
-                    {
-                        FileName = path,
-                        WorkingDirectory = Path.GetDirectoryName(path),
-                        Arguments = args,
-                        UseShellExecute = false,
-                        CreateNoWindow = true,
-                        RedirectStandardInput = true,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true,
-                        StandardOutputEncoding = Encoding.UTF8,
-                        StandardErrorEncoding = Encoding.UTF8
-                    };
-
-                    process.EnableRaisingEvents = true;
-                    if (psi.RedirectStandardOutput) process.OutputDataReceived += cli_OutputDataReceived;
-                    if (psi.RedirectStandardError) process.ErrorDataReceived += cli_ErrorDataReceived;
-                    process.StartInfo = psi;
-
-                    DebugHelper.WriteLine($"CLI: \"{psi.FileName}\" {psi.Arguments}");
-                    process.Start();
-
-                    if (psi.RedirectStandardOutput) process.BeginOutputReadLine();
-                    if (psi.RedirectStandardError) process.BeginErrorReadLine();
-
-                    try
-                    {
-                        IsProcessRunning = true;
-                        process.WaitForExit();
-                    }
-                    finally
-                    {
-                        IsProcessRunning = false;
-                    }
-
-                    return process.ExitCode;
-                }
+                return -1;
             }
 
-            return -1;
+            try
+            {
+                IsProcessRunning = true;
+                process.WaitForExit();
+                return process.ExitCode;
+            }
+            finally
+            {
+                IsProcessRunning = false;
+            }
+        }
+
+        public bool StartProcess(string path, string args = null)
+        {
+            if (!File.Exists(path))
+            {
+                return false;
+            }
+
+            process?.Dispose();
+            process = new Process();
+
+            ProcessStartInfo psi = new ProcessStartInfo()
+            {
+                FileName = path,
+                WorkingDirectory = Path.GetDirectoryName(path),
+                Arguments = args,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardInput = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                StandardOutputEncoding = Encoding.UTF8,
+                StandardErrorEncoding = Encoding.UTF8
+            };
+
+            process.EnableRaisingEvents = true;
+            if (psi.RedirectStandardOutput) process.OutputDataReceived += cli_OutputDataReceived;
+            if (psi.RedirectStandardError) process.ErrorDataReceived += cli_ErrorDataReceived;
+            process.StartInfo = psi;
+
+            DebugHelper.WriteLine($"CLI: \"{psi.FileName}\" {psi.Arguments}");
+            process.Start();
+
+            if (psi.RedirectStandardOutput) process.BeginOutputReadLine();
+            if (psi.RedirectStandardError) process.BeginErrorReadLine();
+
+            IsProcessRunning = true;
+            return true;
+        }
+
+        public Stream GetStandardInputStream()
+        {
+            return process?.StandardInput?.BaseStream;
+        }
+
+        public int FinishProcess()
+        {
+            if (process == null || !IsProcessRunning)
+            {
+                return -1;
+            }
+
+            try
+            {
+                process.StandardInput.Close();
+            }
+            catch
+            {
+            }
+
+            process.WaitForExit();
+            IsProcessRunning = false;
+            return process.ExitCode;
         }
 
         private void cli_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -115,7 +150,13 @@ namespace ShareX.HelpersLib
         {
             if (IsProcessRunning && process != null)
             {
-                process.CloseMainWindow();
+                try
+                {
+                    process.StandardInput.Close();
+                }
+                catch
+                {
+                }
             }
         }
 

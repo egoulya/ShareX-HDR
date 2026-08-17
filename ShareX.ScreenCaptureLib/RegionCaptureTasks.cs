@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -101,9 +101,10 @@ namespace ShareX.ScreenCaptureLib
             return false;
         }
 
-        public static PointInfo GetPointInfo(RegionCaptureOptions options, Bitmap canvas = null)
+        public static PointInfo GetPointInfo(RegionCaptureOptions options, Bitmap canvas = null, bool captureHDREnabled = false)
         {
             RegionCaptureOptions newOptions = GetRegionCaptureOptions(options);
+            newOptions.CaptureHDREnabled = captureHDREnabled;
             newOptions.DetectWindows = false;
             newOptions.BackgroundDimStrength = 0;
 

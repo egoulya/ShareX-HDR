@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -111,5 +111,6 @@ namespace ShareX.ScreenCaptureLib
 
         // Screen color picker
         public string ScreenColorPickerInfoText = "";
+        public bool CaptureHDREnabled = false;
     }
 }

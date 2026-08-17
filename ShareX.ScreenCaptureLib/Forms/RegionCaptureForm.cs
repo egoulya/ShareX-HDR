@@ -123,7 +123,11 @@ namespace ShareX.ScreenCaptureLib
 
                 if (canvas == null)
                 {
-                    canvas = new Screenshot().CaptureRectangle(ScreenBounds);
+                    Screenshot screenshot = new Screenshot()
+                    {
+                        CaptureHDREnabled = Options.CaptureHDREnabled
+                    };
+                    canvas = screenshot.CaptureRectangle(ScreenBounds);
                 }
 
                 Helpers.LockCursorToWindow(this);
@@ -134,7 +138,11 @@ namespace ShareX.ScreenCaptureLib
 
                 if (canvas == null)
                 {
-                    canvas = new Screenshot().CaptureRectangle(ScreenBounds);
+                    Screenshot screenshot = new Screenshot()
+                    {
+                        CaptureHDREnabled = Options.CaptureHDREnabled
+                    };
+                    canvas = screenshot.CaptureRectangle(ScreenBounds);
                 }
             }
 

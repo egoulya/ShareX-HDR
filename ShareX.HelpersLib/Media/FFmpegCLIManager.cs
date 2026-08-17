@@ -102,6 +102,26 @@ namespace ShareX.HelpersLib
             return result;
         }
 
+        public bool Start(string args)
+        {
+            StopRequested = false;
+            closeTryCount = 0;
+            Output.Clear();
+            return StartProcess(FFmpegPath, args);
+        }
+
+        public bool Finish()
+        {
+            IsEncoding = false;
+            int errorCode = FinishProcess();
+            bool result = errorCode == 0;
+            if (!result && ShowError)
+            {
+                OutputBox.Show(Output.ToString(), Resources.FFmpegError, true);
+            }
+            return result;
+        }
+
         public override void Close()
         {
             StopRequested = true;

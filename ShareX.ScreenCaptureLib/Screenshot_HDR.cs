@@ -447,6 +447,10 @@ namespace ShareX.ScreenCaptureLib
         // Main HDR Capture (multi-monitor aware)
         // ====================================================================
 
+        public static float GetSdrWhiteLevelNits() => GetSdrWhiteNits();
+
+        public static float GetSdrWhiteNormalizationScale() => 80f / GetSdrWhiteNits();
+
         private static float GetSdrWhiteNits()
         {
             try
@@ -986,6 +990,47 @@ namespace ShareX.ScreenCaptureLib
         // ====================================================================
         // Color Math
         // ====================================================================
+
+        /// <summary>
+        /// Converts one gbrpf32le frame (linear scRGB from ddagrab) to bgr24 using the
+        /// same normalization, BT.2390 tonemap, and sRGB OETF as HDR screenshots.
+        /// </summary>
+        public static void TonemapLinearScRgbFrameToBgr24(byte[] gbrpf32le, byte[] bgr24, int width, int height, bool applyNormalization = true)
+        {
+            float normScale = applyNormalization ? GetSdrWhiteNormalizationScale() : 1f;
+            int rowBytesIn = width * 12;
+            int rowBytesOut = width * 3;
+
+            System.Threading.Tasks.Parallel.For(0, height, y =>
+            {
+                int rowIn = y * rowBytesIn;
+                int rowOut = y * rowBytesOut;
+
+                for (int x = 0; x < width; x++)
+                {
+                    int si = rowIn + x * 12;
+                    int di = rowOut + x * 3;
+
+                    float g = BitConverter.ToSingle(gbrpf32le, si);
+                    float b = BitConverter.ToSingle(gbrpf32le, si + 4);
+                    float r = BitConverter.ToSingle(gbrpf32le, si + 8);
+
+                    r = Math.Max(r * normScale, 0f);
+                    g = Math.Max(g * normScale, 0f);
+                    b = Math.Max(b * normScale, 0f);
+
+                    TonemapBT2390(ref r, ref g, ref b);
+
+                    r = LinearToSRGB(r);
+                    g = LinearToSRGB(g);
+                    b = LinearToSRGB(b);
+
+                    bgr24[di] = FloatToByte(b);
+                    bgr24[di + 1] = FloatToByte(g);
+                    bgr24[di + 2] = FloatToByte(r);
+                }
+            });
+        }
 
         /// <summary>
         /// BT.2390 style luminance-based tonemap. SDR content (luminance &lt;= 1.0)

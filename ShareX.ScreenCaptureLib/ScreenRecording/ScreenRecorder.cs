@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -27,6 +27,7 @@ using ShareX.HelpersLib;
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Threading;
 
@@ -101,6 +102,7 @@ namespace ShareX.ScreenCaptureLib
         private ImageCache imgCache;
         private FFmpegCLIManager ffmpeg;
         private bool stopRequested;
+        private bool hdrDxgiPipeRecording;
 
         public ScreenRecorder(ScreenRecordOutput outputType, ScreenRecordingOptions options, Screenshot screenshot, Rectangle captureRectangle)
         {
@@ -150,7 +152,14 @@ namespace ShareX.ScreenCaptureLib
 
                 if (OutputType == ScreenRecordOutput.FFmpeg)
                 {
-                    ffmpeg.Run(Options.GetFFmpegCommands());
+                    if (Options.CaptureHDREnabled)
+                    {
+                        RecordUsingHdrDxgiPipe();
+                    }
+                    else
+                    {
+                        ffmpeg.Run(Options.GetFFmpegCommands());
+                    }
                 }
                 else
                 {
@@ -162,33 +171,165 @@ namespace ShareX.ScreenCaptureLib
             IsRecording = false;
         }
 
+        private void RecordUsingHdrDxgiPipe()
+        {
+            int width = CaptureRectangle.Width;
+            int height = CaptureRectangle.Height;
+            hdrDxgiPipeRecording = true;
+            Options.HdrDxgiPipeRecording = true;
+
+            try
+            {
+                string args = Options.GetFFmpegHdrDxgiPipeArgs(width, height);
+                DebugHelper.WriteLine("HDR recording: piping DXGI tonemapped frames to FFmpeg.");
+
+                if (!ffmpeg.Start(args))
+                {
+                    DebugHelper.WriteLine("HDR recording: failed to start FFmpeg pipe encoder.");
+                    return;
+                }
+
+                OnRecordingStarted();
+
+                using (Screenshot.HdrRecordingCapture capture = screenshot.BeginHdrRecordingCapture(CaptureRectangle))
+                {
+                    Stream stdin = ffmpeg.GetStandardInputStream();
+                    byte[] captureBuffer = new byte[capture.FrameBytes];
+                    byte[] writeBuffer = new byte[capture.FrameBytes];
+                    object frameLock = new object();
+                    bool hasFrame = false;
+                    bool captureActive = true;
+
+                    Thread captureThread = new Thread(() =>
+                    {
+                        while (captureActive && !stopRequested)
+                        {
+                            lock (frameLock)
+                            {
+                                if (capture.TryCaptureFrame(captureBuffer))
+                                {
+                                    hasFrame = true;
+                                }
+                            }
+
+                            Thread.Sleep(1);
+                        }
+                    })
+                    {
+                        IsBackground = true,
+                        Name = "ShareX HDR capture"
+                    };
+
+                    while (!hasFrame && !stopRequested)
+                    {
+                        if (capture.TryCaptureFrame(captureBuffer))
+                        {
+                            hasFrame = true;
+                        }
+                        else
+                        {
+                            Thread.Sleep(1);
+                        }
+                    }
+
+                    captureThread.Start();
+
+                    try
+                    {
+                        RecordUsingTimedFrameCapture(() =>
+                        {
+                            if (!hasFrame)
+                            {
+                                return;
+                            }
+
+                            lock (frameLock)
+                            {
+                                Buffer.BlockCopy(captureBuffer, 0, writeBuffer, 0, captureBuffer.Length);
+                            }
+
+                            stdin.Write(writeBuffer, 0, writeBuffer.Length);
+                        });
+                    }
+                    finally
+                    {
+                        captureActive = false;
+                        captureThread.Join();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DebugHelper.WriteException(ex, "HDR recording failed.");
+            }
+            finally
+            {
+                hdrDxgiPipeRecording = false;
+                ffmpeg.Finish();
+            }
+        }
+
+        public bool FFmpegHdrTonemapVideo(string input, string output)
+        {
+            FileHelpers.CreateDirectoryFromFilePath(output);
+
+            Options.IsRecording = false;
+            Options.IsLossless = false;
+            Options.InputPath = input;
+            Options.OutputPath = output;
+
+            try
+            {
+                ffmpeg.TrackEncodeProgress = false;
+
+                return HdrRecordingTonemapper.Process(Options.FFmpeg.FFmpegPath, Options, OnEncodingProgressChanged);
+            }
+            finally
+            {
+                ffmpeg.TrackEncodeProgress = false;
+            }
+        }
+
+        private void RecordUsingTimedFrameCapture(Action writeFrame)
+        {
+            Stopwatch clock = Stopwatch.StartNew();
+            long framesSent = 0;
+
+            while (!stopRequested && (frameCount == 0 || framesSent < frameCount))
+            {
+                double frameTime = framesSent / (double)fps;
+
+                while (clock.Elapsed.TotalSeconds < frameTime && !stopRequested)
+                {
+                    Thread.Sleep(1);
+                }
+
+                if (stopRequested)
+                {
+                    break;
+                }
+
+                writeFrame();
+                framesSent++;
+            }
+        }
+
+        private void RecordUsingTimedFrameCapture(Action<Bitmap> writeFrame)
+        {
+            RecordUsingTimedFrameCapture(() =>
+            {
+                using (Bitmap bmp = screenshot.CaptureRectangle(CaptureRectangle))
+                {
+                    writeFrame(bmp);
+                }
+            });
+        }
+
         private void RecordUsingCache()
         {
             try
             {
-                for (int i = 0; !stopRequested && (frameCount == 0 || i < frameCount); i++)
-                {
-                    Stopwatch timer = Stopwatch.StartNew();
-
-                    Image img = screenshot.CaptureRectangle(CaptureRectangle);
-                    //DebugHelper.WriteLine("Screen capture: " + (int)timer.ElapsedMilliseconds);
-
-                    imgCache.AddImageAsync(img);
-
-                    if (!stopRequested && (frameCount == 0 || i + 1 < frameCount))
-                    {
-                        int sleepTime = delay - (int)timer.ElapsedMilliseconds;
-
-                        if (sleepTime > 0)
-                        {
-                            Thread.Sleep(sleepTime);
-                        }
-                        else if (sleepTime < 0)
-                        {
-                            // Need to handle FPS drops
-                        }
-                    }
-                }
+                RecordUsingTimedFrameCapture(bmp => imgCache.AddImageAsync((Image)bmp.Clone()));
             }
             finally
             {
@@ -200,7 +341,7 @@ namespace ShareX.ScreenCaptureLib
         {
             stopRequested = true;
 
-            if (ffmpeg != null)
+            if (ffmpeg != null && !hdrDxgiPipeRecording)
             {
                 ffmpeg.Close();
             }

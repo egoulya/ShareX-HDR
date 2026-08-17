@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -130,5 +130,7 @@ namespace ShareX.HelpersLib
 
         public const int LWA_COLORKEY = 0x1;
         public const int LWA_ALPHA = 0x2;
+
+        public const int ENUM_CURRENT_SETTINGS = -1;
     }
 }

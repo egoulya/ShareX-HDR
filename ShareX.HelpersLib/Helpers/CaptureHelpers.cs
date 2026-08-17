@@ -1,4 +1,4 @@
-﻿#region License Information (GPL v3)
+#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -383,6 +383,62 @@ namespace ShareX.HelpersLib
             rect.Width -= rect.Width & 1;
             rect.Height -= rect.Height & 1;
             return rect;
+        }
+
+        public static int GetMonitorRefreshRate(Screen screen)
+        {
+            const int fallbackHz = 60;
+
+            if (screen == null || string.IsNullOrEmpty(screen.DeviceName))
+            {
+                return fallbackHz;
+            }
+
+            DEVMODE devMode = DEVMODE.Create();
+
+            if (NativeMethods.EnumDisplaySettings(screen.DeviceName, NativeConstants.ENUM_CURRENT_SETTINGS, ref devMode))
+            {
+                int hz = devMode.dmDisplayFrequency;
+
+                if (hz >= 1)
+                {
+                    return hz;
+                }
+            }
+
+            return fallbackHz;
+        }
+
+        public static int GetMaximumMonitorRefreshRate()
+        {
+            int maxHz = 0;
+
+            foreach (Screen screen in Screen.AllScreens)
+            {
+                maxHz = Math.Max(maxHz, GetMonitorRefreshRate(screen));
+            }
+
+            return maxHz >= 1 ? maxHz : 60;
+        }
+
+        public static int ClampRecordingFPS(int fps)
+        {
+            return Math.Clamp(fps, 1, GetMaximumMonitorRefreshRate());
+        }
+
+        public static int ClampRecordingFPSForMode(int fps, bool gifMode)
+        {
+            return gifMode ? ClampGIFFPS(fps) : ClampRecordingFPS(fps);
+        }
+
+        public static int GetMaximumGIFFPS()
+        {
+            return Math.Min(60, GetMaximumMonitorRefreshRate());
+        }
+
+        public static int ClampGIFFPS(int fps)
+        {
+            return Math.Clamp(fps, 1, GetMaximumGIFFPS());
         }
     }
 }
