@@ -395,7 +395,7 @@ namespace ShareX.ScreenCaptureLib
 
         private string BuildDDAGrabGraph(string framerate, bool forFilterComplex)
         {
-            Rectangle captureArea = GetDDAGrabCaptureArea(out int monitorIndex);
+            Rectangle captureArea = GetDDAGrabCaptureArea(out int monitorIndex, out string deviceName);
 
             StringBuilder graph = new StringBuilder();
 
@@ -413,7 +413,7 @@ namespace ShareX.ScreenCaptureLib
 
             if (CaptureHDREnabled)
             {
-                float normScale = Screenshot.GetSdrWhiteNormalizationScale();
+                float normScale = Screenshot.GetSdrWhiteNormalizationScale(deviceName);
                 string scale = normScale.ToString("0.######", CultureInfo.InvariantCulture);
 
                 graph.Append("output_fmt=rgbaf16,hwdownload,format=rgbaf16,format=gbrpf32le,");
@@ -438,11 +438,12 @@ namespace ShareX.ScreenCaptureLib
             return graph.ToString();
         }
 
-        private Rectangle GetDDAGrabCaptureArea(out int monitorIndex)
+        private Rectangle GetDDAGrabCaptureArea(out int monitorIndex, out string deviceName)
         {
             Screen[] screens = Screen.AllScreens.OrderBy(x => !x.Primary).ToArray();
             monitorIndex = 0;
             Rectangle captureArea = screens[0].Bounds;
+            deviceName = screens[0].DeviceName;
             int maxIntersectionArea = 0;
 
             for (int i = 0; i < screens.Length; i++)
@@ -457,6 +458,7 @@ namespace ShareX.ScreenCaptureLib
 
                     monitorIndex = i;
                     captureArea = new Rectangle(intersection.X - screen.Bounds.X, intersection.Y - screen.Bounds.Y, intersection.Width, intersection.Height);
+                    deviceName = screen.DeviceName;
                 }
             }
 
@@ -485,7 +487,7 @@ namespace ShareX.ScreenCaptureLib
 
         private void AppendDDAGrabVideoInput(StringBuilder args, string framerate)
         {
-            Rectangle captureArea = GetDDAGrabCaptureArea(out int monitorIndex);
+            Rectangle captureArea = GetDDAGrabCaptureArea(out int monitorIndex, out string deviceName);
 
             // https://ffmpeg.org/ffmpeg-filters.html#ddagrab
             AppendInputDevice(args, "lavfi", false);

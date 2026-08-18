@@ -707,13 +707,42 @@ namespace ShareX.ScreenCaptureLib
         private const uint DisplayConfigGetSdrWhiteLevel = 11;
         private const int DisplayConfigModeInfoSize = 64;
 
+        public static float GetSdrWhiteNits(string deviceName = null)
+        {
+            if (TryGetSdrWhiteScale(deviceName, preferHighest: string.IsNullOrEmpty(deviceName), out float scale))
+            {
+                return HdrPixelConvert.SceneReferredWhiteNits * scale;
+            }
+
+            if (!string.IsNullOrEmpty(deviceName) &&
+                TryGetSdrWhiteScale(null, preferHighest: true, out scale))
+            {
+                DebugHelper.WriteLine($"HDR: no SDR white for '{deviceName}', using highest active path ({scale:0.###}×).");
+                return HdrPixelConvert.SceneReferredWhiteNits * scale;
+            }
+
+            return HdrPixelConvert.SceneReferredWhiteNits;
+        }
+
         public static float GetSdrWhiteScale(string deviceName)
         {
+            if (TryGetSdrWhiteScale(deviceName, preferHighest: false, out float scale))
+            {
+                return scale;
+            }
+
+            return 1f;
+        }
+
+        private static bool TryGetSdrWhiteScale(string deviceName, bool preferHighest, out float scale)
+        {
+            scale = 0f;
+
             try
             {
                 if (GetDisplayConfigBufferSizes(QueryDisplayConfigOnlyActivePaths, out uint pathCount, out uint modeCount) != 0)
                 {
-                    return 1f;
+                    return false;
                 }
 
                 DisplayConfigPathInfo[] paths = new DisplayConfigPathInfo[pathCount];
@@ -724,27 +753,32 @@ namespace ShareX.ScreenCaptureLib
                     if (QueryDisplayConfig(QueryDisplayConfigOnlyActivePaths, ref pathCount, paths,
                         ref modeCount, modes, IntPtr.Zero) != 0)
                     {
-                        return 1f;
+                        return false;
                     }
+
+                    float bestScale = 0f;
 
                     for (int i = 0; i < pathCount; i++)
                     {
-                        DisplayConfigSourceDeviceName sourceName = new DisplayConfigSourceDeviceName
+                        if (!string.IsNullOrEmpty(deviceName))
                         {
-                            Header = new DisplayConfigDeviceInfoHeader
+                            DisplayConfigSourceDeviceName sourceName = new DisplayConfigSourceDeviceName
                             {
-                                Type = DisplayConfigGetSourceName,
-                                Size = (uint)Marshal.SizeOf<DisplayConfigSourceDeviceName>(),
-                                AdapterId = paths[i].SourceInfo.AdapterId,
-                                Id = paths[i].SourceInfo.Id
-                            },
-                            ViewGdiDeviceName = string.Empty
-                        };
+                                Header = new DisplayConfigDeviceInfoHeader
+                                {
+                                    Type = DisplayConfigGetSourceName,
+                                    Size = (uint)Marshal.SizeOf<DisplayConfigSourceDeviceName>(),
+                                    AdapterId = paths[i].SourceInfo.AdapterId,
+                                    Id = paths[i].SourceInfo.Id
+                                },
+                                ViewGdiDeviceName = string.Empty
+                            };
 
-                        if (DisplayConfigGetDeviceInfo(ref sourceName) != 0 ||
-                            !string.Equals(sourceName.ViewGdiDeviceName, deviceName, StringComparison.OrdinalIgnoreCase))
-                        {
-                            continue;
+                            if (DisplayConfigGetDeviceInfo(ref sourceName) != 0 ||
+                                !string.Equals(sourceName.ViewGdiDeviceName, deviceName, StringComparison.OrdinalIgnoreCase))
+                            {
+                                continue;
+                            }
                         }
 
                         DisplayConfigSdrWhiteLevel whiteLevel = new DisplayConfigSdrWhiteLevel
@@ -760,8 +794,30 @@ namespace ShareX.ScreenCaptureLib
 
                         if (DisplayConfigGetDeviceInfo(ref whiteLevel) == 0 && whiteLevel.SdrWhiteLevel > 0)
                         {
-                            return Math.Clamp(whiteLevel.SdrWhiteLevel / 1000f, 1f, 125f);
+                            float pathScale = Math.Clamp(whiteLevel.SdrWhiteLevel / 1000f, 1f, 125f);
+                            if (!string.IsNullOrEmpty(deviceName))
+                            {
+                                scale = pathScale;
+                                return true;
+                            }
+
+                            if (pathScale > bestScale)
+                            {
+                                bestScale = pathScale;
+                            }
+
+                            if (!preferHighest)
+                            {
+                                scale = pathScale;
+                                return true;
+                            }
                         }
+                    }
+
+                    if (bestScale > 0f)
+                    {
+                        scale = bestScale;
+                        return true;
                     }
                 }
                 finally
@@ -774,7 +830,7 @@ namespace ShareX.ScreenCaptureLib
                 DebugHelper.WriteException(e, "Failed to query the HDR display SDR white level.");
             }
 
-            return 1f;
+            return false;
         }
 
         [DllImport("user32.dll")]

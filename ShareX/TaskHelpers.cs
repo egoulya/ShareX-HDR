@@ -2424,6 +2424,11 @@ namespace ShareX
                 HdrExposure = taskSettings.CaptureSettings.HdrExposure
             };
 
+            if (screenshot.CaptureHDREnabled)
+            {
+                Screenshot.WarmHdrCapture();
+            }
+
             return screenshot;
         }
 

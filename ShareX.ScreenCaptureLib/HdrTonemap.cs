@@ -128,37 +128,41 @@ namespace ShareX.ScreenCaptureLib
 
         private static readonly float[] EncodeLut = BuildEncodeLut();
         private static readonly float[] Bayer8 = BuildBayerMatrix();
+        private static readonly System.Collections.Concurrent.ConcurrentDictionary<string, HdrTonemapMode> AutoModeMemory = new();
+
+        public const int HistogramSize = 64;
+        private const float MaxTrackedNorm = 16f;
 
         public static float ClampExposure(float exposure) => Math.Clamp(exposure, ExposureMin, ExposureMax);
 
-        public static HdrTonemapMode ResolveMode(HdrTonemapMode requested, in HdrLuminanceStats stats)
+        public static HdrTonemapMode ResolveMode(HdrTonemapMode requested, in HdrLuminanceStats stats,
+            string hysteresisKey = null)
         {
             if (requested != HdrTonemapMode.Auto)
             {
                 return requested;
             }
 
-            bool looksLikeTrueHdr =
-                stats.MaxLuminance >= 1.75f ||
-                stats.FractionAboveOneHalf >= 0.002f ||
-                (stats.FractionAboveOne >= 0.01f && stats.P99Estimate >= 1.35f);
+            HdrTonemapMode candidate = ClassifyContent(stats);
 
-            if (looksLikeTrueHdr)
+            if (!string.IsNullOrEmpty(hysteresisKey) &&
+                AutoModeMemory.TryGetValue(hysteresisKey, out HdrTonemapMode previous))
             {
-                return HdrTonemapMode.Desktop;
+                candidate = ApplyHysteresis(previous, candidate, stats);
             }
 
-            if (stats.FractionHotUpperSdr >= 0.08f || stats.P99Estimate >= 0.92f)
+            if (!string.IsNullOrEmpty(hysteresisKey))
             {
-                return HdrTonemapMode.AutoHDR;
+                AutoModeMemory[hysteresisKey] = candidate;
             }
 
-            return HdrTonemapMode.Desktop;
+            return candidate;
         }
 
-        public static HdrTonemapMode ResolveForRecording(HdrTonemapMode requested, in HdrLuminanceStats stats)
+        public static HdrTonemapMode ResolveForRecording(HdrTonemapMode requested, in HdrLuminanceStats stats,
+            string hysteresisKey = null)
         {
-            HdrTonemapMode resolved = ResolveMode(requested, stats);
+            HdrTonemapMode resolved = ResolveMode(requested, stats, hysteresisKey);
             return resolved == HdrTonemapMode.WindowsWIC ? HdrTonemapMode.Desktop : resolved;
         }
 
@@ -193,15 +197,58 @@ namespace ShareX.ScreenCaptureLib
             return new HdrTonemapCurve(resolvedMode, exposure, lut, maxInputNorm, lutScale);
         }
 
-        public static void Apply(ref float r, ref float g, ref float b, HdrTonemapMode resolvedMode)
+        private static HdrTonemapMode ClassifyContent(in HdrLuminanceStats stats)
         {
-            HdrLuminanceStats empty = new(0, 0, 0, 0, 4f, 4f);
-            CreateCurve(resolvedMode, empty, ExposureDefault, 80f).Map(ref r, ref g, ref b);
+            bool looksLikeTrueHdr =
+                stats.MaxLuminance >= 1.75f ||
+                stats.FractionAboveOneHalf >= 0.002f ||
+                (stats.FractionAboveOne >= 0.01f && stats.P99Estimate >= 1.35f);
+
+            if (looksLikeTrueHdr)
+            {
+                return HdrTonemapMode.Desktop;
+            }
+
+            if (stats.FractionHotUpperSdr >= 0.08f || stats.P99Estimate >= 0.92f)
+            {
+                return HdrTonemapMode.AutoHDR;
+            }
+
+            return HdrTonemapMode.Desktop;
+        }
+
+        private static HdrTonemapMode ApplyHysteresis(HdrTonemapMode previous, HdrTonemapMode candidate,
+            in HdrLuminanceStats stats)
+        {
+            if (previous == candidate)
+            {
+                return candidate;
+            }
+
+            if (previous == HdrTonemapMode.Desktop && candidate == HdrTonemapMode.AutoHDR)
+            {
+                bool stillLooksHdr = stats.MaxLuminance >= 1.50f || stats.FractionAboveOneHalf >= 0.001f;
+                if (stillLooksHdr)
+                {
+                    return HdrTonemapMode.Desktop;
+                }
+
+                bool strongAutoHdr = stats.FractionHotUpperSdr >= 0.12f && stats.MaxLuminance < 1.50f;
+                return strongAutoHdr ? HdrTonemapMode.AutoHDR : HdrTonemapMode.Desktop;
+            }
+
+            if (previous == HdrTonemapMode.AutoHDR && candidate == HdrTonemapMode.Desktop)
+            {
+                bool strongTrueHdr = stats.MaxLuminance >= 2.00f || stats.FractionAboveOneHalf >= 0.004f;
+                return strongTrueHdr ? HdrTonemapMode.Desktop : HdrTonemapMode.AutoHDR;
+            }
+
+            return candidate;
         }
 
         public static void AccumulateSample(float r, float g, float b,
             ref long sampleCount, ref long aboveOne, ref long aboveOneHalf,
-            ref long hotUpperSdr, ref float maxLum, Span<int> hist16)
+            ref long hotUpperSdr, ref float maxLum, Span<int> histogram)
         {
             float lum = LumR * r + LumG * g + LumB * b;
             if (!float.IsFinite(lum) || lum < 0f)
@@ -215,24 +262,26 @@ namespace ShareX.ScreenCaptureLib
             if (lum > 1.5f) aboveOneHalf++;
             if (lum >= 0.75f && lum <= 1.15f) hotUpperSdr++;
 
-            int bin = (int)Math.Clamp(lum * 4f, 0f, 15f);
-            hist16[bin]++;
+            float t = MathF.Sqrt(MathF.Min(lum, MaxTrackedNorm) / MaxTrackedNorm);
+            int bin = (int)Math.Clamp(t * (histogram.Length - 1), 0f, histogram.Length - 1);
+            histogram[bin]++;
         }
 
         public static HdrLuminanceStats BuildStats(long sampleCount, long aboveOne, long aboveOneHalf,
-            long hotUpperSdr, float maxLum, ReadOnlySpan<int> hist16)
+            long hotUpperSdr, float maxLum, ReadOnlySpan<int> histogram)
         {
             float p99 = 0f;
             if (sampleCount > 0)
             {
                 long target = Math.Max(1, (long)(sampleCount * 0.99));
                 long cumulative = 0;
-                for (int i = 0; i < hist16.Length; i++)
+                for (int i = 0; i < histogram.Length; i++)
                 {
-                    cumulative += hist16[i];
+                    cumulative += histogram[i];
                     if (cumulative >= target)
                     {
-                        p99 = (i + 1) / 4f;
+                        float t = (i + 1) / (float)histogram.Length;
+                        p99 = t * t * MaxTrackedNorm;
                         break;
                     }
                 }
@@ -241,6 +290,23 @@ namespace ShareX.ScreenCaptureLib
             }
 
             return new HdrLuminanceStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, p99);
+        }
+
+        public static HdrLuminanceStats MergeStats(in HdrLuminanceStats a, in HdrLuminanceStats b)
+        {
+            if (a.SampleCount == 0) return b;
+            if (b.SampleCount == 0) return a;
+
+            long samples = a.SampleCount + b.SampleCount;
+            float maxLum = Math.Max(a.MaxLuminance, b.MaxLuminance);
+            float p99 = Math.Max(a.P99Estimate, b.P99Estimate);
+            return new HdrLuminanceStats(
+                samples,
+                a.AboveOneCount + b.AboveOneCount,
+                a.AboveOneHalfCount + b.AboveOneHalfCount,
+                a.HotUpperSdrCount + b.HotUpperSdrCount,
+                maxLum,
+                p99);
         }
 
         internal static void ApplyFilmic(ref float r, ref float g, ref float b)

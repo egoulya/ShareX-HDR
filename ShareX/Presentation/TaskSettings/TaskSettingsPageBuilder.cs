@@ -357,6 +357,10 @@ internal sealed class TaskSettingsPageBuilder
         {
             capture.CaptureHDREnabled = value;
             capture.SurfaceOptions.CaptureHDREnabled = value;
+            if (value)
+            {
+                Screenshot.WarmHdrCapture();
+            }
         });
         ComboBox hdrTonemap = EnumCombo(() => capture.HdrTonemapMode, value =>
         {

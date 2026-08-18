@@ -1,4 +1,4 @@
-// File: ShareX.ScreenCaptureLib/Screenshot_HDR.cs
+﻿// File: ShareX.ScreenCaptureLib/Screenshot_HDR.cs
 //
 // HDR screenshot capture using DXGI Desktop Duplication.
 // Uses [ComImport] interface declarations for DXGI interfaces (safe vtable
@@ -10,12 +10,11 @@
 // enumerates all DXGI outputs, captures each monitor that intersects the
 // requested rect, and composites the results onto a single bitmap.
 //
-// Capture sequence per output:
-//   1. D3D11CreateDevice(null, HARDWARE)
-//   2. QI to IDXGIDevice -> GetAdapter()
-//   3. adapter.EnumOutputs(i) for each intersecting output
-//   4. QI to IDXGIOutput5 -> DuplicateOutput1 with 3 format fallbacks
-//   5. AcquireNextFrame (with retry loop for DWM warm-up) -> copy -> map -> convert
+// Capture sequence:
+//   Cached D3D11 device + per-output DuplicateOutput (invalidated on
+//   WM_DISPLAYCHANGE / DXGI_ERROR_ACCESS_LOST). Warm sessions accept
+//   LastPresentTime == 0. HDR outputs: copy pixels, merge luminance
+//   stats, one BT.2390 curve, Parallel.For convert. SDR outputs: GDI.
 
 #region License Information (GPL v3)
 
@@ -43,7 +42,9 @@
 #endregion License Information (GPL v3)
 
 using ShareX.HelpersLib;
+using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
@@ -56,93 +57,6 @@ namespace ShareX.ScreenCaptureLib
         public bool CaptureHDREnabled { get; set; } = false;
         public HdrTonemapMode HdrTonemapMode { get; set; } = HdrTonemapMode.Auto;
         public float HdrExposure { get; set; } = HdrTonemap.ExposureDefault;
-
-        // ====================================================================
-        // DisplayConfig API for SDR White Level
-        // ====================================================================
-
-        #region DisplayConfig P/Invoke
-
-        private const int QDC_ONLY_ACTIVE_PATHS = 0x00000002;
-        private const int DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL = 11;
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_PATH_INFO
-        {
-            public DISPLAYCONFIG_PATH_SOURCE_INFO sourceInfo;
-            public DISPLAYCONFIG_PATH_TARGET_INFO targetInfo;
-            public uint flags;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_PATH_SOURCE_INFO
-        {
-            public LUID adapterId;
-            public uint id;
-            public uint modeInfoIdx;
-            public uint statusFlags;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_PATH_TARGET_INFO
-        {
-            public LUID adapterId;
-            public uint id;
-            public uint modeInfoIdx;
-            public uint outputTechnology;
-            public uint rotation;
-            public uint scaling;
-            public DISPLAYCONFIG_RATIONAL refreshRate;
-            public uint scanLineOrdering;
-            [MarshalAs(UnmanagedType.Bool)]
-            public bool targetAvailable;
-            public uint statusFlags;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_RATIONAL { public uint Numerator, Denominator; }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct LUID { public uint LowPart; public int HighPart; }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_MODE_INFO
-        {
-            public uint infoType;
-            public uint id;
-            public LUID adapterId;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
-            public byte[] modeInfoData;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_DEVICE_INFO_HEADER
-        {
-            public int type;
-            public uint size;
-            public LUID adapterId;
-            public uint id;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        private struct DISPLAYCONFIG_SDR_WHITE_LEVEL
-        {
-            public DISPLAYCONFIG_DEVICE_INFO_HEADER header;
-            public uint SDRWhiteLevel;
-        }
-
-        [DllImport("user32.dll")]
-        private static extern int GetDisplayConfigBufferSizes(int flags, out int numPaths, out int numModes);
-
-        [DllImport("user32.dll")]
-        private static extern int QueryDisplayConfig(int flags, ref int numPaths,
-            [Out] DISPLAYCONFIG_PATH_INFO[] paths, ref int numModes,
-            [Out] DISPLAYCONFIG_MODE_INFO[] modes, IntPtr topology);
-
-        [DllImport("user32.dll")]
-        private static extern int DisplayConfigGetDeviceInfo(ref DISPLAYCONFIG_SDR_WHITE_LEVEL info);
-
-        #endregion
 
         // ====================================================================
         // COM Interface Declarations (proper [ComImport])
@@ -399,6 +313,7 @@ namespace ShareX.ScreenCaptureLib
 
         private const int DXGI_ERROR_WAIT_TIMEOUT = unchecked((int)0x887A0027);
         private const int DXGI_ERROR_NOT_FOUND = unchecked((int)0x887A0002);
+        private const int DXGI_ERROR_ACCESS_LOST = unchecked((int)0x887A0026);
 
         private const int D3D11_USAGE_STAGING = 3;
         private const uint D3D11_CPU_ACCESS_READ = 0x20000;
@@ -449,42 +364,14 @@ namespace ShareX.ScreenCaptureLib
         // Main HDR Capture (multi-monitor aware)
         // ====================================================================
 
-        public static float GetSdrWhiteLevelNits() => GetSdrWhiteNits();
+        public static float GetSdrWhiteLevelNits() => DisplayConfigHelper.GetSdrWhiteNits();
 
-        public static float GetSdrWhiteNormalizationScale() => 80f / GetSdrWhiteNits();
+        public static float GetSdrWhiteLevelNits(string deviceName) => DisplayConfigHelper.GetSdrWhiteNits(deviceName);
 
-        private static float GetSdrWhiteNits()
-        {
-            try
-            {
-                int r = GetDisplayConfigBufferSizes(QDC_ONLY_ACTIVE_PATHS, out int pc, out int mc);
-                if (r != 0) return 80f;
-                var paths = new DISPLAYCONFIG_PATH_INFO[pc];
-                var modes = new DISPLAYCONFIG_MODE_INFO[mc];
-                r = QueryDisplayConfig(QDC_ONLY_ACTIVE_PATHS, ref pc, paths, ref mc, modes, IntPtr.Zero);
-                if (r != 0) return 80f;
+        public static float GetSdrWhiteNormalizationScale(string deviceName = null) =>
+            HdrPixelConvert.NormalizationScale(DisplayConfigHelper.GetSdrWhiteNits(deviceName));
 
-                for (int i = 0; i < pc; i++)
-                {
-                    var info = new DISPLAYCONFIG_SDR_WHITE_LEVEL();
-                    info.header.type = DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL;
-                    info.header.size = (uint)Marshal.SizeOf<DISPLAYCONFIG_SDR_WHITE_LEVEL>();
-                    info.header.adapterId = paths[i].targetInfo.adapterId;
-                    info.header.id = paths[i].targetInfo.id;
-                    if (DisplayConfigGetDeviceInfo(ref info) == 0 && info.SDRWhiteLevel > 0)
-                    {
-                        float nits = (info.SDRWhiteLevel / 1000f) * 80f;
-                        DebugHelper.WriteLine($"HDR: SDR white level = {nits} nits (raw {info.SDRWhiteLevel})");
-                        return nits;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                DebugHelper.WriteException(e, "HDR: SDR white level query failed.");
-            }
-            return 80f;
-        }
+        public static void WarmHdrCapture() => EnsureDuplicationCache();
 
         /// <summary>
         /// Captures the specified rectangle in virtual desktop coordinates using
@@ -494,43 +381,28 @@ namespace ShareX.ScreenCaptureLib
         /// </summary>
         public Bitmap CaptureRectangleHDR(Rectangle rect)
         {
-            IntPtr devicePtr = IntPtr.Zero;
-            IntPtr contextPtr = IntPtr.Zero;
+            EnsureDuplicationCache();
 
             try
             {
-                float sdrWhiteNits = GetSdrWhiteNits();
-                float normScale = 80f / sdrWhiteNits;
-                DebugHelper.WriteLine($"HDR: normScale={normScale} (sdrWhite={sdrWhiteNits}), tonemap={HdrTonemapMode}");
-
-                // Step 1: Create D3D11 device
-                int[] levels = { 0xb100, 0xb000 };
-                int hr = D3D11CreateDevice(IntPtr.Zero, D3D_DRIVER_TYPE_HARDWARE, IntPtr.Zero, 0,
-                    levels, (uint)levels.Length, D3D11_SDK_VERSION,
-                    out devicePtr, out _, out contextPtr);
-                if (hr != 0)
+                if (!TryGetSharedDevice(out IntPtr devicePtr, out IntPtr contextPtr, out object deviceUnk))
                 {
-                    DebugHelper.WriteLine($"HDR: D3D11CreateDevice failed 0x{hr:X8}");
                     return null;
                 }
 
-                // Step 2: Get DXGI adapter
-                var dxgiDevice = (IDXGIDevice)Marshal.GetObjectForIUnknown(devicePtr);
-                hr = dxgiDevice.GetAdapter(out IDXGIAdapter adapter);
+                object dxgiDeviceObj = deviceUnk;
+                var dxgiDevice = (IDXGIDevice)dxgiDeviceObj;
+                int hr = dxgiDevice.GetAdapter(out IDXGIAdapter adapter);
                 if (hr != 0)
                 {
                     DebugHelper.WriteLine($"HDR: GetAdapter failed 0x{hr:X8}");
                     return null;
                 }
 
-                // Create the final composite bitmap matching the requested rect size
                 Bitmap result = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
                 bool anyOutputCaptured = false;
+                List<HdrCpuSlice> hdrSlices = new List<HdrCpuSlice>();
 
-                // Step 3: Enumerate all outputs, capture each that intersects our rect.
-                // Note: EnumOutputs is declared via [ComImport] without [PreserveSig],
-                // so the CLR throws COMException for non-zero HRESULTs instead of
-                // returning them. DXGI_ERROR_NOT_FOUND is the normal end-of-list signal.
                 for (uint outputIdx = 0; ; outputIdx++)
                 {
                     IDXGIOutput output;
@@ -561,42 +433,70 @@ namespace ShareX.ScreenCaptureLib
                             outputDesc.DesktopCoordinates.Right - outputDesc.DesktopCoordinates.Left,
                             outputDesc.DesktopCoordinates.Bottom - outputDesc.DesktopCoordinates.Top);
 
-                        // Check if this monitor intersects the capture rect
                         Rectangle intersection = Rectangle.Intersect(rect, monitorRect);
                         if (intersection.Width <= 0 || intersection.Height <= 0)
                         {
-                            DebugHelper.WriteLine($"HDR: Output {outputIdx} ({outputDesc.DeviceName}) does not intersect capture rect, skipping.");
                             continue;
                         }
 
                         DebugHelper.WriteLine($"HDR: Output {outputIdx} ({outputDesc.DeviceName}) {monitorRect}, intersection={intersection}");
 
-                        // Probe the output's format to decide the capture path.
-                        // SDR monitors (B8G8R8A8) get a fast GDI BitBlt instead of
-                        // the full DXGI duplication pipeline with warm-up delays.
-                        int probeFormat = ProbeOutputFormat(devicePtr, output);
-                        bool ok;
-
-                        if (probeFormat == DXGI_FORMAT_B8G8R8A8_UNORM)
+                        HdrDuplSession session = GetOrCreateSession(outputDesc.DeviceName, output, devicePtr, contextPtr);
+                        if (session == null || session.Format == DXGI_FORMAT_B8G8R8A8_UNORM)
                         {
-                            DebugHelper.WriteLine($"HDR: Output {outputIdx} is SDR (format={probeFormat}), using GDI fast path.");
-                            ok = CaptureOutputGDI(intersection, rect, result);
-                        }
-                        else
-                        {
-                            DebugHelper.WriteLine($"HDR: Output {outputIdx} is HDR (format={probeFormat}), using DXGI pipeline.");
-                            ok = CaptureOutputHDR(devicePtr, contextPtr, output,
-                                monitorRect, rect, intersection, result, normScale);
+                            DebugHelper.WriteLine($"HDR: Output {outputIdx} is SDR, using GDI fast path.");
+                            if (CaptureOutputGDI(intersection, rect, result))
+                            {
+                                anyOutputCaptured = true;
+                            }
+                            continue;
                         }
 
-                        if (ok)
+                        float sdrWhiteNits = DisplayConfigHelper.GetSdrWhiteNits(outputDesc.DeviceName);
+                        DebugHelper.WriteLine($"HDR: Output {outputIdx} HDR format={session.Format}, sdrWhite={sdrWhiteNits:0.#} nits, warm={session.Warm}");
+
+                        if (HdrTonemapMode == HdrTonemapMode.WindowsWIC)
                         {
+                            if (CaptureOutputHdrWic(session, monitorRect, rect, intersection, result))
+                            {
+                                anyOutputCaptured = true;
+                            }
+                            continue;
+                        }
+
+                        HdrCpuSlice slice = CaptureOutputHdrSlice(session, monitorRect, rect, intersection, sdrWhiteNits);
+                        if (slice != null)
+                        {
+                            hdrSlices.Add(slice);
                             anyOutputCaptured = true;
                         }
                     }
                     catch (Exception e)
                     {
                         DebugHelper.WriteException(e, $"HDR: Output {outputIdx} capture failed, continuing.");
+                    }
+                }
+
+                if (hdrSlices.Count > 0)
+                {
+                    HdrLuminanceStats merged = default;
+                    float curveWhiteNits = 80f;
+                    HdrLuminanceAccumulator acc = new HdrLuminanceAccumulator();
+                    foreach (HdrCpuSlice slice in hdrSlices)
+                    {
+                        acc.AddFromSlice(slice);
+                        curveWhiteNits = Math.Max(curveWhiteNits, slice.SdrWhiteNits);
+                    }
+                    merged = acc.Build();
+
+                    string hysteresisKey = hdrSlices.Count == 1 ? hdrSlices[0].DeviceName : "span";
+                    HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, merged, hysteresisKey);
+                    HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, merged, HdrExposure, curveWhiteNits);
+                    DebugHelper.WriteLine($"HDR: merged tonemap {HdrTonemapMode} -> {resolvedMode} (P99={merged.P99Estimate:0.00}, max={merged.MaxLuminance:0.00})");
+
+                    foreach (HdrCpuSlice slice in hdrSlices)
+                    {
+                        BlitCpuSlice(slice, result, curve);
                     }
                 }
 
@@ -615,42 +515,507 @@ namespace ShareX.ScreenCaptureLib
                 DebugHelper.WriteException(e, "HDR capture failed.");
                 return null;
             }
-            finally
+        }
+
+        private sealed class HdrCpuSlice
+        {
+            public byte[] Packed;
+            public int PackedStride;
+            public int Format;
+            public int CopyW;
+            public int CopyH;
+            public int DstX;
+            public int DstY;
+            public float SdrWhiteNits;
+            public string DeviceName;
+        }
+
+        private sealed class HdrLuminanceAccumulator
+        {
+            private long sampleCount, aboveOne, aboveOneHalf, hotUpperSdr;
+            private float maxLum;
+            private readonly int[] hist = new int[HdrTonemap.HistogramSize];
+
+            public unsafe void AddFromSlice(HdrCpuSlice slice)
             {
-                if (contextPtr != IntPtr.Zero) Marshal.Release(contextPtr);
-                if (devicePtr != IntPtr.Zero) Marshal.Release(devicePtr);
+                int bpp = HdrPixelConvert.BytesPerPixel(slice.Format);
+                int stepY = Math.Max(1, slice.CopyH / 64);
+                int stepX = Math.Max(1, slice.CopyW / 64);
+
+                fixed (byte* packedPtr = slice.Packed)
+                {
+                    for (int y = 0; y < slice.CopyH; y += stepY)
+                    {
+                        byte* srcRow = packedPtr + y * slice.PackedStride;
+                        for (int x = 0; x < slice.CopyW; x += stepX)
+                        {
+                            HdrPixelConvert.DecodeToSdrNormalized(slice.Format, srcRow + x * bpp, slice.SdrWhiteNits,
+                                out float r, out float g, out float b);
+                            HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                                ref hotUpperSdr, ref maxLum, hist);
+                        }
+                    }
+                }
+            }
+
+            public HdrLuminanceStats Build() =>
+                HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
+        }
+
+        private sealed class HdrDuplSession
+        {
+            public string DeviceName;
+            public int Format;
+            public bool Warm;
+            public IDXGIOutputDuplication Duplication;
+            public IntPtr Staging;
+            public IntPtr Device;
+            public IntPtr Context;
+            public Del_CreateTex2D CreateTex;
+            public Del_CopyResource Copy;
+            public Del_Map Map;
+            public Del_Unmap Unmap;
+            public Del_GetTexDesc GetDesc;
+        }
+
+        private static readonly object SessionLock = new();
+        private static IntPtr SharedDevicePtr;
+        private static IntPtr SharedContextPtr;
+        private static object SharedDeviceUnk;
+        private static readonly Dictionary<string, HdrDuplSession> Sessions = new();
+        private static bool DisplayHooked;
+
+        private static void EnsureDuplicationCache()
+        {
+            if (DisplayHooked)
+            {
+                return;
+            }
+
+            lock (SessionLock)
+            {
+                if (DisplayHooked)
+                {
+                    return;
+                }
+
+                SystemEvents.DisplaySettingsChanged += (_, _) => InvalidateDuplicationCache();
+                DisplayHooked = true;
+                ThreadPool.QueueUserWorkItem(_ =>
+                {
+                    TryGetSharedDevice(out IntPtr devicePtr, out IntPtr contextPtr, out object deviceUnk);
+                });
             }
         }
 
-        /// <summary>
-        /// Probes a DXGI output to determine its pixel format via DuplicateOutput1.
-        /// Returns the negotiated DXGI format, or DXGI_FORMAT_B8G8R8A8_UNORM as fallback.
-        /// The duplication handle is released immediately since we only need the format.
-        /// </summary>
-        private static int ProbeOutputFormat(IntPtr devicePtr, IDXGIOutput output)
+        private static void InvalidateDuplicationCache()
         {
-            try
+            lock (SessionLock)
             {
-                var output5 = (IDXGIOutput5)output;
-                int[] formats = { DXGI_FORMAT_R16G16B16A16_FLOAT, DXGI_FORMAT_R10G10B10A2_UNORM, DXGI_FORMAT_B8G8R8A8_UNORM };
-                int hr = output5.DuplicateOutput1(Marshal.GetObjectForIUnknown(devicePtr), 0,
-                    (uint)formats.Length, formats, out IDXGIOutputDuplication probeDupl);
-                if (hr == 0 && probeDupl != null)
+                foreach (HdrDuplSession session in Sessions.Values)
                 {
-                    probeDupl.GetDesc(out DXGI_OUTDUPL_DESC dd);
-                    Marshal.ReleaseComObject(probeDupl);
-                    return (int)dd.ModeDesc.Format;
+                    DisposeSession(session);
+                }
+
+                Sessions.Clear();
+                DisposeSharedDeviceUnlocked();
+            }
+        }
+
+        private static void DisposeSharedDeviceUnlocked()
+        {
+            if (SharedDeviceUnk != null)
+            {
+                try { Marshal.ReleaseComObject(SharedDeviceUnk); } catch { }
+                SharedDeviceUnk = null;
+            }
+
+            if (SharedContextPtr != IntPtr.Zero)
+            {
+                Marshal.Release(SharedContextPtr);
+                SharedContextPtr = IntPtr.Zero;
+            }
+
+            if (SharedDevicePtr != IntPtr.Zero)
+            {
+                Marshal.Release(SharedDevicePtr);
+                SharedDevicePtr = IntPtr.Zero;
+            }
+        }
+
+        private static bool TryGetSharedDevice(out IntPtr devicePtr, out IntPtr contextPtr, out object deviceUnk)
+        {
+            lock (SessionLock)
+            {
+                if (SharedDevicePtr != IntPtr.Zero)
+                {
+                    devicePtr = SharedDevicePtr;
+                    contextPtr = SharedContextPtr;
+                    deviceUnk = SharedDeviceUnk;
+                    return true;
+                }
+
+                int[] levels = { 0xb100, 0xb000 };
+                int hr = D3D11CreateDevice(IntPtr.Zero, D3D_DRIVER_TYPE_HARDWARE, IntPtr.Zero, 0,
+                    levels, (uint)levels.Length, D3D11_SDK_VERSION,
+                    out SharedDevicePtr, out _, out SharedContextPtr);
+                if (hr != 0)
+                {
+                    DebugHelper.WriteLine($"HDR: D3D11CreateDevice failed 0x{hr:X8}");
+                    devicePtr = IntPtr.Zero;
+                    contextPtr = IntPtr.Zero;
+                    deviceUnk = null;
+                    return false;
+                }
+
+                SharedDeviceUnk = Marshal.GetObjectForIUnknown(SharedDevicePtr);
+                devicePtr = SharedDevicePtr;
+                contextPtr = SharedContextPtr;
+                deviceUnk = SharedDeviceUnk;
+                return true;
+            }
+        }
+
+        private static HdrDuplSession GetOrCreateSession(string deviceName, IDXGIOutput output, IntPtr devicePtr, IntPtr contextPtr)
+        {
+            lock (SessionLock)
+            {
+                if (!string.IsNullOrEmpty(deviceName) && Sessions.TryGetValue(deviceName, out HdrDuplSession existing) &&
+                    existing.Duplication != null)
+                {
+                    return existing;
                 }
             }
-            catch (InvalidCastException)
+
+            if (!TryCreateDuplication(output, devicePtr, out IDXGIOutputDuplication duplication, out int format))
             {
-                // IDXGIOutput5 not available
+                return null;
             }
-            catch (Exception)
+
+            HdrDuplSession session = new HdrDuplSession
             {
-                // Probe failed
+                DeviceName = deviceName,
+                Format = format,
+                Duplication = duplication,
+                Device = devicePtr,
+                Context = contextPtr,
+                CreateTex = Marshal.GetDelegateForFunctionPointer<Del_CreateTex2D>(VT(devicePtr, 5)),
+                Copy = Marshal.GetDelegateForFunctionPointer<Del_CopyResource>(VT(contextPtr, 47)),
+                Map = Marshal.GetDelegateForFunctionPointer<Del_Map>(VT(contextPtr, 14)),
+                Unmap = Marshal.GetDelegateForFunctionPointer<Del_Unmap>(VT(contextPtr, 15))
+            };
+
+            lock (SessionLock)
+            {
+                if (!string.IsNullOrEmpty(deviceName))
+                {
+                    if (Sessions.TryGetValue(deviceName, out HdrDuplSession raced) && raced.Duplication != null)
+                    {
+                        DisposeSession(session);
+                        return raced;
+                    }
+
+                    Sessions[deviceName] = session;
+                }
             }
-            return DXGI_FORMAT_B8G8R8A8_UNORM;
+
+            return session;
+        }
+
+        private static bool TryCreateDuplication(IDXGIOutput output, IntPtr devicePtr,
+            out IDXGIOutputDuplication duplication, out int format)
+        {
+            duplication = null;
+            format = DXGI_FORMAT_B8G8R8A8_UNORM;
+            object deviceUnk = Marshal.GetObjectForIUnknown(devicePtr);
+            try
+            {
+                try
+                {
+                    var output5 = (IDXGIOutput5)output;
+                    int[] formats = { DXGI_FORMAT_R16G16B16A16_FLOAT, DXGI_FORMAT_R10G10B10A2_UNORM, DXGI_FORMAT_B8G8R8A8_UNORM };
+                    int hr = output5.DuplicateOutput1(deviceUnk, 0, (uint)formats.Length, formats, out duplication);
+                    if (hr == 0 && duplication != null)
+                    {
+                        duplication.GetDesc(out DXGI_OUTDUPL_DESC dd);
+                        format = (int)dd.ModeDesc.Format;
+                        return true;
+                    }
+                }
+                catch (InvalidCastException)
+                {
+                }
+
+                var output1 = (IDXGIOutput1)output;
+                int legacyHr = output1.DuplicateOutput(deviceUnk, out duplication);
+                if (legacyHr != 0 || duplication == null)
+                {
+                    return false;
+                }
+
+                duplication.GetDesc(out DXGI_OUTDUPL_DESC legacyDesc);
+                format = (int)legacyDesc.ModeDesc.Format;
+                return true;
+            }
+            finally
+            {
+                Marshal.ReleaseComObject(deviceUnk);
+            }
+        }
+
+        private static void DropSession(string deviceName)
+        {
+            lock (SessionLock)
+            {
+                if (deviceName != null && Sessions.TryGetValue(deviceName, out HdrDuplSession session))
+                {
+                    Sessions.Remove(deviceName);
+                    DisposeSession(session);
+                }
+            }
+        }
+
+        private static void DisposeSession(HdrDuplSession session)
+        {
+            if (session == null)
+            {
+                return;
+            }
+
+            if (session.Duplication != null)
+            {
+                try { session.Duplication.ReleaseFrame(); } catch { }
+                try { Marshal.ReleaseComObject(session.Duplication); } catch { }
+                session.Duplication = null;
+            }
+
+            if (session.Staging != IntPtr.Zero)
+            {
+                Marshal.Release(session.Staging);
+                session.Staging = IntPtr.Zero;
+            }
+        }
+
+        private static bool CaptureOutputHdrWic(HdrDuplSession session, Rectangle monitorRect, Rectangle captureRect,
+            Rectangle intersection, Bitmap composite)
+        {
+            if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
+            {
+                return false;
+            }
+
+            try
+            {
+                int srcX = intersection.X - monitorRect.X;
+                int srcY = intersection.Y - monitorRect.Y;
+                int copyW = Math.Min(intersection.Width, texW - srcX);
+                int copyH = Math.Min(intersection.Height, texH - srcY);
+                int dstX = intersection.X - captureRect.X;
+                int dstY = intersection.Y - captureRect.Y;
+                if (copyW <= 0 || copyH <= 0)
+                {
+                    return false;
+                }
+
+                return HdrWicTonemap.TryBlitToBitmap(mapped.pData, (int)mapped.RowPitch, texW, texH, session.Format,
+                    srcX, srcY, copyW, copyH, composite, dstX, dstY);
+            }
+            finally
+            {
+                session.Unmap(session.Context, session.Staging, 0);
+                try { session.Duplication.ReleaseFrame(); } catch { }
+            }
+        }
+
+        private static HdrCpuSlice CaptureOutputHdrSlice(HdrDuplSession session, Rectangle monitorRect,
+            Rectangle captureRect, Rectangle intersection, float sdrWhiteNits)
+        {
+            if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
+            {
+                return null;
+            }
+
+            try
+            {
+                int srcX = intersection.X - monitorRect.X;
+                int srcY = intersection.Y - monitorRect.Y;
+                int copyW = Math.Min(intersection.Width, texW - srcX);
+                int copyH = Math.Min(intersection.Height, texH - srcY);
+                int dstX = intersection.X - captureRect.X;
+                int dstY = intersection.Y - captureRect.Y;
+                if (copyW <= 0 || copyH <= 0)
+                {
+                    return null;
+                }
+
+                int bpp = HdrPixelConvert.BytesPerPixel(session.Format);
+                int packedStride = copyW * bpp;
+                byte[] packed = new byte[packedStride * copyH];
+                unsafe
+                {
+                    for (int y = 0; y < copyH; y++)
+                    {
+                        byte* src = (byte*)mapped.pData + (long)(srcY + y) * mapped.RowPitch + (long)srcX * bpp;
+                        Marshal.Copy((IntPtr)src, packed, y * packedStride, packedStride);
+                    }
+                }
+
+                return new HdrCpuSlice
+                {
+                    Packed = packed,
+                    PackedStride = packedStride,
+                    Format = session.Format,
+                    CopyW = copyW,
+                    CopyH = copyH,
+                    DstX = dstX,
+                    DstY = dstY,
+                    SdrWhiteNits = sdrWhiteNits,
+                    DeviceName = session.DeviceName
+                };
+            }
+            finally
+            {
+                session.Unmap(session.Context, session.Staging, 0);
+                try { session.Duplication.ReleaseFrame(); } catch { }
+            }
+        }
+
+        private static bool TryAcquireMapped(HdrDuplSession session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH)
+        {
+            mapped = default;
+            texW = texH = 0;
+
+            if (!TryAcquireDesktopResource(session, out object resourceObj))
+            {
+                return false;
+            }
+
+            IntPtr resourcePtr = Marshal.GetIUnknownForObject(resourceObj);
+            try
+            {
+                Guid texGuid = new Guid("6f15aaf2-d208-4e89-9ab4-489535d34f9c");
+                Marshal.QueryInterface(resourcePtr, in texGuid, out IntPtr texPtr);
+                try
+                {
+                    session.GetDesc ??= Marshal.GetDelegateForFunctionPointer<Del_GetTexDesc>(VT(texPtr, 10));
+                    session.GetDesc(texPtr, out D3D11_TEXTURE2D_DESC td);
+                    texW = (int)td.Width;
+                    texH = (int)td.Height;
+
+                    if (session.Staging == IntPtr.Zero)
+                    {
+                        td.Usage = D3D11_USAGE_STAGING;
+                        td.BindFlags = 0;
+                        td.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
+                        td.MiscFlags = 0;
+                        int createHr = session.CreateTex(session.Device, ref td, IntPtr.Zero, out session.Staging);
+                        if (createHr != 0)
+                        {
+                            return false;
+                        }
+                    }
+
+                    session.Copy(session.Context, session.Staging, texPtr);
+                    int mapHr = session.Map(session.Context, session.Staging, 0, D3D11_MAP_READ, 0, out mapped);
+                    return mapHr == 0;
+                }
+                finally
+                {
+                    Marshal.Release(texPtr);
+                }
+            }
+            finally
+            {
+                Marshal.Release(resourcePtr);
+                Marshal.ReleaseComObject(resourceObj);
+            }
+        }
+
+        private static bool TryAcquireDesktopResource(HdrDuplSession session, out object resourceObj)
+        {
+            resourceObj = null;
+            DXGI_OUTDUPL_FRAME_INFO frameInfo = default;
+
+            if (session.Warm)
+            {
+                int hr = session.Duplication.AcquireNextFrame(16, out frameInfo, out resourceObj);
+                if (hr == DXGI_ERROR_ACCESS_LOST)
+                {
+                    DropSession(session.DeviceName);
+                    return false;
+                }
+
+                if (hr == 0 && resourceObj != null)
+                {
+                    return true;
+                }
+
+                if (hr == DXGI_ERROR_WAIT_TIMEOUT)
+                {
+                    hr = session.Duplication.AcquireNextFrame(50, out frameInfo, out resourceObj);
+                    return hr == 0 && resourceObj != null;
+                }
+
+                return false;
+            }
+
+            const int perAcquireMs = 100;
+            const int presentBudgetMs = 600;
+            var sw = System.Diagnostics.Stopwatch.StartNew();
+
+            while (sw.ElapsedMilliseconds < presentBudgetMs)
+            {
+                int acquireHr = session.Duplication.AcquireNextFrame(perAcquireMs, out frameInfo, out resourceObj);
+                if (acquireHr == DXGI_ERROR_ACCESS_LOST)
+                {
+                    DropSession(session.DeviceName);
+                    return false;
+                }
+
+                if (acquireHr == 0)
+                {
+                    if (frameInfo.LastPresentTime != 0 || frameInfo.AccumulatedFrames > 0)
+                    {
+                        session.Warm = true;
+                        return true;
+                    }
+
+                    Marshal.ReleaseComObject(resourceObj);
+                    resourceObj = null;
+                    session.Duplication.ReleaseFrame();
+                    continue;
+                }
+
+                if (acquireHr == DXGI_ERROR_WAIT_TIMEOUT)
+                {
+                    continue;
+                }
+
+                break;
+            }
+
+            if (resourceObj == null)
+            {
+                Thread.Sleep(120);
+                for (int i = 0; i < 5 && resourceObj == null; i++)
+                {
+                    int hr = session.Duplication.AcquireNextFrame(200, out frameInfo, out resourceObj);
+                    if (hr == 0)
+                    {
+                        break;
+                    }
+
+                    resourceObj = null;
+                }
+            }
+
+            if (resourceObj != null)
+            {
+                session.Warm = true;
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -687,324 +1052,51 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
-        /// <summary>
-        /// Captures a single HDR DXGI output and blits the intersecting region into
-        /// the composite bitmap at the correct offset. Only used for outputs that
-        /// negotiate an HDR format (RGBA16F or R10G10B10A2).
-        /// </summary>
-        private bool CaptureOutputHDR(IntPtr devicePtr, IntPtr contextPtr,
-            IDXGIOutput output, Rectangle monitorRect, Rectangle captureRect,
-            Rectangle intersection, Bitmap composite, float normScale)
+        private static unsafe void BlitCpuSlice(HdrCpuSlice slice, Bitmap composite, HdrTonemapCurve curve)
         {
-            IDXGIOutputDuplication duplication = null;
-            IntPtr stagingPtr = IntPtr.Zero;
-
-            try
+            int copyW = Math.Min(slice.CopyW, composite.Width - slice.DstX);
+            int copyH = Math.Min(slice.CopyH, composite.Height - slice.DstY);
+            if (copyW <= 0 || copyH <= 0)
             {
-                // Duplicate the output
-                bool gotDuplication = false;
-                int texFormat = DXGI_FORMAT_B8G8R8A8_UNORM;
-
-                try
-                {
-                    var output5 = (IDXGIOutput5)output;
-                    int[] formats = { DXGI_FORMAT_R16G16B16A16_FLOAT, DXGI_FORMAT_R10G10B10A2_UNORM, DXGI_FORMAT_B8G8R8A8_UNORM };
-                    int hr = output5.DuplicateOutput1(Marshal.GetObjectForIUnknown(devicePtr), 0,
-                        (uint)formats.Length, formats, out duplication);
-                    if (hr == 0)
-                    {
-                        gotDuplication = true;
-                        duplication.GetDesc(out DXGI_OUTDUPL_DESC dd);
-                        texFormat = (int)dd.ModeDesc.Format;
-                        DebugHelper.WriteLine($"HDR: DuplicateOutput1 OK, format={texFormat}");
-                    }
-                    else
-                    {
-                        DebugHelper.WriteLine($"HDR: DuplicateOutput1 failed 0x{hr:X8}, trying legacy.");
-                    }
-                }
-                catch (InvalidCastException)
-                {
-                    DebugHelper.WriteLine("HDR: IDXGIOutput5 not supported, trying legacy.");
-                }
-
-                if (!gotDuplication)
-                {
-                    var output1 = (IDXGIOutput1)output;
-                    int hr = output1.DuplicateOutput(Marshal.GetObjectForIUnknown(devicePtr), out duplication);
-                    if (hr != 0)
-                    {
-                        DebugHelper.WriteLine($"HDR: DuplicateOutput failed 0x{hr:X8}");
-                        return false;
-                    }
-                    duplication.GetDesc(out DXGI_OUTDUPL_DESC dd);
-                    texFormat = (int)dd.ModeDesc.Format;
-                    DebugHelper.WriteLine($"HDR: DuplicateOutput (legacy) OK, format={texFormat}");
-                }
-
-                // The duplicated surface is filled by the OS copying the desktop into
-                // it, and that only happens WHILE WE DO NOT OWN A FRAME (see the
-                // ReleaseFrame remarks). So the first acquire after DuplicateOutput can
-                // hand back a blank surface. We pump acquire/release, never keeping a
-                // frame, until the compositor reports real content (LastPresentTime != 0
-                // or AccumulatedFrames > 0), then keep that frame.
-                object resourceObj = null;
-                DXGI_OUTDUPL_FRAME_INFO frameInfo = default;
-
-                const int perAcquireMs = 100;    // blocking wait per acquire, paces the loop
-                const int presentBudgetMs = 600; // how long to wait for a present before fallback
-                var sw = System.Diagnostics.Stopwatch.StartNew();
-
-                while (sw.ElapsedMilliseconds < presentBudgetMs)
-                {
-                    int acquireHr = duplication.AcquireNextFrame(perAcquireMs, out frameInfo, out resourceObj);
-
-                    if (acquireHr == 0)
-                    {
-                        // Real composited content is in the surface. Keep this frame.
-                        if (frameInfo.LastPresentTime != 0 || frameInfo.AccumulatedFrames > 0)
-                        {
-                            break;
-                        }
-
-                        // Blank warm-up frame. Release so the OS can copy the desktop in.
-                        Marshal.ReleaseComObject(resourceObj);
-                        resourceObj = null;
-                        duplication.ReleaseFrame();
-                        continue;
-                    }
-
-                    if (acquireHr == DXGI_ERROR_WAIT_TIMEOUT)
-                    {
-                        continue;
-                    }
-
-                    DebugHelper.WriteLine($"HDR: AcquireNextFrame failed 0x{acquireHr:X8}");
-                    break;
-                }
-
-                // Fallback for an idle desktop that never presented: give the OS a fixed
-                // window to populate the surface (we hold no frame here), then keep the
-                // next frame regardless of its present flags.
-                if (resourceObj == null)
-                {
-                    Thread.Sleep(120);
-                    for (int i = 0; i < 5 && resourceObj == null; i++)
-                    {
-                        int hr = duplication.AcquireNextFrame(200, out frameInfo, out resourceObj);
-                        if (hr == 0)
-                        {
-                            break;
-                        }
-
-                        resourceObj = null;
-                    }
-                }
-
-                if (resourceObj == null)
-                {
-                    DebugHelper.WriteLine("HDR: No populated frame acquired.");
-                    return false;
-                }
-
-                IntPtr resourcePtr = Marshal.GetIUnknownForObject(resourceObj);
-                try
-                {
-                    Guid texGuid = new Guid("6f15aaf2-d208-4e89-9ab4-489535d34f9c");
-                    Marshal.QueryInterface(resourcePtr, in texGuid, out IntPtr texPtr);
-
-                    try
-                    {
-                        var getDesc = Marshal.GetDelegateForFunctionPointer<Del_GetTexDesc>(VT(texPtr, 10));
-                        getDesc(texPtr, out D3D11_TEXTURE2D_DESC td);
-                        int texW = (int)td.Width, texH = (int)td.Height;
-                        DebugHelper.WriteLine($"HDR: Texture {texW}x{texH} format={td.Format}");
-
-                        // Create staging texture
-                        td.Usage = D3D11_USAGE_STAGING;
-                        td.BindFlags = 0;
-                        td.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
-                        td.MiscFlags = 0;
-                        var createTex = Marshal.GetDelegateForFunctionPointer<Del_CreateTex2D>(VT(devicePtr, 5));
-                        int hr2 = createTex(devicePtr, ref td, IntPtr.Zero, out stagingPtr);
-                        if (hr2 != 0)
-                        {
-                            DebugHelper.WriteLine($"HDR: CreateTexture2D staging failed 0x{hr2:X8}");
-                            return false;
-                        }
-
-                        // Copy and map
-                        var copy = Marshal.GetDelegateForFunctionPointer<Del_CopyResource>(VT(contextPtr, 47));
-                        copy(contextPtr, stagingPtr, texPtr);
-
-                        var map = Marshal.GetDelegateForFunctionPointer<Del_Map>(VT(contextPtr, 14));
-                        hr2 = map(contextPtr, stagingPtr, 0, D3D11_MAP_READ, 0, out D3D11_MAPPED_SUBRESOURCE mapped);
-                        if (hr2 != 0)
-                        {
-                            DebugHelper.WriteLine($"HDR: Map failed 0x{hr2:X8}");
-                            return false;
-                        }
-
-                        try
-                        {
-                            // The intersection is in virtual desktop coordinates.
-                            // Source offset within the monitor texture: subtract
-                            // the monitor's top-left since the texture starts at (0,0).
-                            int srcX = intersection.X - monitorRect.X;
-                            int srcY = intersection.Y - monitorRect.Y;
-                            int copyW = Math.Min(intersection.Width, texW - srcX);
-                            int copyH = Math.Min(intersection.Height, texH - srcY);
-
-                            // Destination offset within the composite bitmap:
-                            // subtract the overall capture rect's top-left.
-                            int dstX = intersection.X - captureRect.X;
-                            int dstY = intersection.Y - captureRect.Y;
-
-                            if (copyW > 0 && copyH > 0)
-                            {
-                                BlitHDRToComposite(mapped.pData, (int)mapped.RowPitch, texW, texH,
-                                    td.Format, srcX, srcY, copyW, copyH,
-                                    composite, dstX, dstY, normScale);
-                            }
-
-                            return true;
-                        }
-                        finally
-                        {
-                            var unmap = Marshal.GetDelegateForFunctionPointer<Del_Unmap>(VT(contextPtr, 15));
-                            unmap(contextPtr, stagingPtr, 0);
-                        }
-                    }
-                    finally
-                    {
-                        Marshal.Release(texPtr);
-                    }
-                }
-                finally
-                {
-                    Marshal.Release(resourcePtr);
-                }
-            }
-            catch (Exception e)
-            {
-                DebugHelper.WriteException(e, "HDR: Output capture failed.");
-                return false;
-            }
-            finally
-            {
-                if (duplication != null)
-                {
-                    try { duplication.ReleaseFrame(); } catch { }
-                    Marshal.ReleaseComObject(duplication);
-                }
-                if (stagingPtr != IntPtr.Zero) Marshal.Release(stagingPtr);
-            }
-        }
-
-        // ====================================================================
-        // Pixel Conversion
-        // ====================================================================
-
-        /// <summary>
-        /// Converts and blits a region from the mapped HDR texture directly into
-        /// the composite bitmap at the specified destination offset.
-        /// </summary>
-        private void BlitHDRToComposite(IntPtr data, int rowPitch, int texW, int texH,
-            int fmt, int srcX, int srcY, int copyW, int copyH,
-            Bitmap composite, int dstX, int dstY, float normScale)
-        {
-            // Clamp to valid ranges
-            if (srcX < 0) { dstX -= srcX; copyW += srcX; srcX = 0; }
-            if (srcY < 0) { dstY -= srcY; copyH += srcY; srcY = 0; }
-            copyW = Math.Min(copyW, texW - srcX);
-            copyH = Math.Min(copyH, texH - srcY);
-            copyW = Math.Min(copyW, composite.Width - dstX);
-            copyH = Math.Min(copyH, composite.Height - dstY);
-            if (copyW <= 0 || copyH <= 0) return;
-
-            if (HdrTonemapMode == HdrTonemapMode.WindowsWIC)
-            {
-                if (HdrWicTonemap.TryBlitToBitmap(data, rowPitch, texW, texH, fmt, srcX, srcY, copyW, copyH,
-                    composite, dstX, dstY))
-                {
-                    return;
-                }
-
-                DebugHelper.WriteLine("HDR: WIC tonemap unavailable, falling back to Desktop BT.2390.");
+                return;
             }
 
-            HdrLuminanceStats stats = SampleTonemapStats(data, rowPitch, fmt, srcX, srcY, copyW, copyH, normScale);
-            HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(
-                HdrTonemapMode == HdrTonemapMode.WindowsWIC ? HdrTonemapMode.Desktop : HdrTonemapMode, stats);
-            HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, HdrExposure, GetSdrWhiteNits());
-
-            var bd = composite.LockBits(new Rectangle(dstX, dstY, copyW, copyH),
+            int bpp = HdrPixelConvert.BytesPerPixel(slice.Format);
+            BitmapData bd = composite.LockBits(new Rectangle(slice.DstX, slice.DstY, copyW, copyH),
                 ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
 
             try
             {
-                unsafe
+                byte* dstBase = (byte*)bd.Scan0;
+                int dstStride = bd.Stride;
+                byte[] packed = slice.Packed;
+                int packedStride = slice.PackedStride;
+                int format = slice.Format;
+                float sdrWhiteNits = slice.SdrWhiteNits;
+                int originX = slice.DstX;
+                int originY = slice.DstY;
+
+                System.Threading.Tasks.Parallel.For(0, copyH, y =>
                 {
-                    for (int y = 0; y < copyH; y++)
+                    fixed (byte* packedPtr = packed)
                     {
-                        byte* dst = (byte*)bd.Scan0 + y * bd.Stride;
+                        byte* dst = dstBase + y * dstStride;
+                        byte* srcRow = packedPtr + y * packedStride;
+                        int py = originY + y;
 
-                        if (fmt == DXGI_FORMAT_R16G16B16A16_FLOAT)
+                        for (int x = 0; x < copyW; x++)
                         {
-                            byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 8;
-                            for (int x = 0; x < copyW; x++)
-                            {
-                                ushort* p = (ushort*)(src + x * 8);
-                                float r = HalfToFloat(p[0]);
-                                float g = HalfToFloat(p[1]);
-                                float b = HalfToFloat(p[2]);
-                                float a = HalfToFloat(p[3]);
-
-                                r = Math.Max(r * normScale, 0f);
-                                g = Math.Max(g * normScale, 0f);
-                                b = Math.Max(b * normScale, 0f);
-
-                                curve.Map(ref r, ref g, ref b);
-
-                                dst[x * 4 + 0] = curve.Encode(b, x, y);
-                                dst[x * 4 + 1] = curve.Encode(g, x, y);
-                                dst[x * 4 + 2] = curve.Encode(r, x, y);
-                                dst[x * 4 + 3] = FloatToByte(Math.Clamp(a, 0f, 1f));
-                            }
-                        }
-                        else if (fmt == DXGI_FORMAT_R10G10B10A2_UNORM)
-                        {
-                            byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
-                            for (int x = 0; x < copyW; x++)
-                            {
-                                uint pixel = *(uint*)(src + x * 4);
-                                float rN = PQ_EOTF((pixel & 0x3FFu) / 1023f);
-                                float gN = PQ_EOTF(((pixel >> 10) & 0x3FFu) / 1023f);
-                                float bN = PQ_EOTF(((pixel >> 20) & 0x3FFu) / 1023f);
-
-                                float r = (1.6605f * rN - 0.5877f * gN - 0.0728f * bN) / 80f;
-                                float g = (-0.1246f * rN + 1.1330f * gN - 0.0084f * bN) / 80f;
-                                float b = (-0.0182f * rN - 0.1006f * gN + 1.1187f * bN) / 80f;
-
-                                r = Math.Max(r, 0f);
-                                g = Math.Max(g, 0f);
-                                b = Math.Max(b, 0f);
-
-                                curve.Map(ref r, ref g, ref b);
-
-                                dst[x * 4 + 0] = curve.Encode(b, x, y);
-                                dst[x * 4 + 1] = curve.Encode(g, x, y);
-                                dst[x * 4 + 2] = curve.Encode(r, x, y);
-                                dst[x * 4 + 3] = 255;
-                            }
-                        }
-                        else
-                        {
-                            byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
-                            Buffer.MemoryCopy(src, dst, bd.Stride, copyW * 4);
+                            HdrPixelConvert.DecodeToSdrNormalized(format, srcRow + x * bpp, sdrWhiteNits,
+                                out float r, out float g, out float b);
+                            curve.Map(ref r, ref g, ref b);
+                            int px = originX + x;
+                            dst[x * 4 + 0] = curve.Encode(b, px, py);
+                            dst[x * 4 + 1] = curve.Encode(g, px, py);
+                            dst[x * 4 + 2] = curve.Encode(r, px, py);
+                            dst[x * 4 + 3] = 255;
                         }
                     }
-                }
+                });
             }
             finally
             {
@@ -1012,78 +1104,18 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
-        private unsafe HdrLuminanceStats SampleTonemapStats(IntPtr data, int rowPitch, int fmt,
-            int srcX, int srcY, int copyW, int copyH, float normScale)
-        {
-            if (fmt != DXGI_FORMAT_R16G16B16A16_FLOAT && fmt != DXGI_FORMAT_R10G10B10A2_UNORM)
-            {
-                return new HdrLuminanceStats(0, 0, 0, 0, 1f, 1f);
-            }
-
-            long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
-            float maxLum = 0f;
-            Span<int> hist = stackalloc int[16];
-            hist.Clear();
-
-            int stepY = Math.Max(1, copyH / 64);
-            int stepX = Math.Max(1, copyW / 64);
-
-            for (int y = 0; y < copyH; y += stepY)
-            {
-                if (fmt == DXGI_FORMAT_R16G16B16A16_FLOAT)
-                {
-                    byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 8;
-                    for (int x = 0; x < copyW; x += stepX)
-                    {
-                        ushort* p = (ushort*)(src + x * 8);
-                        float r = Math.Max(HalfToFloat(p[0]) * normScale, 0f);
-                        float g = Math.Max(HalfToFloat(p[1]) * normScale, 0f);
-                        float b = Math.Max(HalfToFloat(p[2]) * normScale, 0f);
-                        HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
-                            ref hotUpperSdr, ref maxLum, hist);
-                    }
-                }
-                else
-                {
-                    byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
-                    for (int x = 0; x < copyW; x += stepX)
-                    {
-                        uint pixel = *(uint*)(src + x * 4);
-                        float rN = PQ_EOTF((pixel & 0x3FFu) / 1023f);
-                        float gN = PQ_EOTF(((pixel >> 10) & 0x3FFu) / 1023f);
-                        float bN = PQ_EOTF(((pixel >> 20) & 0x3FFu) / 1023f);
-                        float r = Math.Max((1.6605f * rN - 0.5877f * gN - 0.0728f * bN) / 80f, 0f);
-                        float g = Math.Max((-0.1246f * rN + 1.1330f * gN - 0.0084f * bN) / 80f, 0f);
-                        float b = Math.Max((-0.0182f * rN - 0.1006f * gN + 1.1187f * bN) / 80f, 0f);
-                        HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
-                            ref hotUpperSdr, ref maxLum, hist);
-                    }
-                }
-            }
-
-            return HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
-        }
-
-        // ====================================================================
-        // Color Math
-        // ====================================================================
-
-        /// <summary>
-        /// Converts one gbrpf32le frame (linear scRGB from ddagrab) to bgr24 using the
-        /// same normalization and tonemap as HDR screenshots.
-        /// </summary>
         public static void TonemapLinearScRgbFrameToBgr24(byte[] gbrpf32le, byte[] bgr24, int width, int height,
             bool applyNormalization = true, HdrTonemapMode tonemapMode = HdrTonemapMode.Desktop,
             float exposure = HdrTonemap.ExposureDefault)
         {
-            float normScale = applyNormalization ? GetSdrWhiteNormalizationScale() : 1f;
+            float sdrWhiteNits = DisplayConfigHelper.GetSdrWhiteNits();
+            float normScale = applyNormalization ? HdrPixelConvert.NormalizationScale(sdrWhiteNits) : 1f;
             int rowBytesIn = width * 12;
             int rowBytesOut = width * 3;
 
             long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
             float maxLum = 0f;
-            Span<int> hist = stackalloc int[16];
-            hist.Clear();
+            int[] hist = new int[HdrTonemap.HistogramSize];
             int step = Math.Max(1, width * height / 4096);
 
             for (int i = 0; i < width * height; i += step)
@@ -1101,7 +1133,7 @@ namespace ShareX.ScreenCaptureLib
 
             HdrLuminanceStats stats = HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
             HdrTonemapMode resolvedMode = HdrTonemap.ResolveForRecording(tonemapMode, stats);
-            HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, exposure, GetSdrWhiteNits());
+            HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, exposure, sdrWhiteNits);
 
             System.Threading.Tasks.Parallel.For(0, height, y =>
             {
@@ -1128,57 +1160,6 @@ namespace ShareX.ScreenCaptureLib
                     bgr24[di + 2] = curve.Encode(r, x, y);
                 }
             });
-        }
-
-        /// <summary>
-        /// ST.2084 (PQ) Electro-Optical Transfer Function.
-        /// Converts PQ encoded value [0,1] to absolute luminance in nits [0,10000].
-        /// </summary>
-        private static float PQ_EOTF(float N)
-        {
-            const float m1 = 0.1593017578125f;
-            const float m2 = 78.84375f;
-            const float c1 = 0.8359375f;
-            const float c2 = 18.8515625f;
-            const float c3 = 18.6875f;
-
-            float Np = MathF.Pow(Math.Max(N, 0f), 1f / m2);
-            float num = Math.Max(Np - c1, 0f);
-            float den = c2 - c3 * Np;
-            if (den <= 0f) return 0f;
-            return MathF.Pow(num / den, 1f / m1) * 10000f;
-        }
-
-        private static unsafe float HalfToFloat(ushort h)
-        {
-            uint sign = ((uint)h & 0x8000u) << 16;
-            uint exp = ((uint)h >> 10) & 0x1F;
-            uint man = (uint)h & 0x3FF;
-            uint result;
-
-            if (exp == 0)
-            {
-                if (man == 0) { result = sign; return *(float*)&result; }
-                while ((man & 0x400) == 0) { man <<= 1; exp--; }
-                exp++; man &= ~0x400u; exp += 127 - 15;
-                result = sign | (exp << 23) | (man << 13);
-            }
-            else if (exp == 31)
-            {
-                result = sign | 0x7F800000u | (man << 13);
-            }
-            else
-            {
-                exp += 127 - 15;
-                result = sign | (exp << 23) | (man << 13);
-            }
-
-            return *(float*)&result;
-        }
-
-        private static byte FloatToByte(float v)
-        {
-            return (byte)Math.Clamp((int)(v * 255f + 0.5f), 0, 255);
         }
     }
 }
