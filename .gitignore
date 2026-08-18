@@ -336,3 +336,6 @@ ResXManager.config.xml
 # Local-only workspace (FFmpeg downloads, reference clones)
 .tools-cache/
 fork/
+
+# Local design/plan notes
+/docs/
