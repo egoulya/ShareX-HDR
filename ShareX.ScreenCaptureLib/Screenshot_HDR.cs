@@ -246,6 +246,64 @@ namespace ShareX.ScreenCaptureLib
                 out IDXGIOutputDuplication duplication);
         }
 
+        [ComImport, Guid("068346e8-aaec-4b84-add7-137f513f77a1"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+        private interface IDXGIOutput6
+        {
+            int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
+            int SetPrivateDataInterface(ref Guid name, [MarshalAs(UnmanagedType.IUnknown)] object pUnknown);
+            int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
+            int GetParent(ref Guid riid, out IntPtr parent);
+
+            int GetDesc(out DXGI_OUTPUT_DESC desc);
+            int GetDisplayModeList(uint format, uint flags, ref uint numModes, IntPtr descs);
+            int FindClosestMatchingMode(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
+            int WaitForVBlank();
+            int TakeOwnership([MarshalAs(UnmanagedType.IUnknown)] object device, [MarshalAs(UnmanagedType.Bool)] bool exclusive);
+            void ReleaseOwnership();
+            int GetGammaControlCapabilities(IntPtr gammaCaps);
+            int SetGammaControl(IntPtr gamma);
+            int GetGammaControl(IntPtr gamma);
+            int SetDisplaySurface([MarshalAs(UnmanagedType.IUnknown)] object surface);
+            int GetDisplaySurfaceData([MarshalAs(UnmanagedType.IUnknown)] object surface);
+            int GetFrameStatistics(IntPtr stats);
+
+            int GetDisplayModeList1(uint format, uint flags, ref uint numModes, IntPtr descs);
+            int FindClosestMatchingMode1(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
+            int GetDisplaySurfaceData1([MarshalAs(UnmanagedType.IUnknown)] object surface);
+            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out IDXGIOutputDuplication duplication);
+
+            [PreserveSig] int SupportsOverlays();
+            int CheckOverlaySupport(uint format, [MarshalAs(UnmanagedType.IUnknown)] object device, out uint flags);
+            int CheckOverlayColorSpaceSupport(uint format, uint colorSpace, [MarshalAs(UnmanagedType.IUnknown)] object device, out uint flags);
+            int DuplicateOutput1([MarshalAs(UnmanagedType.IUnknown)] object device, uint flags,
+                uint formatCount, [MarshalAs(UnmanagedType.LPArray)] int[] formats,
+                out IDXGIOutputDuplication duplication);
+
+            int GetDesc1(out DXGI_OUTPUT_DESC1 desc);
+            int CheckHardwareCompositionSupport(out uint flags);
+        }
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        private struct DXGI_OUTPUT_DESC1
+        {
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+            public string DeviceName;
+            public RECT DesktopCoordinates;
+            [MarshalAs(UnmanagedType.Bool)]
+            public bool AttachedToDesktop;
+            public uint Rotation;
+            public IntPtr Monitor;
+            public uint BitsPerColor;
+            public uint ColorSpace;
+            public float RedPrimaryX, RedPrimaryY;
+            public float GreenPrimaryX, GreenPrimaryY;
+            public float BluePrimaryX, BluePrimaryY;
+            public float WhitePointX, WhitePointY;
+            public float MinLuminance;
+            public float MaxLuminance;
+            public float MaxFullFrameLuminance;
+        }
+
         [ComImport, Guid("191cfac3-a341-470d-b26e-a864f428319c"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
         private interface IDXGIOutputDuplication
         {
@@ -453,6 +511,8 @@ namespace ShareX.ScreenCaptureLib
 
                 Bitmap result = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
                 HdrMasterImage master = SaveHdrMasterPng ? new HdrMasterImage(rect.Width, rect.Height) : null;
+                HdrMasteringDisplay bestMastering = default;
+                int bestMasteringArea = 0;
                 bool anyOutputCaptured = false;
                 List<HdrPendingOutput> pendingHdr = new List<HdrPendingOutput>();
 
@@ -493,6 +553,16 @@ namespace ShareX.ScreenCaptureLib
                         }
 
                         DebugHelper.WriteLine($"HDR: Output {outputIdx} ({outputDesc.DeviceName}) {monitorRect}, intersection={intersection}");
+
+                        if (master != null && TryGetMasteringDisplay(output, out HdrMasteringDisplay mastering))
+                        {
+                            int area = intersection.Width * intersection.Height;
+                            if (area > bestMasteringArea)
+                            {
+                                bestMasteringArea = area;
+                                bestMastering = mastering;
+                            }
+                        }
 
                         HdrDuplSession session = GetOrCreateSession(outputDesc.DeviceName, output, devicePtr, contextPtr);
                         if (session == null || session.Format == DXGI_FORMAT_B8G8R8A8_UNORM)
@@ -595,6 +665,10 @@ namespace ShareX.ScreenCaptureLib
                 }
 
                 LastHdrMaster = master;
+                if (master != null)
+                {
+                    master.MasteringDisplay = bestMastering;
+                }
                 PendingHdrMaster = master;
                 DebugHelper.WriteLine($"HDR: Composite output {result.Width}x{result.Height}" +
                     (master != null ? $", HDR master MaxCLL={master.MaxCLL:0.#}" : ""));
@@ -890,6 +964,40 @@ namespace ShareX.ScreenCaptureLib
             finally
             {
                 Marshal.ReleaseComObject(deviceUnk);
+            }
+        }
+
+        private static bool TryGetMasteringDisplay(IDXGIOutput output, out HdrMasteringDisplay mastering)
+        {
+            mastering = default;
+            try
+            {
+                var output6 = (IDXGIOutput6)output;
+                int hr = output6.GetDesc1(out DXGI_OUTPUT_DESC1 desc);
+                if (hr != 0)
+                {
+                    return false;
+                }
+
+                mastering = new HdrMasteringDisplay
+                {
+                    RedX = desc.RedPrimaryX,
+                    RedY = desc.RedPrimaryY,
+                    GreenX = desc.GreenPrimaryX,
+                    GreenY = desc.GreenPrimaryY,
+                    BlueX = desc.BluePrimaryX,
+                    BlueY = desc.BluePrimaryY,
+                    WhiteX = desc.WhitePointX,
+                    WhiteY = desc.WhitePointY,
+                    MinLuminanceNits = desc.MinLuminance,
+                    MaxLuminanceNits = desc.MaxLuminance,
+                    HasValue = desc.MaxLuminance > 0
+                };
+                return mastering.HasValue;
+            }
+            catch (InvalidCastException)
+            {
+                return false;
             }
         }
 

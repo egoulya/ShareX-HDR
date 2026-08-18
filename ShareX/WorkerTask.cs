@@ -1236,6 +1236,11 @@ namespace ShareX
                 Image.Dispose();
                 Image = null;
             }
+
+            if (Info?.Metadata != null)
+            {
+                Info.Metadata.HdrMaster = null;
+            }
         }
     }
 }

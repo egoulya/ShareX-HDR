@@ -7,12 +7,20 @@
 
 #endregion License Information (GPL v3)
 
+using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 
 namespace ShareX.ScreenCaptureLib
 {
+    public struct HdrMasteringDisplay
+    {
+        public float RedX, RedY, GreenX, GreenY, BlueX, BlueY, WhiteX, WhiteY;
+        public float MinLuminanceNits, MaxLuminanceNits;
+        public bool HasValue;
+    }
+
     /// <summary>
     /// Pre-tonemap BT.2100 PQ RGB (16-bit) companion for an HDR capture.
     /// </summary>
@@ -27,6 +35,7 @@ namespace ShareX.ScreenCaptureLib
         public float MaxCLL { get; private set; }
         public double SumNits { get; private set; }
         public long SampleCount { get; private set; }
+        public HdrMasteringDisplay MasteringDisplay { get; set; }
 
         public float MaxFALL => SampleCount > 0 ? (float)(SumNits / SampleCount) : 0f;
 
@@ -47,10 +56,16 @@ namespace ShareX.ScreenCaptureLib
 
             if (srcX < 0 || srcY < 0 || srcX + w > Width || srcY + h > Height || w <= 0 || h <= 0)
             {
+                DebugHelper.WriteLine(
+                    $"HDR master: crop {absoluteRegion} is outside canvas {canvasAbsoluteBounds} ({Width}x{Height}); dropping companion.");
                 return null;
             }
 
-            HdrMasterImage cropped = new HdrMasterImage(w, h);
+            HdrMasterImage cropped = new HdrMasterImage(w, h)
+            {
+                MasteringDisplay = MasteringDisplay
+            };
+
             for (int y = 0; y < h; y++)
             {
                 int srcRow = ((srcY + y) * Width + srcX) * 3;
@@ -58,10 +73,21 @@ namespace ShareX.ScreenCaptureLib
                 Array.Copy(Rgb, srcRow, cropped.Rgb, dstRow, w * 3);
             }
 
-            cropped.MaxCLL = MaxCLL;
-            cropped.SumNits = SumNits;
-            cropped.SampleCount = SampleCount;
+            cropped.RecomputeLightLevels();
             return cropped;
+        }
+
+        public void RecomputeLightLevels()
+        {
+            MaxCLL = 0f;
+            SumNits = 0;
+            SampleCount = 0;
+
+            ushort[] rgb = Rgb;
+            for (int i = 0; i < rgb.Length; i += 3)
+            {
+                TrackNits(HdrPixelConvert.Pq16LuminanceNits(rgb[i], rgb[i + 1], rgb[i + 2]));
+            }
         }
 
         public unsafe void WriteFromDxgiPixel(int dstX, int dstY, int format, byte* pixel, float sdrWhiteNits)

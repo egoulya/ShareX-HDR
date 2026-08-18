@@ -219,13 +219,12 @@ namespace ShareX.ScreenCaptureLib.Tests
         }
 
         [Fact]
-        public void Hdr_png_writer_emits_cicp_and_clli_chunks()
+        public void Hdr_png_writer_emits_cicp_clli_and_mdcv_chunks()
         {
             HdrMasterImage master = new HdrMasterImage(2, 1);
             master.Rgb[0] = 32768;
             master.Rgb[1] = 32768;
             master.Rgb[2] = 32768;
-            // Force MaxCLL/MaxFALL via WriteFromDxgi would need pixels; set via encode path:
             unsafe
             {
                 byte* px = stackalloc byte[8];
@@ -242,8 +241,40 @@ namespace ShareX.ScreenCaptureLib.Tests
             string ascii = System.Text.Encoding.ASCII.GetString(bytes);
             Assert.Contains("cICP", ascii);
             Assert.Contains("cLLI", ascii);
+            Assert.Contains("mDCV", ascii);
             Assert.Contains("IHDR", ascii);
             Assert.Contains("IDAT", ascii);
+        }
+
+        [Fact]
+        public void Hdr_master_crop_recomputes_light_levels()
+        {
+            HdrMasterImage canvas = new HdrMasterImage(4, 1);
+            for (int x = 0; x < 2; x++)
+            {
+                canvas.Rgb[x * 3] = 0;
+                canvas.Rgb[x * 3 + 1] = 0;
+                canvas.Rgb[x * 3 + 2] = 0;
+            }
+
+            for (int x = 2; x < 4; x++)
+            {
+                canvas.Rgb[x * 3] = 50000;
+                canvas.Rgb[x * 3 + 1] = 50000;
+                canvas.Rgb[x * 3 + 2] = 50000;
+            }
+
+            canvas.RecomputeLightLevels();
+            Assert.True(canvas.MaxCLL > 100f);
+
+            HdrMasterImage dark = canvas.Crop(new System.Drawing.Rectangle(0, 0, 2, 1), new System.Drawing.Rectangle(0, 0, 4, 1));
+            HdrMasterImage bright = canvas.Crop(new System.Drawing.Rectangle(2, 0, 2, 1), new System.Drawing.Rectangle(0, 0, 4, 1));
+
+            Assert.NotNull(dark);
+            Assert.NotNull(bright);
+            Assert.True(dark.MaxCLL < 1f);
+            Assert.True(bright.MaxCLL > 100f);
+            Assert.True(bright.MaxCLL > dark.MaxCLL * 10);
         }
 
         private static uint PackPq10(float nits)

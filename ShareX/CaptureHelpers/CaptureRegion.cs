@@ -132,7 +132,7 @@ namespace ShareX
 
                 if (canvasMaster != null)
                 {
-                    metadata.HdrMaster = canvasMaster.Crop(result.ScreenRectangle, screenBounds) ?? canvasMaster;
+                    metadata.HdrMaster = canvasMaster.Crop(result.ScreenRectangle, screenBounds);
                 }
 
                 if (result.ImageModified)

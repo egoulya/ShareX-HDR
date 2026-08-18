@@ -179,6 +179,14 @@ namespace ShareX.ScreenCaptureLib
             return MathF.Pow((c + 0.055f) / 1.055f, 2.4f);
         }
 
+        public static float Pq16LuminanceNits(ushort r, ushort g, ushort b)
+        {
+            float rn = PqEotf(r / 65535f);
+            float gn = PqEotf(g / 65535f);
+            float bn = PqEotf(b / 65535f);
+            return 0.2627f * rn + 0.6780f * gn + 0.0593f * bn;
+        }
+
         private static float PqEotf(float N)
         {
             const float m1 = 0.1593017578125f;

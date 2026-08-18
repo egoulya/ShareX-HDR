@@ -91,6 +91,7 @@ namespace ShareX
         public void Dispose()
         {
             Image?.Dispose();
+            HdrMaster = null;
         }
     }
 }
