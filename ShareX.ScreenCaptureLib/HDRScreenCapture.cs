@@ -700,6 +700,12 @@ namespace ShareX.ScreenCaptureLib
         private static extern int DwmFlush();
     }
 
+    /// <summary>
+    /// Reads DISPLAYCONFIG_SDR_WHITE_LEVEL for an output.
+    /// Do not cache the result: the Windows "SDR content brightness" slider
+    /// changes this value without firing WM_DISPLAYCHANGE / DisplaySettingsChanged.
+    /// Query on every capture so a slider drag is picked up immediately.
+    /// </summary>
     internal static class DisplayConfigHelper
     {
         private const uint QueryDisplayConfigOnlyActivePaths = 0x00000002;

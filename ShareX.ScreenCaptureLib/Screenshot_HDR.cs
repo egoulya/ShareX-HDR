@@ -401,7 +401,7 @@ namespace ShareX.ScreenCaptureLib
 
                 Bitmap result = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
                 bool anyOutputCaptured = false;
-                List<HdrCpuSlice> hdrSlices = new List<HdrCpuSlice>();
+                List<HdrPendingOutput> pendingHdr = new List<HdrPendingOutput>();
 
                 for (uint outputIdx = 0; ; outputIdx++)
                 {
@@ -464,12 +464,13 @@ namespace ShareX.ScreenCaptureLib
                             continue;
                         }
 
-                        HdrCpuSlice slice = CaptureOutputHdrSlice(session, monitorRect, rect, intersection, sdrWhiteNits);
-                        if (slice != null)
+                        pendingHdr.Add(new HdrPendingOutput
                         {
-                            hdrSlices.Add(slice);
-                            anyOutputCaptured = true;
-                        }
+                            Session = session,
+                            MonitorRect = monitorRect,
+                            Intersection = intersection,
+                            SdrWhiteNits = sdrWhiteNits
+                        });
                     }
                     catch (Exception e)
                     {
@@ -477,26 +478,59 @@ namespace ShareX.ScreenCaptureLib
                     }
                 }
 
-                if (hdrSlices.Count > 0)
+                if (pendingHdr.Count == 1)
                 {
-                    HdrLuminanceStats merged = default;
-                    float curveWhiteNits = 80f;
-                    HdrLuminanceAccumulator acc = new HdrLuminanceAccumulator();
-                    foreach (HdrCpuSlice slice in hdrSlices)
+                    if (CaptureOutputHdrDirect(pendingHdr[0], rect, result))
                     {
-                        acc.AddFromSlice(slice);
-                        curveWhiteNits = Math.Max(curveWhiteNits, slice.SdrWhiteNits);
+                        anyOutputCaptured = true;
                     }
-                    merged = acc.Build();
-
-                    string hysteresisKey = hdrSlices.Count == 1 ? hdrSlices[0].DeviceName : "span";
-                    HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, merged, hysteresisKey);
-                    HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, merged, HdrExposure, curveWhiteNits);
-                    DebugHelper.WriteLine($"HDR: merged tonemap {HdrTonemapMode} -> {resolvedMode} (P99={merged.P99Estimate:0.00}, max={merged.MaxLuminance:0.00})");
-
-                    foreach (HdrCpuSlice slice in hdrSlices)
+                }
+                else if (pendingHdr.Count > 1)
+                {
+                    List<HdrCpuSlice> hdrSlices = new List<HdrCpuSlice>(pendingHdr.Count);
+                    foreach (HdrPendingOutput pending in pendingHdr)
                     {
-                        BlitCpuSlice(slice, result, curve);
+                        HdrCpuSlice slice = CaptureOutputHdrSlice(pending, rect);
+                        if (slice != null)
+                        {
+                            hdrSlices.Add(slice);
+                        }
+                    }
+
+                    if (hdrSlices.Count > 0)
+                    {
+                        HdrLuminanceAccumulator acc = new HdrLuminanceAccumulator();
+                        double whiteAcc = 0, areaAcc = 0;
+                        foreach (HdrCpuSlice slice in hdrSlices)
+                        {
+                            acc.AddFromPacked(slice.Packed, slice.PackedStride, slice.Format, slice.CopyW, slice.CopyH,
+                                slice.SdrWhiteNits);
+                            double area = (double)slice.CopyW * slice.CopyH;
+                            whiteAcc += slice.SdrWhiteNits * area;
+                            areaAcc += area;
+                        }
+
+                        // Pixels are already normalized per output (1.0 = that monitor's paper white).
+                        // CreateCurve still converts peakNorm back to nits for the PQ EETF, so it
+                        // needs one paperwhite. Area-weight so a 203-nit panel that owns most of the
+                        // region is not evaluated as if it were the 400-nit neighbor. Math.Max would
+                        // shift the knee on the dimmer display.
+                        float curveWhiteNits = areaAcc > 0
+                            ? (float)(whiteAcc / areaAcc)
+                            : HdrPixelConvert.SceneReferredWhiteNits;
+
+                        HdrLuminanceStats merged = acc.Build();
+                        string hysteresisKey = "span";
+                        HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, merged, hysteresisKey);
+                        HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, merged, HdrExposure, curveWhiteNits);
+                        DebugHelper.WriteLine($"HDR: merged tonemap {HdrTonemapMode} -> {resolvedMode} (P99={merged.P99Estimate:0.00}, max={merged.MaxLuminance:0.00}, curveWhite={curveWhiteNits:0.#})");
+
+                        foreach (HdrCpuSlice slice in hdrSlices)
+                        {
+                            BlitPackedSlice(slice, result, curve);
+                        }
+
+                        anyOutputCaptured = true;
                     }
                 }
 
@@ -515,6 +549,14 @@ namespace ShareX.ScreenCaptureLib
                 DebugHelper.WriteException(e, "HDR capture failed.");
                 return null;
             }
+        }
+
+        private sealed class HdrPendingOutput
+        {
+            public HdrDuplSession Session;
+            public Rectangle MonitorRect;
+            public Rectangle Intersection;
+            public float SdrWhiteNits;
         }
 
         private sealed class HdrCpuSlice
@@ -536,24 +578,40 @@ namespace ShareX.ScreenCaptureLib
             private float maxLum;
             private readonly int[] hist = new int[HdrTonemap.HistogramSize];
 
-            public unsafe void AddFromSlice(HdrCpuSlice slice)
+            public unsafe void AddFromPacked(byte[] packed, int packedStride, int format, int copyW, int copyH,
+                float sdrWhiteNits)
             {
-                int bpp = HdrPixelConvert.BytesPerPixel(slice.Format);
-                int stepY = Math.Max(1, slice.CopyH / 64);
-                int stepX = Math.Max(1, slice.CopyW / 64);
+                int bpp = HdrPixelConvert.BytesPerPixel(format);
+                int stepY = Math.Max(1, copyH / 64);
+                int stepX = Math.Max(1, copyW / 64);
 
-                fixed (byte* packedPtr = slice.Packed)
+                fixed (byte* packedPtr = packed)
                 {
-                    for (int y = 0; y < slice.CopyH; y += stepY)
+                    Add(packedPtr, packedStride, format, 0, 0, copyW, copyH, sdrWhiteNits, stepX, stepY);
+                }
+            }
+
+            public unsafe void AddFromMapped(IntPtr data, int rowPitch, int format, int srcX, int srcY,
+                int copyW, int copyH, float sdrWhiteNits)
+            {
+                int stepY = Math.Max(1, copyH / 64);
+                int stepX = Math.Max(1, copyW / 64);
+                Add((byte*)data, rowPitch, format, srcX, srcY, copyW, copyH, sdrWhiteNits, stepX, stepY);
+            }
+
+            private unsafe void Add(byte* basePtr, int stride, int format, int srcX, int srcY,
+                int copyW, int copyH, float sdrWhiteNits, int stepX, int stepY)
+            {
+                int bpp = HdrPixelConvert.BytesPerPixel(format);
+                for (int y = 0; y < copyH; y += stepY)
+                {
+                    byte* srcRow = basePtr + (long)(srcY + y) * stride + (long)srcX * bpp;
+                    for (int x = 0; x < copyW; x += stepX)
                     {
-                        byte* srcRow = packedPtr + y * slice.PackedStride;
-                        for (int x = 0; x < slice.CopyW; x += stepX)
-                        {
-                            HdrPixelConvert.DecodeToSdrNormalized(slice.Format, srcRow + x * bpp, slice.SdrWhiteNits,
-                                out float r, out float g, out float b);
-                            HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
-                                ref hotUpperSdr, ref maxLum, hist);
-                        }
+                        HdrPixelConvert.DecodeToSdrNormalized(format, srcRow + x * bpp, sdrWhiteNits,
+                            out float r, out float g, out float b);
+                        HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                            ref hotUpperSdr, ref maxLum, hist);
                     }
                 }
             }
@@ -576,6 +634,7 @@ namespace ShareX.ScreenCaptureLib
             public Del_Map Map;
             public Del_Unmap Unmap;
             public Del_GetTexDesc GetDesc;
+            public byte[] PackedBuffer;
         }
 
         private static readonly object SessionLock = new();
@@ -794,6 +853,8 @@ namespace ShareX.ScreenCaptureLib
                 Marshal.Release(session.Staging);
                 session.Staging = IntPtr.Zero;
             }
+
+            session.PackedBuffer = null;
         }
 
         private static bool CaptureOutputHdrWic(HdrDuplSession session, Rectangle monitorRect, Rectangle captureRect,
@@ -827,9 +888,44 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
-        private static HdrCpuSlice CaptureOutputHdrSlice(HdrDuplSession session, Rectangle monitorRect,
-            Rectangle captureRect, Rectangle intersection, float sdrWhiteNits)
+        private bool CaptureOutputHdrDirect(HdrPendingOutput pending, Rectangle captureRect, Bitmap composite)
         {
+            HdrDuplSession session = pending.Session;
+            if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
+            {
+                return false;
+            }
+
+            try
+            {
+                if (!TryGetCopyRect(pending, captureRect, texW, texH,
+                    out int srcX, out int srcY, out int copyW, out int copyH, out int dstX, out int dstY))
+                {
+                    return false;
+                }
+
+                HdrLuminanceAccumulator acc = new HdrLuminanceAccumulator();
+                acc.AddFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
+                    pending.SdrWhiteNits);
+                HdrLuminanceStats stats = acc.Build();
+                HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, stats, session.DeviceName);
+                HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, HdrExposure, pending.SdrWhiteNits);
+                DebugHelper.WriteLine($"HDR: direct tonemap {HdrTonemapMode} -> {resolvedMode} (P99={stats.P99Estimate:0.00}, max={stats.MaxLuminance:0.00}, sdrWhite={pending.SdrWhiteNits:0.#})");
+
+                BlitMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
+                    pending.SdrWhiteNits, composite, dstX, dstY, curve);
+                return true;
+            }
+            finally
+            {
+                session.Unmap(session.Context, session.Staging, 0);
+                try { session.Duplication.ReleaseFrame(); } catch { }
+            }
+        }
+
+        private static HdrCpuSlice CaptureOutputHdrSlice(HdrPendingOutput pending, Rectangle captureRect)
+        {
+            HdrDuplSession session = pending.Session;
             if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
             {
                 return null;
@@ -837,20 +933,16 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
-                int srcX = intersection.X - monitorRect.X;
-                int srcY = intersection.Y - monitorRect.Y;
-                int copyW = Math.Min(intersection.Width, texW - srcX);
-                int copyH = Math.Min(intersection.Height, texH - srcY);
-                int dstX = intersection.X - captureRect.X;
-                int dstY = intersection.Y - captureRect.Y;
-                if (copyW <= 0 || copyH <= 0)
+                if (!TryGetCopyRect(pending, captureRect, texW, texH,
+                    out int srcX, out int srcY, out int copyW, out int copyH, out int dstX, out int dstY))
                 {
                     return null;
                 }
 
                 int bpp = HdrPixelConvert.BytesPerPixel(session.Format);
                 int packedStride = copyW * bpp;
-                byte[] packed = new byte[packedStride * copyH];
+                int packedBytes = packedStride * copyH;
+                byte[] packed = EnsureSessionBuffer(session, packedBytes);
                 unsafe
                 {
                     for (int y = 0; y < copyH; y++)
@@ -869,7 +961,7 @@ namespace ShareX.ScreenCaptureLib
                     CopyH = copyH,
                     DstX = dstX,
                     DstY = dstY,
-                    SdrWhiteNits = sdrWhiteNits,
+                    SdrWhiteNits = pending.SdrWhiteNits,
                     DeviceName = session.DeviceName
                 };
             }
@@ -878,6 +970,28 @@ namespace ShareX.ScreenCaptureLib
                 session.Unmap(session.Context, session.Staging, 0);
                 try { session.Duplication.ReleaseFrame(); } catch { }
             }
+        }
+
+        private static bool TryGetCopyRect(HdrPendingOutput pending, Rectangle captureRect, int texW, int texH,
+            out int srcX, out int srcY, out int copyW, out int copyH, out int dstX, out int dstY)
+        {
+            srcX = pending.Intersection.X - pending.MonitorRect.X;
+            srcY = pending.Intersection.Y - pending.MonitorRect.Y;
+            copyW = Math.Min(pending.Intersection.Width, texW - srcX);
+            copyH = Math.Min(pending.Intersection.Height, texH - srcY);
+            dstX = pending.Intersection.X - captureRect.X;
+            dstY = pending.Intersection.Y - captureRect.Y;
+            return copyW > 0 && copyH > 0;
+        }
+
+        private static byte[] EnsureSessionBuffer(HdrDuplSession session, int bytes)
+        {
+            if (session.PackedBuffer == null || session.PackedBuffer.Length < bytes)
+            {
+                session.PackedBuffer = GC.AllocateUninitializedArray<byte>(bytes);
+            }
+
+            return session.PackedBuffer;
         }
 
         private static bool TryAcquireMapped(HdrDuplSession session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH)
@@ -1052,49 +1166,57 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
-        private static unsafe void BlitCpuSlice(HdrCpuSlice slice, Bitmap composite, HdrTonemapCurve curve)
+        private static unsafe void BlitPackedSlice(HdrCpuSlice slice, Bitmap composite, HdrTonemapCurve curve)
         {
-            int copyW = Math.Min(slice.CopyW, composite.Width - slice.DstX);
-            int copyH = Math.Min(slice.CopyH, composite.Height - slice.DstY);
+            fixed (byte* packedPtr = slice.Packed)
+            {
+                BlitHdrRegion(packedPtr, slice.PackedStride, slice.Format, 0, 0, slice.CopyW, slice.CopyH,
+                    slice.SdrWhiteNits, composite, slice.DstX, slice.DstY, curve);
+            }
+        }
+
+        private static unsafe void BlitMapped(IntPtr data, int rowPitch, int format, int srcX, int srcY,
+            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve)
+        {
+            BlitHdrRegion((byte*)data, rowPitch, format, srcX, srcY, copyW, copyH, sdrWhiteNits,
+                composite, dstX, dstY, curve);
+        }
+
+        private static unsafe void BlitHdrRegion(byte* srcBase, int srcStride, int format, int srcX, int srcY,
+            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve)
+        {
+            copyW = Math.Min(copyW, composite.Width - dstX);
+            copyH = Math.Min(copyH, composite.Height - dstY);
             if (copyW <= 0 || copyH <= 0)
             {
                 return;
             }
 
-            int bpp = HdrPixelConvert.BytesPerPixel(slice.Format);
-            BitmapData bd = composite.LockBits(new Rectangle(slice.DstX, slice.DstY, copyW, copyH),
+            int bpp = HdrPixelConvert.BytesPerPixel(format);
+            BitmapData bd = composite.LockBits(new Rectangle(dstX, dstY, copyW, copyH),
                 ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
 
             try
             {
                 byte* dstBase = (byte*)bd.Scan0;
                 int dstStride = bd.Stride;
-                byte[] packed = slice.Packed;
-                int packedStride = slice.PackedStride;
-                int format = slice.Format;
-                float sdrWhiteNits = slice.SdrWhiteNits;
-                int originX = slice.DstX;
-                int originY = slice.DstY;
 
                 System.Threading.Tasks.Parallel.For(0, copyH, y =>
                 {
-                    fixed (byte* packedPtr = packed)
-                    {
-                        byte* dst = dstBase + y * dstStride;
-                        byte* srcRow = packedPtr + y * packedStride;
-                        int py = originY + y;
+                    byte* dst = dstBase + y * dstStride;
+                    byte* srcRow = srcBase + (long)(srcY + y) * srcStride + (long)srcX * bpp;
+                    int py = dstY + y;
 
-                        for (int x = 0; x < copyW; x++)
-                        {
-                            HdrPixelConvert.DecodeToSdrNormalized(format, srcRow + x * bpp, sdrWhiteNits,
-                                out float r, out float g, out float b);
-                            curve.Map(ref r, ref g, ref b);
-                            int px = originX + x;
-                            dst[x * 4 + 0] = curve.Encode(b, px, py);
-                            dst[x * 4 + 1] = curve.Encode(g, px, py);
-                            dst[x * 4 + 2] = curve.Encode(r, px, py);
-                            dst[x * 4 + 3] = 255;
-                        }
+                    for (int x = 0; x < copyW; x++)
+                    {
+                        HdrPixelConvert.DecodeToSdrNormalized(format, srcRow + x * bpp, sdrWhiteNits,
+                            out float r, out float g, out float b);
+                        curve.Map(ref r, ref g, ref b);
+                        int px = dstX + x;
+                        dst[x * 4 + 0] = curve.Encode(b, px, py);
+                        dst[x * 4 + 1] = curve.Encode(g, px, py);
+                        dst[x * 4 + 2] = curve.Encode(r, px, py);
+                        dst[x * 4 + 3] = 255;
                     }
                 });
             }

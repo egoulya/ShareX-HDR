@@ -91,6 +91,10 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --configuration "${{ matrix.configuration }}" -p:Platform="${{ matrix.platform }}" --self-contained true /m:1 "${{ env.SOLUTION_FILE_PATH }}"
 
+      - name: Test HDR color pipeline
+        if: matrix.configuration == 'Release' && matrix.platform == 'x64'
+        run: dotnet test --no-build --configuration Release -p:Platform=x64 "ShareX.ScreenCaptureLib.Tests\ShareX.ScreenCaptureLib.Tests.csproj"
+
       - name: Build Setup (x64)
         if: matrix.platform == 'ARM64'
         run: |

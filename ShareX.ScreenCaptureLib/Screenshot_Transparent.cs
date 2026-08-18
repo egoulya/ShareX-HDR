@@ -39,6 +39,13 @@ namespace ShareX.ScreenCaptureLib
         {
             if (handle.ToInt32() > 0)
             {
+                if (CaptureHDREnabled)
+                {
+                    // White/black GDI differencing cannot reconstruct alpha from DXGI HDR
+                    // surfaces and would skip tonemap. Capture the window rect through the
+                    // same HDR path used by clipboard, editor, history, and upload.
+                    return CaptureWindow(handle);
+                }
                 Rectangle rect = CaptureHelpers.GetWindowRectangle(handle);
 
                 if (CaptureShadow && !NativeMethods.IsZoomed(handle) && NativeMethods.IsDWMEnabled())
