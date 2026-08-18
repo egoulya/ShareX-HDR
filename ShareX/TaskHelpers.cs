@@ -2684,10 +2684,12 @@ namespace ShareX
 
         public static async Task DownloadDevBuild()
         {
-            GitHubUpdateChecker updateChecker = new GitHubUpdateChecker("ShareX", "DevBuilds")
+            GitHubUpdateChecker updateChecker = new GitHubUpdateChecker("egoulya", "ShareX-HDR")
             {
                 IsDev = true,
-                IsPortable = Program.Portable
+                IsPortable = Program.Portable,
+                IncludePreRelease = true,
+                IgnoreRevision = true
             };
 
             await updateChecker.CheckUpdateAsync();

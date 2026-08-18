@@ -2,30 +2,20 @@ name: Build ShareX-HDR
 
 on:
   push:
-    branches:
-      - hdr-dev
-      - main
     tags:
-      - "v*"
-    paths-ignore:
-      - "**/*.md"
-      - "**/.gitignore"
-      - "**/.gitattributes"
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
-    name: Build portable (x64)
+    name: Build and release (x64)
     runs-on: windows-latest
 
     env:
       SOLUTION_FILE_PATH: ShareX.sln
       ASSEMBLY_INFO_PATH: Directory.build.props
-
-    outputs:
-      app_version: ${{ steps.version.outputs.app_version }}
 
     steps:
       - name: Checkout
@@ -36,20 +26,26 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
-      - name: Set APP_VERSION
+      - name: Set APP_VERSION from tag
         id: version
         run: |
+          if ($env:GITHUB_REF -notmatch '^refs/tags/v(\d+\.\d+\.\d+)$') {
+            Write-Error "Tag must match vMAJOR.MINOR.PATCH (example: v21.0.2). Got: $env:GITHUB_REF"
+            exit 1
+          }
+          $version = $Matches[1]
           $content = Get-Content "${{ env.ASSEMBLY_INFO_PATH }}" -Raw
           $pattern = '<Version>([0-9]+(?:\.[0-9]+){1,3})</Version>'
           $match = [regex]::Match($content, $pattern)
-          if (-not $match.Success) {
-            Write-Error "Could not read version from Directory.build.props"
-            exit 1
+          if ($match.Success -and $match.Groups[1].Value -ne $version) {
+            Write-Warning "Directory.build.props has $($match.Groups[1].Value) but tag is $version"
           }
-          $version = $match.Groups[1].Value
           echo $version
           echo "APP_VERSION=$version" >> $env:GITHUB_ENV
           echo "app_version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Install Inno Setup
+        run: choco install innosetup -y --no-progress
 
       - name: Restore
         run: |
@@ -65,48 +61,33 @@ jobs:
       - name: Build ShareX.Setup
         run: dotnet build --no-restore --configuration Release -p:Platform=x64 --self-contained true "ShareX.Setup\ShareX.Setup.csproj"
 
-      - name: Package portable build
+      - name: Package portable and setup
         run: ShareX.Setup\bin\Release\win-x64\ShareX.Setup.exe -silent -job Release -platform x64
 
-      - name: Upload portable artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: ShareX-HDR-portable-x64
-          path: Output\ShareX-${{ env.APP_VERSION }}-portable-x64.zip
-          if-no-files-found: error
-
-  release:
-    name: Publish release
-    needs: build
-    if: startsWith(github.ref, 'refs/tags/v')
-    runs-on: windows-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Download portable artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: ShareX-HDR-portable-x64
-          path: Output
+      - name: Verify outputs
+        run: |
+          $portable = "Output\ShareX-$env:APP_VERSION-portable-x64.zip"
+          $setup = "Output\ShareX-$env:APP_VERSION-setup-x64.exe"
+          if (-not (Test-Path $portable)) { Write-Error "Missing $portable"; exit 1 }
+          if (-not (Test-Path $setup)) { Write-Error "Missing $setup"; exit 1 }
 
       - name: Create release notes
-        env:
-          APP_VERSION: ${{ needs.build.outputs.app_version }}
         run: |
-          $file = Get-ChildItem -Path "Output" -Filter "ShareX-$env:APP_VERSION-portable-x64.zip" | Select-Object -First 1
-          if (-not $file) {
-            Write-Error "Portable zip not found in artifact"
-            exit 1
+          $files = @(
+            "Output\ShareX-$env:APP_VERSION-portable-x64.zip",
+            "Output\ShareX-$env:APP_VERSION-setup-x64.exe"
+          )
+          $rows = foreach ($path in $files) {
+            $name = Split-Path $path -Leaf
+            $hash = (Get-FileHash $path -Algorithm SHA256).Hash
+            "| $name | ``$hash`` |"
           }
-          $hash = (Get-FileHash $file.FullName -Algorithm SHA256).Hash
           $body = @"
-          ShareX-HDR portable build for Windows x64 (includes ffmpeg).
+          ShareX-HDR release for Windows x64 (includes ffmpeg).
 
           | File | SHA256 |
           | --- | --- |
-          | $($file.Name) | ``$hash`` |
+          $($rows -join "`r`n")
           "@
           $body | Out-File -FilePath RELEASE_BODY.md -Encoding utf8
           $body >> $env:GITHUB_STEP_SUMMARY
@@ -115,8 +96,11 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.ref_name }}
-          name: ShareX-HDR ${{ github.ref_name }}
+          name: ShareX-HDR ${{ env.APP_VERSION }}
           body_path: RELEASE_BODY.md
           draft: false
-          prerelease: ${{ contains(github.ref_name, '-') }}
-          files: Output/ShareX-${{ needs.build.outputs.app_version }}-portable-x64.zip
+          prerelease: false
+          make_latest: true
+          files: |
+            Output/ShareX-${{ env.APP_VERSION }}-portable-x64.zip
+            Output/ShareX-${{ env.APP_VERSION }}-setup-x64.exe
