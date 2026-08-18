@@ -380,6 +380,8 @@ namespace ShareX
         public bool CaptureShadow = true;
         public int CaptureShadowOffset = 100;
         public bool CaptureHDREnabled = false;
+        public HdrTonemapMode HdrTonemapMode = HdrTonemapMode.Auto;
+        public float HdrExposure = HdrTonemap.ExposureDefault;
         public bool CaptureClientArea = false;
         public bool CaptureAutoHideTaskbar = false;
         public bool CaptureAutoHideDesktopIcons = false;

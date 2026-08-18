@@ -105,6 +105,8 @@ namespace ShareX.ScreenCaptureLib
         {
             RegionCaptureOptions newOptions = GetRegionCaptureOptions(options);
             newOptions.CaptureHDREnabled = captureHDREnabled;
+            newOptions.HdrTonemapMode = options?.HdrTonemapMode ?? HdrTonemapMode.Auto;
+            newOptions.HdrExposure = options?.HdrExposure ?? HdrTonemap.ExposureDefault;
             newOptions.DetectWindows = false;
             newOptions.BackgroundDimStrength = 0;
 
@@ -203,7 +205,10 @@ namespace ShareX.ScreenCaptureLib
                     ShowCrosshair = options.ShowCrosshair,
                     AnnotationOptions = options.AnnotationOptions,
                     ScreenColorPickerInfoText = options.ScreenColorPickerInfoText,
-                    ActiveMonitorMode = options.ActiveMonitorMode
+                    ActiveMonitorMode = options.ActiveMonitorMode,
+                    CaptureHDREnabled = options.CaptureHDREnabled,
+                    HdrTonemapMode = options.HdrTonemapMode,
+                    HdrExposure = options.HdrExposure
                 };
             }
         }

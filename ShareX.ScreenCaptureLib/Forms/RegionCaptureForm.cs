@@ -125,7 +125,9 @@ namespace ShareX.ScreenCaptureLib
                 {
                     Screenshot screenshot = new Screenshot()
                     {
-                        CaptureHDREnabled = Options.CaptureHDREnabled
+                        CaptureHDREnabled = Options.CaptureHDREnabled,
+                        HdrTonemapMode = Options.HdrTonemapMode,
+                        HdrExposure = Options.HdrExposure
                     };
                     canvas = screenshot.CaptureRectangle(ScreenBounds);
                 }
@@ -140,7 +142,9 @@ namespace ShareX.ScreenCaptureLib
                 {
                     Screenshot screenshot = new Screenshot()
                     {
-                        CaptureHDREnabled = Options.CaptureHDREnabled
+                        CaptureHDREnabled = Options.CaptureHDREnabled,
+                        HdrTonemapMode = Options.HdrTonemapMode,
+                        HdrExposure = Options.HdrExposure
                     };
                     canvas = screenshot.CaptureRectangle(ScreenBounds);
                 }

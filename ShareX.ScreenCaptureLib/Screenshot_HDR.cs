@@ -54,6 +54,8 @@ namespace ShareX.ScreenCaptureLib
     public partial class Screenshot
     {
         public bool CaptureHDREnabled { get; set; } = false;
+        public HdrTonemapMode HdrTonemapMode { get; set; } = HdrTonemapMode.Auto;
+        public float HdrExposure { get; set; } = HdrTonemap.ExposureDefault;
 
         // ====================================================================
         // DisplayConfig API for SDR White Level
@@ -499,7 +501,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 float sdrWhiteNits = GetSdrWhiteNits();
                 float normScale = 80f / sdrWhiteNits;
-                DebugHelper.WriteLine($"HDR: normScale={normScale} (sdrWhite={sdrWhiteNits})");
+                DebugHelper.WriteLine($"HDR: normScale={normScale} (sdrWhite={sdrWhiteNits}), tonemap={HdrTonemapMode}");
 
                 // Step 1: Create D3D11 device
                 int[] levels = { 0xb100, 0xb000 };
@@ -907,7 +909,7 @@ namespace ShareX.ScreenCaptureLib
         /// Converts and blits a region from the mapped HDR texture directly into
         /// the composite bitmap at the specified destination offset.
         /// </summary>
-        private static void BlitHDRToComposite(IntPtr data, int rowPitch, int texW, int texH,
+        private void BlitHDRToComposite(IntPtr data, int rowPitch, int texW, int texH,
             int fmt, int srcX, int srcY, int copyW, int copyH,
             Bitmap composite, int dstX, int dstY, float normScale)
         {
@@ -919,6 +921,22 @@ namespace ShareX.ScreenCaptureLib
             copyW = Math.Min(copyW, composite.Width - dstX);
             copyH = Math.Min(copyH, composite.Height - dstY);
             if (copyW <= 0 || copyH <= 0) return;
+
+            if (HdrTonemapMode == HdrTonemapMode.WindowsWIC)
+            {
+                if (HdrWicTonemap.TryBlitToBitmap(data, rowPitch, texW, texH, fmt, srcX, srcY, copyW, copyH,
+                    composite, dstX, dstY))
+                {
+                    return;
+                }
+
+                DebugHelper.WriteLine("HDR: WIC tonemap unavailable, falling back to Desktop BT.2390.");
+            }
+
+            HdrLuminanceStats stats = SampleTonemapStats(data, rowPitch, fmt, srcX, srcY, copyW, copyH, normScale);
+            HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(
+                HdrTonemapMode == HdrTonemapMode.WindowsWIC ? HdrTonemapMode.Desktop : HdrTonemapMode, stats);
+            HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, HdrExposure, GetSdrWhiteNits());
 
             var bd = composite.LockBits(new Rectangle(dstX, dstY, copyW, copyH),
                 ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
@@ -933,8 +951,6 @@ namespace ShareX.ScreenCaptureLib
 
                         if (fmt == DXGI_FORMAT_R16G16B16A16_FLOAT)
                         {
-                            // scRGB (linear, scene-referred). Normalize by SDR white level,
-                            // tonemap highlights, convert to sRGB.
                             byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 8;
                             for (int x = 0; x < copyW; x++)
                             {
@@ -948,23 +964,16 @@ namespace ShareX.ScreenCaptureLib
                                 g = Math.Max(g * normScale, 0f);
                                 b = Math.Max(b * normScale, 0f);
 
-                                TonemapBT2390(ref r, ref g, ref b);
+                                curve.Map(ref r, ref g, ref b);
 
-                                r = LinearToSRGB(r);
-                                g = LinearToSRGB(g);
-                                b = LinearToSRGB(b);
-
-                                dst[x * 4 + 0] = FloatToByte(b);
-                                dst[x * 4 + 1] = FloatToByte(g);
-                                dst[x * 4 + 2] = FloatToByte(r);
+                                dst[x * 4 + 0] = curve.Encode(b, x, y);
+                                dst[x * 4 + 1] = curve.Encode(g, x, y);
+                                dst[x * 4 + 2] = curve.Encode(r, x, y);
                                 dst[x * 4 + 3] = FloatToByte(Math.Clamp(a, 0f, 1f));
                             }
                         }
                         else if (fmt == DXGI_FORMAT_R10G10B10A2_UNORM)
                         {
-                            // HDR10: PQ (ST.2084) encoded, BT.2020 gamut.
-                            // Decode PQ to linear nits, convert BT.2020 -> BT.709,
-                            // normalize to [0,1] by dividing by 80 nits, tonemap, sRGB encode.
                             byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
                             for (int x = 0; x < copyW; x++)
                             {
@@ -973,7 +982,6 @@ namespace ShareX.ScreenCaptureLib
                                 float gN = PQ_EOTF(((pixel >> 10) & 0x3FFu) / 1023f);
                                 float bN = PQ_EOTF(((pixel >> 20) & 0x3FFu) / 1023f);
 
-                                // BT.2020 to BT.709 color matrix, result in nits
                                 float r = (1.6605f * rN - 0.5877f * gN - 0.0728f * bN) / 80f;
                                 float g = (-0.1246f * rN + 1.1330f * gN - 0.0084f * bN) / 80f;
                                 float b = (-0.0182f * rN - 0.1006f * gN + 1.1187f * bN) / 80f;
@@ -982,22 +990,16 @@ namespace ShareX.ScreenCaptureLib
                                 g = Math.Max(g, 0f);
                                 b = Math.Max(b, 0f);
 
-                                TonemapBT2390(ref r, ref g, ref b);
+                                curve.Map(ref r, ref g, ref b);
 
-                                r = LinearToSRGB(r);
-                                g = LinearToSRGB(g);
-                                b = LinearToSRGB(b);
-
-                                dst[x * 4 + 0] = FloatToByte(b);
-                                dst[x * 4 + 1] = FloatToByte(g);
-                                dst[x * 4 + 2] = FloatToByte(r);
+                                dst[x * 4 + 0] = curve.Encode(b, x, y);
+                                dst[x * 4 + 1] = curve.Encode(g, x, y);
+                                dst[x * 4 + 2] = curve.Encode(r, x, y);
                                 dst[x * 4 + 3] = 255;
                             }
                         }
                         else
                         {
-                            // SDR (B8G8R8A8_UNORM). Already in the right layout for
-                            // Format32bppArgb, just copy directly.
                             byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
                             Buffer.MemoryCopy(src, dst, bd.Stride, copyW * 4);
                         }
@@ -1010,19 +1012,96 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
+        private unsafe HdrLuminanceStats SampleTonemapStats(IntPtr data, int rowPitch, int fmt,
+            int srcX, int srcY, int copyW, int copyH, float normScale)
+        {
+            if (fmt != DXGI_FORMAT_R16G16B16A16_FLOAT && fmt != DXGI_FORMAT_R10G10B10A2_UNORM)
+            {
+                return new HdrLuminanceStats(0, 0, 0, 0, 1f, 1f);
+            }
+
+            long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
+            float maxLum = 0f;
+            Span<int> hist = stackalloc int[16];
+            hist.Clear();
+
+            int stepY = Math.Max(1, copyH / 64);
+            int stepX = Math.Max(1, copyW / 64);
+
+            for (int y = 0; y < copyH; y += stepY)
+            {
+                if (fmt == DXGI_FORMAT_R16G16B16A16_FLOAT)
+                {
+                    byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 8;
+                    for (int x = 0; x < copyW; x += stepX)
+                    {
+                        ushort* p = (ushort*)(src + x * 8);
+                        float r = Math.Max(HalfToFloat(p[0]) * normScale, 0f);
+                        float g = Math.Max(HalfToFloat(p[1]) * normScale, 0f);
+                        float b = Math.Max(HalfToFloat(p[2]) * normScale, 0f);
+                        HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                            ref hotUpperSdr, ref maxLum, hist);
+                    }
+                }
+                else
+                {
+                    byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
+                    for (int x = 0; x < copyW; x += stepX)
+                    {
+                        uint pixel = *(uint*)(src + x * 4);
+                        float rN = PQ_EOTF((pixel & 0x3FFu) / 1023f);
+                        float gN = PQ_EOTF(((pixel >> 10) & 0x3FFu) / 1023f);
+                        float bN = PQ_EOTF(((pixel >> 20) & 0x3FFu) / 1023f);
+                        float r = Math.Max((1.6605f * rN - 0.5877f * gN - 0.0728f * bN) / 80f, 0f);
+                        float g = Math.Max((-0.1246f * rN + 1.1330f * gN - 0.0084f * bN) / 80f, 0f);
+                        float b = Math.Max((-0.0182f * rN - 0.1006f * gN + 1.1187f * bN) / 80f, 0f);
+                        HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                            ref hotUpperSdr, ref maxLum, hist);
+                    }
+                }
+            }
+
+            return HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
+        }
+
         // ====================================================================
         // Color Math
         // ====================================================================
 
         /// <summary>
         /// Converts one gbrpf32le frame (linear scRGB from ddagrab) to bgr24 using the
-        /// same normalization, BT.2390 tonemap, and sRGB OETF as HDR screenshots.
+        /// same normalization and tonemap as HDR screenshots.
         /// </summary>
-        public static void TonemapLinearScRgbFrameToBgr24(byte[] gbrpf32le, byte[] bgr24, int width, int height, bool applyNormalization = true)
+        public static void TonemapLinearScRgbFrameToBgr24(byte[] gbrpf32le, byte[] bgr24, int width, int height,
+            bool applyNormalization = true, HdrTonemapMode tonemapMode = HdrTonemapMode.Desktop,
+            float exposure = HdrTonemap.ExposureDefault)
         {
             float normScale = applyNormalization ? GetSdrWhiteNormalizationScale() : 1f;
             int rowBytesIn = width * 12;
             int rowBytesOut = width * 3;
+
+            long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
+            float maxLum = 0f;
+            Span<int> hist = stackalloc int[16];
+            hist.Clear();
+            int step = Math.Max(1, width * height / 4096);
+
+            for (int i = 0; i < width * height; i += step)
+            {
+                int si = i * 12;
+                float g = BitConverter.ToSingle(gbrpf32le, si);
+                float b = BitConverter.ToSingle(gbrpf32le, si + 4);
+                float r = BitConverter.ToSingle(gbrpf32le, si + 8);
+                r = Math.Max(r * normScale, 0f);
+                g = Math.Max(g * normScale, 0f);
+                b = Math.Max(b * normScale, 0f);
+                HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                    ref hotUpperSdr, ref maxLum, hist);
+            }
+
+            HdrLuminanceStats stats = HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
+            HdrTonemapMode resolvedMode = HdrTonemap.ResolveForRecording(tonemapMode, stats);
+            HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, exposure, GetSdrWhiteNits());
 
             System.Threading.Tasks.Parallel.For(0, height, y =>
             {
@@ -1042,42 +1121,13 @@ namespace ShareX.ScreenCaptureLib
                     g = Math.Max(g * normScale, 0f);
                     b = Math.Max(b * normScale, 0f);
 
-                    TonemapBT2390(ref r, ref g, ref b);
+                    curve.Map(ref r, ref g, ref b);
 
-                    r = LinearToSRGB(r);
-                    g = LinearToSRGB(g);
-                    b = LinearToSRGB(b);
-
-                    bgr24[di] = FloatToByte(b);
-                    bgr24[di + 1] = FloatToByte(g);
-                    bgr24[di + 2] = FloatToByte(r);
+                    bgr24[di] = curve.Encode(b, x, y);
+                    bgr24[di + 1] = curve.Encode(g, x, y);
+                    bgr24[di + 2] = curve.Encode(r, x, y);
                 }
             });
-        }
-
-        /// <summary>
-        /// BT.2390 style luminance-based tonemap. SDR content (luminance &lt;= 1.0)
-        /// passes through untouched. Only highlights above 1.0 are compressed,
-        /// capped at 1.5 to avoid hard clipping artifacts.
-        /// </summary>
-        private static void TonemapBT2390(ref float r, ref float g, ref float b)
-        {
-            float lum = 0.2126f * r + 0.7152f * g + 0.0722f * b;
-            if (lum > 1.0f)
-            {
-                float excess = lum - 1.0f;
-                float compressed = 1.0f + excess / (1.0f + excess);
-                if (compressed > 1.5f) compressed = 1.5f;
-
-                float scale = compressed / lum;
-                r *= scale;
-                g *= scale;
-                b *= scale;
-            }
-
-            r = Math.Clamp(r, 0f, 1f);
-            g = Math.Clamp(g, 0f, 1f);
-            b = Math.Clamp(b, 0f, 1f);
         }
 
         /// <summary>
@@ -1097,13 +1147,6 @@ namespace ShareX.ScreenCaptureLib
             float den = c2 - c3 * Np;
             if (den <= 0f) return 0f;
             return MathF.Pow(num / den, 1f / m1) * 10000f;
-        }
-
-        private static float LinearToSRGB(float x)
-        {
-            if (x <= 0f) return 0f;
-            if (x >= 1f) return 1f;
-            return x <= 0.0031308f ? x * 12.92f : 1.055f * MathF.Pow(x, 1f / 2.4f) - 0.055f;
         }
 
         private static unsafe float HalfToFloat(ushort h)

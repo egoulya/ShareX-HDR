@@ -112,5 +112,7 @@ namespace ShareX.ScreenCaptureLib
         // Screen color picker
         public string ScreenColorPickerInfoText = "";
         public bool CaptureHDREnabled = false;
+        public HdrTonemapMode HdrTonemapMode = HdrTonemapMode.Auto;
+        public float HdrExposure = HdrTonemap.ExposureDefault;
     }
 }

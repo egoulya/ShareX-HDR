@@ -35,7 +35,7 @@ namespace ShareX.ScreenCaptureLib
     {
         public HdrRecordingCapture BeginHdrRecordingCapture(Rectangle captureRect)
         {
-            return new HdrRecordingCapture(captureRect);
+            return new HdrRecordingCapture(captureRect, HdrTonemapMode, HdrExposure);
         }
 
         /// <summary>
@@ -45,6 +45,11 @@ namespace ShareX.ScreenCaptureLib
         {
             private readonly Rectangle captureRect;
             private readonly float normScale;
+            private readonly HdrTonemapMode requestedTonemapMode;
+            private HdrTonemapMode resolvedTonemapMode;
+            private HdrTonemapCurve tonemapCurve;
+            private readonly float exposure;
+            private bool tonemapResolved;
             private readonly int srcX;
             private readonly int srcY;
             private readonly int copyW;
@@ -66,9 +71,17 @@ namespace ShareX.ScreenCaptureLib
 
             public int FrameBytes { get; }
 
-            public HdrRecordingCapture(Rectangle captureRect)
+            public HdrRecordingCapture(Rectangle captureRect, HdrTonemapMode tonemapMode = HdrTonemapMode.Auto,
+                float exposure = HdrTonemap.ExposureDefault)
             {
                 this.captureRect = captureRect;
+                requestedTonemapMode = tonemapMode;
+                this.exposure = HdrTonemap.ClampExposure(exposure);
+                resolvedTonemapMode = requestedTonemapMode == HdrTonemapMode.WindowsWIC || requestedTonemapMode == HdrTonemapMode.Auto
+                    ? HdrTonemapMode.Desktop
+                    : requestedTonemapMode;
+                tonemapCurve = HdrTonemap.CreateCurve(resolvedTonemapMode, new HdrLuminanceStats(0, 0, 0, 0, 4f, 4f),
+                    this.exposure, GetSdrWhiteLevelNits());
                 FrameBytes = captureRect.Width * captureRect.Height * 3;
                 normScale = GetSdrWhiteNormalizationScale();
 
@@ -84,7 +97,7 @@ namespace ShareX.ScreenCaptureLib
                 copyH = Math.Min(intersection.Height, captureRect.Height);
                 initialized = true;
 
-                DebugHelper.WriteLine($"HDR recording: session {captureRect.Width}x{captureRect.Height}, format={texFormat}, normScale={normScale}");
+                DebugHelper.WriteLine($"HDR recording: session {captureRect.Width}x{captureRect.Height}, format={texFormat}, normScale={normScale}, tonemap={requestedTonemapMode}");
             }
 
             public bool TryCaptureFrame(byte[] bgr24)
@@ -320,7 +333,15 @@ namespace ShareX.ScreenCaptureLib
 
                             try
                             {
-                                BlitHDRToBgr24(mapped.pData, (int)mapped.RowPitch, texFormat, srcX, srcY, copyW, copyH, bgr24, captureRect.Width, normScale);
+                                if (!tonemapResolved)
+                                {
+                                    ResolveRecordingTonemapAndCurve(mapped.pData, (int)mapped.RowPitch);
+                                    tonemapResolved = true;
+                                    DebugHelper.WriteLine($"HDR recording: resolved tonemap {requestedTonemapMode} -> {resolvedTonemapMode}");
+                                }
+
+                                BlitHDRToBgr24(mapped.pData, (int)mapped.RowPitch, texFormat, srcX, srcY, copyW, copyH,
+                                    bgr24, captureRect.Width, normScale, tonemapCurve);
                                 return true;
                             }
                             finally
@@ -352,10 +373,58 @@ namespace ShareX.ScreenCaptureLib
                     Marshal.ReleaseComObject(resourceObj);
                 }
             }
+
+            private unsafe void ResolveRecordingTonemapAndCurve(IntPtr data, int rowPitch)
+            {
+                long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
+                float maxLum = 0f;
+                Span<int> hist = stackalloc int[16];
+                hist.Clear();
+
+                int stepY = Math.Max(1, copyH / 64);
+                int stepX = Math.Max(1, copyW / 64);
+
+                for (int y = 0; y < copyH; y += stepY)
+                {
+                    if (texFormat == DXGI_FORMAT_R16G16B16A16_FLOAT)
+                    {
+                        byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 8;
+                        for (int x = 0; x < copyW; x += stepX)
+                        {
+                            ushort* p = (ushort*)(src + x * 8);
+                            float r = Math.Max(HalfToFloat(p[0]) * normScale, 0f);
+                            float g = Math.Max(HalfToFloat(p[1]) * normScale, 0f);
+                            float b = Math.Max(HalfToFloat(p[2]) * normScale, 0f);
+                            HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                                ref hotUpperSdr, ref maxLum, hist);
+                        }
+                    }
+                    else if (texFormat == DXGI_FORMAT_R10G10B10A2_UNORM)
+                    {
+                        byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * 4;
+                        for (int x = 0; x < copyW; x += stepX)
+                        {
+                            uint pixel = *(uint*)(src + x * 4);
+                            float rN = PQ_EOTF((pixel & 0x3FFu) / 1023f);
+                            float gN = PQ_EOTF(((pixel >> 10) & 0x3FFu) / 1023f);
+                            float bN = PQ_EOTF(((pixel >> 20) & 0x3FFu) / 1023f);
+                            float r = Math.Max((1.6605f * rN - 0.5877f * gN - 0.0728f * bN) / 80f, 0f);
+                            float g = Math.Max((-0.1246f * rN + 1.1330f * gN - 0.0084f * bN) / 80f, 0f);
+                            float b = Math.Max((-0.0182f * rN - 0.1006f * gN + 1.1187f * bN) / 80f, 0f);
+                            HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
+                                ref hotUpperSdr, ref maxLum, hist);
+                        }
+                    }
+                }
+
+                HdrLuminanceStats stats = HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
+                resolvedTonemapMode = HdrTonemap.ResolveForRecording(requestedTonemapMode, stats);
+                tonemapCurve = HdrTonemap.CreateCurve(resolvedTonemapMode, stats, exposure, GetSdrWhiteLevelNits());
+            }
         }
 
         private static unsafe void BlitHDRToBgr24(IntPtr data, int rowPitch, int fmt, int srcX, int srcY, int copyW, int copyH,
-            byte[] bgr24, int dstStrideWidth, float normScale)
+            byte[] bgr24, int dstStrideWidth, float normScale, HdrTonemapCurve curve)
         {
             int rowBytesOut = dstStrideWidth * 3;
 
@@ -378,16 +447,12 @@ namespace ShareX.ScreenCaptureLib
                         g = Math.Max(g * normScale, 0f);
                         b = Math.Max(b * normScale, 0f);
 
-                        TonemapBT2390(ref r, ref g, ref b);
-
-                        r = LinearToSRGB(r);
-                        g = LinearToSRGB(g);
-                        b = LinearToSRGB(b);
+                        curve.Map(ref r, ref g, ref b);
 
                         int di = dstRow + x * 3;
-                        bgr24[di] = FloatToByte(b);
-                        bgr24[di + 1] = FloatToByte(g);
-                        bgr24[di + 2] = FloatToByte(r);
+                        bgr24[di] = curve.Encode(b, x, y);
+                        bgr24[di + 1] = curve.Encode(g, x, y);
+                        bgr24[di + 2] = curve.Encode(r, x, y);
                     }
                 }
                 else if (fmt == DXGI_FORMAT_R10G10B10A2_UNORM)
@@ -409,16 +474,12 @@ namespace ShareX.ScreenCaptureLib
                         g = Math.Max(g, 0f);
                         b = Math.Max(b, 0f);
 
-                        TonemapBT2390(ref r, ref g, ref b);
-
-                        r = LinearToSRGB(r);
-                        g = LinearToSRGB(g);
-                        b = LinearToSRGB(b);
+                        curve.Map(ref r, ref g, ref b);
 
                         int di = dstRow + x * 3;
-                        bgr24[di] = FloatToByte(b);
-                        bgr24[di + 1] = FloatToByte(g);
-                        bgr24[di + 2] = FloatToByte(r);
+                        bgr24[di] = curve.Encode(b, x, y);
+                        bgr24[di + 1] = curve.Encode(g, x, y);
+                        bgr24[di + 2] = curve.Encode(r, x, y);
                     }
                 }
             });

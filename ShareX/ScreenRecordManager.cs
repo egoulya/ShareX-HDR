@@ -292,7 +292,9 @@ namespace ShareX
                                 OutputPath = path,
                                 CaptureArea = captureRectangle,
                                 DrawCursor = taskSettings.CaptureSettings.ScreenRecordShowCursor,
-                                CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled
+                                CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled,
+                                HdrTonemapMode = taskSettings.CaptureSettings.HdrTonemapMode,
+                                HdrExposure = taskSettings.CaptureSettings.HdrExposure
                             };
 
                             Screenshot screenshot = TaskHelpers.GetScreenshot(taskSettings);

@@ -46,6 +46,8 @@ namespace ShareX.ScreenCaptureLib
         public float Duration { get; set; }
         public bool DrawCursor { get; set; }
         public bool CaptureHDREnabled { get; set; }
+        public HdrTonemapMode HdrTonemapMode { get; set; } = HdrTonemapMode.Auto;
+        public float HdrExposure { get; set; } = HdrTonemap.ExposureDefault;
         public bool HdrDxgiPipeRecording { get; set; }
         public FFmpegOptions FFmpeg { get; set; } = new FFmpegOptions();
 

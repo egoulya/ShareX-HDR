@@ -353,6 +353,27 @@ internal sealed class TaskSettingsPageBuilder
         AddGridLabel(regionGrid, Strings.TaskSettingsWindow_Height, 1, 2);
         AddGridControl(regionGrid, Number(regionHeight, 0, 100000), 1, 3);
 
+        BoundValue<bool> hdrCapture = new(capture.CaptureHDREnabled, value =>
+        {
+            capture.CaptureHDREnabled = value;
+            capture.SurfaceOptions.CaptureHDREnabled = value;
+        });
+        ComboBox hdrTonemap = EnumCombo(() => capture.HdrTonemapMode, value =>
+        {
+            capture.HdrTonemapMode = value;
+            capture.SurfaceOptions.HdrTonemapMode = value;
+        });
+        NumericUpDown hdrExposure = Number(() => (decimal)capture.HdrExposure, value =>
+        {
+            capture.HdrExposure = HdrTonemap.ClampExposure((float)value);
+            capture.SurfaceOptions.HdrExposure = capture.HdrExposure;
+        }, (decimal)HdrTonemap.ExposureMin, (decimal)HdrTonemap.ExposureMax, 0.01m);
+        BindEnabled(hdrTonemap, hdrCapture);
+        BindEnabled(hdrExposure, hdrCapture);
+        capture.SurfaceOptions.CaptureHDREnabled = capture.CaptureHDREnabled;
+        capture.SurfaceOptions.HdrTonemapMode = capture.HdrTonemapMode;
+        capture.SurfaceOptions.HdrExposure = capture.HdrExposure;
+
         return Page("capture", Strings.TaskSettingsWindow_Capture, LucideIcons.camera,
             OverrideCard(_captureOverride, Strings.TaskSettingsWindow_OverrideCaptureSettings),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_Screenshots,
@@ -363,8 +384,9 @@ internal sealed class TaskSettingsPageBuilder
                 Check(Strings.TaskSettingsWindow_CaptureClientAreaForWindowCaptures, () => capture.CaptureClientArea, value => capture.CaptureClientArea = value),
                 Check(Strings.TaskSettingsWindow_HideTaskbarWhenItIntersectsACapturedWindow, () => capture.CaptureAutoHideTaskbar, value => capture.CaptureAutoHideTaskbar = value),
                 Check(Strings.TaskSettingsWindow_AutomaticallyHideDesktopIcons, () => capture.CaptureAutoHideDesktopIcons, value => capture.CaptureAutoHideDesktopIcons = value),
-                Check(Strings.TaskSettingsWindow_HDRScreenshotColorCorrector, () => capture.HDRScreenshotColorCorrection, value => capture.HDRScreenshotColorCorrection = value),
-                Check("HDR capture (DXGI tonemap)", () => capture.CaptureHDREnabled, value => capture.CaptureHDREnabled = value)),
+                Check("HDR capture (DXGI tonemap)", hdrCapture),
+                Row("HDR tonemap mode", hdrTonemap),
+                Row("HDR paper white / exposure", hdrExposure)),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_PreconfiguredRegion, regionGrid, selectRegion),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_PreconfiguredWindow,
                 Row(Strings.TaskSettingsWindow_WindowTitle, Text(() => capture.CaptureCustomWindow, value => capture.CaptureCustomWindow = value))));
@@ -493,7 +515,9 @@ internal sealed class TaskSettingsPageBuilder
             OutputPath = "output.mp4",
             CaptureArea = WinForms.Screen.PrimaryScreen?.Bounds ?? DrawingRectangle.Empty,
             DrawCursor = capture.ScreenRecordShowCursor,
-            CaptureHDREnabled = capture.CaptureHDREnabled
+            CaptureHDREnabled = capture.CaptureHDREnabled,
+            HdrTonemapMode = capture.HdrTonemapMode,
+            HdrExposure = capture.HdrExposure
         };
 
         FFmpegOptionsWindow window = new(options);
