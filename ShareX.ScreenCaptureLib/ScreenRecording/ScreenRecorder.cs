@@ -173,8 +173,9 @@ namespace ShareX.ScreenCaptureLib
 
         private void RecordUsingHdrDxgiPipe()
         {
-            int width = CaptureRectangle.Width;
-            int height = CaptureRectangle.Height;
+            Rectangle captureRect = CaptureHelpers.EvenRectangleSize(CaptureRectangle);
+            int width = captureRect.Width;
+            int height = captureRect.Height;
             hdrDxgiPipeRecording = true;
             Options.HdrDxgiPipeRecording = true;
 
@@ -191,7 +192,7 @@ namespace ShareX.ScreenCaptureLib
 
                 OnRecordingStarted();
 
-                using (Screenshot.HdrRecordingCapture capture = screenshot.BeginHdrRecordingCapture(CaptureRectangle))
+                using (Screenshot.HdrRecordingCapture capture = screenshot.BeginHdrRecordingCapture(captureRect))
                 {
                     Stream stdin = ffmpeg.GetStandardInputStream();
                     byte[] captureBuffer = new byte[capture.FrameBytes];
@@ -238,8 +239,9 @@ namespace ShareX.ScreenCaptureLib
                     {
                         RecordUsingTimedFrameCapture(() =>
                         {
-                            if (!hasFrame)
+                            if (!hasFrame || stdin == null || !ffmpeg.IsProcessRunning)
                             {
+                                stopRequested = true;
                                 return;
                             }
 
@@ -407,11 +409,10 @@ namespace ShareX.ScreenCaptureLib
 
                 args.Append($"-i \"{input}\" ");
 
-                // https://ffmpeg.org/ffmpeg-filters.html#palettegen-1
-                args.Append($"-lavfi \"palettegen=stats_mode={Options.FFmpeg.GIFStatsMode}[palette],");
-
-                // https://ffmpeg.org/ffmpeg-filters.html#paletteuse
-                args.Append($"[0:v][palette]paletteuse=dither={Options.FFmpeg.GIFDither}");
+                // FFmpeg 8 no longer auto-wires an unlabeled palettegen pad. Split the
+                // video stream explicitly: https://ffmpeg.org/ffmpeg-filters.html#palettegen-1
+                args.Append($"-filter_complex \"[0:v]split[v0][v1];[v0]palettegen=stats_mode={Options.FFmpeg.GIFStatsMode}[p];");
+                args.Append($"[v1][p]paletteuse=dither={Options.FFmpeg.GIFDither}");
 
                 if (Options.FFmpeg.GIFDither == FFmpegPaletteUseDither.bayer)
                 {

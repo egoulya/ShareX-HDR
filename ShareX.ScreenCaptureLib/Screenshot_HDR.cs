@@ -374,6 +374,12 @@ namespace ShareX.ScreenCaptureLib
         public static void WarmHdrCapture() => EnsureDuplicationCache();
 
         /// <summary>
+        /// DXGI allows only one Desktop Duplication per output. Recording needs its own
+        /// duplication, so drop any screenshot-session hold first.
+        /// </summary>
+        public static void ReleaseHdrDuplication() => InvalidateDuplicationCache();
+
+        /// <summary>
         /// Captures the specified rectangle in virtual desktop coordinates using
         /// DXGI Desktop Duplication. Handles multi-monitor setups by enumerating
         /// all outputs, capturing each intersecting monitor, and compositing the

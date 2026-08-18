@@ -35,6 +35,7 @@ namespace ShareX.ScreenCaptureLib
     {
         public HdrRecordingCapture BeginHdrRecordingCapture(Rectangle captureRect)
         {
+            ReleaseHdrDuplication();
             return new HdrRecordingCapture(captureRect, HdrTonemapMode, HdrExposure);
         }
 

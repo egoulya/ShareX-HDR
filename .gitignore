@@ -332,3 +332,7 @@ ASALocalRun/
 Output/
 APIKeysLocal.cs
 ResXManager.config.xml
+
+# Local-only workspace (FFmpeg downloads, reference clones)
+.tools-cache/
+fork/

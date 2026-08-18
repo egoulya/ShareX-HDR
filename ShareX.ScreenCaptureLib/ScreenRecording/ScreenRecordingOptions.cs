@@ -93,7 +93,9 @@ namespace ShareX.ScreenCaptureLib
             StringBuilder args = new StringBuilder();
             string framerate = FPS.ToString(CultureInfo.InvariantCulture);
 
-            args.Append("-hide_banner -loglevel error -nostdin ");
+            // Do not pass -nostdin: on Windows FFmpeg 8 treats that as "replace stdin
+            // with NUL", so -i pipe:0 gets immediate EOF and the MP4 is empty/corrupt.
+            args.Append("-hide_banner -loglevel error ");
 
             if (FFmpeg.IsAudioSourceSelected)
             {
@@ -118,7 +120,7 @@ namespace ShareX.ScreenCaptureLib
             }
 
             AppendVideoEncodingArgs(args, framerate, isHdrTonemapPass: false);
-            args.Append("-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range pc ");
+            args.Append("-pix_fmt yuv420p -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range pc ");
 
             if (Duration > 0)
             {
@@ -462,10 +464,7 @@ namespace ShareX.ScreenCaptureLib
                 }
             }
 
-            if (FFmpeg.IsEvenSizeRequired)
-            {
-                captureArea = CaptureHelpers.EvenRectangleSize(captureArea);
-            }
+            captureArea = CaptureHelpers.EvenRectangleSize(captureArea);
 
             return captureArea;
         }

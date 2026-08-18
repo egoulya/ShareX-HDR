@@ -214,7 +214,7 @@ namespace ShareX.Tools
                     }
                     break;
                 case ConverterVideoCodecs.gif: // https://ffmpeg.org/ffmpeg-filters.html#palettegen-1
-                    args.Append("-lavfi \"palettegen=stats_mode=full[palette],[0:v][palette]paletteuse=dither=sierra2_4a\" ");
+                    args.Append("-filter_complex \"[0:v]split[v0][v1];[v0]palettegen=stats_mode=full[p];[v1][p]paletteuse=dither=sierra2_4a\" ");
                     break;
                 case ConverterVideoCodecs.webp: // https://www.ffmpeg.org/ffmpeg-codecs.html#libwebp
                     args.Append("-c:v libwebp ");

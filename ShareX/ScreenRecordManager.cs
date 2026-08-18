@@ -282,6 +282,11 @@ namespace ShareX
 
                             captureRectangle = recordForm.RecordingRegion;
 
+                            if (taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
+                            {
+                                captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);
+                            }
+
                             ScreenRecordingOptions options = new ScreenRecordingOptions()
                             {
                                 IsRecording = true,
