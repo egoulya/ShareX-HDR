@@ -101,10 +101,10 @@ namespace ShareX.ScreenCaptureLib
             return false;
         }
 
-        public static PointInfo GetPointInfo(RegionCaptureOptions options, Bitmap canvas = null, bool captureHDREnabled = false)
+        public static PointInfo GetPointInfo(RegionCaptureOptions options, Bitmap canvas = null)
         {
             RegionCaptureOptions newOptions = GetRegionCaptureOptions(options);
-            newOptions.CaptureHDREnabled = captureHDREnabled;
+            newOptions.CaptureHDREnabled = options?.CaptureHDREnabled ?? HdrCaptureMode.Off;
             newOptions.HdrTonemapMode = options?.HdrTonemapMode ?? HdrTonemapMode.Auto;
             newOptions.HdrExposure = options?.HdrExposure ?? HdrTonemap.ExposureDefault;
             newOptions.DetectWindows = false;

@@ -45,7 +45,8 @@ namespace ShareX.ScreenCaptureLib
         public Rectangle CaptureArea { get; set; }
         public float Duration { get; set; }
         public bool DrawCursor { get; set; }
-        public bool CaptureHDREnabled { get; set; }
+        public HdrCaptureMode CaptureHDREnabled { get; set; }
+        public bool UseHdrDxgiPipe { get; set; }
         public HdrTonemapMode HdrTonemapMode { get; set; } = HdrTonemapMode.Auto;
         public float HdrExposure { get; set; } = HdrTonemap.ExposureDefault;
         public bool HdrDxgiPipeRecording { get; set; }
@@ -157,7 +158,7 @@ namespace ShareX.ScreenCaptureLib
                             args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
                         }
 
-                        if (CaptureHDREnabled && IsLossless)
+                        if (UseHdrDxgiPipe && IsLossless)
                         {
                             AppendDDAGrabFilterComplex(args, framerate);
                         }
@@ -264,7 +265,7 @@ namespace ShareX.ScreenCaptureLib
         {
             if (IsLossless || FFmpeg.VideoCodec != FFmpegVideoCodec.apng)
             {
-                if (!(IsLossless && CaptureHDREnabled && IsRecording && !HdrDxgiPipeRecording))
+                if (!(IsLossless && UseHdrDxgiPipe && IsRecording && !HdrDxgiPipeRecording))
                 {
                     string videoCodec;
 
@@ -292,7 +293,7 @@ namespace ShareX.ScreenCaptureLib
 
             if (IsLossless)
             {
-                if (CaptureHDREnabled && IsRecording && !HdrDxgiPipeRecording)
+                if (UseHdrDxgiPipe && IsRecording && !HdrDxgiPipeRecording)
                 {
                     // gbrpf32le needs ffv1 v4 (experimental/disabled in bundled FFmpeg). Use gbrp16le v3 instead.
                     args.Append("-c:v ffv1 -level 3 -pix_fmt gbrp16le -color_primaries bt709 -color_trc linear -colorspace bt709 -color_range pc ");
@@ -413,7 +414,7 @@ namespace ShareX.ScreenCaptureLib
             graph.Append($"offset_y={captureArea.Y}:");
             graph.Append($"video_size={captureArea.Width}x{captureArea.Height}:");
 
-            if (CaptureHDREnabled)
+            if (UseHdrDxgiPipe)
             {
                 float normScale = Screenshot.GetSdrWhiteNormalizationScale(deviceName);
                 string scale = normScale.ToString("0.######", CultureInfo.InvariantCulture);
@@ -471,7 +472,7 @@ namespace ShareX.ScreenCaptureLib
 
         private bool ShouldUseDDAGrab()
         {
-            if (CaptureHDREnabled)
+            if (UseHdrDxgiPipe)
             {
                 return true;
             }
@@ -498,7 +499,7 @@ namespace ShareX.ScreenCaptureLib
             args.Append($"offset_y={captureArea.Y}:");
             args.Append($"video_size={captureArea.Width}x{captureArea.Height}:");
 
-            if (CaptureHDREnabled)
+            if (UseHdrDxgiPipe)
             {
                 args.Append("output_fmt=rgbaf16");
                 args.Append(",hwdownload");

@@ -49,16 +49,43 @@ namespace ShareX.ScreenCaptureLib
 
         public HdrMasterImage Crop(Rectangle absoluteRegion, Rectangle canvasAbsoluteBounds)
         {
-            int srcX = absoluteRegion.X - canvasAbsoluteBounds.X;
-            int srcY = absoluteRegion.Y - canvasAbsoluteBounds.Y;
-            int w = absoluteRegion.Width;
-            int h = absoluteRegion.Height;
+            if (Width <= 0 || Height <= 0 || canvasAbsoluteBounds.Width <= 0 || canvasAbsoluteBounds.Height <= 0 ||
+                absoluteRegion.Width <= 0 || absoluteRegion.Height <= 0)
+            {
+                DebugHelper.WriteLine(
+                    $"HDR master: crop {absoluteRegion} is empty against canvas {canvasAbsoluteBounds} ({Width}x{Height}); dropping companion.");
+                return null;
+            }
 
-            if (srcX < 0 || srcY < 0 || srcX + w > Width || srcY + h > Height || w <= 0 || h <= 0)
+            double scaleX = (double)Width / canvasAbsoluteBounds.Width;
+            double scaleY = (double)Height / canvasAbsoluteBounds.Height;
+            int rawX = absoluteRegion.X - canvasAbsoluteBounds.X;
+            int rawY = absoluteRegion.Y - canvasAbsoluteBounds.Y;
+
+            int srcX = (int)Math.Floor(rawX * scaleX);
+            int srcY = (int)Math.Floor(rawY * scaleY);
+            int srcRight = (int)Math.Ceiling((rawX + absoluteRegion.Width) * scaleX);
+            int srcBottom = (int)Math.Ceiling((rawY + absoluteRegion.Height) * scaleY);
+
+            srcX = Math.Clamp(srcX, 0, Width);
+            srcY = Math.Clamp(srcY, 0, Height);
+            srcRight = Math.Clamp(srcRight, srcX, Width);
+            srcBottom = Math.Clamp(srcBottom, srcY, Height);
+
+            int w = srcRight - srcX;
+            int h = srcBottom - srcY;
+            if (w <= 0 || h <= 0)
             {
                 DebugHelper.WriteLine(
                     $"HDR master: crop {absoluteRegion} is outside canvas {canvasAbsoluteBounds} ({Width}x{Height}); dropping companion.");
                 return null;
+            }
+
+            if (srcX != rawX || srcY != rawY || w != absoluteRegion.Width || h != absoluteRegion.Height ||
+                Math.Abs(scaleX - 1.0) > 0.001 || Math.Abs(scaleY - 1.0) > 0.001)
+            {
+                DebugHelper.WriteLine(
+                    $"HDR master: crop clamped from {absoluteRegion} on {canvasAbsoluteBounds} to {srcX},{srcY} {w}x{h} of {Width}x{Height}.");
             }
 
             HdrMasterImage cropped = new HdrMasterImage(w, h)

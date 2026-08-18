@@ -125,7 +125,7 @@ namespace ShareX.ScreenCaptureLib
                 {
                     Screenshot screenshot = new Screenshot()
                     {
-                        CaptureHDREnabled = Options.CaptureHDREnabled,
+                        HdrCaptureMode = Options.CaptureHDREnabled,
                         HdrTonemapMode = Options.HdrTonemapMode,
                         HdrExposure = Options.HdrExposure
                     };
@@ -142,7 +142,7 @@ namespace ShareX.ScreenCaptureLib
                 {
                     Screenshot screenshot = new Screenshot()
                     {
-                        CaptureHDREnabled = Options.CaptureHDREnabled,
+                        HdrCaptureMode = Options.CaptureHDREnabled,
                         HdrTonemapMode = Options.HdrTonemapMode,
                         HdrExposure = Options.HdrExposure
                     };

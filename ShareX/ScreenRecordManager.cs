@@ -99,7 +99,7 @@ namespace ShareX
             TaskSettingsCapture captureSettings = taskSettings.CaptureSettingsReference;
             int maxMonitorHz = CaptureHelpers.GetMaximumMonitorRefreshRate();
             int fps;
-            bool hdrRecording = captureSettings.CaptureHDREnabled;
+            HdrCaptureMode hdrMode = captureSettings.CaptureHDREnabled;
 
             if (captureSettings.FFmpegOptions.VideoCodec == FFmpegVideoCodec.gif)
             {
@@ -112,7 +112,7 @@ namespace ShareX
 
             DebugHelper.WriteLine("Starting screen recording. Video encoder: \"{0}\", Audio encoder: \"{1}\", FPS: {2} (monitor max {3} Hz){4}",
                 captureSettings.FFmpegOptions.VideoCodec.GetDescription(), captureSettings.FFmpegOptions.AudioCodec.GetDescription(), fps, maxMonitorHz,
-                hdrRecording ? ", HDR: DXGI capture + direct encode" : "");
+                hdrMode != HdrCaptureMode.Off ? $", HDR mode: {hdrMode}" : "");
 
             if (!TaskHelpers.CheckFFmpeg(taskSettings))
             {
@@ -173,8 +173,11 @@ namespace ShareX
             Rectangle screenRectangle = CaptureHelpers.GetScreenBounds();
             captureRectangle = Rectangle.Intersect(captureRectangle, screenRectangle);
 
+            bool hdrRecording = HdrDisplayProbe.ResolveHdrPipeline(captureSettings.CaptureHDREnabled, captureRectangle);
+            DebugHelper.WriteLine($"HDR: recording mode={captureSettings.CaptureHDREnabled} resolved={hdrRecording}");
+
             if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding ||
-                taskSettings.CaptureSettings.CaptureHDREnabled ||
+                hdrRecording ||
                 taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
             {
                 captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);
@@ -213,7 +216,6 @@ namespace ShareX
                 try
                 {
                     string extension;
-                    bool hdrRecording = taskSettings.CaptureSettings.CaptureHDREnabled;
 
                     if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding)
                     {
@@ -283,9 +285,11 @@ namespace ShareX
                             recordForm.ChangeState(ScreenRecordState.AfterStart);
 
                             captureRectangle = recordForm.RecordingRegion;
+                            captureRectangle = Rectangle.Intersect(captureRectangle, screenRectangle);
+                            hdrRecording = HdrDisplayProbe.ResolveHdrPipeline(taskSettings.CaptureSettings.CaptureHDREnabled, captureRectangle);
 
                             if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding ||
-                                taskSettings.CaptureSettings.CaptureHDREnabled ||
+                                hdrRecording ||
                                 taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
                             {
                                 captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);
@@ -302,6 +306,7 @@ namespace ShareX
                                 CaptureArea = captureRectangle,
                                 DrawCursor = taskSettings.CaptureSettings.ScreenRecordShowCursor,
                                 CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled,
+                                UseHdrDxgiPipe = hdrRecording,
                                 HdrTonemapMode = taskSettings.CaptureSettings.HdrTonemapMode,
                                 HdrExposure = taskSettings.CaptureSettings.HdrExposure
                             };

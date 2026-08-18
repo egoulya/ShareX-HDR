@@ -152,7 +152,7 @@ namespace ShareX.ScreenCaptureLib
 
                 if (OutputType == ScreenRecordOutput.FFmpeg)
                 {
-                    if (Options.CaptureHDREnabled)
+                    if (Options.UseHdrDxgiPipe)
                     {
                         RecordUsingHdrDxgiPipe();
                     }

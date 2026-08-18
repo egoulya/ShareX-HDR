@@ -153,6 +153,28 @@ namespace ShareX
             }
         }
 
+        protected static Screenshot CaptureImage(TaskMetadata metadata, TaskSettings taskSettings, Func<Screenshot, Bitmap> capture)
+        {
+            Screenshot screenshot = TaskHelpers.GetScreenshot(taskSettings);
+            try
+            {
+                metadata.Image = capture(screenshot);
+            }
+            finally
+            {
+                metadata.HdrMaster = screenshot.TakeLastHdrMaster();
+            }
+
+            return screenshot;
+        }
+
+        protected static TaskMetadata CaptureRectangleWithMaster(TaskSettings taskSettings, Rectangle rect)
+        {
+            TaskMetadata metadata = new TaskMetadata();
+            CaptureImage(metadata, taskSettings, screenshot => screenshot.CaptureRectangle(rect));
+            return metadata;
+        }
+
         protected TaskMetadata CreateMetadata()
         {
             return CreateMetadata(Rectangle.Empty, null);

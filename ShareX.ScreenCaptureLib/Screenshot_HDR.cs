@@ -43,17 +43,23 @@
 
 using ShareX.HelpersLib;
 using Microsoft.Win32;
+using SharpGen.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Threading;
+using Vortice.Direct3D;
+using Vortice.Direct3D11;
+using Vortice.DXGI;
+using DxgiFormat = Vortice.DXGI.Format;
 
 namespace ShareX.ScreenCaptureLib
 {
     public partial class Screenshot
     {
+        public HdrCaptureMode HdrCaptureMode { get; set; } = HdrCaptureMode.Off;
         public bool CaptureHDREnabled { get; set; } = false;
         public HdrTonemapMode HdrTonemapMode { get; set; } = HdrTonemapMode.Auto;
         public float HdrExposure { get; set; } = HdrTonemap.ExposureDefault;
@@ -103,7 +109,7 @@ namespace ShareX.ScreenCaptureLib
         // --- DXGI Interfaces ---
 
         [ComImport, Guid("54ec77fa-1377-44e6-8c32-88fd5f44c84c"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIDevice
+        private interface LegacyIDXGIDevice
         {
             // IDXGIObject methods (4 methods: SetPrivateData, SetPrivateDataInterface, GetPrivateData, GetParent)
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
@@ -111,12 +117,12 @@ namespace ShareX.ScreenCaptureLib
             int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
             int GetParent(ref Guid riid, out IntPtr parent);
 
-            // IDXGIDevice methods
-            int GetAdapter(out IDXGIAdapter adapter);
+            // LegacyIDXGIDevice methods
+            int GetAdapter(out LegacyIDXGIAdapter adapter);
         }
 
         [ComImport, Guid("2411e7e1-12ac-4ccf-bd14-9798e8534dc0"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIAdapter
+        private interface LegacyIDXGIAdapter
         {
             // IDXGIObject methods
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
@@ -124,12 +130,12 @@ namespace ShareX.ScreenCaptureLib
             int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
             int GetParent(ref Guid riid, out IntPtr parent);
 
-            // IDXGIAdapter methods
-            int EnumOutputs(uint index, out IDXGIOutput output);
+            // LegacyIDXGIAdapter methods
+            int EnumOutputs(uint index, out LegacyIDXGIOutput output);
         }
 
         [ComImport, Guid("ae02eedb-c735-4690-8d52-5a8dc20213aa"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIOutput
+        private interface LegacyIDXGIOutput
         {
             // IDXGIObject (4 methods)
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
@@ -137,7 +143,7 @@ namespace ShareX.ScreenCaptureLib
             int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
             int GetParent(ref Guid riid, out IntPtr parent);
 
-            // IDXGIOutput methods (12 methods)
+            // LegacyIDXGIOutput methods (12 methods)
             int GetDesc(out DXGI_OUTPUT_DESC desc);
             int GetDisplayModeList(uint format, uint flags, ref uint numModes, IntPtr descs);
             int FindClosestMatchingMode(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
@@ -168,7 +174,7 @@ namespace ShareX.ScreenCaptureLib
         private struct RECT { public int Left, Top, Right, Bottom; }
 
         [ComImport, Guid("00cddea8-939b-4b83-a340-a685226666cc"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIOutput1
+        private interface LegacyLegacyIDXGIOutput1
         {
             // IDXGIObject (4)
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
@@ -176,7 +182,7 @@ namespace ShareX.ScreenCaptureLib
             int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
             int GetParent(ref Guid riid, out IntPtr parent);
 
-            // IDXGIOutput (12 methods)
+            // LegacyIDXGIOutput (12 methods)
             int GetDesc(out DXGI_OUTPUT_DESC desc);
             int GetDisplayModeList(uint format, uint flags, ref uint numModes, IntPtr descs);
             int FindClosestMatchingMode(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
@@ -190,20 +196,20 @@ namespace ShareX.ScreenCaptureLib
             int GetDisplaySurfaceData([MarshalAs(UnmanagedType.IUnknown)] object surface);
             int GetFrameStatistics(IntPtr stats);
 
-            // IDXGIOutput1 (4 methods)
+            // LegacyLegacyIDXGIOutput1 (4 methods)
             int GetDisplayModeList1(uint format, uint flags, ref uint numModes, IntPtr descs);
             int FindClosestMatchingMode1(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
             int GetDisplaySurfaceData1([MarshalAs(UnmanagedType.IUnknown)] object surface);
-            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out IDXGIOutputDuplication duplication);
+            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out LegacyLegacyIDXGIOutputDuplication duplication);
         }
 
-        // IDXGIOutput5 inherits: IDXGIOutput4 -> IDXGIOutput3 -> IDXGIOutput2 -> IDXGIOutput1
-        // IDXGIOutput2 adds: SupportsOverlays (1 method)
-        // IDXGIOutput3 adds: CheckOverlaySupport (1 method)
-        // IDXGIOutput4 adds: CheckOverlayColorSpaceSupport (1 method)
-        // IDXGIOutput5 adds: DuplicateOutput1 (1 method)
+        // LegacyLegacyIDXGIOutput5 inherits: LegacyIDXGIOutput4 -> LegacyIDXGIOutput3 -> LegacyIDXGIOutput2 -> LegacyLegacyIDXGIOutput1
+        // LegacyIDXGIOutput2 adds: SupportsOverlays (1 method)
+        // LegacyIDXGIOutput3 adds: CheckOverlaySupport (1 method)
+        // LegacyIDXGIOutput4 adds: CheckOverlayColorSpaceSupport (1 method)
+        // LegacyLegacyIDXGIOutput5 adds: DuplicateOutput1 (1 method)
         [ComImport, Guid("80A07424-AB52-42EB-833C-0C42FD282D98"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIOutput5
+        private interface LegacyLegacyIDXGIOutput5
         {
             // IDXGIObject (4)
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
@@ -211,7 +217,7 @@ namespace ShareX.ScreenCaptureLib
             int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
             int GetParent(ref Guid riid, out IntPtr parent);
 
-            // IDXGIOutput (12)
+            // LegacyIDXGIOutput (12)
             int GetDesc(out DXGI_OUTPUT_DESC desc);
             int GetDisplayModeList(uint format, uint flags, ref uint numModes, IntPtr descs);
             int FindClosestMatchingMode(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
@@ -225,29 +231,29 @@ namespace ShareX.ScreenCaptureLib
             int GetDisplaySurfaceData([MarshalAs(UnmanagedType.IUnknown)] object surface);
             int GetFrameStatistics(IntPtr stats);
 
-            // IDXGIOutput1 (4)
+            // LegacyLegacyIDXGIOutput1 (4)
             int GetDisplayModeList1(uint format, uint flags, ref uint numModes, IntPtr descs);
             int FindClosestMatchingMode1(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
             int GetDisplaySurfaceData1([MarshalAs(UnmanagedType.IUnknown)] object surface);
-            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out IDXGIOutputDuplication duplication);
+            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out LegacyLegacyIDXGIOutputDuplication duplication);
 
-            // IDXGIOutput2 (1)
+            // LegacyIDXGIOutput2 (1)
             [PreserveSig] int SupportsOverlays();
 
-            // IDXGIOutput3 (1)
+            // LegacyIDXGIOutput3 (1)
             int CheckOverlaySupport(uint format, [MarshalAs(UnmanagedType.IUnknown)] object device, out uint flags);
 
-            // IDXGIOutput4 (1)
+            // LegacyIDXGIOutput4 (1)
             int CheckOverlayColorSpaceSupport(uint format, uint colorSpace, [MarshalAs(UnmanagedType.IUnknown)] object device, out uint flags);
 
-            // IDXGIOutput5 (1)
+            // LegacyLegacyIDXGIOutput5 (1)
             int DuplicateOutput1([MarshalAs(UnmanagedType.IUnknown)] object device, uint flags,
                 uint formatCount, [MarshalAs(UnmanagedType.LPArray)] int[] formats,
-                out IDXGIOutputDuplication duplication);
+                out LegacyLegacyIDXGIOutputDuplication duplication);
         }
 
         [ComImport, Guid("068346e8-aaec-4b84-add7-137f513f77a1"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIOutput6
+        private interface LegacyLegacyIDXGIOutput6
         {
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
             int SetPrivateDataInterface(ref Guid name, [MarshalAs(UnmanagedType.IUnknown)] object pUnknown);
@@ -270,14 +276,14 @@ namespace ShareX.ScreenCaptureLib
             int GetDisplayModeList1(uint format, uint flags, ref uint numModes, IntPtr descs);
             int FindClosestMatchingMode1(IntPtr modeToMatch, IntPtr closestMatch, IntPtr device);
             int GetDisplaySurfaceData1([MarshalAs(UnmanagedType.IUnknown)] object surface);
-            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out IDXGIOutputDuplication duplication);
+            int DuplicateOutput([MarshalAs(UnmanagedType.IUnknown)] object device, out LegacyLegacyIDXGIOutputDuplication duplication);
 
             [PreserveSig] int SupportsOverlays();
             int CheckOverlaySupport(uint format, [MarshalAs(UnmanagedType.IUnknown)] object device, out uint flags);
             int CheckOverlayColorSpaceSupport(uint format, uint colorSpace, [MarshalAs(UnmanagedType.IUnknown)] object device, out uint flags);
             int DuplicateOutput1([MarshalAs(UnmanagedType.IUnknown)] object device, uint flags,
                 uint formatCount, [MarshalAs(UnmanagedType.LPArray)] int[] formats,
-                out IDXGIOutputDuplication duplication);
+                out LegacyLegacyIDXGIOutputDuplication duplication);
 
             int GetDesc1(out DXGI_OUTPUT_DESC1 desc);
             int CheckHardwareCompositionSupport(out uint flags);
@@ -305,7 +311,7 @@ namespace ShareX.ScreenCaptureLib
         }
 
         [ComImport, Guid("191cfac3-a341-470d-b26e-a864f428319c"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        private interface IDXGIOutputDuplication
+        private interface LegacyLegacyIDXGIOutputDuplication
         {
             // IDXGIObject (4)
             int SetPrivateData(ref Guid name, uint dataSize, IntPtr data);
@@ -313,7 +319,7 @@ namespace ShareX.ScreenCaptureLib
             int GetPrivateData(ref Guid name, ref uint dataSize, IntPtr data);
             int GetParent(ref Guid riid, out IntPtr parent);
 
-            // IDXGIOutputDuplication methods
+            // LegacyLegacyIDXGIOutputDuplication methods
             void GetDesc(out DXGI_OUTDUPL_DESC desc);
 
             [PreserveSig]
@@ -495,19 +501,13 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
-                if (!TryGetSharedDevice(out IntPtr devicePtr, out IntPtr contextPtr, out object deviceUnk))
+                if (!TryEnsureSharedVorticeDevice(out ID3D11Device vorticeDevice, out ID3D11DeviceContext vorticeContext))
                 {
                     return null;
                 }
 
-                object dxgiDeviceObj = deviceUnk;
-                var dxgiDevice = (IDXGIDevice)dxgiDeviceObj;
-                int hr = dxgiDevice.GetAdapter(out IDXGIAdapter adapter);
-                if (hr != 0)
-                {
-                    DebugHelper.WriteLine($"HDR: GetAdapter failed 0x{hr:X8}");
-                    return null;
-                }
+                IntPtr devicePtr = vorticeDevice.NativePointer;
+                IntPtr contextPtr = vorticeContext.NativePointer;
 
                 Bitmap result = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
                 HdrMasterImage master = SaveHdrMasterPng ? new HdrMasterImage(rect.Width, rect.Height) : null;
@@ -516,88 +516,93 @@ namespace ShareX.ScreenCaptureLib
                 bool anyOutputCaptured = false;
                 List<HdrPendingOutput> pendingHdr = new List<HdrPendingOutput>();
 
-                for (uint outputIdx = 0; ; outputIdx++)
+                using IDXGIFactory1 factory = DXGI.CreateDXGIFactory1<IDXGIFactory1>();
+
+                for (uint adapterIndex = 0; ; adapterIndex++)
                 {
-                    IDXGIOutput output;
-                    try
-                    {
-                        hr = adapter.EnumOutputs(outputIdx, out output);
-                    }
-                    catch (COMException ex) when (ex.HResult == DXGI_ERROR_NOT_FOUND)
+                    if (factory.EnumAdapters1(adapterIndex, out IDXGIAdapter1 adapter).Failure)
                     {
                         break;
                     }
-                    if (hr == DXGI_ERROR_NOT_FOUND || output == null)
-                    {
-                        break;
-                    }
-                    if (hr != 0)
-                    {
-                        DebugHelper.WriteLine($"HDR: EnumOutputs({outputIdx}) failed 0x{hr:X8}");
-                        break;
-                    }
 
-                    try
+                    using (adapter)
                     {
-                        output.GetDesc(out DXGI_OUTPUT_DESC outputDesc);
-                        Rectangle monitorRect = new Rectangle(
-                            outputDesc.DesktopCoordinates.Left,
-                            outputDesc.DesktopCoordinates.Top,
-                            outputDesc.DesktopCoordinates.Right - outputDesc.DesktopCoordinates.Left,
-                            outputDesc.DesktopCoordinates.Bottom - outputDesc.DesktopCoordinates.Top);
-
-                        Rectangle intersection = Rectangle.Intersect(rect, monitorRect);
-                        if (intersection.Width <= 0 || intersection.Height <= 0)
+                        for (uint outputIdx = 0; ; outputIdx++)
                         {
-                            continue;
-                        }
-
-                        DebugHelper.WriteLine($"HDR: Output {outputIdx} ({outputDesc.DeviceName}) {monitorRect}, intersection={intersection}");
-
-                        if (master != null && TryGetMasteringDisplay(output, out HdrMasteringDisplay mastering))
-                        {
-                            int area = intersection.Width * intersection.Height;
-                            if (area > bestMasteringArea)
+                            if (adapter.EnumOutputs(outputIdx, out Vortice.DXGI.IDXGIOutput output).Failure)
                             {
-                                bestMasteringArea = area;
-                                bestMastering = mastering;
+                                break;
+                            }
+
+                            using (output)
+                            {
+                                try
+                                {
+                                    OutputDescription outputDesc = output.Description;
+                                    Rectangle monitorRect = Rectangle.FromLTRB(
+                                        outputDesc.DesktopCoordinates.Left,
+                                        outputDesc.DesktopCoordinates.Top,
+                                        outputDesc.DesktopCoordinates.Right,
+                                        outputDesc.DesktopCoordinates.Bottom);
+
+                                    Rectangle intersection = Rectangle.Intersect(rect, monitorRect);
+                                    if (intersection.Width <= 0 || intersection.Height <= 0)
+                                    {
+                                        continue;
+                                    }
+
+                                    string deviceName = outputDesc.DeviceName;
+                                    DebugHelper.WriteLine($"HDR: Output {outputIdx} ({deviceName}) {monitorRect}, intersection={intersection}");
+
+                                    if (master != null && TryGetMasteringDisplay(output, out HdrMasteringDisplay mastering))
+                                    {
+                                        int area = intersection.Width * intersection.Height;
+                                        if (area > bestMasteringArea)
+                                        {
+                                            bestMasteringArea = area;
+                                            bestMastering = mastering;
+                                        }
+                                    }
+
+                                    HdrDuplSession session = GetOrCreateSession(deviceName, output, vorticeDevice, vorticeContext);
+                                    if (session == null || session.Format == DXGI_FORMAT_B8G8R8A8_UNORM)
+                                    {
+                                        DebugHelper.WriteLine($"HDR: Output {outputIdx} is SDR, using GDI fast path.");
+                                        if (CaptureOutputGDI(intersection, rect, result, master, DisplayConfigHelper.GetSdrWhiteNits(deviceName)))
+                                        {
+                                            anyOutputCaptured = true;
+                                        }
+
+                                        continue;
+                                    }
+
+                                    float sdrWhiteNits = DisplayConfigHelper.GetSdrWhiteNits(deviceName);
+                                    DebugHelper.WriteLine($"HDR: Output {outputIdx} HDR format={session.Format}, sdrWhite={sdrWhiteNits:0.#} nits, warm={session.Warm}");
+
+                                    if (HdrTonemapMode == HdrTonemapMode.WindowsWIC)
+                                    {
+                                        if (CaptureOutputHdrWic(session, monitorRect, rect, intersection, result, master, sdrWhiteNits))
+                                        {
+                                            anyOutputCaptured = true;
+                                        }
+
+                                        continue;
+                                    }
+
+                                    pendingHdr.Add(new HdrPendingOutput
+                                    {
+                                        Session = session,
+                                        MonitorRect = monitorRect,
+                                        Intersection = intersection,
+                                        SdrWhiteNits = sdrWhiteNits
+                                    });
+                                }
+                                catch (Exception e)
+                                {
+                                    DebugHelper.WriteException(e, $"HDR: Output {outputIdx} capture failed, continuing.");
+                                }
                             }
                         }
-
-                        HdrDuplSession session = GetOrCreateSession(outputDesc.DeviceName, output, devicePtr, contextPtr);
-                        if (session == null || session.Format == DXGI_FORMAT_B8G8R8A8_UNORM)
-                        {
-                            DebugHelper.WriteLine($"HDR: Output {outputIdx} is SDR, using GDI fast path.");
-                            if (CaptureOutputGDI(intersection, rect, result, master, DisplayConfigHelper.GetSdrWhiteNits(outputDesc.DeviceName)))
-                            {
-                                anyOutputCaptured = true;
-                            }
-                            continue;
-                        }
-
-                        float sdrWhiteNits = DisplayConfigHelper.GetSdrWhiteNits(outputDesc.DeviceName);
-                        DebugHelper.WriteLine($"HDR: Output {outputIdx} HDR format={session.Format}, sdrWhite={sdrWhiteNits:0.#} nits, warm={session.Warm}");
-
-                        if (HdrTonemapMode == HdrTonemapMode.WindowsWIC)
-                        {
-                            if (CaptureOutputHdrWic(session, monitorRect, rect, intersection, result))
-                            {
-                                anyOutputCaptured = true;
-                            }
-                            continue;
-                        }
-
-                        pendingHdr.Add(new HdrPendingOutput
-                        {
-                            Session = session,
-                            MonitorRect = monitorRect,
-                            Intersection = intersection,
-                            SdrWhiteNits = sdrWhiteNits
-                        });
-                    }
-                    catch (Exception e)
-                    {
-                        DebugHelper.WriteException(e, $"HDR: Output {outputIdx} capture failed, continuing.");
                     }
                 }
 
@@ -611,9 +616,10 @@ namespace ShareX.ScreenCaptureLib
                 else if (pendingHdr.Count > 1)
                 {
                     List<HdrCpuSlice> hdrSlices = new List<HdrCpuSlice>(pendingHdr.Count);
+                    HdrLuminanceAccumulator tonemapStatsAcc = new HdrLuminanceAccumulator();
                     foreach (HdrPendingOutput pending in pendingHdr)
                     {
-                        HdrCpuSlice slice = CaptureOutputHdrSlice(pending, rect);
+                        HdrCpuSlice slice = CaptureOutputHdrSlice(pending, rect, tonemapStatsAcc);
                         if (slice != null)
                         {
                             hdrSlices.Add(slice);
@@ -622,12 +628,9 @@ namespace ShareX.ScreenCaptureLib
 
                     if (hdrSlices.Count > 0)
                     {
-                        HdrLuminanceAccumulator acc = new HdrLuminanceAccumulator();
                         double whiteAcc = 0, areaAcc = 0;
                         foreach (HdrCpuSlice slice in hdrSlices)
                         {
-                            acc.AddFromPacked(slice.Packed, slice.PackedStride, slice.Format, slice.CopyW, slice.CopyH,
-                                slice.SdrWhiteNits);
                             double area = (double)slice.CopyW * slice.CopyH;
                             whiteAcc += slice.SdrWhiteNits * area;
                             areaAcc += area;
@@ -642,11 +645,11 @@ namespace ShareX.ScreenCaptureLib
                             ? (float)(whiteAcc / areaAcc)
                             : HdrPixelConvert.SceneReferredWhiteNits;
 
-                        HdrLuminanceStats merged = acc.Build();
+                        HdrLuminanceStats merged = tonemapStatsAcc.Build();
                         string hysteresisKey = "span";
-                        HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, merged, hysteresisKey);
+                        HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, merged, hysteresisKey, hdrDxgiCapture: true);
                         HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, merged, HdrExposure, curveWhiteNits);
-                        DebugHelper.WriteLine($"HDR: merged tonemap {HdrTonemapMode} -> {resolvedMode} (P99={merged.P99Estimate:0.00}, max={merged.MaxLuminance:0.00}, curveWhite={curveWhiteNits:0.#})");
+                        DebugHelper.WriteLine($"HDR: merged tonemap {HdrTonemapMode} -> {resolvedMode} (stats=full output(s), P99={merged.P99Estimate:0.00}, max={merged.MaxLuminance:0.00}, curveWhite={curveWhiteNits:0.#})");
 
                         foreach (HdrCpuSlice slice in hdrSlices)
                         {
@@ -755,7 +758,7 @@ namespace ShareX.ScreenCaptureLib
             public string DeviceName;
             public int Format;
             public bool Warm;
-            public IDXGIOutputDuplication Duplication;
+            public Vortice.DXGI.IDXGIOutputDuplication VorticeDuplication;
             public IntPtr Staging;
             public IntPtr Device;
             public IntPtr Context;
@@ -771,7 +774,8 @@ namespace ShareX.ScreenCaptureLib
         private static readonly SemaphoreSlim CaptureHdrGate = new(1, 1);
         private static IntPtr SharedDevicePtr;
         private static IntPtr SharedContextPtr;
-        private static object SharedDeviceUnk;
+        private static ID3D11Device SharedVorticeDevice;
+        private static ID3D11DeviceContext SharedVorticeContext;
         private static readonly Dictionary<string, HdrDuplSession> Sessions = new();
         private static bool DisplayHooked;
 
@@ -793,7 +797,7 @@ namespace ShareX.ScreenCaptureLib
                 DisplayHooked = true;
                 ThreadPool.QueueUserWorkItem(_ =>
                 {
-                    TryGetSharedDevice(out IntPtr devicePtr, out IntPtr contextPtr, out object deviceUnk);
+                    TryEnsureSharedVorticeDevice(out ID3D11Device _, out ID3D11DeviceContext _);
                 });
             }
         }
@@ -814,70 +818,74 @@ namespace ShareX.ScreenCaptureLib
 
         private static void DisposeSharedDeviceUnlocked()
         {
-            if (SharedDeviceUnk != null)
-            {
-                try { Marshal.ReleaseComObject(SharedDeviceUnk); } catch { }
-                SharedDeviceUnk = null;
-            }
+            SharedVorticeContext?.Dispose();
+            SharedVorticeContext = null;
+            SharedVorticeDevice?.Dispose();
+            SharedVorticeDevice = null;
+            SharedContextPtr = IntPtr.Zero;
+            SharedDevicePtr = IntPtr.Zero;
+        }
 
-            if (SharedContextPtr != IntPtr.Zero)
+        private static bool TryEnsureSharedVorticeDevice(out ID3D11Device device, out ID3D11DeviceContext context)
+        {
+            lock (SessionLock)
             {
-                Marshal.Release(SharedContextPtr);
-                SharedContextPtr = IntPtr.Zero;
-            }
+                if (SharedVorticeDevice != null)
+                {
+                    device = SharedVorticeDevice;
+                    context = SharedVorticeContext;
+                    return true;
+                }
 
-            if (SharedDevicePtr != IntPtr.Zero)
-            {
-                Marshal.Release(SharedDevicePtr);
-                SharedDevicePtr = IntPtr.Zero;
+                FeatureLevel[] levels = { FeatureLevel.Level_11_1, FeatureLevel.Level_11_0 };
+                Result result = D3D11.D3D11CreateDevice(null, DriverType.Hardware, DeviceCreationFlags.BgraSupport,
+                    levels, out device, out context);
+                if (result.Failure || device == null || context == null)
+                {
+                    DebugHelper.WriteLine($"HDR: D3D11CreateDevice failed {result.Code}");
+                    device = null;
+                    context = null;
+                    return false;
+                }
+
+                SharedVorticeDevice = device;
+                SharedVorticeContext = context;
+                SharedDevicePtr = device.NativePointer;
+                SharedContextPtr = context.NativePointer;
+                return true;
             }
         }
 
         private static bool TryGetSharedDevice(out IntPtr devicePtr, out IntPtr contextPtr, out object deviceUnk)
         {
-            lock (SessionLock)
+            deviceUnk = null;
+            if (!TryEnsureSharedVorticeDevice(out _, out _))
             {
-                if (SharedDevicePtr != IntPtr.Zero)
-                {
-                    devicePtr = SharedDevicePtr;
-                    contextPtr = SharedContextPtr;
-                    deviceUnk = SharedDeviceUnk;
-                    return true;
-                }
-
-                int[] levels = { 0xb100, 0xb000 };
-                int hr = D3D11CreateDevice(IntPtr.Zero, D3D_DRIVER_TYPE_HARDWARE, IntPtr.Zero, 0,
-                    levels, (uint)levels.Length, D3D11_SDK_VERSION,
-                    out SharedDevicePtr, out _, out SharedContextPtr);
-                if (hr != 0)
-                {
-                    DebugHelper.WriteLine($"HDR: D3D11CreateDevice failed 0x{hr:X8}");
-                    devicePtr = IntPtr.Zero;
-                    contextPtr = IntPtr.Zero;
-                    deviceUnk = null;
-                    return false;
-                }
-
-                SharedDeviceUnk = Marshal.GetObjectForIUnknown(SharedDevicePtr);
-                devicePtr = SharedDevicePtr;
-                contextPtr = SharedContextPtr;
-                deviceUnk = SharedDeviceUnk;
-                return true;
+                devicePtr = IntPtr.Zero;
+                contextPtr = IntPtr.Zero;
+                return false;
             }
+
+            devicePtr = SharedDevicePtr;
+            contextPtr = SharedContextPtr;
+            return true;
         }
 
-        private static HdrDuplSession GetOrCreateSession(string deviceName, IDXGIOutput output, IntPtr devicePtr, IntPtr contextPtr)
+        private static HdrDuplSession GetOrCreateSession(string deviceName, Vortice.DXGI.IDXGIOutput output, ID3D11Device device, ID3D11DeviceContext context)
         {
+            IntPtr devicePtr = device.NativePointer;
+            IntPtr contextPtr = context.NativePointer;
+
             lock (SessionLock)
             {
                 if (!string.IsNullOrEmpty(deviceName) && Sessions.TryGetValue(deviceName, out HdrDuplSession existing) &&
-                    existing.Duplication != null)
+                    existing.VorticeDuplication != null)
                 {
                     return existing;
                 }
             }
 
-            if (!TryCreateDuplication(output, devicePtr, out IDXGIOutputDuplication duplication, out int format))
+            if (!TryCreateDuplication(output, device, out Vortice.DXGI.IDXGIOutputDuplication duplication, out int format))
             {
                 return null;
             }
@@ -886,7 +894,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 DeviceName = deviceName,
                 Format = format,
-                Duplication = duplication,
+                VorticeDuplication = duplication,
                 Device = devicePtr,
                 Context = contextPtr,
                 CreateTex = Marshal.GetDelegateForFunctionPointer<Del_CreateTex2D>(VT(devicePtr, 5)),
@@ -899,7 +907,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 if (!string.IsNullOrEmpty(deviceName))
                 {
-                    if (Sessions.TryGetValue(deviceName, out HdrDuplSession raced) && raced.Duplication != null)
+                    if (Sessions.TryGetValue(deviceName, out HdrDuplSession raced) && raced.VorticeDuplication != null)
                     {
                         DisposeSession(session);
                         return raced;
@@ -912,91 +920,110 @@ namespace ShareX.ScreenCaptureLib
             return session;
         }
 
-        private static bool TryCreateDuplication(IDXGIOutput output, IntPtr devicePtr,
-            out IDXGIOutputDuplication duplication, out int format)
+        private static bool TryCreateDuplication(Vortice.DXGI.IDXGIOutput output, ID3D11Device device,
+            out Vortice.DXGI.IDXGIOutputDuplication duplication, out int format)
         {
             duplication = null;
             format = DXGI_FORMAT_B8G8R8A8_UNORM;
-            object deviceUnk = Marshal.GetObjectForIUnknown(devicePtr);
+
             try
             {
-                try
+                using Vortice.DXGI.IDXGIOutput5 output5 = output.QueryInterface<Vortice.DXGI.IDXGIOutput5>();
+                DxgiFormat[] hdrFormats =
                 {
-                    var output5 = (IDXGIOutput5)output;
-                    int[] formats = { DXGI_FORMAT_R16G16B16A16_FLOAT, DXGI_FORMAT_R10G10B10A2_UNORM, DXGI_FORMAT_B8G8R8A8_UNORM };
-                    int hr = output5.DuplicateOutput1(deviceUnk, 0, (uint)formats.Length, formats, out duplication);
-                    if (hr == 0 && duplication != null)
+                    DxgiFormat.R16G16B16A16_Float,
+                    DxgiFormat.R10G10B10A2_UNorm
+                };
+                duplication = output5.DuplicateOutput1(device, hdrFormats);
+                if (duplication != null)
+                {
+                    format = (int)duplication.Description.ModeDescription.Format;
+                    if (IsHdrDuplicationFormat(format))
                     {
-                        duplication.GetDesc(out DXGI_OUTDUPL_DESC dd);
-                        format = (int)dd.ModeDesc.Format;
                         return true;
                     }
 
-                    if (hr == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE)
-                    {
-                        DebugHelper.WriteLine(
-                            "HDR: DuplicateOutput1 returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE — another client " +
-                            "(often ShareX HDR recording) already holds this output. Screenshot will fall back to GDI.");
-                    }
+                    duplication.Dispose();
+                    duplication = null;
+                    DebugHelper.WriteLine(
+                        $"HDR: DuplicateOutput1 returned SDR format {format}; retrying without BGRA in the format list did not help.");
                 }
-                catch (InvalidCastException)
-                {
-                }
+            }
+            catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE)
+            {
+                DebugHelper.WriteLine(
+                    "HDR: DuplicateOutput1 returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE — another client " +
+                    "(often ShareX HDR recording) already holds this output. Screenshot will fall back to GDI.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                DebugHelper.WriteException(ex, "HDR: DuplicateOutput1 failed, trying legacy DuplicateOutput.");
+            }
 
-                var output1 = (IDXGIOutput1)output;
-                int legacyHr = output1.DuplicateOutput(deviceUnk, out duplication);
-                if (legacyHr != 0 || duplication == null)
+            try
+            {
+                using Vortice.DXGI.IDXGIOutput1 output1 = output.QueryInterface<Vortice.DXGI.IDXGIOutput1>();
+                duplication = output1.DuplicateOutput(device);
+                if (duplication == null)
                 {
-                    if (legacyHr == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE)
-                    {
-                        DebugHelper.WriteLine(
-                            "HDR: DuplicateOutput returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE — another client " +
-                            "(often ShareX HDR recording) already holds this output. Screenshot will fall back to GDI.");
-                    }
-
                     return false;
                 }
 
-                duplication.GetDesc(out DXGI_OUTDUPL_DESC legacyDesc);
-                format = (int)legacyDesc.ModeDesc.Format;
-                return true;
+                format = (int)duplication.Description.ModeDescription.Format;
+                if (IsHdrDuplicationFormat(format))
+                {
+                    return true;
+                }
+
+                duplication.Dispose();
+                duplication = null;
+                DebugHelper.WriteLine($"HDR: DuplicateOutput returned SDR format {format}; HDR pixel path unavailable.");
+                return false;
             }
-            finally
+            catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE)
             {
-                Marshal.ReleaseComObject(deviceUnk);
+                DebugHelper.WriteLine(
+                    "HDR: DuplicateOutput returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE — another client " +
+                    "(often ShareX HDR recording) already holds this output. Screenshot will fall back to GDI.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                DebugHelper.WriteException(ex, "HDR: DuplicateOutput failed.");
+                return false;
             }
         }
 
-        private static bool TryGetMasteringDisplay(IDXGIOutput output, out HdrMasteringDisplay mastering)
+        private static bool IsHdrDuplicationFormat(int format) =>
+            format == DXGI_FORMAT_R16G16B16A16_FLOAT || format == DXGI_FORMAT_R10G10B10A2_UNORM;
+
+        private static bool TryGetMasteringDisplay(Vortice.DXGI.IDXGIOutput output, out HdrMasteringDisplay mastering)
         {
             mastering = default;
             try
             {
-                var output6 = (IDXGIOutput6)output;
-                int hr = output6.GetDesc1(out DXGI_OUTPUT_DESC1 desc);
-                if (hr != 0)
-                {
-                    return false;
-                }
-
+                using Vortice.DXGI.IDXGIOutput6 output6 = output.QueryInterface<Vortice.DXGI.IDXGIOutput6>();
+                OutputDescription1 desc = output6.Description1;
                 mastering = new HdrMasteringDisplay
                 {
-                    RedX = desc.RedPrimaryX,
-                    RedY = desc.RedPrimaryY,
-                    GreenX = desc.GreenPrimaryX,
-                    GreenY = desc.GreenPrimaryY,
-                    BlueX = desc.BluePrimaryX,
-                    BlueY = desc.BluePrimaryY,
-                    WhiteX = desc.WhitePointX,
-                    WhiteY = desc.WhitePointY,
+                    RedX = desc.RedPrimary[0],
+                    RedY = desc.RedPrimary[1],
+                    GreenX = desc.GreenPrimary[0],
+                    GreenY = desc.GreenPrimary[1],
+                    BlueX = desc.BluePrimary[0],
+                    BlueY = desc.BluePrimary[1],
+                    WhiteX = desc.WhitePoint[0],
+                    WhiteY = desc.WhitePoint[1],
                     MinLuminanceNits = desc.MinLuminance,
                     MaxLuminanceNits = desc.MaxLuminance,
                     HasValue = desc.MaxLuminance > 0
                 };
                 return mastering.HasValue;
             }
-            catch (InvalidCastException)
+            catch (Exception e)
             {
+                DebugHelper.WriteException(e, "HDR: mastering display metadata unavailable.");
                 return false;
             }
         }
@@ -1020,11 +1047,11 @@ namespace ShareX.ScreenCaptureLib
                 return;
             }
 
-            if (session.Duplication != null)
+            if (session.VorticeDuplication != null)
             {
-                try { session.Duplication.ReleaseFrame(); } catch { }
-                try { Marshal.ReleaseComObject(session.Duplication); } catch { }
-                session.Duplication = null;
+                try { session.VorticeDuplication.ReleaseFrame(); } catch { }
+                try { session.VorticeDuplication.Dispose(); } catch { }
+                session.VorticeDuplication = null;
             }
 
             if (session.Staging != IntPtr.Zero)
@@ -1037,7 +1064,7 @@ namespace ShareX.ScreenCaptureLib
         }
 
         private static bool CaptureOutputHdrWic(HdrDuplSession session, Rectangle monitorRect, Rectangle captureRect,
-            Rectangle intersection, Bitmap composite)
+            Rectangle intersection, Bitmap composite, HdrMasterImage master, float sdrWhiteNits)
         {
             if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
             {
@@ -1057,13 +1084,35 @@ namespace ShareX.ScreenCaptureLib
                     return false;
                 }
 
-                return HdrWicTonemap.TryBlitToBitmap(mapped.pData, (int)mapped.RowPitch, texW, texH, session.Format,
+                bool ok = HdrWicTonemap.TryBlitToBitmap(mapped.pData, (int)mapped.RowPitch, texW, texH, session.Format,
                     srcX, srcY, copyW, copyH, composite, dstX, dstY);
+                if (ok && master != null)
+                {
+                    FillMasterFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format,
+                        srcX, srcY, copyW, copyH, dstX, dstY, sdrWhiteNits, master);
+                }
+
+                return ok;
             }
             finally
             {
                 session.Unmap(session.Context, session.Staging, 0);
-                try { session.Duplication.ReleaseFrame(); } catch { }
+                try { session.VorticeDuplication?.ReleaseFrame(); } catch { }
+            }
+        }
+
+        private static unsafe void FillMasterFromMapped(IntPtr data, int rowPitch, int format,
+            int srcX, int srcY, int copyW, int copyH, int dstX, int dstY, float sdrWhiteNits, HdrMasterImage master)
+        {
+            int bpp = HdrPixelConvert.BytesPerPixel(format);
+            byte* srcBase = (byte*)data;
+            for (int y = 0; y < copyH; y++)
+            {
+                byte* srcRow = srcBase + (long)(srcY + y) * rowPitch + (long)srcX * bpp;
+                for (int x = 0; x < copyW; x++)
+                {
+                    master.WriteFromDxgiPixel(dstX + x, dstY + y, format, srcRow + x * bpp, sdrWhiteNits);
+                }
             }
         }
 
@@ -1084,12 +1133,12 @@ namespace ShareX.ScreenCaptureLib
                 }
 
                 HdrLuminanceAccumulator acc = new HdrLuminanceAccumulator();
-                acc.AddFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
+                acc.AddFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format, 0, 0, texW, texH,
                     pending.SdrWhiteNits);
                 HdrLuminanceStats stats = acc.Build();
-                HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, stats, session.DeviceName);
+                HdrTonemapMode resolvedMode = HdrTonemap.ResolveMode(HdrTonemapMode, stats, session.DeviceName, hdrDxgiCapture: true);
                 HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, HdrExposure, pending.SdrWhiteNits);
-                DebugHelper.WriteLine($"HDR: direct tonemap {HdrTonemapMode} -> {resolvedMode} (P99={stats.P99Estimate:0.00}, max={stats.MaxLuminance:0.00}, sdrWhite={pending.SdrWhiteNits:0.#})");
+                DebugHelper.WriteLine($"HDR: direct tonemap {HdrTonemapMode} -> {resolvedMode} (stats=full output {texW}x{texH}, P99={stats.P99Estimate:0.00}, max={stats.MaxLuminance:0.00}, sdrWhite={pending.SdrWhiteNits:0.#})");
 
                 BlitMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
                     pending.SdrWhiteNits, composite, dstX, dstY, curve, master);
@@ -1098,11 +1147,12 @@ namespace ShareX.ScreenCaptureLib
             finally
             {
                 session.Unmap(session.Context, session.Staging, 0);
-                try { session.Duplication.ReleaseFrame(); } catch { }
+                try { session.VorticeDuplication?.ReleaseFrame(); } catch { }
             }
         }
 
-        private static HdrCpuSlice CaptureOutputHdrSlice(HdrPendingOutput pending, Rectangle captureRect)
+        private static HdrCpuSlice CaptureOutputHdrSlice(HdrPendingOutput pending, Rectangle captureRect,
+            HdrLuminanceAccumulator tonemapStatsAcc = null)
         {
             HdrDuplSession session = pending.Session;
             if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
@@ -1112,6 +1162,9 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
+                tonemapStatsAcc?.AddFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format, 0, 0, texW, texH,
+                    pending.SdrWhiteNits);
+
                 if (!TryGetCopyRect(pending, captureRect, texW, texH,
                     out int srcX, out int srcY, out int copyW, out int copyH, out int dstX, out int dstY))
                 {
@@ -1147,7 +1200,7 @@ namespace ShareX.ScreenCaptureLib
             finally
             {
                 session.Unmap(session.Context, session.Staging, 0);
-                try { session.Duplication.ReleaseFrame(); } catch { }
+                try { session.VorticeDuplication?.ReleaseFrame(); } catch { }
             }
         }
 
@@ -1178,12 +1231,12 @@ namespace ShareX.ScreenCaptureLib
             mapped = default;
             texW = texH = 0;
 
-            if (!TryAcquireDesktopResource(session, out object resourceObj))
+            if (!TryAcquireDesktopResource(session, out IDXGIResource desktopResource))
             {
                 return false;
             }
 
-            IntPtr resourcePtr = Marshal.GetIUnknownForObject(resourceObj);
+            IntPtr resourcePtr = desktopResource.NativePointer;
             try
             {
                 Guid texGuid = new Guid("6f15aaf2-d208-4e89-9ab4-489535d34f9c");
@@ -1219,37 +1272,47 @@ namespace ShareX.ScreenCaptureLib
             }
             finally
             {
-                Marshal.Release(resourcePtr);
-                Marshal.ReleaseComObject(resourceObj);
+                desktopResource.Dispose();
             }
         }
 
-        private static bool TryAcquireDesktopResource(HdrDuplSession session, out object resourceObj)
+        private static bool TryAcquireDesktopResource(HdrDuplSession session, out IDXGIResource desktopResource)
         {
-            resourceObj = null;
-            DXGI_OUTDUPL_FRAME_INFO frameInfo = default;
+            desktopResource = null;
+            Vortice.DXGI.IDXGIOutputDuplication duplication = session.VorticeDuplication;
+            if (duplication == null)
+            {
+                return false;
+            }
 
             if (session.Warm)
             {
-                int hr = session.Duplication.AcquireNextFrame(16, out frameInfo, out resourceObj);
-                if (hr == DXGI_ERROR_ACCESS_LOST)
+                try
+                {
+                    if (duplication.AcquireNextFrame(16, out OutduplFrameInfo frameInfo, out desktopResource).Success &&
+                        desktopResource != null)
+                    {
+                        return true;
+                    }
+                }
+                catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_ACCESS_LOST)
                 {
                     DropSession(session.DeviceName);
                     return false;
                 }
 
-                if (hr == 0 && resourceObj != null)
-                {
-                    return true;
-                }
+                desktopResource?.Dispose();
+                desktopResource = null;
 
-                if (hr == DXGI_ERROR_WAIT_TIMEOUT)
+                try
                 {
-                    hr = session.Duplication.AcquireNextFrame(50, out frameInfo, out resourceObj);
-                    return hr == 0 && resourceObj != null;
+                    return duplication.AcquireNextFrame(50, out _, out desktopResource).Success && desktopResource != null;
                 }
-
-                return false;
+                catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_ACCESS_LOST)
+                {
+                    DropSession(session.DeviceName);
+                    return false;
+                }
             }
 
             const int perAcquireMs = 100;
@@ -1258,51 +1321,66 @@ namespace ShareX.ScreenCaptureLib
 
             while (sw.ElapsedMilliseconds < presentBudgetMs)
             {
-                int acquireHr = session.Duplication.AcquireNextFrame(perAcquireMs, out frameInfo, out resourceObj);
-                if (acquireHr == DXGI_ERROR_ACCESS_LOST)
+                try
+                {
+                    Result acquireResult = duplication.AcquireNextFrame((uint)perAcquireMs, out OutduplFrameInfo frameInfo, out desktopResource);
+                    if ((int)acquireResult.Code == DXGI_ERROR_ACCESS_LOST)
+                    {
+                        DropSession(session.DeviceName);
+                        return false;
+                    }
+
+                    if (acquireResult.Success)
+                    {
+                        if (frameInfo.LastPresentTime != 0 || frameInfo.AccumulatedFrames > 0)
+                        {
+                            session.Warm = true;
+                            return true;
+                        }
+
+                        desktopResource?.Dispose();
+                        desktopResource = null;
+                        duplication.ReleaseFrame();
+                        continue;
+                    }
+
+                    if (acquireResult.Code == Vortice.DXGI.ResultCode.WaitTimeout)
+                    {
+                        continue;
+                    }
+                }
+                catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_ACCESS_LOST)
                 {
                     DropSession(session.DeviceName);
                     return false;
                 }
 
-                if (acquireHr == 0)
-                {
-                    if (frameInfo.LastPresentTime != 0 || frameInfo.AccumulatedFrames > 0)
-                    {
-                        session.Warm = true;
-                        return true;
-                    }
-
-                    Marshal.ReleaseComObject(resourceObj);
-                    resourceObj = null;
-                    session.Duplication.ReleaseFrame();
-                    continue;
-                }
-
-                if (acquireHr == DXGI_ERROR_WAIT_TIMEOUT)
-                {
-                    continue;
-                }
-
                 break;
             }
 
-            if (resourceObj == null)
+            if (desktopResource == null)
             {
                 Thread.Sleep(120);
-                for (int i = 0; i < 5 && resourceObj == null; i++)
+                for (int i = 0; i < 5 && desktopResource == null; i++)
                 {
-                    int hr = session.Duplication.AcquireNextFrame(200, out frameInfo, out resourceObj);
-                    if (hr == 0)
+                    try
                     {
-                        break;
+                        if (duplication.AcquireNextFrame(200, out _, out desktopResource).Success && desktopResource != null)
+                        {
+                            break;
+                        }
+                    }
+                    catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_ACCESS_LOST)
+                    {
+                        DropSession(session.DeviceName);
+                        return false;
                     }
 
-                    resourceObj = null;
+                    desktopResource = null;
                 }
             }
 
-            if (resourceObj != null)
+            if (desktopResource != null)
             {
                 session.Warm = true;
                 return true;

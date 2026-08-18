@@ -130,10 +130,7 @@ namespace ShareX
                 Bitmap output = GdiSkiaBitmapConverter.ToGdiBitmap(result.Image);
                 TaskMetadata metadata = new TaskMetadata(output);
 
-                if (canvasMaster != null)
-                {
-                    metadata.HdrMaster = canvasMaster.Crop(result.ScreenRectangle, screenBounds);
-                }
+                metadata.HdrMaster = CropMaster(canvasMaster, result.ScreenRectangle, screenBounds, output);
 
                 if (result.ImageModified)
                 {
@@ -200,16 +197,18 @@ namespace ShareX
                 {
                     TaskMetadata metadata = new TaskMetadata(result);
 
-                    // Prefer Avalonia LastRegionRectangle when available; otherwise drop the
-                    // fullscreen master rather than pairing a wrong-sized companion file.
-                    Rectangle region = RegionCaptureIntegration.LastRegionRectangle;
-                    if (canvasMaster != null && region.Width > 0 && region.Height > 0)
+                    Rectangle region = form.GetSelectedRectangle();
+                    if (region.Width <= 0 || region.Height <= 0)
                     {
-                        Rectangle canvasBounds = taskSettings.CaptureSettings.SurfaceOptions.ActiveMonitorMode
-                            ? CaptureHelpers.GetActiveScreenBounds()
-                            : CaptureHelpers.GetScreenBounds();
-                        metadata.HdrMaster = canvasMaster.Crop(region, canvasBounds);
+                        region = RegionCaptureIntegration.LastRegionRectangle;
                     }
+
+                    Rectangle canvasBounds = form.ScreenBounds.IsEmpty
+                        ? (taskSettings.CaptureSettings.SurfaceOptions.ActiveMonitorMode
+                            ? CaptureHelpers.GetActiveScreenBounds()
+                            : CaptureHelpers.GetScreenBounds())
+                        : form.ScreenBounds;
+                    metadata.HdrMaster = CropMaster(canvasMaster, region, canvasBounds, result);
 
                     if (form.IsImageModified)
                     {
@@ -260,13 +259,10 @@ namespace ShareX
                         lastRegionCaptureType = RegionCaptureType.Light;
 
                         TaskMetadata metadata = new TaskMetadata(result);
-                        if (canvasMaster != null)
-                        {
-                            Rectangle canvasBounds = activeMonitorMode
-                                ? CaptureHelpers.GetActiveScreenBounds()
-                                : CaptureHelpers.GetScreenBounds();
-                            metadata.HdrMaster = canvasMaster.Crop(rectangleLight.ScreenSelectionRectangle, canvasBounds);
-                        }
+                        Rectangle canvasBounds = activeMonitorMode
+                            ? CaptureHelpers.GetActiveScreenBounds()
+                            : CaptureHelpers.GetScreenBounds();
+                        metadata.HdrMaster = CropMaster(canvasMaster, rectangleLight.ScreenSelectionRectangle, canvasBounds, result);
 
                         return metadata;
                     }
@@ -300,6 +296,32 @@ namespace ShareX
                 }
             }
 
+            return null;
+        }
+
+        private static HdrMasterImage CropMaster(HdrMasterImage canvasMaster, Rectangle region, Rectangle canvasBounds, Bitmap output)
+        {
+            if (canvasMaster == null)
+            {
+                return null;
+            }
+
+            if (region.Width > 0 && region.Height > 0)
+            {
+                HdrMasterImage cropped = canvasMaster.Crop(region, canvasBounds);
+                if (cropped != null)
+                {
+                    return cropped;
+                }
+            }
+
+            if (output != null && canvasMaster.Width == output.Width && canvasMaster.Height == output.Height)
+            {
+                DebugHelper.WriteLine("HDR master: using uncropped companion because it already matches the result size.");
+                return canvasMaster;
+            }
+
+            DebugHelper.WriteLine("HDR master: region crop produced no companion.");
             return null;
         }
     }

@@ -353,11 +353,13 @@ internal sealed class TaskSettingsPageBuilder
         AddGridLabel(regionGrid, Strings.TaskSettingsWindow_Height, 1, 2);
         AddGridControl(regionGrid, Number(regionHeight, 0, 100000), 1, 3);
 
-        BoundValue<bool> hdrCapture = new(capture.CaptureHDREnabled, value =>
+        BoundValue<bool> hdrExtrasEnabled = new(capture.CaptureHDREnabled.MayUseHdrPipeline(), _ => { });
+        ComboBox hdrMode = EnumCombo(() => capture.CaptureHDREnabled, value =>
         {
             capture.CaptureHDREnabled = value;
             capture.SurfaceOptions.CaptureHDREnabled = value;
-            if (value)
+            hdrExtrasEnabled.Value = value.MayUseHdrPipeline();
+            if (value.MayUseHdrPipeline())
             {
                 Screenshot.WarmHdrCapture();
             }
@@ -372,11 +374,11 @@ internal sealed class TaskSettingsPageBuilder
             capture.HdrExposure = HdrTonemap.ClampExposure((float)value);
             capture.SurfaceOptions.HdrExposure = capture.HdrExposure;
         }, (decimal)HdrTonemap.ExposureMin, (decimal)HdrTonemap.ExposureMax, 0.01m);
-        BindEnabled(hdrTonemap, hdrCapture);
-        BindEnabled(hdrExposure, hdrCapture);
+        BindEnabled(hdrTonemap, hdrExtrasEnabled);
+        BindEnabled(hdrExposure, hdrExtrasEnabled);
         BoundValue<bool> hdrMaster = new(capture.SaveHdrMasterPng, value => capture.SaveHdrMasterPng = value);
         CheckBox hdrMasterCheck = Check("Also save HDR master PNG (PQ / cICP)", hdrMaster);
-        BindEnabled(hdrMasterCheck, hdrCapture);
+        BindEnabled(hdrMasterCheck, hdrExtrasEnabled);
         capture.SurfaceOptions.CaptureHDREnabled = capture.CaptureHDREnabled;
         capture.SurfaceOptions.HdrTonemapMode = capture.HdrTonemapMode;
         capture.SurfaceOptions.HdrExposure = capture.HdrExposure;
@@ -391,7 +393,7 @@ internal sealed class TaskSettingsPageBuilder
                 Check(Strings.TaskSettingsWindow_CaptureClientAreaForWindowCaptures, () => capture.CaptureClientArea, value => capture.CaptureClientArea = value),
                 Check(Strings.TaskSettingsWindow_HideTaskbarWhenItIntersectsACapturedWindow, () => capture.CaptureAutoHideTaskbar, value => capture.CaptureAutoHideTaskbar = value),
                 Check(Strings.TaskSettingsWindow_AutomaticallyHideDesktopIcons, () => capture.CaptureAutoHideDesktopIcons, value => capture.CaptureAutoHideDesktopIcons = value),
-                Check("HDR capture (DXGI tonemap)", hdrCapture),
+                Row("HDR capture", hdrMode),
                 Row("HDR tonemap mode", hdrTonemap),
                 Row("HDR paper white / exposure", hdrExposure),
                 hdrMasterCheck),
@@ -524,6 +526,9 @@ internal sealed class TaskSettingsPageBuilder
             CaptureArea = WinForms.Screen.PrimaryScreen?.Bounds ?? DrawingRectangle.Empty,
             DrawCursor = capture.ScreenRecordShowCursor,
             CaptureHDREnabled = capture.CaptureHDREnabled,
+            UseHdrDxgiPipe = HdrDisplayProbe.ResolveHdrPipeline(
+                capture.CaptureHDREnabled,
+                WinForms.Screen.PrimaryScreen?.Bounds ?? DrawingRectangle.Empty),
             HdrTonemapMode = capture.HdrTonemapMode,
             HdrExposure = capture.HdrExposure
         };

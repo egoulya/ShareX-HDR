@@ -2406,26 +2406,53 @@ namespace ShareX
             };
         }
 
+        public static TaskSettingsCapture GetCaptureSettings(TaskSettings taskSettings)
+        {
+            if (taskSettings == null)
+            {
+                return Program.DefaultTaskSettings?.CaptureSettings ?? new TaskSettingsCapture();
+            }
+
+            if (taskSettings.UseDefaultCaptureSettings)
+            {
+                return Program.DefaultTaskSettings?.CaptureSettings ?? taskSettings.CaptureSettings ?? new TaskSettingsCapture();
+            }
+
+            return taskSettings.TaskSettingsReference?.CaptureSettings
+                ?? taskSettings.CaptureSettings
+                ?? Program.DefaultTaskSettings?.CaptureSettings
+                ?? new TaskSettingsCapture();
+        }
+
         public static Screenshot GetScreenshot(TaskSettings taskSettings = null)
         {
             if (taskSettings == null) taskSettings = TaskSettings.GetDefaultTaskSettings();
 
+            TaskSettingsCapture capture = GetCaptureSettings(taskSettings);
+
+            HdrCaptureMode hdrMode = capture.CaptureHDREnabled;
+            Rectangle probeRect = CaptureHelpers.GetScreenBounds();
+            bool hdr = HdrDisplayProbe.ResolveHdrPipeline(hdrMode, probeRect);
+
             Screenshot screenshot = new Screenshot()
             {
-                CaptureCursor = taskSettings.CaptureSettings.ShowCursor,
-                CaptureClientArea = taskSettings.CaptureSettings.CaptureClientArea,
+                CaptureCursor = capture.ShowCursor,
+                CaptureClientArea = capture.CaptureClientArea,
                 RemoveOutsideScreenArea = true,
-                CaptureShadow = taskSettings.CaptureSettings.CaptureShadow,
-                ShadowOffset = taskSettings.CaptureSettings.CaptureShadowOffset,
-                AutoHideTaskbar = taskSettings.CaptureSettings.CaptureAutoHideTaskbar,
-                HDRScreenshotColorCorrection = taskSettings.CaptureSettings.HDRScreenshotColorCorrection,
-                CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled,
-                HdrTonemapMode = taskSettings.CaptureSettings.HdrTonemapMode,
-                HdrExposure = taskSettings.CaptureSettings.HdrExposure,
-                SaveHdrMasterPng = taskSettings.CaptureSettings.SaveHdrMasterPng
+                CaptureShadow = capture.CaptureShadow,
+                ShadowOffset = capture.CaptureShadowOffset,
+                AutoHideTaskbar = capture.CaptureAutoHideTaskbar,
+                HDRScreenshotColorCorrection = capture.HDRScreenshotColorCorrection,
+                HdrCaptureMode = hdrMode,
+                CaptureHDREnabled = hdr,
+                HdrTonemapMode = capture.HdrTonemapMode,
+                HdrExposure = capture.HdrExposure,
+                SaveHdrMasterPng = capture.SaveHdrMasterPng
             };
 
-            if (screenshot.CaptureHDREnabled)
+            DebugHelper.WriteLine($"HDR: GetScreenshot mode={hdrMode} resolved={hdr} saveMaster={capture.SaveHdrMasterPng}");
+
+            if (hdrMode.MayUseHdrPipeline())
             {
                 Screenshot.WarmHdrCapture();
             }

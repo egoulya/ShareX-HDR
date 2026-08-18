@@ -63,14 +63,15 @@ namespace ShareX
             TaskMetadata metadata = new TaskMetadata();
             metadata.UpdateInfo(windowInfo);
 
-            if (taskSettings.CaptureSettings.CaptureTransparent && !taskSettings.CaptureSettings.CaptureClientArea)
+            CaptureImage(metadata, taskSettings, screenshot =>
             {
-                metadata.Image = TaskHelpers.GetScreenshot(taskSettings).CaptureWindowTransparent(WindowHandle);
-            }
-            else
-            {
-                metadata.Image = TaskHelpers.GetScreenshot(taskSettings).CaptureWindow(WindowHandle);
-            }
+                if (taskSettings.CaptureSettings.CaptureTransparent && !taskSettings.CaptureSettings.CaptureClientArea)
+                {
+                    return screenshot.CaptureWindowTransparent(WindowHandle);
+                }
+
+                return screenshot.CaptureWindow(WindowHandle);
+            });
 
             return metadata;
         }

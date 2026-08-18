@@ -277,6 +277,155 @@ namespace ShareX.ScreenCaptureLib.Tests
             Assert.True(bright.MaxCLL > dark.MaxCLL * 10);
         }
 
+        [Fact]
+        public void Hdr_master_crop_clamps_out_of_bounds_instead_of_dropping()
+        {
+            HdrMasterImage canvas = new HdrMasterImage(4, 2);
+            canvas.Rgb[0] = 1000;
+
+            HdrMasterImage cropped = canvas.Crop(
+                new System.Drawing.Rectangle(-1, -1, 6, 4),
+                new System.Drawing.Rectangle(0, 0, 4, 2));
+
+            Assert.NotNull(cropped);
+            Assert.Equal(4, cropped.Width);
+            Assert.Equal(2, cropped.Height);
+            Assert.Equal((ushort)1000, cropped.Rgb[0]);
+        }
+
+        [Theory]
+        [InlineData("false", HdrCaptureMode.Off)]
+        [InlineData("true", HdrCaptureMode.Dynamic)]
+        [InlineData("0", HdrCaptureMode.Off)]
+        [InlineData("1", HdrCaptureMode.Dynamic)]
+        [InlineData("2", HdrCaptureMode.On)]
+        [InlineData("\"Off\"", HdrCaptureMode.Off)]
+        [InlineData("\"On\"", HdrCaptureMode.On)]
+        [InlineData("\"Dynamic\"", HdrCaptureMode.Dynamic)]
+        public void Hdr_capture_mode_deserializes_legacy_bool_and_enum(string jsonToken, HdrCaptureMode expected)
+        {
+            string json = "{\"CaptureHDREnabled\":" + jsonToken + "}";
+            Holder holder = Newtonsoft.Json.JsonConvert.DeserializeObject<Holder>(json);
+            Assert.Equal(expected, holder.CaptureHDREnabled);
+        }
+
+        private sealed class Holder
+        {
+            [Newtonsoft.Json.JsonConverter(typeof(HdrCaptureModeConverter))]
+            public HdrCaptureMode CaptureHDREnabled { get; set; }
+        }
+
+        [Theory]
+        [InlineData(0u, false)]
+        [InlineData(12u, true)]
+        [InlineData(16u, true)]
+        [InlineData(1u, false)]
+        public void Hdr_color_space_detects_scrgb_and_hdr10(uint colorSpace, bool hdr)
+        {
+            Assert.Equal(hdr, HdrDisplayProbe.IsHdrColorSpace(colorSpace));
+        }
+
+        [Fact]
+        public unsafe void Bgra_frame_copies_to_bgr24_not_black()
+        {
+            byte[] bgra = { 10, 20, 30, 255 };
+            byte[] bgr = new byte[3];
+            fixed (byte* p = bgra)
+            {
+                HdrRecordingBlit.CopyBgraToBgr24((IntPtr)p, 4, 0, 0, 1, 1, bgr, 1);
+            }
+
+            Assert.Equal(10, bgr[0]);
+            Assert.Equal(20, bgr[1]);
+            Assert.Equal(30, bgr[2]);
+        }
+
+        [Fact]
+        public void Auto_tonemap_on_hdr_desktop_ui_prefers_desktop()
+        {
+            HdrLuminanceStats desktopUi = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 50,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 1_200,
+                maxLuminance: 1.05f,
+                p99Estimate: 1.0f);
+
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, desktopUi, hdrDxgiCapture: true);
+            Assert.Equal(HdrTonemapMode.Desktop, mode);
+        }
+
+        [Fact]
+        public void Auto_tonemap_flat_paper_white_on_hdr_dxgi_uses_desktop()
+        {
+            HdrLuminanceStats flat = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 0,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 10_000,
+                maxLuminance: 1.0f,
+                p99Estimate: 1.0f);
+
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, flat, "\\\\.\\DISPLAY1", hdrDxgiCapture: true);
+            Assert.Equal(HdrTonemapMode.Desktop, mode);
+        }
+
+        [Fact]
+        public void Auto_tonemap_hdr_dxgi_ignores_prior_auto_hdr_hysteresis()
+        {
+            HdrLuminanceStats hotSdr = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 10,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 900,
+                maxLuminance: 1.0f,
+                p99Estimate: 0.95f);
+            HdrLuminanceStats flat = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 0,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 10_000,
+                maxLuminance: 1.0f,
+                p99Estimate: 1.0f);
+
+            const string key = "test-display-hysteresis";
+            Assert.Equal(HdrTonemapMode.AutoHDR,
+                HdrTonemap.ResolveMode(HdrTonemapMode.Auto, hotSdr, key, hdrDxgiCapture: false));
+
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, flat, key, hdrDxgiCapture: true);
+            Assert.Equal(HdrTonemapMode.Desktop, mode);
+        }
+
+        [Fact]
+        public void Auto_tonemap_on_sdr_in_hdr_game_prefers_auto_hdr_only_without_dxgi_hdr()
+        {
+            HdrLuminanceStats autoHdrGame = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 20,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 1_600,
+                maxLuminance: 1.12f,
+                p99Estimate: 1.05f);
+
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, autoHdrGame, hdrDxgiCapture: false);
+            Assert.Equal(HdrTonemapMode.AutoHDR, mode);
+        }
+
+        [Fact]
+        public void Auto_tonemap_legacy_heuristic_still_detects_hot_sdr_without_hdr_capture()
+        {
+            HdrLuminanceStats hotSdr = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 10,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 900,
+                maxLuminance: 1.0f,
+                p99Estimate: 0.95f);
+
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, hotSdr, hdrDxgiCapture: false);
+            Assert.Equal(HdrTonemapMode.AutoHDR, mode);
+        }
+
         private static uint PackPq10(float nits)
         {
             float pq = PqOetf(Math.Max(nits, 0f));

@@ -20,7 +20,9 @@ namespace ShareX.ScreenCaptureLib
     /// <summary>
     /// Tonemap profile used after HDR capture is normalized to SDR white = 1.0.
     /// Auto picks Desktop vs AutoHDR from a quick luminance histogram of the frame
-    /// (Windows does not expose a reliable "this is Auto-HDR" flag).
+    /// (Windows does not expose a reliable "this is Auto-HDR" flag). For HDR DXGI
+    /// captures, stats are sampled from the full monitor output; hysteresis is keyed
+    /// per display device name (or "span" when multiple outputs contribute).
     /// Windows WIC is screenshots-only; recording falls back to Desktop.
     /// </summary>
     public enum HdrTonemapMode
@@ -136,19 +138,19 @@ namespace ShareX.ScreenCaptureLib
         public static float ClampExposure(float exposure) => Math.Clamp(exposure, ExposureMin, ExposureMax);
 
         public static HdrTonemapMode ResolveMode(HdrTonemapMode requested, in HdrLuminanceStats stats,
-            string hysteresisKey = null)
+            string hysteresisKey = null, bool hdrDxgiCapture = false)
         {
             if (requested != HdrTonemapMode.Auto)
             {
                 return requested;
             }
 
-            HdrTonemapMode candidate = ClassifyContent(stats);
+            HdrTonemapMode candidate = ClassifyContent(stats, hdrDxgiCapture);
 
             if (!string.IsNullOrEmpty(hysteresisKey) &&
                 AutoModeMemory.TryGetValue(hysteresisKey, out HdrTonemapMode previous))
             {
-                candidate = ApplyHysteresis(previous, candidate, stats);
+                candidate = ApplyHysteresis(previous, candidate, stats, hdrDxgiCapture);
             }
 
             if (!string.IsNullOrEmpty(hysteresisKey))
@@ -160,9 +162,9 @@ namespace ShareX.ScreenCaptureLib
         }
 
         public static HdrTonemapMode ResolveForRecording(HdrTonemapMode requested, in HdrLuminanceStats stats,
-            string hysteresisKey = null)
+            string hysteresisKey = null, bool hdrDxgiCapture = false)
         {
-            HdrTonemapMode resolved = ResolveMode(requested, stats, hysteresisKey);
+            HdrTonemapMode resolved = ResolveMode(requested, stats, hysteresisKey, hdrDxgiCapture);
             return resolved == HdrTonemapMode.WindowsWIC ? HdrTonemapMode.Desktop : resolved;
         }
 
@@ -197,7 +199,7 @@ namespace ShareX.ScreenCaptureLib
             return new HdrTonemapCurve(resolvedMode, exposure, lut, maxInputNorm, lutScale);
         }
 
-        private static HdrTonemapMode ClassifyContent(in HdrLuminanceStats stats)
+        private static HdrTonemapMode ClassifyContent(in HdrLuminanceStats stats, bool hdrDxgiCapture)
         {
             bool looksLikeTrueHdr =
                 stats.MaxLuminance >= 1.75f ||
@@ -206,6 +208,14 @@ namespace ShareX.ScreenCaptureLib
 
             if (looksLikeTrueHdr)
             {
+                return HdrTonemapMode.Desktop;
+            }
+
+            if (hdrDxgiCapture)
+            {
+                // Luminance stats cannot distinguish Windows HDR desktop (SDR apps at paper
+                // white) from Auto-HDR games — both show max≈1, P99≈1. DXGI HDR capture always
+                // uses Desktop; pick Auto-HDR games manually when needed.
                 return HdrTonemapMode.Desktop;
             }
 
@@ -218,8 +228,13 @@ namespace ShareX.ScreenCaptureLib
         }
 
         private static HdrTonemapMode ApplyHysteresis(HdrTonemapMode previous, HdrTonemapMode candidate,
-            in HdrLuminanceStats stats)
+            in HdrLuminanceStats stats, bool hdrDxgiCapture)
         {
+            if (hdrDxgiCapture)
+            {
+                return HdrTonemapMode.Desktop;
+            }
+
             if (previous == candidate)
             {
                 return candidate;

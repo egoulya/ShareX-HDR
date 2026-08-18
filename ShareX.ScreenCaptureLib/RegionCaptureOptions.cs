@@ -23,6 +23,7 @@
 
 #endregion License Information (GPL v3)
 
+using Newtonsoft.Json;
 using ShareX.HelpersLib;
 using ShareX.ImageEffectsLib;
 using System.Collections.Generic;
@@ -111,7 +112,8 @@ namespace ShareX.ScreenCaptureLib
 
         // Screen color picker
         public string ScreenColorPickerInfoText = "";
-        public bool CaptureHDREnabled = false;
+        [JsonConverter(typeof(HdrCaptureModeConverter))]
+        public HdrCaptureMode CaptureHDREnabled = HdrCaptureMode.Off;
         public HdrTonemapMode HdrTonemapMode = HdrTonemapMode.Auto;
         public float HdrExposure = HdrTonemap.ExposureDefault;
     }

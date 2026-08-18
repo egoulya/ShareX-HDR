@@ -48,7 +48,21 @@ namespace ShareX.ScreenCaptureLib
                 rect = Rectangle.Intersect(bounds, rect);
             }
 
-            if (CaptureHDREnabled)
+            bool useHdr = HdrCaptureMode switch
+            {
+                HdrCaptureMode.On => true,
+                HdrCaptureMode.Dynamic => HdrDisplayProbe.ResolveHdrPipeline(HdrCaptureMode.Dynamic, rect),
+                _ => false
+            };
+            CaptureHDREnabled = useHdr;
+            if (!useHdr)
+            {
+                SaveHdrMasterPng = false;
+            }
+
+            DebugHelper.WriteLine($"HDR: CaptureRectangle mode={HdrCaptureMode} resolved={useHdr} saveMaster={SaveHdrMasterPng}");
+
+            if (useHdr)
             {
                 try
                 {

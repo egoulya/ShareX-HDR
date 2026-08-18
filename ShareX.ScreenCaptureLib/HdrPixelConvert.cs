@@ -91,12 +91,12 @@ namespace ShareX.ScreenCaptureLib
                 float rN = (packed & 0x3FFu) / 1023f;
                 float gN = ((packed >> 10) & 0x3FFu) / 1023f;
                 float bN = ((packed >> 20) & 0x3FFu) / 1023f;
-                rPq = (ushort)Math.Clamp((int)MathF.Round(rN * 65535f), 0, 65535);
-                gPq = (ushort)Math.Clamp((int)MathF.Round(gN * 65535f), 0, 65535);
-                bPq = (ushort)Math.Clamp((int)MathF.Round(bN * 65535f), 0, 65535);
                 float rn = PqEotf(rN);
                 float gn = PqEotf(gN);
                 float bn = PqEotf(bN);
+                rPq = QuantizePq(rn);
+                gPq = QuantizePq(gn);
+                bPq = QuantizePq(bn);
                 nits = 0.2627f * rn + 0.6780f * gn + 0.0593f * bn;
                 return;
             }

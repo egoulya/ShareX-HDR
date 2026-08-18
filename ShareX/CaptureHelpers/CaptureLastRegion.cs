@@ -51,31 +51,23 @@ namespace ShareX
                 case RegionCaptureType.Default:
                     if (!RegionCaptureIntegration.LastRegionRectangle.IsEmpty)
                     {
-                        Bitmap bmp = TaskHelpers.GetScreenshot(taskSettings).CaptureRectangle(
-                            RegionCaptureIntegration.LastRegionRectangle);
-                        return new TaskMetadata(bmp);
+                        return CaptureRectangleWithMaster(taskSettings, RegionCaptureIntegration.LastRegionRectangle);
                     }
                     return ExecuteRegionCapture(taskSettings);
                 case RegionCaptureType.Light:
                     if (!RegionCaptureLightForm.LastScreenSelectionRectangle.IsEmpty)
                     {
-                        Bitmap bmp = TaskHelpers.GetScreenshot(taskSettings).CaptureRectangle(RegionCaptureLightForm.LastScreenSelectionRectangle);
-                        return new TaskMetadata(bmp);
+                        return CaptureRectangleWithMaster(taskSettings, RegionCaptureLightForm.LastScreenSelectionRectangle);
                     }
-                    else
-                    {
-                        return ExecuteRegionCaptureLight(taskSettings);
-                    }
+
+                    return ExecuteRegionCaptureLight(taskSettings);
                 case RegionCaptureType.Transparent:
                     if (!RegionCaptureLightForm.LastScreenSelectionRectangle.IsEmpty)
                     {
-                        Bitmap bmp = TaskHelpers.GetScreenshot(taskSettings).CaptureRectangle(RegionCaptureLightForm.LastScreenSelectionRectangle);
-                        return new TaskMetadata(bmp);
+                        return CaptureRectangleWithMaster(taskSettings, RegionCaptureLightForm.LastScreenSelectionRectangle);
                     }
-                    else
-                    {
-                        return ExecuteRegionCaptureTransparent(taskSettings);
-                    }
+
+                    return ExecuteRegionCaptureTransparent(taskSettings);
             }
         }
     }

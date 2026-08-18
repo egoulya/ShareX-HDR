@@ -628,7 +628,6 @@ namespace ShareX
                         Info.FilePath = filePath;
                         imageData.Write(Info.FilePath);
                         DebugHelper.WriteLine("Image saved to file: " + Info.FilePath);
-                        TrySaveHdrMaster(Info.FilePath);
                     }
                 }
 
@@ -666,7 +665,6 @@ namespace ShareX
                                 if (imageSaved)
                                 {
                                     DebugHelper.WriteLine("Image saved to file with dialog: " + Info.FilePath);
-                                    TrySaveHdrMaster(Info.FilePath);
                                 }
                             }
                             else
@@ -701,16 +699,44 @@ namespace ShareX
                 }
             }
 
+            TrySaveHdrMaster();
             return true;
         }
 
-        private void TrySaveHdrMaster(string primaryPath)
+        private void TrySaveHdrMaster(string primaryPath = null)
         {
             HdrMasterImage master = Info.Metadata?.HdrMaster;
-            if (master == null || string.IsNullOrEmpty(primaryPath) ||
-                !Info.TaskSettings.CaptureSettings.SaveHdrMasterPng)
+            TaskSettingsCapture capture = TaskHelpers.GetCaptureSettings(Info.TaskSettings);
+            bool saveFlag = capture.SaveHdrMasterPng;
+
+            if (!saveFlag)
             {
+                if (master != null)
+                {
+                    DebugHelper.WriteLine("HDR master: skip save because the setting is off.");
+                }
+
                 return;
+            }
+
+            if (master == null)
+            {
+                DebugHelper.WriteLine("HDR master: skip save because the companion buffer is missing (HDR pipeline may not have run, or crop dropped it).");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(primaryPath))
+            {
+                primaryPath = Info.FilePath;
+            }
+
+            if (string.IsNullOrEmpty(primaryPath))
+            {
+                string folder = TaskHelpers.GetScreenshotsFolder(Info.TaskSettings, Info.Metadata);
+                string name = string.IsNullOrEmpty(Info.FileName)
+                    ? TaskHelpers.GetFileName(Info.TaskSettings, "png", Info.Metadata)
+                    : Info.FileName;
+                primaryPath = Path.Combine(folder, name);
             }
 
             try
