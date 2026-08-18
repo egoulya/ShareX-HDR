@@ -1,19 +1,136 @@
 <p align="center"><a href="https://getsharex.com"><img src="https://getsharex.com/img/ShareX_Banner.png" alt="ShareX Banner"/></a></p>
-<h3 align="center">Screen capture, file sharing and productivity tool</h3>
+<h3 align="center">ShareX with proper HDR screenshots, recording and GIFs</h3>
 <br>
 <div align="center">
   <a href="./LICENSE.txt"><img src="https://img.shields.io/badge/License-GPL%20v3-brightgreen" alt="License"/></a>
+  <a href="https://github.com/egoulya/ShareX-HDR/releases/latest"><img src="https://img.shields.io/github/v/release/egoulya/ShareX-HDR?label=Download" alt="Download"/></a>
+  <a href="https://github.com/egoulya/ShareX-HDR/actions"><img src="https://img.shields.io/github/actions/workflow/status/egoulya/ShareX-HDR/build.yml?branch=hdr-dev" alt="Build"/></a>
   <a href="https://github.com/ShareX/ShareX"><img src="https://img.shields.io/badge/Upstream-ShareX%2FShareX-blue" alt="Upstream"/></a>
-  <a href="https://discord.gg/ShareX"><img src="https://img.shields.io/discord/194170124859736065?label=Discord&cacheSeconds=3600" alt="Discord"/></a>
 </div>
-<br>
-<p align="center"><a href="https://getsharex.com"><img src="https://getsharex.com/img/ShareX_Screenshot.png" alt="ShareX Screenshot"/></a></p>
 
-# ShareX-HDR (modified ShareX fork)
+# ShareX-HDR
 
-This repository is a **modified fork** of [ShareX](https://github.com/ShareX/ShareX) focused on better **HDR → SDR** capture for screenshots, color picking, video, and GIF recording on Windows HDR displays.
+Screenshots taken on a Windows HDR display come out washed out, grey and low-contrast. This is a **modified fork of [ShareX](https://github.com/ShareX/ShareX)** that fixes it properly — screenshots, screen recording and GIFs all come out looking like what is actually on your screen.
 
-It is **not** an official ShareX build. Upstream ShareX is developed by the [ShareX Team](https://github.com/ShareX/ShareX).
+Everything else about ShareX is unchanged: region capture, the annotation editor, workflows, hotkeys, and every upload destination work exactly as they always have.
+
+<!-- TODO: before/after comparison image goes here -->
+<!-- Left: vanilla ShareX on an HDR display. Right: ShareX-HDR. Same scene, same monitor. -->
+
+> This is **not** an official ShareX build. Upstream ShareX is developed by the [ShareX Team](https://github.com/ShareX/ShareX).
+
+## Download
+
+Grab the latest build from [**Releases**](https://github.com/egoulya/ShareX-HDR/releases/latest).
+
+**Requirements**
+
+- Windows 10 1903 or later (Windows 11 recommended)
+- An HDR-capable display with HDR enabled in Windows
+- .NET 10 Desktop Runtime
+
+## Enable it
+
+1. Open **Task Settings → Capture**
+2. Tick **HDR capture (DXGI tonemap)**
+3. Leave **HDR tonemap mode** on **Auto**
+
+That's it. SDR monitors keep using the normal fast path, so there is nothing to switch when you move between displays.
+
+Optional: **Also save HDR master PNG (PQ / cICP)** writes a companion `*_hdr.png` next to the tonemapped shareable file. Clipboard, history thumbnails, and uploads always use the tonemapped SDR image.
+
+<!-- TODO: screenshot of the Task Settings → Capture panel with the HDR options visible -->
+
+### Tonemap modes
+
+`Auto` is the right answer almost always — it picks between the desktop and game curves based on frame content, with hysteresis so consecutive captures of the same scene stay consistent.
+
+| Mode | Use for |
+|------|---------|
+| **Auto** | Default. Detects from content. |
+| **Desktop / true HDR** | Desktop, browsers, editors. Preserves UI white exactly. |
+| **Auto-HDR games** | Auto-HDR titles. Softer highlight rolloff. |
+| **Filmic** | Stylised, higher contrast. |
+| **Windows WIC** | Windows' own converter. Screenshots only, for comparison. |
+
+**Exposure** is adjustable from 0.70 to 1.30 if a particular game sits brighter or darker than you want. Default is 1.00.
+
+## Why this fork
+
+There are several HDR forks of ShareX. Here is what this one does differently.
+
+**Correct on multi-monitor setups.** SDR white level is read per output from the display config, rather than one global value applied to every monitor. Forks that use a single value produce blown-out captures on mixed HDR/SDR setups, depending on which monitor Windows happens to enumerate first.
+
+**No seam across monitors.** Luminance statistics are gathered across every monitor the capture region touches, then a single tonemap curve is built and applied to all of them. Per-monitor curves produce a visible brightness step down the boundary of a spanning capture.
+
+**HDR10 output mode is correct.** The PQ path normalizes against the real SDR white level rather than a fixed 80 nits, so HDR10 captures aren't ~2.5× too bright.
+
+**Fast.** The D3D11 device and per-output duplication are cached across captures and invalidated on display changes, so repeat captures skip DWM warm-up entirely instead of paying up to two seconds each time.
+
+**Verified, not just eyeballed.** The colour pipeline has an automated test suite that runs in CI on every build. It asserts that ordinary SDR content survives a round trip within 2 LSB, that scRGB and HDR10 inputs agree after tonemapping, and that all of this holds at 80, 203 and 400 nit SDR white levels.
+
+**Recording and GIF too.** HDR screen recording and GIF export use the same colour maths as screenshots. No other ShareX fork does this.
+
+## How it works
+
+With HDR capture enabled, ShareX uses DXGI Desktop Duplication instead of GDI BitBlt for HDR outputs:
+
+1. Creates a D3D11 device and enumerates DXGI outputs.
+2. For each monitor intersecting the capture region, probes the surface format via `DuplicateOutput1`.
+3. Reads that monitor's SDR white level from the display configuration.
+4. HDR monitors go through DXGI capture and tonemap; SDR monitors use the fast GDI path.
+5. Luminance statistics from all HDR slices are merged into one BT.2390 curve.
+6. Results are composited onto a single bitmap at virtual-desktop offsets.
+
+| Format | Pipeline |
+|--------|----------|
+| RGBA16F (scRGB) | Normalize by per-output SDR white → BT.2390 EETF in PQ space → linear to sRGB |
+| R10G10B10A2 (HDR10) | PQ decode → BT.2020 to BT.709 → normalize → BT.2390 EETF → linear to sRGB |
+| B8G8R8A8 (SDR) | Direct GDI copy |
+
+SDR content — anything at or below paperwhite — passes through unchanged. That's a tested guarantee, not an aspiration: your screenshots of VS Code and Chrome come out byte-for-byte the same as vanilla ShareX. Only highlights above paperwhite get compressed.
+
+Output is dithered on encode, which avoids the banding that shows up in gradients when 16-bit float is quantised straight to 8-bit.
+
+### Recording
+
+- Persistent DXGI session with CPU tonemap to BGR24
+- Piped into FFmpeg (x264, or two-pass palette for GIF)
+- Frames are duplicated rather than dropped when capture can't sustain the configured FPS, so playback timing stays correct
+
+## Known limitations
+
+- **Screenshots taken while recording** fall back to the GDI path and will look washed out. DXGI permits only one duplication per output, and the recorder holds it. The debug log notes `DXGI_ERROR_NOT_CURRENTLY_AVAILABLE` when this happens.
+- **High FPS at fullscreen ultrawide** is throughput-bound. Use moderate FPS unless you're happy with duplicated frames and higher CPU load.
+- **Mixed-monitor spans** use an area-weighted SDR white level for the shared curve, so a capture spanning displays with very different paperwhite settings is a compromise between them.
+- Output is **tonemapped SDR** — standard PNG and JPEG that display correctly everywhere. The optional HDR master is a companion file, not the shareable default. This fork does not replace uploads with HDR formats.
+
+## Upstream's HDR colour corrector
+
+Official ShareX has its own **HDR screenshot colour corrector** (GDI capture plus DXGI/WIC correction). This fork keeps that option available so you can compare the two:
+
+- **HDR screenshot colour corrector** — upstream's approach
+- **HDR capture (DXGI tonemap)** — this fork's replace-capture path, also used for recording
+
+## Build
+
+Requires the **.NET 10 SDK** (upstream ShareX targets `net10.0-windows`).
+
+```bash
+dotnet build ShareX/ShareX.csproj -c Release
+```
+
+Run the colour pipeline tests:
+
+```bash
+dotnet test ShareX.ScreenCaptureLib.Tests/ShareX.ScreenCaptureLib.Tests.csproj
+```
+
+## Bugs and feedback
+
+Please use [this fork's issue tracker](https://github.com/egoulya/ShareX-HDR/issues) — **not** the upstream ShareX repository or Discord. They don't maintain this build and can't help with it.
+
+A debug log with the resolved SDR white level per output is very useful in reports.
 
 ## License (GPL v3)
 
@@ -25,193 +142,24 @@ If you distribute binaries built from this fork, you must:
 - Provide corresponding **source code**
 - Clearly state that this is a **modified** version of ShareX
 
-## What this fork adds
-
-### DXGI HDR capture (screenshot path)
-
-When **HDR capture (DXGI tonemap)** is enabled in Task Settings → Capture, ShareX uses DXGI Desktop Duplication instead of GDI BitBlt for HDR outputs:
-
-1. Creates a D3D11 device and enumerates DXGI outputs (monitors).
-2. For each monitor that intersects the capture region, probes the format via `DuplicateOutput1`.
-3. HDR monitors (`RGBA16F` / `R10G10B10A2`) go through DXGI capture + tonemap.
-4. SDR monitors (`B8G8R8A8`) use the fast GDI path.
-5. Results are composited onto one bitmap at virtual-desktop offsets.
-
-| Format | Pipeline | Description |
-|--------|----------|-------------|
-| RGBA16F (scRGB) | Normalize by SDR white level, BT.2390-style tonemap, linear → sRGB | Typical Windows HDR / DWM |
-| R10G10B10A2 (HDR10) | PQ decode, BT.2020 → BT.709, tonemap, linear → sRGB | HDR10 output mode |
-| B8G8R8A8 (SDR) | Direct GDI copy | Standard SDR monitors |
-
-Tonemapping keeps SDR content (luminance ≤ 1.0) unchanged and soft-compresses highlights above that.
-
-This screenshot approach is based on the work in [Psyda/ShareX-scRGB-Proper-HDR-Fix](https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix), including later frame-acquisition improvements.
-
-### HDR screen recording and GIF
-
-This fork also records HDR desktops with the same color math as screenshots:
-
-- Persistent DXGI session + CPU tonemap to BGR24
-- Pipe into FFmpeg (x264 / GIF two-pass)
-- Correct playback timing when capture cannot sustain the configured FPS (duplicate frames instead of speeding up)
-
-**Note:** High FPS at fullscreen ultrawide is resource-heavy. Capture throughput is the limit; use moderate FPS unless you accept duplicated frames / higher CPU use.
-
-### Upstream HDR color corrector
-
-Official ShareX also added **HDR screenshot color correction** (GDI capture + DXGI/WIC correction). This fork keeps that option available so you can compare:
-
-- **HDR screenshot color corrector** — upstream approach
-- **HDR capture (DXGI tonemap)** — Psyda-style replace-capture path (also used for recording)
-
 ## Credits
 
-- [ShareX Team](https://github.com/ShareX/ShareX) — original application
-- [Psyda / ShareX-scRGB-Proper-HDR-Fix](https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix) — DXGI HDR screenshot capture and tonemap approach this fork builds on
-- This fork — HDR recording/GIF integration, FPS pacing, and maintenance against current upstream `develop`
-
-## Build
-
-Requires **.NET 10 SDK** (upstream ShareX targets `net10.0-windows`).
-
-```bash
-dotnet build ShareX/ShareX.csproj -c Release
-```
+- [ShareX Team](https://github.com/ShareX/ShareX) — the original application
+- [Psyda / ShareX-scRGB-Proper-HDR-Fix](https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix) — the DXGI HDR capture approach this fork originally built on
+- This fork — per-output white level handling, merged multi-monitor tonemapping, HDR10 correction, duplication caching, the tested colour pipeline, and HDR recording/GIF
 
 ## Links
 
-* This fork: https://github.com/egoulya/ShareX-HDR
-* Upstream ShareX: https://github.com/ShareX/ShareX
-* Official website: https://getsharex.com
-* Psyda HDR fork: https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix
-* License: [LICENSE.txt](./LICENSE.txt)
+- This fork: https://github.com/egoulya/ShareX-HDR
+- Upstream ShareX: https://github.com/ShareX/ShareX
+- Official website: https://getsharex.com
+- Psyda's HDR fork: https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix
 
 ---
 
-# ShareX - Free Screen Capture, Screenshot, File Sharing and Productivity Tool
+<details>
+<summary><b>About upstream ShareX</b></summary>
 
-ShareX is a free and open source screenshot tool, screen recorder, file sharing tool and productivity application for Windows. It is designed for users who need fast screen capture, powerful screenshot editing, automated sharing, custom upload destinations and practical utilities in one lightweight desktop app.
+<!-- TODO: paste the existing upstream ShareX README content here, unchanged -->
 
-With ShareX, you can capture any area of your screen, record video or GIFs, annotate screenshots, upload files, copy shareable links, extract text with OCR, scan QR codes, pick colors and run custom workflows from hotkeys. ShareX is built for speed and control: capture a screenshot, edit it, save it, copy it, upload it or pass it through your own task chain with minimal manual work.
-
-## Why ShareX?
-
-ShareX combines screen capture, screen recording, image editing, file uploading and automation features that are often split across multiple applications. It is completely free, open source, lightweight, privacy focused and has no advertisements. No account is required to use ShareX.
-
-ShareX is especially useful for developers, designers, support teams, content creators, technical writers, QA testers and power users who frequently create screenshots, record short clips, share files or document workflows. It can be used as a simple screenshot app, but it also supports advanced workflows for users who want precise control over capture methods, after-capture tasks, upload destinations and hotkeys.
-
-## Screenshot and Screen Recording Features
-
-ShareX supports many ways to capture your screen:
-
-* Fullscreen capture
-* Active window capture
-* Active monitor capture
-* Region capture
-* Scrolling screenshot capture
-* Last region capture
-* Custom region capture
-* Screen recording
-* GIF screen recording
-* Auto capture
-
-After capturing a screenshot or recording, ShareX can automatically copy the result to the clipboard, save it to a file, open it in the image editor, upload it, print it, show it in Windows Explorer, run an action, scan a QR code or recognize text with OCR. These after-capture tasks make ShareX a flexible screenshot workflow tool instead of only a basic snipping utility.
-
-## Region Capture and Annotation
-
-ShareX region capture includes tools for selecting exactly what you want to capture and marking it before saving, copying or uploading. You can draw rectangles, ellipses, freehand lines, arrows, text, speech balloons, step numbers, highlights, blur effects, pixelation, magnification and spotlight effects.
-
-These annotation tools help create clear screenshots for bug reports, documentation, tutorials, support replies, pull requests and release notes. Sensitive information can be hidden with blur, pixelate or smart eraser tools before a screenshot is shared.
-
-## Built-in Image Editor
-
-The ShareX image editor lets you crop, annotate, redact, highlight and prepare screenshots after capture. It includes common editing tools such as shapes, arrows, text, freehand drawing, image insertion, cursor insertion, blur, pixelate, magnify, spotlight, crop, cut out, background editing and image effects.
-
-Because the editor is part of the capture workflow, you can take a screenshot, mark the important area, hide private details and then copy, save or upload the edited image without switching between separate apps.
-
-## File Sharing and Upload Automation
-
-ShareX can upload images, text, files, folders, clipboard content and URLs to many different destinations. After uploading, it can automatically copy the URL to the clipboard, open the URL, shorten the URL, show a QR code or run other configured tasks.
-
-Advanced users can create custom uploaders for services that are not built in. ShareX also provides guides for destinations such as Amazon S3, Google Cloud Storage and Cloudflare R2, making it suitable for both personal screenshot sharing and team workflows where files need to be uploaded to controlled storage.
-
-## Productivity Tools
-
-ShareX includes many utilities that support everyday desktop work:
-
-* Color picker
-* Screen color picker
-* Ruler
-* Pin to screen
-* Image editor
-* Image beautifier
-* Image effects
-* Image viewer
-* Background remover
-* Image comparer
-* Image combiner
-* Image splitter
-* Image thumbnailer
-* Video converter
-* Video thumbnailer
-* Analyze image
-* OCR for recognizing text in images
-* QR code
-* Hash checker
-* Metadata viewer
-* Directory indexer
-* Clipboard viewer
-* Borderless window
-* Inspect window
-* Monitor test
-
-These tools make ShareX useful beyond screenshots. It can help inspect images, prepare assets, extract information, verify files and speed up repetitive tasks.
-
-## Custom Workflows and Hotkeys
-
-ShareX is built around configurable workflows. You can assign hotkeys to capture methods, choose what happens after capture, decide what happens after upload and create actions that run external tools or scripts. This makes it possible to build a workflow such as capture region, annotate image, save locally, upload to a destination, shorten the URL and copy the final link to the clipboard.
-
-The workflow system is one of the main reasons ShareX is popular with power users. Simple tasks can stay simple, while advanced users can automate detailed screenshot, screen recording and file sharing processes.
-
-## Download ShareX
-
-ShareX is available from the official website, GitHub releases, Microsoft Store and Steam. You can install the regular setup version, use a portable version or try development builds if you want the newest changes before a stable release.
-
-For the safest download options, use the official links below.
-
-## Links
-* This fork (ShareX-HDR): https://github.com/egoulya/ShareX-HDR
-* Official website: https://getsharex.com
-* Downloads: https://getsharex.com/downloads
-* Upstream GitHub: https://github.com/ShareX/ShareX
-* Changelog: https://getsharex.com/changelog
-* Screenshots: https://getsharex.com/screenshots
-* Privacy policy: https://getsharex.com/privacy-policy
-* Donate: https://getsharex.com/donate
-* X: https://x.com/ShareX
-* Discord: https://discord.gg/ShareX
-* Reddit: https://www.reddit.com/r/sharex
-* Steam page: https://store.steampowered.com/app/400040/ShareX/
-* Microsoft Store page: https://apps.microsoft.com/detail/9nblggh4z1sp
-* ShareX related projects on GitHub: https://github.com/topics/sharex
-* Psyda HDR fork: https://github.com/Psyda/ShareX-scRGB-Proper-HDR-Fix
-* License: [LICENSE.txt](./LICENSE.txt)
-
-## Documents
-* Image effects: https://getsharex.com/image-effects
-* Actions: https://getsharex.com/actions
-* Dev builds: https://getsharex.com/docs/dev-builds
-* Keybinds: https://getsharex.com/docs/keybinds
-* Region capture: https://getsharex.com/docs/region-capture
-* Image editor: https://getsharex.com/docs/image-editor
-* Background remover: https://getsharex.com/docs/background-remover
-* Pin to screen: https://getsharex.com/docs/pin-to-screen
-* Scrolling screenshot: https://getsharex.com/docs/scrolling-screenshot
-* Command line arguments: https://getsharex.com/docs/command-line-arguments
-* Translation: https://getsharex.com/docs/translation
-* OCR: https://getsharex.com/docs/ocr
-* Custom uploader: https://getsharex.com/docs/custom-uploader
-* Amazon S3 guide: https://getsharex.com/docs/amazon-s3
-* Google Cloud Storage guide: https://getsharex.com/docs/google-cloud-storage
-* Cloudflare R2 guide: https://getsharex.com/docs/cloudflare-r2
-* Brand assets: https://getsharex.com/brand-assets
+</details>

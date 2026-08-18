@@ -2421,7 +2421,8 @@ namespace ShareX
                 HDRScreenshotColorCorrection = taskSettings.CaptureSettings.HDRScreenshotColorCorrection,
                 CaptureHDREnabled = taskSettings.CaptureSettings.CaptureHDREnabled,
                 HdrTonemapMode = taskSettings.CaptureSettings.HdrTonemapMode,
-                HdrExposure = taskSettings.CaptureSettings.HdrExposure
+                HdrExposure = taskSettings.CaptureSettings.HdrExposure,
+                SaveHdrMasterPng = taskSettings.CaptureSettings.SaveHdrMasterPng
             };
 
             if (screenshot.CaptureHDREnabled)

@@ -267,6 +267,8 @@ namespace ShareX.ScreenCaptureLib
             finally
             {
                 hdrDxgiPipeRecording = false;
+                Options.HdrDxgiPipeRecording = false;
+                Screenshot.WarmHdrCapture();
                 ffmpeg.Finish();
             }
         }

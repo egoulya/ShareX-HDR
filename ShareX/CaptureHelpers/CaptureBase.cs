@@ -24,6 +24,7 @@
 #endregion License Information (GPL v3)
 
 using ShareX.HelpersLib;
+using ShareX.ScreenCaptureLib;
 using System;
 using System.Drawing;
 using System.Threading.Tasks;
@@ -133,6 +134,8 @@ namespace ShareX
         {
             if (metadata != null && metadata.Image != null)
             {
+                metadata.HdrMaster ??= Screenshot.ConsumePendingHdrMaster();
+
                 TaskHelpers.PlayNotificationSoundAsync(NotificationSound.Capture, taskSettings);
 
                 if (taskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.AnnotateImage) && !AllowAnnotation)

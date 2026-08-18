@@ -374,6 +374,9 @@ internal sealed class TaskSettingsPageBuilder
         }, (decimal)HdrTonemap.ExposureMin, (decimal)HdrTonemap.ExposureMax, 0.01m);
         BindEnabled(hdrTonemap, hdrCapture);
         BindEnabled(hdrExposure, hdrCapture);
+        BoundValue<bool> hdrMaster = new(capture.SaveHdrMasterPng, value => capture.SaveHdrMasterPng = value);
+        CheckBox hdrMasterCheck = Check("Also save HDR master PNG (PQ / cICP)", hdrMaster);
+        BindEnabled(hdrMasterCheck, hdrCapture);
         capture.SurfaceOptions.CaptureHDREnabled = capture.CaptureHDREnabled;
         capture.SurfaceOptions.HdrTonemapMode = capture.HdrTonemapMode;
         capture.SurfaceOptions.HdrExposure = capture.HdrExposure;
@@ -390,7 +393,8 @@ internal sealed class TaskSettingsPageBuilder
                 Check(Strings.TaskSettingsWindow_AutomaticallyHideDesktopIcons, () => capture.CaptureAutoHideDesktopIcons, value => capture.CaptureAutoHideDesktopIcons = value),
                 Check("HDR capture (DXGI tonemap)", hdrCapture),
                 Row("HDR tonemap mode", hdrTonemap),
-                Row("HDR paper white / exposure", hdrExposure)),
+                Row("HDR paper white / exposure", hdrExposure),
+                hdrMasterCheck),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_PreconfiguredRegion, regionGrid, selectRegion),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_PreconfiguredWindow,
                 Row(Strings.TaskSettingsWindow_WindowTitle, Text(() => capture.CaptureCustomWindow, value => capture.CaptureCustomWindow = value))));

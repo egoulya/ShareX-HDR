@@ -71,6 +71,114 @@ namespace ShareX.ScreenCaptureLib
             return format == FormatR16G16B16A16Float ? 8 : 4;
         }
 
+        /// <summary>
+        /// Encode a DXGI HDR pixel to BT.2100 PQ 16-bit RGB. <paramref name="nits"/> is
+        /// approximate luminance used for cLLI (MaxCLL / MaxFALL).
+        /// </summary>
+        public static unsafe void EncodeToPqBt2020(int format, byte* pixel, float sdrWhiteNits,
+            out ushort rPq, out ushort gPq, out ushort bPq, out float nits)
+        {
+            if (sdrWhiteNits < SceneReferredWhiteNits)
+            {
+                sdrWhiteNits = SceneReferredWhiteNits;
+            }
+
+            float r2020, g2020, b2020;
+
+            if (format == FormatR10G10B10A2Unorm)
+            {
+                uint packed = *(uint*)pixel;
+                float rN = (packed & 0x3FFu) / 1023f;
+                float gN = ((packed >> 10) & 0x3FFu) / 1023f;
+                float bN = ((packed >> 20) & 0x3FFu) / 1023f;
+                rPq = (ushort)Math.Clamp((int)MathF.Round(rN * 65535f), 0, 65535);
+                gPq = (ushort)Math.Clamp((int)MathF.Round(gN * 65535f), 0, 65535);
+                bPq = (ushort)Math.Clamp((int)MathF.Round(bN * 65535f), 0, 65535);
+                float rn = PqEotf(rN);
+                float gn = PqEotf(gN);
+                float bn = PqEotf(bN);
+                nits = 0.2627f * rn + 0.6780f * gn + 0.0593f * bn;
+                return;
+            }
+
+            if (format == FormatR16G16B16A16Float)
+            {
+                ushort* p = (ushort*)pixel;
+                // scRGB half: 1.0 ≈ 80 nits scene-referred in BT.709 primaries.
+                float r709 = Math.Max(HalfToFloat(p[0]) * SceneReferredWhiteNits, 0f);
+                float g709 = Math.Max(HalfToFloat(p[1]) * SceneReferredWhiteNits, 0f);
+                float b709 = Math.Max(HalfToFloat(p[2]) * SceneReferredWhiteNits, 0f);
+                Bt709NitsToBt2020(r709, g709, b709, out r2020, out g2020, out b2020);
+            }
+            else
+            {
+                r2020 = g2020 = b2020 = 0f;
+            }
+
+            nits = 0.2627f * r2020 + 0.6780f * g2020 + 0.0593f * b2020;
+            rPq = QuantizePq(r2020);
+            gPq = QuantizePq(g2020);
+            bPq = QuantizePq(b2020);
+        }
+
+        public static void EncodeSrgb8ToPqBt2020(byte r8, byte g8, byte b8, float sdrWhiteNits,
+            out ushort rPq, out ushort gPq, out ushort bPq, out float nits)
+        {
+            if (sdrWhiteNits < SceneReferredWhiteNits)
+            {
+                sdrWhiteNits = SceneReferredWhiteNits;
+            }
+
+            float r709 = SrgbToLinear(r8) * sdrWhiteNits;
+            float g709 = SrgbToLinear(g8) * sdrWhiteNits;
+            float b709 = SrgbToLinear(b8) * sdrWhiteNits;
+            Bt709NitsToBt2020(r709, g709, b709, out float r2020, out float g2020, out float b2020);
+            nits = 0.2627f * r2020 + 0.6780f * g2020 + 0.0593f * b2020;
+            rPq = QuantizePq(r2020);
+            gPq = QuantizePq(g2020);
+            bPq = QuantizePq(b2020);
+        }
+
+        private static void Bt709NitsToBt2020(float r709, float g709, float b709,
+            out float r2020, out float g2020, out float b2020)
+        {
+            r2020 = Math.Max(0.6274f * r709 + 0.3293f * g709 + 0.0433f * b709, 0f);
+            g2020 = Math.Max(0.0691f * r709 + 0.9195f * g709 + 0.0114f * b709, 0f);
+            b2020 = Math.Max(0.0164f * r709 + 0.0880f * g709 + 0.8956f * b709, 0f);
+        }
+
+        private static ushort QuantizePq(float nits)
+        {
+            float N = PqOetf(nits);
+            return (ushort)Math.Clamp((int)MathF.Round(N * 65535f), 0, 65535);
+        }
+
+        private static float PqOetf(float nits)
+        {
+            const float m1 = 0.1593017578125f;
+            const float m2 = 78.84375f;
+            const float c1 = 0.8359375f;
+            const float c2 = 18.8515625f;
+            const float c3 = 18.6875f;
+
+            float Y = Math.Clamp(nits / 10000f, 0f, 1f);
+            float Ym = MathF.Pow(Y, m1);
+            float num = c1 + c2 * Ym;
+            float den = 1f + c3 * Ym;
+            return MathF.Pow(num / den, m2);
+        }
+
+        private static float SrgbToLinear(byte value)
+        {
+            float c = value / 255f;
+            if (c <= 0.04045f)
+            {
+                return c / 12.92f;
+            }
+
+            return MathF.Pow((c + 0.055f) / 1.055f, 2.4f);
+        }
+
         private static float PqEotf(float N)
         {
             const float m1 = 0.1593017578125f;

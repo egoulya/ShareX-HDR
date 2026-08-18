@@ -83,10 +83,12 @@ namespace ShareX
                 : CaptureHelpers.GetScreenBounds();
 
             SKBitmap frozenScreenshot;
+            HdrMasterImage canvasMaster = null;
             using (Bitmap canvas = activeMonitorMode
                 ? screenshot.CaptureActiveMonitor()
                 : screenshot.CaptureFullscreen())
             {
+                canvasMaster = screenshot.TakeLastHdrMaster();
                 frozenScreenshot = GdiSkiaBitmapConverter.ToSKBitmap(canvas);
             }
 
@@ -127,6 +129,11 @@ namespace ShareX
             {
                 Bitmap output = GdiSkiaBitmapConverter.ToGdiBitmap(result.Image);
                 TaskMetadata metadata = new TaskMetadata(output);
+
+                if (canvasMaster != null)
+                {
+                    metadata.HdrMaster = canvasMaster.Crop(result.ScreenRectangle, screenBounds) ?? canvasMaster;
+                }
 
                 if (result.ImageModified)
                 {
@@ -169,6 +176,8 @@ namespace ShareX
                 canvas = screenshot.CaptureFullscreen();
             }
 
+            HdrMasterImage canvasMaster = screenshot.TakeLastHdrMaster();
+
             CursorData cursorData = null;
 
             if (taskSettings.CaptureSettings.ShowCursor)
@@ -190,6 +199,17 @@ namespace ShareX
                 if (result != null)
                 {
                     TaskMetadata metadata = new TaskMetadata(result);
+
+                    // Prefer Avalonia LastRegionRectangle when available; otherwise drop the
+                    // fullscreen master rather than pairing a wrong-sized companion file.
+                    Rectangle region = RegionCaptureIntegration.LastRegionRectangle;
+                    if (canvasMaster != null && region.Width > 0 && region.Height > 0)
+                    {
+                        Rectangle canvasBounds = taskSettings.CaptureSettings.SurfaceOptions.ActiveMonitorMode
+                            ? CaptureHelpers.GetActiveScreenBounds()
+                            : CaptureHelpers.GetScreenBounds();
+                        metadata.HdrMaster = canvasMaster.Crop(region, canvasBounds);
+                    }
 
                     if (form.IsImageModified)
                     {
@@ -225,6 +245,8 @@ namespace ShareX
                 canvas = screenshot.CaptureFullscreen();
             }
 
+            HdrMasterImage canvasMaster = screenshot.TakeLastHdrMaster();
+
             bool activeMonitorMode = taskSettings.CaptureSettings.SurfaceOptions.ActiveMonitorMode;
 
             using (RegionCaptureLightForm rectangleLight = new RegionCaptureLightForm(canvas, activeMonitorMode))
@@ -237,7 +259,16 @@ namespace ShareX
                     {
                         lastRegionCaptureType = RegionCaptureType.Light;
 
-                        return new TaskMetadata(result);
+                        TaskMetadata metadata = new TaskMetadata(result);
+                        if (canvasMaster != null)
+                        {
+                            Rectangle canvasBounds = activeMonitorMode
+                                ? CaptureHelpers.GetActiveScreenBounds()
+                                : CaptureHelpers.GetScreenBounds();
+                            metadata.HdrMaster = canvasMaster.Crop(rectangleLight.ScreenSelectionRectangle, canvasBounds);
+                        }
+
+                        return metadata;
                     }
                 }
             }
@@ -260,7 +291,11 @@ namespace ShareX
                     {
                         lastRegionCaptureType = RegionCaptureType.Transparent;
 
-                        return new TaskMetadata(result);
+                        TaskMetadata metadata = new TaskMetadata(result)
+                        {
+                            HdrMaster = screenshot.TakeLastHdrMaster()
+                        };
+                        return metadata;
                     }
                 }
             }

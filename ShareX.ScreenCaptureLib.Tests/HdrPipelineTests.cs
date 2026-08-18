@@ -8,6 +8,7 @@
 #endregion License Information (GPL v3)
 
 using System;
+using System.IO;
 using Xunit;
 
 namespace ShareX.ScreenCaptureLib.Tests
@@ -46,7 +47,7 @@ namespace ShareX.ScreenCaptureLib.Tests
                     out float r, out float g, out float b);
                 curve.Map(ref r, ref g, ref b);
 
-                AssertByteNear(r8, curve.Encode(r, i, 0), 2);
+                AssertByteNear(r8, curve.Encode(r, i, 0), 2); // ±2: Bayer dither + encode-LUT quantization
                 AssertByteNear(g8, curve.Encode(g, i, 1), 2);
                 AssertByteNear(b8, curve.Encode(b, i, 2), 2);
             }
@@ -105,6 +106,8 @@ namespace ShareX.ScreenCaptureLib.Tests
                 curve.Map(ref sr, ref sg, ref sb);
                 curve.Map(ref hr, ref hg, ref hb);
 
+                // ±3 LSB: scRGB↔HDR10 round-trip plus Bayer dither.
+                // Widening this weakens the SDR passthrough / cross-format agreement guarantee.
                 int x = (int)(y * 10);
                 Assert.InRange(curve.Encode(hr, x, 0), curve.Encode(sr, x, 0) - 3, curve.Encode(sr, x, 0) + 3);
                 Assert.InRange(curve.Encode(hg, x, 1), curve.Encode(sg, x, 1) - 3, curve.Encode(sg, x, 1) + 3);
@@ -213,6 +216,34 @@ namespace ShareX.ScreenCaptureLib.Tests
 
             uint packed = PackPq10(r2020) | (PackPq10(g2020) << 10) | (PackPq10(b2020) << 20) | (3u << 30);
             *(uint*)pixel = packed;
+        }
+
+        [Fact]
+        public void Hdr_png_writer_emits_cicp_and_clli_chunks()
+        {
+            HdrMasterImage master = new HdrMasterImage(2, 1);
+            master.Rgb[0] = 32768;
+            master.Rgb[1] = 32768;
+            master.Rgb[2] = 32768;
+            // Force MaxCLL/MaxFALL via WriteFromDxgi would need pixels; set via encode path:
+            unsafe
+            {
+                byte* px = stackalloc byte[8];
+                EncodeScRgb(px, 203f, 1f, 1f, 1f);
+                master.WriteFromDxgiPixel(1, 0, HdrPixelConvert.FormatR16G16B16A16Float, px, 203f);
+            }
+
+            using MemoryStream ms = new MemoryStream();
+            HdrPngWriter.Write(ms, master);
+            byte[] bytes = ms.ToArray();
+
+            Assert.True(bytes.Length > 100);
+            Assert.Equal(0x89, bytes[0]);
+            string ascii = System.Text.Encoding.ASCII.GetString(bytes);
+            Assert.Contains("cICP", ascii);
+            Assert.Contains("cLLI", ascii);
+            Assert.Contains("IHDR", ascii);
+            Assert.Contains("IDAT", ascii);
         }
 
         private static uint PackPq10(float nits)

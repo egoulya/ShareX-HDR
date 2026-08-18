@@ -26,6 +26,7 @@
 using ShareX.HelpersLib;
 using ShareX.Localization;
 using ShareX.Properties;
+using ShareX.ScreenCaptureLib;
 using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
@@ -627,6 +628,7 @@ namespace ShareX
                         Info.FilePath = filePath;
                         imageData.Write(Info.FilePath);
                         DebugHelper.WriteLine("Image saved to file: " + Info.FilePath);
+                        TrySaveHdrMaster(Info.FilePath);
                     }
                 }
 
@@ -664,6 +666,7 @@ namespace ShareX
                                 if (imageSaved)
                                 {
                                     DebugHelper.WriteLine("Image saved to file with dialog: " + Info.FilePath);
+                                    TrySaveHdrMaster(Info.FilePath);
                                 }
                             }
                             else
@@ -699,6 +702,29 @@ namespace ShareX
             }
 
             return true;
+        }
+
+        private void TrySaveHdrMaster(string primaryPath)
+        {
+            HdrMasterImage master = Info.Metadata?.HdrMaster;
+            if (master == null || string.IsNullOrEmpty(primaryPath) ||
+                !Info.TaskSettings.CaptureSettings.SaveHdrMasterPng)
+            {
+                return;
+            }
+
+            try
+            {
+                string hdrPath = Path.ChangeExtension(FileHelpers.AppendTextToFileName(primaryPath, "_hdr"), "png");
+                FileHelpers.CreateDirectoryFromFilePath(hdrPath);
+                HdrPngWriter.Save(hdrPath, master);
+                DebugHelper.WriteLine("HDR master saved to file: " + hdrPath);
+                Info.Metadata.HdrMaster = null;
+            }
+            catch (Exception e)
+            {
+                DebugHelper.WriteException(e, "Failed to save HDR master PNG.");
+            }
         }
 
         private void DoFileJobs()

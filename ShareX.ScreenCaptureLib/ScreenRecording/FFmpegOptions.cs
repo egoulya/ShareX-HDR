@@ -136,9 +136,10 @@ namespace ShareX.ScreenCaptureLib
 
         public bool IsAnimatedImage => VideoCodec == FFmpegVideoCodec.gif || VideoCodec == FFmpegVideoCodec.libwebp || VideoCodec == FFmpegVideoCodec.apng;
 
-        // GIF/WebP/APNG allow odd sizes, but ShareX two-pass encodes them through
-        // libx264 + yuv420p first, which requires even width and height.
-        public bool IsEvenSizeRequired => true;
+        // Animated-image codecs allow odd sizes, but two-pass encodes them through
+        // libx264 + yuv420p first. Prefer ScreenRecordTwoPassEncoding / HDR pipe
+        // gates at the call site; this flag alone excludes animated codecs.
+        public bool IsEvenSizeRequired => !IsAnimatedImage;
 
         // TEMP: For backward compatibility
         public void FixSources()

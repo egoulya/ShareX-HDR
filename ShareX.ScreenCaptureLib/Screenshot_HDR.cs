@@ -58,6 +58,36 @@ namespace ShareX.ScreenCaptureLib
         public HdrTonemapMode HdrTonemapMode { get; set; } = HdrTonemapMode.Auto;
         public float HdrExposure { get; set; } = HdrTonemap.ExposureDefault;
 
+        /// <summary>
+        /// When true, CaptureRectangleHDR also builds a PQ BT.2100 companion
+        /// (<see cref="LastHdrMaster"/>). Clipboard / shareable output stay tonemapped SDR.
+        /// </summary>
+        public bool SaveHdrMasterPng { get; set; }
+
+        public HdrMasterImage LastHdrMaster { get; private set; }
+
+        [ThreadStatic]
+        private static HdrMasterImage PendingHdrMaster;
+
+        public HdrMasterImage TakeLastHdrMaster()
+        {
+            HdrMasterImage master = LastHdrMaster;
+            LastHdrMaster = null;
+            if (ReferenceEquals(PendingHdrMaster, master))
+            {
+                PendingHdrMaster = null;
+            }
+
+            return master;
+        }
+
+        public static HdrMasterImage ConsumePendingHdrMaster()
+        {
+            HdrMasterImage master = PendingHdrMaster;
+            PendingHdrMaster = null;
+            return master;
+        }
+
         // ====================================================================
         // COM Interface Declarations (proper [ComImport])
         // ====================================================================
@@ -314,6 +344,7 @@ namespace ShareX.ScreenCaptureLib
         private const int DXGI_ERROR_WAIT_TIMEOUT = unchecked((int)0x887A0027);
         private const int DXGI_ERROR_NOT_FOUND = unchecked((int)0x887A0002);
         private const int DXGI_ERROR_ACCESS_LOST = unchecked((int)0x887A0026);
+        private const int DXGI_ERROR_NOT_CURRENTLY_AVAILABLE = unchecked((int)0x887A0022);
 
         private const int D3D11_USAGE_STAGING = 3;
         private const uint D3D11_CPU_ACCESS_READ = 0x20000;
@@ -387,7 +418,22 @@ namespace ShareX.ScreenCaptureLib
         /// </summary>
         public Bitmap CaptureRectangleHDR(Rectangle rect)
         {
+            CaptureHdrGate.Wait();
+            try
+            {
+                return CaptureRectangleHDRCore(rect);
+            }
+            finally
+            {
+                CaptureHdrGate.Release();
+            }
+        }
+
+        private Bitmap CaptureRectangleHDRCore(Rectangle rect)
+        {
             EnsureDuplicationCache();
+            LastHdrMaster = null;
+            PendingHdrMaster = null;
 
             try
             {
@@ -406,6 +452,7 @@ namespace ShareX.ScreenCaptureLib
                 }
 
                 Bitmap result = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
+                HdrMasterImage master = SaveHdrMasterPng ? new HdrMasterImage(rect.Width, rect.Height) : null;
                 bool anyOutputCaptured = false;
                 List<HdrPendingOutput> pendingHdr = new List<HdrPendingOutput>();
 
@@ -451,7 +498,7 @@ namespace ShareX.ScreenCaptureLib
                         if (session == null || session.Format == DXGI_FORMAT_B8G8R8A8_UNORM)
                         {
                             DebugHelper.WriteLine($"HDR: Output {outputIdx} is SDR, using GDI fast path.");
-                            if (CaptureOutputGDI(intersection, rect, result))
+                            if (CaptureOutputGDI(intersection, rect, result, master, DisplayConfigHelper.GetSdrWhiteNits(outputDesc.DeviceName)))
                             {
                                 anyOutputCaptured = true;
                             }
@@ -486,7 +533,7 @@ namespace ShareX.ScreenCaptureLib
 
                 if (pendingHdr.Count == 1)
                 {
-                    if (CaptureOutputHdrDirect(pendingHdr[0], rect, result))
+                    if (CaptureOutputHdrDirect(pendingHdr[0], rect, result, master))
                     {
                         anyOutputCaptured = true;
                     }
@@ -533,7 +580,7 @@ namespace ShareX.ScreenCaptureLib
 
                         foreach (HdrCpuSlice slice in hdrSlices)
                         {
-                            BlitPackedSlice(slice, result, curve);
+                            BlitPackedSlice(slice, result, curve, master);
                         }
 
                         anyOutputCaptured = true;
@@ -547,7 +594,10 @@ namespace ShareX.ScreenCaptureLib
                     return null;
                 }
 
-                DebugHelper.WriteLine($"HDR: Composite output {result.Width}x{result.Height}");
+                LastHdrMaster = master;
+                PendingHdrMaster = master;
+                DebugHelper.WriteLine($"HDR: Composite output {result.Width}x{result.Height}" +
+                    (master != null ? $", HDR master MaxCLL={master.MaxCLL:0.#}" : ""));
                 return result;
             }
             catch (Exception e)
@@ -644,6 +694,7 @@ namespace ShareX.ScreenCaptureLib
         }
 
         private static readonly object SessionLock = new();
+        private static readonly SemaphoreSlim CaptureHdrGate = new(1, 1);
         private static IntPtr SharedDevicePtr;
         private static IntPtr SharedContextPtr;
         private static object SharedDeviceUnk;
@@ -806,6 +857,13 @@ namespace ShareX.ScreenCaptureLib
                         format = (int)dd.ModeDesc.Format;
                         return true;
                     }
+
+                    if (hr == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE)
+                    {
+                        DebugHelper.WriteLine(
+                            "HDR: DuplicateOutput1 returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE — another client " +
+                            "(often ShareX HDR recording) already holds this output. Screenshot will fall back to GDI.");
+                    }
                 }
                 catch (InvalidCastException)
                 {
@@ -815,6 +873,13 @@ namespace ShareX.ScreenCaptureLib
                 int legacyHr = output1.DuplicateOutput(deviceUnk, out duplication);
                 if (legacyHr != 0 || duplication == null)
                 {
+                    if (legacyHr == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE)
+                    {
+                        DebugHelper.WriteLine(
+                            "HDR: DuplicateOutput returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE — another client " +
+                            "(often ShareX HDR recording) already holds this output. Screenshot will fall back to GDI.");
+                    }
+
                     return false;
                 }
 
@@ -894,7 +959,7 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
-        private bool CaptureOutputHdrDirect(HdrPendingOutput pending, Rectangle captureRect, Bitmap composite)
+        private bool CaptureOutputHdrDirect(HdrPendingOutput pending, Rectangle captureRect, Bitmap composite, HdrMasterImage master)
         {
             HdrDuplSession session = pending.Session;
             if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
@@ -919,7 +984,7 @@ namespace ShareX.ScreenCaptureLib
                 DebugHelper.WriteLine($"HDR: direct tonemap {HdrTonemapMode} -> {resolvedMode} (P99={stats.P99Estimate:0.00}, max={stats.MaxLuminance:0.00}, sdrWhite={pending.SdrWhiteNits:0.#})");
 
                 BlitMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
-                    pending.SdrWhiteNits, composite, dstX, dstY, curve);
+                    pending.SdrWhiteNits, composite, dstX, dstY, curve, master);
                 return true;
             }
             finally
@@ -1143,7 +1208,8 @@ namespace ShareX.ScreenCaptureLib
         /// composite bitmap. Much faster than the full DXGI duplication pipeline
         /// for monitors that don't need HDR conversion.
         /// </summary>
-        private bool CaptureOutputGDI(Rectangle intersection, Rectangle captureRect, Bitmap composite)
+        private bool CaptureOutputGDI(Rectangle intersection, Rectangle captureRect, Bitmap composite,
+            HdrMasterImage master = null, float sdrWhiteNits = HdrPixelConvert.SceneReferredWhiteNits)
         {
             int dstX = intersection.X - captureRect.X;
             int dstY = intersection.Y - captureRect.Y;
@@ -1160,6 +1226,8 @@ namespace ShareX.ScreenCaptureLib
                     {
                         g.DrawImageUnscaled(sdrCapture, dstX, dstY);
                     }
+
+                    master?.WriteFromSdrBitmap(sdrCapture, dstX, dstY, sdrWhiteNits);
                 }
 
                 DebugHelper.WriteLine($"HDR: SDR output captured via GDI ({intersection.Width}x{intersection.Height})");
@@ -1172,24 +1240,26 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
-        private static unsafe void BlitPackedSlice(HdrCpuSlice slice, Bitmap composite, HdrTonemapCurve curve)
+        private static unsafe void BlitPackedSlice(HdrCpuSlice slice, Bitmap composite, HdrTonemapCurve curve, HdrMasterImage master)
         {
             fixed (byte* packedPtr = slice.Packed)
             {
                 BlitHdrRegion(packedPtr, slice.PackedStride, slice.Format, 0, 0, slice.CopyW, slice.CopyH,
-                    slice.SdrWhiteNits, composite, slice.DstX, slice.DstY, curve);
+                    slice.SdrWhiteNits, composite, slice.DstX, slice.DstY, curve, master);
             }
         }
 
         private static unsafe void BlitMapped(IntPtr data, int rowPitch, int format, int srcX, int srcY,
-            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve)
+            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve,
+            HdrMasterImage master)
         {
             BlitHdrRegion((byte*)data, rowPitch, format, srcX, srcY, copyW, copyH, sdrWhiteNits,
-                composite, dstX, dstY, curve);
+                composite, dstX, dstY, curve, master);
         }
 
         private static unsafe void BlitHdrRegion(byte* srcBase, int srcStride, int format, int srcX, int srcY,
-            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve)
+            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve,
+            HdrMasterImage master)
         {
             copyW = Math.Min(copyW, composite.Width - dstX);
             copyH = Math.Min(copyH, composite.Height - dstY);
@@ -1207,28 +1277,51 @@ namespace ShareX.ScreenCaptureLib
                 byte* dstBase = (byte*)bd.Scan0;
                 int dstStride = bd.Stride;
 
-                System.Threading.Tasks.Parallel.For(0, copyH, y =>
+                if (master != null)
                 {
-                    byte* dst = dstBase + y * dstStride;
-                    byte* srcRow = srcBase + (long)(srcY + y) * srcStride + (long)srcX * bpp;
-                    int py = dstY + y;
-
-                    for (int x = 0; x < copyW; x++)
+                    // Master MaxCLL/MaxFALL tracking is not thread-safe; rows stay sequential.
+                    for (int y = 0; y < copyH; y++)
                     {
-                        HdrPixelConvert.DecodeToSdrNormalized(format, srcRow + x * bpp, sdrWhiteNits,
-                            out float r, out float g, out float b);
-                        curve.Map(ref r, ref g, ref b);
-                        int px = dstX + x;
-                        dst[x * 4 + 0] = curve.Encode(b, px, py);
-                        dst[x * 4 + 1] = curve.Encode(g, px, py);
-                        dst[x * 4 + 2] = curve.Encode(r, px, py);
-                        dst[x * 4 + 3] = 255;
+                        BlitHdrRow(srcBase, srcStride, format, bpp, srcX, srcY, copyW, y, sdrWhiteNits,
+                            dstBase, dstStride, dstX, dstY, curve, master);
                     }
-                });
+                }
+                else
+                {
+                    System.Threading.Tasks.Parallel.For(0, copyH, y =>
+                    {
+                        BlitHdrRow(srcBase, srcStride, format, bpp, srcX, srcY, copyW, y, sdrWhiteNits,
+                            dstBase, dstStride, dstX, dstY, curve, null);
+                    });
+                }
             }
             finally
             {
                 composite.UnlockBits(bd);
+            }
+        }
+
+        private static unsafe void BlitHdrRow(byte* srcBase, int srcStride, int format, int bpp,
+            int srcX, int srcY, int copyW, int y, float sdrWhiteNits,
+            byte* dstBase, int dstStride, int dstX, int dstY, HdrTonemapCurve curve, HdrMasterImage master)
+        {
+            byte* dst = dstBase + y * dstStride;
+            byte* srcRow = srcBase + (long)(srcY + y) * srcStride + (long)srcX * bpp;
+            int py = dstY + y;
+
+            for (int x = 0; x < copyW; x++)
+            {
+                byte* px = srcRow + x * bpp;
+                master?.WriteFromDxgiPixel(dstX + x, py, format, px, sdrWhiteNits);
+
+                HdrPixelConvert.DecodeToSdrNormalized(format, px, sdrWhiteNits,
+                    out float r, out float g, out float b);
+                curve.Map(ref r, ref g, ref b);
+                int pxCoord = dstX + x;
+                dst[x * 4 + 0] = curve.Encode(b, pxCoord, py);
+                dst[x * 4 + 1] = curve.Encode(g, pxCoord, py);
+                dst[x * 4 + 2] = curve.Encode(r, pxCoord, py);
+                dst[x * 4 + 3] = 255;
             }
         }
 

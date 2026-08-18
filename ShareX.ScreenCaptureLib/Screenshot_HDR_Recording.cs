@@ -272,6 +272,12 @@ namespace ShareX.ScreenCaptureLib
                         formatOut = (int)dd.ModeDesc.Format;
                         return true;
                     }
+
+                    if (duplHr == unchecked((int)0x887A0022))
+                    {
+                        DebugHelper.WriteLine(
+                            "HDR recording: DuplicateOutput1 returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE.");
+                    }
                 }
                 catch (InvalidCastException)
                 {
@@ -281,6 +287,12 @@ namespace ShareX.ScreenCaptureLib
                 int legacyHr = output1.DuplicateOutput(deviceUnk, out duplicationOut);
                 if (legacyHr != 0 || duplicationOut == null)
                 {
+                    if (legacyHr == unchecked((int)0x887A0022))
+                    {
+                        DebugHelper.WriteLine(
+                            "HDR recording: DuplicateOutput returned DXGI_ERROR_NOT_CURRENTLY_AVAILABLE.");
+                    }
+
                     return false;
                 }
 

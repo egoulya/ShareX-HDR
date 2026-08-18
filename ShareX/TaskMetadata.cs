@@ -24,6 +24,7 @@
 #endregion License Information (GPL v3)
 
 using ShareX.HelpersLib;
+using ShareX.ScreenCaptureLib;
 using System;
 using System.Drawing;
 
@@ -34,6 +35,12 @@ namespace ShareX
         private const int WindowInfoMaxLength = 255;
 
         public Bitmap Image { get; set; }
+
+        /// <summary>
+        /// Optional PQ HDR companion captured alongside the tonemapped <see cref="Image"/>.
+        /// Never used for clipboard or default uploads.
+        /// </summary>
+        public HdrMasterImage HdrMaster { get; set; }
 
         private string windowTitle;
 

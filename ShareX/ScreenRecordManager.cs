@@ -173,7 +173,9 @@ namespace ShareX
             Rectangle screenRectangle = CaptureHelpers.GetScreenBounds();
             captureRectangle = Rectangle.Intersect(captureRectangle, screenRectangle);
 
-            if (taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
+            if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding ||
+                taskSettings.CaptureSettings.CaptureHDREnabled ||
+                taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
             {
                 captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);
             }
@@ -282,7 +284,9 @@ namespace ShareX
 
                             captureRectangle = recordForm.RecordingRegion;
 
-                            if (taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
+                            if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding ||
+                                taskSettings.CaptureSettings.CaptureHDREnabled ||
+                                taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
                             {
                                 captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);
                             }
