@@ -30,7 +30,12 @@ internal enum MainMenuToggleType
 
 internal sealed class MainMenuEntry
 {
-    public string Header { get; }
+    private readonly string _header;
+    private readonly Func<string>? _createHeader;
+    private readonly Func<string>? _createAccentText;
+
+    public string Header => _createHeader?.Invoke() ?? _header;
+    public string? AccentText => _createAccentText?.Invoke();
     public string Icon { get; }
     public byte[]? BitmapIcon { get; }
     public Func<Task>? ExecuteAsync { get; }
@@ -41,6 +46,7 @@ internal sealed class MainMenuEntry
     public bool IsChecked { get; }
     public MainMenuToggleType ToggleType { get; }
     public bool StaysOpenOnClick { get; }
+    public bool BoldWhenChecked { get; }
     public KeyGesture? InputGesture { get; }
 
     public MainMenuEntry(
@@ -54,9 +60,14 @@ internal sealed class MainMenuEntry
         MainMenuToggleType toggleType = MainMenuToggleType.None,
         bool staysOpenOnClick = false,
         KeyGesture? inputGesture = null,
-        byte[]? bitmapIcon = null)
+        byte[]? bitmapIcon = null,
+        Func<string>? createHeader = null,
+        Func<string>? createAccentText = null,
+        bool boldWhenChecked = false)
     {
-        Header = header;
+        _header = header;
+        _createHeader = createHeader;
+        _createAccentText = createAccentText;
         Icon = icon;
         BitmapIcon = bitmapIcon;
         ExecuteAsync = execute == null ? null : () =>
@@ -70,6 +81,7 @@ internal sealed class MainMenuEntry
         IsChecked = isChecked;
         ToggleType = toggleType;
         StaysOpenOnClick = staysOpenOnClick;
+        BoldWhenChecked = boldWhenChecked;
         InputGesture = inputGesture;
     }
 
@@ -84,9 +96,14 @@ internal sealed class MainMenuEntry
         MainMenuToggleType toggleType = MainMenuToggleType.None,
         bool staysOpenOnClick = false,
         KeyGesture? inputGesture = null,
-        byte[]? bitmapIcon = null)
+        byte[]? bitmapIcon = null,
+        Func<string>? createHeader = null,
+        Func<string>? createAccentText = null,
+        bool boldWhenChecked = false)
     {
-        Header = header;
+        _header = header;
+        _createHeader = createHeader;
+        _createAccentText = createAccentText;
         Icon = icon;
         BitmapIcon = bitmapIcon;
         ExecuteAsync = executeAsync;
@@ -96,12 +113,13 @@ internal sealed class MainMenuEntry
         IsChecked = isChecked;
         ToggleType = toggleType;
         StaysOpenOnClick = staysOpenOnClick;
+        BoldWhenChecked = boldWhenChecked;
         InputGesture = inputGesture;
     }
 
     private MainMenuEntry()
     {
-        Header = string.Empty;
+        _header = string.Empty;
         Icon = string.Empty;
         IsSeparator = true;
         IsEnabled = false;

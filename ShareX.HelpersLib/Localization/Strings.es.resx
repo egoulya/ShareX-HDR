@@ -907,14 +907,8 @@
   <data name="HotkeyType_QRCodeScanRegion" xml:space="preserve">
     <value>QR code (Scan región)</value>
   </data>
-  <data name="HotkeyType_RectangleLight" xml:space="preserve">
-    <value>Capturar región rectángulo (ligero)</value>
-  </data>
   <data name="HotkeyType_RectangleRegion" xml:space="preserve">
     <value>Capturar región rectángulo</value>
-  </data>
-  <data name="HotkeyType_RectangleTransparent" xml:space="preserve">
-    <value>Capturar región rectángulo transparente</value>
   </data>
   <data name="HotkeyType_Ruler" xml:space="preserve">
     <value>Regla</value>
@@ -994,21 +988,6 @@
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>Cargador de archivos</value>
   </data>
-  <data name="ImageEditorStartMode_AutoSize" xml:space="preserve">
-    <value>Auto tamaño</value>
-  </data>
-  <data name="ImageEditorStartMode_Fullscreen" xml:space="preserve">
-    <value>Fullpantalla</value>
-  </data>
-  <data name="ImageEditorStartMode_Maximized" xml:space="preserve">
-    <value>Maximizado</value>
-  </data>
-  <data name="ImageEditorStartMode_Normal" xml:space="preserve">
-    <value>Normal</value>
-  </data>
-  <data name="ImageEditorStartMode_PreviousState" xml:space="preserve">
-    <value>Estado anterior</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Cuadrado grande</value>
   </data>
@@ -1038,18 +1017,6 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>Sí</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Copy_name" xml:space="preserve">
-    <value>Copiar name</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Copy_value" xml:space="preserve">
-    <value>Copiar value</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Name" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Value" xml:space="preserve">
-    <value>Valor</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 día</value>
@@ -1285,15 +1252,6 @@
   <data name="ReplCodeMenuEntry_yy_Current_year__2_digits_" xml:space="preserve">
     <value>Año actual (2 dígitos)</value>
   </data>
-  <data name="ScreenRecordGIFEncoding_FFmpeg" xml:space="preserve">
-    <value>FFmpeg (Good calidad)</value>
-  </data>
-  <data name="ScreenRecordGIFEncoding_NET" xml:space="preserve">
-    <value>.NET (Bad calidad)</value>
-  </data>
-  <data name="ScreenRecordGIFEncoding_OctreeQuantizer" xml:space="preserve">
-    <value>Octree quantizer (Medium calidad)</value>
-  </data>
   <data name="ScrollMethod_DownArrow" xml:space="preserve">
     <value>Flecha abajo</value>
   </data>
@@ -1301,100 +1259,10 @@
     <value>Rueda del ratón</value>
   </data>
   <data name="ScrollMethod_PageDown" xml:space="preserve">
-    <value>Page Down</value>
+    <value>Página abajo</value>
   </data>
   <data name="ScrollMethod_ScrollMessage" xml:space="preserve">
     <value>Mensaje de desplazamiento</value>
-  </data>
-  <data name="ShapeType_DrawingArrow" xml:space="preserve">
-    <value>Flecha (A)</value>
-  </data>
-  <data name="ShapeType_DrawingCursor" xml:space="preserve">
-    <value>Cursor</value>
-  </data>
-  <data name="ShapeType_DrawingEllipse" xml:space="preserve">
-    <value>Elipse (E)</value>
-  </data>
-  <data name="ShapeType_DrawingFreehand" xml:space="preserve">
-    <value>Mano alzada (F)</value>
-  </data>
-  <data name="ShapeType_DrawingFreehandArrow" xml:space="preserve">
-    <value>Flecha a mano alzada</value>
-  </data>
-  <data name="ShapeType_DrawingImage" xml:space="preserve">
-    <value>Imagen (Archivo)</value>
-  </data>
-  <data name="ShapeType_DrawingImageScreen" xml:space="preserve">
-    <value>Imagen (Pantalla)</value>
-  </data>
-  <data name="ShapeType_DrawingLine" xml:space="preserve">
-    <value>Línea (L)</value>
-  </data>
-  <data name="ShapeType_DrawingMagnify" xml:space="preserve">
-    <value>Ampliar</value>
-  </data>
-  <data name="ShapeType_DrawingRectangle" xml:space="preserve">
-    <value>Rectángulo (R)</value>
-  </data>
-  <data name="ShapeType_DrawingSmartEraser" xml:space="preserve">
-    <value>Borrador inteligente</value>
-  </data>
-  <data name="ShapeType_DrawingSpeechBalloon" xml:space="preserve">
-    <value>Globo de diálogo (S)</value>
-  </data>
-  <data name="ShapeType_DrawingStep" xml:space="preserve">
-    <value>Paso (I)</value>
-  </data>
-  <data name="ShapeType_DrawingTextBackground" xml:space="preserve">
-    <value>Text (Fondo) (T)</value>
-  </data>
-  <data name="ShapeType_DrawingTextOutline" xml:space="preserve">
-    <value>Texto (contorno) (O)</value>
-  </data>
-  <data name="ShapeType_EffectBlur" xml:space="preserve">
-    <value>Desenfocar (B)</value>
-  </data>
-  <data name="ShapeType_EffectHighlight" xml:space="preserve">
-    <value>Resaltar (H)</value>
-  </data>
-  <data name="ShapeType_EffectPixelate" xml:space="preserve">
-    <value>Pixelar (P)</value>
-  </data>
-  <data name="ShapeType_RegionEllipse" xml:space="preserve">
-    <value>Ellipse región</value>
-  </data>
-  <data name="ShapeType_RegionFreehand" xml:space="preserve">
-    <value>Freehand región</value>
-  </data>
-  <data name="ShapeType_RegionRectangle" xml:space="preserve">
-    <value>Rectangle región</value>
-  </data>
-  <data name="ShapeType_ToolCrop" xml:space="preserve">
-    <value>Crop imagen (C)</value>
-  </data>
-  <data name="ShapeType_ToolCutOut" xml:space="preserve">
-    <value>Recortar (X)</value>
-  </data>
-  <data name="ShapeType_ToolSelect" xml:space="preserve">
-    <value>Seleccionar y mover (M)</value>
-  </data>
-  <data name="ShapeType_ToolSpotlight" xml:space="preserve">
-    <value>Foco</value>
-  </data>
-  <data name="StepType_LettersLowercase" xml:space="preserve">
-    <value>Letras (minúsculas)</value>
-  </data>
-  <data name="StepType_LettersUppercase" xml:space="preserve">
-    <value>Letras (mayúsculas)</value>
-  </data>
-  <data name="StepType_Numbers" xml:space="preserve">
-    <value>Números</value>
-  </data>
-  <data name="StepType_RomanNumeralsLowercase" xml:space="preserve">
-    <value>Números romanos (minúsculas)</value>
-  </data>
-  <data name="StepType_RomanNumeralsUppercase" xml:space="preserve">
-    <value>Números romanos (mayúsculas)</value>
   </data>
   <data name="SupportedLanguage_Automatic" xml:space="preserve">
     <value>Automático</value>

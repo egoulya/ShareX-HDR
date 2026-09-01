@@ -23,11 +23,13 @@
 
 #endregion License Information (GPL v3)
 
+#nullable enable
+
 namespace ShareX.UploadersLib
 {
     public interface IOAuth2Loopback : IOAuth2
     {
-        OAuthUserInfo GetUserInfo();
+        Task<OAuthUserInfo?> GetUserInfoAsync(CancellationToken cancellationToken = default);
 
         string RedirectURI { get; set; }
         string State { get; set; }

@@ -3,6 +3,7 @@
         xmlns:views="using:ShareX.ImageEditor.Presentation.Views"
         xmlns:editorControls="using:ShareX.ImageEditor.Presentation.Controls"
         xmlns:capture="using:ShareX.ScreenCaptureLib.Presentation.RegionCapture"
+        xmlns:localization="using:ShareX.ScreenCaptureLib.Localization"
         xmlns:theming="using:ShareX.AvaloniaUI.Theming"
         x:Class="ShareX.ScreenCaptureLib.Presentation.RegionCapture.RegionCaptureWindow"
         WindowDecorations="None"
@@ -50,6 +51,7 @@
                 <capture:RegionSelectionOverlay x:Name="RegionOverlay"
                                                 AccentBrush="{DynamicResource ShareX.Brush.Accent.Start}"
                                                 IsHitTestVisible="False"/>
+                <Canvas x:Name="RegionResizeNodeCanvas" IsVisible="False"/>
             </Grid>
         </LayoutTransformControl>
 
@@ -58,27 +60,31 @@
             <StackPanel x:Name="MagnifierPanel"
                         Spacing="10"
                         IsVisible="False">
-                <Grid x:Name="MagnifierView" Width="152" Height="152">
+                <Grid x:Name="MagnifierView">
                     <!-- Legacy magnifier: white outer ring around a black inner ring. -->
-                    <Ellipse Width="152" Height="152" Fill="White"/>
-                    <Grid Width="150" Height="150">
-                        <Grid.Clip>
-                            <EllipseGeometry Rect="0,0,150,150"/>
-                        </Grid.Clip>
+                    <Ellipse x:Name="MagnifierCircleOuter" Fill="White"/>
+                    <Border x:Name="MagnifierSquareOuter"
+                            Background="White"
+                            IsVisible="False"/>
+                    <Grid x:Name="MagnifierContent">
                         <Image x:Name="MagnifierImage"
-                               Width="150"
-                               Height="150"
                                Stretch="Fill"
                                RenderOptions.BitmapInterpolationMode="None"/>
                         <capture:MagnifierPixelGrid x:Name="MagnifierPixelGrid"
+                                                    AccentBrush="{DynamicResource ShareX.Brush.Accent.Start}"
                                                     RenderOptions.EdgeMode="Aliased"
                                                     IsHitTestVisible="False"/>
                     </Grid>
-                    <Ellipse Width="150"
-                             Height="150"
+                    <Ellipse x:Name="MagnifierCircleInner"
                              Stroke="Black"
                              StrokeThickness="1"
                              IsHitTestVisible="False"/>
+                    <Border x:Name="MagnifierSquareInner"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            IsVisible="False"
+                            IsHitTestVisible="False"
+                            RenderOptions.EdgeMode="Aliased"/>
                 </Grid>
                 <Border x:Name="PointerInfoPanel"
                         HorizontalAlignment="Center"
@@ -109,27 +115,19 @@
         <Canvas>
             <Grid x:Name="CaptureToolbar"
                   Classes="capture-toolbar"
-                  ColumnDefinitions="Auto,Auto"
                   MaxWidth="{Binding Bounds.Width, RelativeSource={RelativeSource AncestorType=Window}}">
-                <Border Grid.Column="0"
-                        Padding="4,4,0,4"
-                        VerticalAlignment="Top"
-                        Background="{DynamicResource ShareX.Brush.Background.Toolbar}"
-                        BorderBrush="{DynamicResource ShareX.Brush.Border}"
-                        BorderThickness="1,1,0,1"
-                        CornerRadius="0,0,0,4">
-                    <Button x:Name="RegionToolButton"
-                            Classes="toolbar-button active"
-                            Click="OnRegionToolClick"
-                            ToolTip.Tip="Rectangle region"
-                            Content="{x:Static theming:LucideIcons.scan}"/>
-                </Border>
-
                 <editorControls:AnnotationToolbar x:Name="CaptureAnnotationToolbar"
-                                                  Grid.Column="1"
-                                                  MainToolbarBorderThickness="0,1,1,1"
-                                                  MainToolbarCornerRadius="0,0,4,0"
-                                                  ShowEditingActions="False"/>
+                                                  MainToolbarBorderThickness="1"
+                                                  MainToolbarCornerRadius="0,0,4,4"
+                                                  ShowEditingActions="False">
+                    <editorControls:AnnotationToolbar.MainToolbarLeadingContent>
+                        <Button x:Name="RegionToolButton"
+                                Classes="toolbar-button active"
+                                Click="OnRegionToolClick"
+                                ToolTip.Tip="{x:Static localization:Strings.RegionCaptureWindow_RectangleRegionTab}"
+                                Content="{x:Static theming:LucideIcons.scan}"/>
+                    </editorControls:AnnotationToolbar.MainToolbarLeadingContent>
+                </editorControls:AnnotationToolbar>
             </Grid>
         </Canvas>
     </Grid>

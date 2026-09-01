@@ -37,13 +37,15 @@ public sealed class DestinationSettingsViewModel : INotifyPropertyChanged
             Page("ftp", "FTP / FTPS / SFTP", "FTP", "FTP", "FTPS", "SFTP"),
             Page("dropbox", "Dropbox", "Dropbox"), Page("onedrive", "OneDrive", "OneDrive"),
             Page("google-drive", "Google Drive", "GoogleDrive"), Page("puush", "puush", "Puush"),
-            Page("box", "Box", "Box"), Page("amazon-s3", "Amazon S3", "AmazonS3"),
+            Page("box", "Box", "Box"), Page("mega", "MEGA", "Mega"), Page("amazon-s3", "Amazon S3", "AmazonS3"),
             Page("google-cloud-storage", "Google Cloud Storage", "GoogleCloudStorage"),
             Page("azure-storage", "Azure Storage", "AzureStorage"), Page("backblaze-b2", "Backblaze B2", "B2", "BackblazeB2"),
             Page("owncloud", "ownCloud / Nextcloud", "OwnCloud", "ownCloud", "Nextcloud"),
+            Page("immich", "Immich", "Immich"),
             Page("mediafire", "MediaFire", "MediaFire"), Page("pushbullet", "Pushbullet", "Pushbullet"),
             Page("sendspace", "SendSpace", "SendSpace"), Page("hostr", "Hostr", "Localhostr", "Hostr"),
-            Page("lambda", "Lambda", "Lambda"), Page("lobfile", "LobFile", "Lithiio", "LobFile"),
+            Page("lambda", "Lambda", "Lambda"), Page("img-fish", "img.fish", "ImgFish", "imgfish"),
+            Page("lobfile", "LobFile", "Lithiio", "LobFile"),
             Page("pomf", "Pomf", "Pomf"), Page("seafile", "Seafile", "Seafile"), Page("sul", "s-ul", "Sul", "sul"),
             Page("streamable", "Streamable", "Streamable"), Page("plik", "Plik", "Plik"),
             Page("youtube", "YouTube", "YouTube"),
@@ -82,7 +84,7 @@ public sealed class DestinationSettingsViewModel : INotifyPropertyChanged
     {
         foreach (DestinationCategoryDefinition category in Categories)
         {
-            NavigationItems.Add(new SettingsNavigationItem(category.Id, category.Title, category.Icon,
+            NavigationItems.Add(new SettingsNavigationItem(category.Id, category.Title,
                 children: category.Pages.Select(page => new SettingsNavigationItem(page.Id, page.Title))));
         }
 

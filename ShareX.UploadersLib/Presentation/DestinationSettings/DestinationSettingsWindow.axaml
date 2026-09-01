@@ -20,6 +20,7 @@
 
     <Window.Styles>
         <Style Selector="Grid.page-title"><Setter Property="Margin" Value="0,0,0,14"/></Style>
+        <Style Selector="Grid.preview-row"><Setter Property="Margin" Value="0,6"/></Style>
         <Style Selector="TextBlock.page-title-text">
             <Setter Property="FontSize" Value="24"/><Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="{DynamicResource ShareX.Brush.Accent}"/><Setter Property="VerticalAlignment" Value="Center"/>
@@ -34,6 +35,12 @@
         <Style Selector="TextBlock.hint">
             <Setter Property="FontSize" Value="12"/><Setter Property="FontWeight" Value="Normal"/>
             <Setter Property="Foreground" Value="{DynamicResource ShareX.Brush.Text.Secondary}"/><Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style Selector="TextBlock.hint.connection-connected">
+            <Setter Property="Foreground" Value="{DynamicResource ShareX.Brush.Status.Success}"/>
+        </Style>
+        <Style Selector="TextBlock.hint.connection-disconnected">
+            <Setter Property="Foreground" Value="{DynamicResource ShareX.Brush.Status.Error}"/>
         </Style>
         <Style Selector="Border.section-card">
             <Setter Property="Background" Value="{DynamicResource ShareX.Brush.Background.Panel}"/>
@@ -56,6 +63,14 @@
         <Style Selector="ListBox.settings-list">
             <Setter Property="MinHeight" Value="150"/><Setter Property="Background" Value="{DynamicResource ShareX.Brush.Background.Main}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource ShareX.Brush.Border}"/><Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style Selector="TreeView.settings-tree">
+            <Setter Property="Background" Value="{DynamicResource ShareX.Brush.Background.Main}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ShareX.Brush.Border}"/><Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="4"/>
+        </Style>
+        <Style Selector="TreeView.settings-tree TreeViewItem">
+            <Setter Property="Padding" Value="2"/><Setter Property="Margin" Value="0,1"/>
         </Style>
     </Window.Styles>
 

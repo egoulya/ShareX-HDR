@@ -725,7 +725,7 @@
     <value>Jatuhkan gambar di sini atau gunakan tombol Tambah</value>
   </data>
   <data name="ImageCombinerWindow_Horizontal" xml:space="preserve">
-    <value>Horizontal</value>
+    <value>Horisontal</value>
   </data>
   <data name="ImageCombinerWindow_Layout" xml:space="preserve">
     <value>Tata letak</value>
@@ -1016,7 +1016,7 @@
     <value>Tinggi</value>
   </data>
   <data name="LocalizedDisplayConverter_Horizontal" xml:space="preserve">
-    <value>Horizontal</value>
+    <value>Horisontal</value>
   </data>
   <data name="LocalizedDisplayConverter_Horizontal_bars" xml:space="preserve">
     <value>Bilah horizontal</value>
@@ -1050,15 +1050,6 @@
   </data>
   <data name="LocalizedDisplayConverter_Vertical_lines" xml:space="preserve">
     <value>Garis vertikal</value>
-  </data>
-  <data name="MetadataService_ExifTool_not_found" xml:space="preserve">
-    <value>ExifTool tidak dapat ditemukan.</value>
-  </data>
-  <data name="MetadataService_Exited_with_code" xml:space="preserve">
-    <value>ExifTool keluar dengan kode {0}.</value>
-  </data>
-  <data name="MetadataService_Failed_start_ExifTool" xml:space="preserve">
-    <value>Gagal memulai ExifTool.</value>
   </data>
   <data name="MetadataService_Selected_file_not_found" xml:space="preserve">
     <value>File yang dipilih tidak dapat ditemukan.</value>
@@ -1713,5 +1704,110 @@
   </data>
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>File video</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>Waktu tunggu {0} habis.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>Tidak ditemukan antarmuka jaringan yang aktif.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>Tidak ada titik akhir yang merespons.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>Otomatis (disarankan)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>Memeriksa...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>Terhubung.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>Terputus.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>15 menit terakhir</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>5 menit terakhir</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>6 jam terakhir</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>Satu jam terakhir</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} md</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>Dijeda</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>Sesi</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>Ketersediaan</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>Latensi rata-rata</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>Periksa setiap</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>Peristiwa koneksi</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>Hapus log</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>Salin semua</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>Latensi saat ini</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>Tanggal</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>Pemutusan</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>Riwayat latensi</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>Belum ada perubahan koneksi yang tercatat.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>Belum ada sampel latensi.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>Buka log...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>Jeda</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>Rentang</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - Pemantau Jaringan</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>Mulai</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>Target</value>
   </data>
 </root>

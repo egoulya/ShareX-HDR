@@ -89,6 +89,8 @@ namespace ShareX.UploadersLib
         Puush,
         [Description("Box")]
         Box,
+        [Description("MEGA")]
+        Mega,
         [Description("Amazon S3")]
         AmazonS3,
         [Description("Google Cloud Storage")]
@@ -99,6 +101,8 @@ namespace ShareX.UploadersLib
         BackblazeB2,
         [Description("ownCloud / Nextcloud")]
         OwnCloud,
+        [Description("Immich")]
+        Immich,
         [Description("MediaFire")]
         MediaFire,
         [Description("Pushbullet")]
@@ -109,6 +113,8 @@ namespace ShareX.UploadersLib
         Localhostr,
         [Description("Lambda")]
         Lambda,
+        [Description("img.fish")]
+        ImgFish,
         [Description("Pomf")]
         Pomf,
         [Description("Uguu")]
@@ -127,8 +133,6 @@ namespace ShareX.UploadersLib
         Plik,
         [Description("YouTube")]
         YouTube,
-        [Description("Vault.ooo")]
-        Vault_ooo,
         SharedFolder, // Localized
         Email, // Localized
         CustomFileUploader // Localized

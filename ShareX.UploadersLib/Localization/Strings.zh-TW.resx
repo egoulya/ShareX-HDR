@@ -460,6 +460,9 @@
   <data name="DestinationSettings_Field_Exposure" xml:space="preserve">
     <value>可見性</value>
   </data>
+  <data name="DestinationSettings_Field_File_ID_Length" xml:space="preserve">
+    <value>檔案 ID 長度</value>
+  </data>
   <data name="DestinationSettings_Field_Files" xml:space="preserve">
     <value>檔案</value>
   </data>
@@ -527,7 +530,7 @@
     <value>一次性</value>
   </data>
   <data name="DestinationSettings_Field_Password" xml:space="preserve">
-    <value>Password:</value>
+    <value>密碼</value>
   </data>
   <data name="DestinationSettings_Field_Paste_Password" xml:space="preserve">
     <value>粘贴密碼</value>
@@ -610,6 +613,9 @@
   <data name="DestinationSettings_Field_Show_Dialog" xml:space="preserve">
     <value>显示对话框</value>
   </data>
+  <data name="DestinationSettings_Field_Show_Metadata" xml:space="preserve">
+    <value>顯示中繼資料</value>
+  </data>
   <data name="DestinationSettings_Field_Signature" xml:space="preserve">
     <value>簽章</value>
   </data>
@@ -651,6 +657,9 @@
   </data>
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>權杖</value>
+  </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>輸入您目前的雙重要素驗證碼</value>
   </data>
   <data name="DestinationSettings_Field_TTL" xml:space="preserve">
     <value>TTL</value>
@@ -700,6 +709,9 @@
   <data name="DestinationSettings_Field_Use_Long_Link" xml:space="preserve">
     <value>使用长連結</value>
   </data>
+  <data name="DestinationSettings_Field_Use_Multipart_Upload" xml:space="preserve">
+    <value>使用分段上傳</value>
+  </data>
   <data name="DestinationSettings_Field_Use_Path_Style" xml:space="preserve">
     <value>使用路徑样式</value>
   </data>
@@ -716,7 +728,7 @@
     <value>使用者金鑰</value>
   </data>
   <data name="DestinationSettings_Field_Username" xml:space="preserve">
-    <value>Username:</value>
+    <value>使用者名稱</value>
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Web API 金鑰</value>
@@ -892,6 +904,12 @@
   <data name="FileDestination_GoogleDrive" xml:space="preserve">
     <value>Google Drive</value>
   </data>
+  <data name="FileDestination_ImgFish" xml:space="preserve">
+    <value>img.fish</value>
+  </data>
+  <data name="FileDestination_Immich" xml:space="preserve">
+    <value>Immich</value>
+  </data>
   <data name="FileDestination_Lambda" xml:space="preserve">
     <value>Lambda</value>
   </data>
@@ -900,6 +918,9 @@
   </data>
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
@@ -942,9 +963,6 @@
   </data>
   <data name="FileDestination_Uguu" xml:space="preserve">
     <value>Uguu</value>
-  </data>
-  <data name="FileDestination_Vault_ooo" xml:space="preserve">
-    <value>Vault.ooo</value>
   </data>
   <data name="FileDestination_YouTube" xml:space="preserve">
     <value>YouTube</value>
@@ -1219,7 +1237,7 @@
     <value>name@example.com</value>
   </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
-    <value>Password:</value>
+    <value>密碼</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX - puush 登入</value>
@@ -1497,9 +1515,6 @@
   </data>
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>零宽度連結縮短器</value>
-  </data>
-  <data name="Vault_No_valid_metadata_returned" xml:space="preserve">
-    <value>未返回有效的元数據。</value>
   </data>
   <data name="Yourls_Credentials_missing" xml:space="preserve">
     <value>缺少簽章或使用者名/密碼。</value>

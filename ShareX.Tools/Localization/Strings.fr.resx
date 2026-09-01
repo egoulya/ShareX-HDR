@@ -744,7 +744,7 @@ Chemin du fichier : {0}</value>
     <value>Espacement</value>
   </data>
   <data name="ImageCombinerWindow_Vertical" xml:space="preserve">
-    <value>Vertical</value>
+    <value>Verticale</value>
   </data>
   <data name="ImageCombinerWindow_Wrap_after" xml:space="preserve">
     <value>Renvoyer à la ligne après</value>
@@ -1047,22 +1047,13 @@ Chemin du fichier : {0}</value>
     <value>OpenRouter</value>
   </data>
   <data name="LocalizedDisplayConverter_Vertical" xml:space="preserve">
-    <value>Vertical</value>
+    <value>Verticale</value>
   </data>
   <data name="LocalizedDisplayConverter_Vertical_bars" xml:space="preserve">
     <value>Barres verticales</value>
   </data>
   <data name="LocalizedDisplayConverter_Vertical_lines" xml:space="preserve">
     <value>Lignes verticales</value>
-  </data>
-  <data name="MetadataService_ExifTool_not_found" xml:space="preserve">
-    <value>ExifTool est introuvable.</value>
-  </data>
-  <data name="MetadataService_Exited_with_code" xml:space="preserve">
-    <value>ExifTool s’est arrêté avec le code {0}.</value>
-  </data>
-  <data name="MetadataService_Failed_start_ExifTool" xml:space="preserve">
-    <value>Impossible de démarrer ExifTool.</value>
   </data>
   <data name="MetadataService_Selected_file_not_found" xml:space="preserve">
     <value>Le fichier sélectionné est introuvable.</value>
@@ -1719,5 +1710,110 @@ Chemin du fichier : {0}</value>
   </data>
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>Fichiers vidéo</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>Délai d&apos;attente dépassé pour {0}.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>Aucune interface réseau active n&apos;a été trouvée.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>Aucun point de terminaison n&apos;a répondu.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>Automatique (recommandé)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>Vérification...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>Connecté.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>Déconnecté.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>15 dernières minutes</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>5 dernières minutes</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>6 dernières heures</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>Dernière heure</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} ms</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>En pause</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0} %</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>Session</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>Disponibilité</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>Latence moyenne</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>Vérifier toutes les</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>Événements de connexion</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>Effacer le journal</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>Tout copier</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>Latence actuelle</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>Déconnexions</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>Historique de latence</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>Aucun changement de connexion enregistré pour le moment.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>Aucun échantillon de latence pour le moment.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>Ouvrir le journal...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>Mettre en pause</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>Plage</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - Moniteur réseau</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>Démarrer</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>Cible</value>
   </data>
 </root>

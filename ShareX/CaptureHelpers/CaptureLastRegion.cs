@@ -23,9 +23,7 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.ScreenCaptureLib;
 using ShareX.ScreenCaptureLib.Presentation.RegionCapture;
-using System.Drawing;
 using System.Threading.Tasks;
 
 namespace ShareX
@@ -34,8 +32,7 @@ namespace ShareX
     {
         protected override async Task<TaskMetadata> ExecuteAsync(TaskSettings taskSettings)
         {
-            if (lastRegionCaptureType == RegionCaptureType.Default &&
-                RegionCaptureIntegration.LastRegionRectangle.IsEmpty)
+            if (RegionCaptureIntegration.LastRegionRectangle.IsEmpty)
             {
                 return await ExecuteRegionCaptureAvaloniaAsync(taskSettings);
             }
@@ -45,30 +42,12 @@ namespace ShareX
 
         protected override TaskMetadata Execute(TaskSettings taskSettings)
         {
-            switch (lastRegionCaptureType)
+            if (!RegionCaptureIntegration.LastRegionRectangle.IsEmpty)
             {
-                default:
-                case RegionCaptureType.Default:
-                    if (!RegionCaptureIntegration.LastRegionRectangle.IsEmpty)
-                    {
-                        return CaptureRectangleWithMaster(taskSettings, RegionCaptureIntegration.LastRegionRectangle);
-                    }
-                    return ExecuteRegionCapture(taskSettings);
-                case RegionCaptureType.Light:
-                    if (!RegionCaptureLightForm.LastScreenSelectionRectangle.IsEmpty)
-                    {
-                        return CaptureRectangleWithMaster(taskSettings, RegionCaptureLightForm.LastScreenSelectionRectangle);
-                    }
-
-                    return ExecuteRegionCaptureLight(taskSettings);
-                case RegionCaptureType.Transparent:
-                    if (!RegionCaptureLightForm.LastScreenSelectionRectangle.IsEmpty)
-                    {
-                        return CaptureRectangleWithMaster(taskSettings, RegionCaptureLightForm.LastScreenSelectionRectangle);
-                    }
-
-                    return ExecuteRegionCaptureTransparent(taskSettings);
+                return CaptureRectangleWithMaster(taskSettings, RegionCaptureIntegration.LastRegionRectangle);
             }
+
+            return null;
         }
     }
 }

@@ -563,7 +563,7 @@
     <value>In đậm</value>
   </data>
   <data name="CMYK_ToString_Cyan___0_0_0____Magenta___1_0_0____Yellow___2_0_0____Key___3_0_0__" xml:space="preserve">
-    <value>Cyan: {0:0.0}%, Magenta: {1:0.0}%, Yellow: {2:0.0}%, Key: {3:0.0}%</value>
+    <value>Xanh lơ: {0:0.0}%, Hồng sẫm: {1:0.0}%, Vàng: {2:0.0}%, Đen: {3:0.0}%</value>
   </data>
   <data name="CodeMenu_Create_Close" xml:space="preserve">
     <value>Đóng</value>
@@ -907,14 +907,8 @@
   <data name="HotkeyType_QRCodeScanRegion" xml:space="preserve">
     <value>Mã QR (quét vùng)</value>
   </data>
-  <data name="HotkeyType_RectangleLight" xml:space="preserve">
-    <value>Chụp theo vùng (Bản nhẹ hơn)</value>
-  </data>
   <data name="HotkeyType_RectangleRegion" xml:space="preserve">
     <value>Chụp theo vùng</value>
-  </data>
-  <data name="HotkeyType_RectangleTransparent" xml:space="preserve">
-    <value>Chụp theo vùng (Trong suốt)</value>
   </data>
   <data name="HotkeyType_Ruler" xml:space="preserve">
     <value>Thước đo</value>
@@ -994,21 +988,6 @@
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>Dịch vụ tải lên tệp</value>
   </data>
-  <data name="ImageEditorStartMode_AutoSize" xml:space="preserve">
-    <value>Tự động chỉnh kích thước</value>
-  </data>
-  <data name="ImageEditorStartMode_Fullscreen" xml:space="preserve">
-    <value>Toàn màn hình</value>
-  </data>
-  <data name="ImageEditorStartMode_Maximized" xml:space="preserve">
-    <value>Tối đa</value>
-  </data>
-  <data name="ImageEditorStartMode_Normal" xml:space="preserve">
-    <value>Bình thường</value>
-  </data>
-  <data name="ImageEditorStartMode_PreviousState" xml:space="preserve">
-    <value>Trạng thái trước</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Hình vuông lớn</value>
   </data>
@@ -1038,18 +1017,6 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>Đồng ý</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Copy_name" xml:space="preserve">
-    <value>Sao chép tên</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Copy_value" xml:space="preserve">
-    <value>Sao chép giá trị</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Name" xml:space="preserve">
-    <value>Tên</value>
-  </data>
-  <data name="ObjectListView_ObjectListView_Value" xml:space="preserve">
-    <value>Giá trị</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 Ngày</value>
@@ -1184,7 +1151,7 @@
     <value>Ngẫu nhiên</value>
   </data>
   <data name="ReplCodeMenuCategory_Window" xml:space="preserve">
-    <value>Window</value>
+    <value>Cửa sổ</value>
   </data>
   <data name="ReplCodeMenuEntry_cn_Computer_name" xml:space="preserve">
     <value>Tên máy tính</value>
@@ -1285,15 +1252,6 @@
   <data name="ReplCodeMenuEntry_yy_Current_year__2_digits_" xml:space="preserve">
     <value>Năm hiện tại (2 chữ số)</value>
   </data>
-  <data name="ScreenRecordGIFEncoding_FFmpeg" xml:space="preserve">
-    <value>FFmpeg (Chất lượng tốt)</value>
-  </data>
-  <data name="ScreenRecordGIFEncoding_NET" xml:space="preserve">
-    <value>.NET (Chất lượng kém)</value>
-  </data>
-  <data name="ScreenRecordGIFEncoding_OctreeQuantizer" xml:space="preserve">
-    <value>Bộ lượng tử octree (Chất lượng trung bình)</value>
-  </data>
   <data name="ScrollMethod_DownArrow" xml:space="preserve">
     <value>Mũi tên xuống</value>
   </data>
@@ -1301,100 +1259,10 @@
     <value>Con lăn chuột</value>
   </data>
   <data name="ScrollMethod_PageDown" xml:space="preserve">
-    <value>Page Down</value>
+    <value>Trang xuống</value>
   </data>
   <data name="ScrollMethod_ScrollMessage" xml:space="preserve">
     <value>Thông báo cuộn</value>
-  </data>
-  <data name="ShapeType_DrawingArrow" xml:space="preserve">
-    <value>Vẽ: Mũi tên (A)</value>
-  </data>
-  <data name="ShapeType_DrawingCursor" xml:space="preserve">
-    <value>Vẽ: Dùng chuột</value>
-  </data>
-  <data name="ShapeType_DrawingEllipse" xml:space="preserve">
-    <value>Vẽ: Hình E-líp (E)</value>
-  </data>
-  <data name="ShapeType_DrawingFreehand" xml:space="preserve">
-    <value>Vẽ: Thủ công (F)</value>
-  </data>
-  <data name="ShapeType_DrawingFreehandArrow" xml:space="preserve">
-    <value>Mũi tên tự do</value>
-  </data>
-  <data name="ShapeType_DrawingImage" xml:space="preserve">
-    <value>Vẽ: Chèn ảnh (từ tệp)</value>
-  </data>
-  <data name="ShapeType_DrawingImageScreen" xml:space="preserve">
-    <value>Vẽ: Chèn ảnh (từ màn hình)</value>
-  </data>
-  <data name="ShapeType_DrawingLine" xml:space="preserve">
-    <value>Vẽ: Đường thẳng (L)</value>
-  </data>
-  <data name="ShapeType_DrawingMagnify" xml:space="preserve">
-    <value>Phóng to</value>
-  </data>
-  <data name="ShapeType_DrawingRectangle" xml:space="preserve">
-    <value>Vẽ: Hình chữ nhật (R)</value>
-  </data>
-  <data name="ShapeType_DrawingSmartEraser" xml:space="preserve">
-    <value>Tẩy thông minh</value>
-  </data>
-  <data name="ShapeType_DrawingSpeechBalloon" xml:space="preserve">
-    <value>Vẽ: Hộp hội thoại (S)</value>
-  </data>
-  <data name="ShapeType_DrawingStep" xml:space="preserve">
-    <value>Vẽ: Bước chỉ dẫn (I)</value>
-  </data>
-  <data name="ShapeType_DrawingTextBackground" xml:space="preserve">
-    <value>Vẽ: Viết chữ (Có màu nền) (T)</value>
-  </data>
-  <data name="ShapeType_DrawingTextOutline" xml:space="preserve">
-    <value>Vẽ: Viết chữ (Có viền) (O)</value>
-  </data>
-  <data name="ShapeType_EffectBlur" xml:space="preserve">
-    <value>Hiệu ứng: Làm mờ (B)</value>
-  </data>
-  <data name="ShapeType_EffectHighlight" xml:space="preserve">
-    <value>Hiệu ứng: Đánh dấu (H)</value>
-  </data>
-  <data name="ShapeType_EffectPixelate" xml:space="preserve">
-    <value>Hiệu ứng: Điểm ảnh hóa (P)</value>
-  </data>
-  <data name="ShapeType_RegionEllipse" xml:space="preserve">
-    <value>Vùng: E-líp</value>
-  </data>
-  <data name="ShapeType_RegionFreehand" xml:space="preserve">
-    <value>Vùng: Tự vẽ</value>
-  </data>
-  <data name="ShapeType_RegionRectangle" xml:space="preserve">
-    <value>Vùng: Chữ nhật</value>
-  </data>
-  <data name="ShapeType_ToolCrop" xml:space="preserve">
-    <value>Công cụ: Cắt ảnh (C)</value>
-  </data>
-  <data name="ShapeType_ToolCutOut" xml:space="preserve">
-    <value>Cắt bỏ (X)</value>
-  </data>
-  <data name="ShapeType_ToolSelect" xml:space="preserve">
-    <value>Chọn và di chuyển (M)</value>
-  </data>
-  <data name="ShapeType_ToolSpotlight" xml:space="preserve">
-    <value>Tiêu điểm</value>
-  </data>
-  <data name="StepType_LettersLowercase" xml:space="preserve">
-    <value>Chữ cái (Chữ thường)</value>
-  </data>
-  <data name="StepType_LettersUppercase" xml:space="preserve">
-    <value>Chữ cái (Chữ hoa)</value>
-  </data>
-  <data name="StepType_Numbers" xml:space="preserve">
-    <value>Số</value>
-  </data>
-  <data name="StepType_RomanNumeralsLowercase" xml:space="preserve">
-    <value>Chữ số La mã (Chữ thường)</value>
-  </data>
-  <data name="StepType_RomanNumeralsUppercase" xml:space="preserve">
-    <value>Chữ số La mã (Chữ hoa)</value>
   </data>
   <data name="SupportedLanguage_Automatic" xml:space="preserve">
     <value>Tự động</value>

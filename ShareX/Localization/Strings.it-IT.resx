@@ -178,9 +178,6 @@
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>Modifica immagine</value>
   </data>
-  <data name="MainMenuBuilder_EnableAddImageEffects" xml:space="preserve">
-    <value>Abilita aggiunta effetti immagine</value>
-  </data>
   <data name="MainMenuBuilder_EnableHotkeys" xml:space="preserve">
     <value>Attiva Scorciatoie da Tastiera</value>
   </data>
@@ -257,7 +254,7 @@
     <value>Dimensioni immagine</value>
   </data>
   <data name="MainMenuBuilder_ImageEditor" xml:space="preserve">
-    <value>Modificaor immagini</value>
+    <value>Modificatore immagini</value>
   </data>
   <data name="MainMenuBuilder_ImageEffects" xml:space="preserve">
     <value>Effetti Immagine</value>
@@ -330,12 +327,6 @@
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>Regione...</value>
-  </data>
-  <data name="MainMenuBuilder_RegionLight" xml:space="preserve">
-    <value>Regione (chiara)...</value>
-  </data>
-  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
-    <value>Regione (trasparente)...</value>
   </data>
   <data name="MainMenuBuilder_RestartAsAdministrator" xml:space="preserve">
     <value>Riavvia come amministratore</value>
@@ -1363,8 +1354,8 @@
   <data name="TaskSettingsWindow_Add" xml:space="preserve">
     <value>Aggiungi</value>
   </data>
-  <data name="TaskSettingsWindow_UseMultiRegionMode" xml:space="preserve">
-    <value>Usa modalità multiregione</value>
+  <data name="TaskSettingsWindow_QuickCapture" xml:space="preserve">
+    <value>Acquisizione rapida</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>Rileva regioni delle finestre</value>
@@ -1399,29 +1390,14 @@
   <data name="TaskSettingsWindow_MagnifierPixelCount" xml:space="preserve">
     <value>Numero pixel lente:</value>
   </data>
-  <data name="TaskSettingsWindow_MagnifierPixelSize" xml:space="preserve">
-    <value>Dimensione pixel lente:</value>
+  <data name="TaskSettingsWindow_MagnifierSize" xml:space="preserve">
+    <value>Dimensione lente:</value>
   </data>
   <data name="TaskSettingsWindow_ShowCenterCrosshair" xml:space="preserve">
     <value>Mostra mirino centrale</value>
   </data>
   <data name="TaskSettingsWindow_ShowScreenWideCrosshair" xml:space="preserve">
     <value>Mostra mirino su tutto lo schermo</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedSizeRegionMode" xml:space="preserve">
-    <value>Modalità regione a dimensione fissa</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedWidth" xml:space="preserve">
-    <value>Larghezza fissa:</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedHeight" xml:space="preserve">
-    <value>Altezza fissa:</value>
-  </data>
-  <data name="TaskSettingsWindow_ShowFPS" xml:space="preserve">
-    <value>Mostra FPS</value>
-  </data>
-  <data name="TaskSettingsWindow_FPSLimit" xml:space="preserve">
-    <value>Limite FPS:</value>
   </data>
   <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
     <value>FPS registrazione schermo:</value>
@@ -1452,9 +1428,6 @@
   </data>
   <data name="TaskSettingsWindow_AskForConfirmationWhenAborting" xml:space="preserve">
     <value>Chiedi conferma durante l&apos;interruzione</value>
-  </data>
-  <data name="TaskSettingsWindow_UseTransparentRegionSelection" xml:space="preserve">
-    <value>Usa selezione regione trasparente</value>
   </data>
   <data name="TaskSettingsWindow_ScreenRecordingOptionsWithEllipsis" xml:space="preserve">
     <value>Opzioni registrazione schermo...</value>
@@ -1528,9 +1501,6 @@
   <data name="TaskSettingsWindow_SeparateExtensionsWithCommasForExamplePngJpgJpeg" xml:space="preserve">
     <value>Separa le estensioni con virgole, ad esempio: png, jpg, jpeg</value>
   </data>
-  <data name="TaskSettingsWindow_UseLegacyImageEditor" xml:space="preserve">
-    <value>Usa editor di immagini precedente</value>
-  </data>
   <data name="TaskSettingsWindow_Format" xml:space="preserve">
     <value>Formato:</value>
   </data>
@@ -1603,12 +1573,6 @@
   <data name="TaskSettingsWindow_InformationAndMagnifier" xml:space="preserve">
     <value>Informazioni e lente</value>
   </data>
-  <data name="TaskSettingsWindow_FixedSizeAndPerformance" xml:space="preserve">
-    <value>Dimensione fissa e prestazioni</value>
-  </data>
-  <data name="TaskSettingsWindow_SnapSizes" xml:space="preserve">
-    <value>Dimensioni di aggancio</value>
-  </data>
   <data name="TaskSettingsWindow_Recording" xml:space="preserve">
     <value>Registrazione</value>
   </data>
@@ -1635,9 +1599,6 @@
   </data>
   <data name="TaskSettingsWindow_OverrideToolsSettings" xml:space="preserve">
     <value>Sostituisci impostazioni strumenti</value>
-  </data>
-  <data name="TaskSettingsWindow_ImageEditor" xml:space="preserve">
-    <value>Editor di immagini</value>
   </data>
   <data name="TaskSettingsWindow_ScreenColorPicker" xml:space="preserve">
     <value>Selettore colore schermo</value>
@@ -1944,33 +1905,6 @@
   </data>
   <data name="FirstTimeConfigWindow_StartWithWindowsEnabledByPolicy" xml:space="preserve">
     <value>L&apos;avvio è stato abilitato dalla tua organizzazione</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Title" xml:space="preserve">
-    <value>ShareX - Selezione editor di immagini</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Heading" xml:space="preserve">
-    <value>Scegli un editor di immagini</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Subtitle" xml:space="preserve">
-    <value>Seleziona l’editor che ShareX deve aprire.</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ModernEditor" xml:space="preserve">
-    <value>Editor di immagini moderno</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Recommended" xml:space="preserve">
-    <value>Consigliato</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ModernDescription" xml:space="preserve">
-    <value>L’editor ShareX attuale con gli strumenti e i miglioramenti più recenti.</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_LegacyEditor" xml:space="preserve">
-    <value>Editor di immagini precedente</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_LegacyDescription" xml:space="preserve">
-    <value>Il classico editor di acquisizione area di ShareX.</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ChangeLater" xml:space="preserve">
-    <value>Puoi modificare questa scelta in seguito in Impostazioni attività → Strumenti.</value>
   </data>
   <data name="ShortenURLWindow_Title" xml:space="preserve">
     <value>ShareX - Abbrevia URL</value>
@@ -2342,7 +2276,7 @@
     <value>Libreria uploader</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Guide" xml:space="preserve">
-    <value>Guida agli uploader personalizzati</value>
+    <value>Guida agli uploader personalizzati...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_SearchUploaders" xml:space="preserve">
     <value>Cerca uploader</value>
@@ -2351,25 +2285,25 @@
     <value>Nuovo</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Import" xml:space="preserve">
-    <value>Importa</value>
+    <value>Importa...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Duplicate" xml:space="preserve">
     <value>Duplica uploader selezionato</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Export" xml:space="preserve">
-    <value>Esporta uploader selezionato</value>
+    <value>Esporta uploader selezionato...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Remove" xml:space="preserve">
     <value>Rimuovi uploader selezionato</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ExportAll" xml:space="preserve">
-    <value>Esporta tutto</value>
+    <value>Esporta tutto...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ClearAll" xml:space="preserve">
-    <value>Cancella tutto</value>
+    <value>Cancella tutto...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdateFolder" xml:space="preserve">
-    <value>Aggiorna cartella</value>
+    <value>Aggiorna cartella...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Overview" xml:space="preserve">
     <value>Panoramica</value>
@@ -2386,9 +2320,6 @@
   <data name="CustomUploaderSettingsWindow_Test" xml:space="preserve">
     <value>Test</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_OverviewDescription" xml:space="preserve">
-    <value>Assegna a questo uploader un nome riconoscibile e scegli dove ShareX può usarlo.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Identity" xml:space="preserve">
     <value>Identità</value>
   </data>
@@ -2398,14 +2329,8 @@
   <data name="CustomUploaderSettingsWindow_NamePlaceholder" xml:space="preserve">
     <value>Usa l’host della richiesta se lasciato vuoto</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_NameDescription" xml:space="preserve">
-    <value>Questo è il nome mostrato in ShareX. Le modifiche vengono salvate immediatamente.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Capabilities" xml:space="preserve">
     <value>Funzionalità</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_CapabilitiesDescription" xml:space="preserve">
-    <value>Abilita ogni tipo di destinazione supportato da questo endpoint.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ImageUploader" xml:space="preserve">
     <value>Uploader di immagini</value>
@@ -2446,14 +2371,8 @@
   <data name="CustomUploaderSettingsWindow_Beautify" xml:space="preserve">
     <value>Formatta</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_BodyDescription" xml:space="preserve">
-    <value>Scegli come codificare i dati della richiesta e i file caricati.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_BodyType" xml:space="preserve">
     <value>Tipo di corpo</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_Cancel" xml:space="preserve">
-    <value>Annulla</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ClearConfirmation" xml:space="preserve">
     <value>Rimuovere tutti gli uploader personalizzati?</value>
@@ -2469,9 +2388,6 @@
   </data>
   <data name="CustomUploaderSettingsWindow_DeletionURL" xml:space="preserve">
     <value>URL di eliminazione</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_DeletionURLDescription" xml:space="preserve">
-    <value>URL facoltativo usato per rimuovere il contenuto caricato.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_DestinationRequired" xml:space="preserve">
     <value>Prima dell&apos;&apos;esportazione deve essere selezionato almeno un tipo di destinazione.</value>
@@ -2490,9 +2406,6 @@
   </data>
   <data name="CustomUploaderSettingsWindow_ErrorMessage" xml:space="preserve">
     <value>Messaggio di errore</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ErrorMessageDescription" xml:space="preserve">
-    <value>Testo estratto quando il servizio segnala un errore.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ExportAllDialogTitle" xml:space="preserve">
     <value>Esporta tutti gli uploader personalizzati</value>
@@ -2524,9 +2437,6 @@
   <data name="CustomUploaderSettingsWindow_ImportedCount" xml:space="preserve">
     <value>Importati {0} uploader personalizzati.</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_InputTokensDescription" xml:space="preserve">
-    <value>I token di input sono disponibili nel menu contestuale dell&apos;&apos;editor.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_JSONPathResponseValue" xml:space="preserve">
     <value>Valore di risposta JSONPath</value>
   </data>
@@ -2557,17 +2467,11 @@
   <data name="CustomUploaderSettingsWindow_RequestData" xml:space="preserve">
     <value>Dati della richiesta</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_RequestDescription" xml:space="preserve">
-    <value>Configura l&apos;&apos;endpoint, i parametri di query e le intestazioni HTTP inviati da ShareX.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_RequestURL" xml:space="preserve">
     <value>URL della richiesta</value>
   </data>
   <data name="CustomUploaderSettingsWindow_RequestURLRequired" xml:space="preserve">
     <value>L&apos;&apos;URL della richiesta deve essere configurato prima dell&apos;&apos;esportazione.</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ResponseDescription" xml:space="preserve">
-    <value>Estrai i valori di risultato di ShareX dalla risposta del servizio.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ResponseHeader" xml:space="preserve">
     <value>Intestazione della risposta</value>
@@ -2578,17 +2482,11 @@
   <data name="CustomUploaderSettingsWindow_ResponseText" xml:space="preserve">
     <value>Testo della risposta</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_ResponseTokensDescription" xml:space="preserve">
-    <value>Fai clic con il pulsante destro per inserire token di risposta.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Result" xml:space="preserve">
     <value>Risultato</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ResultURL" xml:space="preserve">
     <value>URL del risultato</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ResultURLDescription" xml:space="preserve">
-    <value>URL finale copiato o aperto dopo un caricamento riuscito.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_SelectToExport" xml:space="preserve">
     <value>Seleziona un uploader personalizzato da esportare.</value>
@@ -2596,20 +2494,11 @@
   <data name="CustomUploaderSettingsWindow_SelectUploaderToEdit" xml:space="preserve">
     <value>Seleziona un uploader da modificare</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_SelectUploaderToEditDescription" xml:space="preserve">
-    <value>Crea un nuovo uploader, importa un file .sxcu o scegline uno dalla raccolta.</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_SyntaxTestDescription" xml:space="preserve">
-    <value>Visualizza l&apos;&apos;anteprima di come verrà analizzata l&apos;&apos;espressione di risposta.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_TestCancelled" xml:space="preserve">
     <value>Test annullato.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TestCompleted" xml:space="preserve">
     <value>Test completato.</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_TestDescription" xml:space="preserve">
-    <value>Scegli l&apos;&apos;uploader personalizzato attivo per ogni destinazione ed esegui un test reale.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TestFailed" xml:space="preserve">
     <value>Test non riuscito.</value>
@@ -2620,32 +2509,23 @@
   <data name="CustomUploaderSettingsWindow_TestURLSyntax" xml:space="preserve">
     <value>Verifica sintassi URL</value>
   </data>
+  <data name="CustomUploaderSettingsWindow_TestURLSyntaxButton" xml:space="preserve">
+    <value>Verifica sintassi URL...</value>
+  </data>
   <data name="CustomUploaderSettingsWindow_TextOrURLInput" xml:space="preserve">
     <value>Input di testo o URL</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_TextToUpload" xml:space="preserve">
-    <value>Testo da caricare:</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TextUploadSample" xml:space="preserve">
     <value>Test di caricamento testo ShareX</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_TextUploadTestTitle" xml:space="preserve">
-    <value>ShareX - Test caricamento testo</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_ThumbnailURL" xml:space="preserve">
     <value>URL miniatura</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ThumbnailURLDescription" xml:space="preserve">
-    <value>Immagine di anteprima facoltativa restituita dal servizio.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdatedCount" xml:space="preserve">
     <value>Aggiornati {0} file di uploader personalizzati.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdateFolderDialogTitle" xml:space="preserve">
     <value>Aggiorna cartella uploader personalizzati</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_Upload" xml:space="preserve">
-    <value>Carica</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UploadedFile" xml:space="preserve">
     <value>File caricato</value>
@@ -2674,13 +2554,6 @@
   <data name="TaskHelpers_FileDoesNotExist" xml:space="preserve">
     <value>Il file non esiste:
 {0}</value>
-  </data>
-  <data name="TaskHelpers_ExifToolDoesNotExist" xml:space="preserve">
-    <value>ExifTool non esiste nel percorso seguente:
-{0}</value>
-  </data>
-  <data name="TaskHelpers_ExifToolMissingTitle" xml:space="preserve">
-    <value>ShareX - ExifTool mancante</value>
   </data>
   <data name="TaskHelpers_AddCustomUploaderConfirmation" xml:space="preserve">
     <value>Aggiungere l&apos;&apos;uploader personalizzato &quot;{0}&quot;?</value>
@@ -2942,5 +2815,38 @@ Selezione una scorciatoia diversa o chiudi l'applicazione che crea conflitto e r
   <data name="UploadManager_DownloadAndUploadFile_Download_failed" xml:space="preserve">
     <value>Scaricamento fallito:
 {0}</value>
+  </data>
+  <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
+    <value>Monitor di rete...</value>
+  </data>
+  <data name="TaskSettingsWindow_ImageEditor" xml:space="preserve">
+    <value>Modificatore immagini</value>
+  </data>
+  <data name="TaskSettingsWindow_RememberWindowState" xml:space="preserve">
+    <value>Ricorda stato finestra</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowExitConfirmation" xml:space="preserve">
+    <value>Mostra conferma di uscita</value>
+  </data>
+  <data name="TaskSettingsWindow_ZoomToFitOnOpen" xml:space="preserve">
+    <value>Adatta alla finestra all’apertura</value>
+  </data>
+  <data name="TaskSettingsWindow_QuickCrop" xml:space="preserve">
+    <value>Ritaglio rapido</value>
+  </data>
+  <data name="TaskSettingsWindow_AutoCloseEditorOnTask" xml:space="preserve">
+    <value>Chiudi automaticamente l’editor dopo l’attività</value>
+  </data>
+  <data name="TaskSettingsWindow_AutoCopyImageToClipboard" xml:space="preserve">
+    <value>Copia automaticamente l’immagine negli appunti</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowInsertImageDialog" xml:space="preserve">
+    <value>Mostra finestra di inserimento immagine</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowNotifications" xml:space="preserve">
+    <value>Mostra notifiche</value>
+  </data>
+  <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
+    <value>Personalizza barra degli strumenti...</value>
   </data>
 </root>

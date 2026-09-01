@@ -16,7 +16,6 @@
 
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media.Imaging;
@@ -72,6 +71,12 @@ public partial class HistoryWindow : Window
         _services = new HistoryWindowServices();
         InitializeComponent();
         RequestedThemeVariant = ThemeManager.GetCurrentTheme();
+        HistoryList.AddHandler(PointerPressedEvent, OnHistoryPointerPressed,
+            RoutingStrategies.Bubble, handledEventsToo: true);
+        HistoryList.AddHandler(PointerMovedEvent, OnHistoryPointerMoved,
+            RoutingStrategies.Bubble, handledEventsToo: true);
+        HistoryList.AddHandler(PointerReleasedEvent, OnHistoryPointerReleased,
+            RoutingStrategies.Bubble, handledEventsToo: true);
         _filterTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(220) };
         _filterTimer.Tick += OnFilterTimerTick;
     }

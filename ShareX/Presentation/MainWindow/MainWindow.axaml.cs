@@ -16,6 +16,7 @@
 
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Documents;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
@@ -33,6 +34,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using AvaloniaBitmap = Avalonia.Media.Imaging.Bitmap;
 using DrawingBitmap = System.Drawing.Bitmap;
 using DrawingPoint = System.Drawing.Point;
 using DrawingSize = System.Drawing.Size;
@@ -40,7 +42,6 @@ using FormsCursor = System.Windows.Forms.Cursor;
 using FormsDataFormats = System.Windows.Forms.DataFormats;
 using FormsDataObject = System.Windows.Forms.DataObject;
 using FormsOrientation = System.Windows.Forms.Orientation;
-using AvaloniaBitmap = Avalonia.Media.Imaging.Bitmap;
 using MessageBox = ShareX.AvaloniaUI.MessageBox;
 using MessageBoxButtons = ShareX.AvaloniaUI.MessageBoxButtons;
 using MessageBoxResult = ShareX.AvaloniaUI.DialogResult;
@@ -446,7 +447,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
             MenuItem item = new()
             {
-                Header = entry.Header,
+                Header = CreateMenuHeader(entry),
+                Tag = entry,
                 InputGesture = entry.InputGesture,
                 IsEnabled = entry.IsEnabled,
                 IsChecked = entry.IsChecked,
@@ -459,6 +461,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 }
             };
             item.Classes.Add("compact-menu-item");
+            if (entry.BoldWhenChecked)
+            {
+                item.Classes.Add("bold-when-checked");
+            }
 
             if (entry.BitmapIcon is { Length: > 0 })
             {
@@ -472,12 +478,36 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             if (entry.CreateChildren != null)
             {
                 AddLazySubmenu(item, entry.CreateChildren, menu);
+
+                if (entry.ExecuteAsync != null)
+                {
+                    item.AddHandler(PointerPressedEvent, (_, e) =>
+                    {
+                        PointerPoint point = e.GetCurrentPoint(item);
+                        if (point.Properties.PointerUpdateKind == PointerUpdateKind.LeftButtonPressed &&
+                            new Rect(item.Bounds.Size).Contains(point.Position))
+                        {
+                            item.IsChecked = item.ToggleType switch
+                            {
+                                MenuItemToggleType.CheckBox => !item.IsChecked,
+                                MenuItemToggleType.Radio => true,
+                                _ => item.IsChecked
+                            };
+                            item.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent, item));
+                        }
+                    }, RoutingStrategies.Tunnel, handledEventsToo: true);
+                }
             }
 
             if (entry.ExecuteAsync != null)
             {
-                item.Click += (_, _) =>
+                item.Click += (_, e) =>
                 {
+                    if (!ReferenceEquals(e.Source, item))
+                    {
+                        return;
+                    }
+
                     if (!entry.StaysOpenOnClick)
                     {
                         // Modal WinForms dialogs and capture overlays cannot be opened while
@@ -491,7 +521,11 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                         try
                         {
                             await entry.ExecuteAsync();
-                            if (!entry.StaysOpenOnClick)
+                            if (entry.StaysOpenOnClick)
+                            {
+                                RefreshMenuHeaders(menu.Items);
+                            }
+                            else
                             {
                                 RefreshMenus();
                             }
@@ -506,6 +540,51 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
             yield return item;
         }
+    }
+
+    private void RefreshMenuHeaders(IEnumerable<object?> items)
+    {
+        foreach (MenuItem item in items.OfType<MenuItem>())
+        {
+            if (item.Tag is MainMenuEntry entry)
+            {
+                item.Header = CreateMenuHeader(entry);
+            }
+
+            RefreshMenuHeaders(item.Items);
+        }
+    }
+
+    private object CreateMenuHeader(MainMenuEntry entry)
+    {
+        string header = entry.Header;
+        string? accentText = entry.AccentText;
+        if (string.IsNullOrEmpty(accentText))
+        {
+            return header;
+        }
+
+        int accentIndex = header.IndexOf(accentText, StringComparison.CurrentCulture);
+        if (accentIndex < 0)
+        {
+            return header;
+        }
+
+        Run accentRun = new()
+        {
+            Text = accentText,
+            Foreground = this.FindResource("ShareX.Brush.Accent.Start") as IBrush
+        };
+        InlineCollection inlines = new();
+        inlines.Add(header[..accentIndex]);
+        inlines.Add(accentRun);
+        inlines.Add(header[(accentIndex + accentText.Length)..]);
+
+        return new TextBlock
+        {
+            Inlines = inlines,
+            VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
+        };
     }
 
     private void AddLazySubmenu(MenuItem item, Func<IReadOnlyList<MainMenuEntry>> createChildren, ContextMenu menu)

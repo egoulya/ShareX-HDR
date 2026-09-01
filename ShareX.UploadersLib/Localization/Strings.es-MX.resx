@@ -460,6 +460,9 @@
   <data name="DestinationSettings_Field_Exposure" xml:space="preserve">
     <value>Visibilidad</value>
   </data>
+  <data name="DestinationSettings_Field_File_ID_Length" xml:space="preserve">
+    <value>Longitud del ID del archivo</value>
+  </data>
   <data name="DestinationSettings_Field_Files" xml:space="preserve">
     <value>Archivos</value>
   </data>
@@ -610,6 +613,9 @@
   <data name="DestinationSettings_Field_Show_Dialog" xml:space="preserve">
     <value>Mostrar diálogo</value>
   </data>
+  <data name="DestinationSettings_Field_Show_Metadata" xml:space="preserve">
+    <value>Mostrar metadatos</value>
+  </data>
   <data name="DestinationSettings_Field_Signature" xml:space="preserve">
     <value>Firma</value>
   </data>
@@ -651,6 +657,9 @@
   </data>
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>Token</value>
+  </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>Ingrese su código actual de autenticación de dos factores</value>
   </data>
   <data name="DestinationSettings_Field_TTL" xml:space="preserve">
     <value>TTL</value>
@@ -699,6 +708,9 @@
   </data>
   <data name="DestinationSettings_Field_Use_Long_Link" xml:space="preserve">
     <value>Usar enlace largo</value>
+  </data>
+  <data name="DestinationSettings_Field_Use_Multipart_Upload" xml:space="preserve">
+    <value>Usar carga multiparte</value>
   </data>
   <data name="DestinationSettings_Field_Use_Path_Style" xml:space="preserve">
     <value>Usar estilo de ruta</value>
@@ -892,6 +904,12 @@
   <data name="FileDestination_GoogleDrive" xml:space="preserve">
     <value>Google Drive</value>
   </data>
+  <data name="FileDestination_ImgFish" xml:space="preserve">
+    <value>img.fish</value>
+  </data>
+  <data name="FileDestination_Immich" xml:space="preserve">
+    <value>Immich</value>
+  </data>
   <data name="FileDestination_Lambda" xml:space="preserve">
     <value>Lambda</value>
   </data>
@@ -900,6 +918,9 @@
   </data>
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
@@ -942,9 +963,6 @@
   </data>
   <data name="FileDestination_Uguu" xml:space="preserve">
     <value>Uguu</value>
-  </data>
-  <data name="FileDestination_Vault_ooo" xml:space="preserve">
-    <value>Vault.ooo</value>
   </data>
   <data name="FileDestination_YouTube" xml:space="preserve">
     <value>YouTube</value>
@@ -1494,9 +1512,6 @@
   </data>
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>Acortador de ancho cero</value>
-  </data>
-  <data name="Vault_No_valid_metadata_returned" xml:space="preserve">
-    <value>No se devolvieron metadatos válidos.</value>
   </data>
   <data name="Yourls_Credentials_missing" xml:space="preserve">
     <value>Falta la firma o el nombre de usuario/contraseña.</value>

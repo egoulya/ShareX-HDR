@@ -15,7 +15,6 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
-using Avalonia.VisualTree;
 using System;
 
 namespace ShareX.ScreenCaptureLib.Presentation.RegionCapture;
@@ -23,6 +22,9 @@ namespace ShareX.ScreenCaptureLib.Presentation.RegionCapture;
 /// <summary>Static pixel grid and center-cell outline for the region magnifier.</summary>
 public sealed class MagnifierPixelGrid : Control
 {
+    public static readonly StyledProperty<IBrush> AccentBrushProperty =
+        AvaloniaProperty.Register<MagnifierPixelGrid, IBrush>(nameof(AccentBrush), Brushes.DodgerBlue);
+
     public static readonly StyledProperty<int> PixelCountProperty =
         AvaloniaProperty.Register<MagnifierPixelGrid, int>(nameof(PixelCount), 15);
 
@@ -30,7 +32,13 @@ public sealed class MagnifierPixelGrid : Control
 
     static MagnifierPixelGrid()
     {
-        AffectsRender<MagnifierPixelGrid>(PixelCountProperty);
+        AffectsRender<MagnifierPixelGrid>(AccentBrushProperty, PixelCountProperty);
+    }
+
+    public IBrush AccentBrush
+    {
+        get => GetValue(AccentBrushProperty);
+        set => SetValue(AccentBrushProperty, value);
     }
 
     public int PixelCount
@@ -63,6 +71,19 @@ public sealed class MagnifierPixelGrid : Control
         int top = SnapPhysical(originPhysicalY);
         int right = SnapPhysical(originPhysicalX + Bounds.Width * scale);
         int bottom = SnapPhysical(originPhysicalY + Bounds.Height * scale);
+        int centerIndex = count / 2;
+        int centerLeft = SnapPhysical(originPhysicalX + centerIndex * Bounds.Width * scale / count);
+        int centerTop = SnapPhysical(originPhysicalY + centerIndex * Bounds.Height * scale / count);
+        int centerRight = SnapPhysical(originPhysicalX + (centerIndex + 1) * Bounds.Width * scale / count);
+        int centerBottom = SnapPhysical(originPhysicalY + (centerIndex + 1) * Bounds.Height * scale / count);
+
+        using (context.PushOpacity(75d / byte.MaxValue))
+        {
+            DrawPhysicalRectangle(context, AccentBrush, left, centerTop, centerLeft, centerBottom - 1, originPhysicalX, originPhysicalY, scale);
+            DrawPhysicalRectangle(context, AccentBrush, centerRight, centerTop, right, centerBottom - 1, originPhysicalX, originPhysicalY, scale);
+            DrawPhysicalRectangle(context, AccentBrush, centerLeft, top, centerRight - 1, centerTop, originPhysicalX, originPhysicalY, scale);
+            DrawPhysicalRectangle(context, AccentBrush, centerLeft, centerBottom, centerRight - 1, bottom, originPhysicalX, originPhysicalY, scale);
+        }
 
         for (int index = 1; index < count; index++)
         {
@@ -71,12 +92,6 @@ public sealed class MagnifierPixelGrid : Control
             DrawPhysicalRectangle(context, GridBrush, x - 1, top, x, bottom, originPhysicalX, originPhysicalY, scale);
             DrawPhysicalRectangle(context, GridBrush, left, y - 1, right, y, originPhysicalX, originPhysicalY, scale);
         }
-
-        int centerIndex = count / 2;
-        int centerLeft = SnapPhysical(originPhysicalX + centerIndex * Bounds.Width * scale / count);
-        int centerTop = SnapPhysical(originPhysicalY + centerIndex * Bounds.Height * scale / count);
-        int centerRight = SnapPhysical(originPhysicalX + (centerIndex + 1) * Bounds.Width * scale / count);
-        int centerBottom = SnapPhysical(originPhysicalY + (centerIndex + 1) * Bounds.Height * scale / count);
 
         // Grid lines occupy the physical pixel immediately before each cell boundary.
         // Start the center outline there too, matching the legacy magnifier while

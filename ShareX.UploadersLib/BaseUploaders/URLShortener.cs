@@ -27,6 +27,11 @@ namespace ShareX.UploadersLib
 {
     public abstract class URLShortener : Uploader
     {
-        public abstract UploadResult ShortenURL(string url);
+        public Task<UploadResult> ShortenURLAsync(string url, CancellationToken cancellationToken = default)
+        {
+            return RunOperationAsync(token => ShortenURLCoreAsync(url, token), cancellationToken);
+        }
+
+        protected abstract Task<UploadResult> ShortenURLCoreAsync(string url, CancellationToken cancellationToken);
     }
 }

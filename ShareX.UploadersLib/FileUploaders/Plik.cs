@@ -30,7 +30,6 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace ShareX.UploadersLib.FileUploaders
 {
@@ -58,7 +57,7 @@ namespace ShareX.UploadersLib.FileUploaders
             Settings = settings;
         }
 
-        public override UploadResult Upload(Stream stream, string fileName)
+        protected override async Task<UploadResult> UploadCoreAsync(Stream stream, string fileName, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(Settings.URL))
             {
@@ -91,11 +90,13 @@ namespace ShareX.UploadersLib.FileUploaders
                 metaDataReq.Login = Settings.Login;
                 metaDataReq.Password = Settings.Password;
             }
-            string metaDataResp = SendRequest(HttpMethod.POST, Settings.URL + "/upload", JsonConvert.SerializeObject(metaDataReq), headers: requestHeaders);
+            string metaDataResp = await SendRequestAsync(HttpMethod.POST, Settings.URL + "/upload", JsonConvert.SerializeObject(metaDataReq), headers: requestHeaders,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
             UploadMetadataResponse metaData = JsonConvert.DeserializeObject<UploadMetadataResponse>(metaDataResp);
             requestHeaders["x-uploadtoken"] = metaData.uploadToken;
             string url = $"{Settings.URL}/file/{metaData.id}/{metaData.files.First().Value.id}/{fileName}";
-            UploadResult FileDatReq = SendRequestFile(url, stream, fileName, "file", headers: requestHeaders);
+            UploadResult FileDatReq = await SendRequestFileAsync(url, stream, fileName, "file", headers: requestHeaders,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
 
             return ConvertResult(metaData, FileDatReq);
         }
@@ -107,25 +108,6 @@ namespace ShareX.UploadersLib.FileUploaders
             UploadMetadataResponseFile actFile = metaData.files.First().Value;
             result.URL = $"{Settings.URL}/file/{metaData.id}/{actFile.id}/{URLHelpers.URLEncode(actFile.fileName)}";
             return result;
-        }
-
-        internal static void CalculateTTLValue(NumericUpDown nudTTL, int newUnit, int oldUnit)
-        {
-            if (newUnit != 3)
-            {
-                if (nudTTL.Value == -1)
-                {
-                    nudTTL.SetValue(1);
-                }
-
-                nudTTL.SetValue(nudTTL.Value * GetMultiplyIndex(newUnit, oldUnit));
-                nudTTL.ReadOnly = false;
-            }
-            else
-            {
-                nudTTL.SetValue(-1);
-                nudTTL.ReadOnly = true;
-            }
         }
 
         internal static decimal GetMultiplyIndex(int newUnit, int oldUnit)

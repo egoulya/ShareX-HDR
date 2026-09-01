@@ -23,15 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.Localization;
 using ShareX.HelpersLib;
-using ShareX.Properties;
+using ShareX.Localization;
 using ShareX.ScreenCaptureLib;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using MessageBox = ShareX.AvaloniaUI.MessageBox;
 using MessageBoxButtons = ShareX.AvaloniaUI.MessageBoxButtons;
 using MessageBoxIcon = ShareX.AvaloniaUI.MessageBoxIcon;
@@ -45,7 +43,7 @@ namespace ShareX
         private static ScreenRecorder screenRecorder;
         private static ScreenRecordWindow recordForm;
 
-        public static void StartStopRecording(ScreenRecordOutput outputType, ScreenRecordStartMethod startMethod, TaskSettings taskSettings)
+        public static async void StartStopRecording(ScreenRecordOutput outputType, ScreenRecordStartMethod startMethod, TaskSettings taskSettings)
         {
             if (IsRecording)
             {
@@ -56,7 +54,7 @@ namespace ShareX
             }
             else
             {
-                StartRecording(outputType, taskSettings, startMethod);
+                await StartRecording(outputType, taskSettings, startMethod);
             }
         }
 
@@ -84,7 +82,7 @@ namespace ShareX
             }
         }
 
-        private static void StartRecording(ScreenRecordOutput outputType, TaskSettings taskSettings, ScreenRecordStartMethod startMethod = ScreenRecordStartMethod.Region)
+        private static async Task StartRecording(ScreenRecordOutput outputType, TaskSettings taskSettings, ScreenRecordStartMethod startMethod = ScreenRecordStartMethod.Region)
         {
             if (outputType == ScreenRecordOutput.GIF)
             {
@@ -137,15 +135,12 @@ namespace ShareX
             switch (startMethod)
             {
                 case ScreenRecordStartMethod.Region:
-                    if (taskSettings.CaptureSettings.ScreenRecordTransparentRegion)
+                    var selection = await RegionCaptureTasks.GetRectangleRegionAsync(
+                        taskSettings.CaptureSettings.RegionCaptureOptions);
+                    if (selection != null)
                     {
-                        RegionCaptureTasks.GetRectangleRegionTransparent(out captureRectangle);
-                    }
-                    else
-                    {
-                        RegionCaptureTasks.GetRectangleRegion(out captureRectangle, out WindowInfo windowInfo, taskSettings.CaptureSettings.SurfaceOptions);
-
-                        metadata.UpdateInfo(windowInfo);
+                        captureRectangle = selection.Value.Rectangle;
+                        metadata.UpdateInfo(selection.Value.WindowInfo);
                     }
                     break;
                 case ScreenRecordStartMethod.ActiveWindow:
@@ -211,7 +206,7 @@ namespace ShareX
             recordForm.StopRequested += StopRecording;
             recordForm.Show();
 
-            Task.Run(() =>
+            _ = Task.Run(() =>
             {
                 try
                 {

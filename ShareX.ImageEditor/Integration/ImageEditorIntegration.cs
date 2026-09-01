@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using Avalonia.Controls;
 using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Threading;
 using ShareX.ImageEditor.Presentation.ViewModels;
@@ -109,7 +108,6 @@ namespace ShareX.ImageEditor.Integration
                     }
 
                     vm.ShowFileMenu = true;
-                    vm.ShowOptionsButton = true;
                     vm.ShowTaskButtons = true;
                     vm.UseContinueWorkflow = taskMode;
                     vm.ShowBottomToolbar = true;

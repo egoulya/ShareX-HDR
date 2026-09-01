@@ -395,7 +395,7 @@ namespace ShareX
 
         #region Capture / Region capture
 
-        public RegionCaptureOptions SurfaceOptions = new RegionCaptureOptions();
+        public RegionCaptureOptions RegionCaptureOptions = new RegionCaptureOptions();
 
         #endregion Capture / Region capture
 
@@ -413,7 +413,6 @@ namespace ShareX
         public float ScreenRecordDuration = 3f;
         public bool ScreenRecordTwoPassEncoding = false;
         public bool ScreenRecordAskConfirmationOnAbort = false;
-        public bool ScreenRecordTransparentRegion = false;
 
         #endregion Capture / Screen recorder
 
@@ -464,6 +463,7 @@ namespace ShareX
 
     public class TaskSettingsTools
     {
+        public ColorPickerOptions ColorPickerOptions = new ColorPickerOptions();
         public ScreenColorPickerOptions ScreenColorPickerOptions = new ScreenColorPickerOptions();
         public PinToScreenOptions PinToScreenOptions = new PinToScreenOptions();
         public IndexerSettings IndexerSettings = new IndexerSettings();
@@ -474,8 +474,6 @@ namespace ShareX
         public AIOptions AIOptions = new AIOptions();
         public ImageEditorOptions ImageEditorOptions = new ImageEditorOptions();
         public BackgroundRemoverOptions BackgroundRemoverOptions = new BackgroundRemoverOptions();
-        public bool UseLegacyImageEditor = false;
-        public bool ShowImageEditorSelector = true;
     }
 
     public class TaskSettingsAdvanced

@@ -15,7 +15,6 @@ using ShareX.AvaloniaUI.Theming;
 using ShareX.HelpersLib;
 using ShareX.UploadersLib.FileUploaders;
 using System;
-using System.Threading.Tasks;
 
 namespace ShareX.UploadersLib;
 
@@ -51,7 +50,7 @@ public partial class PuushLoginWindow : Window
 
         try
         {
-            string? apiKey = await Task.Run(() => new Puush().Login(email, password));
+            string? apiKey = await new Puush().LoginAsync(email, password);
             if (!string.IsNullOrEmpty(apiKey))
             {
                 SubmittedApiKey = apiKey;

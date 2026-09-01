@@ -30,14 +30,11 @@ namespace ShareX.UploadersLib
 {
     public abstract class ImageUploader : FileUploader
     {
-        public UploadResult UploadImage(Image image, string fileName)
+        public async Task<UploadResult> UploadImageAsync(Image image, string fileName, CancellationToken cancellationToken = default)
         {
-            using (MemoryStream stream = new MemoryStream())
-            {
-                image.Save(stream, image.RawFormat);
-
-                return Upload(stream, fileName);
-            }
+            using MemoryStream stream = new MemoryStream();
+            image.Save(stream, image.RawFormat);
+            return await UploadAsync(stream, fileName, cancellationToken).ConfigureAwait(false);
         }
     }
 }

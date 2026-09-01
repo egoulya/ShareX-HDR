@@ -9,14 +9,16 @@
 
 #nullable enable
 
+using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Platform.Storage;
 using Avalonia.Threading;
-using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using ShareX.AvaloniaUI.Theming;
 using ShareX.HelpersLib;
+using ShareX.ImageEditor.Integration;
+using ShareX.ImageEditor.Presentation.ViewModels;
+using ShareX.ImageEditor.Presentation.Views;
 using ShareX.Localization;
 using System;
 using System.Collections.Generic;
@@ -79,6 +81,30 @@ public partial class TaskSettingsWindow : Window
         {
             page.IsVisible = id == pageId;
         }
+    }
+
+    internal void ShowImageEditorToolbarEditor(ImageEditorOptions options)
+    {
+        ImageEditorIntegration.Initialize();
+
+        ToolbarCustomizationDialogView view = new();
+        view.DataContext = new ToolbarCustomizationDialogViewModel(
+            ToolbarCustomizationItemViewModel.CreateFromOptions(options.ToolbarItems),
+            items =>
+            {
+                options.ToolbarItems = items.Select(item => item.ToOptions()).ToList();
+                HideImageEditorToolbarEditor();
+            },
+            HideImageEditorToolbarEditor);
+
+        ImageEditorToolbarEditor.Content = view;
+        ImageEditorToolbarEditorOverlay.IsVisible = true;
+    }
+
+    private void HideImageEditorToolbarEditor()
+    {
+        ImageEditorToolbarEditorOverlay.IsVisible = false;
+        ImageEditorToolbarEditor.Content = null;
     }
 
     internal void ShowActionEditor(ExternalProgram? action, Action<ExternalProgram> saved)
@@ -185,7 +211,12 @@ public partial class TaskSettingsWindow : Window
             return;
         }
 
-        if (NotificationButtonsEditorOverlay.IsVisible)
+        if (ImageEditorToolbarEditorOverlay.IsVisible)
+        {
+            HideImageEditorToolbarEditor();
+            e.Handled = true;
+        }
+        else if (NotificationButtonsEditorOverlay.IsVisible)
         {
             HideNotificationButtonsEditor();
             e.Handled = true;

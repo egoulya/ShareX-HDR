@@ -178,9 +178,6 @@
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>छवि संपादित करें...</value>
   </data>
-  <data name="MainMenuBuilder_EnableAddImageEffects" xml:space="preserve">
-    <value>छवि प्रभाव जोड़ना सक्षम करें</value>
-  </data>
   <data name="MainMenuBuilder_EnableHotkeys" xml:space="preserve">
     <value>हॉटकी सक्षम करें</value>
   </data>
@@ -330,12 +327,6 @@
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>क्षेत्र...</value>
-  </data>
-  <data name="MainMenuBuilder_RegionLight" xml:space="preserve">
-    <value>क्षेत्र (हल्का)...</value>
-  </data>
-  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
-    <value>क्षेत्र (पारदर्शी)...</value>
   </data>
   <data name="MainMenuBuilder_RestartAsAdministrator" xml:space="preserve">
     <value>व्यवस्थापक के रूप में पुनः आरंभ करें</value>
@@ -1363,8 +1354,8 @@
   <data name="TaskSettingsWindow_Add" xml:space="preserve">
     <value>जोड़ें</value>
   </data>
-  <data name="TaskSettingsWindow_UseMultiRegionMode" xml:space="preserve">
-    <value>बहु-क्षेत्र मोड उपयोग करें</value>
+  <data name="TaskSettingsWindow_QuickCapture" xml:space="preserve">
+    <value>त्वरित कैप्चर</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>विंडो क्षेत्र पहचानें</value>
@@ -1399,29 +1390,14 @@
   <data name="TaskSettingsWindow_MagnifierPixelCount" xml:space="preserve">
     <value>आवर्धक पिक्सेल संख्या:</value>
   </data>
-  <data name="TaskSettingsWindow_MagnifierPixelSize" xml:space="preserve">
-    <value>आवर्धक पिक्सेल आकार:</value>
+  <data name="TaskSettingsWindow_MagnifierSize" xml:space="preserve">
+    <value>आवर्धक आकार:</value>
   </data>
   <data name="TaskSettingsWindow_ShowCenterCrosshair" xml:space="preserve">
     <value>केंद्र क्रॉसहेयर दिखाएँ</value>
   </data>
   <data name="TaskSettingsWindow_ShowScreenWideCrosshair" xml:space="preserve">
     <value>पूरी स्क्रीन का क्रॉसहेयर दिखाएँ</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedSizeRegionMode" xml:space="preserve">
-    <value>निश्चित आकार क्षेत्र मोड</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedWidth" xml:space="preserve">
-    <value>निश्चित चौड़ाई:</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedHeight" xml:space="preserve">
-    <value>निश्चित ऊँचाई:</value>
-  </data>
-  <data name="TaskSettingsWindow_ShowFPS" xml:space="preserve">
-    <value>FPS दिखाएँ</value>
-  </data>
-  <data name="TaskSettingsWindow_FPSLimit" xml:space="preserve">
-    <value>FPS सीमा:</value>
   </data>
   <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
     <value>स्क्रीन रिकॉर्डिंग FPS:</value>
@@ -1452,9 +1428,6 @@
   </data>
   <data name="TaskSettingsWindow_AskForConfirmationWhenAborting" xml:space="preserve">
     <value>निरस्त करते समय पुष्टि माँगें</value>
-  </data>
-  <data name="TaskSettingsWindow_UseTransparentRegionSelection" xml:space="preserve">
-    <value>पारदर्शी क्षेत्र चयन उपयोग करें</value>
   </data>
   <data name="TaskSettingsWindow_ScreenRecordingOptionsWithEllipsis" xml:space="preserve">
     <value>स्क्रीन रिकॉर्डिंग विकल्प...</value>
@@ -1528,9 +1501,6 @@
   <data name="TaskSettingsWindow_SeparateExtensionsWithCommasForExamplePngJpgJpeg" xml:space="preserve">
     <value>एक्सटेंशन को अल्पविराम से अलग करें, उदाहरण: png, jpg, jpeg</value>
   </data>
-  <data name="TaskSettingsWindow_UseLegacyImageEditor" xml:space="preserve">
-    <value>पुराना छवि संपादक उपयोग करें</value>
-  </data>
   <data name="TaskSettingsWindow_Format" xml:space="preserve">
     <value>प्रारूप:</value>
   </data>
@@ -1603,12 +1573,6 @@
   <data name="TaskSettingsWindow_InformationAndMagnifier" xml:space="preserve">
     <value>जानकारी और आवर्धक</value>
   </data>
-  <data name="TaskSettingsWindow_FixedSizeAndPerformance" xml:space="preserve">
-    <value>निश्चित आकार और प्रदर्शन</value>
-  </data>
-  <data name="TaskSettingsWindow_SnapSizes" xml:space="preserve">
-    <value>स्नैप आकार</value>
-  </data>
   <data name="TaskSettingsWindow_Recording" xml:space="preserve">
     <value>रिकॉर्डिंग</value>
   </data>
@@ -1635,9 +1599,6 @@
   </data>
   <data name="TaskSettingsWindow_OverrideToolsSettings" xml:space="preserve">
     <value>उपकरण सेटिंग ओवरराइड करें</value>
-  </data>
-  <data name="TaskSettingsWindow_ImageEditor" xml:space="preserve">
-    <value>छवि संपादक</value>
   </data>
   <data name="TaskSettingsWindow_ScreenColorPicker" xml:space="preserve">
     <value>स्क्रीन रंग चयनकर्ता</value>
@@ -1944,33 +1905,6 @@
   </data>
   <data name="FirstTimeConfigWindow_StartWithWindowsEnabledByPolicy" xml:space="preserve">
     <value>आपके संगठन ने स्टार्टअप सक्षम किया है</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Title" xml:space="preserve">
-    <value>ShareX - छवि संपादक चयनकर्ता</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Heading" xml:space="preserve">
-    <value>छवि संपादक चुनें</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Subtitle" xml:space="preserve">
-    <value>चुनें कि ShareX कौन-सा संपादक खोले।</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ModernEditor" xml:space="preserve">
-    <value>आधुनिक छवि संपादक</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Recommended" xml:space="preserve">
-    <value>अनुशंसित</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ModernDescription" xml:space="preserve">
-    <value>नवीनतम उपकरण और सुधारों वाला वर्तमान ShareX संपादक।</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_LegacyEditor" xml:space="preserve">
-    <value>पुराना छवि संपादक</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_LegacyDescription" xml:space="preserve">
-    <value>क्लासिक ShareX क्षेत्र-कैप्चर संपादक।</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ChangeLater" xml:space="preserve">
-    <value>आप इसे बाद में कार्य सेटिंग &gt; उपकरण में बदल सकते हैं।</value>
   </data>
   <data name="ShortenURLWindow_Title" xml:space="preserve">
     <value>ShareX - URL संक्षिप्त करें</value>
@@ -2342,7 +2276,7 @@
     <value>अपलोडर लाइब्रेरी</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Guide" xml:space="preserve">
-    <value>अनुकूलित अपलोडर मार्गदर्शिका</value>
+    <value>अनुकूलित अपलोडर मार्गदर्शिका...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_SearchUploaders" xml:space="preserve">
     <value>अपलोडर खोजें</value>
@@ -2351,25 +2285,25 @@
     <value>नया</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Import" xml:space="preserve">
-    <value>आयात करें</value>
+    <value>आयात करें...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Duplicate" xml:space="preserve">
     <value>चुने गए अपलोडर की प्रतिलिपि बनाएँ</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Export" xml:space="preserve">
-    <value>चुना गया अपलोडर निर्यात करें</value>
+    <value>चुना गया अपलोडर निर्यात करें...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Remove" xml:space="preserve">
     <value>चुना गया अपलोडर हटाएँ</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ExportAll" xml:space="preserve">
-    <value>सभी निर्यात करें</value>
+    <value>सभी निर्यात करें...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ClearAll" xml:space="preserve">
-    <value>सभी साफ़ करें</value>
+    <value>सभी साफ़ करें...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdateFolder" xml:space="preserve">
-    <value>फ़ोल्डर अपडेट करें</value>
+    <value>फ़ोल्डर अपडेट करें...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Overview" xml:space="preserve">
     <value>अवलोकन</value>
@@ -2386,9 +2320,6 @@
   <data name="CustomUploaderSettingsWindow_Test" xml:space="preserve">
     <value>परीक्षण</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_OverviewDescription" xml:space="preserve">
-    <value>इस अपलोडर को पहचानने योग्य नाम दें और चुनें कि ShareX इसे कहाँ उपयोग कर सकता है।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Identity" xml:space="preserve">
     <value>पहचान</value>
   </data>
@@ -2398,14 +2329,8 @@
   <data name="CustomUploaderSettingsWindow_NamePlaceholder" xml:space="preserve">
     <value>खाली छोड़ने पर अनुरोध होस्ट उपयोग होता है</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_NameDescription" xml:space="preserve">
-    <value>यह नाम पूरे ShareX में दिखाई देता है। परिवर्तन तुरंत सहेजे जाते हैं।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Capabilities" xml:space="preserve">
     <value>क्षमताएँ</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_CapabilitiesDescription" xml:space="preserve">
-    <value>इस एंडपॉइंट द्वारा समर्थित हर गंतव्य प्रकार सक्षम करें।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ImageUploader" xml:space="preserve">
     <value>छवि अपलोडर</value>
@@ -2446,14 +2371,8 @@
   <data name="CustomUploaderSettingsWindow_Beautify" xml:space="preserve">
     <value>सुंदर बनाएँ</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_BodyDescription" xml:space="preserve">
-    <value>चुनें कि अनुरोध डेटा और अपलोड की गई फ़ाइलें कैसे एन्कोड हों।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_BodyType" xml:space="preserve">
     <value>बॉडी प्रकार</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_Cancel" xml:space="preserve">
-    <value>रद्द करें</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ClearConfirmation" xml:space="preserve">
     <value>सभी अनुकूलित अपलोडर हटाएँ?</value>
@@ -2469,9 +2388,6 @@
   </data>
   <data name="CustomUploaderSettingsWindow_DeletionURL" xml:space="preserve">
     <value>हटाने का URL</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_DeletionURLDescription" xml:space="preserve">
-    <value>अपलोड की गई सामग्री हटाने के लिए वैकल्पिक URL।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_DestinationRequired" xml:space="preserve">
     <value>निर्यात से पहले कम से कम एक गंतव्य प्रकार चुनना आवश्यक है।</value>
@@ -2490,9 +2406,6 @@
   </data>
   <data name="CustomUploaderSettingsWindow_ErrorMessage" xml:space="preserve">
     <value>त्रुटि संदेश</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ErrorMessageDescription" xml:space="preserve">
-    <value>सेवा द्वारा विफलता बताने पर निकाला गया पाठ।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ExportAllDialogTitle" xml:space="preserve">
     <value>सभी अनुकूलित अपलोडर निर्यात करें</value>
@@ -2524,9 +2437,6 @@
   <data name="CustomUploaderSettingsWindow_ImportedCount" xml:space="preserve">
     <value>{0} अनुकूलित अपलोडर आयात किए गए।</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_InputTokensDescription" xml:space="preserve">
-    <value>इनपुट टोकन संपादक के संदर्भ मेनू में उपलब्ध हैं।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_JSONPathResponseValue" xml:space="preserve">
     <value>JSONPath प्रतिक्रिया मान</value>
   </data>
@@ -2557,17 +2467,11 @@
   <data name="CustomUploaderSettingsWindow_RequestData" xml:space="preserve">
     <value>अनुरोध डेटा</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_RequestDescription" xml:space="preserve">
-    <value>ShareX द्वारा भेजे गए एंडपॉइंट, क्वेरी पैरामीटर और HTTP हेडर कॉन्फ़िगर करें।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_RequestURL" xml:space="preserve">
     <value>अनुरोध URL</value>
   </data>
   <data name="CustomUploaderSettingsWindow_RequestURLRequired" xml:space="preserve">
     <value>निर्यात से पहले अनुरोध URL कॉन्फ़िगर होना चाहिए।</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ResponseDescription" xml:space="preserve">
-    <value>सेवा प्रतिक्रिया से ShareX परिणाम मान निकालें।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ResponseHeader" xml:space="preserve">
     <value>प्रतिक्रिया हेडर</value>
@@ -2578,17 +2482,11 @@
   <data name="CustomUploaderSettingsWindow_ResponseText" xml:space="preserve">
     <value>प्रतिक्रिया पाठ</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_ResponseTokensDescription" xml:space="preserve">
-    <value>प्रतिक्रिया टोकन सम्मिलित करने के लिए दायाँ-क्लिक करें।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Result" xml:space="preserve">
     <value>परिणाम</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ResultURL" xml:space="preserve">
     <value>परिणाम URL</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ResultURLDescription" xml:space="preserve">
-    <value>सफल अपलोड के बाद कॉपी या खोला जाने वाला अंतिम URL।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_SelectToExport" xml:space="preserve">
     <value>निर्यात करने के लिए अनुकूलित अपलोडर चुनें।</value>
@@ -2596,20 +2494,11 @@
   <data name="CustomUploaderSettingsWindow_SelectUploaderToEdit" xml:space="preserve">
     <value>संपादित करने के लिए अपलोडर चुनें</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_SelectUploaderToEditDescription" xml:space="preserve">
-    <value>नया अपलोडर बनाएँ, .sxcu फ़ाइल आयात करें या लाइब्रेरी से चुनें।</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_SyntaxTestDescription" xml:space="preserve">
-    <value>पूर्वावलोकन करें कि प्रतिक्रिया अभिव्यक्ति कैसे पार्स होगी।</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_TestCancelled" xml:space="preserve">
     <value>परीक्षण रद्द किया गया।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TestCompleted" xml:space="preserve">
     <value>परीक्षण पूरा हुआ।</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_TestDescription" xml:space="preserve">
-    <value>प्रत्येक गंतव्य के लिए सक्रिय अनुकूलित अपलोडर चुनें और लाइव परीक्षण चलाएँ।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TestFailed" xml:space="preserve">
     <value>परीक्षण विफल।</value>
@@ -2620,32 +2509,23 @@
   <data name="CustomUploaderSettingsWindow_TestURLSyntax" xml:space="preserve">
     <value>URL सिंटैक्स जाँचें</value>
   </data>
+  <data name="CustomUploaderSettingsWindow_TestURLSyntaxButton" xml:space="preserve">
+    <value>URL सिंटैक्स जाँचें...</value>
+  </data>
   <data name="CustomUploaderSettingsWindow_TextOrURLInput" xml:space="preserve">
     <value>पाठ या URL इनपुट</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_TextToUpload" xml:space="preserve">
-    <value>अपलोड करने का पाठ:</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TextUploadSample" xml:space="preserve">
     <value>ShareX पाठ अपलोड परीक्षण</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_TextUploadTestTitle" xml:space="preserve">
-    <value>ShareX - पाठ अपलोड परीक्षण</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_ThumbnailURL" xml:space="preserve">
     <value>थंबनेल URL</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ThumbnailURLDescription" xml:space="preserve">
-    <value>सेवा द्वारा लौटाई गई वैकल्पिक पूर्वावलोकन छवि।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdatedCount" xml:space="preserve">
     <value>{0} अनुकूलित अपलोडर फ़ाइलें अपडेट की गईं।</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdateFolderDialogTitle" xml:space="preserve">
     <value>अनुकूलित अपलोडर फ़ोल्डर अपडेट करें</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_Upload" xml:space="preserve">
-    <value>अपलोड करें</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UploadedFile" xml:space="preserve">
     <value>अपलोड की गई फ़ाइल</value>
@@ -2674,13 +2554,6 @@
   <data name="TaskHelpers_FileDoesNotExist" xml:space="preserve">
     <value>फ़ाइल मौजूद नहीं है:
 {0}</value>
-  </data>
-  <data name="TaskHelpers_ExifToolDoesNotExist" xml:space="preserve">
-    <value>ExifTool निम्न पथ पर मौजूद नहीं है:
-{0}</value>
-  </data>
-  <data name="TaskHelpers_ExifToolMissingTitle" xml:space="preserve">
-    <value>ShareX - ExifTool मौजूद नहीं है</value>
   </data>
   <data name="TaskHelpers_AddCustomUploaderConfirmation" xml:space="preserve">
     <value>क्या आप "{0}" अनुकूलित अपलोडर जोड़ना चाहते हैं?</value>
@@ -2942,5 +2815,38 @@
   <data name="UploadManager_DownloadAndUploadFile_Download_failed" xml:space="preserve">
     <value>डाउनलोड विफल:
 {0}</value>
+  </data>
+  <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
+    <value>नेटवर्क मॉनिटर...</value>
+  </data>
+  <data name="TaskSettingsWindow_ImageEditor" xml:space="preserve">
+    <value>छवि संपादक</value>
+  </data>
+  <data name="TaskSettingsWindow_RememberWindowState" xml:space="preserve">
+    <value>विंडो स्थिति याद रखें</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowExitConfirmation" xml:space="preserve">
+    <value>बाहर निकलने की पुष्टि दिखाएँ</value>
+  </data>
+  <data name="TaskSettingsWindow_ZoomToFitOnOpen" xml:space="preserve">
+    <value>खोलते समय फ़िट करने के लिए ज़ूम करें</value>
+  </data>
+  <data name="TaskSettingsWindow_QuickCrop" xml:space="preserve">
+    <value>त्वरित काट-छाँट</value>
+  </data>
+  <data name="TaskSettingsWindow_AutoCloseEditorOnTask" xml:space="preserve">
+    <value>कार्य होने पर संपादक स्वतः बंद करें</value>
+  </data>
+  <data name="TaskSettingsWindow_AutoCopyImageToClipboard" xml:space="preserve">
+    <value>छवि को क्लिपबोर्ड पर स्वतः कॉपी करें</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowInsertImageDialog" xml:space="preserve">
+    <value>छवि सम्मिलन संवाद दिखाएँ</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowNotifications" xml:space="preserve">
+    <value>सूचनाएँ दिखाएँ</value>
+  </data>
+  <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
+    <value>टूलबार अनुकूलित करें...</value>
   </data>
 </root>

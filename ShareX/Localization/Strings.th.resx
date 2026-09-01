@@ -178,9 +178,6 @@
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>แก้ไข รูปภาพ...</value>
   </data>
-  <data name="MainMenuBuilder_EnableAddImageEffects" xml:space="preserve">
-    <value>เปิดใช้งาน เพิ่ม เอฟเฟกต์รูปภาพ</value>
-  </data>
   <data name="MainMenuBuilder_EnableHotkeys" xml:space="preserve">
     <value>เปิดใช้งานปุ่มลัด</value>
   </data>
@@ -330,12 +327,6 @@
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>พื้นที่...</value>
-  </data>
-  <data name="MainMenuBuilder_RegionLight" xml:space="preserve">
-    <value>พื้นที่ (สว่าง)...</value>
-  </data>
-  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
-    <value>พื้นที่ (โปร่งใส)...</value>
   </data>
   <data name="MainMenuBuilder_RestartAsAdministrator" xml:space="preserve">
     <value>เริ่มใหม่ในฐานะผู้ดูแลระบบ</value>
@@ -1363,8 +1354,8 @@
   <data name="TaskSettingsWindow_Add" xml:space="preserve">
     <value>เพิ่ม</value>
   </data>
-  <data name="TaskSettingsWindow_UseMultiRegionMode" xml:space="preserve">
-    <value>ใช้ หลายรายการ โหมดพื้นที่</value>
+  <data name="TaskSettingsWindow_QuickCapture" xml:space="preserve">
+    <value>จับภาพด่วน</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>ตรวจจับพื้นที่หน้าต่าง</value>
@@ -1399,29 +1390,14 @@
   <data name="TaskSettingsWindow_MagnifierPixelCount" xml:space="preserve">
     <value>พิกเซลแว่นขยาย จำนวน:</value>
   </data>
-  <data name="TaskSettingsWindow_MagnifierPixelSize" xml:space="preserve">
-    <value>พิกเซลแว่นขยาย ขนาด:</value>
+  <data name="TaskSettingsWindow_MagnifierSize" xml:space="preserve">
+    <value>ขนาดแว่นขยาย:</value>
   </data>
   <data name="TaskSettingsWindow_ShowCenterCrosshair" xml:space="preserve">
     <value>แสดง กึ่งกลาง เป้าเล็ง</value>
   </data>
   <data name="TaskSettingsWindow_ShowScreenWideCrosshair" xml:space="preserve">
     <value>แสดง หน้าจอ-กว้าง เป้าเล็ง</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedSizeRegionMode" xml:space="preserve">
-    <value>โหมดพื้นที่ขนาดคงที่</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedWidth" xml:space="preserve">
-    <value>ความกว้างคงที่:</value>
-  </data>
-  <data name="TaskSettingsWindow_FixedHeight" xml:space="preserve">
-    <value>ความสูงคงที่:</value>
-  </data>
-  <data name="TaskSettingsWindow_ShowFPS" xml:space="preserve">
-    <value>แสดง FPS</value>
-  </data>
-  <data name="TaskSettingsWindow_FPSLimit" xml:space="preserve">
-    <value>FPS ขีดจำกัด:</value>
   </data>
   <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
     <value>บันทึกหน้าจอ FPS:</value>
@@ -1452,9 +1428,6 @@
   </data>
   <data name="TaskSettingsWindow_AskForConfirmationWhenAborting" xml:space="preserve">
     <value>ขอการยืนยันเมื่อยกเลิก</value>
-  </data>
-  <data name="TaskSettingsWindow_UseTransparentRegionSelection" xml:space="preserve">
-    <value>ใช้ โปร่งใส พื้นที่ การเลือก</value>
   </data>
   <data name="TaskSettingsWindow_ScreenRecordingOptionsWithEllipsis" xml:space="preserve">
     <value>บันทึกหน้าจอ ตัวเลือก...</value>
@@ -1528,9 +1501,6 @@
   <data name="TaskSettingsWindow_SeparateExtensionsWithCommasForExamplePngJpgJpeg" xml:space="preserve">
     <value>คั่นนามสกุลด้วยจุลภาค ตัวอย่าง: png, jpg, jpeg</value>
   </data>
-  <data name="TaskSettingsWindow_UseLegacyImageEditor" xml:space="preserve">
-    <value>ใช้ รุ่นเก่า ตัวแก้ไขรูปภาพ</value>
-  </data>
   <data name="TaskSettingsWindow_Format" xml:space="preserve">
     <value>รูปแบบ:</value>
   </data>
@@ -1603,12 +1573,6 @@
   <data name="TaskSettingsWindow_InformationAndMagnifier" xml:space="preserve">
     <value>ข้อมูล และ แว่นขยาย</value>
   </data>
-  <data name="TaskSettingsWindow_FixedSizeAndPerformance" xml:space="preserve">
-    <value>ขนาดคงที่และประสิทธิภาพ</value>
-  </data>
-  <data name="TaskSettingsWindow_SnapSizes" xml:space="preserve">
-    <value>จัดแนวติด ขนาด</value>
-  </data>
   <data name="TaskSettingsWindow_Recording" xml:space="preserve">
     <value>การบันทึก</value>
   </data>
@@ -1635,9 +1599,6 @@
   </data>
   <data name="TaskSettingsWindow_OverrideToolsSettings" xml:space="preserve">
     <value>เขียนทับ เครื่องมือ การตั้งค่า</value>
-  </data>
-  <data name="TaskSettingsWindow_ImageEditor" xml:space="preserve">
-    <value>ตัวแก้ไขรูปภาพ</value>
   </data>
   <data name="TaskSettingsWindow_ScreenColorPicker" xml:space="preserve">
     <value>หน้าจอ ตัวเลือกสี</value>
@@ -1944,33 +1905,6 @@
   </data>
   <data name="FirstTimeConfigWindow_StartWithWindowsEnabledByPolicy" xml:space="preserve">
     <value>การเริ่มระบบถูกเปิดใช้งานโดยองค์กรของคุณ</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Title" xml:space="preserve">
-    <value>ShareX - ตัวแก้ไขรูปภาพ ตัวเลือก</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Heading" xml:space="preserve">
-    <value>เลือก ตัวแก้ไขรูปภาพ</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Subtitle" xml:space="preserve">
-    <value>เลือกตัวแก้ไขที่ ShareX ควรเปิด</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ModernEditor" xml:space="preserve">
-    <value>ทันสมัย ตัวแก้ไขรูปภาพ</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_Recommended" xml:space="preserve">
-    <value>แนะนำ</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ModernDescription" xml:space="preserve">
-    <value>ตัวแก้ไข ShareX รุ่นปัจจุบัน พร้อมเครื่องมือและการปรับปรุงล่าสุด</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_LegacyEditor" xml:space="preserve">
-    <value>ตัวแก้ไขรูปภาพรุ่นเก่า</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_LegacyDescription" xml:space="preserve">
-    <value>คลาสสิก ShareX พื้นที่-จับภาพ ตัวแก้ไข.</value>
-  </data>
-  <data name="ImageEditorSelectorWindow_ChangeLater" xml:space="preserve">
-    <value>คุณสามารถเปลี่ยนได้ภายหลังใน การตั้งค่างาน → เครื่องมือ</value>
   </data>
   <data name="ShortenURLWindow_Title" xml:space="preserve">
     <value>ShareX - ย่อ URL</value>
@@ -2342,7 +2276,7 @@
     <value>ตัวอัปโหลด ไลบรารี</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Guide" xml:space="preserve">
-    <value>ตัวอัปโหลดกำหนดเอง คำแนะนำ</value>
+    <value>ตัวอัปโหลดกำหนดเอง คำแนะนำ...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_SearchUploaders" xml:space="preserve">
     <value>ค้นหา ตัวอัปโหลด</value>
@@ -2351,25 +2285,25 @@
     <value>ใหม่</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Import" xml:space="preserve">
-    <value>นำเข้า</value>
+    <value>นำเข้า...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Duplicate" xml:space="preserve">
     <value>ทำสำเนา ที่เลือก ตัวอัปโหลด</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Export" xml:space="preserve">
-    <value>ส่งออกตัวอัปโหลดที่เลือก</value>
+    <value>ส่งออกตัวอัปโหลดที่เลือก...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Remove" xml:space="preserve">
     <value>เอาออก ที่เลือก ตัวอัปโหลด</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ExportAll" xml:space="preserve">
-    <value>ส่งออกทั้งหมด</value>
+    <value>ส่งออกทั้งหมด...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ClearAll" xml:space="preserve">
-    <value>ล้าง ทั้งหมด</value>
+    <value>ล้าง ทั้งหมด...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdateFolder" xml:space="preserve">
-    <value>อัปเดต โฟลเดอร์</value>
+    <value>อัปเดต โฟลเดอร์...</value>
   </data>
   <data name="CustomUploaderSettingsWindow_Overview" xml:space="preserve">
     <value>ภาพรวม</value>
@@ -2386,9 +2320,6 @@
   <data name="CustomUploaderSettingsWindow_Test" xml:space="preserve">
     <value>ทดสอบ</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_OverviewDescription" xml:space="preserve">
-    <value>ตั้งชื่อที่จดจำได้ให้ตัวอัปโหลดนี้ และเลือกตำแหน่งที่ ShareX สามารถใช้งานได้</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Identity" xml:space="preserve">
     <value>ข้อมูลประจำตัว</value>
   </data>
@@ -2398,14 +2329,8 @@
   <data name="CustomUploaderSettingsWindow_NamePlaceholder" xml:space="preserve">
     <value>ใช้โฮสต์ของคำขอเมื่อเว้นว่าง</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_NameDescription" xml:space="preserve">
-    <value>ชื่อนี้จะแสดงทั่วทั้ง ShareX และการเปลี่ยนแปลงจะถูกบันทึกทันที</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Capabilities" xml:space="preserve">
     <value>ความสามารถ</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_CapabilitiesDescription" xml:space="preserve">
-    <value>เปิดใช้งานชนิดปลายทางทั้งหมดที่ปลายทางนี้รองรับ</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ImageUploader" xml:space="preserve">
     <value>ตัวอัปโหลดรูปภาพ</value>
@@ -2446,14 +2371,8 @@
   <data name="CustomUploaderSettingsWindow_Beautify" xml:space="preserve">
     <value>ตกแต่ง</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_BodyDescription" xml:space="preserve">
-    <value>เลือกวิธีเข้ารหัสข้อมูลคำขอและไฟล์ที่อัปโหลด</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_BodyType" xml:space="preserve">
     <value>เนื้อหา ชนิด</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_Cancel" xml:space="preserve">
-    <value>ยกเลิก</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ClearConfirmation" xml:space="preserve">
     <value>เอาออก ทั้งหมด ตัวอัปโหลดกำหนดเอง?</value>
@@ -2469,9 +2388,6 @@
   </data>
   <data name="CustomUploaderSettingsWindow_DeletionURL" xml:space="preserve">
     <value>URL สำหรับลบ</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_DeletionURLDescription" xml:space="preserve">
-    <value>URL ไม่บังคับสำหรับลบเนื้อหาที่อัปโหลด</value>
   </data>
   <data name="CustomUploaderSettingsWindow_DestinationRequired" xml:space="preserve">
     <value>ต้องเลือกชนิดปลายทางอย่างน้อยหนึ่งชนิดก่อนส่งออก</value>
@@ -2490,9 +2406,6 @@
   </data>
   <data name="CustomUploaderSettingsWindow_ErrorMessage" xml:space="preserve">
     <value>ข้อความข้อผิดพลาด</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ErrorMessageDescription" xml:space="preserve">
-    <value>ข้อความที่แยกเมื่อบริการรายงานความล้มเหลว</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ExportAllDialogTitle" xml:space="preserve">
     <value>ส่งออก ทั้งหมด ตัวอัปโหลดกำหนดเอง</value>
@@ -2524,9 +2437,6 @@
   <data name="CustomUploaderSettingsWindow_ImportedCount" xml:space="preserve">
     <value>นำเข้าแล้ว {0} ตัวอัปโหลดกำหนดเอง(s).</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_InputTokensDescription" xml:space="preserve">
-    <value>โทเค็นอินพุตพร้อมใช้จากเมนูบริบทของตัวแก้ไข</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_JSONPathResponseValue" xml:space="preserve">
     <value>JSONPath การตอบกลับ ค่า</value>
   </data>
@@ -2557,17 +2467,11 @@
   <data name="CustomUploaderSettingsWindow_RequestData" xml:space="preserve">
     <value>คำขอ ข้อมูล</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_RequestDescription" xml:space="preserve">
-    <value>กำหนดค่าปลายทาง พารามิเตอร์คิวรี และส่วนหัว HTTP ที่ ShareX ส่ง</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_RequestURL" xml:space="preserve">
     <value>URL คำขอ</value>
   </data>
   <data name="CustomUploaderSettingsWindow_RequestURLRequired" xml:space="preserve">
     <value>ต้องกำหนดค่า URL คำขอก่อนส่งออก</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ResponseDescription" xml:space="preserve">
-    <value>แยกค่าผลลัพธ์ ShareX จากการตอบกลับของบริการ</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ResponseHeader" xml:space="preserve">
     <value>ส่วนหัวการตอบกลับ</value>
@@ -2578,17 +2482,11 @@
   <data name="CustomUploaderSettingsWindow_ResponseText" xml:space="preserve">
     <value>การตอบกลับ ข้อความ</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_ResponseTokensDescription" xml:space="preserve">
-    <value>ขวา-คลิกเพื่อ แทรก การตอบกลับ โทเค็น.</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_Result" xml:space="preserve">
     <value>ผลลัพธ์</value>
   </data>
   <data name="CustomUploaderSettingsWindow_ResultURL" xml:space="preserve">
     <value>ผลลัพธ์ URL</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ResultURLDescription" xml:space="preserve">
-    <value>URL สุดท้ายที่คัดลอกหรือเปิดหลังอัปโหลดสำเร็จ</value>
   </data>
   <data name="CustomUploaderSettingsWindow_SelectToExport" xml:space="preserve">
     <value>เลือก ตัวอัปโหลดกำหนดเอง เพื่อ ส่งออก.</value>
@@ -2596,20 +2494,11 @@
   <data name="CustomUploaderSettingsWindow_SelectUploaderToEdit" xml:space="preserve">
     <value>เลือกตัวอัปโหลดเพื่อแก้ไข</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_SelectUploaderToEditDescription" xml:space="preserve">
-    <value>สร้างตัวอัปโหลดใหม่ นำเข้าไฟล์ .sxcu หรือเลือกจากไลบรารี</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_SyntaxTestDescription" xml:space="preserve">
-    <value>แสดงตัวอย่างวิธีแยกวิเคราะห์นิพจน์การตอบกลับ</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_TestCancelled" xml:space="preserve">
     <value>ทดสอบ ยกเลิกแล้ว.</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TestCompleted" xml:space="preserve">
     <value>ทดสอบ เสร็จสมบูรณ์.</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_TestDescription" xml:space="preserve">
-    <value>เลือกตัวอัปโหลดกำหนดเองที่ใช้งานสำหรับแต่ละปลายทาง แล้วเรียกใช้การทดสอบจริง</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TestFailed" xml:space="preserve">
     <value>การทดสอบล้มเหลว</value>
@@ -2620,32 +2509,23 @@
   <data name="CustomUploaderSettingsWindow_TestURLSyntax" xml:space="preserve">
     <value>ทดสอบ URL ไวยากรณ์</value>
   </data>
+  <data name="CustomUploaderSettingsWindow_TestURLSyntaxButton" xml:space="preserve">
+    <value>ทดสอบ URL ไวยากรณ์...</value>
+  </data>
   <data name="CustomUploaderSettingsWindow_TextOrURLInput" xml:space="preserve">
     <value>อินพุตข้อความหรือ URL</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_TextToUpload" xml:space="preserve">
-    <value>ข้อความ เพื่อ อัปโหลด:</value>
   </data>
   <data name="CustomUploaderSettingsWindow_TextUploadSample" xml:space="preserve">
     <value>ShareX การอัปโหลดข้อความ ทดสอบ</value>
   </data>
-  <data name="CustomUploaderSettingsWindow_TextUploadTestTitle" xml:space="preserve">
-    <value>ShareX - ทดสอบการอัปโหลดข้อความ</value>
-  </data>
   <data name="CustomUploaderSettingsWindow_ThumbnailURL" xml:space="preserve">
     <value>URL ภาพขนาดย่อ</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_ThumbnailURLDescription" xml:space="preserve">
-    <value>รูปภาพตัวอย่างไม่บังคับที่บริการส่งคืน</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdatedCount" xml:space="preserve">
     <value>อัปเดตแล้ว {0} ตัวอัปโหลดกำหนดเอง ไฟล์(s).</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UpdateFolderDialogTitle" xml:space="preserve">
     <value>อัปเดต ตัวอัปโหลดกำหนดเอง โฟลเดอร์</value>
-  </data>
-  <data name="CustomUploaderSettingsWindow_Upload" xml:space="preserve">
-    <value>อัปโหลด</value>
   </data>
   <data name="CustomUploaderSettingsWindow_UploadedFile" xml:space="preserve">
     <value>อัปโหลดแล้ว ไฟล์</value>
@@ -2674,13 +2554,6 @@
   <data name="TaskHelpers_FileDoesNotExist" xml:space="preserve">
     <value>ไม่มีไฟล์:
 {0}</value>
-  </data>
-  <data name="TaskHelpers_ExifToolDoesNotExist" xml:space="preserve">
-    <value>ไม่พบ ExifTool ที่เส้นทางต่อไปนี้:
-{0}</value>
-  </data>
-  <data name="TaskHelpers_ExifToolMissingTitle" xml:space="preserve">
-    <value>ShareX - ExifTool หายไป</value>
   </data>
   <data name="TaskHelpers_AddCustomUploaderConfirmation" xml:space="preserve">
     <value>คุณต้องการ เพิ่ม "{0}" ตัวอัปโหลดกำหนดเอง?</value>
@@ -2942,5 +2815,38 @@
   <data name="UploadManager_DownloadAndUploadFile_Download_failed" xml:space="preserve">
     <value>ดาวน์โหลด ล้มเหลว:
 {0}</value>
+  </data>
+  <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
+    <value>ตัวตรวจสอบเครือข่าย...</value>
+  </data>
+  <data name="TaskSettingsWindow_ImageEditor" xml:space="preserve">
+    <value>ตัวแก้ไขรูปภาพ</value>
+  </data>
+  <data name="TaskSettingsWindow_RememberWindowState" xml:space="preserve">
+    <value>จดจำ หน้าต่าง สถานะ</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowExitConfirmation" xml:space="preserve">
+    <value>แสดง ออก การยืนยัน</value>
+  </data>
+  <data name="TaskSettingsWindow_ZoomToFitOnOpen" xml:space="preserve">
+    <value>ซูมให้พอดีเมื่อเปิด</value>
+  </data>
+  <data name="TaskSettingsWindow_QuickCrop" xml:space="preserve">
+    <value>ด่วน ครอบตัด</value>
+  </data>
+  <data name="TaskSettingsWindow_AutoCloseEditorOnTask" xml:space="preserve">
+    <value>ปิดตัวแก้ไขอัตโนมัติเมื่อทำงาน</value>
+  </data>
+  <data name="TaskSettingsWindow_AutoCopyImageToClipboard" xml:space="preserve">
+    <value>อัตโนมัติ คัดลอกรูปภาพ ไปยังคลิปบอร์ด</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowInsertImageDialog" xml:space="preserve">
+    <value>แสดงกล่องโต้ตอบแทรกรูปภาพ</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowNotifications" xml:space="preserve">
+    <value>แสดง การแจ้งเตือน</value>
+  </data>
+  <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
+    <value>ปรับแต่ง แถบเครื่องมือ...</value>
   </data>
 </root>

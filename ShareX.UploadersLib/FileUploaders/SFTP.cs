@@ -26,7 +26,6 @@
 using Renci.SshNet;
 using Renci.SshNet.Common;
 using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,8 +47,9 @@ namespace ShareX.UploadersLib.FileUploaders
             Account = account;
         }
 
-        public override UploadResult Upload(Stream stream, string fileName)
+        protected override Task<UploadResult> UploadCoreAsync(Stream stream, string fileName, CancellationToken cancellationToken)
         {
+            cancellationToken.ThrowIfCancellationRequested();
             UploadResult result = new UploadResult();
 
             string subFolderPath = Account.GetSubFolderPath();
@@ -76,7 +76,7 @@ namespace ShareX.UploadersLib.FileUploaders
                 IsUploading = false;
             }
 
-            return result;
+            return Task.FromResult(result);
         }
 
         public override void StopUpload()

@@ -17,7 +17,6 @@ using Avalonia.Layout;
 using Avalonia.Media;
 using ShareX.AvaloniaUI.Controls;
 using ShareX.HelpersLib;
-using ShareX.UploadersLib;
 using ShareX.UploadersLib.FileUploaders;
 using ShareX.UploadersLib.ImageUploaders;
 using System;
@@ -86,6 +85,18 @@ internal sealed class DestinationSettingsPageBuilder
         {
             cards.Add(BuildBoxFolderCard());
         }
+        else if (definition.Id == "mega")
+        {
+            cards.Add(BuildMegaFolderTreeCard());
+        }
+        else if (definition.Id == "amazon-s3")
+        {
+            cards.AddRange(BuildAmazonS3Cards());
+        }
+        else if (definition.Id == "img-fish")
+        {
+            cards.Add(BuildImgFishCard());
+        }
 
         List<Control> simpleEditors = [];
         foreach (PropertyInfo property in properties)
@@ -134,6 +145,137 @@ internal sealed class DestinationSettingsPageBuilder
         return Page(definition.Id, definition.Title, icon, cards.ToArray());
     }
 
+    private IEnumerable<Control> BuildAmazonS3Cards()
+    {
+        AmazonS3Settings settings = _config.AmazonS3Settings;
+        TextBlock preview = Hint(string.Empty);
+
+        void UpdatePreview()
+        {
+            preview.Text = new AmazonS3(settings).GetPreviewURL();
+        }
+
+        TextBox accessKey = Text(() => settings.AccessKeyID, value => settings.AccessKeyID = value);
+        Button accessKeyOpen = Button("...", () =>
+            URLHelpers.OpenURL("https://console.aws.amazon.com/iam/home?#security_credential"));
+
+        TextBox secretKey = Text(() => settings.SecretAccessKey, value => settings.SecretAccessKey = value);
+        secretKey.PasswordChar = '●';
+
+        TextBox endpoint = Text(() => settings.Endpoint, value =>
+        {
+            settings.Endpoint = value;
+            UpdatePreview();
+        });
+        TextBox region = Text(() => settings.Region, value =>
+        {
+            settings.Region = value;
+            UpdatePreview();
+        });
+
+        ComboBox endpoints = new() { ItemsSource = AmazonS3.Endpoints };
+        endpoints.Classes.Add("form-control");
+        endpoints.SelectedItem = AmazonS3.Endpoints.FirstOrDefault(x =>
+            x.Endpoint.Equals(settings.Endpoint, StringComparison.OrdinalIgnoreCase));
+        endpoints.SelectionChanged += (_, _) =>
+        {
+            if (endpoints.SelectedItem is AmazonS3Endpoint selected)
+            {
+                ((DestinationValue<string>)endpoint.DataContext!).Value = selected.Endpoint;
+                ((DestinationValue<string>)region.DataContext!).Value = selected.Region;
+            }
+        };
+
+        TextBox bucket = Text(() => settings.Bucket, value =>
+        {
+            settings.Bucket = value;
+            UpdatePreview();
+        });
+        Button bucketOpen = Button("...", () => URLHelpers.OpenURL("https://console.aws.amazon.com/s3/home"));
+
+        TextBox objectPrefix = Text(() => settings.ObjectPrefix, value =>
+        {
+            settings.ObjectPrefix = value;
+            UpdatePreview();
+        });
+        TextBox customDomain = Text(() => settings.CustomDomain, value =>
+        {
+            settings.CustomDomain = value;
+            UpdatePreview();
+        });
+        customDomain.IsEnabled = settings.UseCustomCNAME;
+        CheckBox useCustomDomain = Check(FormatLabel(nameof(settings.UseCustomCNAME)), () => settings.UseCustomCNAME, value =>
+        {
+            settings.UseCustomCNAME = value;
+            customDomain.IsEnabled = value;
+            UpdatePreview();
+        });
+
+        CheckBox usePathStyle = Check(FormatLabel(nameof(settings.UsePathStyle)), () => settings.UsePathStyle,
+            value => settings.UsePathStyle = value);
+        ComboBox storageClass = EnumCombo(typeof(AmazonS3StorageClass), settings.StorageClass,
+            value => settings.StorageClass = (AmazonS3StorageClass)value);
+        Button storageClassHelp = Button("?", () => URLHelpers.OpenURL("https://aws.amazon.com/s3/storage-classes/"));
+        CheckBox signedPayload = Check(FormatLabel(nameof(settings.SignedPayload)), () => settings.SignedPayload,
+            value => settings.SignedPayload = value);
+        CheckBox useMultipartUpload = Check(FormatLabel(nameof(settings.UseMultipartUpload)), () => settings.UseMultipartUpload,
+            value => settings.UseMultipartUpload = value);
+        CheckBox publicAcl = Check(FormatLabel(nameof(settings.SetPublicACL)), () => settings.SetPublicACL,
+            value => settings.SetPublicACL = value);
+        CheckBox removeImageExtension = Check(FormatLabel("Image"), () => settings.RemoveExtensionImage, value =>
+        {
+            settings.RemoveExtensionImage = value;
+            UpdatePreview();
+        });
+        CheckBox removeVideoExtension = Check(FormatLabel("Video"), () => settings.RemoveExtensionVideo, value =>
+        {
+            settings.RemoveExtensionVideo = value;
+            UpdatePreview();
+        });
+        CheckBox removeTextExtension = Check(FormatLabel("Text"), () => settings.RemoveExtensionText, value =>
+        {
+            settings.RemoveExtensionText = value;
+            UpdatePreview();
+        });
+
+        UpdatePreview();
+
+        yield return Card(Localization.Strings.DestinationSettings_Settings,
+            Row(FormatLabel(nameof(settings.AccessKeyID)) + ":", EditorWithButton(accessKey, accessKeyOpen)),
+            Row(FormatLabel(nameof(settings.SecretAccessKey)) + ":", secretKey),
+            Row(FormatLabel("Endpoints") + ":", endpoints),
+            Row(FormatLabel(nameof(settings.Endpoint)) + ":", endpoint),
+            Row(FormatLabel(nameof(settings.Region)) + ":", region),
+            Row(FormatLabel(nameof(settings.Bucket)) + ":", EditorWithButton(bucket, bucketOpen)),
+            Row(FormatLabel(nameof(settings.ObjectPrefix)) + ":", objectPrefix),
+            useCustomDomain,
+            Row(FormatLabel(nameof(settings.CustomDomain)) + ":", customDomain),
+            PreviewRow(preview));
+
+        yield return Card(FormatLabel("Advanced"),
+            Row(FormatLabel(nameof(settings.StorageClass)) + ":", EditorWithButton(storageClass, storageClassHelp)),
+            signedPayload,
+            useMultipartUpload,
+            publicAcl,
+            usePathStyle,
+            Row(FormatLabel("RemoveFileExtensionOn") + ":",
+                HorizontalControls(removeImageExtension, removeVideoExtension, removeTextExtension)));
+    }
+
+    private Control BuildImgFishCard()
+    {
+        ImgFishSettings settings = _config.ImgFishSettings;
+        TextBox apiKey = Text(() => settings.APIKey, value => settings.APIKey = value);
+        apiKey.PasswordChar = '●';
+        NumericUpDown fileIDLength = Number(settings.FileIDLength, value => settings.FileIDLength = (int)value, typeof(int));
+        fileIDLength.Minimum = ImgFishSettings.MinFileIDLength;
+        fileIDLength.Maximum = ImgFishSettings.MaxFileIDLength;
+
+        return Card(Localization.Strings.DestinationSettings_Settings,
+            Row(FormatLabel(nameof(settings.APIKey)) + ":", apiKey),
+            Row(FormatLabel(nameof(settings.FileIDLength)) + ":", fileIDLength));
+    }
+
     private Control BuildImgurAlbumsCard()
     {
         ObservableCollection<DestinationChoice> albums = new();
@@ -164,7 +306,7 @@ internal sealed class DestinationSettingsPageBuilder
         }
 
         album.SelectionChanged += (_, _) => _config.ImgurSelectedAlbum = (album.SelectedItem as DestinationChoice)?.Value as ImgurAlbumData;
-        Button refresh = Button(Localization.Strings.DestinationSettings_Refresh_albums, () =>
+        Button refresh = Button(Localization.Strings.DestinationSettings_Refresh_albums, async () =>
         {
             try
             {
@@ -174,7 +316,7 @@ internal sealed class DestinationSettingsPageBuilder
                     return;
                 }
 
-                _config.ImgurAlbumList = new Imgur(_config.ImgurOAuth2Info).GetAlbums();
+                _config.ImgurAlbumList = await new Imgur(_config.ImgurOAuth2Info).GetAlbumsAsync();
                 LoadAlbums(_config.ImgurAlbumList);
             }
             catch (Exception exception)
@@ -256,21 +398,108 @@ internal sealed class DestinationSettingsPageBuilder
         OneDrive.RootFolder,
         () => _config.OneDriveV2SelectedFolder ?? OneDrive.RootFolder,
         value => _config.OneDriveV2SelectedFolder = value,
-        value => new OneDrive(_config.OneDriveV2OAuth2Info).GetPathInfo(value.id)?.value,
+        async value => (await new OneDrive(_config.OneDriveV2OAuth2Info).GetPathInfoAsync(value.id))?.value,
         value => value.name);
 
     private Control BuildBoxFolderCard() => BuildRemoteFolderCard(
         Box.RootFolder,
         () => _config.BoxSelectedFolder ?? Box.RootFolder,
         value => _config.BoxSelectedFolder = value,
-        value => new Box(_config.BoxOAuth2Info).GetFiles(value)?.entries?.Where(x => x.type == "folder"),
+        async value => (await new Box(_config.BoxOAuth2Info).GetFilesAsync(value))?.entries?.Where(x => x.type == "folder"),
         value => value.name);
+
+    private Control BuildMegaFolderTreeCard()
+    {
+        MegaFolderInfo selectedFolder = _config.MegaSelectedFolder ?? Mega.RootFolder;
+        TextBlock selectedStatus = Hint(string.IsNullOrWhiteSpace(selectedFolder.Name)
+            ? Localization.Strings.DestinationSettings_Root_folder
+            : selectedFolder.Name);
+        HashSet<TreeViewItem> loadedItems = [];
+        HashSet<TreeViewItem> loadingItems = [];
+
+        TreeViewItem CreateItem(MegaFolderInfo folder)
+        {
+            ObservableCollection<TreeViewItem> children = [new TreeViewItem { Header = "…", IsEnabled = false }];
+            TreeViewItem item = new()
+            {
+                Header = string.IsNullOrWhiteSpace(folder.Name)
+                    ? Localization.Strings.DestinationSettings_Root_folder
+                    : folder.Name,
+                DataContext = folder,
+                ItemsSource = children
+            };
+            item.Expanded += async (_, _) => await LoadChildrenAsync(item, children);
+
+            if ((!string.IsNullOrWhiteSpace(folder.ID) && folder.ID == selectedFolder.ID) ||
+                (string.IsNullOrWhiteSpace(folder.ID) && string.IsNullOrWhiteSpace(selectedFolder.ID)))
+            {
+                item.IsSelected = true;
+            }
+
+            return item;
+        }
+
+        async Task LoadChildrenAsync(TreeViewItem item, ObservableCollection<TreeViewItem> children)
+        {
+            if (loadedItems.Contains(item) || !loadingItems.Add(item)) return;
+
+            try
+            {
+                if (item.DataContext is not MegaFolderInfo folder) return;
+
+                if (string.IsNullOrWhiteSpace(_config.MegaSessionID) || string.IsNullOrWhiteSpace(_config.MegaMasterKey))
+                {
+                    throw new InvalidOperationException(Localization.Strings.DestinationSettings_Not_connected);
+                }
+
+                children.Clear();
+                Mega mega = new(_config.MegaSessionID, Mega.FromBase64URL(_config.MegaMasterKey));
+                IReadOnlyList<MegaFolderInfo> folders = await mega.GetFoldersAsync(folder);
+                foreach (MegaFolderInfo child in folders)
+                {
+                    children.Add(CreateItem(child));
+                }
+
+                loadedItems.Add(item);
+            }
+            catch (Exception exception)
+            {
+                DebugHelper.WriteException(exception);
+                children.Clear();
+                children.Add(new TreeViewItem { Header = "…", IsEnabled = false });
+                loadedItems.Remove(item);
+            }
+            finally
+            {
+                loadingItems.Remove(item);
+            }
+        }
+
+        TreeViewItem rootItem = CreateItem(Mega.RootFolder);
+        ObservableCollection<TreeViewItem> roots = [rootItem];
+        TreeView tree = new() { ItemsSource = roots, MinHeight = 180, MaxHeight = 320 };
+        tree.Classes.Add("settings-tree");
+        tree.SelectionChanged += (_, _) =>
+        {
+            if (tree.SelectedItem is TreeViewItem { DataContext: MegaFolderInfo folder })
+            {
+                _config.MegaSelectedFolder = folder;
+                selectedFolder = folder;
+                selectedStatus.Text = string.IsNullOrWhiteSpace(folder.Name)
+                    ? Localization.Strings.DestinationSettings_Root_folder
+                    : folder.Name;
+            }
+        };
+
+        return Card(Localization.Strings.DestinationSettings_Upload_folder,
+            Row(Localization.Strings.DestinationSettings_Selected_folder, selectedStatus), tree);
+    }
 
     private Control BuildRemoteFolderCard<T>(
         T root,
         Func<T> getSelected,
         Action<T> setSelected,
-        Func<T, IEnumerable<T>?> getChildren,
+        Func<T, Task<IEnumerable<T>?>> getChildren,
         Func<T, string?> getName) where T : class
     {
         ObservableCollection<DestinationChoice> folders = new();
@@ -281,12 +510,12 @@ internal sealed class DestinationSettingsPageBuilder
         Stack<T> history = new();
         T currentFolder = root;
 
-        void Load(T folder)
+        async Task LoadAsync(T folder)
         {
             try
             {
                 folders.Clear();
-                foreach (T child in getChildren(folder) ?? [])
+                foreach (T child in await getChildren(folder) ?? [])
                 {
                     folders.Add(new DestinationChoice(child, getName(child) ?? Localization.Strings.DestinationSettings_Unnamed_folder));
                 }
@@ -313,31 +542,31 @@ internal sealed class DestinationSettingsPageBuilder
             }
         };
 
-        Button refresh = Button(Localization.Strings.DestinationSettings_Refresh, () => Load(currentFolder));
-        Button open = Button(Localization.Strings.DestinationSettings_Open_folder, () =>
+        Button refresh = Button(Localization.Strings.DestinationSettings_Refresh, () => LoadAsync(currentFolder));
+        Button open = Button(Localization.Strings.DestinationSettings_Open_folder, async () =>
         {
             if ((list.SelectedItem as DestinationChoice)?.Value is T selected)
             {
                 history.Push(currentFolder);
                 currentFolder = selected;
-                Load(currentFolder);
+                await LoadAsync(currentFolder);
             }
         });
-        Button back = Button(Localization.Strings.DestinationSettings_Back, () =>
+        Button back = Button(Localization.Strings.DestinationSettings_Back, async () =>
         {
             if (history.Count > 0)
             {
                 currentFolder = history.Pop();
-                Load(currentFolder);
+                await LoadAsync(currentFolder);
             }
         });
-        Button rootButton = Button(Localization.Strings.DestinationSettings_Root, () =>
+        Button rootButton = Button(Localization.Strings.DestinationSettings_Root, async () =>
         {
             history.Clear();
             currentFolder = root;
             setSelected(root);
             selectedStatus.Text = getName(root) ?? Localization.Strings.DestinationSettings_Root_folder;
-            Load(root);
+            await LoadAsync(root);
         });
 
         return Card(Localization.Strings.DestinationSettings_Upload_folder,
@@ -346,10 +575,10 @@ internal sealed class DestinationSettingsPageBuilder
             Row(Localization.Strings.DestinationSettings_Browser_status, browseStatus));
     }
 
-    private Control EditorRow(object owner, DestinationMember member, string label)
+    private Control EditorRow(object owner, DestinationMember member, string label, Action? valueChanged = null)
     {
         Type type = Nullable.GetUnderlyingType(member.ValueType) ?? member.ValueType;
-        Control editor = CreateEditor(owner, member, type, label);
+        Control editor = CreateEditor(owner, member, type, label, valueChanged);
         string? description = member.GetAttribute<DescriptionAttribute>()?.Description;
 
         Control row = type == typeof(bool) ? editor : Row(label + ":", editor);
@@ -361,18 +590,26 @@ internal sealed class DestinationSettingsPageBuilder
         return row;
     }
 
-    private Control CreateEditor(object owner, DestinationMember member, Type type, string label)
+    private Control CreateEditor(object owner, DestinationMember member, Type type, string label, Action? valueChanged)
     {
         if (type == typeof(bool))
         {
-            return Check(label, () => Convert.ToBoolean(member.GetValue(owner)), value => member.SetValue(owner, value));
+            return Check(label, () => Convert.ToBoolean(member.GetValue(owner)), value =>
+            {
+                member.SetValue(owner, value);
+                valueChanged?.Invoke();
+            });
         }
 
         if (type == typeof(string))
         {
             TextBox text = Text(
                 () => member.GetValue(owner)?.ToString() ?? string.Empty,
-                value => member.SetValue(owner, value));
+                value =>
+                {
+                    member.SetValue(owner, value);
+                    valueChanged?.Invoke();
+                });
             if (IsSecret(member))
             {
                 text.PasswordChar = '●';
@@ -382,7 +619,11 @@ internal sealed class DestinationSettingsPageBuilder
 
         if (type.IsEnum)
         {
-            return EnumCombo(type, member.GetValue(owner), value => member.SetValue(owner, value));
+            return EnumCombo(type, member.GetValue(owner), value =>
+            {
+                member.SetValue(owner, value);
+                valueChanged?.Invoke();
+            });
         }
 
         if (type == typeof(int) && TryCreateSelectionEditor(owner, member, out ComboBox selectionEditor))
@@ -393,14 +634,22 @@ internal sealed class DestinationSettingsPageBuilder
         if (IsNumericType(type))
         {
             decimal current = Convert.ToDecimal(member.GetValue(owner) ?? 0);
-            return Number(current, value => member.SetValue(owner, ConvertNumeric(value, type)), type);
+            return Number(current, value =>
+            {
+                member.SetValue(owner, ConvertNumeric(value, type));
+                valueChanged?.Invoke();
+            }, type);
         }
 
         if (IsStringList(type))
         {
             return Text(
                 () => string.Join(", ", (IEnumerable<string>?)member.GetValue(owner) ?? []),
-                value => member.SetValue(owner, value.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).ToList()));
+                value =>
+                {
+                    member.SetValue(owner, value.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).ToList());
+                    valueChanged?.Invoke();
+                });
         }
 
         object? nested = member.GetValue(owner);
@@ -491,9 +740,30 @@ internal sealed class DestinationSettingsPageBuilder
         {
             details.Children.Clear();
             if (listBox.SelectedItem is not { } selected) return;
+
+            Action? valueChanged = null;
+            TextBlock? preview = null;
+            if (selected is FTPAccount account)
+            {
+                TextBlock ftpPreview = Hint(account.PreviewHttpPath);
+                preview = ftpPreview;
+                valueChanged = () => ftpPreview.Text = account.PreviewHttpPath;
+            }
+
+            bool previewAdded = false;
             foreach (DestinationMember child in GetEditableMembers(selected.GetType()))
             {
-                details.Children.Add(EditorRow(selected, child, FormatLabel(child.Name)));
+                details.Children.Add(EditorRow(selected, child, FormatLabel(child.Name), valueChanged));
+                if (preview != null && child.Name == nameof(FTPAccount.HttpHomePathNoExtension))
+                {
+                    details.Children.Add(PreviewRow(preview));
+                    previewAdded = true;
+                }
+            }
+
+            if (preview != null && !previewAdded)
+            {
+                details.Children.Add(PreviewRow(preview));
             }
         }
 
@@ -588,6 +858,10 @@ internal sealed class DestinationSettingsPageBuilder
             "lobfile" => member.Name == nameof(UploadersConfig.LithiioSettings),
             "onedrive" => member.Name == nameof(UploadersConfig.OneDriveV2SelectedFolder),
             "box" => member.Name == nameof(UploadersConfig.BoxSelectedFolder),
+            "mega" => member.Name is nameof(UploadersConfig.MegaEmail) or nameof(UploadersConfig.MegaPassword) or
+                nameof(UploadersConfig.MegaSelectedFolder),
+            "amazon-s3" => member.Name == nameof(UploadersConfig.AmazonS3Settings),
+            "img-fish" => member.Name == nameof(UploadersConfig.ImgFishSettings),
             _ => false
         };
     }
@@ -650,7 +924,8 @@ internal sealed class DestinationSettingsPageBuilder
     {
         StackPanel content = new()
         {
-            Margin = new Thickness(28, 24, 28, 32), MaxWidth = 780,
+            Margin = new Thickness(28, 24, 28, 32),
+            MaxWidth = 780,
             HorizontalAlignment = HorizontalAlignment.Left
         };
         Grid header = new() { ColumnDefinitions = new ColumnDefinitions("Auto,*"), ColumnSpacing = 9 };
@@ -681,6 +956,29 @@ internal sealed class DestinationSettingsPageBuilder
         Grid row = new() { ColumnDefinitions = new ColumnDefinitions("210,*"), ColumnSpacing = 8 };
         row.Children.Add(new TextBlock { Text = label, FontWeight = FontWeight.Normal, VerticalAlignment = VerticalAlignment.Center });
         Grid.SetColumn(editor, 1); row.Children.Add(editor); return row;
+    }
+
+    private static Grid PreviewRow(TextBlock preview)
+    {
+        Grid row = Row(FormatLabel("URLPreview") + ":", preview);
+        row.Classes.Add("preview-row");
+        return row;
+    }
+
+    private static Grid EditorWithButton(Control editor, Button button)
+    {
+        Grid grid = new() { ColumnDefinitions = new ColumnDefinitions("*,Auto"), ColumnSpacing = 6 };
+        grid.Children.Add(editor);
+        Grid.SetColumn(button, 1);
+        grid.Children.Add(button);
+        return grid;
+    }
+
+    private static StackPanel HorizontalControls(params Control[] controls)
+    {
+        StackPanel panel = new() { Orientation = Orientation.Horizontal, Spacing = 12 };
+        foreach (Control control in controls) panel.Children.Add(control);
+        return panel;
     }
 
     internal static CheckBox Check(string text, Func<bool> getter, Action<bool> setter)
@@ -733,6 +1031,14 @@ internal sealed class DestinationSettingsPageBuilder
     internal static Button Button(string text, Action action)
     {
         Button button = new() { Content = text }; button.Classes.Add("compact"); button.Click += (_, _) => action(); return button;
+    }
+
+    internal static Button Button(string text, Func<Task> action)
+    {
+        Button button = new() { Content = text };
+        button.Classes.Add("compact");
+        button.Click += async (_, _) => await action();
+        return button;
     }
 
     internal static StackPanel ButtonRow(params Button[] buttons)

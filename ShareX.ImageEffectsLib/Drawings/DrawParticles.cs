@@ -24,22 +24,17 @@
 #endregion License Information (GPL v3)
 
 using ShareX.HelpersLib;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
 
 namespace ShareX.ImageEffectsLib
 {
     [Description("Particles")]
     public class DrawParticles : ImageEffect
     {
-        [DefaultValue(""), Editor(typeof(DirectoryNameEditor), typeof(UITypeEditor))]
+        [DefaultValue("")]
         public string ImageFolder { get; set; }
 
         private int imageCount;

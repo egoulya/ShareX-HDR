@@ -24,35 +24,32 @@
 #endregion License Information (GPL v3)
 
 using ShareX.HelpersLib;
-using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.IO;
 
 namespace ShareX.ImageEffectsLib
 {
     [Description("Image")]
     public class DrawImage : ImageEffect
     {
-        [DefaultValue(""), Editor(typeof(ImageFileNameEditor), typeof(UITypeEditor))]
+        [DefaultValue("")]
         public string ImageLocation { get; set; }
 
-        [DefaultValue(ContentAlignment.TopLeft), TypeConverter(typeof(EnumProperNameConverter))]
+        [DefaultValue(ContentAlignment.TopLeft)]
         public ContentAlignment Placement { get; set; }
 
         [DefaultValue(typeof(Point), "0, 0")]
         public Point Offset { get; set; }
 
-        [DefaultValue(DrawImageSizeMode.DontResize), Description("How the image watermark should be rescaled, if at all."), TypeConverter(typeof(EnumDescriptionConverter))]
+        [DefaultValue(DrawImageSizeMode.DontResize), Description("How the image watermark should be rescaled, if at all.")]
         public DrawImageSizeMode SizeMode { get; set; }
 
         [DefaultValue(typeof(Size), "0, 0")]
         public Size Size { get; set; }
 
-        [DefaultValue(ImageRotateFlipType.None), TypeConverter(typeof(EnumProperNameKeepCaseConverter))]
+        [DefaultValue(ImageRotateFlipType.None)]
         public ImageRotateFlipType RotateFlip { get; set; }
 
         [DefaultValue(false)]
@@ -61,10 +58,10 @@ namespace ShareX.ImageEffectsLib
         [DefaultValue(false), Description("If image watermark size bigger than source image then don't draw it.")]
         public bool AutoHide { get; set; }
 
-        [DefaultValue(ImageInterpolationMode.HighQualityBicubic), TypeConverter(typeof(EnumProperNameConverter))]
+        [DefaultValue(ImageInterpolationMode.HighQualityBicubic)]
         public ImageInterpolationMode InterpolationMode { get; set; }
 
-        [DefaultValue(CompositingMode.SourceOver), TypeConverter(typeof(EnumProperNameConverter))]
+        [DefaultValue(CompositingMode.SourceOver)]
         public CompositingMode CompositingMode { get; set; }
 
         private int opacity;

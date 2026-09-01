@@ -35,56 +35,6 @@ namespace ShareX.ScreenCaptureLib
         GIF
     }
 
-    public enum ScreenRecordGIFEncoding // Localized
-    {
-        FFmpeg,
-        NET,
-        OctreeQuantizer
-    }
-
-    public enum RegionResult
-    {
-        Close,
-        Region,
-        LastRegion,
-        Fullscreen,
-        Monitor,
-        ActiveMonitor,
-        AnnotateRunAfterCaptureTasks,
-        AnnotateContinueTask,
-        AnnotateCancelTask
-    }
-
-    public enum NodeType
-    {
-        None,
-        Rectangle,
-        Line,
-        Point,
-        Freehand
-    }
-
-    internal enum NodePosition
-    {
-        TopLeft,
-        Top,
-        TopRight,
-        Right,
-        BottomRight,
-        Bottom,
-        BottomLeft,
-        Left,
-        Extra
-    }
-
-    internal enum NodeShape
-    {
-        Square,
-        Circle,
-        Diamond,
-        CustomNode
-    }
-
     public enum FFmpegVideoCodec
     {
         [Description("H.264 / x264")]
@@ -259,17 +209,6 @@ namespace ShareX.ScreenCaptureLib
         atkinson
     }
 
-    public enum RegionCaptureMode
-    {
-        Default,
-        Annotation,
-        ScreenColorPicker,
-        Ruler,
-        OneClick,
-        Editor,
-        TaskEditor
-    }
-
     public enum RegionCaptureAction // Localized
     {
         None,
@@ -280,69 +219,6 @@ namespace ShareX.ScreenCaptureLib
         CaptureFullscreen,
         CaptureActiveMonitor,
         CaptureLastRegion
-    }
-
-    public enum ShapeCategory
-    {
-        Region,
-        Drawing,
-        Effect,
-        Tool
-    }
-
-    public enum ShapeType // Localized
-    {
-        RegionRectangle,
-        RegionEllipse,
-        RegionFreehand,
-        ToolSelect,
-        DrawingRectangle,
-        DrawingEllipse,
-        DrawingFreehand,
-        DrawingFreehandArrow,
-        DrawingLine,
-        DrawingArrow,
-        DrawingTextOutline,
-        DrawingTextBackground,
-        DrawingSpeechBalloon,
-        DrawingStep,
-        DrawingMagnify,
-        DrawingImage,
-        DrawingImageScreen,
-        DrawingCursor,
-        DrawingSmartEraser,
-        EffectBlur,
-        EffectPixelate,
-        EffectHighlight,
-        ToolSpotlight,
-        ToolCrop,
-        ToolCutOut
-    }
-
-    public enum ImageEditorStartMode // Localized
-    {
-        AutoSize,
-        Normal,
-        Maximized,
-        PreviousState,
-        Fullscreen
-    }
-
-    public enum ImageInsertMethod
-    {
-        None,
-        Center,
-        CanvasExpandDown,
-        CanvasExpandRight
-    }
-
-    public enum BorderStyle // Localized
-    {
-        Solid,
-        Dash,
-        Dot,
-        DashDot,
-        DashDotDot
     }
 
     public enum ScreenRecordState

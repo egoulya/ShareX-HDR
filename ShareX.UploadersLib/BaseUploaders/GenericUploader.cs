@@ -29,6 +29,11 @@ namespace ShareX.UploadersLib
 {
     public abstract class GenericUploader : Uploader
     {
-        public abstract UploadResult Upload(Stream stream, string fileName);
+        public Task<UploadResult> UploadAsync(Stream stream, string fileName, CancellationToken cancellationToken = default)
+        {
+            return RunOperationAsync(token => UploadCoreAsync(stream, fileName, token), cancellationToken);
+        }
+
+        protected abstract Task<UploadResult> UploadCoreAsync(Stream stream, string fileName, CancellationToken cancellationToken);
     }
 }

@@ -460,6 +460,9 @@
   <data name="DestinationSettings_Field_Exposure" xml:space="preserve">
     <value>공개 범위</value>
   </data>
+  <data name="DestinationSettings_Field_File_ID_Length" xml:space="preserve">
+    <value>파일 ID 길이</value>
+  </data>
   <data name="DestinationSettings_Field_Files" xml:space="preserve">
     <value>파일</value>
   </data>
@@ -527,7 +530,7 @@
     <value>일회용</value>
   </data>
   <data name="DestinationSettings_Field_Password" xml:space="preserve">
-    <value>Password:</value>
+    <value>비밀번호</value>
   </data>
   <data name="DestinationSettings_Field_Paste_Password" xml:space="preserve">
     <value>붙여넣기 암호</value>
@@ -610,6 +613,9 @@
   <data name="DestinationSettings_Field_Show_Dialog" xml:space="preserve">
     <value>대화 상자 표시</value>
   </data>
+  <data name="DestinationSettings_Field_Show_Metadata" xml:space="preserve">
+    <value>메타데이터 표시</value>
+  </data>
   <data name="DestinationSettings_Field_Signature" xml:space="preserve">
     <value>서명</value>
   </data>
@@ -651,6 +657,9 @@
   </data>
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>토큰</value>
+  </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>현재 2단계 인증 코드를 입력하세요</value>
   </data>
   <data name="DestinationSettings_Field_TTL" xml:space="preserve">
     <value>유효 기간</value>
@@ -700,6 +709,9 @@
   <data name="DestinationSettings_Field_Use_Long_Link" xml:space="preserve">
     <value>긴 링크 사용</value>
   </data>
+  <data name="DestinationSettings_Field_Use_Multipart_Upload" xml:space="preserve">
+    <value>멀티파트 업로드 사용</value>
+  </data>
   <data name="DestinationSettings_Field_Use_Path_Style" xml:space="preserve">
     <value>경로 스타일 사용</value>
   </data>
@@ -716,7 +728,7 @@
     <value>사용자 키</value>
   </data>
   <data name="DestinationSettings_Field_Username" xml:space="preserve">
-    <value>Username:</value>
+    <value>사용자 이름</value>
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Web API 키</value>
@@ -892,6 +904,12 @@
   <data name="FileDestination_GoogleDrive" xml:space="preserve">
     <value>Google Drive</value>
   </data>
+  <data name="FileDestination_ImgFish" xml:space="preserve">
+    <value>img.fish</value>
+  </data>
+  <data name="FileDestination_Immich" xml:space="preserve">
+    <value>Immich</value>
+  </data>
   <data name="FileDestination_Lambda" xml:space="preserve">
     <value>Lambda</value>
   </data>
@@ -900,6 +918,9 @@
   </data>
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
@@ -942,9 +963,6 @@
   </data>
   <data name="FileDestination_Uguu" xml:space="preserve">
     <value>Uguu</value>
-  </data>
-  <data name="FileDestination_Vault_ooo" xml:space="preserve">
-    <value>Vault.ooo</value>
   </data>
   <data name="FileDestination_YouTube" xml:space="preserve">
     <value>YouTube</value>
@@ -1219,7 +1237,7 @@
     <value>name@example.com</value>
   </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
-    <value>Password:</value>
+    <value>비밀번호</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX — puush 로그인</value>
@@ -1497,9 +1515,6 @@
   </data>
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>보이지 않는 문자 단축 서비스</value>
-  </data>
-  <data name="Vault_No_valid_metadata_returned" xml:space="preserve">
-    <value>유효한 메타데이터가 반환되지 않았습니다.</value>
   </data>
   <data name="Yourls_Credentials_missing" xml:space="preserve">
     <value>서명 또는 사용자 이름/암호가 없습니다.</value>

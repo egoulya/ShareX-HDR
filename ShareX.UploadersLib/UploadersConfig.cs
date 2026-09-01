@@ -214,6 +214,21 @@ namespace ShareX.UploadersLib
 
         #endregion Box
 
+        #region MEGA
+
+        public string MegaEmail { get; set; } = "";
+        [JsonEncrypt]
+        public string MegaPassword { get; set; } = "";
+        [System.ComponentModel.Browsable(false)]
+        [JsonEncrypt]
+        public string MegaSessionID { get; set; } = "";
+        [System.ComponentModel.Browsable(false)]
+        [JsonEncrypt]
+        public string MegaMasterKey { get; set; } = "";
+        public MegaFolderInfo MegaSelectedFolder { get; set; } = Mega.RootFolder;
+
+        #endregion MEGA
+
         #region Localhostr
 
         public string LocalhostrEmail { get; set; } = "";
@@ -295,6 +310,12 @@ namespace ShareX.UploadersLib
         public LambdaSettings LambdaSettings { get; set; } = new LambdaSettings();
 
         #endregion Lambda
+
+        #region img.fish
+
+        public ImgFishSettings ImgFishSettings { get; set; } = new ImgFishSettings();
+
+        #endregion img.fish
 
         #region LobFile
 
@@ -398,6 +419,16 @@ namespace ShareX.UploadersLib
         public bool GoogleCloudStorageSetPublicACL { get; set; } = true;
 
         #endregion Google Cloud Storage
+
+        #region Immich
+
+        public string ImmichURL { get; set; } = "";
+        [JsonEncrypt]
+        public string ImmichAPIKey { get; set; } = "";
+        public bool ImmichAutoCreateShareableLink { get; set; } = true;
+        public bool ImmichShowMetadata { get; set; } = false;
+
+        #endregion Immich
 
         #endregion File uploaders
 
