@@ -339,3 +339,12 @@ fork/
 
 # Local design/plan notes
 /docs/
+
+# HDR evaluation corpus: raw frames are large and machine-specific.
+# The manifest is committed on purpose so a corpus that changed is detectable.
+HdrCorpus/*
+!HdrCorpus/manifest.json
+
+
+# Packaged builds and ad-hoc test artifacts.
+/Dist/
