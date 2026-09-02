@@ -195,35 +195,12 @@ namespace ShareX.ScreenCaptureLib
                 using (Screenshot.HdrRecordingCapture capture = screenshot.BeginHdrRecordingCapture(captureRect))
                 {
                     Stream stdin = ffmpeg.GetStandardInputStream();
-                    byte[] captureBuffer = new byte[capture.FrameBytes];
-                    byte[] writeBuffer = new byte[capture.FrameBytes];
-                    object frameLock = new object();
+                    byte[] frameBuffer = new byte[capture.FrameBytes];
                     bool hasFrame = false;
-                    bool captureActive = true;
-
-                    Thread captureThread = new Thread(() =>
-                    {
-                        while (captureActive && !stopRequested)
-                        {
-                            lock (frameLock)
-                            {
-                                if (capture.TryCaptureFrame(captureBuffer))
-                                {
-                                    hasFrame = true;
-                                }
-                            }
-
-                            Thread.Sleep(1);
-                        }
-                    })
-                    {
-                        IsBackground = true,
-                        Name = "ShareX HDR capture"
-                    };
 
                     while (!hasFrame && !stopRequested)
                     {
-                        if (capture.TryCaptureFrame(captureBuffer))
+                        if (capture.TryCaptureFrame(frameBuffer))
                         {
                             hasFrame = true;
                         }
@@ -233,31 +210,22 @@ namespace ShareX.ScreenCaptureLib
                         }
                     }
 
-                    captureThread.Start();
-
-                    try
+                    RecordUsingTimedFrameCapture(() =>
                     {
-                        RecordUsingTimedFrameCapture(() =>
+                        if (stdin == null || !ffmpeg.IsProcessRunning)
                         {
-                            if (!hasFrame || stdin == null || !ffmpeg.IsProcessRunning)
-                            {
-                                stopRequested = true;
-                                return;
-                            }
+                            stopRequested = true;
+                            return;
+                        }
 
-                            lock (frameLock)
-                            {
-                                Buffer.BlockCopy(captureBuffer, 0, writeBuffer, 0, captureBuffer.Length);
-                            }
+                        if (!capture.TryCaptureFrame(frameBuffer))
+                        {
+                            stopRequested = true;
+                            return;
+                        }
 
-                            stdin.Write(writeBuffer, 0, writeBuffer.Length);
-                        });
-                    }
-                    finally
-                    {
-                        captureActive = false;
-                        captureThread.Join();
-                    }
+                        stdin.Write(frameBuffer, 0, frameBuffer.Length);
+                    });
                 }
             }
             catch (Exception ex)
@@ -409,6 +377,7 @@ namespace ShareX.ScreenCaptureLib
 
                 StringBuilder args = new StringBuilder();
 
+                args.Append("-threads 0 ");
                 args.Append($"-i \"{input}\" ");
 
                 // FFmpeg 8 no longer auto-wires an unlabeled palettegen pad. Split the

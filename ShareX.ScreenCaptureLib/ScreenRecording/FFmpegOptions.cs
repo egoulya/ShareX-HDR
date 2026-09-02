@@ -51,7 +51,7 @@ namespace ShareX.ScreenCaptureLib
         public FFmpegNVENCPreset NVENC_Preset { get; set; } = FFmpegNVENCPreset.p4;
         public FFmpegNVENCTune NVENC_Tune { get; set; } = FFmpegNVENCTune.ll;
         public int NVENC_Bitrate { get; set; } = 3000; // kbps
-        public FFmpegPaletteGenStatsMode GIFStatsMode { get; set; } = FFmpegPaletteGenStatsMode.full;
+        public FFmpegPaletteGenStatsMode GIFStatsMode { get; set; } = FFmpegPaletteGenStatsMode.diff;
         public FFmpegPaletteUseDither GIFDither { get; set; } = FFmpegPaletteUseDither.sierra2_4a;
         public int GIFBayerScale { get; set; } = 2;
         public FFmpegAMFUsage AMF_Usage { get; set; } = FFmpegAMFUsage.lowlatency;

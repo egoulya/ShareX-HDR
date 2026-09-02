@@ -84,6 +84,12 @@ namespace ShareX.ScreenCaptureLib
             private readonly int copyH;
             private readonly int texFormat;
 
+            private const int TonemapWarmupFrames = 15;
+            private int tonemapWarmupCount;
+            private long warmupSampleCount, warmupAboveOne, warmupAboveOneHalf, warmupHotUpperSdr;
+            private float warmupMaxLum;
+            private readonly int[] warmupHist = new int[HdrTonemap.HistogramSize];
+
             private IntPtr devicePtr;
             private IntPtr contextPtr;
             private Vortice.DXGI.IDXGIOutputDuplication duplication;
@@ -118,8 +124,8 @@ namespace ShareX.ScreenCaptureLib
 
                 sdrWhiteNits = whiteNits;
                 outputDeviceName = deviceName;
-                tonemapCurve = HdrTonemap.CreateCurve(resolvedTonemapMode, new HdrLuminanceStats(0, 0, 0, 0, 4f, 4f),
-                    this.exposure, sdrWhiteNits);
+                tonemapCurve = HdrTonemap.CreateCurve(HdrTonemapMode.Desktop,
+                    new HdrLuminanceStats(1, 0, 0, 0, 1f, 1f), this.exposure, sdrWhiteNits);
                 texFormat = format;
                 srcX = intersection.X - monitorRect.X;
                 srcY = intersection.Y - monitorRect.Y;
@@ -362,12 +368,7 @@ namespace ShareX.ScreenCaptureLib
 
                         try
                         {
-                            if (!tonemapResolved)
-                            {
-                                ResolveRecordingTonemapAndCurve(mapped.pData, (int)mapped.RowPitch);
-                                tonemapResolved = true;
-                                DebugHelper.WriteLine($"HDR recording: resolved tonemap {requestedTonemapMode} -> {resolvedTonemapMode}");
-                            }
+                            UpdateTonemapFromFrame(mapped.pData, (int)mapped.RowPitch);
 
                             BlitHDRToBgr24(mapped.pData, (int)mapped.RowPitch, texFormat, srcX, srcY, copyW, copyH,
                                 bgr24, captureRect.Width, sdrWhiteNits, tonemapCurve);
@@ -390,35 +391,69 @@ namespace ShareX.ScreenCaptureLib
                 }
             }
 
-            private unsafe void ResolveRecordingTonemapAndCurve(IntPtr data, int rowPitch)
+            private unsafe void UpdateTonemapFromFrame(IntPtr data, int rowPitch)
             {
-                long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
-                float maxLum = 0f;
-                Span<int> hist = stackalloc int[HdrTonemap.HistogramSize];
-                hist.Clear();
-
-                if (texFormat == DXGI_FORMAT_R16G16B16A16_FLOAT || texFormat == DXGI_FORMAT_R10G10B10A2_UNORM)
+                if (texFormat != DXGI_FORMAT_R16G16B16A16_FLOAT && texFormat != DXGI_FORMAT_R10G10B10A2_UNORM)
                 {
-                    int bpp = HdrPixelConvert.BytesPerPixel(texFormat);
-                    int stepY = Math.Max(1, copyH / 64);
-                    int stepX = Math.Max(1, copyW / 64);
+                    return;
+                }
 
-                    for (int y = 0; y < copyH; y += stepY)
+                int bpp = HdrPixelConvert.BytesPerPixel(texFormat);
+                int stepY = Math.Max(1, copyH / 64);
+                int stepX = Math.Max(1, copyW / 64);
+
+                Span<int> histSpan = warmupHist;
+
+                for (int y = 0; y < copyH; y += stepY)
+                {
+                    byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * bpp;
+                    for (int x = 0; x < copyW; x += stepX)
                     {
-                        byte* src = (byte*)data + (long)(srcY + y) * rowPitch + (long)srcX * bpp;
-                        for (int x = 0; x < copyW; x += stepX)
-                        {
-                            HdrPixelConvert.DecodeToSdrNormalized(texFormat, src + x * bpp, sdrWhiteNits,
-                                out float r, out float g, out float b);
-                            HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
-                                ref hotUpperSdr, ref maxLum, hist);
-                        }
+                        HdrPixelConvert.DecodeToSdrNormalized(texFormat, src + x * bpp, sdrWhiteNits,
+                            out float r, out float g, out float b);
+                        HdrTonemap.AccumulateSample(r, g, b, ref warmupSampleCount, ref warmupAboveOne, ref warmupAboveOneHalf,
+                            ref warmupHotUpperSdr, ref warmupMaxLum, histSpan);
                     }
                 }
 
-                HdrLuminanceStats stats = HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
-                resolvedTonemapMode = HdrTonemap.ResolveForRecording(requestedTonemapMode, stats, outputDeviceName,
-                    hdrDxgiCapture: texFormat != DXGI_FORMAT_B8G8R8A8_UNORM);
+                tonemapWarmupCount++;
+
+                if (!tonemapResolved)
+                {
+                    if (requestedTonemapMode != HdrTonemapMode.Auto && tonemapWarmupCount >= 1)
+                    {
+                        tonemapResolved = true;
+                    }
+                    else if (tonemapWarmupCount >= TonemapWarmupFrames)
+                    {
+                        tonemapResolved = true;
+                    }
+                }
+
+                if (warmupSampleCount == 0)
+                {
+                    return;
+                }
+
+                HdrLuminanceStats stats = HdrTonemap.BuildStats(warmupSampleCount, warmupAboveOne, warmupAboveOneHalf,
+                    warmupHotUpperSdr, warmupMaxLum, warmupHist);
+
+                HdrTonemapMode newMode = requestedTonemapMode == HdrTonemapMode.Auto
+                    ? HdrTonemap.ResolveForRecording(requestedTonemapMode, stats, outputDeviceName,
+                        hdrDxgiCapture: texFormat != DXGI_FORMAT_B8G8R8A8_UNORM)
+                    : (requestedTonemapMode == HdrTonemapMode.WindowsWIC ? HdrTonemapMode.Desktop : requestedTonemapMode);
+
+                if (!tonemapResolved)
+                {
+                    if (newMode != resolvedTonemapMode || tonemapWarmupCount == 1)
+                    {
+                        DebugHelper.WriteLine($"HDR recording: tonemap {requestedTonemapMode} -> {newMode} " +
+                            $"(frame {tonemapWarmupCount}, P99={stats.P99Estimate:0.00}, max={stats.MaxLuminance:0.00}, hot={stats.FractionHotUpperSdr:P0})");
+                    }
+
+                    resolvedTonemapMode = newMode;
+                }
+
                 tonemapCurve = HdrTonemap.CreateCurve(resolvedTonemapMode, stats, exposure, sdrWhiteNits);
             }
         }

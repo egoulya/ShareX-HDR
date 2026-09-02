@@ -214,7 +214,8 @@ namespace ShareX
 
                     if (taskSettings.CaptureSettings.ScreenRecordTwoPassEncoding)
                     {
-                        extension = "mp4";
+                        // FFV1 intermediate for GIF encodes much faster than lossless H.264 and uses MKV.
+                        extension = taskSettings.CaptureSettings.FFmpegOptions.VideoCodec == FFmpegVideoCodec.gif ? "mkv" : "mp4";
                     }
                     else
                     {

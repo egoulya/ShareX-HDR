@@ -52,6 +52,8 @@ namespace ShareX.ScreenCaptureLib
         public bool HdrDxgiPipeRecording { get; set; }
         public FFmpegOptions FFmpeg { get; set; } = new FFmpegOptions();
 
+        private bool IsGifLosslessIntermediate => IsLossless && FFmpeg.VideoCodec == FFmpegVideoCodec.gif;
+
         public string GetFFmpegCommands()
         {
             string commands;
@@ -121,7 +123,11 @@ namespace ShareX.ScreenCaptureLib
             }
 
             AppendVideoEncodingArgs(args, framerate, isHdrTonemapPass: false);
-            args.Append("-pix_fmt yuv420p -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range pc ");
+
+            if (!IsGifLosslessIntermediate)
+            {
+                args.Append("-pix_fmt yuv420p -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range pc ");
+            }
 
             if (Duration > 0)
             {
@@ -129,7 +135,7 @@ namespace ShareX.ScreenCaptureLib
             }
 
             args.Append("-y ");
-            string outputExtension = IsLossless ? "mp4" : FFmpeg.Extension;
+            string outputExtension = IsLossless ? GetLosslessIntermediateExtension() : FFmpeg.Extension;
             args.Append($"\"{Path.ChangeExtension(OutputPath, outputExtension)}\"");
 
             return args.ToString();
@@ -255,17 +261,22 @@ namespace ShareX.ScreenCaptureLib
 
             args.Append("-y "); // overwrite file
 
-            string output = isCustom ? "$output$" : Path.ChangeExtension(OutputPath, IsLossless ? "mp4" : FFmpeg.Extension);
+            string output = isCustom ? "$output$" : Path.ChangeExtension(OutputPath, IsLossless ? GetLosslessIntermediateExtension() : FFmpeg.Extension);
             args.Append($"\"{output}\"");
 
             return args.ToString();
+        }
+
+        private string GetLosslessIntermediateExtension()
+        {
+            return IsGifLosslessIntermediate ? "mkv" : "mp4";
         }
 
         private void AppendVideoEncodingArgs(StringBuilder args, string framerate, bool isHdrTonemapPass)
         {
             if (IsLossless || FFmpeg.VideoCodec != FFmpegVideoCodec.apng)
             {
-                if (!(IsLossless && UseHdrDxgiPipe && IsRecording && !HdrDxgiPipeRecording))
+                if (!(IsLossless && UseHdrDxgiPipe && IsRecording && !HdrDxgiPipeRecording) && !IsGifLosslessIntermediate)
                 {
                     string videoCodec;
 
@@ -293,7 +304,12 @@ namespace ShareX.ScreenCaptureLib
 
             if (IsLossless)
             {
-                if (UseHdrDxgiPipe && IsRecording && !HdrDxgiPipeRecording)
+                if (IsGifLosslessIntermediate)
+                {
+                    // GIF two-pass: keep frames lossless with FFV1 instead of real-time H.264 qp 0.
+                    args.Append("-c:v ffv1 -level 3 -pix_fmt bgr0 ");
+                }
+                else if (UseHdrDxgiPipe && IsRecording && !HdrDxgiPipeRecording)
                 {
                     // gbrpf32le needs ffv1 v4 (experimental/disabled in bundled FFmpeg). Use gbrp16le v3 instead.
                     args.Append("-c:v ffv1 -level 3 -pix_fmt gbrp16le -color_primaries bt709 -color_trc linear -colorspace bt709 -color_range pc ");
