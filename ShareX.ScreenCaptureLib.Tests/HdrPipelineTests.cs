@@ -1,4 +1,4 @@
-#region License Information (GPL v3)
+﻿#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -13,6 +13,18 @@ using Xunit;
 
 namespace ShareX.ScreenCaptureLib.Tests
 {
+    /// <summary>
+    /// Both HDR test classes mutate process-global state (<c>HdrTonemap</c>'s Auto-mode
+    /// hysteresis memory, <c>HdrFrameDump</c>'s configuration). xunit parallelizes across test
+    /// classes, so they share a collection to run sequentially.
+    /// </summary>
+    [CollectionDefinition(HdrTestCollection.Name, DisableParallelization = true)]
+    public sealed class HdrTestCollection
+    {
+        public const string Name = "HDR pipeline (shared global state)";
+    }
+
+    [Collection(HdrTestCollection.Name)]
     public class HdrPipelineTests
     {
         private static readonly (byte r, byte g, byte b)[] DesktopSrgbPalette =
@@ -358,6 +370,9 @@ namespace ShareX.ScreenCaptureLib.Tests
         [Fact]
         public void Auto_tonemap_flat_paper_white_on_hdr_dxgi_uses_desktop()
         {
+            // AutoModeMemory is process-global; without this the result depends on test order.
+            HdrTonemap.ResetAutoModeMemory();
+
             HdrLuminanceStats flat = new HdrLuminanceStats(
                 sampleCount: 10_000,
                 aboveOneCount: 0,
@@ -371,33 +386,7 @@ namespace ShareX.ScreenCaptureLib.Tests
         }
 
         [Fact]
-        public void Auto_tonemap_hdr_dxgi_ignores_prior_auto_hdr_hysteresis()
-        {
-            HdrLuminanceStats hotSdr = new HdrLuminanceStats(
-                sampleCount: 10_000,
-                aboveOneCount: 10,
-                aboveOneHalfCount: 0,
-                hotUpperSdrCount: 900,
-                maxLuminance: 1.0f,
-                p99Estimate: 0.95f);
-            HdrLuminanceStats flat = new HdrLuminanceStats(
-                sampleCount: 10_000,
-                aboveOneCount: 0,
-                aboveOneHalfCount: 0,
-                hotUpperSdrCount: 10_000,
-                maxLuminance: 1.0f,
-                p99Estimate: 1.0f);
-
-            const string key = "test-display-hysteresis";
-            Assert.Equal(HdrTonemapMode.AutoHDR,
-                HdrTonemap.ResolveMode(HdrTonemapMode.Auto, hotSdr, key, hdrDxgiCapture: false));
-
-            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, flat, key, hdrDxgiCapture: true);
-            Assert.Equal(HdrTonemapMode.Desktop, mode);
-        }
-
-        [Fact]
-        public void Auto_tonemap_on_sdr_in_hdr_game_prefers_auto_hdr_only_without_dxgi_hdr()
+        public void Auto_tonemap_hdr_dxgi_detects_auto_hdr_game()
         {
             HdrLuminanceStats autoHdrGame = new HdrLuminanceStats(
                 sampleCount: 10_000,
@@ -407,7 +396,36 @@ namespace ShareX.ScreenCaptureLib.Tests
                 maxLuminance: 1.12f,
                 p99Estimate: 1.05f);
 
-            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, autoHdrGame, hdrDxgiCapture: false);
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, autoHdrGame, hdrDxgiCapture: true);
+            Assert.Equal(HdrTonemapMode.AutoHDR, mode);
+        }
+
+        [Fact]
+        public void Auto_tonemap_hdr_dxgi_hysteresis_can_switch_to_auto_hdr_game()
+        {
+            // AutoModeMemory is process-global; without this the result depends on test order.
+            HdrTonemap.ResetAutoModeMemory();
+
+            HdrLuminanceStats hotSdr = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 10,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 900,
+                maxLuminance: 1.0f,
+                p99Estimate: 0.95f);
+            HdrLuminanceStats autoHdrGame = new HdrLuminanceStats(
+                sampleCount: 10_000,
+                aboveOneCount: 20,
+                aboveOneHalfCount: 0,
+                hotUpperSdrCount: 1_600,
+                maxLuminance: 1.12f,
+                p99Estimate: 1.05f);
+
+            const string key = "test-display-hysteresis";
+            Assert.Equal(HdrTonemapMode.AutoHDR,
+                HdrTonemap.ResolveMode(HdrTonemapMode.Auto, hotSdr, key, hdrDxgiCapture: false));
+
+            HdrTonemapMode mode = HdrTonemap.ResolveMode(HdrTonemapMode.Auto, autoHdrGame, key, hdrDxgiCapture: true);
             Assert.Equal(HdrTonemapMode.AutoHDR, mode);
         }
 

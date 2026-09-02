@@ -70,6 +70,16 @@ namespace ShareX.ScreenCaptureLib
         /// </summary>
         public bool SaveHdrMasterPng { get; set; }
 
+        /// <summary>
+        /// Retain the PQ master so a gain map can be derived from it at save time. The master is the
+        /// HDR layer the gain map needs, so this implies producing one even when it is not itself
+        /// being saved.
+        /// </summary>
+        public bool SaveUltraHdrJpeg { get; set; }
+
+        /// <summary>Whether a PQ master has to be produced for this capture, for either consumer.</summary>
+        private bool NeedsHdrMaster => SaveHdrMasterPng || SaveUltraHdrJpeg;
+
         public HdrMasterImage LastHdrMaster { get; private set; }
 
         [ThreadStatic]
@@ -408,6 +418,22 @@ namespace ShareX.ScreenCaptureLib
         private const int DXGI_ERROR_WAIT_TIMEOUT = unchecked((int)0x887A0027);
         private const int DXGI_ERROR_NOT_FOUND = unchecked((int)0x887A0002);
         private const int DXGI_ERROR_ACCESS_LOST = unchecked((int)0x887A0026);
+        private const int DXGI_ERROR_ACCESS_DENIED = unchecked((int)0x887A002B);
+        private const int DXGI_ERROR_INVALID_CALL = unchecked((int)0x887A0001);
+
+        /// <summary>
+        /// True when a duplication can no longer be used and must be recreated. ACCESS_LOST covers a
+        /// mode change or another client taking over; ACCESS_DENIED covers a protected or exclusive
+        /// fullscreen surface; INVALID_CALL shows up when a frame is still held from a previous
+        /// acquire. All three are permanent for this duplication object.
+        /// </summary>
+        private static bool IsDuplicationLost(Result result)
+        {
+            int code = (int)result.Code;
+            return code == DXGI_ERROR_ACCESS_LOST ||
+                code == DXGI_ERROR_ACCESS_DENIED ||
+                code == DXGI_ERROR_INVALID_CALL;
+        }
         private const int DXGI_ERROR_NOT_CURRENTLY_AVAILABLE = unchecked((int)0x887A0022);
 
         private const int D3D11_USAGE_STAGING = 3;
@@ -461,6 +487,24 @@ namespace ShareX.ScreenCaptureLib
 
         public static float GetSdrWhiteLevelNits() => DisplayConfigHelper.GetSdrWhiteNits();
 
+        /// <summary>
+        /// Override for the display's SDR white level in nits; zero uses what Windows reports. See
+        /// <see cref="DisplayConfigHelper.PaperWhiteNitsOverride"/> for why it is applied at the probe
+        /// rather than at the curve.
+        /// </summary>
+        public static float PaperWhiteNitsOverride
+        {
+            get => DisplayConfigHelper.PaperWhiteNitsOverride;
+            set => DisplayConfigHelper.PaperWhiteNitsOverride = value;
+        }
+
+        public static float MinPaperWhiteNits => DisplayConfigHelper.MinPaperWhiteNits;
+
+        public static float MaxPaperWhiteNits => DisplayConfigHelper.MaxPaperWhiteNits;
+
+        /// <summary>What Windows reports for the SDR white level, ignoring any override.</summary>
+        public static float GetProbedSdrWhiteLevelNits() => DisplayConfigHelper.GetProbedSdrWhiteNits();
+
         public static float GetSdrWhiteLevelNits(string deviceName) => DisplayConfigHelper.GetSdrWhiteNits(deviceName);
 
         public static float GetSdrWhiteNormalizationScale(string deviceName = null) =>
@@ -485,7 +529,21 @@ namespace ShareX.ScreenCaptureLib
             CaptureHdrGate.Wait();
             try
             {
-                return CaptureRectangleHDRCore(rect);
+                int dropsBefore = System.Threading.Volatile.Read(ref SessionDropCount);
+                Bitmap result = CaptureRectangleHDRCore(rect);
+
+                // A duplication lost mid-capture (alt-tab, exclusive fullscreen, a mode change) is
+                // ordinary rather than exceptional, and the session has just been dropped. Rebuilding
+                // it costs one cold acquire, so recover inside this capture instead of handing back
+                // nothing and making the user press the key again.
+                if (result == null &&
+                    System.Threading.Volatile.Read(ref SessionDropCount) != dropsBefore)
+                {
+                    DebugHelper.WriteLine("HDR: a duplication was lost mid-capture; retrying once with a fresh session.");
+                    result = CaptureRectangleHDRCore(rect);
+                }
+
+                return result;
             }
             finally
             {
@@ -510,7 +568,7 @@ namespace ShareX.ScreenCaptureLib
                 IntPtr contextPtr = vorticeContext.NativePointer;
 
                 Bitmap result = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
-                HdrMasterImage master = SaveHdrMasterPng ? new HdrMasterImage(rect.Width, rect.Height) : null;
+                HdrMasterImage master = NeedsHdrMaster ? new HdrMasterImage(rect.Width, rect.Height) : null;
                 HdrMasteringDisplay bestMastering = default;
                 int bestMasteringArea = 0;
                 bool anyOutputCaptured = false;
@@ -554,13 +612,23 @@ namespace ShareX.ScreenCaptureLib
                                     string deviceName = outputDesc.DeviceName;
                                     DebugHelper.WriteLine($"HDR: Output {outputIdx} ({deviceName}) {monitorRect}, intersection={intersection}");
 
-                                    if (master != null && TryGetMasteringDisplay(output, out HdrMasteringDisplay mastering))
+                                    // Raw-frame dumps record the display's colour space and mastering
+                                    // block regardless of the companion settings, so probe when any consumer
+                                    // is active. Capture is display-referred: a corpus frame without this
+                                    // metadata cannot be replayed faithfully.
+                                    HdrMasteringDisplay mastering = default;
+                                    uint outputColorSpace = HdrDisplayProbe.ColorSpaceSdr;
+                                    if (master != null || HdrFrameDump.Enabled)
                                     {
-                                        int area = intersection.Width * intersection.Height;
-                                        if (area > bestMasteringArea)
+                                        bool gotMastering = TryGetMasteringDisplay(output, out mastering, out outputColorSpace);
+                                        if (gotMastering && master != null)
                                         {
-                                            bestMasteringArea = area;
-                                            bestMastering = mastering;
+                                            int area = intersection.Width * intersection.Height;
+                                            if (area > bestMasteringArea)
+                                            {
+                                                bestMasteringArea = area;
+                                                bestMastering = mastering;
+                                            }
                                         }
                                     }
 
@@ -581,7 +649,8 @@ namespace ShareX.ScreenCaptureLib
 
                                     if (HdrTonemapMode == HdrTonemapMode.WindowsWIC)
                                     {
-                                        if (CaptureOutputHdrWic(session, monitorRect, rect, intersection, result, master, sdrWhiteNits))
+                                        if (CaptureOutputHdrWic(session, monitorRect, rect, intersection, result, master,
+                                            sdrWhiteNits, outputColorSpace, mastering))
                                         {
                                             anyOutputCaptured = true;
                                         }
@@ -594,7 +663,9 @@ namespace ShareX.ScreenCaptureLib
                                         Session = session,
                                         MonitorRect = monitorRect,
                                         Intersection = intersection,
-                                        SdrWhiteNits = sdrWhiteNits
+                                        SdrWhiteNits = sdrWhiteNits,
+                                        ColorSpace = outputColorSpace,
+                                        Mastering = mastering
                                     });
                                 }
                                 catch (Exception e)
@@ -690,6 +761,8 @@ namespace ShareX.ScreenCaptureLib
             public Rectangle MonitorRect;
             public Rectangle Intersection;
             public float SdrWhiteNits;
+            public uint ColorSpace;
+            public HdrMasteringDisplay Mastering;
         }
 
         private sealed class HdrCpuSlice
@@ -703,54 +776,6 @@ namespace ShareX.ScreenCaptureLib
             public int DstY;
             public float SdrWhiteNits;
             public string DeviceName;
-        }
-
-        private sealed class HdrLuminanceAccumulator
-        {
-            private long sampleCount, aboveOne, aboveOneHalf, hotUpperSdr;
-            private float maxLum;
-            private readonly int[] hist = new int[HdrTonemap.HistogramSize];
-
-            public unsafe void AddFromPacked(byte[] packed, int packedStride, int format, int copyW, int copyH,
-                float sdrWhiteNits)
-            {
-                int bpp = HdrPixelConvert.BytesPerPixel(format);
-                int stepY = Math.Max(1, copyH / 64);
-                int stepX = Math.Max(1, copyW / 64);
-
-                fixed (byte* packedPtr = packed)
-                {
-                    Add(packedPtr, packedStride, format, 0, 0, copyW, copyH, sdrWhiteNits, stepX, stepY);
-                }
-            }
-
-            public unsafe void AddFromMapped(IntPtr data, int rowPitch, int format, int srcX, int srcY,
-                int copyW, int copyH, float sdrWhiteNits)
-            {
-                int stepY = Math.Max(1, copyH / 64);
-                int stepX = Math.Max(1, copyW / 64);
-                Add((byte*)data, rowPitch, format, srcX, srcY, copyW, copyH, sdrWhiteNits, stepX, stepY);
-            }
-
-            private unsafe void Add(byte* basePtr, int stride, int format, int srcX, int srcY,
-                int copyW, int copyH, float sdrWhiteNits, int stepX, int stepY)
-            {
-                int bpp = HdrPixelConvert.BytesPerPixel(format);
-                for (int y = 0; y < copyH; y += stepY)
-                {
-                    byte* srcRow = basePtr + (long)(srcY + y) * stride + (long)srcX * bpp;
-                    for (int x = 0; x < copyW; x += stepX)
-                    {
-                        HdrPixelConvert.DecodeToSdrNormalized(format, srcRow + x * bpp, sdrWhiteNits,
-                            out float r, out float g, out float b);
-                        HdrTonemap.AccumulateSample(r, g, b, ref sampleCount, ref aboveOne, ref aboveOneHalf,
-                            ref hotUpperSdr, ref maxLum, hist);
-                    }
-                }
-            }
-
-            public HdrLuminanceStats Build() =>
-                HdrTonemap.BuildStats(sampleCount, aboveOne, aboveOneHalf, hotUpperSdr, maxLum, hist);
         }
 
         private sealed class HdrDuplSession
@@ -1000,11 +1025,19 @@ namespace ShareX.ScreenCaptureLib
 
         private static bool TryGetMasteringDisplay(Vortice.DXGI.IDXGIOutput output, out HdrMasteringDisplay mastering)
         {
+            return TryGetMasteringDisplay(output, out mastering, out _);
+        }
+
+        private static bool TryGetMasteringDisplay(Vortice.DXGI.IDXGIOutput output,
+            out HdrMasteringDisplay mastering, out uint colorSpace)
+        {
             mastering = default;
+            colorSpace = HdrDisplayProbe.ColorSpaceSdr;
             try
             {
                 using Vortice.DXGI.IDXGIOutput6 output6 = output.QueryInterface<Vortice.DXGI.IDXGIOutput6>();
                 OutputDescription1 desc = output6.Description1;
+                colorSpace = (uint)desc.ColorSpace;
                 mastering = new HdrMasteringDisplay
                 {
                     RedX = desc.RedPrimary[0],
@@ -1028,8 +1061,12 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
+        private static int SessionDropCount;
+
         private static void DropSession(string deviceName)
         {
+            System.Threading.Interlocked.Increment(ref SessionDropCount);
+
             lock (SessionLock)
             {
                 if (deviceName != null && Sessions.TryGetValue(deviceName, out HdrDuplSession session))
@@ -1064,7 +1101,8 @@ namespace ShareX.ScreenCaptureLib
         }
 
         private static bool CaptureOutputHdrWic(HdrDuplSession session, Rectangle monitorRect, Rectangle captureRect,
-            Rectangle intersection, Bitmap composite, HdrMasterImage master, float sdrWhiteNits)
+            Rectangle intersection, Bitmap composite, HdrMasterImage master, float sdrWhiteNits,
+            uint colorSpace, in HdrMasteringDisplay mastering)
         {
             if (!TryAcquireMapped(session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH))
             {
@@ -1073,6 +1111,8 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
+                DumpRawFrame(mapped, session, texW, texH, monitorRect, captureRect, sdrWhiteNits, colorSpace, mastering);
+
                 int srcX = intersection.X - monitorRect.X;
                 int srcY = intersection.Y - monitorRect.Y;
                 int copyW = Math.Min(intersection.Width, texW - srcX);
@@ -1088,7 +1128,7 @@ namespace ShareX.ScreenCaptureLib
                     srcX, srcY, copyW, copyH, composite, dstX, dstY);
                 if (ok && master != null)
                 {
-                    FillMasterFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format,
+                    HdrFrameTonemapper.FillMasterFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format,
                         srcX, srcY, copyW, copyH, dstX, dstY, sdrWhiteNits, master);
                 }
 
@@ -1098,21 +1138,6 @@ namespace ShareX.ScreenCaptureLib
             {
                 session.Unmap(session.Context, session.Staging, 0);
                 try { session.VorticeDuplication?.ReleaseFrame(); } catch { }
-            }
-        }
-
-        private static unsafe void FillMasterFromMapped(IntPtr data, int rowPitch, int format,
-            int srcX, int srcY, int copyW, int copyH, int dstX, int dstY, float sdrWhiteNits, HdrMasterImage master)
-        {
-            int bpp = HdrPixelConvert.BytesPerPixel(format);
-            byte* srcBase = (byte*)data;
-            for (int y = 0; y < copyH; y++)
-            {
-                byte* srcRow = srcBase + (long)(srcY + y) * rowPitch + (long)srcX * bpp;
-                for (int x = 0; x < copyW; x++)
-                {
-                    master.WriteFromDxgiPixel(dstX + x, dstY + y, format, srcRow + x * bpp, sdrWhiteNits);
-                }
             }
         }
 
@@ -1126,6 +1151,9 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
+                DumpRawFrame(mapped, session, texW, texH, pending.MonitorRect, captureRect,
+                    pending.SdrWhiteNits, pending.ColorSpace, pending.Mastering);
+
                 if (!TryGetCopyRect(pending, captureRect, texW, texH,
                     out int srcX, out int srcY, out int copyW, out int copyH, out int dstX, out int dstY))
                 {
@@ -1140,7 +1168,7 @@ namespace ShareX.ScreenCaptureLib
                 HdrTonemapCurve curve = HdrTonemap.CreateCurve(resolvedMode, stats, HdrExposure, pending.SdrWhiteNits);
                 DebugHelper.WriteLine($"HDR: direct tonemap {HdrTonemapMode} -> {resolvedMode} (stats=full output {texW}x{texH}, P99={stats.P99Estimate:0.00}, max={stats.MaxLuminance:0.00}, sdrWhite={pending.SdrWhiteNits:0.#})");
 
-                BlitMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
+                HdrFrameTonemapper.BlitMapped(mapped.pData, (int)mapped.RowPitch, session.Format, srcX, srcY, copyW, copyH,
                     pending.SdrWhiteNits, composite, dstX, dstY, curve, master);
                 return true;
             }
@@ -1162,6 +1190,9 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
+                DumpRawFrame(mapped, session, texW, texH, pending.MonitorRect, captureRect,
+                    pending.SdrWhiteNits, pending.ColorSpace, pending.Mastering);
+
                 tonemapStatsAcc?.AddFromMapped(mapped.pData, (int)mapped.RowPitch, session.Format, 0, 0, texW, texH,
                     pending.SdrWhiteNits);
 
@@ -1224,6 +1255,28 @@ namespace ShareX.ScreenCaptureLib
             }
 
             return session.PackedBuffer;
+        }
+
+        /// <summary>
+        /// Records the acquired frame to the raw-frame corpus when <see cref="HdrFrameDump"/> is
+        /// armed. No-op otherwise, and never able to fail a capture.
+        /// </summary>
+        private static void DumpRawFrame(in D3D11_MAPPED_SUBRESOURCE mapped, HdrDuplSession session,
+            int texW, int texH, Rectangle monitorRect, Rectangle captureRect, float sdrWhiteNits,
+            uint colorSpace, in HdrMasteringDisplay mastering)
+        {
+            if (!HdrFrameDump.Enabled)
+            {
+                return;
+            }
+
+            HdrFrameMetadata template = HdrFrameDump.CreateTemplate(session.DeviceName, sdrWhiteNits,
+                colorSpace, monitorRect, captureRect, mastering);
+
+            // The full output is dumped rather than the requested crop: Auto-mode stats are
+            // computed over the whole output, so a corpus frame must carry it for offline replay
+            // to reach the same decision.
+            HdrFrameDump.TryDump(mapped.pData, (int)mapped.RowPitch, session.Format, 0, 0, texW, texH, template);
         }
 
         private static bool TryAcquireMapped(HdrDuplSession session, out D3D11_MAPPED_SUBRESOURCE mapped, out int texW, out int texH)
@@ -1289,10 +1342,25 @@ namespace ShareX.ScreenCaptureLib
             {
                 try
                 {
-                    if (duplication.AcquireNextFrame(16, out OutduplFrameInfo frameInfo, out desktopResource).Success &&
-                        desktopResource != null)
+                    Result quick = duplication.AcquireNextFrame(16, out OutduplFrameInfo frameInfo, out desktopResource);
+                    if (quick.Success && desktopResource != null)
                     {
                         return true;
+                    }
+
+                    // AcquireNextFrame reports a lost duplication by returning the code as often as
+                    // by throwing, and only the cold path used to check for that. A warm session that
+                    // hit it therefore stayed warm and broken: every later capture failed instantly
+                    // against the same dead duplication until the app restarted. Going fullscreen in
+                    // a game is one of the ordinary ways to trigger it.
+                    if (IsDuplicationLost(quick))
+                    {
+                        DebugHelper.WriteLine($"HDR: warm duplication lost on {session.DeviceName} " +
+                            $"(0x{(uint)quick.Code:X8}); dropping the session so it is rebuilt.");
+                        desktopResource?.Dispose();
+                        desktopResource = null;
+                        DropSession(session.DeviceName);
+                        return false;
                     }
                 }
                 catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_ACCESS_LOST)
@@ -1306,7 +1374,25 @@ namespace ShareX.ScreenCaptureLib
 
                 try
                 {
-                    return duplication.AcquireNextFrame(50, out _, out desktopResource).Success && desktopResource != null;
+                    Result retry = duplication.AcquireNextFrame(50, out _, out desktopResource);
+                    if (retry.Success && desktopResource != null)
+                    {
+                        return true;
+                    }
+
+                    if (IsDuplicationLost(retry))
+                    {
+                        DebugHelper.WriteLine($"HDR: warm duplication lost on {session.DeviceName} " +
+                            $"(0x{(uint)retry.Code:X8}); dropping the session so it is rebuilt.");
+                        desktopResource?.Dispose();
+                        desktopResource = null;
+                        DropSession(session.DeviceName);
+                        return false;
+                    }
+
+                    DebugHelper.WriteLine($"HDR: warm acquire on {session.DeviceName} returned " +
+                        $"0x{(uint)retry.Code:X8} with no frame.");
+                    return false;
                 }
                 catch (SharpGenException ex) when (ex.HResult == DXGI_ERROR_ACCESS_LOST)
                 {
@@ -1430,84 +1516,8 @@ namespace ShareX.ScreenCaptureLib
         {
             fixed (byte* packedPtr = slice.Packed)
             {
-                BlitHdrRegion(packedPtr, slice.PackedStride, slice.Format, 0, 0, slice.CopyW, slice.CopyH,
+                HdrFrameTonemapper.BlitRegion(packedPtr, slice.PackedStride, slice.Format, 0, 0, slice.CopyW, slice.CopyH,
                     slice.SdrWhiteNits, composite, slice.DstX, slice.DstY, curve, master);
-            }
-        }
-
-        private static unsafe void BlitMapped(IntPtr data, int rowPitch, int format, int srcX, int srcY,
-            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve,
-            HdrMasterImage master)
-        {
-            BlitHdrRegion((byte*)data, rowPitch, format, srcX, srcY, copyW, copyH, sdrWhiteNits,
-                composite, dstX, dstY, curve, master);
-        }
-
-        private static unsafe void BlitHdrRegion(byte* srcBase, int srcStride, int format, int srcX, int srcY,
-            int copyW, int copyH, float sdrWhiteNits, Bitmap composite, int dstX, int dstY, HdrTonemapCurve curve,
-            HdrMasterImage master)
-        {
-            copyW = Math.Min(copyW, composite.Width - dstX);
-            copyH = Math.Min(copyH, composite.Height - dstY);
-            if (copyW <= 0 || copyH <= 0)
-            {
-                return;
-            }
-
-            int bpp = HdrPixelConvert.BytesPerPixel(format);
-            BitmapData bd = composite.LockBits(new Rectangle(dstX, dstY, copyW, copyH),
-                ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
-
-            try
-            {
-                byte* dstBase = (byte*)bd.Scan0;
-                int dstStride = bd.Stride;
-
-                if (master != null)
-                {
-                    // Master MaxCLL/MaxFALL tracking is not thread-safe; rows stay sequential.
-                    for (int y = 0; y < copyH; y++)
-                    {
-                        BlitHdrRow(srcBase, srcStride, format, bpp, srcX, srcY, copyW, y, sdrWhiteNits,
-                            dstBase, dstStride, dstX, dstY, curve, master);
-                    }
-                }
-                else
-                {
-                    System.Threading.Tasks.Parallel.For(0, copyH, y =>
-                    {
-                        BlitHdrRow(srcBase, srcStride, format, bpp, srcX, srcY, copyW, y, sdrWhiteNits,
-                            dstBase, dstStride, dstX, dstY, curve, null);
-                    });
-                }
-            }
-            finally
-            {
-                composite.UnlockBits(bd);
-            }
-        }
-
-        private static unsafe void BlitHdrRow(byte* srcBase, int srcStride, int format, int bpp,
-            int srcX, int srcY, int copyW, int y, float sdrWhiteNits,
-            byte* dstBase, int dstStride, int dstX, int dstY, HdrTonemapCurve curve, HdrMasterImage master)
-        {
-            byte* dst = dstBase + y * dstStride;
-            byte* srcRow = srcBase + (long)(srcY + y) * srcStride + (long)srcX * bpp;
-            int py = dstY + y;
-
-            for (int x = 0; x < copyW; x++)
-            {
-                byte* px = srcRow + x * bpp;
-                master?.WriteFromDxgiPixel(dstX + x, py, format, px, sdrWhiteNits);
-
-                HdrPixelConvert.DecodeToSdrNormalized(format, px, sdrWhiteNits,
-                    out float r, out float g, out float b);
-                curve.Map(ref r, ref g, ref b);
-                int pxCoord = dstX + x;
-                dst[x * 4 + 0] = curve.Encode(b, pxCoord, py);
-                dst[x * 4 + 1] = curve.Encode(g, pxCoord, py);
-                dst[x * 4 + 2] = curve.Encode(r, pxCoord, py);
-                dst[x * 4 + 3] = 255;
             }
         }
 
@@ -1523,7 +1533,12 @@ namespace ShareX.ScreenCaptureLib
             long sampleCount = 0, aboveOne = 0, aboveOneHalf = 0, hotUpperSdr = 0;
             float maxLum = 0f;
             int[] hist = new int[HdrTonemap.HistogramSize];
-            int step = Math.Max(1, width * height / 4096);
+            // 4096 samples badly underestimates the peak - it is an extremum, so a sparse grid just
+            // misses the bright pixels, and everything above the estimate is then clamped flat by the
+            // tone curve. Screenshots scan every pixel (see HdrLuminanceAccumulator); recording
+            // cannot afford that per frame, so it samples 16x denser instead, which recovers most of
+            // the peak for a still-negligible cost.
+            int step = Math.Max(1, width * height / 65536);
 
             for (int i = 0; i < width * height; i += step)
             {

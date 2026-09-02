@@ -1,4 +1,4 @@
-#region License Information (GPL v3)
+﻿#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -335,6 +335,11 @@ namespace ShareX
         InspectWindow,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         MonitorTest,
+        // Development aid, not a shipping feature: no resx entry, so the [Description] is what the
+        // hotkey UI shows (GetLocalizedDescription falls back to it when the resource key is absent).
+        [Category(EnumExtensions.HotkeyType_Category_Tools)]
+        [System.ComponentModel.Description("HDR debug capture (dump + report)")]
+        HDRDebugCapture,
         // Other
         [Category(EnumExtensions.HotkeyType_Category_Other)]
         DisableHotkeys,
