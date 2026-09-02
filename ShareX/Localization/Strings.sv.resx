@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>Dölj skrivbordsikoner automatiskt</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>Färgkorrigering för HDR-skärmbilder</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>Fönstertitel:</value>
   </data>
@@ -2848,5 +2845,26 @@ Välj en annan snabbtangent eller avsluta programmet som orsakar konflikten och 
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>Anpassa verktygsfält...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>HDR-tagning</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>HDR-tonemappningsläge</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>HDR-papperssvitt (nits)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = använd nivån som Windows rapporterar (identifierat: {0} nits).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>Spara även HDR-master-PNG (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>Spara även Ultra HDR-JPEG (gain map)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR behåller en vanlig SDR-bild och lägger till en gain map, så att HDR-kapabla visare visar hela omfånget och allt annat visar SDR-bilden.</value>
   </data>
 </root>

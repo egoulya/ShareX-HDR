@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>إخفاء أيقونات سطح المكتب تلقائيًا</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>مصحح ألوان لقطات شاشة HDR</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>عنوان النافذة:</value>
   </data>
@@ -2848,5 +2845,26 @@
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>تخصيص شريط الأدوات...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>التقاط HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>وضع تعيين النغمات لـ HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>أبيض الورق لـ HDR (nits)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = استخدام المستوى الذي يبلّغ عنه Windows (المكتشف: {0} nits).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>حفظ ملف HDR الأصلي بصيغة PNG أيضًا (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>حفظ ملف Ultra HDR بصيغة JPEG أيضًا (خريطة كسب)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>يحتفظ Ultra HDR بصورة SDR عادية ويضيف إليها خريطة كسب، لذا تُظهر العارضات التي تدعم HDR النطاق الكامل، وتُظهر البقية صورة SDR.</value>
   </data>
 </root>

@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>Masquer automatiquement les icônes du bureau</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>Correcteur de couleurs des captures HDR</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>Titre de la fenêtre :</value>
   </data>
@@ -2848,5 +2845,26 @@ Veuillez sélectionner un raccourci différent ou quitter l'application en confl
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>Personnaliser la barre d’outils...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>Capture HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>Mode de tone mapping HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>Blanc papier HDR (nits)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = utiliser le niveau signalé par Windows (détecté : {0} nits).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>Enregistrer aussi le PNG master HDR (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>Enregistrer aussi le JPEG Ultra HDR (gain map)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR conserve une image SDR ordinaire et y ajoute une gain map : les visionneuses compatibles HDR affichent toute la plage, les autres affichent l'image SDR.</value>
   </data>
 </root>

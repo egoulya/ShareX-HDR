@@ -427,18 +427,6 @@
   <data name="ImageHelpers_Image_files" xml:space="preserve">
     <value>Bildfiler</value>
   </data>
-  <data name="CssFileNameEditor_Cascading_Style_Sheets" xml:space="preserve">
-    <value>Cascading Style Sheets</value>
-  </data>
-  <data name="JsonFileNameEditor_JavaScript_Object_Notation_files" xml:space="preserve">
-    <value>JavaScript Object Notation-filer</value>
-  </data>
-  <data name="WavFileNameEditor_Sound_file" xml:space="preserve">
-    <value>Ljudfil</value>
-  </data>
-  <data name="ExeFileNameEditor_Applications" xml:space="preserve">
-    <value>Program</value>
-  </data>
   <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
     <value>Den senaste projektversionen kunde inte skapas.</value>
   </data>
@@ -565,17 +553,11 @@
   <data name="CMYK_ToString_Cyan___0_0_0____Magenta___1_0_0____Yellow___2_0_0____Key___3_0_0__" xml:space="preserve">
     <value>Cyan: {0:0.0} %, magenta: {1:0.0} %, gul: {2:0.0} %, svart: {3:0.0} %</value>
   </data>
-  <data name="CodeMenu_Create_Close" xml:space="preserve">
-    <value>Stäng</value>
-  </data>
   <data name="CodeMenuEntryFilename_RandomAdjective" xml:space="preserve">
     <value>Slumpmässigt adjektiv</value>
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Slumpmässigt djur</value>
-  </data>
-  <data name="CssFileNameEditor_EditValue_Browse_for_a_Cascading_Style_Sheet___" xml:space="preserve">
-    <value>Bläddra efter en CSS-fil...</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Filuppladdare</value>
@@ -603,9 +585,6 @@
   </data>
   <data name="CutOutEffectType_ZigZag" xml:space="preserve">
     <value>Sågtand</value>
-  </data>
-  <data name="DirectoryNameEditor_EditValue_Browse_for_a_folder___" xml:space="preserve">
-    <value>Bläddra efter en mapp...</value>
   </data>
   <data name="DownloaderForm_ChangeStatus_Status___0_" xml:space="preserve">
     <value>Status: {0}</value>
@@ -669,9 +648,6 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>Fel</value>
-  </data>
-  <data name="ExeFileNameEditor_EditValue_Browse_for_executable___" xml:space="preserve">
-    <value>Bläddra efter en körbar fil...</value>
   </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Kopiera</value>
@@ -1375,9 +1351,6 @@
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>Anpassad URL-förkortare</value>
   </data>
-  <data name="WavFileNameEditor_EditValue_Browse_for_a_sound_file___" xml:space="preserve">
-    <value>Bläddra efter en ljudfil...</value>
-  </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Privat</value>
   </data>
@@ -1386,5 +1359,23 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Olistad</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Av</value>
+  </data>
+  <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
+    <value>Dynamisk</value>
+  </data>
+  <data name="HdrCaptureMode_On" xml:space="preserve">
+    <value>På</value>
+  </data>
+  <data name="HdrTonemapMode_Auto" xml:space="preserve">
+    <value>Auto (identifiera från innehållet)</value>
+  </data>
+  <data name="HdrTonemapMode_Desktop" xml:space="preserve">
+    <value>Skrivbord / äkta HDR (bevara gränssnittets vitt)</value>
+  </data>
+  <data name="HdrTonemapMode_Filmic" xml:space="preserve">
+    <value>Filmisk</value>
   </data>
 </root>

@@ -427,18 +427,6 @@
   <data name="ImageHelpers_Image_files" xml:space="preserve">
     <value>File immagine</value>
   </data>
-  <data name="CssFileNameEditor_Cascading_Style_Sheets" xml:space="preserve">
-    <value>Fogli di stile a cascata</value>
-  </data>
-  <data name="JsonFileNameEditor_JavaScript_Object_Notation_files" xml:space="preserve">
-    <value>File JavaScript Object Notation</value>
-  </data>
-  <data name="WavFileNameEditor_Sound_file" xml:space="preserve">
-    <value>File audio</value>
-  </data>
-  <data name="ExeFileNameEditor_Applications" xml:space="preserve">
-    <value>Applicazioni</value>
-  </data>
   <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
     <value>L'ultima compilazione del progetto non è riuscita.</value>
   </data>
@@ -565,17 +553,11 @@
   <data name="CMYK_ToString_Cyan___0_0_0____Magenta___1_0_0____Yellow___2_0_0____Key___3_0_0__" xml:space="preserve">
     <value>Ciano: {0:0.0}%, Magenta: {1:0.0}%, Giallo: {2:0.0}%, Chiave: {3:0.0}%</value>
   </data>
-  <data name="CodeMenu_Create_Close" xml:space="preserve">
-    <value>Chiudi</value>
-  </data>
   <data name="CodeMenuEntryFilename_RandomAdjective" xml:space="preserve">
     <value>Aggettivo casuale</value>
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Animale casuale</value>
-  </data>
-  <data name="CssFileNameEditor_EditValue_Browse_for_a_Cascading_Style_Sheet___" xml:space="preserve">
-    <value>Cerca CSS...</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Servizio Caricamento File</value>
@@ -603,9 +585,6 @@
   </data>
   <data name="CutOutEffectType_ZigZag" xml:space="preserve">
     <value>Dente di sega</value>
-  </data>
-  <data name="DirectoryNameEditor_EditValue_Browse_for_a_folder___" xml:space="preserve">
-    <value>Cerca Cartella...</value>
   </data>
   <data name="DownloaderForm_ChangeStatus_Status___0_" xml:space="preserve">
     <value>Stato: {0}</value>
@@ -669,9 +648,6 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>Errore</value>
-  </data>
-  <data name="ExeFileNameEditor_EditValue_Browse_for_executable___" xml:space="preserve">
-    <value>Cerca Eseguibile...</value>
   </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Copia</value>
@@ -1375,9 +1351,6 @@
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>Servizio Accorciamento URL Personalizzato</value>
   </data>
-  <data name="WavFileNameEditor_EditValue_Browse_for_a_sound_file___" xml:space="preserve">
-    <value>Sfoglia per un file audio...</value>
-  </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Privato</value>
   </data>
@@ -1386,5 +1359,23 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Non in elenco</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Disattivato</value>
+  </data>
+  <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
+    <value>Dinamico</value>
+  </data>
+  <data name="HdrCaptureMode_On" xml:space="preserve">
+    <value>Attivato</value>
+  </data>
+  <data name="HdrTonemapMode_Auto" xml:space="preserve">
+    <value>Automatico (rilevamento dal contenuto)</value>
+  </data>
+  <data name="HdrTonemapMode_Desktop" xml:space="preserve">
+    <value>Desktop / HDR reale (mantieni il bianco dell'interfaccia)</value>
+  </data>
+  <data name="HdrTonemapMode_Filmic" xml:space="preserve">
+    <value>Filmico</value>
   </data>
 </root>

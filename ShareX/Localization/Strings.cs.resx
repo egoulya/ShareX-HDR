@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>Automaticky skrýt ikony plochy</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>Korekce barev snímku HDR</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>Název okna:</value>
   </data>
@@ -2848,5 +2845,26 @@ Vyberte jinou klávesovou zkratku nebo ukončete konfliktní aplikaci a znovu ot
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>Přizpůsobit panel nástrojů...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>Zachycení HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>Režim tone mappingu HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>Papírová bílá HDR (nity)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = použít úroveň hlášenou systémem Windows (zjištěno: {0} nitů).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>Uložit také HDR master PNG (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>Uložit také Ultra HDR JPEG (gain map)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR zachovává běžný obrázek SDR a přidává k němu gain map, takže prohlížeče s podporou HDR zobrazí plný rozsah a ostatní zobrazí obrázek SDR.</value>
   </data>
 </root>

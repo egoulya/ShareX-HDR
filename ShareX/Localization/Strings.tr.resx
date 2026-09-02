@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>Masaüstü simgelerini otomatik olarak gizle</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>HDR ekran görüntüsü renk düzeltici</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>Pencere başlığı:</value>
   </data>
@@ -2848,5 +2845,26 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>Araç çubuğunu özelleştir...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>HDR yakalama</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>HDR ton eşleme modu</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>HDR kağıt beyazı (nit)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = Windows'un bildirdiği düzeyi kullan (algılanan: {0} nit).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>HDR ana PNG dosyasını da kaydet (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>Ultra HDR JPEG dosyasını da kaydet (kazanç haritası)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR sıradan bir SDR görüntüsünü korur ve buna bir kazanç haritası ekler; böylece HDR destekleyen görüntüleyiciler tüm aralığı, diğerleri ise SDR görüntüsünü gösterir.</value>
   </data>
 </root>

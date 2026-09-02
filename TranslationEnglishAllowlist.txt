@@ -143,7 +143,6 @@ ShareX.HelpersLib|ColorPickerWindow_Magenta_percent|915c0c4f13b18cce47c517aeec84
 ShareX.HelpersLib|ColorPickerWindow_OK|565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3|cs,da,de,fr,hu,id-ID,it-IT,ja-JP,nl-NL,pl,pt-BR,pt-PT,ro,sv,vi-VN
 ShareX.HelpersLib|ColorPickerWindow_Saturation|993f024b650eaf0f1c64118f6033c44b7c98d220539bcb51454ca578f6f2b477|fr
 ShareX.HelpersLib|ColorPickerWindow_Saturation_percent|6014f209a0f6db5a83f3f54164e5e0f18263e14ef4a6b2fdec9f7f8bde75ea6d|fr
-ShareX.HelpersLib|CssFileNameEditor_Cascading_Style_Sheets|28863d40e03b6f1be5e94c8764dc751a8624ac221926a9e38dddd3b5a2a226e9|da,de,nl-NL,sv
 ShareX.HelpersLib|CustomUploaderDestinationType_TextUploader|cd7fd4f2f942c556b9ea4bd16c004544cab1dc597c4ae28df6b7d5939976edeb|de
 ShareX.HelpersLib|DownloaderForm_ChangeStatus_Status___0_|390591ea8dc1971af12f1ca1e5be490fe933b81dd924b60b4229a790f38e7820|da,de,id-ID,nl-NL,pl,pt-BR,sv
 ShareX.HelpersLib|EDataType_File|50009ce1da4d15e1c4a04024df691eed5f0d598e2c4c67092f205366d0adf99e|id-ID,it-IT
@@ -154,8 +153,8 @@ ShareX.HelpersLib|Error|54a0e8c17ebb21a11f8a25b8042786ef7efe52441e6cc87e92c67e0c
 ShareX.HelpersLib|ErrorWindow_Default_title|54a0e8c17ebb21a11f8a25b8042786ef7efe52441e6cc87e92c67e0c4c0c6e78|es-MX,es
 ShareX.HelpersLib|ErrorWindow_OK|565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3|cs,da,de,fr,hu,id-ID,it-IT,ja-JP,nl-NL,pl,pt-BR,pt-PT,ro,sv,vi-VN
 ShareX.HelpersLib|ErrorWindow_Title|9001ad1e9cce7e505a3dba263d556b2f98a8a5de3f820bdbd222c528b2891215|es-MX,es
-ShareX.HelpersLib|ExeFileNameEditor_Applications|98e33b0f3104fcf1b812ba2c679c0f15a94f583559b731d6580df2d8307d3edf|fr
 ShareX.HelpersLib|FileDestination_Email|969ccbd3cf6300ecd5c880459d81ae9027df7517563184a1b8b15282db230621|cs,de,es,hu,id-ID,it-IT,nl-NL,pl,pt-BR,pt-PT,ro,vi-VN
+ShareX.HelpersLib|HdrTonemapMode_Filmic|785cbb5a3ab517bc5863f1a9a5f871e6cc5953a1a7f7abd0b28434e9df862cd6|ro
 ShareX.HelpersLib|Helpers_Timeout|70594d932950a164e0d820060410af4ea1d127b7221f577d2dcfc22c2d8ff1df|nl-NL
 ShareX.HelpersLib|HotkeyInfo_Alt|c91da2e0203bbe907d39b323ce7f5de534ce2529069c5aa04737cb0bcefc635b|ar-YE,cs,da,de,es-MX,es,fa-IR,fr,he-IL,hi,hu,id-ID,it-IT,ja-JP,ko-KR,nl-NL,pl,pt-BR,pt-PT,ro,ru,sv,th,tr,uk,vi-VN,zh-CN,zh-TW
 ShareX.HelpersLib|HotkeyInfo_Backspace|292fffe328d07afdaba6f7f1a135258b1b6d2586b5edc54e6e22e599dd3ec077|ar-YE,cs,fa-IR,he-IL,hi,hu,id-ID,it-IT,ja-JP,ko-KR,nl-NL,pl,pt-BR,pt-PT,ro,ru,th,tr,uk,vi-VN,zh-CN,zh-TW

@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>바탕 화면 아이콘 자동 숨기기</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>HDR 스크린샷 색상 보정</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>창 제목:</value>
   </data>
@@ -2848,5 +2845,26 @@ Do you want to abort the active 화면 녹화?</value>
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>도구 모음 사용자 지정...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>HDR 캡처</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>HDR 톤맵 모드</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>HDR 페이퍼 화이트 (nit)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = Windows가 보고하는 값을 사용합니다 (감지됨: {0} nit).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>HDR 마스터 PNG도 저장 (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>Ultra HDR JPEG도 저장 (게인 맵)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR는 일반 SDR 이미지를 그대로 두고 게인 맵을 덧붙입니다. 따라서 HDR을 지원하는 뷰어는 전체 범위를 표시하고 그 외에는 SDR 이미지를 표시합니다.</value>
   </data>
 </root>

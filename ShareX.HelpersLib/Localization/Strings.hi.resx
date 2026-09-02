@@ -427,18 +427,6 @@
   <data name="ImageHelpers_Image_files" xml:space="preserve">
     <value>छवि फ़ाइलें</value>
   </data>
-  <data name="CssFileNameEditor_Cascading_Style_Sheets" xml:space="preserve">
-    <value>कैस्केडिंग स्टाइल शीट</value>
-  </data>
-  <data name="JsonFileNameEditor_JavaScript_Object_Notation_files" xml:space="preserve">
-    <value>JavaScript ऑब्जेक्ट नोटेशन फ़ाइलें</value>
-  </data>
-  <data name="WavFileNameEditor_Sound_file" xml:space="preserve">
-    <value>ध्वनि फ़ाइल</value>
-  </data>
-  <data name="ExeFileNameEditor_Applications" xml:space="preserve">
-    <value>अनुप्रयोग</value>
-  </data>
   <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
     <value>नवीनतम प्रोजेक्ट बिल्ड सफल नहीं था।</value>
   </data>
@@ -565,17 +553,11 @@
   <data name="CMYK_ToString_Cyan___0_0_0____Magenta___1_0_0____Yellow___2_0_0____Key___3_0_0__" xml:space="preserve">
     <value>सियान: {0:0.0}%, मैजेंटा: {1:0.0}%, पीला: {2:0.0}%, काला: {3:0.0}%</value>
   </data>
-  <data name="CodeMenu_Create_Close" xml:space="preserve">
-    <value>बंद करें</value>
-  </data>
   <data name="CodeMenuEntryFilename_RandomAdjective" xml:space="preserve">
     <value>यादृच्छिक विशेषण</value>
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>यादृच्छिक जानवर</value>
-  </data>
-  <data name="CssFileNameEditor_EditValue_Browse_for_a_Cascading_Style_Sheet___" xml:space="preserve">
-    <value>कैस्केडिंग स्टाइल शीट ब्राउज़ करें...</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>फ़ाइल अपलोडर</value>
@@ -603,9 +585,6 @@
   </data>
   <data name="CutOutEffectType_ZigZag" xml:space="preserve">
     <value>आरी-दाँत</value>
-  </data>
-  <data name="DirectoryNameEditor_EditValue_Browse_for_a_folder___" xml:space="preserve">
-    <value>फ़ोल्डर ब्राउज़ करें...</value>
   </data>
   <data name="DownloaderForm_ChangeStatus_Status___0_" xml:space="preserve">
     <value>स्थिति: {0}</value>
@@ -669,9 +648,6 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>त्रुटि</value>
-  </data>
-  <data name="ExeFileNameEditor_EditValue_Browse_for_executable___" xml:space="preserve">
-    <value>निष्पादन योग्य फ़ाइल ब्राउज़ करें...</value>
   </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>कॉपी करें</value>
@@ -1375,9 +1351,6 @@
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>अनुकूलित URL संक्षिप्तकर्ता</value>
   </data>
-  <data name="WavFileNameEditor_EditValue_Browse_for_a_sound_file___" xml:space="preserve">
-    <value>ध्वनि फ़ाइल ब्राउज़ करें...</value>
-  </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>निजी</value>
   </data>
@@ -1386,5 +1359,23 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>असूचीबद्ध</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
+    <value>डायनामिक</value>
+  </data>
+  <data name="HdrCaptureMode_On" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="HdrTonemapMode_Auto" xml:space="preserve">
+    <value>स्वतः (सामग्री से पहचानें)</value>
+  </data>
+  <data name="HdrTonemapMode_Desktop" xml:space="preserve">
+    <value>डेस्कटॉप / वास्तविक HDR (UI का सफ़ेद बनाए रखें)</value>
+  </data>
+  <data name="HdrTonemapMode_Filmic" xml:space="preserve">
+    <value>फ़िल्मिक</value>
   </data>
 </root>

@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>پنهان کردن خودکار نمادهای میزکار</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>تصحیح‌کننده رنگ تصویر صفحه HDR</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>عنوان پنجره:</value>
   </data>
@@ -2848,5 +2845,26 @@ Please select a different hotkey or quit the conflicting application and reبا�
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>سفارشی‌سازی نوار ابزار...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>ضبط HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>حالت نقشه‌برداری تُن HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>سفیدی کاغذ HDR (نیت)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>۰ = استفاده از مقداری که Windows گزارش می‌کند (شناسایی‌شده: {0} نیت).</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>ذخیره PNG اصلی HDR نیز (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>ذخیره JPEG با Ultra HDR نیز (نقشه بهره)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR یک تصویر معمولی SDR را نگه می‌دارد و یک نقشه بهره به آن می‌افزاید، بنابراین نمایشگرهای سازگار با HDR کل محدوده را نشان می‌دهند و بقیه تصویر SDR را.</value>
   </data>
 </root>

@@ -427,18 +427,6 @@
   <data name="ImageHelpers_Image_files" xml:space="preserve">
     <value>ไฟล์รูปภาพ</value>
   </data>
-  <data name="CssFileNameEditor_Cascading_Style_Sheets" xml:space="preserve">
-    <value>แบบซ้อน ลักษณะ แผ่น</value>
-  </data>
-  <data name="JsonFileNameEditor_JavaScript_Object_Notation_files" xml:space="preserve">
-    <value>JavaScript วัตถุ สัญกรณ์ ไฟล์</value>
-  </data>
-  <data name="WavFileNameEditor_Sound_file" xml:space="preserve">
-    <value>เสียง ไฟล์</value>
-  </data>
-  <data name="ExeFileNameEditor_Applications" xml:space="preserve">
-    <value>แอปพลิเคชัน</value>
-  </data>
   <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
     <value>การสร้างโครงการล่าสุดไม่สำเร็จ</value>
   </data>
@@ -565,17 +553,11 @@
   <data name="CMYK_ToString_Cyan___0_0_0____Magenta___1_0_0____Yellow___2_0_0____Key___3_0_0__" xml:space="preserve">
     <value>ฟ้าอมเขียว: {0:0.0}%, ม่วงแดง: {1:0.0}%, เหลือง: {2:0.0}%, คีย์: {3:0.0}%</value>
   </data>
-  <data name="CodeMenu_Create_Close" xml:space="preserve">
-    <value>ปิด</value>
-  </data>
   <data name="CodeMenuEntryFilename_RandomAdjective" xml:space="preserve">
     <value>สุ่ม adjective</value>
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>สุ่ม animal</value>
-  </data>
-  <data name="CssFileNameEditor_EditValue_Browse_for_a_Cascading_Style_Sheet___" xml:space="preserve">
-    <value>เรียกดู สำหรับ แบบซ้อน ลักษณะ Sheet...</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>ตัวอัปโหลดไฟล์</value>
@@ -603,9 +585,6 @@
   </data>
   <data name="CutOutEffectType_ZigZag" xml:space="preserve">
     <value>ฟันเลื่อย</value>
-  </data>
-  <data name="DirectoryNameEditor_EditValue_Browse_for_a_folder___" xml:space="preserve">
-    <value>เรียกดู สำหรับ โฟลเดอร์...</value>
   </data>
   <data name="DownloaderForm_ChangeStatus_Status___0_" xml:space="preserve">
     <value>สถานะ: {0}</value>
@@ -669,9 +648,6 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>ข้อผิดพลาด</value>
-  </data>
-  <data name="ExeFileNameEditor_EditValue_Browse_for_executable___" xml:space="preserve">
-    <value>เรียกดู สำหรับ ไฟล์ปฏิบัติการ...</value>
   </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>คัดลอก</value>
@@ -1375,9 +1351,6 @@
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>URL กำหนดเอง ตัวย่อ</value>
   </data>
-  <data name="WavFileNameEditor_EditValue_Browse_for_a_sound_file___" xml:space="preserve">
-    <value>เรียกดู สำหรับ เสียง ไฟล์...</value>
-  </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>ส่วนตัว</value>
   </data>
@@ -1386,5 +1359,23 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>ไม่แสดงในรายการ</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
+    <value>ไดนามิก</value>
+  </data>
+  <data name="HdrCaptureMode_On" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="HdrTonemapMode_Auto" xml:space="preserve">
+    <value>อัตโนมัติ (ตรวจจับจากเนื้อหา)</value>
+  </data>
+  <data name="HdrTonemapMode_Desktop" xml:space="preserve">
+    <value>เดสก์ท็อป / HDR แท้ (คงสีขาวของอินเทอร์เฟซ)</value>
+  </data>
+  <data name="HdrTonemapMode_Filmic" xml:space="preserve">
+    <value>ฟิล์มมิก</value>
   </data>
 </root>

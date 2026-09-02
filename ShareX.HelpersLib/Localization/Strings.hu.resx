@@ -427,18 +427,6 @@
   <data name="ImageHelpers_Image_files" xml:space="preserve">
     <value>Képfájlok</value>
   </data>
-  <data name="CssFileNameEditor_Cascading_Style_Sheets" xml:space="preserve">
-    <value>Lépcsőzetes stíluslapok</value>
-  </data>
-  <data name="JsonFileNameEditor_JavaScript_Object_Notation_files" xml:space="preserve">
-    <value>JavaScript Object Notation-fájlok</value>
-  </data>
-  <data name="WavFileNameEditor_Sound_file" xml:space="preserve">
-    <value>Hangfájl</value>
-  </data>
-  <data name="ExeFileNameEditor_Applications" xml:space="preserve">
-    <value>Alkalmazások</value>
-  </data>
   <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
     <value>A projekt legutóbbi buildje sikertelen volt.</value>
   </data>
@@ -565,17 +553,11 @@
   <data name="CMYK_ToString_Cyan___0_0_0____Magenta___1_0_0____Yellow___2_0_0____Key___3_0_0__" xml:space="preserve">
     <value>Cián: {0:0.0}%, Magenta: {1:0.0}%, Sárga: {2:0.0}%, Kulcs: {3:0.0}%</value>
   </data>
-  <data name="CodeMenu_Create_Close" xml:space="preserve">
-    <value>Bezárás</value>
-  </data>
   <data name="CodeMenuEntryFilename_RandomAdjective" xml:space="preserve">
     <value>Véletlen melléknév</value>
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Véletlen állat</value>
-  </data>
-  <data name="CssFileNameEditor_EditValue_Browse_for_a_Cascading_Style_Sheet___" xml:space="preserve">
-    <value>CSS fájl tallózása...</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Fájl feltöltéser</value>
@@ -603,9 +585,6 @@
   </data>
   <data name="CutOutEffectType_ZigZag" xml:space="preserve">
     <value>Fűrészfog</value>
-  </data>
-  <data name="DirectoryNameEditor_EditValue_Browse_for_a_folder___" xml:space="preserve">
-    <value>Mappa tallózása...</value>
   </data>
   <data name="DownloaderForm_ChangeStatus_Status___0_" xml:space="preserve">
     <value>Állapot: {0}</value>
@@ -669,9 +648,6 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>Hiba</value>
-  </data>
-  <data name="ExeFileNameEditor_EditValue_Browse_for_executable___" xml:space="preserve">
-    <value>Futtatható állomány tallózása...</value>
   </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Másolás</value>
@@ -1375,9 +1351,6 @@
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>Egyedi URL rövidítő</value>
   </data>
-  <data name="WavFileNameEditor_EditValue_Browse_for_a_sound_file___" xml:space="preserve">
-    <value>Bsorse for a hang fájl...</value>
-  </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Privát</value>
   </data>
@@ -1386,5 +1359,23 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Nem listázott</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Ki</value>
+  </data>
+  <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
+    <value>Dinamikus</value>
+  </data>
+  <data name="HdrCaptureMode_On" xml:space="preserve">
+    <value>Be</value>
+  </data>
+  <data name="HdrTonemapMode_Auto" xml:space="preserve">
+    <value>Automatikus (tartalom alapján)</value>
+  </data>
+  <data name="HdrTonemapMode_Desktop" xml:space="preserve">
+    <value>Asztal / valódi HDR (a felület fehérének megőrzése)</value>
+  </data>
+  <data name="HdrTonemapMode_Filmic" xml:space="preserve">
+    <value>Filmes</value>
   </data>
 </root>

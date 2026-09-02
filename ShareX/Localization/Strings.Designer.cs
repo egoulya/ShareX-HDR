@@ -2762,11 +2762,6 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("TaskSettingsWindow_AutomaticallyHideDesktopIcons", resourceCulture);
             }
         }
-        public static string TaskSettingsWindow_HDRScreenshotColorCorrector {
-            get {
-                return ResourceManager.GetString("TaskSettingsWindow_HDRScreenshotColorCorrector", resourceCulture);
-            }
-        }
         public static string TaskSettingsWindow_WindowTitle {
             get {
                 return ResourceManager.GetString("TaskSettingsWindow_WindowTitle", resourceCulture);
@@ -5259,6 +5254,41 @@ namespace ShareX.Localization {
         public static string MainMenuBuilder_NetworkMonitor {
             get {
                 return ResourceManager.GetString("MainMenuBuilder_NetworkMonitor", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_HdrCapture {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_HdrCapture", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_HdrTonemapMode {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_HdrTonemapMode", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_HdrPaperWhiteNits {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_HdrPaperWhiteNits", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_HdrPaperWhiteHint {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_HdrPaperWhiteHint", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_AlsoSaveHdrMasterPng {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_AlsoSaveHdrMasterPng", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_AlsoSaveUltraHdrJpeg {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_AlsoSaveUltraHdrJpeg", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_UltraHdrHint {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_UltraHdrHint", resourceCulture);
             }
         }
     }

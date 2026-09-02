@@ -1339,9 +1339,6 @@
   <data name="TaskSettingsWindow_AutomaticallyHideDesktopIcons" xml:space="preserve">
     <value>โดยอัตโนมัติ ซ่อน เดสก์ท็อป ไอคอน</value>
   </data>
-  <data name="TaskSettingsWindow_HDRScreenshotColorCorrector" xml:space="preserve">
-    <value>HDR ภาพหน้าจอ สี ตัวแก้ไข</value>
-  </data>
   <data name="TaskSettingsWindow_WindowTitle" xml:space="preserve">
     <value>ชื่อหน้าต่าง:</value>
   </data>
@@ -2848,5 +2845,26 @@
   </data>
   <data name="TaskSettingsWindow_CustomizeToolbarWithEllipsis" xml:space="preserve">
     <value>ปรับแต่ง แถบเครื่องมือ...</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrCapture" xml:space="preserve">
+    <value>การจับภาพ HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrTonemapMode" xml:space="preserve">
+    <value>โหมดโทนแมป HDR</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteNits" xml:space="preserve">
+    <value>เพเพอร์ไวท์ HDR (นิต)</value>
+  </data>
+  <data name="TaskSettingsWindow_HdrPaperWhiteHint" xml:space="preserve">
+    <value>0 = ใช้ระดับที่ Windows รายงาน (ตรวจพบ: {0} นิต)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveHdrMasterPng" xml:space="preserve">
+    <value>บันทึกไฟล์ HDR master PNG ด้วย (PQ / cICP)</value>
+  </data>
+  <data name="TaskSettingsWindow_AlsoSaveUltraHdrJpeg" xml:space="preserve">
+    <value>บันทึกไฟล์ Ultra HDR JPEG ด้วย (gain map)</value>
+  </data>
+  <data name="TaskSettingsWindow_UltraHdrHint" xml:space="preserve">
+    <value>Ultra HDR จะเก็บภาพ SDR ปกติไว้และเพิ่ม gain map เข้าไป ดังนั้นโปรแกรมดูภาพที่รองรับ HDR จะแสดงช่วงภาพเต็ม ส่วนโปรแกรมอื่นจะแสดงภาพ SDR</value>
   </data>
 </root>

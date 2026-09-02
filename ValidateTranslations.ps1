@@ -84,6 +84,8 @@ $projects = @(
             'FileDestination_'
             'FileExistAction_'
             'GIFQuality_'
+            'HdrCaptureMode_'
+            'HdrTonemapMode_'
             'HotkeyType_'
             'ImageDestination_'
             'ImgurThumbnailType_'
@@ -714,7 +716,10 @@ foreach ($project in $projects)
             }
         }
 
-        if ($project.Name -eq 'ShareX.ScreenCaptureLib')
+        # This fork migrated to Avalonia, so the legacy WinForms designer resx files are gone.
+        # The check below is vacuous without them, and Get-ChildItem throws on the missing path.
+        if ($project.Name -eq 'ShareX.ScreenCaptureLib' -and
+            (Test-Path -LiteralPath (Join-Path $projectDirectory 'Forms') -PathType Container))
         {
             $formDirectory = Join-Path $projectDirectory 'Forms'
             $defaultFormFiles = @(
