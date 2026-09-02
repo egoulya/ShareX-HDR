@@ -154,6 +154,17 @@ public static class ImageHelpers
         SKEncodedImageFormat format = GetEncodedFormat(filePath);
         using SKImage image = SKImage.FromBitmap(bitmap);
         using SKData data = image.Encode(format, quality);
+
+        // Encode before touching the destination. FileMode.Create truncates, so opening first meant a
+        // failed encode destroyed whatever was already there - and Skia signals an unsupported format
+        // by returning null rather than throwing, so the caller got a zero-byte file and a
+        // NullReferenceException instead of a usable error.
+        if (data is null || data.Size == 0)
+        {
+            throw new NotSupportedException(
+                $"Encoding to {format} is not supported by the bundled Skia build, so '{filePath}' was not written.");
+        }
+
         using FileStream stream = File.Open(filePath, FileMode.Create, FileAccess.Write, FileShare.None);
         data.SaveTo(stream);
     }
@@ -165,7 +176,9 @@ public static class ImageHelpers
         {
             "jpg" or "jpeg" => SKEncodedImageFormat.Jpeg,
             "webp" => SKEncodedImageFormat.Webp,
-            "avif" => SKEncodedImageFormat.Avif,
+            // No "avif": the enum member exists but the bundled win-x64 Skia native has no AVIF
+            // encoder, so it only ever produced an empty file. Verified by probing Encode directly -
+            // Png, Jpeg and Webp all return data, Avif returns null. Falls through to Png below.
             "gif" => SKEncodedImageFormat.Gif,
             "bmp" => SKEncodedImageFormat.Bmp,
             _ => SKEncodedImageFormat.Png
