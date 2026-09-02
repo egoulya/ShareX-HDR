@@ -373,15 +373,33 @@ internal sealed class TaskSettingsPageBuilder
                 Screenshot.WarmHdrCapture();
             }
         });
-        ComboBox hdrTonemap = EnumCombo(() => capture.HdrTonemapMode, value => capture.HdrTonemapMode = value);
-        NumericUpDown hdrExposure = Number(() => (decimal)capture.HdrExposure, value =>
-            capture.HdrExposure = HdrTonemap.ClampExposure((float)value),
-            (decimal)HdrTonemap.ExposureMin, (decimal)HdrTonemap.ExposureMax, 0.01m);
+        // Only the modes worth choosing are offered; see HdrTonemap.SelectableModes for why the
+        // others are reachable in code but not here. Coerced first so a setting saved against a
+        // withdrawn mode is migrated rather than silently displayed as something else.
+        capture.HdrTonemapMode = HdrTonemap.CoerceSelectableMode(capture.HdrTonemapMode);
+        ComboBox hdrTonemap = ObjectCombo(HdrTonemap.SelectableModes,
+            () => capture.HdrTonemapMode,
+            value => capture.HdrTonemapMode = value,
+            value => ((Enum)value).GetLocalizedDescription());
+        // The old 0.70-1.30 pre-curve multiplier is gone from the UI and pinned at its default. A
+        // sweep over 17 real frames put round-trip error at 1.8 code values at 1.00 against 16-34 at
+        // every other setting, and above 1.00 it did nothing at all because content clamps to the
+        // LUT's top entry. This replaces it with the control the row always claimed to be: an
+        // override for the display's actual SDR white level, which rebuilds the curve around it.
+        NumericUpDown hdrPaperWhite = Number(() => (decimal)capture.HdrPaperWhiteNits, value =>
+            {
+                capture.HdrPaperWhiteNits = (float)value;
+                Screenshot.PaperWhiteNitsOverride = capture.HdrPaperWhiteNits;
+            },
+            0m, (decimal)Screenshot.MaxPaperWhiteNits, 5m);
         BindEnabled(hdrTonemap, hdrExtrasEnabled);
-        BindEnabled(hdrExposure, hdrExtrasEnabled);
+        BindEnabled(hdrPaperWhite, hdrExtrasEnabled);
         BoundValue<bool> hdrMaster = new(capture.SaveHdrMasterPng, value => capture.SaveHdrMasterPng = value);
-        CheckBox hdrMasterCheck = Check("Also save HDR master PNG (PQ / cICP)", hdrMaster);
+        CheckBox hdrMasterCheck = Check(Strings.TaskSettingsWindow_AlsoSaveHdrMasterPng, hdrMaster);
         BindEnabled(hdrMasterCheck, hdrExtrasEnabled);
+        BoundValue<bool> hdrUltra = new(capture.SaveUltraHdrJpeg, value => capture.SaveUltraHdrJpeg = value);
+        CheckBox hdrUltraCheck = Check(Strings.TaskSettingsWindow_AlsoSaveUltraHdrJpeg, hdrUltra);
+        BindEnabled(hdrUltraCheck, hdrExtrasEnabled);
 
         return Page("capture", Strings.TaskSettingsWindow_Capture, LucideIcons.camera,
             OverrideCard(_captureOverride, Strings.TaskSettingsWindow_OverrideCaptureSettings),
@@ -393,10 +411,14 @@ internal sealed class TaskSettingsPageBuilder
                 Check(Strings.TaskSettingsWindow_CaptureClientAreaForWindowCaptures, () => capture.CaptureClientArea, value => capture.CaptureClientArea = value),
                 Check(Strings.TaskSettingsWindow_HideTaskbarWhenItIntersectsACapturedWindow, () => capture.CaptureAutoHideTaskbar, value => capture.CaptureAutoHideTaskbar = value),
                 Check(Strings.TaskSettingsWindow_AutomaticallyHideDesktopIcons, () => capture.CaptureAutoHideDesktopIcons, value => capture.CaptureAutoHideDesktopIcons = value),
-                Row("HDR capture", hdrMode),
-                Row("HDR tonemap mode", hdrTonemap),
-                Row("HDR paper white / exposure", hdrExposure),
-                hdrMasterCheck),
+                Row(Strings.TaskSettingsWindow_HdrCapture, hdrMode),
+                Row(Strings.TaskSettingsWindow_HdrTonemapMode, hdrTonemap),
+                Row(Strings.TaskSettingsWindow_HdrPaperWhiteNits, hdrPaperWhite),
+                Hint(string.Format(Strings.TaskSettingsWindow_HdrPaperWhiteHint,
+                    Screenshot.GetProbedSdrWhiteLevelNits().ToString("0.#"))),
+                hdrMasterCheck,
+                hdrUltraCheck,
+                Hint(Strings.TaskSettingsWindow_UltraHdrHint)),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_PreconfiguredRegion, regionGrid, selectRegion),
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_PreconfiguredWindow,
                 Row(Strings.TaskSettingsWindow_WindowTitle, Text(() => capture.CaptureCustomWindow, value => capture.CaptureCustomWindow = value))));

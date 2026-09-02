@@ -383,7 +383,20 @@ namespace ShareX
         public HdrCaptureMode CaptureHDREnabled = HdrCaptureMode.Off;
         public HdrTonemapMode HdrTonemapMode = HdrTonemapMode.Auto;
         public float HdrExposure = HdrTonemap.ExposureDefault;
+
+        /// <summary>
+        /// Override for the display's SDR white level, in nits. Zero means use the value Windows
+        /// reports, which is correct on most systems.
+        /// </summary>
+        public float HdrPaperWhiteNits = 0f;
         public bool SaveHdrMasterPng = false;
+
+        /// <summary>
+        /// Also write a Google Ultra HDR JPEG: the tonemapped SDR image with a gain map appended, so an
+        /// HDR display reconstructs the highlight detail sRGB has no code values for while anything
+        /// else shows a correct SDR picture.
+        /// </summary>
+        public bool SaveUltraHdrJpeg = false;
         public bool CaptureClientArea = false;
         public bool CaptureAutoHideTaskbar = false;
         public bool CaptureAutoHideDesktopIcons = false;

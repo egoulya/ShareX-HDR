@@ -1,4 +1,4 @@
-#region License Information (GPL v3)
+﻿#region License Information (GPL v3)
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
@@ -122,6 +122,9 @@ namespace ShareX
                 // Screen capture
                 case HotkeyType.PrintScreen:
                     new CaptureFullscreen().Capture(safeTaskSettings);
+                    break;
+                case HotkeyType.HDRDebugCapture:
+                    HdrDebugCapture.Run(safeTaskSettings);
                     break;
                 case HotkeyType.ActiveWindow:
                     new CaptureActiveWindow().Capture(safeTaskSettings);
@@ -2328,10 +2331,15 @@ namespace ShareX
                 CaptureHDREnabled = hdr,
                 HdrTonemapMode = capture.HdrTonemapMode,
                 HdrExposure = capture.HdrExposure,
-                SaveHdrMasterPng = capture.SaveHdrMasterPng
+
+                SaveHdrMasterPng = capture.SaveHdrMasterPng,
+                SaveUltraHdrJpeg = capture.SaveUltraHdrJpeg
             };
 
-            DebugHelper.WriteLine($"HDR: GetScreenshot mode={hdrMode} resolved={hdr} saveMaster={capture.SaveHdrMasterPng}");
+            // Applied per capture as well as from the settings row, so a saved override still takes
+            // effect after a restart when the settings page was never opened.
+            Screenshot.PaperWhiteNitsOverride = capture.HdrPaperWhiteNits;
+            DebugHelper.WriteLine($"HDR: GetScreenshot mode={hdrMode} resolved={hdr} saveMaster={capture.SaveHdrMasterPng} saveUltraHdr={capture.SaveUltraHdrJpeg}");
 
             if (hdrMode.MayUseHdrPipeline())
             {

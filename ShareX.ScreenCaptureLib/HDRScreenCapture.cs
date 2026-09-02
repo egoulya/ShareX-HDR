@@ -713,7 +713,48 @@ namespace ShareX.ScreenCaptureLib
         private const uint DisplayConfigGetSdrWhiteLevel = 11;
         private const int DisplayConfigModeInfoSize = 64;
 
+        /// <summary>
+        /// User override for the display's SDR white level, in nits. Zero uses the probed value.
+        ///
+        /// Applied here rather than at the curve, because the white level is the scale the whole
+        /// pipeline is built on: pixels are normalised by it so 1.0 means paper white, and the curve
+        /// converts back through it for the PQ EETF. Overriding at the source keeps decode,
+        /// tonemapping and recorded metadata consistent with each other - overriding only the curve
+        /// would grade against one white while decoding against another.
+        ///
+        /// This is a single-display escape hatch for a wrong probe: it replaces the value for every
+        /// output, so on a multi-monitor setup with genuinely different white levels it will be wrong
+        /// for all but one. The probe is right far more often than not, which is why zero is the
+        /// default.
+        /// </summary>
+        public static float PaperWhiteNitsOverride
+        {
+            get => paperWhiteNitsOverride;
+            set => paperWhiteNitsOverride = value <= 0f ? 0f : Math.Clamp(value, MinPaperWhiteNits, MaxPaperWhiteNits);
+        }
+
+        /// <summary>Below scene-referred white the normalisation scale would invert; above this is past any real panel.</summary>
+        public const float MinPaperWhiteNits = 80f;
+
+        public const float MaxPaperWhiteNits = 1000f;
+
+        private static float paperWhiteNitsOverride;
+
         public static float GetSdrWhiteNits(string deviceName = null)
+        {
+            if (paperWhiteNitsOverride > 0f)
+            {
+                return paperWhiteNitsOverride;
+            }
+
+            return GetProbedSdrWhiteNits(deviceName);
+        }
+
+        /// <summary>
+        /// What Windows reports, ignoring <see cref="PaperWhiteNitsOverride"/>. Needed so the settings
+        /// UI can show the detected value alongside the override instead of echoing the override back.
+        /// </summary>
+        public static float GetProbedSdrWhiteNits(string deviceName = null)
         {
             if (TryGetSdrWhiteScale(deviceName, preferHighest: string.IsNullOrEmpty(deviceName), out float scale))
             {

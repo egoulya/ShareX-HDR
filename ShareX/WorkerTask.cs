@@ -704,8 +704,84 @@ namespace ShareX
                 }
             }
 
+            TrySaveUltraHdr();
             TrySaveHdrMaster();
             return true;
+        }
+
+        /// <summary>
+        /// Writes the Ultra HDR JPEG: the SDR image that was already produced, plus a gain map derived
+        /// from the PQ master so an HDR display can reconstruct what the curve had to discard.
+        ///
+        /// Runs here rather than during capture deliberately - it is a full pass over the frame plus a
+        /// JPEG encode, and doing it on the worker keeps it off the capture path so successive
+        /// screenshots are not held up.
+        ///
+        /// Ordered before <see cref="TrySaveHdrMaster"/> because that method clears the master once it
+        /// has written it.
+        /// </summary>
+        private void TrySaveUltraHdr(string primaryPath = null)
+        {
+            TaskSettingsCapture capture = TaskHelpers.GetCaptureSettings(Info.TaskSettings);
+            if (!capture.SaveUltraHdrJpeg)
+            {
+                return;
+            }
+
+            HdrMasterImage master = Info.Metadata?.HdrMaster;
+            if (master == null)
+            {
+                DebugHelper.WriteLine("Ultra HDR: skip because the HDR master is missing (HDR pipeline may not have run, or crop dropped it).");
+                return;
+            }
+
+            if (Image is not Bitmap sdr)
+            {
+                DebugHelper.WriteLine("Ultra HDR: skip because there is no SDR bitmap to use as the base.");
+                return;
+            }
+
+            // An edit or crop applied after capture leaves the two layers on different grids, and a
+            // gain map is a per-pixel ratio. Better to skip than to ship a file whose map does not
+            // correspond to its base.
+            if (sdr.Width != master.Width || sdr.Height != master.Height)
+            {
+                DebugHelper.WriteLine($"Ultra HDR: skip because the base is {sdr.Width}x{sdr.Height} " +
+                    $"but the master is {master.Width}x{master.Height}; the image was resized after capture.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(primaryPath))
+            {
+                primaryPath = Info.FilePath;
+            }
+
+            if (string.IsNullOrEmpty(primaryPath))
+            {
+                string folder = TaskHelpers.GetScreenshotsFolder(Info.TaskSettings, Info.Metadata);
+                string name = string.IsNullOrEmpty(Info.FileName)
+                    ? TaskHelpers.GetFileName(Info.TaskSettings, "png", Info.Metadata)
+                    : Info.FileName;
+                primaryPath = Path.Combine(folder, name);
+            }
+
+            try
+            {
+                float sdrWhiteNits = Screenshot.GetSdrWhiteLevelNits();
+                HdrGainMapData gainMap = HdrGainMap.ComputeFromMaster(master, sdr, sdrWhiteNits);
+
+                string path = Path.ChangeExtension(
+                    FileHelpers.AppendTextToFileName(primaryPath, "_ultrahdr"), "jpg");
+                FileHelpers.CreateDirectoryFromFilePath(path);
+                UltraHdrJpegWriter.Save(path, sdr, gainMap);
+
+                DebugHelper.WriteLine($"Ultra HDR saved to file: {path} " +
+                    $"(peak {gainMap.HdrPeak:0.00}x, capacity {gainMap.HdrCapacityMax:0.00} stops)");
+            }
+            catch (Exception e)
+            {
+                DebugHelper.WriteException(e, "Failed to save Ultra HDR JPEG.");
+            }
         }
 
         private void TrySaveHdrMaster(string primaryPath = null)

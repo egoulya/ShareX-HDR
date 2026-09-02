@@ -58,9 +58,11 @@ namespace ShareX.ScreenCaptureLib
             if (!useHdr)
             {
                 SaveHdrMasterPng = false;
+                SaveUltraHdrJpeg = false;
             }
 
-            DebugHelper.WriteLine($"HDR: CaptureRectangle mode={HdrCaptureMode} resolved={useHdr} saveMaster={SaveHdrMasterPng}");
+            DebugHelper.WriteLine($"HDR: CaptureRectangle mode={HdrCaptureMode} resolved={useHdr} " +
+                $"saveMaster={SaveHdrMasterPng} saveUltraHdr={SaveUltraHdrJpeg}");
 
             if (useHdr)
             {
