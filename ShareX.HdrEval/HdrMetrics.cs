@@ -65,6 +65,22 @@ namespace ShareX.HdrEval
         /// </summary>
         private const float NeutralChromaFloor = 2.0f;
 
+        /// <summary>
+        /// Resolution of the chromaticity-error histogram. The range covers 0 to
+        /// <see cref="ChromaticityErrorMax"/> in xy units, which is far past anything a working
+        /// pipeline produces.
+        /// </summary>
+        private const int ChromaticityErrorBins = 4096;
+
+        private const float ChromaticityErrorMax = 0.2f;
+
+        /// <summary>
+        /// A just-noticeable difference in CIE xy is roughly 0.002 to 0.004 depending on where in the
+        /// diagram it sits. Reported alongside the percentiles so the numbers can be read without
+        /// looking the threshold up.
+        /// </summary>
+        public const float ChromaticityJustNoticeable = 0.003f;
+
         /// <summary>Log-luminance standard deviation below this makes a tile too flat to score.</summary>
         private const float FlatTileThreshold = 0.05f;
 
@@ -260,7 +276,13 @@ namespace ShareX.HdrEval
                                     local.ChromaRatioHighlight += (outChroma / refChroma) * refChroma;
                                 }
 
-                                local.HueDriftMax = MathF.Max(local.HueDriftMax, deltaHue);
+                                // Chromaticity error, which is what actually tells us whether the
+                                // colour moved. Taken on the same coloured pixels the Lab figures
+                                // use, so the two are directly comparable.
+                                float xyError = ChromaticityDistance(refR, refG, refB, outR, outG, outB);
+                                int bin = (int)(xyError / ChromaticityErrorMax * ChromaticityErrorBins);
+                                local.ChromaticityErrorHistogram[Math.Clamp(bin, 0, ChromaticityErrorBins - 1)]++;
+                                local.ChromaticitySamples++;
                             }
                         }
 
@@ -363,7 +385,14 @@ namespace ShareX.HdrEval
             row.ChromaRatioHighlight = total.HueWeightHighlight > 0f
                 ? total.ChromaRatioHighlight / total.HueWeightHighlight
                 : float.NaN;
-            row.HueDriftMaxDegrees = total.HueDriftMax;
+            // The former HueDriftMaxDegrees was the single worst CIELAB rotation over any pixel
+            // above a chroma floor of 2 out of roughly 130 - so one barely tinted pixel produced
+            // readings near 180 degrees on frames that were otherwise excellent. Percentiles of
+            // chromaticity error replace it: bounded, interpretable, and comparable to a JND.
+            row.ChromaticityErrorP50 = ChromaticityPercentile(total, 50f);
+            row.ChromaticityErrorP95 = ChromaticityPercentile(total, 95f);
+            row.ChromaticityErrorP99 = ChromaticityPercentile(total, 99f);
+            row.ChromaticityAboveJndFraction = ChromaticityAboveJnd(total);
 
             row.PaperWhiteSampleCount = paperWhiteCodes.Count;
             row.PaperWhiteMeanCode = paperWhiteCodes.Count > 0 ? Mean(paperWhiteCodes) : float.NaN;
@@ -598,6 +627,71 @@ namespace ShareX.HdrEval
             return t / (3f * delta * delta) + 4f / 29f;
         }
 
+        /// <summary>
+        /// Distance between two colours' CIE xy chromaticities. Zero means the hue and saturation
+        /// were preserved exactly, whatever happened to luminance.
+        /// </summary>
+        private static float ChromaticityDistance(float r1, float g1, float b1, float r2, float g2, float b2)
+        {
+            ToXy(r1, g1, b1, out float x1, out float y1);
+            ToXy(r2, g2, b2, out float x2, out float y2);
+            float dx = x2 - x1;
+            float dy = y2 - y1;
+            return MathF.Sqrt((dx * dx) + (dy * dy));
+        }
+
+        private static void ToXy(float r, float g, float b, out float x, out float y)
+        {
+            float bigX = (0.4124f * r) + (0.3576f * g) + (0.1805f * b);
+            float bigY = (0.2126f * r) + (0.7152f * g) + (0.0722f * b);
+            float bigZ = (0.0193f * r) + (0.1192f * g) + (0.9505f * b);
+            float sum = bigX + bigY + bigZ;
+
+            if (sum <= 1e-9f)
+            {
+                x = 0f;
+                y = 0f;
+                return;
+            }
+
+            x = bigX / sum;
+            y = bigY / sum;
+        }
+
+        private static float ChromaticityPercentile(Accumulator total, float percentile)
+        {
+            if (total.ChromaticitySamples <= 0) return float.NaN;
+
+            long target = (long)(total.ChromaticitySamples * (percentile / 100.0));
+            long seen = 0;
+            float binWidth = ChromaticityErrorMax / ChromaticityErrorBins;
+
+            for (int bin = 0; bin < ChromaticityErrorBins; bin++)
+            {
+                seen += total.ChromaticityErrorHistogram[bin];
+                if (seen >= target)
+                {
+                    return (bin + 0.5f) * binWidth;
+                }
+            }
+
+            return ChromaticityErrorMax;
+        }
+
+        private static float ChromaticityAboveJnd(Accumulator total)
+        {
+            if (total.ChromaticitySamples <= 0) return float.NaN;
+
+            int threshold = (int)(ChromaticityJustNoticeable / ChromaticityErrorMax * ChromaticityErrorBins);
+            long above = 0;
+            for (int bin = Math.Min(threshold, ChromaticityErrorBins - 1); bin < ChromaticityErrorBins; bin++)
+            {
+                above += total.ChromaticityErrorHistogram[bin];
+            }
+
+            return above / (float)total.ChromaticitySamples;
+        }
+
         private static float WrapRadians(float angle)
         {
             while (angle > MathF.PI)
@@ -719,7 +813,21 @@ namespace ShareX.HdrEval
             public float HueWeightHighlight;
             public float HueDriftHighlight;
             public float ChromaRatioHighlight;
-            public float HueDriftMax;
+
+            /// <summary>
+            /// CIE xy distance between reference and output chromaticity, binned so a percentile can
+            /// be taken. This is the measure that actually says whether colour survived: it is
+            /// independent of any perceptual coordinate system, and has a meaningful threshold - a
+            /// just-noticeable xy difference is roughly 0.002 to 0.004.
+            ///
+            /// It exists because the CIELAB hue drift beside it is misleading here. CIELAB is not
+            /// hue-constant, so legitimately changing a pixel's luminance rotates its Lab hue even
+            /// when chromaticity is untouched. Measured on the worst frame in the corpus, Lab
+            /// reported 6.83 degrees of in-range drift while xy error was 0.0009 at the median -
+            /// well inside a JND. Tuning against the Lab number would have chased an artifact.
+            /// </summary>
+            public readonly int[] ChromaticityErrorHistogram = new int[ChromaticityErrorBins];
+            public long ChromaticitySamples;
 
             public readonly double[] TransferSum = new double[TransferBins];
             public readonly long[] TransferCount = new long[TransferBins];
@@ -758,7 +866,12 @@ namespace ShareX.HdrEval
                 HueWeightHighlight += other.HueWeightHighlight;
                 HueDriftHighlight += other.HueDriftHighlight;
                 ChromaRatioHighlight += other.ChromaRatioHighlight;
-                HueDriftMax = Math.Max(HueDriftMax, other.HueDriftMax);
+
+                ChromaticitySamples += other.ChromaticitySamples;
+                for (int i = 0; i < ChromaticityErrorBins; i++)
+                {
+                    ChromaticityErrorHistogram[i] += other.ChromaticityErrorHistogram[i];
+                }
             }
         }
     }

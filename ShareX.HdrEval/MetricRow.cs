@@ -106,7 +106,19 @@ namespace ShareX.HdrEval
         /// <summary>Same, over pixels above SDR white. Largely a design choice, so reported only.</summary>
         public float HueDriftHighlightDegrees { get; set; }
 
-        public float HueDriftMaxDegrees { get; set; }
+        /// <summary>
+        /// CIE xy chromaticity error percentiles. Unlike the CIELAB figures above, these are
+        /// independent of any perceptual coordinate system and comparable against a just-noticeable
+        /// difference of roughly 0.003, so they say plainly whether colour survived the tonemap.
+        /// </summary>
+        public float ChromaticityErrorP50 { get; set; }
+
+        public float ChromaticityErrorP95 { get; set; }
+
+        public float ChromaticityErrorP99 { get; set; }
+
+        /// <summary>Fraction of coloured pixels whose chromaticity moved by more than a JND.</summary>
+        public float ChromaticityAboveJndFraction { get; set; }
 
         /// <summary>Output chroma over reference chroma, in-range pixels. Below 1.0 is desaturation.</summary>
         public float ChromaRatio { get; set; }
@@ -178,7 +190,9 @@ namespace ShareX.HdrEval
             "CrushedShadowFraction," +
             "PassthroughMaxCodeDelta,PassthroughP99CodeDelta,PassthroughSampleCount," +
             "PaperWhiteMeanCode,PaperWhiteSampleCount," +
-            "HueDriftDegrees,HueDriftHighlightDegrees,HueDriftMaxDegrees,ChromaRatio,ChromaRatioHighlight," +
+            "HueDriftDegrees,HueDriftHighlightDegrees,ChromaticityErrorP50,ChromaticityErrorP95," +
+
+            "ChromaticityErrorP99,ChromaticityAboveJndFraction,ChromaRatio,ChromaRatioHighlight," +
             "MidToneShiftCode,MidToneSampleCount," +
             "LocalContrastRatio,LocalContrastRatioP10,ContrastTileCount," +
             "OccupiedLuminanceCodes,MaxLuminanceCodeGap,ReferenceLuminanceCodeGap,MonotonicityViolations," +
@@ -222,7 +236,13 @@ namespace ShareX.HdrEval
             Append(sb, PaperWhiteSampleCount);
             Append(sb, HueDriftDegrees, "0.000");
             Append(sb, HueDriftHighlightDegrees, "0.000");
-            Append(sb, HueDriftMaxDegrees, "0.000");
+            Append(sb, ChromaticityErrorP50, "0.00000");
+
+            Append(sb, ChromaticityErrorP95, "0.00000");
+
+            Append(sb, ChromaticityErrorP99, "0.00000");
+
+            Append(sb, ChromaticityAboveJndFraction, "0.00000");
             Append(sb, ChromaRatio, "0.0000");
             Append(sb, ChromaRatioHighlight, "0.0000");
             Append(sb, MidToneShiftCode, "0.00");
@@ -324,6 +344,21 @@ namespace ShareX.HdrEval
 
         /// <summary>Hue drift ceiling for out-of-gamut highlights. Negative disables the check.</summary>
         public float MaxHueDriftHighlightDegrees { get; init; } = -1f;
+
+        /// <summary>
+        /// Ceiling on the fraction of coloured pixels whose chromaticity moved by more than a JND.
+        /// Negative disables the check.
+        ///
+        /// Deliberately loose, and gating on the fraction rather than on the P99 error. Measured over
+        /// the corpus, Desktop's own per-frame P99 reaches 0.107 and its past-JND fraction 0.581, so
+        /// a budget tight enough to be interesting flags perfectly good output. Averaged across a
+        /// mode the same numbers separate alternatives cleanly, which makes this a sound metric for
+        /// comparing modes and a poor one for judging a single frame.
+        ///
+        /// So this catches gross colour failure only. Read the reported percentiles for anything
+        /// finer, and compare modes on the averages rather than on flag counts.
+        /// </summary>
+        public float MaxChromaticityAboveJndFraction { get; init; } = -1f;
         public float MinPaperWhiteCode { get; init; }
 
         /// <summary>Round-trip budget in 8-bit codes. Negative disables the check.</summary>
@@ -342,6 +377,8 @@ namespace ShareX.HdrEval
             {
                 MinChromaRatioHighlight = 0.90f,
                 MaxHueDriftHighlightDegrees = 3.0f,
+
+                MaxChromaticityAboveJndFraction = 0.80f,
                 MaxClipBelowCeilingFraction = 0.001f,
                 MaxCrushedShadowFraction = 0.002f,
                 MaxHueDriftDegrees = 1.5f,
@@ -358,6 +395,8 @@ namespace ShareX.HdrEval
             {
                 MinChromaRatioHighlight = 0.88f,
                 MaxHueDriftHighlightDegrees = 4.0f,
+
+                MaxChromaticityAboveJndFraction = 0.80f,
                 MaxClipBelowCeilingFraction = 0.01f,
                 MaxCrushedShadowFraction = 0.005f,
                 MaxHueDriftDegrees = 3.0f,
@@ -373,6 +412,8 @@ namespace ShareX.HdrEval
             {
                 MinChromaRatioHighlight = 0.85f,
                 MaxHueDriftHighlightDegrees = 5.0f,
+
+                MaxChromaticityAboveJndFraction = 0.85f,
                 MaxClipBelowCeilingFraction = 0.02f,
                 MaxCrushedShadowFraction = 0.01f,
                 MaxHueDriftDegrees = 5.0f,
@@ -404,6 +445,11 @@ namespace ShareX.HdrEval
 
             Check(row, !float.IsNaN(row.ChromaRatio) && row.ChromaRatio < MinChromaRatio,
                 $"desaturated in-range colour: chroma ratio {row.ChromaRatio:0.000} < {MinChromaRatio:0.000}");
+
+            Check(row, MaxChromaticityAboveJndFraction >= 0f && !float.IsNaN(row.ChromaticityAboveJndFraction) &&
+                row.ChromaticityAboveJndFraction > MaxChromaticityAboveJndFraction,
+                $"chromaticity moved on {row.ChromaticityAboveJndFraction:P1} of coloured pixels " +
+                $"(budget {MaxChromaticityAboveJndFraction:P1}, xy error {row.ChromaticityErrorP99:0.0000} at P99)");
 
             Check(row, MaxAbsMidToneShiftCode >= 0f && !float.IsNaN(row.MidToneShiftCode) &&
                 Math.Abs(row.MidToneShiftCode) > MaxAbsMidToneShiftCode,
