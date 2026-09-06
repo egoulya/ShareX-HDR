@@ -716,6 +716,21 @@
         </Style>
     </Style>
 
+    <Style Selector="RadioButton">
+        <Style Selector="^:pointerover:not(:disabled) /template/ Ellipse#OuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource ShareX.Brush.Accent}"/>
+        </Style>
+
+        <Style Selector="^:checked:not(:disabled):pointerover /template/ Ellipse#CheckOuterEllipse">
+            <Setter Property="Fill" Value="{DynamicResource ShareX.Brush.Accent}"/>
+            <Setter Property="Stroke" Value="{DynamicResource ShareX.Brush.Accent}"/>
+        </Style>
+
+        <Style Selector="^:checked:not(:disabled):pointerover /template/ Ellipse#CheckGlyph">
+            <Setter Property="Fill" Value="{DynamicResource ShareX.Brush.Accent.Foreground}"/>
+        </Style>
+    </Style>
+
     <Style Selector="ToggleSwitch">
         <Setter Property="Foreground" Value="{DynamicResource ShareX.Brush.Text}"/>
         <Setter Property="FontSize" Value="13"/>

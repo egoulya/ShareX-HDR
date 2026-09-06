@@ -58,384 +58,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorPickerWindow_Title" xml:space="preserve">
-    <value>ShareX - منتقي الألوان</value>
-  </data>
-  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
-    <value>وضع الألوان</value>
-  </data>
-  <data name="ColorPickerWindow_Hue" xml:space="preserve">
-    <value>تدرج اللون</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
-    <value>التشبع</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
-    <value>السطوع</value>
-  </data>
-  <data name="ColorPickerWindow_Red" xml:space="preserve">
-    <value>أحمر</value>
-  </data>
-  <data name="ColorPickerWindow_Green" xml:space="preserve">
-    <value>أخضر</value>
-  </data>
-  <data name="ColorPickerWindow_Blue" xml:space="preserve">
-    <value>أزرق</value>
-  </data>
-  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
-    <value>اسم اللون</value>
-  </data>
-  <data name="ColorPickerWindow_Hex" xml:space="preserve">
-    <value>سداسي عشري</value>
-  </data>
-  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
-    <value>عشري</value>
-  </data>
-  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
-    <value>ألفا</value>
-  </data>
-  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
-    <value>تدرج اللون °</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
-    <value>التشبع %</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
-    <value>السطوع %</value>
-  </data>
-  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
-    <value>سماوي %</value>
-  </data>
-  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
-    <value>أرجواني %</value>
-  </data>
-  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
-    <value>أصفر %</value>
-  </data>
-  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
-    <value>أسود %</value>
-  </data>
-  <data name="ColorPickerWindow_Current" xml:space="preserve">
-    <value>الحالي</value>
-  </data>
-  <data name="ColorPickerWindow_Previous" xml:space="preserve">
-    <value>السابق</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
-    <value>نسخ كل التفاصيل</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
-    <value>نسخ RGB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
-    <value>نسخ القيمة السداسية العشرية</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
-    <value>نسخ HSB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
-    <value>نسخ CMYK</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
-    <value>نسخ القيمة العشرية</value>
-  </data>
-  <data name="ColorPickerWindow_Copy" xml:space="preserve">
-    <value>نسخ</value>
-  </data>
-  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
-    <value>الألوان الحديثة</value>
-  </data>
-  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
-    <value>الألوان القياسية</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
-    <value>اختيار لون من الشاشة...</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
-    <value>اختيار لون من الحافظة</value>
-  </data>
-  <data name="ColorPickerWindow_OK" xml:space="preserve">
-    <value>موافق</value>
-  </data>
-  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
-    <value>إلغاء</value>
-  </data>
-  <data name="ErrorWindow_Title" xml:space="preserve">
-    <value>ShareX - خطأ</value>
-  </data>
-  <data name="ErrorWindow_Heading" xml:space="preserve">
-    <value>حدث خطأ</value>
-  </data>
-  <data name="ErrorWindow_Description" xml:space="preserve">
-    <value>راجع التفاصيل أدناه أو استخدم خيارات الدعم المتاحة.</value>
-  </data>
-  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
-    <value>إرسال تقرير خطأ</value>
-  </data>
-  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
-    <value>فتح ملف السجل</value>
-  </data>
-  <data name="ErrorWindow_Continue" xml:space="preserve">
-    <value>متابعة</value>
-  </data>
-  <data name="ErrorWindow_Quit" xml:space="preserve">
-    <value>إنهاء</value>
-  </data>
-  <data name="ErrorWindow_OK" xml:space="preserve">
-    <value>موافق</value>
-  </data>
-  <data name="ErrorWindow_Default_title" xml:space="preserve">
-    <value>خطأ</value>
-  </data>
-  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
-    <value>حدث خطأ غير متوقع.</value>
-  </data>
-  <data name="ImageViewerWindow_Title" xml:space="preserve">
-    <value>ShareX - عارض الصور</value>
-  </data>
-  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
-    <value>فتح صورة</value>
-  </data>
-  <data name="InputBoxWindow_Default_title" xml:space="preserve">
-    <value>إدخال</value>
-  </data>
-  <data name="InputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
-    <value>إخراج</value>
-  </data>
-  <data name="OutputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
-    <value>نسخ الكل</value>
-  </data>
-  <data name="OutputBoxWindow_Close" xml:space="preserve">
-    <value>إغلاق</value>
-  </data>
-  <data name="PrintWindow_Title" xml:space="preserve">
-    <value>ShareX - خيارات الطباعة</value>
-  </data>
-  <data name="PrintWindow_Heading" xml:space="preserve">
-    <value>خيارات الطباعة</value>
-  </data>
-  <data name="PrintWindow_Description" xml:space="preserve">
-    <value>تكوين موضع الصورة وحجمها.</value>
-  </data>
-  <data name="PrintWindow_Margin" xml:space="preserve">
-    <value>الهامش:</value>
-  </data>
-  <data name="PrintWindow_Pixels" xml:space="preserve">
-    <value>بكسل</value>
-  </data>
-  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
-    <value>تدوير الصورة تلقائيًا</value>
-  </data>
-  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
-    <value>تغيير حجم الصورة تلقائيًا</value>
-  </data>
-  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
-    <value>السماح بتكبير الصورة</value>
-  </data>
-  <data name="PrintWindow_Center_image_position" xml:space="preserve">
-    <value>توسيط موضع الصورة</value>
-  </data>
-  <data name="PrintWindow_Preview" xml:space="preserve">
-    <value>معاينة...</value>
-  </data>
-  <data name="DownloaderWindow_Title" xml:space="preserve">
-    <value>ShareX - تنزيل الملفات</value>
-  </data>
-  <data name="DownloaderWindow_Heading" xml:space="preserve">
-    <value>تنزيل الملفات</value>
-  </data>
-  <data name="DownloaderWindow_Description" xml:space="preserve">
-    <value>تنزيل تحديثات ShareX والملفات الأخرى المطلوبة.</value>
-  </data>
-  <data name="DownloaderWindow_Download" xml:space="preserve">
-    <value>تنزيل</value>
-  </data>
-  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
-    <value>عرض سجل التغييرات</value>
-  </data>
-  <data name="UpdateMessageWindow_Header" xml:space="preserve">
-    <value>يتوفر تحديث ShareX</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
-    <value>اللون الأحمر (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
-    <value>اللون الأخضر (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
-    <value>اللون الأزرق (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
-    <value>اللون الأحمر (0-1). حدد دقة الكسور العشرية باستخدام {n}، والقيمة الافتراضية 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
-    <value>اللون الأخضر (0-1). حدد دقة الكسور العشرية باستخدام {n}، والقيمة الافتراضية 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
-    <value>اللون الأزرق (0-1). حدد دقة الكسور العشرية باستخدام {n}، والقيمة الافتراضية 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
-    <value>قيمة اللون السداسية العشرية (أحرف صغيرة)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
-    <value>قيمة الأحمر السداسية العشرية (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
-    <value>قيمة الأخضر السداسية العشرية (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
-    <value>قيمة الأزرق السداسية العشرية (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
-    <value>قيمة اللون السداسية العشرية (أحرف كبيرة)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
-    <value>قيمة الأحمر السداسية العشرية (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
-    <value>قيمة الأخضر السداسية العشرية (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
-    <value>قيمة الأزرق السداسية العشرية (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
-    <value>اللون السماوي (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
-    <value>اللون الأرجواني (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
-    <value>اللون الأصفر (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
-    <value>اللون الأسود (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
-    <value>اسم اللون</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
-    <value>موضع X</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
-    <value>موضع Y</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
-    <value>سطر جديد</value>
-  </data>
-  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="HotkeyInfo_Shift" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="HotkeyInfo_Alt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="HotkeyInfo_Win" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="HotkeyInfo_Backspace" xml:space="preserve">
-    <value>Backspace</value>
-  </data>
-  <data name="HotkeyInfo_Enter" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
-    <value>Caps Lock</value>
-  </data>
-  <data name="HotkeyInfo_Page_down" xml:space="preserve">
-    <value>Page Down</value>
-  </data>
-  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
-    <value>Scroll Lock</value>
-  </data>
-  <data name="HotkeyInfo_Numpad" xml:space="preserve">
-    <value>لوحة الأرقام</value>
-  </data>
-  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
-    <value>خطأ FFmpeg</value>
-  </data>
-  <data name="Translator_Text" xml:space="preserve">
-    <value>نص</value>
-  </data>
-  <data name="Translator_Binary" xml:space="preserve">
-    <value>ثنائي</value>
-  </data>
-  <data name="Translator_Hexadecimal" xml:space="preserve">
-    <value>سداسي عشري</value>
-  </data>
-  <data name="Translator_ASCII" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="Translator_Base64" xml:space="preserve">
-    <value>Base64</value>
-  </data>
-  <data name="PingResult_Reply_from" xml:space="preserve">
-    <value>رد من {0}: البايتات={1} الوقت={2} مللي ثانية TTL={3}</value>
-  </data>
-  <data name="PingResult_Request_timed_out" xml:space="preserve">
-    <value>انتهت مهلة الطلب.</value>
-  </data>
-  <data name="PingResult_Ping_failed" xml:space="preserve">
-    <value>فشل اختبار الاتصال: {0}</value>
-  </data>
-  <data name="PingResult_Statistics" xml:space="preserve">
-    <value>الحد الأدنى = {0} مللي ثانية، الحد الأقصى = {1} مللي ثانية، المتوسط = {2} مللي ثانية</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
-    <value>الطابعة «{0}» غير موجودة. ستتم المتابعة باستخدام طابعة Windows الافتراضية. يمكنك تعيين تجاوز الطابعة الافتراضية في إعدادات التطبيق.</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
-    <value>اسم الطابعة غير صالح</value>
-  </data>
-  <data name="VideoInfo_Summary" xml:space="preserve">
-    <value>اسم الملف: {0}، المدة: {1}، معدل البت: {2} كيلوبت/ث</value>
-  </data>
-  <data name="VideoInfo_Video_details" xml:space="preserve">
-    <value>، برنامج ترميز الفيديو: {0}، الدقة: {1}x{2}، الإطارات/ث: {3}</value>
-  </data>
-  <data name="VideoInfo_Audio_details" xml:space="preserve">
-    <value>، برنامج ترميز الصوت: {0}</value>
-  </data>
-  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
-    <value>خطأ في إعادة تسمية الملف:</value>
-  </data>
-  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
-    <value>يلزم مسار ملف نصي صالح.</value>
-  </data>
-  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
-    <value>عنوان URL غير صالح.</value>
-  </data>
-  <data name="ZipManager_Archive_too_large" xml:space="preserve">
-    <value>يتجاوز الحجم غير المضغوط لهذا الأرشيف الحد الأقصى المسموح به لحجم الملف.</value>
-  </data>
-  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
-    <value>حجم الأرشيف غير المضغوط: {0}</value>
-  </data>
-  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
-    <value>الحد الأقصى المسموح به لحجم الملف: {0}</value>
-  </data>
-  <data name="Helpers_Timeout" xml:space="preserve">
-    <value>انتهاء المهلة</value>
-  </data>
-  <data name="ImageHelpers_Image_files" xml:space="preserve">
-    <value>ملفات الصور</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
-    <value>لم ينجح أحدث بناء للمشروع.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
-    <value>تعذر العثور على بناء إصدار ناجح.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
-    <value>تعذر العثور على الملف «{0}».</value>
-  </data>
   <data name="ActionsCodeMenuEntry_FilePath_File_path" xml:space="preserve">
     <value>مسار الملف</value>
   </data>
@@ -526,6 +148,15 @@
   <data name="AfterUploadTasks_UseURLShortener" xml:space="preserve">
     <value>اختصار عنوان URL</value>
   </data>
+  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
+    <value>تعذر العثور على الملف «{0}».</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
+    <value>لم ينجح أحدث بناء للمشروع.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
+    <value>تعذر العثور على بناء إصدار ناجح.</value>
+  </data>
   <data name="ArrowHeadDirection_Both" xml:space="preserve">
     <value>كلا الاتجاهين</value>
   </data>
@@ -558,6 +189,174 @@
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>اسم حيوان عشوائي</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
+    <value>اللون الأزرق (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
+    <value>قيمة الأزرق السداسية العشرية (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
+    <value>قيمة الأزرق السداسية العشرية (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
+    <value>اللون الأزرق (0-1). حدد دقة الكسور العشرية باستخدام {n}، والقيمة الافتراضية 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
+    <value>اسم اللون</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
+    <value>اللون السماوي (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
+    <value>اللون الأخضر (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
+    <value>قيمة الأخضر السداسية العشرية (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
+    <value>قيمة الأخضر السداسية العشرية (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
+    <value>اللون الأخضر (0-1). حدد دقة الكسور العشرية باستخدام {n}، والقيمة الافتراضية 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
+    <value>قيمة اللون السداسية العشرية (أحرف صغيرة)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
+    <value>قيمة اللون السداسية العشرية (أحرف كبيرة)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
+    <value>اللون الأسود (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
+    <value>اللون الأرجواني (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
+    <value>سطر جديد</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
+    <value>اللون الأحمر (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
+    <value>قيمة الأحمر السداسية العشرية (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
+    <value>قيمة الأحمر السداسية العشرية (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
+    <value>اللون الأحمر (0-1). حدد دقة الكسور العشرية باستخدام {n}، والقيمة الافتراضية 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
+    <value>موضع X</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
+    <value>موضع Y</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
+    <value>اللون الأصفر (0-100)</value>
+  </data>
+  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
+    <value>ألفا</value>
+  </data>
+  <data name="ColorPickerWindow_Blue" xml:space="preserve">
+    <value>أزرق</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
+    <value>السطوع</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
+    <value>السطوع %</value>
+  </data>
+  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
+    <value>وضع الألوان</value>
+  </data>
+  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
+    <value>اسم اللون</value>
+  </data>
+  <data name="ColorPickerWindow_Copy" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
+    <value>نسخ CMYK</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
+    <value>نسخ HSB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
+    <value>نسخ RGB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
+    <value>نسخ كل التفاصيل</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
+    <value>نسخ القيمة العشرية</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
+    <value>نسخ القيمة السداسية العشرية</value>
+  </data>
+  <data name="ColorPickerWindow_Current" xml:space="preserve">
+    <value>الحالي</value>
+  </data>
+  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
+    <value>سماوي %</value>
+  </data>
+  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
+    <value>عشري</value>
+  </data>
+  <data name="ColorPickerWindow_Green" xml:space="preserve">
+    <value>أخضر</value>
+  </data>
+  <data name="ColorPickerWindow_Hex" xml:space="preserve">
+    <value>سداسي عشري</value>
+  </data>
+  <data name="ColorPickerWindow_Hue" xml:space="preserve">
+    <value>تدرج اللون</value>
+  </data>
+  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
+    <value>تدرج اللون °</value>
+  </data>
+  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
+    <value>أسود %</value>
+  </data>
+  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
+    <value>أرجواني %</value>
+  </data>
+  <data name="ColorPickerWindow_OK" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
+    <value>اختيار لون من الحافظة</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
+    <value>اختيار لون من الشاشة...</value>
+  </data>
+  <data name="ColorPickerWindow_Previous" xml:space="preserve">
+    <value>السابق</value>
+  </data>
+  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
+    <value>الألوان الحديثة</value>
+  </data>
+  <data name="ColorPickerWindow_Red" xml:space="preserve">
+    <value>أحمر</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
+    <value>التشبع</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
+    <value>التشبع %</value>
+  </data>
+  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
+    <value>الألوان القياسية</value>
+  </data>
+  <data name="ColorPickerWindow_Title" xml:space="preserve">
+    <value>ShareX - منتقي الألوان</value>
+  </data>
+  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
+    <value>أصفر %</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>رافعو الملفات</value>
@@ -595,12 +394,6 @@
   <data name="DownloaderForm_DownloaderForm_Waiting_" xml:space="preserve">
     <value>انتظار...</value>
   </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
-    <value>تم التنزيل.</value>
-  </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
-    <value>تثبت</value>
-  </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>سرعة التنزيل</value>
   </data>
@@ -618,6 +411,24 @@
   </data>
   <data name="DownloaderForm_StartDownload_Getting_file_size_" xml:space="preserve">
     <value>الحصول على حجم الملف...</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
+    <value>تم التنزيل.</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
+    <value>تثبت</value>
+  </data>
+  <data name="DownloaderWindow_Description" xml:space="preserve">
+    <value>تنزيل تحديثات ShareX والملفات الأخرى المطلوبة.</value>
+  </data>
+  <data name="DownloaderWindow_Download" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="DownloaderWindow_Heading" xml:space="preserve">
+    <value>تنزيل الملفات</value>
+  </data>
+  <data name="DownloaderWindow_Title" xml:space="preserve">
+    <value>ShareX - تنزيل الملفات</value>
   </data>
   <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
     <value>حجم فعلي</value>
@@ -649,6 +460,36 @@
   <data name="Error" xml:space="preserve">
     <value>خطأ</value>
   </data>
+  <data name="ErrorWindow_Continue" xml:space="preserve">
+    <value>متابعة</value>
+  </data>
+  <data name="ErrorWindow_Default_title" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="ErrorWindow_Description" xml:space="preserve">
+    <value>راجع التفاصيل أدناه أو استخدم خيارات الدعم المتاحة.</value>
+  </data>
+  <data name="ErrorWindow_Heading" xml:space="preserve">
+    <value>حدث خطأ</value>
+  </data>
+  <data name="ErrorWindow_OK" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
+    <value>فتح ملف السجل</value>
+  </data>
+  <data name="ErrorWindow_Quit" xml:space="preserve">
+    <value>إنهاء</value>
+  </data>
+  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
+    <value>إرسال تقرير خطأ</value>
+  </data>
+  <data name="ErrorWindow_Title" xml:space="preserve">
+    <value>ShareX - خطأ</value>
+  </data>
+  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
+    <value>حدث خطأ غير متوقع.</value>
+  </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>نسخ</value>
   </data>
@@ -669,6 +510,9 @@
   </data>
   <data name="Extensions_AddContextMenu_Undo" xml:space="preserve">
     <value>تراجع</value>
+  </data>
+  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
+    <value>خطأ FFmpeg</value>
   </data>
   <data name="FileDestination_CustomFileUploader" xml:space="preserve">
     <value>رافع ملفات مخصص</value>
@@ -691,6 +535,9 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>إلحاق الرقم باسم الملف</value>
   </data>
+  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
+    <value>خطأ في إعادة تسمية الملف:</value>
+  </data>
   <data name="GIFQuality_Bit4" xml:space="preserve">
     <value>مُكمِّم Octree بـ 16 لونًا</value>
   </data>
@@ -702,6 +549,9 @@
   </data>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>تدرج رمادي بـ 256 درجة</value>
+  </data>
+  <data name="HSB_ToString_" xml:space="preserve">
+    <value>اللون: {0:0.0}°, التشبع: {1:0.0}%, السطوع: {2:0.0}%</value>
   </data>
   <data name="Helpers_BrowseFile_Choose_file" xml:space="preserve">
     <value>اختيار ملف</value>
@@ -717,6 +567,39 @@
   </data>
   <data name="Helpers_OpenFolder_Folder_not_exist_" xml:space="preserve">
     <value>المجلد غير موجود:</value>
+  </data>
+  <data name="Helpers_Timeout" xml:space="preserve">
+    <value>انتهاء المهلة</value>
+  </data>
+  <data name="HotkeyInfo_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HotkeyInfo_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="HotkeyInfo_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="HotkeyInfo_Numpad" xml:space="preserve">
+    <value>لوحة الأرقام</value>
+  </data>
+  <data name="HotkeyInfo_Page_down" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="HotkeyInfo_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="HotkeyInfo_Win" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="HotkeyType_AbortScreenRecording" xml:space="preserve">
     <value>إلغاء تسجيل الشاشة</value>
@@ -834,6 +717,9 @@
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>اختبار الشاشة</value>
+  </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>مراقب الشبكة</value>
   </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>بدون</value>
@@ -955,14 +841,20 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>صانع مصغرات الفيديو</value>
   </data>
-  <data name="HSB_ToString_" xml:space="preserve">
-    <value>اللون: {0:0.0}°, التشبع: {1:0.0}%, السطوع: {2:0.0}%</value>
-  </data>
   <data name="ImageDestination_CustomImageUploader" xml:space="preserve">
     <value>رافع صور مخصص</value>
   </data>
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>رافعو الملفات</value>
+  </data>
+  <data name="ImageHelpers_Image_files" xml:space="preserve">
+    <value>ملفات الصور</value>
+  </data>
+  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
+    <value>فتح صورة</value>
+  </data>
+  <data name="ImageViewerWindow_Title" xml:space="preserve">
+    <value>ShareX - عارض الصور</value>
   </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>مربع كبير</value>
@@ -982,6 +874,12 @@
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>مصغرات ضئيلة</value>
   </data>
+  <data name="InputBoxWindow_Default_title" xml:space="preserve">
+    <value>إدخال</value>
+  </data>
+  <data name="InputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
   <data name="MyMessageBox_MyMessageBox_Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
@@ -993,6 +891,33 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>نعم</value>
+  </data>
+  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
+    <value>يلزم مسار ملف نصي صالح.</value>
+  </data>
+  <data name="OutputBoxWindow_Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
+    <value>نسخ الكل</value>
+  </data>
+  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
+    <value>إخراج</value>
+  </data>
+  <data name="OutputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
+  <data name="PNGBitDepth_Automatic" xml:space="preserve">
+    <value>اكتشاف تلقائي</value>
+  </data>
+  <data name="PNGBitDepth_Bit24" xml:space="preserve">
+    <value>24-بت</value>
+  </data>
+  <data name="PNGBitDepth_Bit32" xml:space="preserve">
+    <value>32-بت</value>
+  </data>
+  <data name="PNGBitDepth_Default" xml:space="preserve">
+    <value>الافتراضي</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>يوم</value>
@@ -1024,20 +949,56 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>غير متوفرة</value>
   </data>
-  <data name="PNGBitDepth_Automatic" xml:space="preserve">
-    <value>اكتشاف تلقائي</value>
+  <data name="PingResult_Ping_failed" xml:space="preserve">
+    <value>فشل اختبار الاتصال: {0}</value>
   </data>
-  <data name="PNGBitDepth_Bit24" xml:space="preserve">
-    <value>24-بت</value>
+  <data name="PingResult_Reply_from" xml:space="preserve">
+    <value>رد من {0}: البايتات={1} الوقت={2} مللي ثانية TTL={3}</value>
   </data>
-  <data name="PNGBitDepth_Bit32" xml:space="preserve">
-    <value>32-بت</value>
+  <data name="PingResult_Request_timed_out" xml:space="preserve">
+    <value>انتهت مهلة الطلب.</value>
   </data>
-  <data name="PNGBitDepth_Default" xml:space="preserve">
-    <value>الافتراضي</value>
+  <data name="PingResult_Statistics" xml:space="preserve">
+    <value>الحد الأدنى = {0} مللي ثانية، الحد الأقصى = {1} مللي ثانية، المتوسط = {2} مللي ثانية</value>
   </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>طباعة</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
+    <value>الطابعة «{0}» غير موجودة. ستتم المتابعة باستخدام طابعة Windows الافتراضية. يمكنك تعيين تجاوز الطابعة الافتراضية في إعدادات التطبيق.</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
+    <value>اسم الطابعة غير صالح</value>
+  </data>
+  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
+    <value>السماح بتكبير الصورة</value>
+  </data>
+  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
+    <value>تدوير الصورة تلقائيًا</value>
+  </data>
+  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
+    <value>تغيير حجم الصورة تلقائيًا</value>
+  </data>
+  <data name="PrintWindow_Center_image_position" xml:space="preserve">
+    <value>توسيط موضع الصورة</value>
+  </data>
+  <data name="PrintWindow_Description" xml:space="preserve">
+    <value>تكوين موضع الصورة وحجمها.</value>
+  </data>
+  <data name="PrintWindow_Heading" xml:space="preserve">
+    <value>خيارات الطباعة</value>
+  </data>
+  <data name="PrintWindow_Margin" xml:space="preserve">
+    <value>الهامش:</value>
+  </data>
+  <data name="PrintWindow_Pixels" xml:space="preserve">
+    <value>بكسل</value>
+  </data>
+  <data name="PrintWindow_Preview" xml:space="preserve">
+    <value>معاينة...</value>
+  </data>
+  <data name="PrintWindow_Title" xml:space="preserve">
+    <value>ShareX - خيارات الطباعة</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>يوم واحد</value>
@@ -1144,14 +1105,14 @@
   <data name="ReplCodeMenuEntry_height_Gets_image_height" xml:space="preserve">
     <value>ارتفاع الصورة</value>
   </data>
+  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
+    <value>زيادة تلقائية للأرقام والحروف مع حساسية لحالة الأحرف (حشو بالأصفار بمقدار {n})</value>
+  </data>
   <data name="ReplCodeMenuEntry_i_Auto_increment_number" xml:space="preserve">
     <value>زيادة تلقائية للأرقام (حشو بالأصفار بمقدار {n})</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>زيادة تلقائية للأرقام والحروف  (حشو بالأصفار بمقدار {n})</value>
-  </data>
-  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
-    <value>زيادة تلقائية للأرقام والحروف مع حساسية لحالة الأحرف (حشو بالأصفار بمقدار {n})</value>
   </data>
   <data name="ReplCodeMenuEntry_ib_Auto_increment_base_alphanumeric" xml:space="preserve">
     <value>زيادة تلقائية بدءًا من  {n} باستخدام الأرقام والحروف داخل النطاق (1 &lt; n &lt; 63)</value>
@@ -1165,11 +1126,11 @@
   <data name="ReplCodeMenuEntry_mo_Current_month" xml:space="preserve">
     <value>الشهر</value>
   </data>
-  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
-    <value>اسم الشهر (باللغة المحلية)</value>
-  </data>
   <data name="ReplCodeMenuEntry_mon2_Current_month_name__English_" xml:space="preserve">
     <value>اسم الشهر (إنجليزي)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
+    <value>اسم الشهر (باللغة المحلية)</value>
   </data>
   <data name="ReplCodeMenuEntry_ms_Current_millisecond" xml:space="preserve">
     <value>ميللي ثانية</value>
@@ -1210,11 +1171,11 @@
   <data name="ReplCodeMenuEntry_unix_Unix_timestamp" xml:space="preserve">
     <value>دمغة وقت بصيغة Unix</value>
   </data>
-  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
-    <value>اسم الاسبوع (بلغة النظام)</value>
-  </data>
   <data name="ReplCodeMenuEntry_w2_Current_week_name__English_" xml:space="preserve">
     <value>اسم الاسبوع (الإنجليزية)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
+    <value>اسم الاسبوع (بلغة النظام)</value>
   </data>
   <data name="ReplCodeMenuEntry_width_Gets_image_width" xml:space="preserve">
     <value>عرض الصورة</value>
@@ -1312,6 +1273,36 @@
   <data name="ToastClickAction_Upload" xml:space="preserve">
     <value>رفع الملف</value>
   </data>
+  <data name="Translator_ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="Translator_Base64" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Translator_Binary" xml:space="preserve">
+    <value>ثنائي</value>
+  </data>
+  <data name="Translator_Hexadecimal" xml:space="preserve">
+    <value>سداسي عشري</value>
+  </data>
+  <data name="Translator_Text" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
+    <value>عنوان URL غير صالح.</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>بحث الصور باستخدام Bing</value>
+  </data>
+  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
+    <value>خدمة مخصصة لمشاركة عناوين URL</value>
+  </data>
+  <data name="URLSharingServices_Email" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
+    <value>Google Lens</value>
+  </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>الإصدارات الاختبارية - Dev</value>
   </data>
@@ -1336,20 +1327,23 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>التحديثات متاحة</value>
   </data>
-  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
-    <value>بحث الصور باستخدام Bing</value>
+  <data name="UpdateMessageWindow_Header" xml:space="preserve">
+    <value>يتوفر تحديث ShareX</value>
   </data>
-  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
-    <value>خدمة مخصصة لمشاركة عناوين URL</value>
-  </data>
-  <data name="URLSharingServices_Email" xml:space="preserve">
-    <value>البريد الإلكتروني</value>
-  </data>
-  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
-    <value>Google Lens</value>
+  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
+    <value>عرض سجل التغييرات</value>
   </data>
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>خدمة مخصصة لاختصار عناوين URL</value>
+  </data>
+  <data name="VideoInfo_Audio_details" xml:space="preserve">
+    <value>، برنامج ترميز الصوت: {0}</value>
+  </data>
+  <data name="VideoInfo_Summary" xml:space="preserve">
+    <value>اسم الملف: {0}، المدة: {1}، معدل البت: {2} كيلوبت/ث</value>
+  </data>
+  <data name="VideoInfo_Video_details" xml:space="preserve">
+    <value>، برنامج ترميز الفيديو: {0}، الدقة: {1}x{2}، الإطارات/ث: {3}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>خاص</value>
@@ -1360,11 +1354,20 @@
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>غير متوفرة</value>
   </data>
-  <data name="HdrCaptureMode_Off" xml:space="preserve">
-    <value>إيقاف</value>
+  <data name="ZipManager_Archive_too_large" xml:space="preserve">
+    <value>يتجاوز الحجم غير المضغوط لهذا الأرشيف الحد الأقصى المسموح به لحجم الملف.</value>
+  </data>
+  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
+    <value>حجم الأرشيف غير المضغوط: {0}</value>
+  </data>
+  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
+    <value>الحد الأقصى المسموح به لحجم الملف: {0}</value>
   </data>
   <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
     <value>ديناميكي</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>إيقاف</value>
   </data>
   <data name="HdrCaptureMode_On" xml:space="preserve">
     <value>تشغيل</value>

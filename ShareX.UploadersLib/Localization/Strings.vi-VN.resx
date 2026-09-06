@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>Người dùng</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>Tải lên Amazon S3 không thành công.</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 Intelligent-Tiering</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 Standard-Infrequent Access</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>Tải lên Amazon S3 không thành công.</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>“Khóa truy cập” không được để trống.</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>Lỗi không xác định</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>Định dạng yêu cầu không được hỗ trợ: {0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>Nhị phân</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>Số tham số tối thiểu cho hàm “{0}” là {1}.</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>Định dạng yêu cầu không được hỗ trợ: {0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX — Cài đặt đích</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>Khóa API:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>Đã lấy khóa API</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>Tài khoản</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>Album</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>Khóa API:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>Đã lấy khóa API</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>Mã ủy quyền:</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>Hoàn tất ủy quyền</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>Kết nối tài khoản</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>Hãy kết nối tài khoản Imgur trước</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>Hãy kết nối tài khoản Photobucket trước</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>Kết nối tài khoản</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>Đã kết nối!</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>Nhập thông tin đăng nhập tài khoản để lấy khóa API</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>Nhập mã xác thực hai yếu tố hiện tại của bạn</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>Tương thích 8.1</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>URL API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>Tên máy chủ API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>Khóa API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>Tên người dùng API</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>Email thông tin tài khoản</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>Loại tài khoản</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>Tên máy chủ API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>Khóa API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>Tên người dùng API</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>URL API</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>Thêm tên tệp vào URL</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>Máy chủ</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>Hình ảnh</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>Đăng nhập</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>Tên</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>Tiền tố đối tượng</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>Tô sáng cú pháp</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>Thời gian tồn tại</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>Đơn vị thời gian tồn tại</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>Thẻ</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>Mã thông báo</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>Nhập mã xác thực hai yếu tố hiện tại của bạn</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>Thời gian tồn tại</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>Đơn vị thời gian tồn tại</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>Đường dẫn tải lên</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>Trình tải lên:</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>Dùng API v1</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Khóa API Web</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>Tên</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>{0} thư mục</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>Mã xác minh:</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX — Cài đặt đích</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>Tệp tải lên qua API bị giới hạn ở 150 MB.</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>Tin nhắn</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>Gửi</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>Email người nhận</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS (FTP qua SSL)</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>Không thể lấy URL tải lên.</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS (FTP qua SSL)</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>Ổ đĩa của tôi</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>Trạng thái: {0}, Yêu cầu: {1}, Lỗi: {2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>Tải lên Imgur không thành công: ({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Hình vuông lớn</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Hình thu nhỏ/thumbnail cỡ nhỏ</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>Trạng thái: {0}, Yêu cầu: {1}, Lỗi: {2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>Tải lên Imgur không thành công: ({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>Tải lên không thành công vì lý do không xác định. Hãy kiểm tra khóa API.</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>Tài khoản mới</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>Ủy quyền đã hoàn tất thành công.</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>Ủy quyền không thành công.</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>Tham số trạng thái không hợp lệ.</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>Hủy</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>Đang chờ hoàn tất ủy quyền trong trình duyệt...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>Ủy quyền đã hoàn tất thành công.</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>Ủy quyền không thành công.</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>Tham số trạng thái không hợp lệ.</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>Khóa, khóa bí mật hoặc khóa riêng của người dùng đang trống.</value>
@@ -1115,9 +1115,6 @@ Tin nhắn: {2}</value>
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX — Chọn</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Đăng nhập Pastebin không thành công.</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1149,11 +1146,11 @@ Tin nhắn: {2}</value>
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Không công khai</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Đăng nhập Pastebin không thành công.</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>Máy chủ Plik đang trống.</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>Máy chủ yêu cầu ủy quyền.</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 ngày</value>
@@ -1188,23 +1185,14 @@ Tin nhắn: {2}</value>
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>tô sáng cú pháp</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>Máy chủ yêu cầu ủy quyền.</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>Thiếu khóa thiết bị.</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>Chưa chọn thiết bị để gửi.</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>Xác thực không thành công.</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>Lỗi tổng kiểm.</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>Lỗi kết nối.</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>Tài khoản không còn đủ dung lượng lưu trữ.</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>Hủy</value>
@@ -1227,14 +1215,29 @@ Tin nhắn: {2}</value>
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>Đăng nhập thất bại.</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>Mật khẩu</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX — Đăng nhập puush</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>Xác thực không thành công.</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>Lỗi tổng kiểm.</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>Lỗi kết nối.</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>Tài khoản không còn đủ dung lượng lưu trữ.</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>Sao chép URL</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>Sao chép URL xóa</value>
@@ -1250,9 +1253,6 @@ Tin nhắn: {2}</value>
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>Sao chép URL hình thu nhỏ</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>Sao chép URL</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>URL xóa</value>
@@ -1275,20 +1275,20 @@ Tin nhắn: {2}</value>
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>Không có chi tiết kết quả.</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>Mở URL</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>Mở URL phản hồi</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>Mở URL</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>URL phản hồi</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>Thông tin phản hồi</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>Văn bản phản hồi</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>URL phản hồi</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>Kết quả</value>
@@ -1308,17 +1308,20 @@ Tin nhắn: {2}</value>
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>URL hình thu nhỏ</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>Phản hồi tải lên</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>Phản hồi tải lên</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>Định dạng XML</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>Định dạng không thành công.</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>Tệp key không tồn tại.</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>URL API Seafile đang trống.</value>
@@ -1338,9 +1341,6 @@ Văn bản: {2}</value>
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>Thiếu thông tin tải lên.</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>Tệp key không tồn tại.</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>Không thể tạo video.</value>
@@ -1363,11 +1363,11 @@ Văn bản: {2}</value>
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>Paste.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>Paste2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>Paste.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1404,30 +1404,6 @@ Văn bản: {2}</value>
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>Tải lên</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>Thiếu thông tin ủy quyền. Hãy mở URL ủy quyền trước.</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>Thông báo lỗi:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>URL yêu cầu:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>Dấu vết ngăn xếp:</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>Cần đăng nhập.</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>Làm mới mã thông báo truy cập không thành công.</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>Cần đăng nhập vào {0}.</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>Tải lên không thành công.</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>Tìm kiếm trực quan trên Bing</value>
@@ -1467,6 +1443,30 @@ Văn bản: {2}</value>
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>Cần đăng nhập.</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>Làm mới mã thông báo truy cập không thành công.</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>Cần đăng nhập vào {0}.</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>Tải lên không thành công.</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>Thiếu thông tin ủy quyền. Hãy mở URL ủy quyền trước.</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>Thông báo lỗi:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>URL yêu cầu:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>Dấu vết ngăn xếp:</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1510,15 +1510,6 @@ Văn bản: {2}</value>
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>Trình rút gọn bằng ký tự vô hình</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>Thiếu chữ ký hoặc tên người dùng/mật khẩu.</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>Tải lên không thành công: {0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>Tải lên bị từ chối: {0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>Hủy</value>
   </data>
@@ -1548,5 +1539,14 @@ Văn bản: {2}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Không công khai</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>Tải lên không thành công: {0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>Tải lên bị từ chối: {0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>Thiếu chữ ký hoặc tên người dùng/mật khẩu.</value>
   </data>
 </root>

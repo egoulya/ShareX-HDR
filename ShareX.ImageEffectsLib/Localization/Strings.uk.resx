@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>Напрямок</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>Додати... Зупинити</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>Точки кольору</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>Додати... Зупинити</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>Напрямок</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>Видалити</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>Параметри ефекту</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>Параметри: {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>Оберіть ефект, щоб змінити його параметри.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>Цей ефект не має настроюваних властивостей.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>Змінити градієнт...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>Огляд...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>Вибрати {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>Л</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>В</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>П</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>Н</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>Ш</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>В</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - Пакування ефекту зображення</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>Запакувати попереднє налаштування</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>Тека ресурсів</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>Файл пакета</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>Огляд...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>Перезаписати наявний пакет</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>Відкрити Ефекти Папка</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>Створити пакет</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>Закрити</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>Виберіть теку ресурсів ефекту</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>Зберегти пакет ефектів зображення</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>Ефект зображення ShareX</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>Тека ресурсів має міститися всередині теки ефектів зображення ShareX.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>Виберіть шлях до файла пакета.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>За цим шляхом уже існує пакет. Увімкніть перезапис, щоб замінити його.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>Пакет успішно створено.</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX — Підтвердження</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>Продовжити</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>Так</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>Ні</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - Ефекти зображення</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} мс</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>Попередні налаштування</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>Створити Передустановка</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>Видалити Передустановка</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>Дублювати Передустановка</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>Перемістити вгору</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>Перемістити вниз</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>Передустановка Ім’я</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>Ефекти</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>Оновити Попередній перегляд...</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>Власна назва ефекту</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>Додати ефект</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>Видалити ефект</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>Дублювати ефект</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>Очистити Ефекти</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>Відкрити зображення</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>Завантажити З буфера обміну</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>Запакувати попереднє налаштування...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>Сторінка ефектів зображення...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>Зберегти зображення...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>Завантажити Зображення</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>Продовжити</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>Скасувати</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>Закрити</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>Неназване попереднє налаштування</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>Введіть назву попереднього налаштування перед створенням пакета.</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>Видалити всі ефекти з вибраного попереднього налаштування?</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>Ефекти зображення Попередній перегляд...</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>Коригування</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>Малювання</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>Перетворення</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>Коригування</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>Фільтри</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>Перетворення</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>Текст</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>Текстовий водяний знак</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>Альфа</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>Внизу</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>Альфа пікселя = Альфа пікселя * Значення
-Приклад: 0,5 зменшить альфа-канал пікселя на 50%</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>Ліворуч</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>Немає</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>Праворуч</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>Зверху</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>Усередині</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>Зовні</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>Абсолютний розмір</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>Відсоток полотна</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>Копіювання джерела</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>Джерело зверху</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>Внизу по центру</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>Внизу ліворуч</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>Внизу праворуч</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>Посередині</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>Посередині ліворуч</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>Посередині праворуч</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>Вгорі по центру</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>Вгорі ліворуч</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>Вгорі праворуч</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>Користувацькі</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>Пунктир</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>Штрих-крапка</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>Штрих-крапка-крапка</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>Крапки</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>Суцільна</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>Абсолютний розмір</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>Не змінювати розмір</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>Відсоток полотна</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>Відсоток водяного знака</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>Обрізати</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>Збільшити</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>Бікубічна</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>Білінійна</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>Високоякісна бікубічна</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>Високоякісна білінійна</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>Найближчий сусід</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>Віддзеркалити горизонтально</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>Віддзеркалити вертикально</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>Немає</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>Повернути на 180°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>Обернути на 270°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>Обернути на 90°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>Обернути на 90° і віддзеркалити горизонтально</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>Обернути на 90° і віддзеркалити вертикально</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>Зворотна діагональ</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>Пряма діагональ</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>Горизонтальний</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>Вертикальний</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>Змінює розмір усіх зображень до вказаного.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>Змінює розмір зображення, лише якщо воно більше за вказаний розмір.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>Змінює розмір зображення, лише якщо воно менше за вказаний розмір.</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>Згладжування</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>Згладжування з прив’язкою до сітки</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType із прив’язкою до сітки</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>Один біт на піксель</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>Один біт на піксель із прив’язкою до сітки</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>Системне значення за замовчуванням</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>Н</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>Огляд...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>Змінити градієнт...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>Параметри ефекту</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>Параметри: {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>В</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>Л</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>Цей ефект не має настроюваних властивостей.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>П</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>Оберіть ефект, щоб змінити його параметри.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>Вибрати {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>В</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>Ш</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>За цим шляхом уже існує пакет. Увімкніть перезапис, щоб замінити його.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>Тека ресурсів</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>Тека ресурсів має міститися всередині теки ефектів зображення ShareX.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>Огляд...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>Виберіть шлях до файла пакета.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>Створити пакет</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>Пакет успішно створено.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>Ефект зображення ShareX</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>Відкрити Ефекти Папка</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>Перезаписати наявний пакет</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>Файл пакета</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>Запакувати попереднє налаштування</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>Зберегти пакет ефектів зображення</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>Виберіть теку ресурсів ефекту</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - Пакування ефекту зображення</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>Альфа пікселя = Альфа пікселя + Додавання
 Приклад: 0,5 збільшить альфа-канал пікселя на 127,5</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>Автоматично Обрізати</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>Чорно-біле</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>Розмиття</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>Яскравість</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>Альфа пікселя = Альфа пікселя * Значення
+Приклад: 0,5 зменшить альфа-канал пікселя на 50%</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>Колір пікселя = Колір пікселя + Значення
 Приклад: 0,5 збільшить колір пікселя на 127,5</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>Полотно</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>Визначає спосіб обчислення поля навколо полотна.</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>Глибина кольору</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>Розфарбування</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>Контраст</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>Колір пікселя = Колір пікселя * Значення
 Приклад: 1,5 збільшить колір пікселя на 50%</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>Обрізати</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>Тло</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>Фонове зображення</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>Рамка</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>Шахівниця</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>Зображення</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>Не малювати водяний знак зображення, якщо він більший за вихідне зображення.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>Визначає спосіб масштабування водяного знака зображення, якщо це необхідно.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>Не малювати водяний знак зображення, якщо він більший за вихідне зображення.</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>Частинки</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>Текстовий водяний знак</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>Не малювати текст, якщо він більший за вихідне зображення.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>Не малювати текстовий водяний знак, якщо він більший за вихідне зображення.</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>Не малювати текст, якщо він більший за вихідне зображення.</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>Виявлення країв</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>Тиснення</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>Віддзеркалення</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>Примусові пропорції</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>Гама</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>Мінімум 0,1, максимум 5,0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>Розмиття за Гаусом</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>Сяйво</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>Відтінки сірого</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>Відтінок</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>Від 0 до 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>Інверсія</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>Матриця кольорів</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>Червоний = (Червоний * Rr) + (Зелений * Rg) + (Синій * Rb) + (Альфа * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>Матриця згортки</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>Видалення середнього</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>Контур</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>Пікселювання</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>Полароїд</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>Дзеркальне відбиття</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>Висота відбиття відносно висоти знімка екрана.
-Значення має бути від 1 до 100.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>Прозорість відбиття змінюється від цього значення до MinAlpha.
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>Початкова позиція відбиття: висота знімка екрана + зміщення</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>Висота відбиття відносно висоти знімка екрана.
+Значення має бути від 1 до 100.</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>Додає нахил відбиття від нижнього лівого до нижнього правого краю.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>Величина нахилу пікселів зліва направо.</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>Заміна кольору</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>Зміна розміру</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>Укажіть висоту 0, щоб автоматично підібрати її зі збереженням співвідношення сторін.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>Укажіть ширину 0, щоб автоматично підібрати її зі збереженням співвідношення сторін.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>Укажіть висоту 0, щоб автоматично підібрати її зі збереженням співвідношення сторін.</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>Розділення RGB</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>Обертання</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>Виберіть значення від -360 до 360.</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>Якщо ввімкнено, вихідне зображення буде більшим за вхідне й не буде обрізане.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>Для роботи цього параметра функція «Збільшити» має бути вимкнена. Якщо ввімкнено, зображення буде обрізане; інакше його розмір буде зменшено.</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>Заокруглені кути</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>Насиченість</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>Масштабування</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>Укажіть відсоток ширини 0, щоб зберегти співвідношення сторін автоматичним налаштуванням ширини.</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>Якщо ввімкнено, вихідне зображення буде більшим за вхідне й не буде обрізане.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>Укажіть відсоток висоти 0, щоб зберегти співвідношення сторін автоматичним налаштуванням висоти.</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>Вибірковий колір</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>Сепія</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>Тінь</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>Укажіть відсоток ширини 0, щоб зберегти співвідношення сторін автоматичним налаштуванням ширини.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>Виберіть значення від 0,1 до 1,0</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>Підвищення різкості</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>Нахил</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>Величина нахилу пікселів зліва направо.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>Величина нахилу пікселів згори вниз.</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>Нарізання</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>Згладжування</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>Рваний край</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>Хвилястий край</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>Зовні</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>Альфа</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>Усередині</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>Автоматично Обрізати</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>Високоякісна бікубічна</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>Чорно-біле</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>Бікубічна</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>Розмиття</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>Високоякісна білінійна</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>Яскравість</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>Білінійна</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>Полотно</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>Найближчий сусід</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>Глибина кольору</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>Абсолютний розмір</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>Розфарбування</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>Відсоток полотна</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>Контраст</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>Не змінювати розмір</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>Абсолютний розмір</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>Відсоток водяного знака</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>Відсоток полотна</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>Збільшити</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>Обрізати</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>Немає</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>Тло</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>Обернути на 90°</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>Фонове зображення</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>Повернути на 180°</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>Рамка</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>Обернути на 270°</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>Шахівниця</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>Віддзеркалити горизонтально</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>Зображення</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>Обернути на 90° і віддзеркалити горизонтально</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>Частинки</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>Віддзеркалити вертикально</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>Текстовий водяний знак</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>Обернути на 90° і віддзеркалити вертикально</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>Текст</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>Змінює розмір усіх зображень до вказаного.</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>Виявлення країв</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>Змінює розмір зображення, лише якщо воно більше за вказаний розмір.</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>Тиснення</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>Змінює розмір зображення, лише якщо воно менше за вказаний розмір.</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>Віддзеркалення</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>Вгорі ліворуч</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>Примусові пропорції</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>Вгорі по центру</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>Гама</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>Вгорі праворуч</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>Розмиття за Гаусом</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>Посередині ліворуч</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>Сяйво</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>Посередині</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>Відтінки сірого</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>Посередині праворуч</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>Відтінок</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>Внизу ліворуч</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>Інверсія</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>Внизу по центру</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>Матриця кольорів</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>Внизу праворуч</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>Матриця згортки</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>Джерело зверху</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>Видалення середнього</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>Копіювання джерела</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>Контур</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>Суцільна</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>Пікселювання</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>Пунктир</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>Полароїд</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>Крапки</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>Розділення RGB</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>Штрих-крапка</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>Дзеркальне відбиття</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>Штрих-крапка-крапка</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>Заміна кольору</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>Користувацькі</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>Зміна розміру</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>Горизонтальний</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>Обертання</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>Вертикальний</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>Заокруглені кути</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>Пряма діагональ</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>Насиченість</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>Зворотна діагональ</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>Масштабування</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>Системне значення за замовчуванням</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>Вибірковий колір</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>Один біт на піксель із прив’язкою до сітки</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>Сепія</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>Один біт на піксель</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>Тінь</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>Згладжування з прив’язкою до сітки</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>Підвищення різкості</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>Нахил</value>
+  </data>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>Нарізання</value>
+  </data>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
     <value>Згладжування</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType із прив’язкою до сітки</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>Рваний край</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>Немає</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>Хвилястий край</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>Зверху</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>Продовжити</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>Внизу</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>Ні</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>Ліворуч</value>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX — Підтвердження</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>Праворуч</value>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>Додати ефект</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>Видалити всі ефекти з вибраного попереднього налаштування?</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>Очистити Ефекти</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>Продовжити</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>Власна назва ефекту</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>Дублювати ефект</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>Дублювати Передустановка</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>Ефекти</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>Введіть назву попереднього налаштування перед створенням пакета.</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>Сторінка ефектів зображення...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>Завантажити З буфера обміну</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>Перемістити вниз</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>Перемістити вгору</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>Створити Передустановка</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>Відкрити зображення</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>Запакувати попереднє налаштування...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>Передустановка Ім’я</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>Попередні налаштування</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>Ефекти зображення Попередній перегляд...</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>Оновити Попередній перегляд...</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>Видалити ефект</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>Видалити Передустановка</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>Зберегти зображення...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - Ефекти зображення</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} мс</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>Неназване попереднє налаштування</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>Завантажити Зображення</value>
   </data>
 </root>

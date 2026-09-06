@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>Utilisateur</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>Échec du téléversement vers Amazon S3.</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 Intelligent-Tiering</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 Standard-Infrequent Access</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>Échec du téléversement vers Amazon S3.</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>La « clé d’accès » ne doit pas être vide.</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>Erreur inconnue</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>Format de requête non pris en charge : {0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>Binaire</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>Le nombre minimal de paramètres de la fonction « {0} » est {1}.</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>Format de requête non pris en charge : {0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX — Paramètres des destinations</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>Clé API:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>Clé API récupérée</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>Compte</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>Albums</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>Clé API:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>Clé API récupérée</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>Code d’autorisation :</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>Terminer l’autorisation</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>Connecter le compte</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>Connectez d’abord un compte Imgur</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>Connectez d’abord un compte Photobucket</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>Connecter le compte</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>Connecté !</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>Saisissez les identifiants du compte pour récupérer la clé API</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>Saisissez votre code actuel d’authentification à deux facteurs</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>Compatibilité 8.1</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>URL de l’API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>Nom d’hôte de l’API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>Clé API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>Nom d’utilisateur de l’API</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>E-mail des informations du compte</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>Type de compte</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>Nom d’hôte de l’API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>Clé API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>Nom d’utilisateur de l’API</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>URL de l’API</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>Ajouter le nom du fichier à l’URL</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>Hôte</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>Images</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>Connexion</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>Nom</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>Préfixe de l’objet</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>Coloration syntaxique</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>TTL</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>Unité TTL</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>Étiquettes</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>Jeton</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>Saisissez votre code actuel d’authentification à deux facteurs</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>TTL</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>Unité TTL</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>Chemin de téléversement</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>Hébergeur :</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>Utiliser l’API v1</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Clé API Web</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>Nom</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>{0} dossiers</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>Code de vérification :</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX — Paramètres des destinations</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>Les téléversements via l’API sont limités à 150 Mo.</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>Message</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>Envoyer</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>Adresse e-mail du destinataire</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS (FTP sur SSL)</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>Impossible d’obtenir l’URL de téléversement.</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS (FTP sur SSL)</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>Mon drive</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>État : {0}, Requête : {1}, Erreur : {2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>Échec du téléversement Imgur : ({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Gros carré</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Petites miniatures</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>État : {0}, Requête : {1}, Erreur : {2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>Échec du téléversement Imgur : ({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>Le téléversement a échoué pour une raison inconnue. Vérifiez votre clé API.</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>Nouveau compte</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>Autorisation terminée avec succès.</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>L’autorisation a échoué.</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>Paramètre d’état non valide.</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>Annuler</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>En attente de la fin de l’autorisation dans votre navigateur...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>Autorisation terminée avec succès.</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>L’autorisation a échoué.</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>Paramètre d’état non valide.</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>La clé, le secret ou la clé privée du consommateur est vide.</value>
@@ -1115,9 +1115,6 @@ Message : {2}</value>
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX — Sélectionner</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Échec de la connexion à Pastebin.</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1149,11 +1146,11 @@ Message : {2}</value>
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Non listés</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Échec de la connexion à Pastebin.</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>L’hôte Plik est vide.</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>Le serveur nécessite une autorisation.</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 jour</value>
@@ -1188,23 +1185,14 @@ Message : {2}</value>
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>coloration syntaxique</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>Le serveur nécessite une autorisation.</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>La clé de l’appareil est manquante.</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>Aucun appareil n’est sélectionné pour l’envoi.</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>Échec de l’authentification.</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>Erreur de somme de contrôle.</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>Erreur de connexion.</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>L’espace de stockage restant du compte est insuffisant.</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>Annuler</value>
@@ -1227,14 +1215,29 @@ Message : {2}</value>
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>Échec de la connexion.</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>Mot de passe :</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX — Connexion à puush</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>Échec de l’authentification.</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>Erreur de somme de contrôle.</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>Erreur de connexion.</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>L’espace de stockage restant du compte est insuffisant.</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>Copier l’URL</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>Copier l’URL de suppression</value>
@@ -1250,9 +1253,6 @@ Message : {2}</value>
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>Copier l’URL de la miniature</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>Copier l’URL</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>URL de suppression</value>
@@ -1275,20 +1275,20 @@ Message : {2}</value>
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>Aucun détail de résultat n’est disponible.</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>Ouvrir l’URL</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>Ouvrir l’URL de réponse</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>Ouvrir l’URL</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>URL de la réponse</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>Informations de réponse</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>Texte de la réponse</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>URL de la réponse</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>Résultat</value>
@@ -1308,17 +1308,20 @@ Message : {2}</value>
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>URL de la miniature</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>Réponse du téléversement</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>Réponse du téléversement</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>Formater le XML</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>Erreur de formatage.</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>Le fichier de clé n'existe pas.</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>L’URL de l’API Seafile est vide.</value>
@@ -1338,9 +1341,6 @@ Texte : {2}</value>
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>Les informations de téléversement sont manquantes.</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>Le fichier de clé n'existe pas.</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>Impossible de créer la vidéo.</value>
@@ -1363,11 +1363,11 @@ Texte : {2}</value>
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>Paste.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>Paste2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>Paste.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1404,30 +1404,6 @@ Texte : {2}</value>
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>Téléverser</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>Les informations d’autorisation sont manquantes. Ouvrez d’abord l’URL d’autorisation.</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>Message d’erreur:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>URL de requête:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>Trace de la pile :</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>Une connexion est requise.</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>Échec de l’actualisation du jeton d’accès.</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>Une connexion à {0} est requise.</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>Échec du téléversement.</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>Recherche visuelle Bing</value>
@@ -1467,6 +1443,30 @@ Texte : {2}</value>
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>Une connexion est requise.</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>Échec de l’actualisation du jeton d’accès.</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>Une connexion à {0} est requise.</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>Échec du téléversement.</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>Les informations d’autorisation sont manquantes. Ouvrez d’abord l’URL d’autorisation.</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>Message d’erreur:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>URL de requête:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>Trace de la pile :</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1510,15 +1510,6 @@ Texte : {2}</value>
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>Raccourcisseur à largeur nulle</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>La signature ou le nom d’utilisateur/mot de passe est manquant.</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>Échec du téléversement : {0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>Téléversement rejeté : {0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>Annuler</value>
   </data>
@@ -1548,5 +1539,14 @@ Texte : {2}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Non listés</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>Échec du téléversement : {0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>Téléversement rejeté : {0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>La signature ou le nom d’utilisateur/mot de passe est manquant.</value>
   </data>
 </root>

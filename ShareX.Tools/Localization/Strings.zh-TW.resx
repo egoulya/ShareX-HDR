@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>正在測試...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>開啟時自動分析</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>API 金鑰</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>API 金鑰頁面...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>開啟時自動分析</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>行為</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>載入模型</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>詳細程度</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>連線成功。</value>
@@ -377,14 +377,14 @@
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>瀏覽...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>CSS 檔案</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>選擇資料夾并產生輸出。在使用“另存新檔”或“上傳”之前不会儲存任何內容。</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>建立可解析的结构化 JSON</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>CSS 檔案</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>顯示資料夾路徑</value>
@@ -437,10 +437,10 @@
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>儲存目錄索引</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>選擇 CSS 檔案</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
     <value>選擇 CSS 檔案</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
@@ -656,9 +656,6 @@
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>圖片</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>或使用“瀏覽”選擇檔案</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>圖示另存新檔</value>
   </data>
@@ -667,6 +664,9 @@
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>大小</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>或使用“瀏覽”選擇檔案</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>至少新增两張要合併的影像。</value>
@@ -863,9 +863,6 @@
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>檔案名範本</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>產生縮圖</value>
   </data>
@@ -886,6 +883,9 @@
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>寬度</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>{0:n0} 個檔案</value>
@@ -1001,20 +1001,20 @@
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>反向對角線</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>棋盤格</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>CPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>棋盤格</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>正向對角線</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>GPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>高</value>
@@ -1168,17 +1168,122 @@
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>圖案</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>紅色</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>紅色</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX - 顯示器測試</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>速度</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>{0} 逾時。</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>找不到使用中的網路介面。</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>沒有端點回應。</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>自動（建議）</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>正在檢查...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>已連線.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>已中斷連線.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>最近 15 分鐘</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>最近 5 分鐘</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>最近 6 小時</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>最近一小時</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} 毫秒</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>已暫停</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>工作階段</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>可用性</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>平均延遲</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>檢查間隔</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>清除記錄</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>連線事件</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>全部複製</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>目前延遲</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>中斷次數</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>延遲歷程</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>尚未記錄任何連線變更。</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>尚無延遲樣本。</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>開啟記錄...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>暫停</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>範圍</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - 網路監控器</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>目標</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>此系統不提供 {0} 語言用於 OCR。</value>
@@ -1468,11 +1573,11 @@
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>PNG 影像</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>像素</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>QR 碼大小</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>SVG 影像</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>儲存...</value>
@@ -1495,11 +1600,11 @@
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX - QR 碼</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>SVG 影像</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>上傳</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>像素</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>容差：{0}%</value>
@@ -1576,9 +1681,6 @@
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>輸入檔案</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kbps</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>完成后開啟輸出資料夾</value>
   </data>
@@ -1611,6 +1713,9 @@
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>視訊編碼器</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kbps</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>video-output</value>
@@ -1711,109 +1816,112 @@
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>影片檔案</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>快取的概略預覽 • 暫停後將精確顯示</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>{0} 逾時。</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>取消</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>找不到使用中的網路介面。</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>已取消。</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>沒有端點回應。</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>開啟或拖放影片以開始</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>自動（建議）</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>不重新編碼即可複製原始串流。剪切點可能會移至附近的關鍵影格。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>正在檢查...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>時長：</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>已連線.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg 未產生輸出影片。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>已中斷連線.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>結束：</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>最近 15 分鐘</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>儲存剪輯後的影片…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>最近 5 分鐘</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>正在儲存剪輯後的影片…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>最近 6 小時</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>{0} 附近的預覽 • 不播放音訊</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>最近一小時</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>請選擇時長已知且有限的影片。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} 毫秒</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>拖曳控點進行剪輯，或按一下進行定位。左/右：定位。Shift：1 秒。I/O：設定開始/結束。Home/End：前往選取範圍邊界。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>已暫停</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>正在準備時間軸預覽…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>無損（快速）</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>工作階段</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>此位置沒有可用的預覽影格。</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>可用性</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>開啟影片…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>平均延遲</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>此匯出模式請使用 {0} 副檔名。</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>檢查間隔</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>定位（秒）</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>連線事件</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>精確（重新編碼）</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>清除記錄</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>重新編碼為 H.264 / AAC MP4，以獲得精確的剪切點。</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>全部複製</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>靜態影格預覽 • 不播放音訊</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>目前延遲</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>拖曳控點以選擇要保留的部分。</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>日期</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>重設選取範圍</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>中斷次數</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>已儲存：{0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>延遲歷程</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>方向鍵：0.1 秒 • Shift：1 秒</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>尚未記錄任何連線變更。</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>保留 {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>尚無延遲樣本。</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>在此設定結束位置</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>開啟記錄...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>在此設定開始位置</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>暫停</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>顯示輸出資料夾...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>範圍</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>請選擇其他輸出檔案。無法覆寫來源影片。</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - 網路監控器</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>開始：</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>開始</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>影片時間軸和剪輯選取範圍</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>狀態</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX - 影片剪輯</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>目標</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>剪輯模式：</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>影片檔案</value>
   </data>
 </root>

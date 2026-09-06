@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>方向</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>追加...停止</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>カラーストップ</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>追加...停止</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>方向</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>削除</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>エフェクトのオプション</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>{0}のオプション</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>オプションを編集するエフェクトを選択してください。</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>このエフェクトには設定可能なプロパティがありません。</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>グラデーションを編集...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>参照...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>{0}を選択</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>左</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>上</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>右</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>下</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>幅</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>高</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - 画像エフェクトをパッケージ化</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>プリセットをパッケージ化</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>アセットフォルダー</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>パッケージファイル</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>参照...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>既存のパッケージを上書き</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>開く効果フォルダー</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>パッケージを作成</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>閉じる</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>エフェクトのアセットフォルダーを選択</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>画像エフェクトパッケージを保存</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>ShareX 画像エフェクト</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>アセットフォルダーは ShareX の画像エフェクトフォルダー内に置く必要があります。</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>パッケージファイルのパスを選択してください。</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>このパスには既にパッケージがあります。置き換えるには上書きを有効にしてください。</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>パッケージを作成しました。</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - 確認</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>続行</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>はい</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>いいえ</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - 画像エフェクト</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} ミリ秒</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>プリセット</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>新規プリセット</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>削除プリセット</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>複製プリセット</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>上へ移動</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>下へ移動</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>プリセット名前</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>効果</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>更新プレビュー...</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>カスタムエフェクト名</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>エフェクトを追加</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>エフェクトを削除</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>エフェクトを複製</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>クリア効果</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>画像を開く</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>読み込むクリップボードから</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>プリセットをパッケージ化...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>画像エフェクトのページ...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>画像を保存...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>アップロード画像</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>続行</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>キャンセル</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>閉じる</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>名前のないプリセット</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>パッケージを作成する前にプリセット名を入力してください。</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>選択したプリセットからすべてのエフェクトを削除しますか？</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>画像エフェクトプレビュー...</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>調整</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>描画</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>変形</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>調整</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>フィルター</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>変形</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>テキスト</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>テキスト透かし</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>アルファ</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>下</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>ピクセルのアルファ値 = ピクセルのアルファ値 * 値
-例: 0.5 を指定すると、ピクセルのアルファ値が 50% 減少します</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>内側</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>外側</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>固定サイズ</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>キャンバスの比率</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>ソースをコピー</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>ソースを上に合成</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>下中央</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>中央</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>左中央</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>右中央</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>上中央</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>左上</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>右上</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>カスタム</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>破線</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>一点鎖線</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>二点鎖線</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>点線</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>実線</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>固定サイズ</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>変更しない</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>キャンバスの比率</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>透かしに対する割合</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>トリミング</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>バイキュービック</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>バイリニア</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>高品質バイキュービック</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>高品質バイリニア</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>最近傍</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>水平反転</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>垂直反転</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>180° 回転</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>270°回転</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>90°回転</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>90°回転して水平反転</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>90°回転して垂直反転</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>右上がり対角線</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>右上がり対角線</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>横方向</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>縦方向</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>すべての画像を指定したサイズに変更します。</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>画像が指定したサイズより大きい場合にのみサイズを変更します。</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>画像が指定したサイズより小さい場合にのみサイズを変更します。</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>アンチエイリアス</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>アンチエイリアス（グリッドフィット）</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType（グリッドフィット）</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>1 ピクセルあたり 1 ビット</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>1 ピクセルあたり 1 ビット（グリッドフィット）</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>システム既定</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>参照...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>グラデーションを編集...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>エフェクトのオプション</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>{0}のオプション</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>このエフェクトには設定可能なプロパティがありません。</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>オプションを編集するエフェクトを選択してください。</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>{0}を選択</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>幅</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>このパスには既にパッケージがあります。置き換えるには上書きを有効にしてください。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>アセットフォルダー</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>アセットフォルダーは ShareX の画像エフェクトフォルダー内に置く必要があります。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>参照...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>パッケージファイルのパスを選択してください。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>パッケージを作成</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>パッケージを作成しました。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>ShareX 画像エフェクト</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>開く効果フォルダー</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>既存のパッケージを上書き</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>パッケージファイル</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>プリセットをパッケージ化</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>画像エフェクトパッケージを保存</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>エフェクトのアセットフォルダーを選択</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - 画像エフェクトをパッケージ化</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>ピクセルのアルファ値 = ピクセルのアルファ値 + 加算値
 例: 0.5 を指定すると、ピクセルのアルファ値が 127.5 増加します</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>自動トリミング</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>白黒</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>ぼかし</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>明度</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>ピクセルのアルファ値 = ピクセルのアルファ値 * 値
+例: 0.5 を指定すると、ピクセルのアルファ値が 50% 減少します</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>ピクセルの色 = ピクセルの色 + 値
 例: 0.5 を指定すると、ピクセルの色が 127.5 増加します</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>キャンバス</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>キャンバス周囲の余白の計算方法です。</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>色深度</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>カラー化</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>コントラスト</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>ピクセルの色 = ピクセルの色 * 値
 例: 1.5 を指定すると、ピクセルの色が 50% 増加します</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>トリミング</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>背景</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>背景画像</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>境界線</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>市松模様</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>画像</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>画像の透かしが元の画像より大きい場合は描画しません。</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>必要に応じて画像の透かしを拡大縮小する方法です。</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>画像の透かしが元の画像より大きい場合は描画しません。</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>パーティクル</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>テキスト透かし</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>テキストが元の画像より大きい場合は描画しません。</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>テキストの透かしが元の画像より大きい場合は描画しません。</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>テキスト</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>テキストが元の画像より大きい場合は描画しません。</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>エッジ検出</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>エンボス</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>反転</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>縦横比を強制</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>ガンマ</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>最小 0.1、最大 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>ガウスぼかし</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>グロー</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>グレースケール</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>色相</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>0 ～ 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>色を反転</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>カラーマトリックス</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>赤 = (赤 * Rr) + (緑 * Rg) + (青 * Rb) + (アルファ * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>畳み込み行列</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>平均値除去</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>輪郭</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>ピクセル化</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>ポラロイド</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>反射</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>スクリーンショットの高さに対する反射の高さの割合です。
-値は 1 ～ 100 の範囲で指定してください。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>反射の透明度をこの値から MinAlpha まで変化させます。
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>反射の開始位置: スクリーンショットの高さ + オフセット</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>スクリーンショットの高さに対する反射の高さの割合です。
+値は 1 ～ 100 の範囲で指定してください。</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>反射を左下から右下へ傾斜させます。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>ピクセルを左から右へ傾斜させる量です。</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>色を置換</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>リサイズ</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>縦横比を維持して高さを自動調整するには、高さを 0 に設定します。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>縦横比を維持して幅を自動調整するには、幅を 0 に設定します。</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>縦横比を維持して高さを自動調整するには、高さを 0 に設定します。</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>RGB 分離</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>回転</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>-360 ～ 360 の値を選択してください。</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>有効にすると、出力画像は入力画像より大きくなり、切り抜かれません。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>この設定を使用するには「拡大」を無効にする必要があります。有効にすると画像が切り抜かれ、無効にすると画像サイズが縮小されます。</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>角丸</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>彩度</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>拡大縮小</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>縦横比を維持して幅を自動調整するには、幅の割合を 0 に設定します。</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>有効にすると、出力画像は入力画像より大きくなり、切り抜かれません。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>縦横比を維持して高さを自動調整するには、高さの割合を 0 に設定します。</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>選択色</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>セピア</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>影</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>縦横比を維持して幅を自動調整するには、幅の割合を 0 に設定します。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>0.1 ～ 1.0 の値を選択してください</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>シャープ</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>傾斜</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>ピクセルを左から右へ傾斜させる量です。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>ピクセルを上から下へ傾斜させる量です。</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>スライス</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>スムージング</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>破れた縁</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>波形の縁</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>外側</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>アルファ</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>内側</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>自動トリミング</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>高品質バイキュービック</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>白黒</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>バイキュービック</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>ぼかし</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>高品質バイリニア</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>明度</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>バイリニア</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>キャンバス</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>最近傍</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>色深度</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>固定サイズ</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>カラー化</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>キャンバスの比率</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>コントラスト</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>変更しない</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>固定サイズ</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>透かしに対する割合</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>キャンバスの比率</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>拡大</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>トリミング</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>なし</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>背景</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>90°回転</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>背景画像</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>180° 回転</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>境界線</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>270°回転</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>市松模様</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>水平反転</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>画像</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>90°回転して水平反転</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>パーティクル</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>垂直反転</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>テキスト透かし</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>90°回転して垂直反転</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>テキスト</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>すべての画像を指定したサイズに変更します。</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>エッジ検出</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>画像が指定したサイズより大きい場合にのみサイズを変更します。</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>エンボス</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>画像が指定したサイズより小さい場合にのみサイズを変更します。</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>反転</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>左上</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>縦横比を強制</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>上中央</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>ガンマ</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>右上</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>ガウスぼかし</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>左中央</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>グロー</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>中央</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>グレースケール</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>右中央</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>色相</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>左下</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>色を反転</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>下中央</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>カラーマトリックス</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>右下</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>畳み込み行列</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>ソースを上に合成</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>平均値除去</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>ソースをコピー</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>輪郭</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>実線</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>ピクセル化</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>破線</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>ポラロイド</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>点線</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>RGB 分離</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>一点鎖線</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>反射</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>二点鎖線</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>色を置換</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>カスタム</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>リサイズ</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>横方向</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>回転</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>縦方向</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>角丸</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>右上がり対角線</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>彩度</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>右上がり対角線</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>拡大縮小</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>システム既定</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>選択色</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>1 ピクセルあたり 1 ビット（グリッドフィット）</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>セピア</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>1 ピクセルあたり 1 ビット</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>影</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>アンチエイリアス（グリッドフィット）</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>シャープ</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>アンチエイリアス</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>傾斜</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType（グリッドフィット）</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>スライス</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>なし</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>スムージング</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>上</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>破れた縁</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>下</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>波形の縁</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>左</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>続行</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>右</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - 確認</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>エフェクトを追加</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>選択したプリセットからすべてのエフェクトを削除しますか？</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>クリア効果</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>続行</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>カスタムエフェクト名</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>エフェクトを複製</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>複製プリセット</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>効果</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>パッケージを作成する前にプリセット名を入力してください。</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>画像エフェクトのページ...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>読み込むクリップボードから</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>下へ移動</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>上へ移動</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>新規プリセット</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>画像を開く</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>プリセットをパッケージ化...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>プリセット名前</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>プリセット</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>画像エフェクトプレビュー...</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>更新プレビュー...</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>エフェクトを削除</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>削除プリセット</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>画像を保存...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - 画像エフェクト</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} ミリ秒</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>名前のないプリセット</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>アップロード画像</value>
   </data>
 </root>

@@ -58,389 +58,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorPickerWindow_Title" xml:space="preserve">
-    <value>ShareX — Вибір кольору</value>
-  </data>
-  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
-    <value>Колірний режим</value>
-  </data>
-  <data name="ColorPickerWindow_Hue" xml:space="preserve">
-    <value>Відтінок</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
-    <value>Насиченість</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
-    <value>Яскравість</value>
-  </data>
-  <data name="ColorPickerWindow_Red" xml:space="preserve">
-    <value>Червоний</value>
-  </data>
-  <data name="ColorPickerWindow_Green" xml:space="preserve">
-    <value>Зелений</value>
-  </data>
-  <data name="ColorPickerWindow_Blue" xml:space="preserve">
-    <value>Синій</value>
-  </data>
-  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
-    <value>Назва кольору</value>
-  </data>
-  <data name="ColorPickerWindow_Hex" xml:space="preserve">
-    <value>Шістнадцяткове</value>
-  </data>
-  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
-    <value>Десяткове</value>
-  </data>
-  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
-    <value>Альфа</value>
-  </data>
-  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
-    <value>Відтінок °</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
-    <value>Насиченість %</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
-    <value>Яскравість %</value>
-  </data>
-  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
-    <value>Блакитний %</value>
-  </data>
-  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
-    <value>Пурпуровий %</value>
-  </data>
-  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
-    <value>Жовтий %</value>
-  </data>
-  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
-    <value>Чорний %</value>
-  </data>
-  <data name="ColorPickerWindow_Current" xml:space="preserve">
-    <value>Поточний</value>
-  </data>
-  <data name="ColorPickerWindow_Previous" xml:space="preserve">
-    <value>Попередній</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
-    <value>Копіювати всі відомості</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
-    <value>Копіювати RGB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
-    <value>Копіювати шістнадцяткове значення</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
-    <value>Копіювати HSB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
-    <value>Копіювати CMYK</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
-    <value>Копіювати десяткове значення</value>
-  </data>
-  <data name="ColorPickerWindow_Copy" xml:space="preserve">
-    <value>Копіювати</value>
-  </data>
-  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
-    <value>Нещодавні кольори</value>
-  </data>
-  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
-    <value>Стандартні кольори</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
-    <value>Вибрати колір з екрана...</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
-    <value>Вибрати колір із буфера обміну</value>
-  </data>
-  <data name="ColorPickerWindow_OK" xml:space="preserve">
-    <value>ОК</value>
-  </data>
-  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
-    <value>Скасувати</value>
-  </data>
-  <data name="ErrorWindow_Title" xml:space="preserve">
-    <value>ShareX — Помилка</value>
-  </data>
-  <data name="ErrorWindow_Heading" xml:space="preserve">
-    <value>Сталася помилка</value>
-  </data>
-  <data name="ErrorWindow_Description" xml:space="preserve">
-    <value>Перегляньте відомості нижче або скористайтеся доступними варіантами підтримки.</value>
-  </data>
-  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
-    <value>Надіслати звіт про помилку</value>
-  </data>
-  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
-    <value>Відкрити файл журналу</value>
-  </data>
-  <data name="ErrorWindow_Continue" xml:space="preserve">
-    <value>Продовжити</value>
-  </data>
-  <data name="ErrorWindow_Quit" xml:space="preserve">
-    <value>Вийти</value>
-  </data>
-  <data name="ErrorWindow_OK" xml:space="preserve">
-    <value>ОК</value>
-  </data>
-  <data name="ErrorWindow_Default_title" xml:space="preserve">
-    <value>Помилка</value>
-  </data>
-  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
-    <value>Сталася неочікувана помилка.</value>
-  </data>
-  <data name="ImageViewerWindow_Title" xml:space="preserve">
-    <value>ShareX — Перегляд зображень</value>
-  </data>
-  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
-    <value>Відкрити зображення</value>
-  </data>
-  <data name="InputBoxWindow_Default_title" xml:space="preserve">
-    <value>Введення</value>
-  </data>
-  <data name="InputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX — {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
-    <value>Виведення</value>
-  </data>
-  <data name="OutputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX — {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
-    <value>Копіювати все</value>
-  </data>
-  <data name="OutputBoxWindow_Close" xml:space="preserve">
-    <value>Закрити</value>
-  </data>
-  <data name="PrintWindow_Title" xml:space="preserve">
-    <value>ShareX — Параметри друку</value>
-  </data>
-  <data name="PrintWindow_Heading" xml:space="preserve">
-    <value>Параметри друку</value>
-  </data>
-  <data name="PrintWindow_Description" xml:space="preserve">
-    <value>Налаштуйте розміщення та масштабування зображення.</value>
-  </data>
-  <data name="PrintWindow_Margin" xml:space="preserve">
-    <value>Поле:</value>
-  </data>
-  <data name="PrintWindow_Pixels" xml:space="preserve">
-    <value>пкс</value>
-  </data>
-  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
-    <value>Автоматично повертати зображення</value>
-  </data>
-  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
-    <value>Автоматично масштабувати зображення</value>
-  </data>
-  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
-    <value>Дозволити збільшення зображення</value>
-  </data>
-  <data name="PrintWindow_Center_image_position" xml:space="preserve">
-    <value>Центрувати положення зображення</value>
-  </data>
-  <data name="PrintWindow_Preview" xml:space="preserve">
-    <value>Попередній перегляд...</value>
-  </data>
-  <data name="DownloaderWindow_Title" xml:space="preserve">
-    <value>ShareX — Завантажувач файлів</value>
-  </data>
-  <data name="DownloaderWindow_Heading" xml:space="preserve">
-    <value>Завантажувач файлів</value>
-  </data>
-  <data name="DownloaderWindow_Description" xml:space="preserve">
-    <value>Завантажте оновлення ShareX та інші потрібні файли.</value>
-  </data>
-  <data name="DownloaderWindow_Download" xml:space="preserve">
-    <value>Завантажити</value>
-  </data>
-  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
-    <value>Переглянути журнал змін</value>
-  </data>
-  <data name="UpdateMessageWindow_Header" xml:space="preserve">
-    <value>Доступне оновлення ShareX</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
-    <value>Червоний колір (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
-    <value>Зелений колір (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
-    <value>Синій колір (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
-    <value>Червоний колір (0-1). Укажіть точність десяткового дробу за допомогою {n}, типово 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
-    <value>Зелений колір (0-1). Укажіть точність десяткового дробу за допомогою {n}, типово 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
-    <value>Синій колір (0-1). Укажіть точність десяткового дробу за допомогою {n}, типово 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
-    <value>Шістнадцяткове значення кольору (нижній регістр)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
-    <value>Шістнадцяткове значення червоного (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
-    <value>Шістнадцяткове значення зеленого (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
-    <value>Шістнадцяткове значення синього (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
-    <value>Шістнадцяткове значення кольору (верхній регістр)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
-    <value>Шістнадцяткове значення червоного (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
-    <value>Шістнадцяткове значення зеленого (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
-    <value>Шістнадцяткове значення синього (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
-    <value>Блакитний колір (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
-    <value>Пурпуровий колір (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
-    <value>Жовтий колір (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
-    <value>Чорний колір (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
-    <value>Назва кольору</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
-    <value>Положення X</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
-    <value>Положення Y</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
-    <value>Новий рядок</value>
-  </data>
-  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="HotkeyInfo_Shift" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="HotkeyInfo_Alt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="HotkeyInfo_Win" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="HotkeyInfo_Backspace" xml:space="preserve">
-    <value>Backspace</value>
-  </data>
-  <data name="HotkeyInfo_Enter" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
-    <value>Caps Lock</value>
-  </data>
-  <data name="HotkeyInfo_Page_down" xml:space="preserve">
-    <value>Page Down</value>
-  </data>
-  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
-    <value>Scroll Lock</value>
-  </data>
-  <data name="HotkeyInfo_Numpad" xml:space="preserve">
-    <value>Цифрова клавіатура</value>
-  </data>
-  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
-    <value>Помилка FFmpeg</value>
-  </data>
-  <data name="Translator_Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="Translator_Binary" xml:space="preserve">
-    <value>Двійковий</value>
-  </data>
-  <data name="Translator_Hexadecimal" xml:space="preserve">
-    <value>Шістнадцятковий</value>
-  </data>
-  <data name="Translator_ASCII" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="Translator_Base64" xml:space="preserve">
-    <value>Base64</value>
-  </data>
-  <data name="PingResult_Reply_from" xml:space="preserve">
-    <value>Відповідь від {0}: байтів={1} час={2} мс TTL={3}</value>
-  </data>
-  <data name="PingResult_Request_timed_out" xml:space="preserve">
-    <value>Перевищено час очікування запиту.</value>
-  </data>
-  <data name="PingResult_Ping_failed" xml:space="preserve">
-    <value>Помилка ping: {0}</value>
-  </data>
-  <data name="PingResult_Statistics" xml:space="preserve">
-    <value>Мінімум = {0} мс, Максимум = {1} мс, Середнє = {2} мс</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
-    <value>Принтера «{0}» не існує. Буде використано типовий принтер Windows. Інший типовий принтер можна вказати в налаштуваннях програми.</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
-    <value>Неприпустима назва принтера</value>
-  </data>
-  <data name="VideoInfo_Summary" xml:space="preserve">
-    <value>Ім’я файлу: {0}, Тривалість: {1}, Бітрейт: {2} кбіт/с</value>
-  </data>
-  <data name="VideoInfo_Video_details" xml:space="preserve">
-    <value>, Відеокодек: {0}, Роздільна здатність: {1}x{2}, FPS: {3}</value>
-  </data>
-  <data name="VideoInfo_Audio_details" xml:space="preserve">
-    <value>, Аудіокодек: {0}</value>
-  </data>
-  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
-    <value>Помилка перейменування файлу:</value>
-  </data>
-  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
-    <value>Потрібен припустимий шлях до текстового файлу.</value>
-  </data>
-  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
-    <value>Неприпустима URL-адреса.</value>
-  </data>
-  <data name="ZipManager_Archive_too_large" xml:space="preserve">
-    <value>Розмір цього архіву після розпакування перевищує максимально дозволений розмір файлу.</value>
-  </data>
-  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
-    <value>Розмір архіву після розпакування: {0}</value>
-  </data>
-  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
-    <value>Максимально дозволений розмір файлу: {0}</value>
-  </data>
-  <data name="Helpers_Timeout" xml:space="preserve">
-    <value>Час очікування вичерпано</value>
-  </data>
-  <data name="ImageHelpers_Image_files" xml:space="preserve">
-    <value>Файли зображень</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
-    <value>Остання збірка проєкту завершилася невдало.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
-    <value>Не вдалося знайти успішну збірку випуску.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
-    <value>Не вдалося знайти файл «{0}».</value>
-  </data>
   <data name="ActionsCodeMenuEntry_FilePath_File_path" xml:space="preserve">
     <value>Шлях до файлу</value>
   </data>
   <data name="ActionsCodeMenuEntry_OutputFilePath_File_path_without_extension____Output_file_name_extension_" xml:space="preserve">
-    <value>Шлях до файлу без розширення + &quot;Розширення кінцевого файлу&quot;</value>
+    <value>Шлях до файлу без розширення + "Розширення кінцевого файлу"</value>
   </data>
   <data name="AfterCaptureTasks_AddImageEffects" xml:space="preserve">
     <value>Додати ефекти/водяний знак</value>
@@ -526,6 +148,15 @@
   <data name="AfterUploadTasks_UseURLShortener" xml:space="preserve">
     <value>Скоротити посилання</value>
   </data>
+  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
+    <value>Не вдалося знайти файл «{0}».</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
+    <value>Остання збірка проєкту завершилася невдало.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
+    <value>Не вдалося знайти успішну збірку випуску.</value>
+  </data>
   <data name="ArrowHeadDirection_Both" xml:space="preserve">
     <value>Обидва</value>
   </data>
@@ -558,6 +189,174 @@
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Випадкова тварина</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
+    <value>Синій колір (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
+    <value>Шістнадцяткове значення синього (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
+    <value>Шістнадцяткове значення синього (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
+    <value>Синій колір (0-1). Укажіть точність десяткового дробу за допомогою {n}, типово 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
+    <value>Назва кольору</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
+    <value>Блакитний колір (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
+    <value>Зелений колір (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
+    <value>Шістнадцяткове значення зеленого (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
+    <value>Шістнадцяткове значення зеленого (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
+    <value>Зелений колір (0-1). Укажіть точність десяткового дробу за допомогою {n}, типово 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
+    <value>Шістнадцяткове значення кольору (нижній регістр)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
+    <value>Шістнадцяткове значення кольору (верхній регістр)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
+    <value>Чорний колір (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
+    <value>Пурпуровий колір (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
+    <value>Новий рядок</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
+    <value>Червоний колір (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
+    <value>Шістнадцяткове значення червоного (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
+    <value>Шістнадцяткове значення червоного (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
+    <value>Червоний колір (0-1). Укажіть точність десяткового дробу за допомогою {n}, типово 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
+    <value>Положення X</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
+    <value>Положення Y</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
+    <value>Жовтий колір (0-100)</value>
+  </data>
+  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
+    <value>Альфа</value>
+  </data>
+  <data name="ColorPickerWindow_Blue" xml:space="preserve">
+    <value>Синій</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
+    <value>Яскравість</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
+    <value>Яскравість %</value>
+  </data>
+  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
+    <value>Колірний режим</value>
+  </data>
+  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
+    <value>Назва кольору</value>
+  </data>
+  <data name="ColorPickerWindow_Copy" xml:space="preserve">
+    <value>Копіювати</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
+    <value>Копіювати CMYK</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
+    <value>Копіювати HSB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
+    <value>Копіювати RGB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
+    <value>Копіювати всі відомості</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
+    <value>Копіювати десяткове значення</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
+    <value>Копіювати шістнадцяткове значення</value>
+  </data>
+  <data name="ColorPickerWindow_Current" xml:space="preserve">
+    <value>Поточний</value>
+  </data>
+  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
+    <value>Блакитний %</value>
+  </data>
+  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
+    <value>Десяткове</value>
+  </data>
+  <data name="ColorPickerWindow_Green" xml:space="preserve">
+    <value>Зелений</value>
+  </data>
+  <data name="ColorPickerWindow_Hex" xml:space="preserve">
+    <value>Шістнадцяткове</value>
+  </data>
+  <data name="ColorPickerWindow_Hue" xml:space="preserve">
+    <value>Відтінок</value>
+  </data>
+  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
+    <value>Відтінок °</value>
+  </data>
+  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
+    <value>Чорний %</value>
+  </data>
+  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
+    <value>Пурпуровий %</value>
+  </data>
+  <data name="ColorPickerWindow_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
+    <value>Вибрати колір із буфера обміну</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
+    <value>Вибрати колір з екрана...</value>
+  </data>
+  <data name="ColorPickerWindow_Previous" xml:space="preserve">
+    <value>Попередній</value>
+  </data>
+  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
+    <value>Нещодавні кольори</value>
+  </data>
+  <data name="ColorPickerWindow_Red" xml:space="preserve">
+    <value>Червоний</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
+    <value>Насиченість</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
+    <value>Насиченість %</value>
+  </data>
+  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
+    <value>Стандартні кольори</value>
+  </data>
+  <data name="ColorPickerWindow_Title" xml:space="preserve">
+    <value>ShareX — Вибір кольору</value>
+  </data>
+  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
+    <value>Жовтий %</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Вивантажувач файлів</value>
@@ -595,12 +394,6 @@
   <data name="DownloaderForm_DownloaderForm_Waiting_" xml:space="preserve">
     <value>Очікування...</value>
   </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
-    <value>Завантаження завершено.</value>
-  </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
-    <value>Встановити</value>
-  </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>Швидкість завантаження</value>
   </data>
@@ -618,6 +411,24 @@
   </data>
   <data name="DownloaderForm_StartDownload_Getting_file_size_" xml:space="preserve">
     <value>Отримання розміру файлу...</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
+    <value>Завантаження завершено.</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
+    <value>Встановити</value>
+  </data>
+  <data name="DownloaderWindow_Description" xml:space="preserve">
+    <value>Завантажте оновлення ShareX та інші потрібні файли.</value>
+  </data>
+  <data name="DownloaderWindow_Download" xml:space="preserve">
+    <value>Завантажити</value>
+  </data>
+  <data name="DownloaderWindow_Heading" xml:space="preserve">
+    <value>Завантажувач файлів</value>
+  </data>
+  <data name="DownloaderWindow_Title" xml:space="preserve">
+    <value>ShareX — Завантажувач файлів</value>
   </data>
   <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
     <value>Абсолютний розмір</value>
@@ -649,6 +460,36 @@
   <data name="Error" xml:space="preserve">
     <value>Помилка</value>
   </data>
+  <data name="ErrorWindow_Continue" xml:space="preserve">
+    <value>Продовжити</value>
+  </data>
+  <data name="ErrorWindow_Default_title" xml:space="preserve">
+    <value>Помилка</value>
+  </data>
+  <data name="ErrorWindow_Description" xml:space="preserve">
+    <value>Перегляньте відомості нижче або скористайтеся доступними варіантами підтримки.</value>
+  </data>
+  <data name="ErrorWindow_Heading" xml:space="preserve">
+    <value>Сталася помилка</value>
+  </data>
+  <data name="ErrorWindow_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
+    <value>Відкрити файл журналу</value>
+  </data>
+  <data name="ErrorWindow_Quit" xml:space="preserve">
+    <value>Вийти</value>
+  </data>
+  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
+    <value>Надіслати звіт про помилку</value>
+  </data>
+  <data name="ErrorWindow_Title" xml:space="preserve">
+    <value>ShareX — Помилка</value>
+  </data>
+  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
+    <value>Сталася неочікувана помилка.</value>
+  </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Копіювати</value>
   </data>
@@ -669,6 +510,9 @@
   </data>
   <data name="Extensions_AddContextMenu_Undo" xml:space="preserve">
     <value>Скасувати</value>
+  </data>
+  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
+    <value>Помилка FFmpeg</value>
   </data>
   <data name="FileDestination_CustomFileUploader" xml:space="preserve">
     <value>Власний вивантажувач файлів</value>
@@ -691,6 +535,9 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>Додати номер до назви файлу</value>
   </data>
+  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
+    <value>Помилка перейменування файлу:</value>
+  </data>
   <data name="GIFQuality_Bit4" xml:space="preserve">
     <value>Octree quantizer 16 кольорів</value>
   </data>
@@ -702,6 +549,9 @@
   </data>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>Palette quantizer 256 градацій сірого</value>
+  </data>
+  <data name="HSB_ToString_" xml:space="preserve">
+    <value>Відтінок: {0:0.0}°, Насиченість: {1:0.0}%, Яскравість: {2:0.0}%</value>
   </data>
   <data name="Helpers_BrowseFile_Choose_file" xml:space="preserve">
     <value>Оберіть файл</value>
@@ -717,6 +567,39 @@
   </data>
   <data name="Helpers_OpenFolder_Folder_not_exist_" xml:space="preserve">
     <value>Тека не існує:</value>
+  </data>
+  <data name="Helpers_Timeout" xml:space="preserve">
+    <value>Час очікування вичерпано</value>
+  </data>
+  <data name="HotkeyInfo_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HotkeyInfo_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="HotkeyInfo_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="HotkeyInfo_Numpad" xml:space="preserve">
+    <value>Цифрова клавіатура</value>
+  </data>
+  <data name="HotkeyInfo_Page_down" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="HotkeyInfo_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="HotkeyInfo_Win" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="HotkeyType_AbortScreenRecording" xml:space="preserve">
     <value>Перервати запис екрану</value>
@@ -834,6 +717,9 @@
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Тест монітора</value>
+  </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Монітор мережі</value>
   </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Немає</value>
@@ -955,14 +841,20 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>Генератор мініатюр відео</value>
   </data>
-  <data name="HSB_ToString_" xml:space="preserve">
-    <value>Відтінок: {0:0.0}°, Насиченість: {1:0.0}%, Яскравість: {2:0.0}%</value>
-  </data>
   <data name="ImageDestination_CustomImageUploader" xml:space="preserve">
     <value>Власний вивантажувач зображень</value>
   </data>
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>Вивантажувач файлів</value>
+  </data>
+  <data name="ImageHelpers_Image_files" xml:space="preserve">
+    <value>Файли зображень</value>
+  </data>
+  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
+    <value>Відкрити зображення</value>
+  </data>
+  <data name="ImageViewerWindow_Title" xml:space="preserve">
+    <value>ShareX — Перегляд зображень</value>
   </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Великий квадрат</value>
@@ -982,6 +874,12 @@
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Мала мініатюра</value>
   </data>
+  <data name="InputBoxWindow_Default_title" xml:space="preserve">
+    <value>Введення</value>
+  </data>
+  <data name="InputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX — {0}</value>
+  </data>
   <data name="MyMessageBox_MyMessageBox_Cancel" xml:space="preserve">
     <value>Скасувати</value>
   </data>
@@ -993,6 +891,33 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>Так</value>
+  </data>
+  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
+    <value>Потрібен припустимий шлях до текстового файлу.</value>
+  </data>
+  <data name="OutputBoxWindow_Close" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
+    <value>Копіювати все</value>
+  </data>
+  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
+    <value>Виведення</value>
+  </data>
+  <data name="OutputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX — {0}</value>
+  </data>
+  <data name="PNGBitDepth_Automatic" xml:space="preserve">
+    <value>Автоматичне визначення</value>
+  </data>
+  <data name="PNGBitDepth_Bit24" xml:space="preserve">
+    <value>24 біт</value>
+  </data>
+  <data name="PNGBitDepth_Bit32" xml:space="preserve">
+    <value>32 біт</value>
+  </data>
+  <data name="PNGBitDepth_Default" xml:space="preserve">
+    <value>Типово</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 день</value>
@@ -1024,20 +949,56 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Не публікувати</value>
   </data>
-  <data name="PNGBitDepth_Automatic" xml:space="preserve">
-    <value>Автоматичне визначення</value>
+  <data name="PingResult_Ping_failed" xml:space="preserve">
+    <value>Помилка ping: {0}</value>
   </data>
-  <data name="PNGBitDepth_Bit24" xml:space="preserve">
-    <value>24 біт</value>
+  <data name="PingResult_Reply_from" xml:space="preserve">
+    <value>Відповідь від {0}: байтів={1} час={2} мс TTL={3}</value>
   </data>
-  <data name="PNGBitDepth_Bit32" xml:space="preserve">
-    <value>32 біт</value>
+  <data name="PingResult_Request_timed_out" xml:space="preserve">
+    <value>Перевищено час очікування запиту.</value>
   </data>
-  <data name="PNGBitDepth_Default" xml:space="preserve">
-    <value>Типово</value>
+  <data name="PingResult_Statistics" xml:space="preserve">
+    <value>Мінімум = {0} мс, Максимум = {1} мс, Середнє = {2} мс</value>
   </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>Друк</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
+    <value>Принтера «{0}» не існує. Буде використано типовий принтер Windows. Інший типовий принтер можна вказати в налаштуваннях програми.</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
+    <value>Неприпустима назва принтера</value>
+  </data>
+  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
+    <value>Дозволити збільшення зображення</value>
+  </data>
+  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
+    <value>Автоматично повертати зображення</value>
+  </data>
+  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
+    <value>Автоматично масштабувати зображення</value>
+  </data>
+  <data name="PrintWindow_Center_image_position" xml:space="preserve">
+    <value>Центрувати положення зображення</value>
+  </data>
+  <data name="PrintWindow_Description" xml:space="preserve">
+    <value>Налаштуйте розміщення та масштабування зображення.</value>
+  </data>
+  <data name="PrintWindow_Heading" xml:space="preserve">
+    <value>Параметри друку</value>
+  </data>
+  <data name="PrintWindow_Margin" xml:space="preserve">
+    <value>Поле:</value>
+  </data>
+  <data name="PrintWindow_Pixels" xml:space="preserve">
+    <value>пкс</value>
+  </data>
+  <data name="PrintWindow_Preview" xml:space="preserve">
+    <value>Попередній перегляд...</value>
+  </data>
+  <data name="PrintWindow_Title" xml:space="preserve">
+    <value>ShareX — Параметри друку</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 день</value>
@@ -1112,7 +1073,7 @@
     <value>Змінити тип інструменту</value>
   </data>
   <data name="ReplCodeMenuCategory_Computer" xml:space="preserve">
-    <value>Комп&apos;ютер</value>
+    <value>Комп'ютер</value>
   </data>
   <data name="ReplCodeMenuCategory_Date_and_Time" xml:space="preserve">
     <value>Дата та час</value>
@@ -1144,14 +1105,14 @@
   <data name="ReplCodeMenuEntry_height_Gets_image_height" xml:space="preserve">
     <value>Висота зображення</value>
   </data>
+  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
+    <value>Алфавітно-цифровий лічильник з урахуванням регістру (Нулі ліворуч, {n} задає довжину)</value>
+  </data>
   <data name="ReplCodeMenuEntry_i_Auto_increment_number" xml:space="preserve">
     <value>Числовий лічильник (Нулі ліворуч, {n} задає довжину)</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>Алфавітно-цифровий лічильник без урахування регістру (Нулі ліворуч, {n} задає довжину)</value>
-  </data>
-  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
-    <value>Алфавітно-цифровий лічильник з урахуванням регістру (Нулі ліворуч, {n} задає довжину)</value>
   </data>
   <data name="ReplCodeMenuEntry_ib_Auto_increment_base_alphanumeric" xml:space="preserve">
     <value>Алфавітно-цифровий лічильник з основою {n} (1 &lt; n &lt; 63)</value>
@@ -1165,11 +1126,11 @@
   <data name="ReplCodeMenuEntry_mo_Current_month" xml:space="preserve">
     <value>місяць</value>
   </data>
-  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
-    <value>Назва місяця (місцевою мовою)</value>
-  </data>
   <data name="ReplCodeMenuEntry_mon2_Current_month_name__English_" xml:space="preserve">
     <value>Назва місяця (англійською)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
+    <value>Назва місяця (місцевою мовою)</value>
   </data>
   <data name="ReplCodeMenuEntry_ms_Current_millisecond" xml:space="preserve">
     <value>мс</value>
@@ -1210,11 +1171,11 @@
   <data name="ReplCodeMenuEntry_unix_Unix_timestamp" xml:space="preserve">
     <value>Позначка часу Unix</value>
   </data>
-  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
-    <value>Назва дня тижня (місцевою мовою)</value>
-  </data>
   <data name="ReplCodeMenuEntry_w2_Current_week_name__English_" xml:space="preserve">
     <value>Назва дня тижня (англійською)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
+    <value>Назва дня тижня (місцевою мовою)</value>
   </data>
   <data name="ReplCodeMenuEntry_width_Gets_image_width" xml:space="preserve">
     <value>Ширина зображення</value>
@@ -1312,6 +1273,36 @@
   <data name="ToastClickAction_Upload" xml:space="preserve">
     <value>Вивантажити файл</value>
   </data>
+  <data name="Translator_ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="Translator_Base64" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Translator_Binary" xml:space="preserve">
+    <value>Двійковий</value>
+  </data>
+  <data name="Translator_Hexadecimal" xml:space="preserve">
+    <value>Шістнадцятковий</value>
+  </data>
+  <data name="Translator_Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
+    <value>Неприпустима URL-адреса.</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>Візуальний пошук Bing</value>
+  </data>
+  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
+    <value>Власна служба обміну посиланнями</value>
+  </data>
+  <data name="URLSharingServices_Email" xml:space="preserve">
+    <value>Ел. пошта</value>
+  </data>
+  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
+    <value>Зображення Google</value>
+  </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>Dev</value>
   </data>
@@ -1336,20 +1327,23 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>Доступне оновлення</value>
   </data>
-  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
-    <value>Візуальний пошук Bing</value>
+  <data name="UpdateMessageWindow_Header" xml:space="preserve">
+    <value>Доступне оновлення ShareX</value>
   </data>
-  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
-    <value>Власна служба обміну посиланнями</value>
-  </data>
-  <data name="URLSharingServices_Email" xml:space="preserve">
-    <value>Ел. пошта</value>
-  </data>
-  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
-    <value>Зображення Google</value>
+  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
+    <value>Переглянути журнал змін</value>
   </data>
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>Власний сервіс скорочення посилань</value>
+  </data>
+  <data name="VideoInfo_Audio_details" xml:space="preserve">
+    <value>, Аудіокодек: {0}</value>
+  </data>
+  <data name="VideoInfo_Summary" xml:space="preserve">
+    <value>Ім’я файлу: {0}, Тривалість: {1}, Бітрейт: {2} кбіт/с</value>
+  </data>
+  <data name="VideoInfo_Video_details" xml:space="preserve">
+    <value>, Відеокодек: {0}, Роздільна здатність: {1}x{2}, FPS: {3}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Приватний</value>
@@ -1360,11 +1354,20 @@
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Доступ за посиланням</value>
   </data>
-  <data name="HdrCaptureMode_Off" xml:space="preserve">
-    <value>Вимкнено</value>
+  <data name="ZipManager_Archive_too_large" xml:space="preserve">
+    <value>Розмір цього архіву після розпакування перевищує максимально дозволений розмір файлу.</value>
+  </data>
+  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
+    <value>Розмір архіву після розпакування: {0}</value>
+  </data>
+  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
+    <value>Максимально дозволений розмір файлу: {0}</value>
   </data>
   <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
     <value>Динамічно</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Вимкнено</value>
   </data>
   <data name="HdrCaptureMode_On" xml:space="preserve">
     <value>Увімкнено</value>

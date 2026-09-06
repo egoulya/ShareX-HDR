@@ -58,384 +58,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorPickerWindow_Title" xml:space="preserve">
-    <value>ShareX - 色彩選擇器</value>
-  </data>
-  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
-    <value>色彩模式</value>
-  </data>
-  <data name="ColorPickerWindow_Hue" xml:space="preserve">
-    <value>色相</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
-    <value>飽和度</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
-    <value>亮度</value>
-  </data>
-  <data name="ColorPickerWindow_Red" xml:space="preserve">
-    <value>紅色</value>
-  </data>
-  <data name="ColorPickerWindow_Green" xml:space="preserve">
-    <value>綠色</value>
-  </data>
-  <data name="ColorPickerWindow_Blue" xml:space="preserve">
-    <value>藍色</value>
-  </data>
-  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
-    <value>色彩名稱</value>
-  </data>
-  <data name="ColorPickerWindow_Hex" xml:space="preserve">
-    <value>十六進位</value>
-  </data>
-  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
-    <value>十進位</value>
-  </data>
-  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
-    <value>Alpha</value>
-  </data>
-  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
-    <value>色相 °</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
-    <value>飽和度 %</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
-    <value>亮度 %</value>
-  </data>
-  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
-    <value>青色 %</value>
-  </data>
-  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
-    <value>洋紅 %</value>
-  </data>
-  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
-    <value>黃色 %</value>
-  </data>
-  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
-    <value>黑色 %</value>
-  </data>
-  <data name="ColorPickerWindow_Current" xml:space="preserve">
-    <value>目前</value>
-  </data>
-  <data name="ColorPickerWindow_Previous" xml:space="preserve">
-    <value>上一個</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
-    <value>複製所有詳細資料</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
-    <value>複製 RGB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
-    <value>複製十六進位值</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
-    <value>複製 HSB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
-    <value>複製 CMYK</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
-    <value>複製十進位值</value>
-  </data>
-  <data name="ColorPickerWindow_Copy" xml:space="preserve">
-    <value>複製</value>
-  </data>
-  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
-    <value>最近使用的色彩</value>
-  </data>
-  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
-    <value>標準色彩</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
-    <value>從螢幕選擇色彩...</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
-    <value>從剪貼簿選擇色彩</value>
-  </data>
-  <data name="ColorPickerWindow_OK" xml:space="preserve">
-    <value>確定</value>
-  </data>
-  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
-    <value>取消</value>
-  </data>
-  <data name="ErrorWindow_Title" xml:space="preserve">
-    <value>ShareX - 錯誤</value>
-  </data>
-  <data name="ErrorWindow_Heading" xml:space="preserve">
-    <value>發生錯誤</value>
-  </data>
-  <data name="ErrorWindow_Description" xml:space="preserve">
-    <value>請檢閱下方詳細資料或使用可用的支援選項。</value>
-  </data>
-  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
-    <value>傳送錯誤報告</value>
-  </data>
-  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
-    <value>開啟記錄檔</value>
-  </data>
-  <data name="ErrorWindow_Continue" xml:space="preserve">
-    <value>繼續</value>
-  </data>
-  <data name="ErrorWindow_Quit" xml:space="preserve">
-    <value>結束</value>
-  </data>
-  <data name="ErrorWindow_OK" xml:space="preserve">
-    <value>確定</value>
-  </data>
-  <data name="ErrorWindow_Default_title" xml:space="preserve">
-    <value>錯誤</value>
-  </data>
-  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
-    <value>發生未預期的錯誤。</value>
-  </data>
-  <data name="ImageViewerWindow_Title" xml:space="preserve">
-    <value>ShareX - 影像檢視器</value>
-  </data>
-  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
-    <value>開啟影像</value>
-  </data>
-  <data name="InputBoxWindow_Default_title" xml:space="preserve">
-    <value>輸入</value>
-  </data>
-  <data name="InputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
-    <value>輸出</value>
-  </data>
-  <data name="OutputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
-    <value>全部複製</value>
-  </data>
-  <data name="OutputBoxWindow_Close" xml:space="preserve">
-    <value>關閉</value>
-  </data>
-  <data name="PrintWindow_Title" xml:space="preserve">
-    <value>ShareX - 列印選項</value>
-  </data>
-  <data name="PrintWindow_Heading" xml:space="preserve">
-    <value>列印選項</value>
-  </data>
-  <data name="PrintWindow_Description" xml:space="preserve">
-    <value>設定影像位置和縮放。</value>
-  </data>
-  <data name="PrintWindow_Margin" xml:space="preserve">
-    <value>邊界：</value>
-  </data>
-  <data name="PrintWindow_Pixels" xml:space="preserve">
-    <value>像素</value>
-  </data>
-  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
-    <value>自動旋轉影像</value>
-  </data>
-  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
-    <value>自動縮放影像</value>
-  </data>
-  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
-    <value>允許放大影像</value>
-  </data>
-  <data name="PrintWindow_Center_image_position" xml:space="preserve">
-    <value>置中影像位置</value>
-  </data>
-  <data name="PrintWindow_Preview" xml:space="preserve">
-    <value>預覽...</value>
-  </data>
-  <data name="DownloaderWindow_Title" xml:space="preserve">
-    <value>ShareX - 檔案下載器</value>
-  </data>
-  <data name="DownloaderWindow_Heading" xml:space="preserve">
-    <value>檔案下載器</value>
-  </data>
-  <data name="DownloaderWindow_Description" xml:space="preserve">
-    <value>下載 ShareX 更新和其他必要檔案。</value>
-  </data>
-  <data name="DownloaderWindow_Download" xml:space="preserve">
-    <value>下載</value>
-  </data>
-  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
-    <value>檢視變更記錄</value>
-  </data>
-  <data name="UpdateMessageWindow_Header" xml:space="preserve">
-    <value>ShareX 有更新</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
-    <value>紅色 (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
-    <value>綠色 (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
-    <value>藍色 (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
-    <value>紅色 (0-1)。使用 {n} 指定小數精確度，預設為 3。</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
-    <value>綠色 (0-1)。使用 {n} 指定小數精確度，預設為 3。</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
-    <value>藍色 (0-1)。使用 {n} 指定小數精確度，預設為 3。</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
-    <value>十六進位色彩值（小寫）</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
-    <value>紅色十六進位值 (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
-    <value>綠色十六進位值 (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
-    <value>藍色十六進位值 (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
-    <value>十六進位色彩值（大寫）</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
-    <value>紅色十六進位值 (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
-    <value>綠色十六進位值 (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
-    <value>藍色十六進位值 (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
-    <value>青色 (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
-    <value>洋紅色 (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
-    <value>黃色 (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
-    <value>黑色 (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
-    <value>色彩名稱</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
-    <value>X 位置</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
-    <value>Y 位置</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
-    <value>新行</value>
-  </data>
-  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="HotkeyInfo_Shift" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="HotkeyInfo_Alt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="HotkeyInfo_Win" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="HotkeyInfo_Backspace" xml:space="preserve">
-    <value>Backspace</value>
-  </data>
-  <data name="HotkeyInfo_Enter" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
-    <value>Caps Lock</value>
-  </data>
-  <data name="HotkeyInfo_Page_down" xml:space="preserve">
-    <value>Page Down</value>
-  </data>
-  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
-    <value>Scroll Lock</value>
-  </data>
-  <data name="HotkeyInfo_Numpad" xml:space="preserve">
-    <value>數字鍵盤</value>
-  </data>
-  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
-    <value>FFmpeg 錯誤</value>
-  </data>
-  <data name="Translator_Text" xml:space="preserve">
-    <value>文字</value>
-  </data>
-  <data name="Translator_Binary" xml:space="preserve">
-    <value>二進位</value>
-  </data>
-  <data name="Translator_Hexadecimal" xml:space="preserve">
-    <value>十六進位</value>
-  </data>
-  <data name="Translator_ASCII" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="Translator_Base64" xml:space="preserve">
-    <value>Base64</value>
-  </data>
-  <data name="PingResult_Reply_from" xml:space="preserve">
-    <value>來自 {0} 的回覆: 位元組={1} 時間={2}ms TTL={3}</value>
-  </data>
-  <data name="PingResult_Request_timed_out" xml:space="preserve">
-    <value>要求逾時。</value>
-  </data>
-  <data name="PingResult_Ping_failed" xml:space="preserve">
-    <value>Ping 失敗: {0}</value>
-  </data>
-  <data name="PingResult_Statistics" xml:space="preserve">
-    <value>最短 = {0}ms，最長 = {1}ms，平均 = {2}ms</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
-    <value>印表機「{0}」不存在。將繼續使用 Windows 預設印表機。您可以在應用程式設定中指定其他預設印表機。</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
-    <value>印表機名稱無效</value>
-  </data>
-  <data name="VideoInfo_Summary" xml:space="preserve">
-    <value>檔案名稱: {0}，持續時間: {1}，位元率: {2} kb/s</value>
-  </data>
-  <data name="VideoInfo_Video_details" xml:space="preserve">
-    <value>，視訊編解碼器: {0}，解析度: {1}x{2}，FPS: {3}</value>
-  </data>
-  <data name="VideoInfo_Audio_details" xml:space="preserve">
-    <value>，音訊編解碼器: {0}</value>
-  </data>
-  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
-    <value>重新命名檔案時發生錯誤:</value>
-  </data>
-  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
-    <value>需要有效的文字檔案路徑。</value>
-  </data>
-  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
-    <value>URL 無效。</value>
-  </data>
-  <data name="ZipManager_Archive_too_large" xml:space="preserve">
-    <value>此封存檔的未壓縮大小超過允許的最大檔案大小。</value>
-  </data>
-  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
-    <value>封存檔未壓縮大小: {0}</value>
-  </data>
-  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
-    <value>允許的最大檔案大小: {0}</value>
-  </data>
-  <data name="Helpers_Timeout" xml:space="preserve">
-    <value>逾時</value>
-  </data>
-  <data name="ImageHelpers_Image_files" xml:space="preserve">
-    <value>影像檔案</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
-    <value>最新的專案建置未成功。</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
-    <value>找不到成功的發行建置。</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
-    <value>找不到檔案「{0}」。</value>
-  </data>
   <data name="ActionsCodeMenuEntry_FilePath_File_path" xml:space="preserve">
     <value>檔案路徑</value>
   </data>
@@ -526,6 +148,15 @@
   <data name="AfterUploadTasks_UseURLShortener" xml:space="preserve">
     <value>縮網址</value>
   </data>
+  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
+    <value>找不到檔案「{0}」。</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
+    <value>最新的專案建置未成功。</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
+    <value>找不到成功的發行建置。</value>
+  </data>
   <data name="ArrowHeadDirection_Both" xml:space="preserve">
     <value>兩端</value>
   </data>
@@ -558,6 +189,174 @@
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>隨機動物</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
+    <value>藍色 (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
+    <value>藍色十六進位值 (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
+    <value>藍色十六進位值 (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
+    <value>藍色 (0-1)。使用 {n} 指定小數精確度，預設為 3。</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
+    <value>色彩名稱</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
+    <value>青色 (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
+    <value>綠色 (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
+    <value>綠色十六進位值 (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
+    <value>綠色十六進位值 (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
+    <value>綠色 (0-1)。使用 {n} 指定小數精確度，預設為 3。</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
+    <value>十六進位色彩值（小寫）</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
+    <value>十六進位色彩值（大寫）</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
+    <value>黑色 (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
+    <value>洋紅色 (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
+    <value>新行</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
+    <value>紅色 (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
+    <value>紅色十六進位值 (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
+    <value>紅色十六進位值 (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
+    <value>紅色 (0-1)。使用 {n} 指定小數精確度，預設為 3。</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
+    <value>X 位置</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
+    <value>Y 位置</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
+    <value>黃色 (0-100)</value>
+  </data>
+  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
+  <data name="ColorPickerWindow_Blue" xml:space="preserve">
+    <value>藍色</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
+    <value>亮度</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
+    <value>亮度 %</value>
+  </data>
+  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
+    <value>色彩模式</value>
+  </data>
+  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
+    <value>色彩名稱</value>
+  </data>
+  <data name="ColorPickerWindow_Copy" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
+    <value>複製 CMYK</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
+    <value>複製 HSB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
+    <value>複製 RGB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
+    <value>複製所有詳細資料</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
+    <value>複製十進位值</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
+    <value>複製十六進位值</value>
+  </data>
+  <data name="ColorPickerWindow_Current" xml:space="preserve">
+    <value>目前</value>
+  </data>
+  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
+    <value>青色 %</value>
+  </data>
+  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
+    <value>十進位</value>
+  </data>
+  <data name="ColorPickerWindow_Green" xml:space="preserve">
+    <value>綠色</value>
+  </data>
+  <data name="ColorPickerWindow_Hex" xml:space="preserve">
+    <value>十六進位</value>
+  </data>
+  <data name="ColorPickerWindow_Hue" xml:space="preserve">
+    <value>色相</value>
+  </data>
+  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
+    <value>色相 °</value>
+  </data>
+  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
+    <value>黑色 %</value>
+  </data>
+  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
+    <value>洋紅 %</value>
+  </data>
+  <data name="ColorPickerWindow_OK" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
+    <value>從剪貼簿選擇色彩</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
+    <value>從螢幕選擇色彩...</value>
+  </data>
+  <data name="ColorPickerWindow_Previous" xml:space="preserve">
+    <value>上一個</value>
+  </data>
+  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
+    <value>最近使用的色彩</value>
+  </data>
+  <data name="ColorPickerWindow_Red" xml:space="preserve">
+    <value>紅色</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
+    <value>飽和度</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
+    <value>飽和度 %</value>
+  </data>
+  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
+    <value>標準色彩</value>
+  </data>
+  <data name="ColorPickerWindow_Title" xml:space="preserve">
+    <value>ShareX - 色彩選擇器</value>
+  </data>
+  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
+    <value>黃色 %</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>檔案上傳工具</value>
@@ -595,12 +394,6 @@
   <data name="DownloaderForm_DownloaderForm_Waiting_" xml:space="preserve">
     <value>等待中...</value>
   </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
-    <value>下載完成。</value>
-  </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
-    <value>安裝</value>
-  </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>下載速度</value>
   </data>
@@ -618,6 +411,24 @@
   </data>
   <data name="DownloaderForm_StartDownload_Getting_file_size_" xml:space="preserve">
     <value>獲取檔案大小中...</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
+    <value>下載完成。</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
+    <value>安裝</value>
+  </data>
+  <data name="DownloaderWindow_Description" xml:space="preserve">
+    <value>下載 ShareX 更新和其他必要檔案。</value>
+  </data>
+  <data name="DownloaderWindow_Download" xml:space="preserve">
+    <value>下載</value>
+  </data>
+  <data name="DownloaderWindow_Heading" xml:space="preserve">
+    <value>檔案下載器</value>
+  </data>
+  <data name="DownloaderWindow_Title" xml:space="preserve">
+    <value>ShareX - 檔案下載器</value>
   </data>
   <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
     <value>絕對大小</value>
@@ -649,6 +460,36 @@
   <data name="Error" xml:space="preserve">
     <value>錯誤</value>
   </data>
+  <data name="ErrorWindow_Continue" xml:space="preserve">
+    <value>繼續</value>
+  </data>
+  <data name="ErrorWindow_Default_title" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="ErrorWindow_Description" xml:space="preserve">
+    <value>請檢閱下方詳細資料或使用可用的支援選項。</value>
+  </data>
+  <data name="ErrorWindow_Heading" xml:space="preserve">
+    <value>發生錯誤</value>
+  </data>
+  <data name="ErrorWindow_OK" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
+    <value>開啟記錄檔</value>
+  </data>
+  <data name="ErrorWindow_Quit" xml:space="preserve">
+    <value>結束</value>
+  </data>
+  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
+    <value>傳送錯誤報告</value>
+  </data>
+  <data name="ErrorWindow_Title" xml:space="preserve">
+    <value>ShareX - 錯誤</value>
+  </data>
+  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
+    <value>發生未預期的錯誤。</value>
+  </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>複製</value>
   </data>
@@ -669,6 +510,9 @@
   </data>
   <data name="Extensions_AddContextMenu_Undo" xml:space="preserve">
     <value>復原</value>
+  </data>
+  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
+    <value>FFmpeg 錯誤</value>
   </data>
   <data name="FileDestination_CustomFileUploader" xml:space="preserve">
     <value>自訂檔案上傳工具</value>
@@ -691,6 +535,9 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>附加數字到檔名</value>
   </data>
+  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
+    <value>重新命名檔案時發生錯誤:</value>
+  </data>
   <data name="GIFQuality_Bit4" xml:space="preserve">
     <value>八元樹量化 16 色</value>
   </data>
@@ -702,6 +549,9 @@
   </data>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>調色盤量化灰階 256 色</value>
+  </data>
+  <data name="HSB_ToString_" xml:space="preserve">
+    <value>色調: {0:0.0}°，飽和度: {1:0.0}%，亮度: {2:0.0}%</value>
   </data>
   <data name="Helpers_BrowseFile_Choose_file" xml:space="preserve">
     <value>選擇檔案</value>
@@ -717,6 +567,39 @@
   </data>
   <data name="Helpers_OpenFolder_Folder_not_exist_" xml:space="preserve">
     <value>資料夾不存在：</value>
+  </data>
+  <data name="Helpers_Timeout" xml:space="preserve">
+    <value>逾時</value>
+  </data>
+  <data name="HotkeyInfo_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HotkeyInfo_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="HotkeyInfo_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="HotkeyInfo_Numpad" xml:space="preserve">
+    <value>數字鍵盤</value>
+  </data>
+  <data name="HotkeyInfo_Page_down" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="HotkeyInfo_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="HotkeyInfo_Win" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="HotkeyType_AbortScreenRecording" xml:space="preserve">
     <value>取消螢幕錄製</value>
@@ -834,6 +717,9 @@
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>顯示器測試</value>
+  </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>網路監控器</value>
   </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>無</value>
@@ -955,14 +841,20 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>影片縮圖工具</value>
   </data>
-  <data name="HSB_ToString_" xml:space="preserve">
-    <value>色調: {0:0.0}°，飽和度: {1:0.0}%，亮度: {2:0.0}%</value>
-  </data>
   <data name="ImageDestination_CustomImageUploader" xml:space="preserve">
     <value>自訂圖片上傳工具</value>
   </data>
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>檔案上傳工具</value>
+  </data>
+  <data name="ImageHelpers_Image_files" xml:space="preserve">
+    <value>影像檔案</value>
+  </data>
+  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
+    <value>開啟影像</value>
+  </data>
+  <data name="ImageViewerWindow_Title" xml:space="preserve">
+    <value>ShareX - 影像檢視器</value>
   </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>大正方形</value>
@@ -982,6 +874,12 @@
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>小縮圖</value>
   </data>
+  <data name="InputBoxWindow_Default_title" xml:space="preserve">
+    <value>輸入</value>
+  </data>
+  <data name="InputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
   <data name="MyMessageBox_MyMessageBox_Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
@@ -993,6 +891,33 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>是</value>
+  </data>
+  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
+    <value>需要有效的文字檔案路徑。</value>
+  </data>
+  <data name="OutputBoxWindow_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
+    <value>全部複製</value>
+  </data>
+  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
+    <value>輸出</value>
+  </data>
+  <data name="OutputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
+  <data name="PNGBitDepth_Automatic" xml:space="preserve">
+    <value>自動偵測</value>
+  </data>
+  <data name="PNGBitDepth_Bit24" xml:space="preserve">
+    <value>24 位元</value>
+  </data>
+  <data name="PNGBitDepth_Bit32" xml:space="preserve">
+    <value>32 位元</value>
+  </data>
+  <data name="PNGBitDepth_Default" xml:space="preserve">
+    <value>預設</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 天</value>
@@ -1024,20 +949,56 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>非公開</value>
   </data>
-  <data name="PNGBitDepth_Automatic" xml:space="preserve">
-    <value>自動偵測</value>
+  <data name="PingResult_Ping_failed" xml:space="preserve">
+    <value>Ping 失敗: {0}</value>
   </data>
-  <data name="PNGBitDepth_Bit24" xml:space="preserve">
-    <value>24 位元</value>
+  <data name="PingResult_Reply_from" xml:space="preserve">
+    <value>來自 {0} 的回覆: 位元組={1} 時間={2}ms TTL={3}</value>
   </data>
-  <data name="PNGBitDepth_Bit32" xml:space="preserve">
-    <value>32 位元</value>
+  <data name="PingResult_Request_timed_out" xml:space="preserve">
+    <value>要求逾時。</value>
   </data>
-  <data name="PNGBitDepth_Default" xml:space="preserve">
-    <value>預設</value>
+  <data name="PingResult_Statistics" xml:space="preserve">
+    <value>最短 = {0}ms，最長 = {1}ms，平均 = {2}ms</value>
   </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>列印</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
+    <value>印表機「{0}」不存在。將繼續使用 Windows 預設印表機。您可以在應用程式設定中指定其他預設印表機。</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
+    <value>印表機名稱無效</value>
+  </data>
+  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
+    <value>允許放大影像</value>
+  </data>
+  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
+    <value>自動旋轉影像</value>
+  </data>
+  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
+    <value>自動縮放影像</value>
+  </data>
+  <data name="PrintWindow_Center_image_position" xml:space="preserve">
+    <value>置中影像位置</value>
+  </data>
+  <data name="PrintWindow_Description" xml:space="preserve">
+    <value>設定影像位置和縮放。</value>
+  </data>
+  <data name="PrintWindow_Heading" xml:space="preserve">
+    <value>列印選項</value>
+  </data>
+  <data name="PrintWindow_Margin" xml:space="preserve">
+    <value>邊界：</value>
+  </data>
+  <data name="PrintWindow_Pixels" xml:space="preserve">
+    <value>像素</value>
+  </data>
+  <data name="PrintWindow_Preview" xml:space="preserve">
+    <value>預覽...</value>
+  </data>
+  <data name="PrintWindow_Title" xml:space="preserve">
+    <value>ShareX - 列印選項</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 天</value>
@@ -1144,14 +1105,14 @@
   <data name="ReplCodeMenuEntry_height_Gets_image_height" xml:space="preserve">
     <value>圖片高度</value>
   </data>
+  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
+    <value>自動遞增區分大小寫文數字元 (用 {n} 來在字元前補 0)</value>
+  </data>
   <data name="ReplCodeMenuEntry_i_Auto_increment_number" xml:space="preserve">
     <value>自動遞增數字 (用 {n} 來在字元前補 0)</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>自動遞增不區分大小寫文數字元 (用 {n} 來在字元前補 0)</value>
-  </data>
-  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
-    <value>自動遞增區分大小寫文數字元 (用 {n} 來在字元前補 0)</value>
   </data>
   <data name="ReplCodeMenuEntry_ib_Auto_increment_base_alphanumeric" xml:space="preserve">
     <value>自動遞增 {n} 進制文數字元 (1 &lt; n &lt; 63)</value>
@@ -1165,11 +1126,11 @@
   <data name="ReplCodeMenuEntry_mo_Current_month" xml:space="preserve">
     <value>目前月份</value>
   </data>
-  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
-    <value>目前月份名 (本地語言)</value>
-  </data>
   <data name="ReplCodeMenuEntry_mon2_Current_month_name__English_" xml:space="preserve">
     <value>目前月份名 (英文)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
+    <value>目前月份名 (本地語言)</value>
   </data>
   <data name="ReplCodeMenuEntry_ms_Current_millisecond" xml:space="preserve">
     <value>目前毫秒</value>
@@ -1210,11 +1171,11 @@
   <data name="ReplCodeMenuEntry_unix_Unix_timestamp" xml:space="preserve">
     <value>Unix 時間戳記</value>
   </data>
-  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
-    <value>目前週名 (本地語言)</value>
-  </data>
   <data name="ReplCodeMenuEntry_w2_Current_week_name__English_" xml:space="preserve">
     <value>目前週名 (英文)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
+    <value>目前週名 (本地語言)</value>
   </data>
   <data name="ReplCodeMenuEntry_width_Gets_image_width" xml:space="preserve">
     <value>圖片寬度</value>
@@ -1312,6 +1273,36 @@
   <data name="ToastClickAction_Upload" xml:space="preserve">
     <value>上傳檔案</value>
   </data>
+  <data name="Translator_ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="Translator_Base64" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Translator_Binary" xml:space="preserve">
+    <value>二進位</value>
+  </data>
+  <data name="Translator_Hexadecimal" xml:space="preserve">
+    <value>十六進位</value>
+  </data>
+  <data name="Translator_Text" xml:space="preserve">
+    <value>文字</value>
+  </data>
+  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
+    <value>URL 無效。</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>Bing 圖像式搜尋</value>
+  </data>
+  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
+    <value>自訂網址分享服務</value>
+  </data>
+  <data name="URLSharingServices_Email" xml:space="preserve">
+    <value>電子信箱</value>
+  </data>
+  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
+    <value>Google 圖片搜尋</value>
+  </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>開發版</value>
   </data>
@@ -1336,20 +1327,23 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>有更新</value>
   </data>
-  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
-    <value>Bing 圖像式搜尋</value>
+  <data name="UpdateMessageWindow_Header" xml:space="preserve">
+    <value>ShareX 有更新</value>
   </data>
-  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
-    <value>自訂網址分享服務</value>
-  </data>
-  <data name="URLSharingServices_Email" xml:space="preserve">
-    <value>電子信箱</value>
-  </data>
-  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
-    <value>Google 圖片搜尋</value>
+  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
+    <value>檢視變更記錄</value>
   </data>
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>自訂縮網址服務</value>
+  </data>
+  <data name="VideoInfo_Audio_details" xml:space="preserve">
+    <value>，音訊編解碼器: {0}</value>
+  </data>
+  <data name="VideoInfo_Summary" xml:space="preserve">
+    <value>檔案名稱: {0}，持續時間: {1}，位元率: {2} kb/s</value>
+  </data>
+  <data name="VideoInfo_Video_details" xml:space="preserve">
+    <value>，視訊編解碼器: {0}，解析度: {1}x{2}，FPS: {3}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>私人</value>
@@ -1360,11 +1354,20 @@
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>非公開</value>
   </data>
-  <data name="HdrCaptureMode_Off" xml:space="preserve">
-    <value>關閉</value>
+  <data name="ZipManager_Archive_too_large" xml:space="preserve">
+    <value>此封存檔的未壓縮大小超過允許的最大檔案大小。</value>
+  </data>
+  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
+    <value>封存檔未壓縮大小: {0}</value>
+  </data>
+  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
+    <value>允許的最大檔案大小: {0}</value>
   </data>
   <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
     <value>動態</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>關閉</value>
   </data>
   <data name="HdrCaptureMode_On" xml:space="preserve">
     <value>開啟</value>

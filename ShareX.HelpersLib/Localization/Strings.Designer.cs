@@ -806,6 +806,9 @@ namespace ShareX.HelpersLib.Localization {
         public static string HotkeyType_MonitorTest {
             get { return ResourceManager.GetString("HotkeyType_MonitorTest", resourceCulture); }
         }
+        public static string HotkeyType_NetworkMonitor {
+            get { return ResourceManager.GetString("HotkeyType_NetworkMonitor", resourceCulture); }
+        }
         public static string HotkeyType_None {
             get { return ResourceManager.GetString("HotkeyType_None", resourceCulture); }
         }
@@ -1331,6 +1334,15 @@ namespace ShareX.HelpersLib.Localization {
         public static string YouTubeVideoPrivacy_Unlisted {
             get { return ResourceManager.GetString("YouTubeVideoPrivacy_Unlisted", resourceCulture); }
         }
+        /// <summary>
+        ///   Video trimmer
+        /// </summary>
+        public static string HotkeyType_VideoTrimmer {
+            get {
+                return ResourceManager.GetString("HotkeyType_VideoTrimmer", resourceCulture);
+            }
+        }
+
         public static string HdrCaptureMode_Off {
             get { return ResourceManager.GetString("HdrCaptureMode_Off", resourceCulture); }
         }

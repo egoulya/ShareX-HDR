@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>Keresés a beállítások között</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>Nem sikerült átméretezni a kurzor bittérképét.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>A kurzorerőforrás túl kicsi.</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>Csak .cur kurzorerőforrások támogatottak.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>A tömörített kurzor-bittérképek nem támogatottak.</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>A kurzorerőforrás nem tartalmaz képet.</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>A kurzorerőforrás túl kicsi.</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>A kurzorkép adatai kívül esnek az érvényes tartományon.</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>Nem támogatott kurzor-bittérképfejléc.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>Nem sikerült átméretezni a kurzor bittérképét.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>A tömörített kurzor-bittérképek nem támogatottak.</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>Csak .cur kurzorerőforrások támogatottak.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>Nem támogatott kurzor-bitmélység: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>Mégsem</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>Nem támogatott kurzor-bittérképfejléc.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>Megszakítás</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>Újra</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>Folytatás</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>Kihagyás</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>Igen</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>Nem</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>Újra</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>Újrapróbálkozás</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>Folytatás</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>Keresés a beállítások között</value>
   </data>
 </root>

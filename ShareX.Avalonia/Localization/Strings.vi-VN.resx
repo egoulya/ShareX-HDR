@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>Tìm kiếm trong cài đặt</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>Không thể thay đổi kích thước bitmap con trỏ.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>Tài nguyên con trỏ quá nhỏ.</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>Chỉ hỗ trợ tài nguyên con trỏ .cur.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>Bitmap con trỏ đã nén không được hỗ trợ.</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>Tài nguyên con trỏ không chứa hình ảnh nào.</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>Tài nguyên con trỏ quá nhỏ.</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>Dữ liệu hình ảnh con trỏ nằm ngoài phạm vi.</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>Tiêu đề bitmap con trỏ không được hỗ trợ.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>Không thể thay đổi kích thước bitmap con trỏ.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>Bitmap con trỏ đã nén không được hỗ trợ.</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>Chỉ hỗ trợ tài nguyên con trỏ .cur.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>Độ sâu bit của con trỏ không được hỗ trợ: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>Hủy bỏ</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>Tiêu đề bitmap con trỏ không được hỗ trợ.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>Hủy</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>Thử lại</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>Tiếp tục</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>Bỏ qua</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>Đồng ý</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>Không</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>Thử lại</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>Thử lại</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>Tiếp tục</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>Đồng ý</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>Tìm kiếm trong cài đặt</value>
   </data>
 </root>

@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>Testuje se...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>Po otevření automaticky analyzovat</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>Klíč API</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>Stránka klíče API...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>Po otevření automaticky analyzovat</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>Chování</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>Načíst modely</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>Podrobnost</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>Připojení je v pořádku.</value>
@@ -377,14 +377,14 @@ Cesta k souboru: {0}</value>
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>Procházet...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>Soubory CSS</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>Vyberte složku a vygenerujte výstup. Dokud nepoužijete Uložit jako nebo Nahrát, nic se neuloží.</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>Vytvořit strukturovaný JSON vhodný ke zpracování</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>Soubory CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>Zobrazit cesty ke složkám</value>
@@ -437,10 +437,10 @@ Cesta k souboru: {0}</value>
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>Uložit index adresáře</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>Vybrat soubor CSS</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
     <value>Vybrat soubor CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
@@ -656,9 +656,6 @@ Cesta k souboru: {0}</value>
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>Obrázek</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>nebo vyberte soubor pomocí tlačítka Procházet</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>Uložit ikonu jako</value>
   </data>
@@ -667,6 +664,9 @@ Cesta k souboru: {0}</value>
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>Velikosti</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>nebo vyberte soubor pomocí tlačítka Procházet</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>Ke spojení přidejte alespoň dva obrázky.</value>
@@ -863,9 +863,6 @@ Cesta k souboru: {0}</value>
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>Šablona názvu souboru</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>Vygenerovat miniatury</value>
   </data>
@@ -886,6 +883,9 @@ Cesta k souboru: {0}</value>
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>Šířka</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>Počet souborů: {0:n0}</value>
@@ -1001,20 +1001,20 @@ Cesta k souboru: {0}</value>
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>Úhlopříčně vzad</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>Šachovnice</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>Procesor</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>Šachovnice</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>Úhlopříčně vpřed</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>Grafický procesor</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>Vysoká</value>
@@ -1168,17 +1168,122 @@ Cesta k souboru: {0}</value>
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>Vzor</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>Červená</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>Červená</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX – Test monitoru</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>Rychlost</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>Vypršel časový limit pro {0}.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>Nebyla nalezena žádná aktivní síťová rozhraní.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>Žádný koncový bod neodpověděl.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>Automaticky (doporučeno)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>Kontrola...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>Připojeno.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>Odpojeno.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>Posledních 15 minut</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>Posledních 5 minut</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>Posledních 6 hodin</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>Poslední hodina</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} ms</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>Pozastaveno</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>Relace</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>Dostupnost</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>Průměrná latence</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>Kontrolovat každých</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>Vymazat protokol</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>Události připojení</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>Kopírovat vše</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>Aktuální latence</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>Odpojení</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>Historie latence</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>Zatím nebyly zaznamenány žádné změny připojení.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>Zatím nejsou žádné vzorky latence.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>Otevřít protokol...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>Pozastavit</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>Rozsah</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - Sledování sítě</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>Spustit</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>Cíl</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>Jazyk {0} není v tomto systému pro OCR dostupný.</value>
@@ -1468,11 +1573,11 @@ Cesta k souboru: {0}</value>
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>Obrázek PNG</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>Velikost QR kódu</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>Obrázek SVG</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>Uložit...</value>
@@ -1495,11 +1600,11 @@ Cesta k souboru: {0}</value>
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX – QR kód</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>Obrázek SVG</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>Nahrát</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>px</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>Tolerance: {0}%</value>
@@ -1576,9 +1681,6 @@ Cesta k souboru: {0}</value>
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>Vstupní soubor</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kb/s</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>Po dokončení otevřít výstupní složku</value>
   </data>
@@ -1611,6 +1713,9 @@ Cesta k souboru: {0}</value>
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>Kodér videa</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kb/s</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>vystup-videa</value>
@@ -1711,109 +1816,112 @@ Cesta k souboru: {0}</value>
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>Soubory videa</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>Přibližný náhled z mezipaměti • po pozastavení se zpřesní</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>Vypršel časový limit pro {0}.</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>Zrušit</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>Nebyla nalezena žádná aktivní síťová rozhraní.</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>Zrušeno.</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>Žádný koncový bod neodpověděl.</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>Začněte otevřením nebo přetažením videa</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>Automaticky (doporučeno)</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>Zkopíruje původní streamy bez překódování. Body střihu se mohou posunout k blízkým klíčovým snímkům.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>Kontrola...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>Délka:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>Připojeno.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg nevytvořil výstupní video.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>Odpojeno.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>Konec:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>Posledních 15 minut</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>Uložit oříznuté video…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>Posledních 5 minut</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>Ukládání oříznutého videa…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>Posledních 6 hodin</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>Náhled poblíž {0} • bez přehrávání zvuku</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>Poslední hodina</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>Vyberte video se známou konečnou délkou.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} ms</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>Ořez proveďte přetažením úchytů nebo kliknutím změňte pozici. Vlevo/Vpravo: posun. Shift: 1 sekunda. I/O: nastavit začátek/konec. Home/End: přejít na hranice výběru.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>Pozastaveno</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>Příprava náhledů časové osy…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>Bezeztrátový (rychlý)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>Relace</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>Na této pozici není k dispozici žádný náhledový snímek.</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>Dostupnost</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>Otevřít video…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>Průměrná latence</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>Pro tento režim exportu použijte příponu {0}.</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>Kontrolovat každých</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>Pozice (sekundy)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>Události připojení</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>Přesný (překódování)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>Vymazat protokol</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>Překóduje do H.264 / AAC MP4 pro přesné body střihu.</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>Kopírovat vše</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>Náhled statického snímku • bez přehrávání zvuku</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>Aktuální latence</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>Přetažením úchytů vyberte část, kterou chcete zachovat.</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>Datum</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>Obnovit výběr</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>Odpojení</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>Uloženo: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>Historie latence</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>Šipky: 0,1 s • Shift: 1 s</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>Zatím nebyly zaznamenány žádné změny připojení.</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>Zachovat {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>Zatím nejsou žádné vzorky latence.</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>Nastavit konec zde</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>Otevřít protokol...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>Nastavit začátek zde</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>Pozastavit</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>Zobrazit výstupní složku...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>Rozsah</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>Vyberte jiný výstupní soubor. Zdrojové video nelze přepsat.</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - Sledování sítě</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>Začátek:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>Spustit</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>Časová osa videa a výběr ořezu</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>Stav</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX – Ořez videa</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>Cíl</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>Režim ořezu:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>Videosoubory</value>
   </data>
 </root>

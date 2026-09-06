@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>בודק...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>נתח אוטומטית בעת הפתיחה</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>מפתח API</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>דף מפתח API...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>נתח אוטומטית בעת הפתיחה</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>אופן פעולה</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>טען מודלים</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>רמת פירוט</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>החיבור תקין.</value>
@@ -373,14 +373,14 @@
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>עיון...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>קובצי CSS</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>בחר תיקייה וצור פלט. דבר לא נשמר עד לשימוש ב'שמור בשם' או 'העלה'.</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>צור JSON מובנה שניתן לניתוח</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>קובצי CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>הצג נתיבי תיקיות</value>
@@ -433,10 +433,10 @@
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>שמור אינדקס תיקייה</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>בחר קובץ CSS</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
     <value>בחר קובץ CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
@@ -652,9 +652,6 @@
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>תמונה</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>או השתמש בעיון כדי לבחור קובץ</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>שמור סמל בשם</value>
   </data>
@@ -663,6 +660,9 @@
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>גדלים</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>או השתמש בעיון כדי לבחור קובץ</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>הוסף לפחות שתי תמונות לשילוב.</value>
@@ -859,9 +859,6 @@
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>תבנית שם קובץ</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>צור תמונות ממוזערות</value>
   </data>
@@ -882,6 +879,9 @@
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>רוחב</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>{0:n0} קבצים</value>
@@ -997,20 +997,20 @@
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>אלכסון לאחור</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>לוח שחמט</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>CPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>לוח שחמט</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>אלכסון קדימה</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>GPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>גבוה</value>
@@ -1162,17 +1162,122 @@
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>תבנית</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>אדום</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>אדום</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX - בדיקת צג</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>מהירות</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>תם הזמן הקצוב עבור {0}.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>לא נמצא ממשק רשת פעיל.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>אף נקודת קצה לא הגיבה.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>אוטומטי (מומלץ)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>בודק...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>מחובר.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>מנותק.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>15 הדקות האחרונות</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>5 הדקות האחרונות</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>6 השעות האחרונות</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>השעה האחרונה</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} אלפיות שנייה</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>מושהה</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>הפעלה</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>זמינות</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>השהיה ממוצעת</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>בדוק כל</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>נקה יומן</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>אירועי חיבור</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>העתק הכול</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>השהיה נוכחית</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>תאריך</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>ניתוקים</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>היסטוריית השהיה</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>עדיין לא נרשמו שינויי חיבור.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>עדיין אין דגימות השהיה.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>פתח יומן...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>השהה</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>טווח</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - מנטר רשת</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>התחל</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>מצב</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>יעד</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>השפה {0} אינה זמינה במערכת זו עבור OCR.</value>
@@ -1462,11 +1567,11 @@
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>תמונת PNG</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>פיקסלים</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>גודל קוד QR</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>תמונת SVG</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>שמור...</value>
@@ -1489,11 +1594,11 @@
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX - קוד QR</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>תמונת SVG</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>העלאה</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>פיקסלים</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>סבילות: {0}%</value>
@@ -1570,9 +1675,6 @@
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>קובץ קלט</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kbps</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>פתח את תיקיית הפלט בסיום</value>
   </data>
@@ -1605,6 +1707,9 @@
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>מקודד וידאו</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kbps</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>video-output</value>
@@ -1705,109 +1810,112 @@
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>קובצי סרטונים</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>תצוגה מקורבת מהמטמון • מתחדדת בעת עצירה</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>תם הזמן הקצוב עבור {0}.</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>ביטול</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>לא נמצא ממשק רשת פעיל.</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>בוטל.</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>אף נקודת קצה לא הגיבה.</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>פתח או גרור לכאן וידאו כדי להתחיל</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>אוטומטי (מומלץ)</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>מעתיק את הזרמים המקוריים ללא קידוד מחדש. נקודות החיתוך עשויות לזוז לתמונות מפתח סמוכות.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>בודק...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>משך:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>מחובר.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg לא יצר וידאו פלט.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>מנותק.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>סיום:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>15 הדקות האחרונות</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>שמירת הווידאו החתוך…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>5 הדקות האחרונות</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>שומר את הווידאו החתוך…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>6 השעות האחרונות</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>תצוגה מקדימה ליד {0} • ללא השמעת שמע</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>השעה האחרונה</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>בחר וידאו בעל משך ידוע וסופי.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} אלפיות שנייה</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>גרור ידיות לחיתוך או לחץ כדי לעבור. שמאלה/ימינה: מעבר. Shift: שנייה אחת. I/O: הגדרת התחלה/סיום. Home/End: מעבר לגבולות הבחירה.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>מושהה</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>מכין תצוגות מקדימות של ציר הזמן…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>ללא אובדן (מהיר)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>הפעלה</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>אין תמונת תצוגה מקדימה זמינה במיקום זה.</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>זמינות</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>פתיחת וידאו…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>השהיה ממוצעת</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>השתמש בסיומת {0} עבור מצב ייצוא זה.</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>בדוק כל</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>מיקום (שניות)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>אירועי חיבור</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>מדויק (קידוד מחדש)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>נקה יומן</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>מקודד מחדש ל-H.264 / AAC MP4 לקבלת נקודות חיתוך מדויקות.</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>העתק הכול</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>תצוגה מקדימה של תמונה קפואה • ללא השמעת שמע</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>השהיה נוכחית</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>גרור את הידיות כדי לבחור את החלק שיישמר.</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>תאריך</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>איפוס הבחירה</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>ניתוקים</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>נשמר: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>היסטוריית השהיה</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>מקשי חצים: 0.1 שנ׳ • Shift: שנייה אחת</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>עדיין לא נרשמו שינויי חיבור.</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>שמירת {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>עדיין אין דגימות השהיה.</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>הגדרת סיום כאן</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>פתח יומן...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>הגדרת התחלה כאן</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>השהה</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>הצגת תיקיית הפלט...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>טווח</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>בחר קובץ פלט אחר. לא ניתן להחליף את וידאו המקור.</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - מנטר רשת</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>התחלה:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>התחל</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>ציר זמן של הווידאו ובחירת חיתוך</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>מצב</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX - חיתוך וידאו</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>יעד</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>מצב חיתוך:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>קובצי וידאו</value>
   </data>
 </root>

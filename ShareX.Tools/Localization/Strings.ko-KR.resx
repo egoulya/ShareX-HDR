@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>테스트 중...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>열 때 자동으로 분석</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>API 키</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>API 키 페이지...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>열 때 자동으로 분석</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>동작</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>모델 불러오기</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>상세도</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>연결되었습니다.</value>
@@ -373,14 +373,14 @@
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>찾아보기...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>CSS 파일</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>폴더를 선택하고 출력을 생성하세요. 다른 이름으로 저장 또는 업로드를 사용하기 전에는 저장되지 않습니다.</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>구문 분석 가능한 구조화된 JSON 만들기</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>CSS 파일</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>폴더 경로 표시</value>
@@ -433,10 +433,10 @@
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>디렉터리 인덱스 저장</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>CSS 파일 선택</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
     <value>CSS 파일 선택</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
@@ -652,9 +652,6 @@
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>이미지</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>또는 찾아보기를 사용하여 파일 선택</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>아이콘을 다른 이름으로 저장</value>
   </data>
@@ -663,6 +660,9 @@
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>크기</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>또는 찾아보기를 사용하여 파일 선택</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>결합할 이미지를 두 개 이상 추가하세요.</value>
@@ -859,9 +859,6 @@
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>파일 이름 템플릿</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>썸네일 생성</value>
   </data>
@@ -882,6 +879,9 @@
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>너비</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>파일 {0:n0}개</value>
@@ -997,20 +997,20 @@
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>뒤쪽 대각선</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>바둑판</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>CPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>바둑판</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>앞쪽 대각선</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>GPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>높음</value>
@@ -1162,17 +1162,122 @@
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>패턴</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>빨강</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>빨강</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX - 모니터 테스트</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>속도</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>{0} 시간이 초과되었습니다.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>활성 네트워크 인터페이스를 찾을 수 없습니다.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>응답한 엔드포인트가 없습니다.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>자동(권장)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>확인 중...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>연결됨.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>연결 끊김.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>최근 15분</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>최근 5분</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>최근 6시간</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>최근 1시간</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0}밀리초</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>일시 중지됨</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>세션</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>가용성</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>평균 지연 시간</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>확인 간격</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>로그 지우기</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>연결 이벤트</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>모두 복사</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>현재 지연 시간</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>날짜</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>연결 끊김 횟수</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>지연 시간 기록</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>아직 기록된 연결 변경 사항이 없습니다.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>아직 지연 시간 샘플이 없습니다.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>로그 열기...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>일시 중지</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>범위</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - 네트워크 모니터</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>대상</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>이 시스템에서는 OCR용 {0} 언어를 사용할 수 없습니다.</value>
@@ -1462,11 +1567,11 @@
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>PNG 이미지</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>QR 코드 크기</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>SVG 이미지</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>저장...</value>
@@ -1489,11 +1594,11 @@
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX - QR 코드</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>SVG 이미지</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>업로드</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>px</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>허용 오차: {0}%</value>
@@ -1570,9 +1675,6 @@
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>입력 파일</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kbps</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>완료되면 출력 폴더 열기</value>
   </data>
@@ -1605,6 +1707,9 @@
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>비디오 인코더</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kbps</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>video-output</value>
@@ -1705,109 +1810,112 @@
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>비디오 파일</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>대략적인 캐시 미리 보기 • 멈추면 정밀하게 조정됩니다</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>{0} 시간이 초과되었습니다.</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>취소</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>활성 네트워크 인터페이스를 찾을 수 없습니다.</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>취소되었습니다.</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>응답한 엔드포인트가 없습니다.</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>동영상을 열거나 끌어다 놓아 시작하세요</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>자동(권장)</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>재인코딩 없이 원본 스트림을 복사합니다. 자르기 지점이 가까운 키프레임으로 이동할 수 있습니다.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>확인 중...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>재생 시간:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>연결됨.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg가 출력 동영상을 생성하지 않았습니다.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>연결 끊김.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>끝:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>최근 15분</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>자른 동영상 저장…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>최근 5분</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>자른 동영상 저장 중…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>최근 6시간</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>{0} 근처 미리 보기 • 오디오 재생 없음</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>최근 1시간</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>재생 시간이 알려진 유효한 동영상을 선택하세요.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0}밀리초</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>핸들을 끌어 자르거나 클릭하여 이동하세요. 왼쪽/오른쪽: 이동. Shift: 1초. I/O: 시작/끝 설정. Home/End: 선택 영역 경계로 이동.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>일시 중지됨</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>타임라인 미리 보기 준비 중…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>무손실 (빠름)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>세션</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>이 위치에서 사용할 수 있는 미리 보기 프레임이 없습니다.</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>가용성</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>동영상 열기…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>평균 지연 시간</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>이 내보내기 모드에는 {0} 확장자를 사용하세요.</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>확인 간격</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>위치 (초)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>연결 이벤트</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>정밀 (재인코딩)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>로그 지우기</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>정확한 자르기 지점을 위해 H.264 / AAC MP4로 재인코딩합니다.</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>모두 복사</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>정지 프레임 미리 보기 • 오디오 재생 없음</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>현재 지연 시간</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>핸들을 끌어 유지할 부분을 선택하세요.</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>날짜</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>선택 영역 초기화</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>연결 끊김 횟수</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>저장됨: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>지연 시간 기록</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>화살표 키: 0.1초 • Shift: 1초</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>아직 기록된 연결 변경 사항이 없습니다.</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>{0} 유지</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>아직 지연 시간 샘플이 없습니다.</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>여기를 끝으로 설정</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>로그 열기...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>여기를 시작으로 설정</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>일시 중지</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>출력 폴더 표시...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>범위</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>다른 출력 파일을 선택하세요. 원본 동영상은 덮어쓸 수 없습니다.</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - 네트워크 모니터</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>시작:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>시작</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>동영상 타임라인 및 자르기 선택 영역</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>상태</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX - 동영상 자르기</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>대상</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>자르기 모드:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>동영상 파일</value>
   </data>
 </root>

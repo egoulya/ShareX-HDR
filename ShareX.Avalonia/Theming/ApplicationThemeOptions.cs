@@ -16,12 +16,12 @@ namespace ShareX.AvaloniaUI.Theming;
 public sealed class ApplicationThemeOptions : INotifyPropertyChanged
 {
     public const string DefaultTheme = "Dark";
-    public const string DefaultAccentColorHex = "#3E83F2";
+    public const string DefaultAccentColorHex = "#09AAFF";
 
     private string _theme = DefaultTheme;
-    private bool _useSystemTheme = true;
+    private bool _useSystemTheme = false;
     private string _accentColorHex = DefaultAccentColorHex;
-    private bool _useSystemAccentColor = true;
+    private bool _useSystemAccentColor = false;
 
     public string Theme
     {

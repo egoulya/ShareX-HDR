@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>Tester...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>Analysér automatisk ved åbning</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>API-nøgle</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>API-nøgleside...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>Analysér automatisk ved åbning</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>Adfærd</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>Indlæs modeller</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>Detaljeringsgrad</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>Forbindelsen virker.</value>
@@ -377,14 +377,14 @@ Filsti: {0}</value>
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>Gennemse...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>CSS-filer</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>Vælg en mappe og generér output. Intet gemmes før du bruger Gem som eller Upload.</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>Opret struktureret JSON som kan fortolkes</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>CSS-filer</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>Vis mappestier</value>
@@ -437,11 +437,11 @@ Filsti: {0}</value>
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>Gem katalogindex</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
-    <value>Vælg en CSS-fil</value>
-  </data>
   <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>Vælg CSS-fil</value>
+  </data>
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+    <value>Vælg en CSS-fil</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
     <value>Vælg mappe at indeksere</value>
@@ -656,9 +656,6 @@ Filsti: {0}</value>
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>Billede</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>eller brug Gennemse for at vælge en fil</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>Gem ikon som</value>
   </data>
@@ -667,6 +664,9 @@ Filsti: {0}</value>
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>Størrelser</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>eller brug Gennemse for at vælge en fil</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>Tilføj mindst to billeder, der skal kombineres.</value>
@@ -863,9 +863,6 @@ Filsti: {0}</value>
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>Skabelon til filnavn</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>Generér miniaturer</value>
   </data>
@@ -886,6 +883,9 @@ Filsti: {0}</value>
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>Bredde</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>{0:n0} filer</value>
@@ -1001,20 +1001,20 @@ Filsti: {0}</value>
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>Diagonal tilbage</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>Skakmønster</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>Processor</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>Skakmønster</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>Diagonal frem</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>Grafikprocessor</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>Høj</value>
@@ -1168,17 +1168,122 @@ Filsti: {0}</value>
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>Mønster</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>Rød</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>Rød</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX – Skærmtest</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>Hastighed</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>Tidsgrænsen for {0} udløb.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>Der blev ikke fundet en aktiv netværksgrænseflade.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>Intet slutpunkt svarede.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>Automatisk (anbefalet)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>Kontrollerer...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>Forbundet.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>Afbrudt.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>Seneste 15 minutter</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>Seneste 5 minutter</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>Seneste 6 timer</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>Seneste time</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} ms</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>Sat på pause</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>Session</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>Tilgængelighed</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>Gennemsnitlig latenstid</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>Kontrollér hver</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>Ryd log</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>Forbindelseshændelser</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>Kopiér alle</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>Aktuel latenstid</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>Afbrydelser</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>Historik for latenstid</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>Der er endnu ikke registreret forbindelsesændringer.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>Der er endnu ingen latenstidsmålinger.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>Åbn log...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>Sæt på pause</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - Netværksovervågning</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>Mål</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>Sproget {0} er ikke tilgængeligt til OCR på dette system.</value>
@@ -1468,11 +1573,11 @@ Filsti: {0}</value>
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>PNG-billede</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>QR-kodestørrelse</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>SVG-billede</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>Gem...</value>
@@ -1495,11 +1600,11 @@ Filsti: {0}</value>
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX – QR-kode</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>SVG-billede</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>Upload</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>px</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>Tolerance: {0}%</value>
@@ -1576,9 +1681,6 @@ Filsti: {0}</value>
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>Inputfil</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kbit/s</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>Åbn outputmappen, når konverteringen er færdig</value>
   </data>
@@ -1611,6 +1713,9 @@ Filsti: {0}</value>
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>Videoencoder</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kbit/s</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>video-output</value>
@@ -1711,109 +1816,112 @@ Filsti: {0}</value>
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>Videofiler</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>Omtrentlig cachelagret forhåndsvisning • forbedres, når du holder pause</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>Tidsgrænsen for {0} udløb.</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>Annuller</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>Der blev ikke fundet en aktiv netværksgrænseflade.</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>Annulleret.</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>Intet slutpunkt svarede.</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>Åbn eller slip en video for at begynde</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>Automatisk (anbefalet)</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>Kopierer de oprindelige streams uden genkodning. Klippepunkter kan flyttes til nærliggende keyframes.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>Kontrollerer...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>Varighed:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>Forbundet.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg oprettede ikke en outputvideo.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>Afbrudt.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>Slut:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>Seneste 15 minutter</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>Gem trimmet video…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>Seneste 5 minutter</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>Gemmer trimmet video…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>Seneste 6 timer</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>Forhåndsvisning nær {0} • ingen lydafspilning</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>Seneste time</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>Vælg en video med en kendt, endelig varighed.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} ms</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>Træk i håndtagene for at trimme, eller klik for at søge. Venstre/Højre: søg. Shift: 1 sekund. I/O: sæt start/slut. Home/End: gå til markeringens grænser.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>Sat på pause</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>Forbereder forhåndsvisninger på tidslinjen…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>Tabsfri (hurtig)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>Session</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>Der var ingen forhåndsvisningsramme på denne position.</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>Tilgængelighed</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>Åbn video…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>Gennemsnitlig latenstid</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>Brug filtypen {0} til denne eksporttilstand.</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>Kontrollér hver</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>Søg (sekunder)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>Forbindelseshændelser</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>Præcis (genkodning)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>Ryd log</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>Genkoder til H.264 / AAC MP4 for præcise klippepunkter.</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>Kopiér alle</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>Forhåndsvisning af stillbillede • ingen lydafspilning</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>Aktuel latenstid</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>Træk i håndtagene for at vælge den del, der skal beholdes.</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>Dato</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>Nulstil markering</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>Afbrydelser</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>Gemt: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>Historik for latenstid</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>Piletaster: 0,1 s • Shift: 1 s</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>Der er endnu ikke registreret forbindelsesændringer.</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>Behold {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>Der er endnu ingen latenstidsmålinger.</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>Sæt slut her</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>Åbn log...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>Sæt start her</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>Sæt på pause</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>Vis outputmappe...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>Interval</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>Vælg en anden outputfil. Kildevideoen kan ikke overskrives.</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - Netværksovervågning</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>Start:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>Start</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>Videotidslinje og trimmarkering</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>Status</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX – Videotrimmer</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>Mål</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>Trimmetilstand:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>Videofiler</value>
   </data>
 </root>

@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>用户</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>上传到 Amazon S3 失败。</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 Intelligent-Tiering</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 Standard-Infrequent Access</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>上传到 Amazon S3 失败。</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>“访问密钥”不能为空。</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>未知错误</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>不支持的请求格式：{0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>二进制</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>函数“{0}”的最少参数数量为 {1}。</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>不支持的请求格式：{0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX - 目标设置</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>API 密钥:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>已获取 API 密钥</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>帐户</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>相册</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>API 密钥:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>已获取 API 密钥</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>授权代码：</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>完成授权</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>连接帐户</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>请先连接 Imgur 帐户</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>请先连接 Photobucket 帐户</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>连接帐户</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>连接成功！</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>输入帐户凭据以获取 API 密钥</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>输入您当前的双重身份验证码</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>81 兼容性</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>API URL</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>API 主机名</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>API 密钥</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>API 用户名</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>帐户信息电子邮件</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>帐户类型</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>API 主机名</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>API 密钥</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>API 用户名</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>API URL</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>将文件名附加到 URL</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>主机</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>图像</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>登录</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>名称</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>对象前缀</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>语法高亮</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>TTL</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>TTL 单位</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>标签</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>令牌</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>输入您当前的双重身份验证码</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>TTL</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>TTL 单位</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>网址</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>上传路径</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>上传器：</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>网址</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>使用 API v1</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Web API 密钥</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>名称</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>{0} 个文件夹</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>验证码：</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX - 目标设置</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>通过 API 上传的文件大小上限为 150 MB。</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>消息</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>发送</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>收件人电子邮件</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS（基于 SSL 的 FTP）</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>获取上传 URL 失败。</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS（基于 SSL 的 FTP）</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>我的云端硬盘</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>状态：{0}，请求：{1}，错误：{2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>Imgur 上传失败：({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>大正方形</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>小缩略图</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>状态：{0}，请求：{1}，错误：{2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>Imgur 上传失败：({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>由于未知原因，上传失败。请检查您的 API 密钥。</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>新账户</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>授权成功完成。</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>授权未成功。</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>无效的状态参数。</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>正在等待浏览器中的授权完成...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>授权成功完成。</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>授权未成功。</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>无效的状态参数。</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>使用方密钥、使用方密码或使用方私钥为空。</value>
@@ -1115,9 +1115,6 @@
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX - 选择</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Pastebin 登录失败。</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1149,11 +1146,11 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>不公开</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Pastebin 登录失败。</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>Plik 主机为空。</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>服务器要求授权。</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 天</value>
@@ -1188,23 +1185,14 @@
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>语法高亮</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>服务器要求授权。</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>缺少设备密钥。</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>未选择用于推送的设备。</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>身份验证失败。</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>校验和错误。</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>连接错误。</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>帐户剩余存储空间不足。</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>取消</value>
@@ -1227,14 +1215,29 @@
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>登录失败。</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>密码</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX - puush 登录</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>身份验证失败。</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>校验和错误。</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>连接错误。</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>帐户剩余存储空间不足。</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>复制 URL</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>复制删除 URL</value>
@@ -1250,9 +1253,6 @@
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>复制缩略图 URL</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>复制 URL</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>"删除网址"</value>
@@ -1275,20 +1275,20 @@
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>没有可用的结果详细信息。</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>打开网址</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>打开响应 URL</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>打开网址</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>响应网址</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>响应信息</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>响应文本</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>响应网址</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>结果</value>
@@ -1308,17 +1308,20 @@
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>缩略图网址</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>上传响应</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>上传响应</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>XML 格式</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>格式失败。</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>密钥文件不存在。</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>Seafile API URL 为空。</value>
@@ -1338,9 +1341,6 @@
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>缺少上传信息。</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>密钥文件不存在。</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>无法创建视频。</value>
@@ -1363,11 +1363,11 @@
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>Paste.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>Paste2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>Paste.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1404,30 +1404,6 @@
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>上传</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>缺少授权信息。请先打开授权 URL。</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>错误消息:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>请求 URL:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>堆栈跟踪：</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>需要登录。</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>刷新访问令牌失败。</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>需要登录 {0}。</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>上传失败。</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>必应可视化搜索</value>
@@ -1467,6 +1443,30 @@
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>需要登录。</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>刷新访问令牌失败。</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>需要登录 {0}。</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>上传失败。</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>缺少授权信息。请先打开授权 URL。</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>错误消息:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>请求 URL:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>堆栈跟踪：</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1510,15 +1510,6 @@
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>零宽度链接缩短器</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>缺少签名或用户名/密码。</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>上传失败：{0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>上传被拒绝：{0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
@@ -1548,5 +1539,14 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>不公开</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>上传失败：{0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>上传被拒绝：{0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>缺少签名或用户名/密码。</value>
   </data>
 </root>

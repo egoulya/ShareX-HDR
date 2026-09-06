@@ -58,383 +58,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FFmpegOptionsWindow_Title" xml:space="preserve">
-    <value>ShareX - Ekran kaydı seçenekleri</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Screen_recording" xml:space="preserve">
-    <value>Ekran kaydı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Description" xml:space="preserve">
-    <value>Neyin yakalanacağını ve FFmpeg'in bunu nasıl kodlayacağını seçin.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Reset_encoding_options" xml:space="preserve">
-    <value>Kodlama seçeneklerini sıfırla</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Reset_options" xml:space="preserve">
-    <value>Seçenekleri sıfırla</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Reset_all_options" xml:space="preserve">
-    <value>Tüm seçenekler sıfırlansın mı?</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Cancel" xml:space="preserve">
-    <value>İptal</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Reset" xml:space="preserve">
-    <value>Sıfırla</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Sources" xml:space="preserve">
-    <value>Kaynaklar</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Video" xml:space="preserve">
-    <value>Video</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Audio" xml:space="preserve">
-    <value>Ses</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Advanced" xml:space="preserve">
-    <value>Gelişmiş</value>
-  </data>
-  <data name="FFmpegOptionsWindow_FFmpeg_executable" xml:space="preserve">
-    <value>FFmpeg yürütülebilir dosyası</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Use_custom_path" xml:space="preserve">
-    <value>Özel bir FFmpeg yolu kullan</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Path_to_ffmpeg" xml:space="preserve">
-    <value>ffmpeg.exe yolu</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Browse_for_ffmpeg" xml:space="preserve">
-    <value>ffmpeg.exe dosyasına göz at</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Capture_sources" xml:space="preserve">
-    <value>Yakalama kaynakları</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Refresh_devices" xml:space="preserve">
-    <value>Aygıtları yenile</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Video_source" xml:space="preserve">
-    <value>Video kaynağı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Choose_video_source" xml:space="preserve">
-    <value>Bir video kaynağı seçin</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Audio_source" xml:space="preserve">
-    <value>Ses kaynağı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Choose_audio_source" xml:space="preserve">
-    <value>Bir ses kaynağı seçin</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Looking_for_devices" xml:space="preserve">
-    <value>Yakalama aygıtları aranıyor...</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Get_recorder_devices" xml:space="preserve">
-    <value>Kaydedici aygıtlarını edin</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Video_encoder" xml:space="preserve">
-    <value>Video kodlayıcı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Encoder_settings" xml:space="preserve">
-    <value>Kodlayıcı ayarları</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset" xml:space="preserve">
-    <value>Ön ayar</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Faster_presets_hint" xml:space="preserve">
-    <value>Daha hızlı ön ayarlar gerçek zamanlı olarak daha güvenilir kodlama yapar ancak daha büyük dosyalar oluşturur.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Slow_presets_warning" xml:space="preserve">
-    <value>Yavaş ön ayarlar ekran kaydı sırasında karelerin atlanmasına neden olabilir. „fast“ veya daha hızlısı önerilir.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Use_target_bitrate" xml:space="preserve">
-    <value>Sabit kalite yerine hedef bit hızı kullan</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Constant_rate_factor" xml:space="preserve">
-    <value>Sabit Hız Faktörü (CRF)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_CRF_hint" xml:space="preserve">
-    <value>Düşük değerler kaliteyi artırır ve dosya boyutunu büyütür. 0 kayıpsızdır; ShareX varsayılanı 28'dir.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Target_bitrate" xml:space="preserve">
-    <value>Hedef bit hızı (kbps)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Variable_bitrate_quality" xml:space="preserve">
-    <value>Değişken bit hızı kalitesi</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Variable_bitrate_hint" xml:space="preserve">
-    <value>1 en yüksek kaliteyi ve en büyük dosyayı; 31 en düşük kaliteyi ve en küçük dosyayı verir.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Tune" xml:space="preserve">
-    <value>İnce ayar</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Palette_mode" xml:space="preserve">
-    <value>Palet modu</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Dithering_mode" xml:space="preserve">
-    <value>Titreme modu</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Bayer_scale" xml:space="preserve">
-    <value>Bayer ölçeği</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Bayer_scale_hint" xml:space="preserve">
-    <value>Yüksek değerler daha görünür bantlaşma üretir. Varsayılan değer 2'dir.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Usage" xml:space="preserve">
-    <value>Kullanım</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Quality" xml:space="preserve">
-    <value>Kalite</value>
-  </data>
-  <data name="FFmpegOptionsWindow_No_additional_settings" xml:space="preserve">
-    <value>Bu kodlayıcı ek ayar gerektirmez.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Audio_encoder" xml:space="preserve">
-    <value>Ses kodlayıcı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Animated_formats_no_audio" xml:space="preserve">
-    <value>Animasyonlu görüntü biçimleri ses içermez. Ses kodlamasını etkinleştirmek için bir video biçimi seçin.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Bitrate" xml:space="preserve">
-    <value>Bit hızı (kbps)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Lower_values_higher_quality" xml:space="preserve">
-    <value>Düşük değerler daha yüksek kalite üretir.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Additional_arguments" xml:space="preserve">
-    <value>Ek bağımsız değişkenler</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Arguments_example" xml:space="preserve">
-    <value>Örnek: -vf scale=1920:-2</value>
-  </data>
-  <data name="FFmpegOptionsWindow_FFmpeg_command" xml:space="preserve">
-    <value>FFmpeg komutu</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Use_custom_commands" xml:space="preserve">
-    <value>Özel komutlar kullan</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Custom_command_placeholders" xml:space="preserve">
-    <value>Özel komut yer tutucuları: $fps$, $area_x$, $area_y$, $area_width$, $area_height$, $cursor$, $duration$ ve $output$.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_FFmpeg_not_found" xml:space="preserve">
-    <value>FFmpeg {0} konumunda bulunamadı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Device_enumeration_failed" xml:space="preserve">
-    <value>FFmpeg, DirectShow aygıtlarını listeleyemedi. Masaüstü yakalama kullanılabilir durumda.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_One_device_found" xml:space="preserve">
-    <value>{0} DirectShow aygıtı bulundu.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Multiple_devices_found" xml:space="preserve">
-    <value>{0} DirectShow aygıtı bulundu.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_No_devices_found" xml:space="preserve">
-    <value>DirectShow aygıtı bulunamadı. Masaüstü yakalama hazır.</value>
-  </data>
-  <data name="ScreenRecordWindow_Title" xml:space="preserve">
-    <value>ShareX - Ekran kaydı</value>
-  </data>
-  <data name="ScreenRecordWindow_Start" xml:space="preserve">
-    <value>Başlat</value>
-  </data>
-  <data name="ScreenRecordWindow_Pause" xml:space="preserve">
-    <value>Duraklat</value>
-  </data>
-  <data name="ScreenRecordWindow_Restart" xml:space="preserve">
-    <value>Yeniden başlat</value>
-  </data>
-  <data name="ScreenRecordWindow_Abort" xml:space="preserve">
-    <value>İptal et</value>
-  </data>
-  <data name="ScreenRecordWindow_Abort_this_recording" xml:space="preserve">
-    <value>Bu kayıt iptal edilsin mi?</value>
-  </data>
-  <data name="ScreenRecordWindow_Cancel" xml:space="preserve">
-    <value>İptal</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Title" xml:space="preserve">
-    <value>ShareX - Kaydırmalı yakalama</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Capture" xml:space="preserve">
-    <value>Yakala...</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Upload_Save" xml:space="preserve">
-    <value>Yükle / Kaydet</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Copy" xml:space="preserve">
-    <value>Kopyala</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Options" xml:space="preserve">
-    <value>Seçenekler...</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Help" xml:space="preserve">
-    <value>Kaydırmalı ekran görüntüsü yardımı</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Select_scrollable_window" xml:space="preserve">
-    <value>Başlamak için kaydırılabilir bir pencere seçin</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Ready" xml:space="preserve">
-    <value>Hazır</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Options_heading" xml:space="preserve">
-    <value>Kaydırmalı yakalama seçenekleri</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Start_delay" xml:space="preserve">
-    <value>Başlangıç gecikmesi:</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Milliseconds" xml:space="preserve">
-    <value>ms</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Scroll_delay" xml:space="preserve">
-    <value>Kaydırma gecikmesi:</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Scroll_method" xml:space="preserve">
-    <value>Kaydırma yöntemi:</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Scroll_amount" xml:space="preserve">
-    <value>Kaydırma miktarı:</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Times" xml:space="preserve">
-    <value>kez</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Automatically_scroll_to_top" xml:space="preserve">
-    <value>Otomatik olarak en üste kaydır</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Auto_ignore_bottom_edge" xml:space="preserve">
-    <value>Alt kenarı otomatik olarak yoksay</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Show_capture_region" xml:space="preserve">
-    <value>Kaydırmalı yakalama bölgesini göster</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Automatically_upload_save" xml:space="preserve">
-    <value>Otomatik olarak yükle / kaydet</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Cancel" xml:space="preserve">
-    <value>İptal</value>
-  </data>
-  <data name="ScrollingCaptureWindow_OK" xml:space="preserve">
-    <value>Tamam</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Stopping_capture" xml:space="preserve">
-    <value>Yakalama durduruluyor...</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Selection_cancelled" xml:space="preserve">
-    <value>Pencere seçimi iptal edildi</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Capturing" xml:space="preserve">
-    <value>Yakalanıyor...</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Capture_failed" xml:space="preserve">
-    <value>Yakalama başarısız</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Capture_partially_successful" xml:space="preserve">
-    <value>Yakalama kısmen başarılı</value>
-  </data>
-  <data name="ScrollingCaptureWindow_Capture_successful" xml:space="preserve">
-    <value>Yakalama başarılı</value>
-  </data>
   <data name="BaseRegionForm_InitializeComponent_Region_capture" xml:space="preserve">
     <value>Yakalama bölgesi</value>
   </data>
-  <data name="RegionCaptureWindow_RectangleRegionTab" xml:space="preserve">
-    <value>Bölge yakala (Tab)</value>
-  </data>
-  <data name="ScreenRecordForm_StartRecording_Click_tray_icon_to_stop_recording_" xml:space="preserve">
-    <value>Kaydı durdurmak için tıklayın.</value>
-  </data>
-  <data name="ScreenRecordForm_StartRecording_Waiting___" xml:space="preserve">
-    <value>Bekleniyor...</value>
-  </data>
-  <data name="Resume" xml:space="preserve">
-    <value>Devam et</value>
-  </data>
-  <data name="ScreenRecordForm_StartRecording_Encoding___" xml:space="preserve">
-    <value>Kodlanıyor...</value>
-  </data>
-  <data name="Pause" xml:space="preserve">
-    <value>Duraklat</value>
-  </data>
-  <data name="ScreenRecordForm_Start" xml:space="preserve">
-    <value>Başlat</value>
-  </data>
-  <data name="ScreenRecordForm_Stop" xml:space="preserve">
-    <value>Durdur</value>
-  </data>
-  <data name="ScreenRecordForm_StartRecording_Click_tray_icon_to_start_recording_" xml:space="preserve">
-    <value>Kayda başlamak için tıklayın.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_ultra_fast" xml:space="preserve">
-    <value>Ultra hızlı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_super_fast" xml:space="preserve">
-    <value>Süper hızlı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_very_fast" xml:space="preserve">
-    <value>Çok hızlı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_faster" xml:space="preserve">
-    <value>Daha hızlı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_fast" xml:space="preserve">
-    <value>Hızlı</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_medium" xml:space="preserve">
-    <value>Orta</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_slow" xml:space="preserve">
-    <value>Yavaş</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_slower" xml:space="preserve">
-    <value>Daha yavaş</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_very_slow" xml:space="preserve">
-    <value>Çok yavaş</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Preset_placebo" xml:space="preserve">
-    <value>Plasebo</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_fastest_lowest_quality" xml:space="preserve">
-    <value>En hızlı (en düşük kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_faster_lower_quality" xml:space="preserve">
-    <value>Daha hızlı (daha düşük kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_fast_low_quality" xml:space="preserve">
-    <value>Hızlı (düşük kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_medium_medium_quality" xml:space="preserve">
-    <value>Orta (orta kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_slow_good_quality" xml:space="preserve">
-    <value>Yavaş (iyi kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_slower_better_quality" xml:space="preserve">
-    <value>Daha yavaş (daha iyi kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_slowest_best_quality" xml:space="preserve">
-    <value>En yavaş (en iyi kalite)</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_high_quality" xml:space="preserve">
-    <value>Yüksek kalite</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_low_latency" xml:space="preserve">
-    <value>Düşük gecikme</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_ultra_low_latency" xml:space="preserve">
-    <value>Ultra düşük gecikme</value>
-  </data>
-  <data name="FFmpegOptionsWindow_NVENC_lossless" xml:space="preserve">
-    <value>Kayıpsız</value>
+  <data name="FFmpegOptionsWindow_AMF_balanced" xml:space="preserve">
+    <value>Dengeli</value>
   </data>
   <data name="FFmpegOptionsWindow_AMF_generic_transcoding" xml:space="preserve">
     <value>Genel kod dönüştürme</value>
-  </data>
-  <data name="FFmpegOptionsWindow_AMF_ultra_low_latency_transcoding" xml:space="preserve">
-    <value>Ultra düşük gecikmeli kod dönüştürme</value>
-  </data>
-  <data name="FFmpegOptionsWindow_AMF_low_latency_transcoding" xml:space="preserve">
-    <value>Düşük gecikmeli kod dönüştürme</value>
-  </data>
-  <data name="FFmpegOptionsWindow_AMF_webcam" xml:space="preserve">
-    <value>Web kamerası</value>
   </data>
   <data name="FFmpegOptionsWindow_AMF_high_quality_transcoding" xml:space="preserve">
     <value>Yüksek kaliteli kod dönüştürme</value>
@@ -442,14 +73,86 @@
   <data name="FFmpegOptionsWindow_AMF_low_latency_high_quality_transcoding" xml:space="preserve">
     <value>Düşük gecikmeli, yüksek kaliteli kod dönüştürme</value>
   </data>
-  <data name="FFmpegOptionsWindow_AMF_prefer_speed" xml:space="preserve">
-    <value>Hıza öncelik ver</value>
-  </data>
-  <data name="FFmpegOptionsWindow_AMF_balanced" xml:space="preserve">
-    <value>Dengeli</value>
+  <data name="FFmpegOptionsWindow_AMF_low_latency_transcoding" xml:space="preserve">
+    <value>Düşük gecikmeli kod dönüştürme</value>
   </data>
   <data name="FFmpegOptionsWindow_AMF_prefer_quality" xml:space="preserve">
     <value>Kaliteye öncelik ver</value>
+  </data>
+  <data name="FFmpegOptionsWindow_AMF_prefer_speed" xml:space="preserve">
+    <value>Hıza öncelik ver</value>
+  </data>
+  <data name="FFmpegOptionsWindow_AMF_ultra_low_latency_transcoding" xml:space="preserve">
+    <value>Ultra düşük gecikmeli kod dönüştürme</value>
+  </data>
+  <data name="FFmpegOptionsWindow_AMF_webcam" xml:space="preserve">
+    <value>Web kamerası</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Additional_arguments" xml:space="preserve">
+    <value>Ek bağımsız değişkenler</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Advanced" xml:space="preserve">
+    <value>Gelişmiş</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Animated_formats_no_audio" xml:space="preserve">
+    <value>Animasyonlu görüntü biçimleri ses içermez. Ses kodlamasını etkinleştirmek için bir video biçimi seçin.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Arguments_example" xml:space="preserve">
+    <value>Örnek: -vf scale=1920:-2</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Audio" xml:space="preserve">
+    <value>Ses</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Audio_encoder" xml:space="preserve">
+    <value>Ses kodlayıcı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Audio_source" xml:space="preserve">
+    <value>Ses kaynağı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Bayer_scale" xml:space="preserve">
+    <value>Bayer ölçeği</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Bayer_scale_hint" xml:space="preserve">
+    <value>Yüksek değerler daha görünür bantlaşma üretir. Varsayılan değer 2'dir.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Bitrate" xml:space="preserve">
+    <value>Bit hızı (kbps)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Browse_for_ffmpeg" xml:space="preserve">
+    <value>ffmpeg.exe dosyasına göz at</value>
+  </data>
+  <data name="FFmpegOptionsWindow_CRF_hint" xml:space="preserve">
+    <value>Düşük değerler kaliteyi artırır ve dosya boyutunu büyütür. 0 kayıpsızdır; ShareX varsayılanı 28'dir.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Capture_sources" xml:space="preserve">
+    <value>Yakalama kaynakları</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Choose_audio_source" xml:space="preserve">
+    <value>Bir ses kaynağı seçin</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Choose_video_source" xml:space="preserve">
+    <value>Bir video kaynağı seçin</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_H264_AMD" xml:space="preserve">
+    <value>H.264 AMD kodlaması</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_H264_AMD_hint" xml:space="preserve">
+    <value>CPU kullanımını azaltmak için desteklenen bir AMD GPU kullanır.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_H264_Intel_Quick_Sync" xml:space="preserve">
+    <value>H.264 Intel Quick Sync</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_H264_Intel_Quick_Sync_hint" xml:space="preserve">
+    <value>CPU kullanımını azaltmak için desteklenen Intel grafik donanımını kullanır.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_H264_NVIDIA" xml:space="preserve">
+    <value>H.264 NVIDIA kodlaması</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_H264_NVIDIA_hint" xml:space="preserve">
+    <value>CPU kullanımını azaltmak için desteklenen bir NVIDIA GPU kullanır.</value>
   </data>
   <data name="FFmpegOptionsWindow_Codec_H264_software" xml:space="preserve">
     <value>H.264 yazılım kodlaması</value>
@@ -461,7 +164,31 @@
     <value>H.265 yazılım kodlaması</value>
   </data>
   <data name="FFmpegOptionsWindow_Codec_H265_software_hint" xml:space="preserve">
-    <value>H.264&apos;e göre daha küçük dosyalar; ancak kodlama daha yavaştır ve oynatma desteği daha sınırlıdır.</value>
+    <value>H.264'e göre daha küçük dosyalar; ancak kodlama daha yavaştır ve oynatma desteği daha sınırlıdır.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_HEVC_AMD" xml:space="preserve">
+    <value>HEVC AMD kodlaması</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_HEVC_AMD_hint" xml:space="preserve">
+    <value>Daha sınırlı oynatma uyumluluğuyla verimli GPU kodlaması sağlar.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_HEVC_Intel_Quick_Sync" xml:space="preserve">
+    <value>HEVC Intel Quick Sync</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_HEVC_Intel_Quick_Sync_hint" xml:space="preserve">
+    <value>Daha sınırlı oynatma uyumluluğuyla verimli Intel donanım kodlaması sağlar.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_HEVC_NVIDIA" xml:space="preserve">
+    <value>HEVC NVIDIA kodlaması</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_HEVC_NVIDIA_hint" xml:space="preserve">
+    <value>Daha sınırlı oynatma uyumluluğuyla verimli GPU kodlaması sağlar.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_MPEG4_Xvid" xml:space="preserve">
+    <value>MPEG-4 / Xvid</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_MPEG4_Xvid_hint" xml:space="preserve">
+    <value>AVI uyumluluğu için eski bir kodlayıcıdır.</value>
   </data>
   <data name="FFmpegOptionsWindow_Codec_VP8_software" xml:space="preserve">
     <value>VP8 yazılım kodlaması</value>
@@ -475,59 +202,11 @@
   <data name="FFmpegOptionsWindow_Codec_VP9_software_hint" xml:space="preserve">
     <value>Daha yüksek CPU kullanımıyla verimli WebM çıktısı sağlar.</value>
   </data>
-  <data name="FFmpegOptionsWindow_Codec_MPEG4_Xvid" xml:space="preserve">
-    <value>MPEG-4 / Xvid</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_MPEG4_Xvid_hint" xml:space="preserve">
-    <value>AVI uyumluluğu için eski bir kodlayıcıdır.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_H264_NVIDIA" xml:space="preserve">
-    <value>H.264 NVIDIA kodlaması</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_H264_NVIDIA_hint" xml:space="preserve">
-    <value>CPU kullanımını azaltmak için desteklenen bir NVIDIA GPU kullanır.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_HEVC_NVIDIA" xml:space="preserve">
-    <value>HEVC NVIDIA kodlaması</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_HEVC_NVIDIA_hint" xml:space="preserve">
-    <value>Daha sınırlı oynatma uyumluluğuyla verimli GPU kodlaması sağlar.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_H264_AMD" xml:space="preserve">
-    <value>H.264 AMD kodlaması</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_H264_AMD_hint" xml:space="preserve">
-    <value>CPU kullanımını azaltmak için desteklenen bir AMD GPU kullanır.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_HEVC_AMD" xml:space="preserve">
-    <value>HEVC AMD kodlaması</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_HEVC_AMD_hint" xml:space="preserve">
-    <value>Daha sınırlı oynatma uyumluluğuyla verimli GPU kodlaması sağlar.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_H264_Intel_Quick_Sync" xml:space="preserve">
-    <value>H.264 Intel Quick Sync</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_H264_Intel_Quick_Sync_hint" xml:space="preserve">
-    <value>CPU kullanımını azaltmak için desteklenen Intel grafik donanımını kullanır.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_HEVC_Intel_Quick_Sync" xml:space="preserve">
-    <value>HEVC Intel Quick Sync</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_HEVC_Intel_Quick_Sync_hint" xml:space="preserve">
-    <value>Daha sınırlı oynatma uyumluluğuyla verimli Intel donanım kodlaması sağlar.</value>
-  </data>
   <data name="FFmpegOptionsWindow_Codec_animated_GIF" xml:space="preserve">
     <value>Animasyonlu GIF</value>
   </data>
   <data name="FFmpegOptionsWindow_Codec_animated_GIF_hint" xml:space="preserve">
     <value>Yaygın olarak desteklenir; ancak daha büyük dosyalar üretir ve ses içermez.</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_animated_WebP" xml:space="preserve">
-    <value>Animasyonlu WebP</value>
-  </data>
-  <data name="FFmpegOptionsWindow_Codec_animated_WebP_hint" xml:space="preserve">
-    <value>Ses parçası olmayan küçük boyutlu animasyonlu görüntüler.</value>
   </data>
   <data name="FFmpegOptionsWindow_Codec_animated_PNG" xml:space="preserve">
     <value>Animasyonlu PNG</value>
@@ -535,7 +214,328 @@
   <data name="FFmpegOptionsWindow_Codec_animated_PNG_hint" xml:space="preserve">
     <value>Büyük dosyalar oluşturan, ses parçası içermeyen yüksek kaliteli animasyon.</value>
   </data>
+  <data name="FFmpegOptionsWindow_Codec_animated_WebP" xml:space="preserve">
+    <value>Animasyonlu WebP</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Codec_animated_WebP_hint" xml:space="preserve">
+    <value>Ses parçası olmayan küçük boyutlu animasyonlu görüntüler.</value>
+  </data>
   <data name="FFmpegOptionsWindow_Codec_video_encoding" xml:space="preserve">
     <value>Video kodlaması</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Constant_rate_factor" xml:space="preserve">
+    <value>Sabit Hız Faktörü (CRF)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Custom_command_placeholders" xml:space="preserve">
+    <value>Özel komut yer tutucuları: $fps$, $area_x$, $area_y$, $area_width$, $area_height$, $cursor$, $duration$ ve $output$.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Description" xml:space="preserve">
+    <value>Neyin yakalanacağını ve FFmpeg'in bunu nasıl kodlayacağını seçin.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Device_enumeration_failed" xml:space="preserve">
+    <value>FFmpeg, DirectShow aygıtlarını listeleyemedi. Masaüstü yakalama kullanılabilir durumda.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Dithering_mode" xml:space="preserve">
+    <value>Titreme modu</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Encoder_settings" xml:space="preserve">
+    <value>Kodlayıcı ayarları</value>
+  </data>
+  <data name="FFmpegOptionsWindow_FFmpeg_command" xml:space="preserve">
+    <value>FFmpeg komutu</value>
+  </data>
+  <data name="FFmpegOptionsWindow_FFmpeg_executable" xml:space="preserve">
+    <value>FFmpeg yürütülebilir dosyası</value>
+  </data>
+  <data name="FFmpegOptionsWindow_FFmpeg_not_found" xml:space="preserve">
+    <value>FFmpeg {0} konumunda bulunamadı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Faster_presets_hint" xml:space="preserve">
+    <value>Daha hızlı ön ayarlar gerçek zamanlı olarak daha güvenilir kodlama yapar ancak daha büyük dosyalar oluşturur.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Get_recorder_devices" xml:space="preserve">
+    <value>Kaydedici aygıtlarını edin</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Looking_for_devices" xml:space="preserve">
+    <value>Yakalama aygıtları aranıyor...</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Lower_values_higher_quality" xml:space="preserve">
+    <value>Düşük değerler daha yüksek kalite üretir.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Multiple_devices_found" xml:space="preserve">
+    <value>{0} DirectShow aygıtı bulundu.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_fast_low_quality" xml:space="preserve">
+    <value>Hızlı (düşük kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_faster_lower_quality" xml:space="preserve">
+    <value>Daha hızlı (daha düşük kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_fastest_lowest_quality" xml:space="preserve">
+    <value>En hızlı (en düşük kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_high_quality" xml:space="preserve">
+    <value>Yüksek kalite</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_lossless" xml:space="preserve">
+    <value>Kayıpsız</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_low_latency" xml:space="preserve">
+    <value>Düşük gecikme</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_medium_medium_quality" xml:space="preserve">
+    <value>Orta (orta kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_slow_good_quality" xml:space="preserve">
+    <value>Yavaş (iyi kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_slower_better_quality" xml:space="preserve">
+    <value>Daha yavaş (daha iyi kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_slowest_best_quality" xml:space="preserve">
+    <value>En yavaş (en iyi kalite)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_NVENC_ultra_low_latency" xml:space="preserve">
+    <value>Ultra düşük gecikme</value>
+  </data>
+  <data name="FFmpegOptionsWindow_No_additional_settings" xml:space="preserve">
+    <value>Bu kodlayıcı ek ayar gerektirmez.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_No_devices_found" xml:space="preserve">
+    <value>DirectShow aygıtı bulunamadı. Masaüstü yakalama hazır.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_One_device_found" xml:space="preserve">
+    <value>{0} DirectShow aygıtı bulundu.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Palette_mode" xml:space="preserve">
+    <value>Palet modu</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Path_to_ffmpeg" xml:space="preserve">
+    <value>ffmpeg.exe yolu</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset" xml:space="preserve">
+    <value>Ön ayar</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_fast" xml:space="preserve">
+    <value>Hızlı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_faster" xml:space="preserve">
+    <value>Daha hızlı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_medium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_placebo" xml:space="preserve">
+    <value>Plasebo</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_slow" xml:space="preserve">
+    <value>Yavaş</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_slower" xml:space="preserve">
+    <value>Daha yavaş</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_super_fast" xml:space="preserve">
+    <value>Süper hızlı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_ultra_fast" xml:space="preserve">
+    <value>Ultra hızlı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_very_fast" xml:space="preserve">
+    <value>Çok hızlı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Preset_very_slow" xml:space="preserve">
+    <value>Çok yavaş</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Quality" xml:space="preserve">
+    <value>Kalite</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Refresh_devices" xml:space="preserve">
+    <value>Aygıtları yenile</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Reset" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Reset_all_options" xml:space="preserve">
+    <value>Tüm seçenekler sıfırlansın mı?</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Reset_encoding_options" xml:space="preserve">
+    <value>Kodlama seçeneklerini sıfırla</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Reset_options" xml:space="preserve">
+    <value>Seçenekleri sıfırla</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Screen_recording" xml:space="preserve">
+    <value>Ekran kaydı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Slow_presets_warning" xml:space="preserve">
+    <value>Yavaş ön ayarlar ekran kaydı sırasında karelerin atlanmasına neden olabilir. „fast“ veya daha hızlısı önerilir.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Sources" xml:space="preserve">
+    <value>Kaynaklar</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Target_bitrate" xml:space="preserve">
+    <value>Hedef bit hızı (kbps)</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Title" xml:space="preserve">
+    <value>ShareX - Ekran kaydı seçenekleri</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Tune" xml:space="preserve">
+    <value>İnce ayar</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Usage" xml:space="preserve">
+    <value>Kullanım</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Use_custom_commands" xml:space="preserve">
+    <value>Özel komutlar kullan</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Use_custom_path" xml:space="preserve">
+    <value>Özel bir FFmpeg yolu kullan</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Use_target_bitrate" xml:space="preserve">
+    <value>Sabit kalite yerine hedef bit hızı kullan</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Variable_bitrate_hint" xml:space="preserve">
+    <value>1 en yüksek kaliteyi ve en büyük dosyayı; 31 en düşük kaliteyi ve en küçük dosyayı verir.</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Variable_bitrate_quality" xml:space="preserve">
+    <value>Değişken bit hızı kalitesi</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Video_encoder" xml:space="preserve">
+    <value>Video kodlayıcı</value>
+  </data>
+  <data name="FFmpegOptionsWindow_Video_source" xml:space="preserve">
+    <value>Video kaynağı</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Duraklat</value>
+  </data>
+  <data name="RegionCaptureWindow_RectangleRegionTab" xml:space="preserve">
+    <value>Bölge yakala (Tab)</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Devam et</value>
+  </data>
+  <data name="ScreenRecordForm_Start" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="ScreenRecordForm_StartRecording_Click_tray_icon_to_start_recording_" xml:space="preserve">
+    <value>Kayda başlamak için tıklayın.</value>
+  </data>
+  <data name="ScreenRecordForm_StartRecording_Click_tray_icon_to_stop_recording_" xml:space="preserve">
+    <value>Kaydı durdurmak için tıklayın.</value>
+  </data>
+  <data name="ScreenRecordForm_StartRecording_Encoding___" xml:space="preserve">
+    <value>Kodlanıyor...</value>
+  </data>
+  <data name="ScreenRecordForm_StartRecording_Waiting___" xml:space="preserve">
+    <value>Bekleniyor...</value>
+  </data>
+  <data name="ScreenRecordForm_Stop" xml:space="preserve">
+    <value>Durdur</value>
+  </data>
+  <data name="ScreenRecordWindow_Abort" xml:space="preserve">
+    <value>İptal et</value>
+  </data>
+  <data name="ScreenRecordWindow_Abort_this_recording" xml:space="preserve">
+    <value>Bu kayıt iptal edilsin mi?</value>
+  </data>
+  <data name="ScreenRecordWindow_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="ScreenRecordWindow_Pause" xml:space="preserve">
+    <value>Duraklat</value>
+  </data>
+  <data name="ScreenRecordWindow_Restart" xml:space="preserve">
+    <value>Yeniden başlat</value>
+  </data>
+  <data name="ScreenRecordWindow_Start" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="ScreenRecordWindow_Title" xml:space="preserve">
+    <value>ShareX - Ekran kaydı</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Auto_ignore_bottom_edge" xml:space="preserve">
+    <value>Alt kenarı otomatik olarak yoksay</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Automatically_scroll_to_top" xml:space="preserve">
+    <value>Otomatik olarak en üste kaydır</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Automatically_upload_save" xml:space="preserve">
+    <value>Otomatik olarak yükle / kaydet</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Capture" xml:space="preserve">
+    <value>Yakala...</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Capture_failed" xml:space="preserve">
+    <value>Yakalama başarısız</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Capture_partially_successful" xml:space="preserve">
+    <value>Yakalama kısmen başarılı</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Capture_successful" xml:space="preserve">
+    <value>Yakalama başarılı</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Capturing" xml:space="preserve">
+    <value>Yakalanıyor...</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Help" xml:space="preserve">
+    <value>Kaydırmalı ekran görüntüsü yardımı</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Milliseconds" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="ScrollingCaptureWindow_OK" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Options" xml:space="preserve">
+    <value>Seçenekler...</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Options_heading" xml:space="preserve">
+    <value>Kaydırmalı yakalama seçenekleri</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Ready" xml:space="preserve">
+    <value>Hazır</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Scroll_amount" xml:space="preserve">
+    <value>Kaydırma miktarı:</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Scroll_delay" xml:space="preserve">
+    <value>Kaydırma gecikmesi:</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Scroll_method" xml:space="preserve">
+    <value>Kaydırma yöntemi:</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Select_scrollable_window" xml:space="preserve">
+    <value>Başlamak için kaydırılabilir bir pencere seçin</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Selection_cancelled" xml:space="preserve">
+    <value>Pencere seçimi iptal edildi</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Show_capture_region" xml:space="preserve">
+    <value>Kaydırmalı yakalama bölgesini göster</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Start_delay" xml:space="preserve">
+    <value>Başlangıç gecikmesi:</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Stopping_capture" xml:space="preserve">
+    <value>Yakalama durduruluyor...</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Times" xml:space="preserve">
+    <value>kez</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Title" xml:space="preserve">
+    <value>ShareX - Kaydırmalı yakalama</value>
+  </data>
+  <data name="ScrollingCaptureWindow_Upload_Save" xml:space="preserve">
+    <value>Yükle / Kaydet</value>
   </data>
 </root>

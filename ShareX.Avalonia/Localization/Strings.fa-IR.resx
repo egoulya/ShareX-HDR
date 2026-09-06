@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>جستجو در تنظیمات</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>تغییر اندازه بیت‌مپ نشانگر انجام نشد.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>منبع نشانگر بیش از حد کوچک است.</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>فقط فایل‌های نشانگر با پسوند .cur پشتیبانی می‌شوند.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>بیت‌مپ‌های فشرده نشانگر پشتیبانی نمی‌شوند.</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>منبع نشانگر هیچ تصویری ندارد.</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>منبع نشانگر بیش از حد کوچک است.</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>داده‌های تصویر نشانگر خارج از محدوده است.</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>سرآیند بیت‌مپ نشانگر پشتیبانی نمی‌شود.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>تغییر اندازه بیت‌مپ نشانگر انجام نشد.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>بیت‌مپ‌های فشرده نشانگر پشتیبانی نمی‌شوند.</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>فقط فایل‌های نشانگر با پسوند .cur پشتیبانی می‌شوند.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>عمق بیت نشانگر پشتیبانی نمی‌شود: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>تایید</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>انصراف</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>سرآیند بیت‌مپ نشانگر پشتیبانی نمی‌شود.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>توقف</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>تلاش مجدد</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>ادامه</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>نادیده گرفتن</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>بله</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>خیر</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>تلاش مجدد</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>دوباره امتحان کنید</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>ادامه</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>جستجو در تنظیمات</value>
   </data>
 </root>

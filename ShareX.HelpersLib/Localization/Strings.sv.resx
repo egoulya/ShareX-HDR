@@ -58,384 +58,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorPickerWindow_Title" xml:space="preserve">
-    <value>ShareX – Färgväljare</value>
-  </data>
-  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
-    <value>Färgläge</value>
-  </data>
-  <data name="ColorPickerWindow_Hue" xml:space="preserve">
-    <value>Nyans</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
-    <value>Mättnad</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
-    <value>Ljusstyrka</value>
-  </data>
-  <data name="ColorPickerWindow_Red" xml:space="preserve">
-    <value>Röd</value>
-  </data>
-  <data name="ColorPickerWindow_Green" xml:space="preserve">
-    <value>Grön</value>
-  </data>
-  <data name="ColorPickerWindow_Blue" xml:space="preserve">
-    <value>Blå</value>
-  </data>
-  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
-    <value>Färgnamn</value>
-  </data>
-  <data name="ColorPickerWindow_Hex" xml:space="preserve">
-    <value>Hex</value>
-  </data>
-  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
-    <value>Decimal</value>
-  </data>
-  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
-    <value>Alfa</value>
-  </data>
-  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
-    <value>Nyans °</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
-    <value>Mättnad %</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
-    <value>Ljusstyrka %</value>
-  </data>
-  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
-    <value>Cyan %</value>
-  </data>
-  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
-    <value>Magenta %</value>
-  </data>
-  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
-    <value>Gul %</value>
-  </data>
-  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
-    <value>Svart %</value>
-  </data>
-  <data name="ColorPickerWindow_Current" xml:space="preserve">
-    <value>Aktuell</value>
-  </data>
-  <data name="ColorPickerWindow_Previous" xml:space="preserve">
-    <value>Föregående</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
-    <value>Kopiera alla detaljer</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
-    <value>Kopiera RGB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
-    <value>Kopiera hexadecimalt</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
-    <value>Kopiera HSB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
-    <value>Kopiera CMYK</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
-    <value>Kopiera decimalt</value>
-  </data>
-  <data name="ColorPickerWindow_Copy" xml:space="preserve">
-    <value>Kopiera</value>
-  </data>
-  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
-    <value>Senaste färger</value>
-  </data>
-  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
-    <value>Standardfärger</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
-    <value>Välj färg från skärmen...</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
-    <value>Välj färg från Urklipp</value>
-  </data>
-  <data name="ColorPickerWindow_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
-    <value>Avbryt</value>
-  </data>
-  <data name="ErrorWindow_Title" xml:space="preserve">
-    <value>ShareX – Fel</value>
-  </data>
-  <data name="ErrorWindow_Heading" xml:space="preserve">
-    <value>Ett fel inträffade</value>
-  </data>
-  <data name="ErrorWindow_Description" xml:space="preserve">
-    <value>Granska informationen nedan eller använd de tillgängliga supportalternativen.</value>
-  </data>
-  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
-    <value>Skicka felrapport</value>
-  </data>
-  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
-    <value>Öppna loggfil</value>
-  </data>
-  <data name="ErrorWindow_Continue" xml:space="preserve">
-    <value>Fortsätt</value>
-  </data>
-  <data name="ErrorWindow_Quit" xml:space="preserve">
-    <value>Avsluta</value>
-  </data>
-  <data name="ErrorWindow_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="ErrorWindow_Default_title" xml:space="preserve">
-    <value>Fel</value>
-  </data>
-  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
-    <value>Ett oväntat fel inträffade.</value>
-  </data>
-  <data name="ImageViewerWindow_Title" xml:space="preserve">
-    <value>ShareX – Bildvisare</value>
-  </data>
-  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
-    <value>Öppna bild</value>
-  </data>
-  <data name="InputBoxWindow_Default_title" xml:space="preserve">
-    <value>Indata</value>
-  </data>
-  <data name="InputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX – {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
-    <value>Utdata</value>
-  </data>
-  <data name="OutputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX – {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
-    <value>Kopiera allt</value>
-  </data>
-  <data name="OutputBoxWindow_Close" xml:space="preserve">
-    <value>Stäng</value>
-  </data>
-  <data name="PrintWindow_Title" xml:space="preserve">
-    <value>ShareX – Utskriftsalternativ</value>
-  </data>
-  <data name="PrintWindow_Heading" xml:space="preserve">
-    <value>Utskriftsalternativ</value>
-  </data>
-  <data name="PrintWindow_Description" xml:space="preserve">
-    <value>Konfigurera bildens placering och skalning.</value>
-  </data>
-  <data name="PrintWindow_Margin" xml:space="preserve">
-    <value>Marginal:</value>
-  </data>
-  <data name="PrintWindow_Pixels" xml:space="preserve">
-    <value>px</value>
-  </data>
-  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
-    <value>Rotera bilden automatiskt</value>
-  </data>
-  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
-    <value>Skala bilden automatiskt</value>
-  </data>
-  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
-    <value>Tillåt att bilden förstoras</value>
-  </data>
-  <data name="PrintWindow_Center_image_position" xml:space="preserve">
-    <value>Centrera bildens placering</value>
-  </data>
-  <data name="PrintWindow_Preview" xml:space="preserve">
-    <value>Förhandsgranska...</value>
-  </data>
-  <data name="DownloaderWindow_Title" xml:space="preserve">
-    <value>ShareX – Filhämtare</value>
-  </data>
-  <data name="DownloaderWindow_Heading" xml:space="preserve">
-    <value>Filhämtare</value>
-  </data>
-  <data name="DownloaderWindow_Description" xml:space="preserve">
-    <value>Hämta ShareX-uppdateringar och andra nödvändiga filer.</value>
-  </data>
-  <data name="DownloaderWindow_Download" xml:space="preserve">
-    <value>Hämta</value>
-  </data>
-  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
-    <value>Visa ändringslogg</value>
-  </data>
-  <data name="UpdateMessageWindow_Header" xml:space="preserve">
-    <value>En ShareX-uppdatering är tillgänglig</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
-    <value>Röd färg (0–255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
-    <value>Grön färg (0–255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
-    <value>Blå färg (0–255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
-    <value>Röd färg (0–1). Ange decimalprecision med {n}, standardvärdet är 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
-    <value>Grön färg (0–1). Ange decimalprecision med {n}, standardvärdet är 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
-    <value>Blå färg (0–1). Ange decimalprecision med {n}, standardvärdet är 3.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
-    <value>Hexadecimalt färgvärde (gemener)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
-    <value>Rött hexadecimalt färgvärde (00–ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
-    <value>Grönt hexadecimalt färgvärde (00–ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
-    <value>Blått hexadecimalt färgvärde (00–ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
-    <value>Hexadecimalt färgvärde (versaler)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
-    <value>Rött hexadecimalt färgvärde (00–FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
-    <value>Grönt hexadecimalt färgvärde (00–FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
-    <value>Blått hexadecimalt färgvärde (00–FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
-    <value>Cyan färg (0–100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
-    <value>Magenta färg (0–100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
-    <value>Gul färg (0–100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
-    <value>Svart färg (0–100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
-    <value>Färgnamn</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
-    <value>X-position</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
-    <value>Y-position</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
-    <value>Ny rad</value>
-  </data>
-  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="HotkeyInfo_Shift" xml:space="preserve">
-    <value>Skift</value>
-  </data>
-  <data name="HotkeyInfo_Alt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="HotkeyInfo_Win" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="HotkeyInfo_Backspace" xml:space="preserve">
-    <value>Backsteg</value>
-  </data>
-  <data name="HotkeyInfo_Enter" xml:space="preserve">
-    <value>Retur</value>
-  </data>
-  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
-    <value>Caps Lock</value>
-  </data>
-  <data name="HotkeyInfo_Page_down" xml:space="preserve">
-    <value>Page Down</value>
-  </data>
-  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
-    <value>Scroll Lock</value>
-  </data>
-  <data name="HotkeyInfo_Numpad" xml:space="preserve">
-    <value>Numeriskt tangentbord</value>
-  </data>
-  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
-    <value>FFmpeg-fel</value>
-  </data>
-  <data name="Translator_Text" xml:space="preserve">
-    <value>Text</value>
-  </data>
-  <data name="Translator_Binary" xml:space="preserve">
-    <value>Binärt</value>
-  </data>
-  <data name="Translator_Hexadecimal" xml:space="preserve">
-    <value>Hexadecimalt</value>
-  </data>
-  <data name="Translator_ASCII" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="Translator_Base64" xml:space="preserve">
-    <value>Base64</value>
-  </data>
-  <data name="PingResult_Reply_from" xml:space="preserve">
-    <value>Svar från {0}: byte={1} tid={2} ms TTL={3}</value>
-  </data>
-  <data name="PingResult_Request_timed_out" xml:space="preserve">
-    <value>Begäran gjorde timeout.</value>
-  </data>
-  <data name="PingResult_Ping_failed" xml:space="preserve">
-    <value>Ping misslyckades: {0}</value>
-  </data>
-  <data name="PingResult_Statistics" xml:space="preserve">
-    <value>Minimum = {0} ms, maximum = {1} ms, medelvärde = {2} ms</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
-    <value>Skrivaren ”{0}” finns inte. Windows standardskrivare används i stället. Du kan åsidosätta standardskrivaren i programinställningarna.</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
-    <value>Ogiltigt skrivarnamn</value>
-  </data>
-  <data name="VideoInfo_Summary" xml:space="preserve">
-    <value>Filnamn: {0}, längd: {1}, bithastighet: {2} kbit/s</value>
-  </data>
-  <data name="VideoInfo_Video_details" xml:space="preserve">
-    <value>, videokodek: {0}, upplösning: {1} × {2}, FPS: {3}</value>
-  </data>
-  <data name="VideoInfo_Audio_details" xml:space="preserve">
-    <value>, ljudkodek: {0}</value>
-  </data>
-  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
-    <value>Fel när filen skulle byta namn:</value>
-  </data>
-  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
-    <value>En giltig sökväg till en textfil krävs.</value>
-  </data>
-  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
-    <value>Ogiltig URL.</value>
-  </data>
-  <data name="ZipManager_Archive_too_large" xml:space="preserve">
-    <value>Den okomprimerade storleken för arkivet överskrider den högsta tillåtna filstorleken.</value>
-  </data>
-  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
-    <value>Arkivets okomprimerade filstorlek: {0}</value>
-  </data>
-  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
-    <value>Högsta tillåtna filstorlek: {0}</value>
-  </data>
-  <data name="Helpers_Timeout" xml:space="preserve">
-    <value>Tidsgräns</value>
-  </data>
-  <data name="ImageHelpers_Image_files" xml:space="preserve">
-    <value>Bildfiler</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
-    <value>Den senaste projektversionen kunde inte skapas.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
-    <value>Det gick inte att hitta en lyckad versionsbyggnad.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
-    <value>Det gick inte att hitta filen ”{0}”.</value>
-  </data>
   <data name="ActionsCodeMenuEntry_FilePath_File_path" xml:space="preserve">
     <value>Filsökväg</value>
   </data>
@@ -494,10 +116,10 @@
     <value>Skriv ut bild</value>
   </data>
   <data name="AfterCaptureTasks_ShowAfterCaptureWindow" xml:space="preserve">
-    <value>Visa fönstret &quot;Efter bildtagning&quot;</value>
+    <value>Visa fönstret "Efter bildtagning"</value>
   </data>
   <data name="AfterCaptureTasks_ShowBeforeUploadWindow" xml:space="preserve">
-    <value>Visa fönstret &quot;Före uppladdning&quot;</value>
+    <value>Visa fönstret "Före uppladdning"</value>
   </data>
   <data name="AfterCaptureTasks_ShowInExplorer" xml:space="preserve">
     <value>Visa filen i Utforskaren</value>
@@ -518,13 +140,22 @@
     <value>Dela URL</value>
   </data>
   <data name="AfterUploadTasks_ShowAfterUploadWindow" xml:space="preserve">
-    <value>Visa fönstret &quot;Efter uppladdning&quot;</value>
+    <value>Visa fönstret "Efter uppladdning"</value>
   </data>
   <data name="AfterUploadTasks_ShowQRCode" xml:space="preserve">
     <value>Visa QR-kodsfönstret</value>
   </data>
   <data name="AfterUploadTasks_UseURLShortener" xml:space="preserve">
     <value>Förkorta URL</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
+    <value>Det gick inte att hitta filen ”{0}”.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
+    <value>Den senaste projektversionen kunde inte skapas.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
+    <value>Det gick inte att hitta en lyckad versionsbyggnad.</value>
   </data>
   <data name="ArrowHeadDirection_Both" xml:space="preserve">
     <value>Båda</value>
@@ -558,6 +189,174 @@
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Slumpmässigt djur</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
+    <value>Blå färg (0–255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
+    <value>Blått hexadecimalt färgvärde (00–ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
+    <value>Blått hexadecimalt färgvärde (00–FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
+    <value>Blå färg (0–1). Ange decimalprecision med {n}, standardvärdet är 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
+    <value>Färgnamn</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
+    <value>Cyan färg (0–100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
+    <value>Grön färg (0–255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
+    <value>Grönt hexadecimalt färgvärde (00–ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
+    <value>Grönt hexadecimalt färgvärde (00–FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
+    <value>Grön färg (0–1). Ange decimalprecision med {n}, standardvärdet är 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
+    <value>Hexadecimalt färgvärde (gemener)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
+    <value>Hexadecimalt färgvärde (versaler)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
+    <value>Svart färg (0–100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
+    <value>Magenta färg (0–100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
+    <value>Ny rad</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
+    <value>Röd färg (0–255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
+    <value>Rött hexadecimalt färgvärde (00–ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
+    <value>Rött hexadecimalt färgvärde (00–FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
+    <value>Röd färg (0–1). Ange decimalprecision med {n}, standardvärdet är 3.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
+    <value>X-position</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
+    <value>Y-position</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
+    <value>Gul färg (0–100)</value>
+  </data>
+  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
+    <value>Alfa</value>
+  </data>
+  <data name="ColorPickerWindow_Blue" xml:space="preserve">
+    <value>Blå</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
+    <value>Ljusstyrka</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
+    <value>Ljusstyrka %</value>
+  </data>
+  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
+    <value>Färgläge</value>
+  </data>
+  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
+    <value>Färgnamn</value>
+  </data>
+  <data name="ColorPickerWindow_Copy" xml:space="preserve">
+    <value>Kopiera</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
+    <value>Kopiera CMYK</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
+    <value>Kopiera HSB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
+    <value>Kopiera RGB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
+    <value>Kopiera alla detaljer</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
+    <value>Kopiera decimalt</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
+    <value>Kopiera hexadecimalt</value>
+  </data>
+  <data name="ColorPickerWindow_Current" xml:space="preserve">
+    <value>Aktuell</value>
+  </data>
+  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
+    <value>Cyan %</value>
+  </data>
+  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="ColorPickerWindow_Green" xml:space="preserve">
+    <value>Grön</value>
+  </data>
+  <data name="ColorPickerWindow_Hex" xml:space="preserve">
+    <value>Hex</value>
+  </data>
+  <data name="ColorPickerWindow_Hue" xml:space="preserve">
+    <value>Nyans</value>
+  </data>
+  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
+    <value>Nyans °</value>
+  </data>
+  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
+    <value>Svart %</value>
+  </data>
+  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
+    <value>Magenta %</value>
+  </data>
+  <data name="ColorPickerWindow_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
+    <value>Välj färg från Urklipp</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
+    <value>Välj färg från skärmen...</value>
+  </data>
+  <data name="ColorPickerWindow_Previous" xml:space="preserve">
+    <value>Föregående</value>
+  </data>
+  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
+    <value>Senaste färger</value>
+  </data>
+  <data name="ColorPickerWindow_Red" xml:space="preserve">
+    <value>Röd</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
+    <value>Mättnad</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
+    <value>Mättnad %</value>
+  </data>
+  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
+    <value>Standardfärger</value>
+  </data>
+  <data name="ColorPickerWindow_Title" xml:space="preserve">
+    <value>ShareX – Färgväljare</value>
+  </data>
+  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
+    <value>Gul %</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Filuppladdare</value>
@@ -595,12 +394,6 @@
   <data name="DownloaderForm_DownloaderForm_Waiting_" xml:space="preserve">
     <value>Väntar...</value>
   </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
-    <value>Hämtningen är klar.</value>
-  </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
-    <value>Installera</value>
-  </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>Hämtningshastighet</value>
   </data>
@@ -618,6 +411,24 @@
   </data>
   <data name="DownloaderForm_StartDownload_Getting_file_size_" xml:space="preserve">
     <value>Hämtar filstorlek...</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
+    <value>Hämtningen är klar.</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
+    <value>Installera</value>
+  </data>
+  <data name="DownloaderWindow_Description" xml:space="preserve">
+    <value>Hämta ShareX-uppdateringar och andra nödvändiga filer.</value>
+  </data>
+  <data name="DownloaderWindow_Download" xml:space="preserve">
+    <value>Hämta</value>
+  </data>
+  <data name="DownloaderWindow_Heading" xml:space="preserve">
+    <value>Filhämtare</value>
+  </data>
+  <data name="DownloaderWindow_Title" xml:space="preserve">
+    <value>ShareX – Filhämtare</value>
   </data>
   <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
     <value>Absolut storlek</value>
@@ -649,6 +460,36 @@
   <data name="Error" xml:space="preserve">
     <value>Fel</value>
   </data>
+  <data name="ErrorWindow_Continue" xml:space="preserve">
+    <value>Fortsätt</value>
+  </data>
+  <data name="ErrorWindow_Default_title" xml:space="preserve">
+    <value>Fel</value>
+  </data>
+  <data name="ErrorWindow_Description" xml:space="preserve">
+    <value>Granska informationen nedan eller använd de tillgängliga supportalternativen.</value>
+  </data>
+  <data name="ErrorWindow_Heading" xml:space="preserve">
+    <value>Ett fel inträffade</value>
+  </data>
+  <data name="ErrorWindow_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
+    <value>Öppna loggfil</value>
+  </data>
+  <data name="ErrorWindow_Quit" xml:space="preserve">
+    <value>Avsluta</value>
+  </data>
+  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
+    <value>Skicka felrapport</value>
+  </data>
+  <data name="ErrorWindow_Title" xml:space="preserve">
+    <value>ShareX – Fel</value>
+  </data>
+  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
+    <value>Ett oväntat fel inträffade.</value>
+  </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Kopiera</value>
   </data>
@@ -669,6 +510,9 @@
   </data>
   <data name="Extensions_AddContextMenu_Undo" xml:space="preserve">
     <value>Ångra</value>
+  </data>
+  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
+    <value>FFmpeg-fel</value>
   </data>
   <data name="FileDestination_CustomFileUploader" xml:space="preserve">
     <value>Anpassad filuppladdare</value>
@@ -691,6 +535,9 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>Lägg till ett nummer i filnamnet</value>
   </data>
+  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
+    <value>Fel när filen skulle byta namn:</value>
+  </data>
   <data name="GIFQuality_Bit4" xml:space="preserve">
     <value>Octree-kvantiserare, 16 färger</value>
   </data>
@@ -702,6 +549,9 @@
   </data>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>Palettkvantiserare, gråskala med 256 färger</value>
+  </data>
+  <data name="HSB_ToString_" xml:space="preserve">
+    <value>Nyans: {0:0.0}°, Mättnad: {1:0.0}%, Ljusstyrka: {2:0.0}%</value>
   </data>
   <data name="Helpers_BrowseFile_Choose_file" xml:space="preserve">
     <value>Välj fil</value>
@@ -717,6 +567,39 @@
   </data>
   <data name="Helpers_OpenFolder_Folder_not_exist_" xml:space="preserve">
     <value>Mappen finns inte:</value>
+  </data>
+  <data name="Helpers_Timeout" xml:space="preserve">
+    <value>Tidsgräns</value>
+  </data>
+  <data name="HotkeyInfo_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HotkeyInfo_Backspace" xml:space="preserve">
+    <value>Backsteg</value>
+  </data>
+  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="HotkeyInfo_Enter" xml:space="preserve">
+    <value>Retur</value>
+  </data>
+  <data name="HotkeyInfo_Numpad" xml:space="preserve">
+    <value>Numeriskt tangentbord</value>
+  </data>
+  <data name="HotkeyInfo_Page_down" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="HotkeyInfo_Shift" xml:space="preserve">
+    <value>Skift</value>
+  </data>
+  <data name="HotkeyInfo_Win" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="HotkeyType_AbortScreenRecording" xml:space="preserve">
     <value>Avbryt skärminspelning</value>
@@ -834,6 +717,9 @@
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Bildskärmstest</value>
+  </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Nätverksövervakare</value>
   </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Ingen</value>
@@ -955,14 +841,20 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>Videominiatyrskapare</value>
   </data>
-  <data name="HSB_ToString_" xml:space="preserve">
-    <value>Nyans: {0:0.0}°, Mättnad: {1:0.0}%, Ljusstyrka: {2:0.0}%</value>
-  </data>
   <data name="ImageDestination_CustomImageUploader" xml:space="preserve">
     <value>Anpassad bilduppladdare</value>
   </data>
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>Filuppladdare</value>
+  </data>
+  <data name="ImageHelpers_Image_files" xml:space="preserve">
+    <value>Bildfiler</value>
+  </data>
+  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
+    <value>Öppna bild</value>
+  </data>
+  <data name="ImageViewerWindow_Title" xml:space="preserve">
+    <value>ShareX – Bildvisare</value>
   </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Stor kvadrat</value>
@@ -982,6 +874,12 @@
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Liten miniatyr</value>
   </data>
+  <data name="InputBoxWindow_Default_title" xml:space="preserve">
+    <value>Indata</value>
+  </data>
+  <data name="InputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX – {0}</value>
+  </data>
   <data name="MyMessageBox_MyMessageBox_Cancel" xml:space="preserve">
     <value>Avbryt</value>
   </data>
@@ -993,6 +891,33 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>Ja</value>
+  </data>
+  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
+    <value>En giltig sökväg till en textfil krävs.</value>
+  </data>
+  <data name="OutputBoxWindow_Close" xml:space="preserve">
+    <value>Stäng</value>
+  </data>
+  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
+    <value>Kopiera allt</value>
+  </data>
+  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
+    <value>Utdata</value>
+  </data>
+  <data name="OutputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX – {0}</value>
+  </data>
+  <data name="PNGBitDepth_Automatic" xml:space="preserve">
+    <value>Identifiera automatiskt</value>
+  </data>
+  <data name="PNGBitDepth_Bit24" xml:space="preserve">
+    <value>24 bitar</value>
+  </data>
+  <data name="PNGBitDepth_Bit32" xml:space="preserve">
+    <value>32 bitar</value>
+  </data>
+  <data name="PNGBitDepth_Default" xml:space="preserve">
+    <value>Standard</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 dag</value>
@@ -1024,20 +949,56 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Olistad</value>
   </data>
-  <data name="PNGBitDepth_Automatic" xml:space="preserve">
-    <value>Identifiera automatiskt</value>
+  <data name="PingResult_Ping_failed" xml:space="preserve">
+    <value>Ping misslyckades: {0}</value>
   </data>
-  <data name="PNGBitDepth_Bit24" xml:space="preserve">
-    <value>24 bitar</value>
+  <data name="PingResult_Reply_from" xml:space="preserve">
+    <value>Svar från {0}: byte={1} tid={2} ms TTL={3}</value>
   </data>
-  <data name="PNGBitDepth_Bit32" xml:space="preserve">
-    <value>32 bitar</value>
+  <data name="PingResult_Request_timed_out" xml:space="preserve">
+    <value>Begäran gjorde timeout.</value>
   </data>
-  <data name="PNGBitDepth_Default" xml:space="preserve">
-    <value>Standard</value>
+  <data name="PingResult_Statistics" xml:space="preserve">
+    <value>Minimum = {0} ms, maximum = {1} ms, medelvärde = {2} ms</value>
   </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>Skriv ut</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
+    <value>Skrivaren ”{0}” finns inte. Windows standardskrivare används i stället. Du kan åsidosätta standardskrivaren i programinställningarna.</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
+    <value>Ogiltigt skrivarnamn</value>
+  </data>
+  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
+    <value>Tillåt att bilden förstoras</value>
+  </data>
+  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
+    <value>Rotera bilden automatiskt</value>
+  </data>
+  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
+    <value>Skala bilden automatiskt</value>
+  </data>
+  <data name="PrintWindow_Center_image_position" xml:space="preserve">
+    <value>Centrera bildens placering</value>
+  </data>
+  <data name="PrintWindow_Description" xml:space="preserve">
+    <value>Konfigurera bildens placering och skalning.</value>
+  </data>
+  <data name="PrintWindow_Heading" xml:space="preserve">
+    <value>Utskriftsalternativ</value>
+  </data>
+  <data name="PrintWindow_Margin" xml:space="preserve">
+    <value>Marginal:</value>
+  </data>
+  <data name="PrintWindow_Pixels" xml:space="preserve">
+    <value>px</value>
+  </data>
+  <data name="PrintWindow_Preview" xml:space="preserve">
+    <value>Förhandsgranska...</value>
+  </data>
+  <data name="PrintWindow_Title" xml:space="preserve">
+    <value>ShareX – Utskriftsalternativ</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 dag</value>
@@ -1144,14 +1105,14 @@
   <data name="ReplCodeMenuEntry_height_Gets_image_height" xml:space="preserve">
     <value>Bildhöjd</value>
   </data>
+  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
+    <value>Automatisk ökning, alfanumerisk och skiftlägeskänslig (vänsterutfyllnad med 0 via {n})</value>
+  </data>
   <data name="ReplCodeMenuEntry_i_Auto_increment_number" xml:space="preserve">
     <value>Automatisk nummerökning (vänsterutfyllnad med 0 via {n})</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>Automatisk ökning, alfanumerisk och skiftlägesokänslig (vänsterutfyllnad med 0 via {n})</value>
-  </data>
-  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
-    <value>Automatisk ökning, alfanumerisk och skiftlägeskänslig (vänsterutfyllnad med 0 via {n})</value>
   </data>
   <data name="ReplCodeMenuEntry_ib_Auto_increment_base_alphanumeric" xml:space="preserve">
     <value>Automatisk ökning i basen {n} med alfanumeriska tecken (1 &lt; n &lt; 63)</value>
@@ -1165,11 +1126,11 @@
   <data name="ReplCodeMenuEntry_mo_Current_month" xml:space="preserve">
     <value>Månad</value>
   </data>
-  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
-    <value>Månadsnamn (lokalt språk)</value>
-  </data>
   <data name="ReplCodeMenuEntry_mon2_Current_month_name__English_" xml:space="preserve">
     <value>Månadsnamn (engelska)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
+    <value>Månadsnamn (lokalt språk)</value>
   </data>
   <data name="ReplCodeMenuEntry_ms_Current_millisecond" xml:space="preserve">
     <value>Millisekund</value>
@@ -1210,11 +1171,11 @@
   <data name="ReplCodeMenuEntry_unix_Unix_timestamp" xml:space="preserve">
     <value>Unix-tidsstämpel</value>
   </data>
-  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
-    <value>Veckodagsnamn (lokalt språk)</value>
-  </data>
   <data name="ReplCodeMenuEntry_w2_Current_week_name__English_" xml:space="preserve">
     <value>Veckodagsnamn (engelska)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
+    <value>Veckodagsnamn (lokalt språk)</value>
   </data>
   <data name="ReplCodeMenuEntry_width_Gets_image_width" xml:space="preserve">
     <value>Bildbredd</value>
@@ -1312,6 +1273,36 @@
   <data name="ToastClickAction_Upload" xml:space="preserve">
     <value>Ladda upp fil</value>
   </data>
+  <data name="Translator_ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="Translator_Base64" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Translator_Binary" xml:space="preserve">
+    <value>Binärt</value>
+  </data>
+  <data name="Translator_Hexadecimal" xml:space="preserve">
+    <value>Hexadecimalt</value>
+  </data>
+  <data name="Translator_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
+    <value>Ogiltig URL.</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>Bing visuell sökning</value>
+  </data>
+  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
+    <value>Anpassad URL-delningstjänst</value>
+  </data>
+  <data name="URLSharingServices_Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
+    <value>Google Lens</value>
+  </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>Utveckling</value>
   </data>
@@ -1336,20 +1327,23 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>En uppdatering är tillgänglig</value>
   </data>
-  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
-    <value>Bing visuell sökning</value>
+  <data name="UpdateMessageWindow_Header" xml:space="preserve">
+    <value>En ShareX-uppdatering är tillgänglig</value>
   </data>
-  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
-    <value>Anpassad URL-delningstjänst</value>
-  </data>
-  <data name="URLSharingServices_Email" xml:space="preserve">
-    <value>E-post</value>
-  </data>
-  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
-    <value>Google Lens</value>
+  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
+    <value>Visa ändringslogg</value>
   </data>
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>Anpassad URL-förkortare</value>
+  </data>
+  <data name="VideoInfo_Audio_details" xml:space="preserve">
+    <value>, ljudkodek: {0}</value>
+  </data>
+  <data name="VideoInfo_Summary" xml:space="preserve">
+    <value>Filnamn: {0}, längd: {1}, bithastighet: {2} kbit/s</value>
+  </data>
+  <data name="VideoInfo_Video_details" xml:space="preserve">
+    <value>, videokodek: {0}, upplösning: {1} × {2}, FPS: {3}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Privat</value>
@@ -1360,11 +1354,20 @@
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Olistad</value>
   </data>
-  <data name="HdrCaptureMode_Off" xml:space="preserve">
-    <value>Av</value>
+  <data name="ZipManager_Archive_too_large" xml:space="preserve">
+    <value>Den okomprimerade storleken för arkivet överskrider den högsta tillåtna filstorleken.</value>
+  </data>
+  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
+    <value>Arkivets okomprimerade filstorlek: {0}</value>
+  </data>
+  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
+    <value>Högsta tillåtna filstorlek: {0}</value>
   </data>
   <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
     <value>Dynamisk</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Av</value>
   </data>
   <data name="HdrCaptureMode_On" xml:space="preserve">
     <value>På</value>

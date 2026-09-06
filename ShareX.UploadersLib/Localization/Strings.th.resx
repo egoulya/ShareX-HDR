@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>ผู้ใช้</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>การอัปโหลดไปยัง Amazon S3 ล้มเหลว</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 อัจฉริยะ-การจัดระดับ</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 มาตรฐาน-ไม่บ่อย การเข้าถึง</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>การอัปโหลดไปยัง Amazon S3 ล้มเหลว</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>'คีย์การเข้าถึง' ต้องไม่ว่างเปล่า</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>ไม่ทราบ ข้อผิดพลาด</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>ไม่รองรับ คำขอ รูปแบบ: {0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>ไบนารี</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>จำนวนพารามิเตอร์ขั้นต่ำสำหรับฟังก์ชัน "{0}" คือ {1}</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>ไม่รองรับ คำขอ รูปแบบ: {0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX - การตั้งค่าปลายทาง</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>คีย์ API:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>คีย์ API เรียกคืนแล้ว</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>บัญชี</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>อัลบั้ม</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>คีย์ API:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>คีย์ API เรียกคืนแล้ว</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>การอนุญาต โค้ด:</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>เสร็จสมบูรณ์ การอนุญาต</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>เชื่อมต่อ บัญชี</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>เชื่อมต่อ Imgur บัญชี แรก</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>เชื่อมต่อ Photobucket บัญชี แรก</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>เชื่อมต่อ บัญชี</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>เชื่อมต่อแล้ว</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>ป้อนข้อมูลประจำตัวบัญชีเพื่อรับคีย์ API</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>ป้อนรหัสยืนยันตัวตนแบบสองปัจจัยปัจจุบันของคุณ</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>81 ความเข้ากันได้</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>API URL</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>API ชื่อโฮสต์</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>คีย์ API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>API ชื่อผู้ใช้</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>Acc ข้อมูล อีเมล</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>บัญชี ชนิด</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>API ชื่อโฮสต์</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>คีย์ API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>API ชื่อผู้ใช้</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>API URL</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>ต่อท้ายชื่อไฟล์ใน URL</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>โฮสต์</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>รูปภาพ</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>เข้าสู่ระบบ</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>ชื่อ</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>คำนำหน้าวัตถุ</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>การเน้นไวยากรณ์</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>TTL</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>TTL หน่วย</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>แท็ก</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>โทเค็น</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>ป้อนรหัสยืนยันตัวตนแบบสองปัจจัยปัจจุบันของคุณ</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>TTL</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>TTL หน่วย</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>เส้นทางอัปโหลด</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>ตัวอัปโหลด</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>ใช้ API v1</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>เว็บ คีย์ API</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>ชื่อ</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>{0} โฟลเดอร์</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>การตรวจสอบยืนยัน โค้ด:</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX - การตั้งค่าปลายทาง</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>การอัปโหลดผ่าน API จำกัดที่ 150 MB</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>ข้อความ</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>ชื่อ@ตัวอย่าง.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>ส่ง</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>เพื่อ อีเมล</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>ชื่อ@ตัวอย่าง.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS (FTP ผ่าน SSL)</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>กำลังรับ อัปโหลด URL ล้มเหลว.</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS (FTP ผ่าน SSL)</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>ไดรฟ์ของฉัน</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>สถานะ: {0}, คำขอ: {1}, ข้อผิดพลาด: {2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>การอัปโหลด Imgur ล้มเหลว: ({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>สี่เหลี่ยมขนาดใหญ่</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>เล็ก ภาพขนาดย่อ</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>สถานะ: {0}, คำขอ: {1}, ข้อผิดพลาด: {2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>การอัปโหลด Imgur ล้มเหลว: ({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>การอัปโหลดล้มเหลวโดยไม่ทราบสาเหตุ โปรดตรวจสอบคีย์ API</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>ใหม่ บัญชี</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>การอนุญาต เสร็จสมบูรณ์ สำเร็จ.</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>การอนุญาต ไม่ได้ สำเร็จ.</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>ไม่ถูกต้อง สถานะ พารามิเตอร์.</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>ยกเลิก</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>กำลังรอให้การอนุญาตในเบราว์เซอร์ของคุณเสร็จสมบูรณ์...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>การอนุญาต เสร็จสมบูรณ์ สำเร็จ.</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>การอนุญาต ไม่ได้ สำเร็จ.</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>ไม่ถูกต้อง สถานะ พารามิเตอร์.</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>คีย์ผู้ใช้ ข้อมูลลับผู้ใช้ หรือคีย์ส่วนตัวของผู้ใช้ว่างเปล่า</value>
@@ -1113,9 +1113,6 @@
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX - เลือก</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Pastebin เข้าสู่ระบบ ล้มเหลว.</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1147,11 +1144,11 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>ไม่แสดงในรายการ</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Pastebin เข้าสู่ระบบ ล้มเหลว.</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>Plik โฮสต์ ว่าง.</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>เซิร์ฟเวอร์ ต้องใช้ การอนุญาต.</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1วัน</value>
@@ -1186,23 +1183,14 @@
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>syntaxhighlighting</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>เซิร์ฟเวอร์ ต้องใช้ การอนุญาต.</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>อุปกรณ์ คีย์ หายไป.</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>ยังไม่ได้เลือกอุปกรณ์สำหรับการพุช</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>การรับรองความถูกต้อง ล้มเหลว.</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>ผลรวมตรวจสอบ ข้อผิดพลาด.</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>การเชื่อมต่อ ข้อผิดพลาด.</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>บัญชีมีพื้นที่เก็บข้อมูลเหลือไม่เพียงพอ</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>ยกเลิก</value>
@@ -1225,14 +1213,29 @@
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>การเข้าสู่ระบบล้มเหลว</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>ชื่อ@ตัวอย่าง.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>รหัสผ่าน</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX - เข้าสู่ระบบ puush</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>ชื่อ@ตัวอย่าง.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>การรับรองความถูกต้อง ล้มเหลว.</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>ผลรวมตรวจสอบ ข้อผิดพลาด.</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>การเชื่อมต่อ ข้อผิดพลาด.</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>บัญชีมีพื้นที่เก็บข้อมูลเหลือไม่เพียงพอ</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>คัดลอก URL</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>คัดลอก URL สำหรับลบ</value>
@@ -1248,9 +1251,6 @@
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>คัดลอก ภาพขนาดย่อ URL</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>คัดลอก URL</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>URL สำหรับลบ</value>
@@ -1273,20 +1273,20 @@
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>ไม่มี ผลลัพธ์ รายละเอียด พร้อมใช้งาน.</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>เปิด URL</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>เปิด การตอบกลับ URL</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>เปิด URL</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>การตอบกลับ URL</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>การตอบกลับ ข้อมูล</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>การตอบกลับ ข้อความ</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>การตอบกลับ URL</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>ผลลัพธ์</value>
@@ -1306,17 +1306,20 @@
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>URL ภาพขนาดย่อ</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>อัปโหลด การตอบกลับ</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>อัปโหลด การตอบกลับ</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>XML รูปแบบ</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>การจัดรูปแบบ ล้มเหลว.</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>ไม่มีไฟล์คีย์</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>URL API ของ Seafile ว่างเปล่า</value>
@@ -1335,9 +1338,6 @@
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>อัปโหลด ข้อมูล หายไป.</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>ไม่มีไฟล์คีย์</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>ไม่สามารถ สร้าง วิดีโอ.</value>
@@ -1360,11 +1360,11 @@
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>วาง.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>วาง2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>วาง.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1401,30 +1401,6 @@
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>อัปโหลด</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>ข้อมูลการอนุญาตหายไป โปรดเปิด URL การอนุญาตก่อน</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>ข้อความข้อผิดพลาด:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>URL คำขอ:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>สแตกเทรซ:</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>เข้าสู่ระบบ จำเป็น.</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>กำลังรีเฟรช โทเค็นการเข้าถึง ล้มเหลว.</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>{0} เข้าสู่ระบบ จำเป็น.</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>การอัปโหลดล้มเหลว.</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>Bing ภาพ ค้นหา</value>
@@ -1464,6 +1440,30 @@
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>เข้าสู่ระบบ จำเป็น.</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>กำลังรีเฟรช โทเค็นการเข้าถึง ล้มเหลว.</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>{0} เข้าสู่ระบบ จำเป็น.</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>การอัปโหลดล้มเหลว.</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>ข้อมูลการอนุญาตหายไป โปรดเปิด URL การอนุญาตก่อน</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>ข้อความข้อผิดพลาด:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>URL คำขอ:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>สแตกเทรซ:</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1507,15 +1507,6 @@
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>ศูนย์ ความกว้าง ตัวย่อ</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>ลายเซ็น หรือ ชื่อผู้ใช้/รหัสผ่าน หายไป.</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>การอัปโหลดล้มเหลว: {0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>อัปโหลด ถูกปฏิเสธ: {0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>ยกเลิก</value>
   </data>
@@ -1545,5 +1536,14 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>ไม่แสดงในรายการ</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>การอัปโหลดล้มเหลว: {0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>อัปโหลด ถูกปฏิเสธ: {0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>ลายเซ็น หรือ ชื่อผู้ใช้/รหัสผ่าน หายไป.</value>
   </data>
 </root>

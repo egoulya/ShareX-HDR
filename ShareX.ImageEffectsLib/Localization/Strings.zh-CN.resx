@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>方向</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>添加...停止</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>颜色节点</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>添加...停止</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>方向</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>移除</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>效果选项</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>{0}选项</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>选择一个效果以编辑其选项。</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>此效果没有可配置的属性。</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>编辑渐变...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>浏览...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>选择{0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>左</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>上</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>右</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>下</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>宽</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>高</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X：</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y：</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - 打包图像效果</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>打包预设</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>资源文件夹</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>包文件</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>浏览...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>覆盖现有包</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>打开效果文件夹</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>创建包</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>关闭</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>选择效果资源文件夹</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>保存图像效果包</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>ShareX 图像效果</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>资源文件夹必须位于 ShareX 图像效果文件夹内。</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>选择包文件路径。</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>此路径已存在一个包。请启用覆盖以替换它。</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>包创建成功。</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - 确认</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>继续</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>是</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>否</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - 图像效果</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} 毫秒</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>预设</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>新建预设</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>移除预设</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>复制预设</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>上移</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>下移</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>预设名称</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>效果</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>刷新预览...</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>自定义效果名称</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>添加效果</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>移除效果</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>复制效果</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>清空效果</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>打开图像</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>加载从剪贴板</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>打包预设...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>图像效果页面...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>保存图像...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>上传图像</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>继续</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>取消</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>关闭</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>未命名预设</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>创建包之前请输入预设名称。</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>清除所选预设中的所有效果？</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>图像效果预览...</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>调整</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>绘图</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>变换</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>调整</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>筛选器</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>变换</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>文本</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>文字水印</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>Alpha 通道</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>底部</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>像素 Alpha = 像素 Alpha * 值
-示例：0.5 会将像素 Alpha 降低 50%</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>左对齐</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>内部</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>外部</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>绝对大小</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>画布百分比</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>复制源</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>源在上方</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>下中</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>正中</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>左中</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>右中</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>上中</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>左上</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>右上</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>虚线</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>点划线</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>双点划线</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>点线</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>实线</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>绝对大小</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>不调整大小</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>画布百分比</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>水印百分比</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>裁剪</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>放大</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>双三次</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>双线性</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>高质量双三次</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>高质量双线性</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>最近邻</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>水平翻转</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>垂直翻转</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>旋转180度</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>旋转 270°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>旋转 90°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>旋转 90°并水平翻转</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>旋转 90°并垂直翻转</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>反对角线</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>正对角线</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>水平</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>垂直</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>将所有图像调整为指定大小。</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>仅当图像大于指定大小时调整其大小。</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>仅当图像小于指定大小时调整其大小。</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>抗锯齿</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>抗锯齿网格适配</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType 网格适配</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>每像素单比特</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>每像素单比特网格适配</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>系统默认</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>浏览...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>编辑渐变...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>效果选项</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>{0}选项</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>此效果没有可配置的属性。</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>选择一个效果以编辑其选项。</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>选择{0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>宽</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X：</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y：</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>此路径已存在一个包。请启用覆盖以替换它。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>资源文件夹</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>资源文件夹必须位于 ShareX 图像效果文件夹内。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>浏览...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>选择包文件路径。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>创建包</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>包创建成功。</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>ShareX 图像效果</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>打开效果文件夹</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>覆盖现有包</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>包文件</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>打包预设</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>保存图像效果包</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>选择效果资源文件夹</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - 打包图像效果</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>像素 Alpha = 像素 Alpha + 加值
 示例：0.5 会将像素 Alpha 增加 127.5</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>自动裁剪</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>黑白</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>模糊</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>亮度</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>像素 Alpha = 像素 Alpha * 值
+示例：0.5 会将像素 Alpha 降低 50%</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>像素颜色 = 像素颜色 + 值
 示例：0.5 会将像素颜色增加 127.5</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>画布</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>确定画布周围边距的计算方式。</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>色深</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>着色</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>对比度</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>像素颜色 = 像素颜色 * 值
 示例：1.5 会将像素颜色增加 50%</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>裁剪</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>背景</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>背景图像</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>边框</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>棋盘格</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>图像</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>如果图像水印大于源图像，则不绘制它。</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>确定必要时如何缩放图像水印。</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>如果图像水印大于源图像，则不绘制它。</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>粒子</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>文字水印</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>如果文字大于源图像，则不绘制它。</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>如果文字水印大于源图像，则不绘制它。</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>文本</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>如果文字大于源图像，则不绘制它。</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>边缘检测</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>浮雕</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>翻转</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>强制比例</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>伽马</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>最小值 0.1，最大值 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>高斯模糊</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>发光</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>灰度</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>色相</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>0 到 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>反相</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>颜色矩阵</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>红色 = (红色 * Rr) + (绿色 * Rg) + (蓝色 * Rb) + (Alpha * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>卷积矩阵</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>均值移除</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>轮廓</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>像素化</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>宝丽来</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>倒影</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>倒影高度相对于屏幕截图高度的比例。
-值必须介于 1 和 100 之间。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>倒影透明度从此值过渡到 MinAlpha。
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>倒影起始位置：屏幕截图高度 + 偏移</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>倒影高度相对于屏幕截图高度的比例。
+值必须介于 1 和 100 之间。</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>为倒影添加从左下到右下的倾斜。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>像素从左向右倾斜的程度。</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>替换颜色</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>调整大小</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>将高度设为 0 可在保持宽高比的同时自动调整高度。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>将宽度设为 0 可在保持宽高比的同时自动调整宽度。</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>将高度设为 0 可在保持宽高比的同时自动调整高度。</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>RGB 分离</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>旋转</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>选择 -360 到 360 之间的值。</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>启用后，输出图像将大于输入图像，并且不会发生裁剪。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>必须关闭“放大”才能使用此设置。启用后会裁剪图像；否则会缩小图像尺寸。</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>圆角</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>饱和度</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>缩放</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>将宽度百分比设为 0 可通过自动调整宽度来保持宽高比。</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>启用后，输出图像将大于输入图像，并且不会发生裁剪。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>将高度百分比设为 0 可通过自动调整高度来保持宽高比。</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>选择性颜色</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>棕褐色</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>阴影</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>将宽度百分比设为 0 可通过自动调整宽度来保持宽高比。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>选择 0.1 到 1.0 之间的值</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>锐化</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>倾斜</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>像素从左向右倾斜的程度。</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>像素从上向下倾斜的程度。</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>切片</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>平滑</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>撕裂边缘</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>波浪边缘</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>外部</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>Alpha 通道</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>内部</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>自动裁剪</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>高质量双三次</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>黑白</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>双三次</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>模糊</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>高质量双线性</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>亮度</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>双线性</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>画布</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>最近邻</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>色深</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>绝对大小</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>着色</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>画布百分比</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>对比度</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>不调整大小</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>绝对大小</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>水印百分比</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>画布百分比</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>放大</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>裁剪</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>无</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>背景</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>旋转 90°</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>背景图像</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>旋转180度</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>边框</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>旋转 270°</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>棋盘格</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>水平翻转</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>图像</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>旋转 90°并水平翻转</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>粒子</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>垂直翻转</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>文字水印</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>旋转 90°并垂直翻转</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>文本</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>将所有图像调整为指定大小。</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>边缘检测</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>仅当图像大于指定大小时调整其大小。</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>浮雕</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>仅当图像小于指定大小时调整其大小。</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>翻转</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>左上</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>强制比例</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>上中</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>伽马</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>右上</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>高斯模糊</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>左中</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>发光</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>正中</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>灰度</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>右中</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>色相</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>左下</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>反相</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>下中</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>颜色矩阵</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>右下</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>卷积矩阵</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>源在上方</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>均值移除</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>复制源</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>轮廓</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>实线</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>像素化</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>虚线</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>宝丽来</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>点线</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>RGB 分离</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>点划线</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>倒影</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>双点划线</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>替换颜色</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>自定义</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>调整大小</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>水平</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>旋转</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>垂直</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>圆角</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>正对角线</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>饱和度</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>反对角线</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>缩放</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>系统默认</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>选择性颜色</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>每像素单比特网格适配</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>棕褐色</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>每像素单比特</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>阴影</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>抗锯齿网格适配</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>锐化</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>抗锯齿</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>倾斜</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType 网格适配</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>切片</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>无</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>平滑</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>顶部</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>撕裂边缘</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>底部</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>波浪边缘</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>左对齐</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>继续</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>右</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - 确认</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>添加效果</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>清除所选预设中的所有效果？</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>清空效果</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>自定义效果名称</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>复制效果</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>复制预设</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>创建包之前请输入预设名称。</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>图像效果页面...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>加载从剪贴板</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>新建预设</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>打开图像</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>打包预设...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>预设名称</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>预设</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>图像效果预览...</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>刷新预览...</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>移除效果</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>移除预设</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>保存图像...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - 图像效果</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} 毫秒</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>未命名预设</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>上传图像</value>
   </data>
 </root>

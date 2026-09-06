@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>الاتجاه</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>إضافة... إيقاف</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>نقاط توقف اللون</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>إضافة... إيقاف</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>الاتجاه</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>إزالة</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>خيارات التأثير</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>خيارات {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>حدد تأثيرًا لتحرير خياراته.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>لا يحتوي هذا التأثير على خصائص قابلة للضبط.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>تحرير التدرج...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>استعراض...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>تحديد {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>يسار</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>أعلى</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>يمين</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>أسفل</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>عرض</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>ارتفاع</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - حزم تأثير الصورة</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>حزم الإعداد المسبق</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>مجلد الأصول</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>ملف الحزمة</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>استعراض...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>الكتابة فوق حزمة موجودة</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>فتح التأثيرات المجلد</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>إنشاء الحزمة</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>إغلاق</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>تحديد مجلد أصول التأثير</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>حفظ حزمة تأثير الصورة</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>تأثير صورة ShareX</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>يجب أن يكون مجلد الأصول داخل مجلد تأثيرات الصور في ShareX.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>اختر مسارًا لملف الحزمة.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>توجد حزمة بالفعل في هذا المسار. فعّل الكتابة فوق لاستبدالها.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>تم إنشاء الحزمة بنجاح.</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - تأكيد</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>متابعة</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>نعم</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>لا</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - تأثيرات الصور</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} مللي ثانية</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>الإعدادات المسبقة</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>جديد إعداد مسبق</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>إزالة إعداد مسبق</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>تكرار إعداد مسبق</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>تحريك لأعلى</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>تحريك لأسفل</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>إعداد مسبق الاسم</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>التأثيرات</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>تحديث المعاينة:</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>اسم التأثير المخصص</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>إضافة تأثير</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>إزالة التأثير</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>تكرار التأثير</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>مسح التأثيرات</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>فتح صورة</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>تحميل من الحافظة</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>حزم الإعداد المسبق...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>صفحة تأثيرات الصور...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>حفظ الصورة...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>رفع الصورة</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>متابعة</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>إلغاء</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>إغلاق</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>إعداد مسبق بلا اسم</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>أدخل اسمًا للإعداد المسبق قبل إنشاء الحزمة.</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>هل تريد مسح كل التأثيرات من الإعداد المسبق المحدد؟</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>تأثيرات الصور المعاينة:</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>التعديلات</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>الرسم</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>التحويلات</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>التعديلات</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>عوامل التصفية</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>التحويلات</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>النص</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>علامة مائية نصية</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>ألفا</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>أسفل</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>ألفا البكسل = ألفا البكسل * القيمة
-مثال: تقلل القيمة 0.5 ألفا البكسل بنسبة 50%</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>يسار</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>بدون</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>يمين</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>داخلي</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>خارجي</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>حجم فعلي</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>نسبة أبعاد الرقعة</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>نسخ المصدر</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>المصدر فوق</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>أسفل الوسط</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>أسفل اليسار</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>أسفل اليمين</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>في المركز</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>وسط اليسار</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>وسط اليمين</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>أعلى الوسط</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>أعلى اليسار</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>أعلى اليمين</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>شَرطة</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>شرطة ونقطة</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>شرطة ونقطتان</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>منقط</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>متصل</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>حجم فعلي</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>لا تقم بتغيير الحجم</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>نسبة أبعاد الرقعة</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>نسبة من العلامة المائية</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>اقتصاص</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>تكبير</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>تكعيبي مزدوج</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>خطي مزدوج</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>تكعيبي مزدوج عالي الجودة</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>خطي مزدوج عالي الجودة</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>أقرب مجاور</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>قلب أفقي</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>قلب عمودي</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>بدون</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>تدوير 180°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>تدوير 270°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>تدوير 90°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>تدوير 90° وقلب أفقي</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>تدوير 90° وقلب عمودي</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>قطري إلى الخلف</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>قطري إلى الأمام</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>أفقي</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>تغيير حجم كل الصور إلى الحجم المحدد.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>تغيير حجم الصورة فقط إذا كانت أكبر من الحجم المحدد.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>تغيير حجم الصورة فقط إذا كانت أصغر من الحجم المحدد.</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>تنعيم الحواف</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>تنعيم الحواف مع ملاءمة الشبكة</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType مع ملاءمة الشبكة</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>بت واحد لكل بكسل</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>بت واحد لكل بكسل مع ملاءمة الشبكة</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>إعداد النظام الافتراضي</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>استعراض...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>تحرير التدرج...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>خيارات التأثير</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>خيارات {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>ارتفاع</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>يسار</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>لا يحتوي هذا التأثير على خصائص قابلة للضبط.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>يمين</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>حدد تأثيرًا لتحرير خياراته.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>تحديد {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>توجد حزمة بالفعل في هذا المسار. فعّل الكتابة فوق لاستبدالها.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>مجلد الأصول</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>يجب أن يكون مجلد الأصول داخل مجلد تأثيرات الصور في ShareX.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>استعراض...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>اختر مسارًا لملف الحزمة.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>إنشاء الحزمة</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>تم إنشاء الحزمة بنجاح.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>تأثير صورة ShareX</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>فتح التأثيرات المجلد</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>الكتابة فوق حزمة موجودة</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>ملف الحزمة</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>حزم الإعداد المسبق</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>حفظ حزمة تأثير الصورة</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>تحديد مجلد أصول التأثير</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - حزم تأثير الصورة</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>ألفا البكسل = ألفا البكسل + القيمة المضافة
 مثال: تزيد القيمة 0.5 ألفا البكسل بمقدار 127.5</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>تلقائي اقتصاص</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>أبيض وأسود</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>تشويش</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>السطوع</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>ألفا البكسل = ألفا البكسل * القيمة
+مثال: تقلل القيمة 0.5 ألفا البكسل بنسبة 50%</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>لون البكسل = لون البكسل + القيمة
 مثال: تزيد القيمة 0.5 لون البكسل بمقدار 127.5</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>لوحة الرسم</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>كيفية حساب الهامش المحيط بلوحة الرسم.</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>عمق اللون</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>تلوين</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>التباين</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>لون البكسل = لون البكسل * القيمة
 مثال: تزيد القيمة 1.5 لون البكسل بنسبة 50%</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>اقتصاص</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>الخلفية</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>صورة الخلفية</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>حد</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>رقعة شطرنج</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>الصورة</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>لا ترسم العلامة المائية الصورية إذا كانت أكبر من الصورة المصدر.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>كيفية تغيير حجم العلامة المائية الصورية عند الحاجة.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>لا ترسم العلامة المائية الصورية إذا كانت أكبر من الصورة المصدر.</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>جسيمات</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>علامة مائية نصية</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>لا ترسم النص إذا كان أكبر من الصورة المصدر.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>لا ترسم العلامة المائية النصية إذا كانت أكبر من الصورة المصدر.</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>النص</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>لا ترسم النص إذا كان أكبر من الصورة المصدر.</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>كشف الحواف</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>نقش بارز</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>قلب</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>فرض التناسب</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>غاما</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>الحد الأدنى 0.1، والحد الأقصى 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>تمويه غاوسي</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>توهج</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>تدرج الرمادي</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>تدرج اللون</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>من 0 إلى 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>عكس الألوان</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>مصفوفة الألوان</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>الأحمر = (الأحمر * Rr) + (الأخضر * Rg) + (الأزرق * Rb) + (ألفا * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>مصفوفة الالتفاف</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>إزالة المتوسط</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>مخطط تفصيلي</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>بكسلة</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>بولارويد</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>انعكاس</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>ارتفاع الانعكاس نسبةً إلى ارتفاع لقطة الشاشة.
-يجب أن تكون القيمة بين 1 و100.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>تبدأ شفافية الانعكاس من هذه القيمة وتنتهي عند MinAlpha.
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>موضع بدء الانعكاس: ارتفاع لقطة الشاشة + الإزاحة</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>ارتفاع الانعكاس نسبةً إلى ارتفاع لقطة الشاشة.
+يجب أن تكون القيمة بين 1 و100.</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>إضافة إمالة للانعكاس من أسفل اليسار إلى أسفل اليمين.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>مقدار إمالة البكسلات من اليسار إلى اليمين.</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>استبدال اللون</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>تغيير الحجم</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>اجعل الارتفاع 0 لضبطه تلقائيًا مع الحفاظ على نسبة العرض إلى الارتفاع.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>اجعل العرض 0 لضبطه تلقائيًا مع الحفاظ على نسبة العرض إلى الارتفاع.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>اجعل الارتفاع 0 لضبطه تلقائيًا مع الحفاظ على نسبة العرض إلى الارتفاع.</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>فصل RGB</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>تدوير</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>اختر قيمة بين -360 و360.</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>عند التفعيل، تكون الصورة الناتجة أكبر من الصورة المدخلة ولا يحدث اقتطاع.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>يجب تعطيل التكبير ليعمل هذا الإعداد. عند التفعيل يحدث اقتطاع، وإلا فسيتم تصغير حجم الصورة.</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>زوايا مستديرة</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>التشبع</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>تحجيم</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>اجعل نسبة العرض 0 لضبط العرض تلقائيًا مع الحفاظ على نسبة العرض إلى الارتفاع.</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>عند التفعيل، تكون الصورة الناتجة أكبر من الصورة المدخلة ولا يحدث اقتطاع.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>اجعل نسبة الارتفاع 0 لضبط الارتفاع تلقائيًا مع الحفاظ على نسبة العرض إلى الارتفاع.</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>لون انتقائي</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>بني داكن</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>الظل</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>اجعل نسبة العرض 0 لضبط العرض تلقائيًا مع الحفاظ على نسبة العرض إلى الارتفاع.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>اختر قيمة بين 0.1 و1.0</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>زيادة الحدة</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>إمالة</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>مقدار إمالة البكسلات من اليسار إلى اليمين.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>مقدار إمالة البكسلات من الأعلى إلى الأسفل.</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>تقطيع</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>تنعيم</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>حافة ممزقة</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>حافة متموجة</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>خارجي</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>ألفا</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>داخلي</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>تلقائي اقتصاص</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>تكعيبي مزدوج عالي الجودة</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>أبيض وأسود</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>تكعيبي مزدوج</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>تشويش</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>خطي مزدوج عالي الجودة</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>السطوع</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>خطي مزدوج</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>لوحة الرسم</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>أقرب مجاور</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>عمق اللون</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>حجم فعلي</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>تلوين</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>نسبة أبعاد الرقعة</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>التباين</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>لا تقم بتغيير الحجم</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>حجم فعلي</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>نسبة من العلامة المائية</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>نسبة أبعاد الرقعة</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>تكبير</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>اقتصاص</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>بدون</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>الخلفية</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>تدوير 90°</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>صورة الخلفية</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>تدوير 180°</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>حد</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>تدوير 270°</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>رقعة شطرنج</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>قلب أفقي</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>الصورة</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>تدوير 90° وقلب أفقي</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>جسيمات</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>قلب عمودي</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>علامة مائية نصية</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>تدوير 90° وقلب عمودي</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>النص</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>تغيير حجم كل الصور إلى الحجم المحدد.</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>كشف الحواف</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>تغيير حجم الصورة فقط إذا كانت أكبر من الحجم المحدد.</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>نقش بارز</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>تغيير حجم الصورة فقط إذا كانت أصغر من الحجم المحدد.</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>قلب</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>أعلى اليسار</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>فرض التناسب</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>أعلى الوسط</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>غاما</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>أعلى اليمين</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>تمويه غاوسي</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>وسط اليسار</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>توهج</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>في المركز</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>تدرج الرمادي</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>وسط اليمين</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>تدرج اللون</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>أسفل اليسار</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>عكس الألوان</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>أسفل الوسط</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>مصفوفة الألوان</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>أسفل اليمين</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>مصفوفة الالتفاف</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>المصدر فوق</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>إزالة المتوسط</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>نسخ المصدر</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>مخطط تفصيلي</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>متصل</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>بكسلة</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>شَرطة</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>بولارويد</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>منقط</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>فصل RGB</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>شرطة ونقطة</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>انعكاس</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>شرطة ونقطتان</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>استبدال اللون</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>مخصص</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>تغيير الحجم</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>أفقي</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>تدوير</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>عمودي</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>زوايا مستديرة</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>قطري إلى الأمام</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>التشبع</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>قطري إلى الخلف</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>تحجيم</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>إعداد النظام الافتراضي</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>لون انتقائي</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>بت واحد لكل بكسل مع ملاءمة الشبكة</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>بني داكن</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>بت واحد لكل بكسل</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>الظل</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>تنعيم الحواف مع ملاءمة الشبكة</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>زيادة الحدة</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>تنعيم الحواف</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>إمالة</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType مع ملاءمة الشبكة</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>تقطيع</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>بدون</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>تنعيم</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>أعلى</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>حافة ممزقة</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>أسفل</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>حافة متموجة</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>يسار</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>متابعة</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>يمين</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - تأكيد</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>إضافة تأثير</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>هل تريد مسح كل التأثيرات من الإعداد المسبق المحدد؟</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>مسح التأثيرات</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>متابعة</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>اسم التأثير المخصص</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>تكرار التأثير</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>تكرار إعداد مسبق</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>التأثيرات</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>أدخل اسمًا للإعداد المسبق قبل إنشاء الحزمة.</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>صفحة تأثيرات الصور...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>تحميل من الحافظة</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>تحريك لأسفل</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>تحريك لأعلى</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>جديد إعداد مسبق</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>فتح صورة</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>حزم الإعداد المسبق...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>إعداد مسبق الاسم</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>الإعدادات المسبقة</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>تأثيرات الصور المعاينة:</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>تحديث المعاينة:</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>إزالة التأثير</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>إزالة إعداد مسبق</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>حفظ الصورة...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - تأثيرات الصور</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} مللي ثانية</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>إعداد مسبق بلا اسم</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>رفع الصورة</value>
   </data>
 </root>

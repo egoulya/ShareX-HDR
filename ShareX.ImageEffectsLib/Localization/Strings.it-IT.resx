@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>Direzione</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>Aggiungi... Arresta</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>Punti colore</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>Aggiungi... Arresta</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>Direzione</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>Rimuovi</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>Opzioni effetto</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>Opzioni di {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>Seleziona un effetto per modificarne le opzioni.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>Questo effetto non ha proprietà configurabili.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>Modifica sfumatura...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>Sfoglia...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>Seleziona {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>S</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>A</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>D</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>B</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>H</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - Crea pacchetto effetto immagine</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>Crea pacchetto preimpostazione</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>Cartella risorse</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>File pacchetto</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>Sfoglia...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>Sovrascrivi un pacchetto esistente</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>Apri Effetti Cartella</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>Crea pacchetto</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>Chiudi</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>Seleziona la cartella delle risorse dell’effetto</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>Salva pacchetto effetti immagine</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>Effetto immagine ShareX</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>La cartella delle risorse deve trovarsi all’interno della cartella degli effetti immagine di ShareX.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>Scegli un percorso per il file del pacchetto.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>In questo percorso esiste già un pacchetto. Abilita la sovrascrittura per sostituirlo.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>Pacchetto creato correttamente.</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - Conferma</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>Continua</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>Sì</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - Effetti immagine</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} ms</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>Preimpostazioni</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>Nuovo Preimpostazione</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>Rimuovi Preimpostazione</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>Duplica Preimpostazione</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>Sposta su</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>Sposta giù</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>Preimpostazione Nome</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>Effetti</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>Aggiorna Anteprima...</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>Nome effetto personalizzato</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>Aggiungi effetto</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>Rimuovi effetto</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>Duplica effetto</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>Cancella Effetti</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>Apri immagine</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>Carica Dagli appunti</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>Crea pacchetto preimpostazione...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>Pagina effetti immagine...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>Salva immagine...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>Carica Immagine</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>Continua</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>Annulla</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>Chiudi</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>Preimpostazione senza nome</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>Inserisci un nome per la preimpostazione prima di creare un pacchetto.</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>Cancellare tutti gli effetti dalla preimpostazione selezionata?</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>Effetti Immagine Anteprima...</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>Regolazioni</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>Disegni</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>Trasformazioni</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>Regolazioni</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>Filtri</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>Trasformazioni</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>Testo</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>Filigrana di testo</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>Alfa</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>Basso</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>Alfa pixel = Alfa pixel * Valore
-Esempio: 0,5 ridurrà l’alfa del pixel del 50%</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>Sinistra</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>Nessuno</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>Destra</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>Interno</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>Esterno</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>Dimensione assoluta</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>Percentuale della tela</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>Copia origine</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>Origine sopra</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>In basso al centro</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>In basso a sinistra</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>In basso a destra</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>Centro centrale</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>Al centro a sinistra</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>Al centro a destra</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>In alto al centro</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>In alto a sinistra</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>In alto a destra</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>Personalizzato</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>Tratto</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>Tratto punto</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>Tratto punto punto</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>Punto</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>Continuo</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>Dimensione assoluta</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>Non ridimensionare</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>Percentuale della tela</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>Percentuale della filigrana</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>Ritaglia</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>Ingrandisci</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>Bicubica</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>Bilinear</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>Bicubica di alta qualità</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>Bilineare di alta qualità</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>Vicino più prossimo</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>Ribalta orizzontalmente</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>Ribalta verticalmente</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>Nessuno</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>Ruota di 180°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>Ruota di 270°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>Ruota di 90°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>Ruota di 90° e ribalta orizzontalmente</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>Ruota di 90° e ribalta verticalmente</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>Diagonale Indietro</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>Diagonale Avanti</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>Orizzontale</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>Verticale</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>Ridimensiona tutte le immagini alla dimensione specificata.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>Ridimensiona l’immagine solo se è più grande della dimensione specificata.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>Ridimensiona l’immagine solo se è più piccola della dimensione specificata.</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>Antialiasing</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>Antialiasing adattato alla griglia</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType adattato alla griglia</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>Un bit per pixel</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>Un bit per pixel adattato alla griglia</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>Impostazione predefinita di sistema</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>Sfoglia...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>Modifica sfumatura...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>Opzioni effetto</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>Opzioni di {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>H</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>Questo effetto non ha proprietà configurabili.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>Seleziona un effetto per modificarne le opzioni.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>Seleziona {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>In questo percorso esiste già un pacchetto. Abilita la sovrascrittura per sostituirlo.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>Cartella risorse</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>La cartella delle risorse deve trovarsi all’interno della cartella degli effetti immagine di ShareX.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>Sfoglia...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>Scegli un percorso per il file del pacchetto.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>Crea pacchetto</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>Pacchetto creato correttamente.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>Effetto immagine ShareX</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>Apri Effetti Cartella</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>Sovrascrivi un pacchetto esistente</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>File pacchetto</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>Crea pacchetto preimpostazione</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>Salva pacchetto effetti immagine</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>Seleziona la cartella delle risorse dell’effetto</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - Crea pacchetto effetto immagine</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>Alfa pixel = Alfa pixel + Addizione
 Esempio: 0,5 aumenterà l’alfa del pixel di 127,5</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>Automatico Ritaglia</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>Bianco e nero</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>Sfocatura</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>Luminosità</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>Alfa pixel = Alfa pixel * Valore
+Esempio: 0,5 ridurrà l’alfa del pixel del 50%</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>Colore pixel = Colore pixel + Valore
 Esempio: 0,5 aumenterà il colore del pixel di 127,5</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>Area di disegno</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>Indica come verrà calcolato il margine intorno all’area di disegno.</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>Profondità colore</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>Colora</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>Contrasto</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>Colore pixel = Colore pixel * Valore
 Esempio: 1,5 aumenterà il colore del pixel del 50%</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>Ritaglia</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>Sfondo</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>Immagine di sfondo</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>Bordo</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>Scacchiera</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>Immagine</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>Non disegnare la filigrana immagine se è più grande dell’immagine di origine.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>Indica come ridimensionare la filigrana immagine, se necessario.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>Non disegnare la filigrana immagine se è più grande dell’immagine di origine.</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>Particelle</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>Filigrana di testo</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>Non disegnare il testo se è più grande dell’immagine di origine.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>Non disegnare la filigrana di testo se è più grande dell’immagine di origine.</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>Testo</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>Non disegnare il testo se è più grande dell’immagine di origine.</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>Rilevamento bordi</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>Rilievo</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>Ribalta</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>Forza proporzioni</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>Gamma</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>Minimo 0,1, massimo 5,0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>Sfocatura gaussiana</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>Bagliore</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>Scala di grigi</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>Tonalità</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>Da 0 a 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>Inverti</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>Matrice colore</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>Rosso = (Rosso * Rr) + (Verde * Rg) + (Blu * Rb) + (Alfa * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>Matrice di convoluzione</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>Rimozione media</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>Contorno</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>Pixelizza</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>Polaroid</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>Riflesso</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>Altezza del riflesso rispetto all’altezza dello screenshot.
-Il valore deve essere compreso tra 1 e 100.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>La trasparenza del riflesso inizia da questo valore e termina a MinAlpha.
@@ -440,89 +406,45 @@ Il valore deve essere compreso tra 0 e 255.</value>
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>Posizione iniziale del riflesso: altezza dello screenshot + scostamento</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>Altezza del riflesso rispetto all’altezza dello screenshot.
+Il valore deve essere compreso tra 1 e 100.</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>Aggiunge un’inclinazione al riflesso dal basso a sinistra al basso a destra.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>Quantità di inclinazione dei pixel da sinistra a destra.</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>Sostituisci colore</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>Ridimensiona</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>Usa 0 come altezza per regolarla automaticamente mantenendo le proporzioni.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>Usa 0 come larghezza per regolarla automaticamente mantenendo le proporzioni.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>Usa 0 come altezza per regolarla automaticamente mantenendo le proporzioni.</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>Separazione RGB</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>Ruota</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>Scegli un valore compreso tra -360 e 360.</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>Se attivo, l’immagine di output sarà più grande di quella di input e non verrà ritagliata.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>«Ingrandisci» deve essere disattivato perché questa impostazione funzioni. Se attivo, l’immagine verrà ritagliata; in caso contrario, le sue dimensioni verranno ridotte.</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>Angoli arrotondati</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>Saturazione</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>Scala</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>Usa 0 come percentuale della larghezza per mantenere le proporzioni regolando automaticamente la larghezza.</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>Se attivo, l’immagine di output sarà più grande di quella di input e non verrà ritagliata.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>Usa 0 come percentuale dell’altezza per mantenere le proporzioni regolando automaticamente l’altezza.</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>Colore selettivo</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>Sepia</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>Ombra</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>Usa 0 come percentuale della larghezza per mantenere le proporzioni regolando automaticamente la larghezza.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>Scegli un valore compreso tra 0,1 e 1,0</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>Aumenta nitidezza</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>Inclina</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>Quantità di inclinazione dei pixel da sinistra a destra.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>Quantità di inclinazione dei pixel dall’alto verso il basso.</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>Suddividi</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>Smussa</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>Bordo strappato</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>Bordo ondulato</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@ Il valore deve essere compreso tra 0 e 255.</value>
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>Esterno</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>Alfa</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>Interno</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>Automatico Ritaglia</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>Bicubica di alta qualità</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>Bianco e nero</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>Bicubica</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>Sfocatura</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>Bilineare di alta qualità</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>Luminosità</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>Bilinear</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>Area di disegno</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>Vicino più prossimo</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>Profondità colore</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>Dimensione assoluta</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>Colora</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>Percentuale della tela</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>Contrasto</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>Non ridimensionare</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>Dimensione assoluta</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>Percentuale della filigrana</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>Percentuale della tela</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>Ingrandisci</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>Ritaglia</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>Nessuno</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>Sfondo</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>Ruota di 90°</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>Immagine di sfondo</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>Ruota di 180°</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>Bordo</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>Ruota di 270°</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>Scacchiera</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>Ribalta orizzontalmente</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>Immagine</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>Ruota di 90° e ribalta orizzontalmente</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>Particelle</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>Ribalta verticalmente</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>Filigrana di testo</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>Ruota di 90° e ribalta verticalmente</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>Testo</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>Ridimensiona tutte le immagini alla dimensione specificata.</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>Rilevamento bordi</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>Ridimensiona l’immagine solo se è più grande della dimensione specificata.</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>Rilievo</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>Ridimensiona l’immagine solo se è più piccola della dimensione specificata.</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>Ribalta</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>In alto a sinistra</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>Forza proporzioni</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>In alto al centro</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>Gamma</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>In alto a destra</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>Sfocatura gaussiana</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>Al centro a sinistra</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>Bagliore</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>Centro centrale</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>Scala di grigi</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>Al centro a destra</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>Tonalità</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>In basso a sinistra</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>Inverti</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>In basso al centro</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>Matrice colore</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>In basso a destra</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>Matrice di convoluzione</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>Origine sopra</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>Rimozione media</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>Copia origine</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>Contorno</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>Continuo</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>Pixelizza</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>Tratto</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>Polaroid</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>Punto</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>Separazione RGB</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>Tratto punto</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>Riflesso</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>Tratto punto punto</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>Sostituisci colore</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>Personalizzato</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>Ridimensiona</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>Orizzontale</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>Ruota</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>Verticale</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>Angoli arrotondati</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>Diagonale Avanti</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>Saturazione</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>Diagonale Indietro</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>Scala</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>Impostazione predefinita di sistema</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>Colore selettivo</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>Un bit per pixel adattato alla griglia</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>Sepia</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>Un bit per pixel</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>Ombra</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>Antialiasing adattato alla griglia</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>Aumenta nitidezza</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>Antialiasing</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>Inclina</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType adattato alla griglia</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>Suddividi</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>Nessuno</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>Smussa</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>Alto</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>Bordo strappato</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>Basso</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>Bordo ondulato</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>Sinistra</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>Continua</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>Destra</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - Conferma</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>Sì</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>Aggiungi effetto</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>Cancellare tutti gli effetti dalla preimpostazione selezionata?</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>Cancella Effetti</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>Continua</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>Nome effetto personalizzato</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>Duplica effetto</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>Duplica Preimpostazione</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>Effetti</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>Inserisci un nome per la preimpostazione prima di creare un pacchetto.</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>Pagina effetti immagine...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>Carica Dagli appunti</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>Sposta giù</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>Sposta su</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>Nuovo Preimpostazione</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>Apri immagine</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>Crea pacchetto preimpostazione...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>Preimpostazione Nome</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>Preimpostazioni</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>Effetti Immagine Anteprima...</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>Aggiorna Anteprima...</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>Rimuovi effetto</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>Rimuovi Preimpostazione</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>Salva immagine...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - Effetti immagine</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} ms</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>Preimpostazione senza nome</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>Carica Immagine</value>
   </data>
 </root>

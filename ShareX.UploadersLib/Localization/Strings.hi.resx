@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>उपयोगकर्ता</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>Amazon S3 पर अपलोड विफल।</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 इंटेलिजेंट-टियरिंग</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 मानक-इनफ़्रीक्वेंट एक्सेस</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>Amazon S3 पर अपलोड विफल।</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>'पहुँच कुंजी' खाली नहीं होनी चाहिए।</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>अज्ञात त्रुटि</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>असमर्थित अनुरोध प्रारूप: {0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>बाइनरी</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>फ़ंक्शन "{0}" के लिए न्यूनतम पैरामीटर संख्या {1} है।</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>असमर्थित अनुरोध प्रारूप: {0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX - गंतव्य सेटिंग</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>API कुंजी:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>API कुंजी प्राप्त हुई</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>खाता</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>एल्बम</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>API कुंजी:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>API कुंजी प्राप्त हुई</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>प्राधिकरण कोड:</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>प्राधिकरण पूरा करें</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>खाता कनेक्ट करें</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>पहले Imgur खाता कनेक्ट करें</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>पहले Photobucket खाता कनेक्ट करें</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>खाता कनेक्ट करें</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>कनेक्टेड</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>API कुंजी प्राप्त करने के लिए खाता क्रेडेंशियल दर्ज करें</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>अपना वर्तमान दो-कारक प्रमाणीकरण कोड दर्ज करें</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>81 संगतता</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>API URL</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>API होस्टनाम</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>API कुंजी</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>API उपयोगकर्ता नाम</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>खाता जानकारी ईमेल</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>खाता प्रकार</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>API होस्टनाम</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>API कुंजी</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>API उपयोगकर्ता नाम</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>API URL</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>URL में फ़ाइल नाम जोड़ें</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>होस्ट</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>छवियाँ</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>लॉगिन</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>नाम</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>ऑब्जेक्ट उपसर्ग</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>सिंटैक्स हाइलाइटिंग</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>TTL</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>TTL इकाई</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>टैग</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>टोकन</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>अपना वर्तमान दो-कारक प्रमाणीकरण कोड दर्ज करें</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>TTL</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>TTL इकाई</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>अपलोड पथ</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>अपलोडर</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>API v1 उपयोग करें</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>वेब API कुंजी</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>नाम</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>{0} फ़ोल्डर</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>सत्यापन कोड:</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX - गंतव्य सेटिंग</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>API के माध्यम से अपलोड की सीमा 150 MB है।</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>संदेश</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>भेजें</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>प्राप्तकर्ता ईमेल</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS (SSL पर FTP)</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>अपलोड URL प्राप्त करना विफल।</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS (SSL पर FTP)</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>मेरी ड्राइव</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>स्थिति: {0}, अनुरोध: {1}, त्रुटि: {2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>Imgur अपलोड विफल: ({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>बड़ा वर्ग</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>छोटा थंबनेल</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>स्थिति: {0}, अनुरोध: {1}, त्रुटि: {2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>Imgur अपलोड विफल: ({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>अज्ञात कारण से अपलोड विफल हुआ। अपनी API कुंजी जाँचें।</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>नया खाता</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>प्राधिकरण सफलतापूर्वक पूरा हुआ।</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>प्राधिकरण सफल नहीं हुआ।</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>अमान्य स्थिति पैरामीटर।</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>रद्द करें</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>ब्राउज़र में प्राधिकरण पूरा होने की प्रतीक्षा की जा रही है...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>प्राधिकरण सफलतापूर्वक पूरा हुआ।</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>प्राधिकरण सफल नहीं हुआ।</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>अमान्य स्थिति पैरामीटर।</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>उपभोक्ता कुंजी, उपभोक्ता गोपनीय कुंजी या उपभोक्ता निजी कुंजी खाली है।</value>
@@ -1115,9 +1115,6 @@
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX - चयन करें</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Pastebin लॉगिन विफल।</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1149,11 +1146,11 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>असूचीबद्ध</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Pastebin लॉगिन विफल।</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>Plik होस्ट खाली है।</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>सर्वर को प्राधिकरण की आवश्यकता है।</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 दिन</value>
@@ -1188,23 +1185,14 @@
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>सिंटैक्स हाइलाइटिंग</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>सर्वर को प्राधिकरण की आवश्यकता है।</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>उपकरण कुंजी मौजूद नहीं है।</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>पुश के लिए कोई उपकरण नहीं चुना गया।</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>प्रमाणीकरण विफल।</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>चेकसम त्रुटि।</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>कनेक्शन त्रुटि।</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>खाते में पर्याप्त भंडारण स्थान शेष नहीं है।</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>रद्द करें</value>
@@ -1227,14 +1215,29 @@
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>लॉगिन विफल।</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>पासवर्ड</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX - puush लॉगिन</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>प्रमाणीकरण विफल।</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>चेकसम त्रुटि।</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>कनेक्शन त्रुटि।</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>खाते में पर्याप्त भंडारण स्थान शेष नहीं है।</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>URL कॉपी करें</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>हटाने का URL कॉपी करें</value>
@@ -1250,9 +1253,6 @@
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>थंबनेल URL कॉपी करें</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>URL कॉपी करें</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>हटाने का URL</value>
@@ -1275,20 +1275,20 @@
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>कोई परिणाम विवरण उपलब्ध नहीं है।</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>URL खोलें</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>प्रतिक्रिया URL खोलें</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>URL खोलें</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>प्रतिक्रिया URL</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>प्रतिक्रिया जानकारी</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>प्रतिक्रिया पाठ</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>प्रतिक्रिया URL</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>परिणाम</value>
@@ -1308,17 +1308,20 @@
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>थंबनेल URL</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>अपलोड प्रतिक्रिया</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>अपलोड प्रतिक्रिया</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>XML प्रारूप</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>प्रारूपण विफल।</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>कुंजी फ़ाइल मौजूद नहीं है।</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>Seafile API URL खाली है।</value>
@@ -1338,9 +1341,6 @@
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>अपलोड जानकारी मौजूद नहीं है।</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>कुंजी फ़ाइल मौजूद नहीं है।</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>वीडियो नहीं बनाया जा सका।</value>
@@ -1363,11 +1363,11 @@
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>Paste.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>Paste2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>Paste.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1404,30 +1404,6 @@
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>अपलोड करें</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>प्राधिकरण जानकारी मौजूद नहीं है। पहले प्राधिकरण URL खोलें।</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>त्रुटि संदेश:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>अनुरोध URL:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>स्टैक ट्रेस:</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>लॉगिन आवश्यक है।</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>पहुँच टोकन ताज़ा करना विफल।</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>{0} लॉगिन आवश्यक है।</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>अपलोड विफल।</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>Bing दृश्य खोज</value>
@@ -1467,6 +1443,30 @@
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>लॉगिन आवश्यक है।</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>पहुँच टोकन ताज़ा करना विफल।</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>{0} लॉगिन आवश्यक है।</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>अपलोड विफल।</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>प्राधिकरण जानकारी मौजूद नहीं है। पहले प्राधिकरण URL खोलें।</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>त्रुटि संदेश:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>अनुरोध URL:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>स्टैक ट्रेस:</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1510,15 +1510,6 @@
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>शून्य चौड़ाई संक्षिप्तकर्ता</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>हस्ताक्षर या उपयोगकर्ता नाम/पासवर्ड मौजूद नहीं है।</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>अपलोड विफल: {0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>अपलोड अस्वीकृत: {0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>रद्द करें</value>
   </data>
@@ -1548,5 +1539,14 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>असूचीबद्ध</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>अपलोड विफल: {0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>अपलोड अस्वीकृत: {0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>हस्ताक्षर या उपयोगकर्ता नाम/पासवर्ड मौजूद नहीं है।</value>
   </data>
 </root>

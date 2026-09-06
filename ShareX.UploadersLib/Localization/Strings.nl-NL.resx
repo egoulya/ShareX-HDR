@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>Gebruiker</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>Uploaden naar Amazon S3 is mislukt.</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 Intelligent-Tiering</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 Standard-Infrequent Access</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>Uploaden naar Amazon S3 is mislukt.</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>‘Toegangssleutel’ mag niet leeg zijn.</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>Onbekende fout</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>Niet-ondersteunde aanvraagindeling: {0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>Binair</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>Het minimumaantal parameters voor de functie ‘{0}’ is {1}.</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>Niet-ondersteunde aanvraagindeling: {0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX — Bestemmingsinstellingen</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>API-sleutel:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>API-sleutel opgehaald</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>Account</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>Albums</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>API-sleutel:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>API-sleutel opgehaald</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>Autorisatiecode:</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>Autorisatie voltooien</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>Account verbinden</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>Verbind eerst een Imgur-account</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>Verbind eerst een Photobucket-account</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>Account verbinden</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>Verbonden!</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>Voer de accountgegevens in om de API-sleutel op te halen</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>Voer uw huidige code voor tweefactorauthenticatie in</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>8.1-compatibiliteit</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>API-URL</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>API-hostnaam</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>API-sleutel</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>API-gebruikersnaam</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>E-mail met accountgegevens</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>Accounttype</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>API-hostnaam</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>API-sleutel</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>API-gebruikersnaam</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>API-URL</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>Bestandsnaam aan URL toevoegen</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>Host</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>Id</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>Afbeeldingen</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>Aanmelden</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>Naam</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>Objectvoorvoegsel</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>Syntaxisaccentuering</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>Levensduur</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>Eenheid voor levensduur</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>Tags</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>Token</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>Voer uw huidige code voor tweefactorauthenticatie in</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>Levensduur</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>Eenheid voor levensduur</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>Uploadpad</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>Uploader:</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>URL</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>API v1 gebruiken</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Web-API-sleutel</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>Naam</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>{0} mappen</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>Verificatiecode:</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX — Bestemmingsinstellingen</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>Uploads via de API hebben een limiet van 150 MB.</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>Bericht</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>Verzenden</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>E-mail van ontvanger</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS (FTP via SSL)</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>De upload-URL kan niet worden opgehaald.</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS (FTP via SSL)</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>Mijn schijf</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>Status: {0}, Aanvraag: {1}, Fout: {2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>Imgur-upload mislukt: ({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Grote vierkant</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Small miniatuur</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>Status: {0}, Aanvraag: {1}, Fout: {2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>Imgur-upload mislukt: ({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>De upload is om onbekende reden mislukt. Controleer uw API-sleutel.</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>Nieuw account</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>Autorisatie is voltooid.</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>Autorisatie is mislukt.</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>Ongeldige statusparameter.</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>Annuleren</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>Wachten totdat de autorisatie in uw browser is voltooid...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>Autorisatie is voltooid.</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>Autorisatie is mislukt.</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>Ongeldige statusparameter.</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>De consumersleutel, het consumergeheim of de persoonlijke consumersleutel is leeg.</value>
@@ -1115,9 +1115,6 @@ Bericht: {2}</value>
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX — Selecteren</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Aanmelden bij Pastebin is mislukt.</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1149,11 +1146,11 @@ Bericht: {2}</value>
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Verborgen</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Aanmelden bij Pastebin is mislukt.</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>De Plik-host is leeg.</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>De server vereist autorisatie.</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 dag</value>
@@ -1188,23 +1185,14 @@ Bericht: {2}</value>
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>syntaxismarkering</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>De server vereist autorisatie.</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>De apparaatsleutel ontbreekt.</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>Er is geen apparaat geselecteerd voor verzenden.</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>Verificatie mislukt.</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>Controlesomfout.</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>Verbindingsfout.</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>Het account heeft onvoldoende resterende opslagruimte.</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>Annuleren</value>
@@ -1227,14 +1215,29 @@ Bericht: {2}</value>
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>Aanmelden mislukt.</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>Wachtwoord:</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX — Aanmelden bij puush</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>Verificatie mislukt.</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>Controlesomfout.</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>Verbindingsfout.</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>Het account heeft onvoldoende resterende opslagruimte.</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>URL kopiëren</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>Verwijderings-URL kopiëren</value>
@@ -1250,9 +1253,6 @@ Bericht: {2}</value>
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>Miniatuur-URL kopiëren</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>URL kopiëren</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>Verwijderings-URL</value>
@@ -1275,20 +1275,20 @@ Bericht: {2}</value>
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>Er zijn geen resultaatdetails beschikbaar.</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>Open link</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>Antwoord-URL openen</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>Open link</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>Antwoord-URL</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>Antwoordgegevens</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>Antwoordtekst</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>Antwoord-URL</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>Resultaat</value>
@@ -1308,17 +1308,20 @@ Bericht: {2}</value>
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>Miniatuur URL</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>Uploadantwoord</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>Uploadantwoord</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>XML opmaken</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>Indelingting failed.</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>Key bestand does not exist.</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>De Seafile-API-URL is leeg.</value>
@@ -1338,9 +1341,6 @@ Tekst: {2}</value>
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>Uploadgegevens ontbreken.</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>Key bestand does not exist.</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>De video kan niet worden gemaakt.</value>
@@ -1363,11 +1363,11 @@ Tekst: {2}</value>
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>Paste.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>Paste2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>Paste.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1404,30 +1404,6 @@ Tekst: {2}</value>
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>Uploaden</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>Autorisatiegegevens ontbreken. Open eerst de autorisatie-URL.</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>Foutmelding:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>Aanvraag-URL:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>Stacktracering:</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>Aanmelden is vereist.</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>Het vernieuwen van het toegangstoken is mislukt.</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>Aanmelden bij {0} is vereist.</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>Uploaden is mislukt.</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>Visueel zoeken met Bing</value>
@@ -1467,6 +1443,30 @@ Tekst: {2}</value>
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>Aanmelden is vereist.</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>Het vernieuwen van het toegangstoken is mislukt.</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>Aanmelden bij {0} is vereist.</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>Uploaden is mislukt.</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>Autorisatiegegevens ontbreken. Open eerst de autorisatie-URL.</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>Foutmelding:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>Aanvraag-URL:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>Stacktracering:</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1510,15 +1510,6 @@ Tekst: {2}</value>
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>Verkorter met onzichtbare tekens</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>De handtekening of gebruikersnaam/het wachtwoord ontbreekt.</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>Uploaden mislukt: {0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>Upload geweigerd: {0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>Annuleren</value>
   </data>
@@ -1548,5 +1539,14 @@ Tekst: {2}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Verborgen</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>Uploaden mislukt: {0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>Upload geweigerd: {0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>De handtekening of gebruikersnaam/het wachtwoord ontbreekt.</value>
   </data>
 </root>

@@ -881,6 +881,51 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("MainWindow_DeleteSelectedItem", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete item remotely....
+        /// </summary>
+        public static string MainWindow_DeleteItemRemotely {
+            get {
+                return ResourceManager.GetString("MainWindow_DeleteItemRemotely", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Do you really want to delete this item remotely?.
+        /// </summary>
+        public static string MainWindow_DeleteItemRemotelyConfirmation {
+            get {
+                return ResourceManager.GetString("MainWindow_DeleteItemRemotelyConfirmation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Remote deletion.
+        /// </summary>
+        public static string MainWindow_RemoteDeletion {
+            get {
+                return ResourceManager.GetString("MainWindow_RemoteDeletion", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The item was deleted remotely..
+        /// </summary>
+        public static string MainWindow_RemoteDeleteSucceeded {
+            get {
+                return ResourceManager.GetString("MainWindow_RemoteDeleteSucceeded", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to delete the item remotely..
+        /// </summary>
+        public static string MainWindow_RemoteDeleteFailed {
+            get {
+                return ResourceManager.GetString("MainWindow_RemoteDeleteFailed", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Deletion URL.
@@ -5247,6 +5292,41 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("UploadManager_DownloadAndUploadFile_Download_failed", resourceCulture);
             }
         }
+        public static string StartScreen_Welcome {
+            get {
+                return ResourceManager.GetString("StartScreen_Welcome", resourceCulture);
+            }
+        }
+        public static string StartScreen_WelcomeSubtitle {
+            get {
+                return ResourceManager.GetString("StartScreen_WelcomeSubtitle", resourceCulture);
+            }
+        }
+        public static string StartScreen_PlatformNote {
+            get {
+                return ResourceManager.GetString("StartScreen_PlatformNote", resourceCulture);
+            }
+        }
+        public static string StartScreen_PersonalizeTitle {
+            get {
+                return ResourceManager.GetString("StartScreen_PersonalizeTitle", resourceCulture);
+            }
+        }
+        public static string StartScreen_PersonalizeSubtitle {
+            get {
+                return ResourceManager.GetString("StartScreen_PersonalizeSubtitle", resourceCulture);
+            }
+        }
+        public static string StartScreen_SettingsNote {
+            get {
+                return ResourceManager.GetString("StartScreen_SettingsNote", resourceCulture);
+            }
+        }
+        public static string StartScreen_GetStarted {
+            get {
+                return ResourceManager.GetString("StartScreen_GetStarted", resourceCulture);
+            }
+        }
 
         /// <summary>
         ///   Looks up a localized string similar to Network monitor....
@@ -5256,6 +5336,15 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("MainMenuBuilder_NetworkMonitor", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Video trimmer
+        /// </summary>
+        public static string MainMenuBuilder_VideoTrimmer {
+            get {
+                return ResourceManager.GetString("MainMenuBuilder_VideoTrimmer", resourceCulture);
+            }
+        }
+
         public static string TaskSettingsWindow_HdrCapture {
             get {
                 return ResourceManager.GetString("TaskSettingsWindow_HdrCapture", resourceCulture);

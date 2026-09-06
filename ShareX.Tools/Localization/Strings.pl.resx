@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>Testowanie...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>Analizuj automatycznie po otwarciu</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>Klucz API</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>Strona klucza API...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>Analizuj automatycznie po otwarciu</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>Zachowanie</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>Załaduj modele</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>Szczegółowość</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>Połączenie działa.</value>
@@ -373,14 +373,14 @@
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>Przeglądaj...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>Pliki CSS</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>Wybierz folder i wygeneruj wynik. Nic nie zostanie zapisane, dopóki nie użyjesz opcji Zapisz jako lub Prześlij.</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>Utwórz strukturalny JSON możliwy do analizy</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>Pliki CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>Wyświetlaj ścieżki folderów</value>
@@ -433,10 +433,10 @@
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>Zapisz indeks katalogu</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>Wybierz plik CSS</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
     <value>Wybierz plik CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
@@ -652,9 +652,6 @@
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>Obraz</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>lub użyj przycisku Przeglądaj, aby wybrać plik</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>Zapisz ikonę jako</value>
   </data>
@@ -663,6 +660,9 @@
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>Rozmiary</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>lub użyj przycisku Przeglądaj, aby wybrać plik</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>Dodaj co najmniej dwa obrazy do połączenia.</value>
@@ -859,9 +859,6 @@
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>Szablon nazwy pliku</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>Generuj miniatury</value>
   </data>
@@ -882,6 +879,9 @@
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>Szerokość</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>Plików: {0:n0}</value>
@@ -997,20 +997,20 @@
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>Przekątna wsteczna</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>Szachownica</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>CPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>Szachownica</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>Przekątna przednia</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>GPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>Wysoki</value>
@@ -1162,17 +1162,122 @@
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>Wzorzec</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>Czerwony</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>Czerwony</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX — test monitora</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>Szybkość</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>Upłynął limit czasu dla {0}.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>Nie znaleziono aktywnego interfejsu sieciowego.</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>Żaden punkt końcowy nie odpowiedział.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>Automatycznie (zalecane)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>Sprawdzanie...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>Połączono.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>Rozłączono.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>Ostatnie 15 minut</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>Ostatnie 5 minut</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>Ostatnie 6 godzin</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>Ostatnia godzina</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} ms</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>Wstrzymano</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>Sesja</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>Dostępność</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>Średnie opóźnienie</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>Sprawdzaj co</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>Wyczyść dziennik</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>Zdarzenia połączenia</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>Kopiuj wszystko</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>Bieżące opóźnienie</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>Rozłączenia</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>Historia opóźnień</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>Nie zarejestrowano jeszcze żadnych zmian połączenia.</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>Nie ma jeszcze próbek opóźnienia.</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>Otwórz dziennik...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>Wstrzymaj</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>Zakres</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - Monitor sieci</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>Uruchom</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>Stan</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>Cel</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>Język {0} nie jest dostępny w tym systemie dla OCR.</value>
@@ -1462,11 +1567,11 @@
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>Obraz PNG</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>Rozmiar kodu QR</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>Obraz SVG</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>Zapisz...</value>
@@ -1489,11 +1594,11 @@
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX — kod QR</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>Obraz SVG</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>Wyślij</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>px</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>Tolerancja: {0}%</value>
@@ -1570,9 +1675,6 @@
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>Plik wejściowy</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kb/s</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>Otwórz folder wyjściowy po zakończeniu</value>
   </data>
@@ -1605,6 +1707,9 @@
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>Koder wideo</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kb/s</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>video-output</value>
@@ -1705,109 +1810,112 @@
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>Pliki wideo</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>Przybliżony podgląd z pamięci podręcznej • dopracowywany po zatrzymaniu</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>Upłynął limit czasu dla {0}.</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>Anuluj</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>Nie znaleziono aktywnego interfejsu sieciowego.</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>Anulowano.</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>Żaden punkt końcowy nie odpowiedział.</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>Otwórz lub upuść wideo, aby rozpocząć</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>Automatycznie (zalecane)</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>Kopiuje oryginalne strumienie bez ponownego kodowania. Punkty cięcia mogą przesunąć się do pobliskich klatek kluczowych.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>Sprawdzanie...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>Czas trwania:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>Połączono.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg nie utworzył wyjściowego wideo.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>Rozłączono.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>Koniec:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>Ostatnie 15 minut</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>Zapisz przycięte wideo…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>Ostatnie 5 minut</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>Zapisywanie przyciętego wideo…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>Ostatnie 6 godzin</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>Podgląd w pobliżu {0} • bez odtwarzania dźwięku</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>Ostatnia godzina</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>Wybierz wideo o znanym, skończonym czasie trwania.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} ms</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>Przeciągnij uchwyty, aby przyciąć, lub kliknij, aby przewinąć. Lewo/Prawo: przewijanie. Shift: 1 sekunda. I/O: ustaw początek/koniec. Home/End: przejdź do granic zaznaczenia.</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>Wstrzymano</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>Przygotowywanie podglądów osi czasu…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>Bezstratny (szybki)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>Sesja</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>W tej pozycji nie ma dostępnej klatki podglądu.</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>Dostępność</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>Otwórz wideo…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>Średnie opóźnienie</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>Użyj rozszerzenia {0} dla tego trybu eksportu.</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>Sprawdzaj co</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>Pozycja (sekundy)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>Zdarzenia połączenia</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>Dokładny (ponowne kodowanie)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>Wyczyść dziennik</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>Ponownie koduje do H.264 / AAC MP4, aby uzyskać dokładne punkty cięcia.</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>Kopiuj wszystko</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>Podgląd nieruchomej klatki • bez odtwarzania dźwięku</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>Bieżące opóźnienie</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>Przeciągnij uchwyty, aby wybrać fragment do zachowania.</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>Data</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>Resetuj zaznaczenie</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>Rozłączenia</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>Zapisano: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>Historia opóźnień</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>Klawisze strzałek: 0,1 s • Shift: 1 s</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>Nie zarejestrowano jeszcze żadnych zmian połączenia.</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>Zachowaj {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>Nie ma jeszcze próbek opóźnienia.</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>Ustaw koniec tutaj</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>Otwórz dziennik...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>Ustaw początek tutaj</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>Wstrzymaj</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>Pokaż folder wyjściowy...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>Zakres</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>Wybierz inny plik wyjściowy. Nie można nadpisać źródłowego wideo.</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - Monitor sieci</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>Początek:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>Uruchom</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>Oś czasu wideo i zaznaczenie przycinania</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>Stan</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX — Przycinanie wideo</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>Cel</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>Tryb przycinania:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>Pliki wideo</value>
   </data>
 </root>

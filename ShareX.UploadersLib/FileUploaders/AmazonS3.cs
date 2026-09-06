@@ -173,6 +173,19 @@ namespace ShareX.UploadersLib.FileUploaders
             return result;
         }
 
+        public async Task<bool> DeleteObjectAsync(string objectKey, CancellationToken cancellationToken = default)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(objectKey);
+
+            AmazonS3RequestData requestData = CreateRequestData(objectKey);
+
+            using MemoryStream emptyStream = new MemoryStream(Array.Empty<byte>(), false);
+            await SendAmazonS3RequestAsync(HttpMethod.DELETE, requestData, "", emptyStream, 0, 0, null, null,
+                cancellationToken).ConfigureAwait(false);
+
+            return LastResponseInfo != null && LastResponseInfo.IsSuccess;
+        }
+
         private async Task<UploadResult> UploadSingleRequestAsync(Stream stream, string contentType, string resultURL,
             AmazonS3RequestData requestData, CancellationToken cancellationToken)
         {
@@ -302,7 +315,6 @@ namespace ShareX.UploadersLib.FileUploaders
                 : new NameValueCollection();
 
             headers["Host"] = requestData.Host;
-            headers["Content-Length"] = length.ToString(CultureInfo.InvariantCulture);
 
             if (!string.IsNullOrEmpty(contentType))
             {
@@ -569,24 +581,59 @@ namespace ShareX.UploadersLib.FileUploaders
             if (!string.IsNullOrEmpty(Settings.Endpoint) && !string.IsNullOrEmpty(Settings.Bucket))
             {
                 uploadPath = URLHelpers.URLEncode(uploadPath, true, HelpersOptions.URLEncodeIgnoreEmoji);
-
-                string url;
-
-                if (Settings.UseCustomCNAME && !string.IsNullOrEmpty(Settings.CustomDomain))
-                {
-                    ShareXCustomUploaderSyntaxParser parser = new ShareXCustomUploaderSyntaxParser();
-                    string parsedDomain = parser.Parse(Settings.CustomDomain);
-                    url = URLHelpers.CombineURL(parsedDomain, uploadPath);
-                }
-                else
-                {
-                    url = URLHelpers.CombineURL(Settings.Endpoint, Settings.Bucket, uploadPath);
-                }
-
-                return URLHelpers.FixPrefix(url);
+                return URLHelpers.CombineURL(GetObjectBaseURL(), uploadPath);
             }
 
             return "";
+        }
+
+        public bool TryGetObjectKey(string url, out string objectKey)
+        {
+            objectKey = null;
+
+            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri objectURI) ||
+                !Uri.TryCreate(GetObjectBaseURL(), UriKind.Absolute, out Uri baseURI) ||
+                !string.Equals(objectURI.Scheme, baseURI.Scheme, StringComparison.OrdinalIgnoreCase) ||
+                !string.Equals(objectURI.IdnHost, baseURI.IdnHost, StringComparison.OrdinalIgnoreCase) ||
+                objectURI.Port != baseURI.Port)
+            {
+                return false;
+            }
+
+            string basePath = baseURI.AbsolutePath.TrimEnd('/');
+            string objectPath = objectURI.AbsolutePath;
+
+            if (!objectPath.StartsWith(basePath + "/", StringComparison.Ordinal))
+            {
+                return false;
+            }
+
+            string escapedObjectKey = objectPath.Substring(basePath.Length + 1);
+
+            if (string.IsNullOrEmpty(escapedObjectKey))
+            {
+                return false;
+            }
+
+            objectKey = Uri.UnescapeDataString(escapedObjectKey);
+            return !string.IsNullOrEmpty(objectKey);
+        }
+
+        private string GetObjectBaseURL()
+        {
+            string url;
+
+            if (Settings.UseCustomCNAME && !string.IsNullOrEmpty(Settings.CustomDomain))
+            {
+                ShareXCustomUploaderSyntaxParser parser = new ShareXCustomUploaderSyntaxParser();
+                url = parser.Parse(Settings.CustomDomain);
+            }
+            else
+            {
+                url = URLHelpers.CombineURL(Settings.Endpoint, Settings.Bucket);
+            }
+
+            return URLHelpers.FixPrefix(url);
         }
 
         public string GetPreviewURL()

@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>방향</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>추가...중지</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>색상 중지점</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>추가...중지</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>방향</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>제거</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>효과 옵션</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>{0} 옵션</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>옵션을 편집할 효과를 선택하세요.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>이 효과에는 설정할 수 있는 속성이 없습니다.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>그라데이션 편집...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>찾아보기...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>{0} 선택</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>왼쪽</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>위</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>오른쪽</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>아래</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>너비</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>높이</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - 이미지 효과 패키지 만들기</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>프리셋 패키지 만들기</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>에셋 폴더</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>패키지 파일</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>찾아보기...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>기존 패키지 덮어쓰기</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>열기효과폴더</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>패키지 만들기</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>닫기</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>효과 에셋 폴더 선택</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>이미지 효과 패키지 저장</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>ShareX 이미지 효과</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>에셋 폴더는 ShareX 이미지 효과 폴더 안에 있어야 합니다.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>패키지 파일 경로를 선택하세요.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>이 경로에 패키지가 이미 있습니다. 교체하려면 덮어쓰기를 활성화하세요.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>패키지를 만들었습니다.</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - 확인</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>계속</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>예</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>아니요</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - 이미지 효과</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3}밀리초</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>프리셋</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>새로 만들기프리셋</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>제거프리셋</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>복제프리셋</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>위로 이동</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>아래로 이동</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>프리셋이름</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>효과</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>새로 고침미리 보기...</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>사용자 지정 효과 이름</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>효과 추가</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>효과 제거</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>효과 복제</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>지우기효과</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>이미지 열기</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>불러오기클립보드에서</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>프리셋 패키지 만들기...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>이미지 효과 페이지...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>이미지 저장...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>업로드이미지</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>계속</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>취소</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>닫기</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>이름 없는 프리셋</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>패키지를 만들기 전에 프리셋 이름을 입력하세요.</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>선택한 프리셋에서 모든 효과를 지우시겠습니까?</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>이미지 효과미리 보기...</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>조정</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>그리기</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>변형</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>조정</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>필터</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>변형</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>텍스트</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>텍스트 워터마크</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>알파</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>아래쪽</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>픽셀 알파 = 픽셀 알파 * 값
-예: 0.5를 지정하면 픽셀의 알파가 50% 감소합니다</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>왼쪽</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>오른쪽</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>위쪽</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>안쪽</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>바깥쪽</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>절대 크기</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>캔버스 비율</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>원본 복사</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>원본 위에 합성</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>가운데 아래</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>왼쪽 아래</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>오른쪽 아래</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>가운데 중앙</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>왼쪽 가운데</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>오른쪽 가운데</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>가운데 위</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>왼쪽 위</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>오른쪽 위</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>사용자 지정</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>파선</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>일점쇄선</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>이점쇄선</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>점선</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>실선</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>절대 크기</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>크기 조정 안 함</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>캔버스 비율</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>워터마크의 비율</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>자르기</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>확대</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>쌍삼차</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>쌍선형</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>고품질 쌍삼차</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>고품질 쌍선형</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>최근접 이웃</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>수평 뒤집기</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>수직 뒤집기</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>180도 회전</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>270° 회전</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>90° 회전</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>90° 회전 후 수평 뒤집기</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>90° 회전 후 수직 뒤집기</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>뒤쪽 대각선</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>앞쪽 대각선</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>가로</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>세로</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>모든 이미지의 크기를 지정한 크기로 조정합니다.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>이미지가 지정한 크기보다 큰 경우에만 크기를 조정합니다.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>이미지가 지정한 크기보다 작은 경우에만 크기를 조정합니다.</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>앤티앨리어싱</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>앤티앨리어싱 그리드 맞춤</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType 그리드 맞춤</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>픽셀당 1비트</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>픽셀당 1비트 그리드 맞춤</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>시스템 기본값</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>아래</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>찾아보기...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>그라데이션 편집...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>효과 옵션</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>{0} 옵션</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>높이</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>왼쪽</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>이 효과에는 설정할 수 있는 속성이 없습니다.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>오른쪽</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>옵션을 편집할 효과를 선택하세요.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>{0} 선택</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>위</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>너비</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>이 경로에 패키지가 이미 있습니다. 교체하려면 덮어쓰기를 활성화하세요.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>에셋 폴더</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>에셋 폴더는 ShareX 이미지 효과 폴더 안에 있어야 합니다.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>찾아보기...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>패키지 파일 경로를 선택하세요.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>패키지 만들기</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>패키지를 만들었습니다.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>ShareX 이미지 효과</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>열기효과폴더</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>기존 패키지 덮어쓰기</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>패키지 파일</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>프리셋 패키지 만들기</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>이미지 효과 패키지 저장</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>효과 에셋 폴더 선택</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - 이미지 효과 패키지 만들기</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>픽셀 알파 = 픽셀 알파 + 더할 값
 예: 0.5를 지정하면 픽셀의 알파가 127.5 증가합니다</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>자동자르기</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>흑백</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>흐림</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>밝기</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>픽셀 알파 = 픽셀 알파 * 값
+예: 0.5를 지정하면 픽셀의 알파가 50% 감소합니다</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>픽셀 색상 = 픽셀 색상 + 값
 예: 0.5를 지정하면 픽셀의 색상이 127.5 증가합니다</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>캔버스</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>캔버스 주변 여백을 계산하는 방법입니다.</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>색 농도</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>색상화</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>대비</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>픽셀 색상 = 픽셀 색상 * 값
 예: 1.5를 지정하면 픽셀의 색상이 50% 증가합니다</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>자르기</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>배경</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>배경 이미지</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>테두리</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>바둑판</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>이미지</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>이미지 워터마크가 원본 이미지보다 크면 그리지 않습니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>필요한 경우 이미지 워터마크의 크기를 조정하는 방법입니다.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>이미지 워터마크가 원본 이미지보다 크면 그리지 않습니다.</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>입자</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>텍스트 워터마크</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>텍스트가 원본 이미지보다 크면 그리지 않습니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>텍스트 워터마크가 원본 이미지보다 크면 그리지 않습니다.</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>텍스트</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>텍스트가 원본 이미지보다 크면 그리지 않습니다.</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>가장자리 감지</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>엠보스</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>뒤집기</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>비율 강제 적용</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>감마</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>최솟값 0.1, 최댓값 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>가우시안 흐림</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>광선</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>회색조</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>색조</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>0에서 360까지</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>색상 반전</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>색상 행렬</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>빨강 = (빨강 * Rr) + (초록 * Rg) + (파랑 * Rb) + (알파 * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>컨볼루션 행렬</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>평균값 제거</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>윤곽선</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>픽셀화</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>폴라로이드</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>반사</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>스크린샷 높이에 대한 반사 높이의 비율입니다.
-값은 1에서 100 사이여야 합니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>반사 투명도가 이 값에서 MinAlpha까지 변합니다.
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>반사 시작 위치: 스크린샷 높이 + 오프셋</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>스크린샷 높이에 대한 반사 높이의 비율입니다.
+값은 1에서 100 사이여야 합니다.</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>반사를 왼쪽 아래에서 오른쪽 아래 방향으로 기울입니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>픽셀을 왼쪽에서 오른쪽으로 기울이는 정도입니다.</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>색상 바꾸기</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>크기 조정</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>가로 세로 비율을 유지하며 높이를 자동 조정하려면 높이를 0으로 설정하세요.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>가로 세로 비율을 유지하며 너비를 자동 조정하려면 너비를 0으로 설정하세요.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>가로 세로 비율을 유지하며 높이를 자동 조정하려면 높이를 0으로 설정하세요.</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>RGB 분할</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>회전</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>-360에서 360 사이의 값을 선택하세요.</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>활성화하면 출력 이미지가 입력 이미지보다 커지며 잘리지 않습니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>이 설정을 사용하려면 확대를 비활성화해야 합니다. 활성화하면 이미지가 잘리고, 비활성화하면 이미지 크기가 줄어듭니다.</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>둥근 모서리</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>채도</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>배율 조정</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>가로 세로 비율을 유지하며 너비를 자동 조정하려면 너비 비율을 0으로 설정하세요.</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>활성화하면 출력 이미지가 입력 이미지보다 커지며 잘리지 않습니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>가로 세로 비율을 유지하며 높이를 자동 조정하려면 높이 비율을 0으로 설정하세요.</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>선택 색상</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>세피아</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>그림자</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>가로 세로 비율을 유지하며 너비를 자동 조정하려면 너비 비율을 0으로 설정하세요.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>0.1에서 1.0 사이의 값을 선택하세요</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>선명하게</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>기울이기</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>픽셀을 왼쪽에서 오른쪽으로 기울이는 정도입니다.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>픽셀을 위에서 아래로 기울이는 정도입니다.</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>조각내기</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>부드럽게</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>찢어진 가장자리</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>물결 가장자리</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>바깥쪽</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>알파</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>안쪽</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>자동자르기</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>고품질 쌍삼차</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>흑백</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>쌍삼차</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>흐림</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>고품질 쌍선형</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>밝기</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>쌍선형</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>캔버스</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>최근접 이웃</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>색 농도</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>절대 크기</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>색상화</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>캔버스 비율</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>대비</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>크기 조정 안 함</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>절대 크기</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>워터마크의 비율</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>캔버스 비율</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>확대</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>자르기</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>없음</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>배경</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>90° 회전</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>배경 이미지</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>180도 회전</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>테두리</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>270° 회전</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>바둑판</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>수평 뒤집기</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>이미지</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>90° 회전 후 수평 뒤집기</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>입자</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>수직 뒤집기</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>텍스트 워터마크</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>90° 회전 후 수직 뒤집기</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>텍스트</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>모든 이미지의 크기를 지정한 크기로 조정합니다.</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>가장자리 감지</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>이미지가 지정한 크기보다 큰 경우에만 크기를 조정합니다.</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>엠보스</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>이미지가 지정한 크기보다 작은 경우에만 크기를 조정합니다.</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>뒤집기</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>왼쪽 위</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>비율 강제 적용</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>가운데 위</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>감마</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>오른쪽 위</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>가우시안 흐림</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>왼쪽 가운데</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>광선</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>가운데 중앙</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>회색조</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>오른쪽 가운데</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>색조</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>왼쪽 아래</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>색상 반전</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>가운데 아래</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>색상 행렬</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>오른쪽 아래</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>컨볼루션 행렬</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>원본 위에 합성</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>평균값 제거</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>원본 복사</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>윤곽선</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>실선</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>픽셀화</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>파선</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>폴라로이드</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>점선</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>RGB 분할</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>일점쇄선</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>반사</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>이점쇄선</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>색상 바꾸기</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>사용자 지정</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>크기 조정</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>가로</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>회전</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>세로</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>둥근 모서리</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>앞쪽 대각선</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>채도</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>뒤쪽 대각선</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>배율 조정</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>시스템 기본값</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>선택 색상</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>픽셀당 1비트 그리드 맞춤</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>세피아</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>픽셀당 1비트</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>그림자</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>앤티앨리어싱 그리드 맞춤</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>선명하게</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>앤티앨리어싱</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>기울이기</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType 그리드 맞춤</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>조각내기</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>없음</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>부드럽게</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>위쪽</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>찢어진 가장자리</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>아래쪽</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>물결 가장자리</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>왼쪽</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>계속</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>오른쪽</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - 확인</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>효과 추가</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>선택한 프리셋에서 모든 효과를 지우시겠습니까?</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>지우기효과</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>계속</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>사용자 지정 효과 이름</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>효과 복제</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>복제프리셋</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>효과</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>패키지를 만들기 전에 프리셋 이름을 입력하세요.</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>이미지 효과 페이지...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>불러오기클립보드에서</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>아래로 이동</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>위로 이동</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>새로 만들기프리셋</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>이미지 열기</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>프리셋 패키지 만들기...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>프리셋이름</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>프리셋</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>이미지 효과미리 보기...</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>새로 고침미리 보기...</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>효과 제거</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>제거프리셋</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>이미지 저장...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - 이미지 효과</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3}밀리초</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>이름 없는 프리셋</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>업로드이미지</value>
   </data>
 </root>

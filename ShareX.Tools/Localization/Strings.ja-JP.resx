@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>テスト中...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>開いたときに自動的に分析する</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>API キー</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>API キーのページ...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>開いたときに自動的に分析する</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>動作</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>モデルを読み込む</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>詳細度</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>接続に成功しました。</value>
@@ -373,14 +373,14 @@
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>参照...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>CSS ファイル</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>フォルダーを選択して出力を生成します。「名前を付けて保存」または「アップロード」を使用するまで保存されません。</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>解析可能な構造化 JSON を作成</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>CSS ファイル</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>フォルダー パスを表示</value>
@@ -433,10 +433,10 @@
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>ディレクトリ インデックスを保存</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>CSS ファイルを選択</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
     <value>CSS ファイルを選択</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
@@ -652,9 +652,6 @@
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>画像</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>または「参照」でファイルを選択</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>アイコンに名前を付けて保存</value>
   </data>
@@ -663,6 +660,9 @@
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>サイズ</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>または「参照」でファイルを選択</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>結合する画像を 2 枚以上追加してください。</value>
@@ -859,9 +859,6 @@
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>ファイル名テンプレート</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>サムネイルを生成</value>
   </data>
@@ -882,6 +879,9 @@
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>幅</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>{0:n0} 個のファイル</value>
@@ -997,20 +997,20 @@
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>右上がり対角線</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>市松模様</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>CPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>市松模様</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>右下がり対角線</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>GPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>高</value>
@@ -1162,17 +1162,122 @@
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>パターン</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>赤</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>赤</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX - モニター テスト</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>速度</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>{0} がタイムアウトしました。</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>アクティブなネットワーク インターフェイスが見つかりませんでした。</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>どのエンドポイントからも応答がありません。</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>自動（推奨）</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>確認中...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>接続済み.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>切断.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>過去 15 分</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>過去 5 分</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>過去 6 時間</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>過去 1 時間</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} ミリ秒</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>一時停止</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>セッション</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>可用性</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>平均遅延</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>確認間隔</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>ログを消去</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>接続イベント</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>すべてコピー</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>現在の遅延</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>日時</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>切断回数</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>遅延履歴</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>接続の変更はまだ記録されていません。</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>遅延サンプルはまだありません。</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>ログを開く...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>一時停止</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>範囲</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - ネットワーク モニター</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>ターゲット</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>このシステムでは OCR 用の {0} 言語を利用できません。</value>
@@ -1462,11 +1567,11 @@
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>PNG 画像</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>QR コード サイズ</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>SVG 画像</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>保存...</value>
@@ -1489,11 +1594,11 @@
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX - QR コード</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>SVG 画像</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>アップロード</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>px</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>許容差: {0}%</value>
@@ -1570,9 +1675,6 @@
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>入力ファイル</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kbps</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>完了時に出力フォルダーを開く</value>
   </data>
@@ -1605,6 +1707,9 @@
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>映像エンコーダー</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kbps</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>video-output</value>
@@ -1705,109 +1810,112 @@
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>動画ファイル</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>キャッシュによる概算プレビュー • 停止すると調整されます</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>{0} がタイムアウトしました。</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>アクティブなネットワーク インターフェイスが見つかりませんでした。</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>キャンセルしました。</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>どのエンドポイントからも応答がありません。</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>動画を開くかドロップして開始</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>自動（推奨）</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>元のストリームを再エンコードせずにコピーします。切り取り位置は近くのキーフレームにずれる場合があります。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>確認中...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>長さ:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>接続済み.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg は出力動画を生成しませんでした。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>切断.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>終了:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>過去 15 分</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>トリミングした動画を保存…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>過去 5 分</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>トリミングした動画を保存中…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>過去 6 時間</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>{0} 付近のプレビュー • 音声再生なし</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>過去 1 時間</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>長さが判明している有効な動画を選択してください。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} ミリ秒</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>ハンドルをドラッグしてトリミングするか、クリックして移動します。左/右: 移動。Shift: 1 秒。I/O: 開始/終了を設定。Home/End: 選択範囲の境界へ移動。</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>一時停止</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>タイムラインのプレビューを準備中…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>ロスレス (高速)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>セッション</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>この位置ではプレビューフレームを取得できませんでした。</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>可用性</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>動画を開く…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>平均遅延</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>このエクスポートモードでは拡張子 {0} を使用してください。</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>確認間隔</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>位置 (秒)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>接続イベント</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>高精度 (再エンコード)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>ログを消去</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>正確な切り取り位置のため H.264 / AAC MP4 に再エンコードします。</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>すべてコピー</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>静止画プレビュー • 音声再生なし</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>現在の遅延</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>ハンドルをドラッグして残す範囲を選択してください。</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>日時</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>選択範囲をリセット</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>切断回数</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>保存先: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>遅延履歴</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>矢印キー: 0.1 秒 • Shift: 1 秒</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>接続の変更はまだ記録されていません。</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>{0} を残す</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>遅延サンプルはまだありません。</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>ここを終了位置に設定</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>ログを開く...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>ここを開始位置に設定</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>一時停止</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>出力フォルダーを表示...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>範囲</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>別の出力ファイルを選択してください。元の動画は上書きできません。</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - ネットワーク モニター</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>開始:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>開始</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>動画タイムラインとトリミング範囲</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>状態</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX - 動画トリマー</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>ターゲット</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>トリミングモード:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>動画ファイル</value>
   </data>
 </root>

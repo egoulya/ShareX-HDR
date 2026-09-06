@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>ทิศทาง</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>เพิ่มจุดหยุด</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>สี หยุด</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>เพิ่มจุดหยุด</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>ทิศทาง</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>เอาออก</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>เอฟเฟกต์ ตัวเลือก</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>{0} ตัวเลือก</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>เลือกเอฟเฟกต์เพื่อแก้ไขตัวเลือก</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>เอฟเฟกต์นี้ไม่มีคุณสมบัติที่กำหนดค่าได้</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>แก้ไข ไล่ระดับสี...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>เรียกดู...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>เลือก {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>R</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>B</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>W</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>H</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - แพ็กเกจเอฟเฟกต์รูปภาพ</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>แพ็กเกจ ค่าที่ตั้งไว้</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>ทรัพยากร โฟลเดอร์</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>แพ็กเกจ ไฟล์</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>เรียกดู...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>เขียนทับ ที่มีอยู่ แพ็กเกจ</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>เปิด เอฟเฟกต์ โฟลเดอร์</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>สร้าง แพ็กเกจ</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>ปิด</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>เลือกโฟลเดอร์ทรัพยากรเอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>บันทึกรูปภาพ เอฟเฟกต์ แพ็กเกจ</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>ShareX รูปภาพ เอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>โฟลเดอร์ทรัพยากรต้องอยู่ภายในโฟลเดอร์เอฟเฟกต์รูปภาพของ ShareX</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>เลือก แพ็กเกจ เส้นทางไฟล์.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>มีแพ็กเกจอยู่แล้วในเส้นทางนี้ เปิดการเขียนทับเพื่อแทนที่</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>แพ็กเกจ สร้างแล้ว สำเร็จ.</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - การยืนยัน</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>ดำเนินการต่อ?</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>ใช่</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>ไม่</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - เอฟเฟกต์รูปภาพ</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} ms</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>ค่าที่ตั้งไว้</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>ใหม่ ค่าที่ตั้งไว้</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>เอาออก ค่าที่ตั้งไว้</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>ทำสำเนา ค่าที่ตั้งไว้</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>ย้ายขึ้น</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>ย้ายลง</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>ค่าที่ตั้งไว้ ชื่อ</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>เอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>รีเฟรชตัวอย่าง</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>กำหนดเอง เอฟเฟกต์ ชื่อ</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>เพิ่ม เอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>เอาออก เอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>ทำสำเนา เอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>ล้างเอฟเฟกต์</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>เปิดรูปภาพ...</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>โหลด จากคลิปบอร์ด</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>แพ็กเกจ ค่าที่ตั้งไว้...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>เอฟเฟกต์รูปภาพ หน้า...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>บันทึกรูปภาพ...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>Upโหลดรูปภาพ</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>ดำเนินการต่อ</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>ยกเลิก</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>ปิด</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>ไม่มีชื่อ ค่าที่ตั้งไว้</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>ป้อนชื่อค่าที่ตั้งไว้ก่อนสร้างแพ็กเกจ</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>ล้างเอฟเฟกต์ทั้งหมดจากค่าที่ตั้งไว้ที่เลือกหรือไม่</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>เอฟเฟกต์รูปภาพ ตัวอย่าง</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>การปรับ</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>ภาพวาด</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>การปรับแต่ง</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>การปรับ</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>ตัวกรอง</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>การปรับแต่ง</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>ข้อความ</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>ลายน้ำข้อความ</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>อัลฟา</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>ด้านล่าง</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>อัลฟาพิกเซล = อัลฟาพิกเซล * ค่า
-ตัวอย่าง 0.5 จะลดอัลฟาของพิกเซลลง 50%</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>ซ้าย</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>ไม่มี</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>ขวา</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>ด้านบน</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>ด้านใน</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>ด้านนอก</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>ขนาดสัมบูรณ์</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>เปอร์เซ็นต์ ของ ผืนผ้าใบ</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>แหล่งที่มา คัดลอก</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>แหล่งที่มา เหนือ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>ล่างกึ่งกลาง</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>ล่างซ้าย</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>ล่างขวา</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>กึ่งกลาง กึ่งกลาง</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>กึ่งกลางซ้าย</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>กึ่งกลางขวา</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>บนกึ่งกลาง</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>บนซ้าย</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>บนขวา</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>กำหนดเอง</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>เส้นประ</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>เส้นประ จุด</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>เส้นประจุดจุด</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>จุด</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>ทึบ</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>ขนาดสัมบูรณ์</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>อย่า ปรับขนาด</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>เปอร์เซ็นต์ ของ ผืนผ้าใบ</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>เปอร์เซ็นต์ ของ ลายน้ำ</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>ครอบตัด</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>ขยาย</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>ไบคิวบิก</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>ไบลิเนียร์</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>คุณภาพสูง ไบคิวบิก</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>ไบลิเนียร์คุณภาพสูง</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>เพื่อนบ้านใกล้สุด</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>พลิก x</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>พลิก y</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>ไม่มี</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>หมุน 180</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>หมุน 270</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>หมุน 90</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>หมุน 90° และพลิกแกน X</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>หมุน 90° และพลิกแกน Y</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>แนวทแยงย้อนกลับ</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>แนวทแยงไปข้างหน้า</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>แนวนอน</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>แนวตั้ง</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>ปรับรูปภาพทั้งหมดเป็นขนาดที่ระบุ</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>ปรับขนาดเฉพาะเมื่อรูปภาพใหญ่กว่าขนาดที่ระบุ</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>ปรับขนาดเฉพาะเมื่อรูปภาพเล็กกว่าขนาดที่ระบุ</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>ลบรอยหยัก</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>ลบรอยหยัก ตาราง พอดี</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType แบบพอดีตาราง</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>หนึ่งบิตต่อพิกเซล</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>หนึ่งบิตต่อพิกเซลแบบพอดีตาราง</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>ระบบ ค่าเริ่มต้น</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>เรียกดู...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>แก้ไข ไล่ระดับสี...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>เอฟเฟกต์ ตัวเลือก</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>{0} ตัวเลือก</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>H</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>เอฟเฟกต์นี้ไม่มีคุณสมบัติที่กำหนดค่าได้</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>เลือกเอฟเฟกต์เพื่อแก้ไขตัวเลือก</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>เลือก {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>มีแพ็กเกจอยู่แล้วในเส้นทางนี้ เปิดการเขียนทับเพื่อแทนที่</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>ทรัพยากร โฟลเดอร์</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>โฟลเดอร์ทรัพยากรต้องอยู่ภายในโฟลเดอร์เอฟเฟกต์รูปภาพของ ShareX</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>เรียกดู...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>เลือก แพ็กเกจ เส้นทางไฟล์.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>สร้าง แพ็กเกจ</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>แพ็กเกจ สร้างแล้ว สำเร็จ.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>ShareX รูปภาพ เอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>เปิด เอฟเฟกต์ โฟลเดอร์</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>เขียนทับ ที่มีอยู่ แพ็กเกจ</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>แพ็กเกจ ไฟล์</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>แพ็กเกจ ค่าที่ตั้งไว้</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>บันทึกรูปภาพ เอฟเฟกต์ แพ็กเกจ</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>เลือกโฟลเดอร์ทรัพยากรเอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - แพ็กเกจเอฟเฟกต์รูปภาพ</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>อัลฟาพิกเซล = อัลฟาพิกเซล + ค่าที่เพิ่ม
 ตัวอย่าง 0.5 จะเพิ่มอัลฟาของพิกเซลเป็น 127.5</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>อัตโนมัติ ครอบตัด</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>ดำ &amp; ขาว</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>เบลอ</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>ความสว่าง</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>อัลฟาพิกเซล = อัลฟาพิกเซล * ค่า
+ตัวอย่าง 0.5 จะลดอัลฟาของพิกเซลลง 50%</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>สีพิกเซล = สีพิกเซล + ค่า
 ตัวอย่าง 0.5 จะเพิ่มค่าสีพิกเซลเป็น 127.5</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>ผืนผ้าใบ</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>วิธีคำนวณระยะขอบรอบผืนผ้าใบ</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>ความลึกสี</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>เติมสี</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>ความเปรียบต่าง</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>สีพิกเซล = สีพิกเซล * ค่า
 ตัวอย่าง 1.5 จะเพิ่มค่าสีพิกเซลขึ้น 50%</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>ครอบตัด</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>พื้นหลัง</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>รูปภาพพื้นหลัง</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>เส้นขอบ</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>ลายตารางหมากรุก</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>รูปภาพ</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>หากลายน้ำรูปภาพใหญ่กว่ารูปภาพต้นฉบับ จะไม่วาดลายน้ำ</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>วิธีปรับมาตราส่วนลายน้ำรูปภาพ หากจำเป็น</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>หากลายน้ำรูปภาพใหญ่กว่ารูปภาพต้นฉบับ จะไม่วาดลายน้ำ</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>อนุภาค</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>ลายน้ำข้อความ</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>หากข้อความใหญ่กว่ารูปภาพต้นฉบับ จะไม่วาดข้อความ</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>หากลายน้ำข้อความใหญ่กว่ารูปภาพต้นฉบับ จะไม่วาดลายน้ำ</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>ข้อความ</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>หากข้อความใหญ่กว่ารูปภาพต้นฉบับ จะไม่วาดข้อความ</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>ตรวจจับขอบ</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>ทำให้นูน</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>พลิก</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>บังคับสัดส่วน</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>แกมมา</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>ต่ำสุด 0.1, สูงสุด 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>Gaussian เบลอ</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>เรืองแสง</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>ระดับสีเทา</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>เฉดสี</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>จาก 0 ถึง 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>ผกผัน</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>เมทริกซ์สี</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>แดง = (แดง * Rr) + (เขียว * Rg) + (น้ำเงิน * Rb) + (อัลฟา * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>เมทริกซ์คอนโวลูชัน</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>ลบค่าเฉลี่ย</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>เส้นรอบนอก</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>ทำเป็นพิกเซล</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>โพลารอยด์</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>ภาพสะท้อน</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>ความสูงของภาพสะท้อนสัมพันธ์กับความสูงภาพหน้าจอ
-ค่าต้องอยู่ระหว่าง 1 ถึง 100</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>ความโปร่งใสของภาพสะท้อนเริ่มจากค่านี้ถึง MinAlpha
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>ตำแหน่งเริ่มต้นของภาพสะท้อนคือ: ความสูงภาพหน้าจอ + ระยะเยื้อง</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>ความสูงของภาพสะท้อนสัมพันธ์กับความสูงภาพหน้าจอ
+ค่าต้องอยู่ระหว่าง 1 ถึง 100</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>เพิ่มความเอียงให้ภาพสะท้อนจากล่างซ้ายไปล่างขวา</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>จำนวนพิกเซลที่เอียงจากซ้ายไปขวา</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>แทนที่ สี</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>ปรับขนาด</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>ตั้งความสูงเป็น 0 เพื่อปรับความสูงอัตโนมัติและรักษาอัตราส่วนภาพ</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>ตั้งความกว้างเป็น 0 เพื่อปรับความกว้างอัตโนมัติและรักษาอัตราส่วนภาพ</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>ตั้งความสูงเป็น 0 เพื่อปรับความสูงอัตโนมัติและรักษาอัตราส่วนภาพ</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>RGB แบ่ง</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>หมุน</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>เลือกค่าระหว่าง -360 ถึง 360</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>หากเป็นจริง รูปภาพผลลัพธ์จะใหญ่กว่าอินพุตและจะไม่ถูกตัดขอบ</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>ต้องปิดการขยายขนาดเพื่อให้การตั้งค่านี้ทำงาน หากเปิด รูปภาพจะถูกตัดขอบ มิฉะนั้นขนาดรูปภาพจะลดลง</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>มุมโค้งมน</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>ความอิ่มตัวของสี</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>มาตราส่วน</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>ตั้งเปอร์เซ็นต์ความกว้างเป็น 0 เพื่อรักษาอัตราส่วนภาพโดยปรับความกว้างอัตโนมัติ</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>หากเป็นจริง รูปภาพผลลัพธ์จะใหญ่กว่าอินพุตและจะไม่ถูกตัดขอบ</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>ตั้งเปอร์เซ็นต์ความสูงเป็น 0 เพื่อรักษาอัตราส่วนภาพโดยปรับความสูงอัตโนมัติ</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>แบบเลือกเฉพาะ สี</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>ซีเปีย</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>เงา</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>ตั้งเปอร์เซ็นต์ความกว้างเป็น 0 เพื่อรักษาอัตราส่วนภาพโดยปรับความกว้างอัตโนมัติ</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>เลือกค่าระหว่าง 0.1 ถึง 1.0</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>ทำให้คม</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>เอียง</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>จำนวนพิกเซลที่เอียงจากซ้ายไปขวา</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>จำนวนพิกเซลที่เอียงจากบนลงล่าง</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>แบ่งส่วน</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>เรียบเนียน</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>ขอบฉีก</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>ขอบคลื่น</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>ด้านนอก</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>อัลฟา</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>ด้านใน</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>อัตโนมัติ ครอบตัด</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>คุณภาพสูง ไบคิวบิก</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>ดำ &amp; ขาว</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>ไบคิวบิก</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>เบลอ</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>ไบลิเนียร์คุณภาพสูง</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>ความสว่าง</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>ไบลิเนียร์</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>ผืนผ้าใบ</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>เพื่อนบ้านใกล้สุด</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>ความลึกสี</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>ขนาดสัมบูรณ์</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>เติมสี</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>เปอร์เซ็นต์ ของ ผืนผ้าใบ</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>ความเปรียบต่าง</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>อย่า ปรับขนาด</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>ขนาดสัมบูรณ์</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>เปอร์เซ็นต์ ของ ลายน้ำ</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>เปอร์เซ็นต์ ของ ผืนผ้าใบ</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>ขยาย</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>ครอบตัด</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>ไม่มี</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>พื้นหลัง</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>หมุน 90</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>รูปภาพพื้นหลัง</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>หมุน 180</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>เส้นขอบ</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>หมุน 270</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>ลายตารางหมากรุก</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>พลิก x</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>รูปภาพ</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>หมุน 90° และพลิกแกน X</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>อนุภาค</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>พลิก y</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>ลายน้ำข้อความ</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>หมุน 90° และพลิกแกน Y</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>ข้อความ</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>ปรับรูปภาพทั้งหมดเป็นขนาดที่ระบุ</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>ตรวจจับขอบ</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>ปรับขนาดเฉพาะเมื่อรูปภาพใหญ่กว่าขนาดที่ระบุ</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>ทำให้นูน</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>ปรับขนาดเฉพาะเมื่อรูปภาพเล็กกว่าขนาดที่ระบุ</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>พลิก</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>บนซ้าย</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>บังคับสัดส่วน</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>บนกึ่งกลาง</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>แกมมา</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>บนขวา</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>Gaussian เบลอ</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>กึ่งกลางซ้าย</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>เรืองแสง</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>กึ่งกลาง กึ่งกลาง</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>ระดับสีเทา</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>กึ่งกลางขวา</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>เฉดสี</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>ล่างซ้าย</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>ผกผัน</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>ล่างกึ่งกลาง</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>เมทริกซ์สี</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>ล่างขวา</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>เมทริกซ์คอนโวลูชัน</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>แหล่งที่มา เหนือ</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>ลบค่าเฉลี่ย</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>แหล่งที่มา คัดลอก</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>เส้นรอบนอก</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>ทึบ</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>ทำเป็นพิกเซล</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>เส้นประ</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>โพลารอยด์</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>จุด</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>RGB แบ่ง</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>เส้นประ จุด</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>ภาพสะท้อน</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>เส้นประจุดจุด</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>แทนที่ สี</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>กำหนดเอง</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>ปรับขนาด</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>แนวนอน</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>หมุน</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>แนวตั้ง</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>มุมโค้งมน</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>แนวทแยงไปข้างหน้า</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>ความอิ่มตัวของสี</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>แนวทแยงย้อนกลับ</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>มาตราส่วน</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>ระบบ ค่าเริ่มต้น</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>แบบเลือกเฉพาะ สี</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>หนึ่งบิตต่อพิกเซลแบบพอดีตาราง</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>ซีเปีย</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>หนึ่งบิตต่อพิกเซล</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>เงา</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>ลบรอยหยัก ตาราง พอดี</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>ทำให้คม</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>ลบรอยหยัก</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>เอียง</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType แบบพอดีตาราง</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>แบ่งส่วน</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>ไม่มี</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>เรียบเนียน</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>ด้านบน</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>ขอบฉีก</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>ด้านล่าง</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>ขอบคลื่น</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>ซ้าย</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>ดำเนินการต่อ?</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>ขวา</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>ไม่</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - การยืนยัน</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>ใช่</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>เพิ่ม เอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>ล้างเอฟเฟกต์ทั้งหมดจากค่าที่ตั้งไว้ที่เลือกหรือไม่</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>ล้างเอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>ดำเนินการต่อ</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>กำหนดเอง เอฟเฟกต์ ชื่อ</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>ทำสำเนา เอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>ทำสำเนา ค่าที่ตั้งไว้</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>เอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>ป้อนชื่อค่าที่ตั้งไว้ก่อนสร้างแพ็กเกจ</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>เอฟเฟกต์รูปภาพ หน้า...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>โหลด จากคลิปบอร์ด</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>ย้ายลง</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>ย้ายขึ้น</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>ใหม่ ค่าที่ตั้งไว้</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>เปิดรูปภาพ...</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>แพ็กเกจ ค่าที่ตั้งไว้...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>ค่าที่ตั้งไว้ ชื่อ</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>ค่าที่ตั้งไว้</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>เอฟเฟกต์รูปภาพ ตัวอย่าง</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>รีเฟรชตัวอย่าง</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>เอาออก เอฟเฟกต์</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>เอาออก ค่าที่ตั้งไว้</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>บันทึกรูปภาพ...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - เอฟเฟกต์รูปภาพ</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} ms</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>ไม่มีชื่อ ค่าที่ตั้งไว้</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>Upโหลดรูปภาพ</value>
   </data>
 </root>

@@ -64,9 +64,6 @@
   <data name="AccountType_User" xml:space="preserve">
     <value>Пользователь</value>
   </data>
-  <data name="AmazonS3_Upload_failed" xml:space="preserve">
-    <value>Не удалось отправить файл в Amazon S3.</value>
-  </data>
   <data name="AmazonS3StorageClass_INTELLIGENT_TIERING" xml:space="preserve">
     <value>Amazon S3 Intelligent-Tiering</value>
   </data>
@@ -78,6 +75,9 @@
   </data>
   <data name="AmazonS3StorageClass_STANDARD_IA" xml:space="preserve">
     <value>Amazon S3 Standard-Infrequent Access</value>
+  </data>
+  <data name="AmazonS3_Upload_failed" xml:space="preserve">
+    <value>Не удалось отправить файл в Amazon S3.</value>
   </data>
   <data name="AzureStorage_Access_key_must_not_be_empty" xml:space="preserve">
     <value>«Ключ доступа» не может быть пустым.</value>
@@ -142,9 +142,6 @@
   <data name="Common_Unknown_error" xml:space="preserve">
     <value>Неизвестная ошибка</value>
   </data>
-  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
-    <value>Неподдерживаемый формат запроса: {0}</value>
-  </data>
   <data name="CustomUploaderBody_Binary" xml:space="preserve">
     <value>Двоичный</value>
   </data>
@@ -205,6 +202,18 @@
   <data name="CustomUploaderParser_Minimum_parameter_count" xml:space="preserve">
     <value>Минимальное количество параметров функции «{0}» — {1}.</value>
   </data>
+  <data name="CustomUploader_Unsupported_request_format" xml:space="preserve">
+    <value>Неподдерживаемый формат запроса: {0}</value>
+  </data>
+  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
+    <value>ShareX — Настройки назначений</value>
+  </data>
+  <data name="DestinationSettings_API_key" xml:space="preserve">
+    <value>Ключ API:</value>
+  </data>
+  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
+    <value>Ключ API получен</value>
+  </data>
   <data name="DestinationSettings_Account" xml:space="preserve">
     <value>Учётная запись</value>
   </data>
@@ -238,12 +247,6 @@
   <data name="DestinationSettings_Albums" xml:space="preserve">
     <value>Альбомы</value>
   </data>
-  <data name="DestinationSettings_API_key" xml:space="preserve">
-    <value>Ключ API:</value>
-  </data>
-  <data name="DestinationSettings_API_key_retrieved" xml:space="preserve">
-    <value>Ключ API получен</value>
-  </data>
   <data name="DestinationSettings_Authorization_code" xml:space="preserve">
     <value>Код авторизации:</value>
   </data>
@@ -274,14 +277,14 @@
   <data name="DestinationSettings_Complete_authorization" xml:space="preserve">
     <value>Завершить авторизацию</value>
   </data>
-  <data name="DestinationSettings_Connect_account" xml:space="preserve">
-    <value>Подключить учётную запись</value>
-  </data>
   <data name="DestinationSettings_Connect_Imgur_account_first" xml:space="preserve">
     <value>Сначала подключите учётную запись Imgur</value>
   </data>
   <data name="DestinationSettings_Connect_Photobucket_account_first" xml:space="preserve">
     <value>Сначала подключите учётную запись Photobucket</value>
+  </data>
+  <data name="DestinationSettings_Connect_account" xml:space="preserve">
+    <value>Подключить учётную запись</value>
   </data>
   <data name="DestinationSettings_Connected" xml:space="preserve">
     <value>Подключено!</value>
@@ -313,8 +316,23 @@
   <data name="DestinationSettings_Enter_credentials_to_retrieve_API_key" xml:space="preserve">
     <value>Введите данные учётной записи, чтобы получить ключ API</value>
   </data>
+  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
+    <value>Введите текущий код двухфакторной аутентификации</value>
+  </data>
   <data name="DestinationSettings_Field_81_Compatibility" xml:space="preserve">
     <value>Совместимость с 8.1</value>
+  </data>
+  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
+    <value>URL API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
+    <value>Имя сервера API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
+    <value>Ключ API</value>
+  </data>
+  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
+    <value>Имя пользователя API</value>
   </data>
   <data name="DestinationSettings_Field_Acc_Info_Email" xml:space="preserve">
     <value>Почта сведений об учётной записи</value>
@@ -336,18 +354,6 @@
   </data>
   <data name="DestinationSettings_Field_Account_Type" xml:space="preserve">
     <value>Тип учётной записи</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Hostname" xml:space="preserve">
-    <value>Имя сервера API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Key" xml:space="preserve">
-    <value>Ключ API</value>
-  </data>
-  <data name="DestinationSettings_Field_API_Username" xml:space="preserve">
-    <value>Имя пользователя API</value>
-  </data>
-  <data name="DestinationSettings_Field_APIURL" xml:space="preserve">
-    <value>URL API</value>
   </data>
   <data name="DestinationSettings_Field_Append_File_Name_To_URL" xml:space="preserve">
     <value>Добавлять имя файла к URL</value>
@@ -481,9 +487,6 @@
   <data name="DestinationSettings_Field_Host" xml:space="preserve">
     <value>Хост</value>
   </data>
-  <data name="DestinationSettings_Field_id" xml:space="preserve">
-    <value>Идентификатор</value>
-  </data>
   <data name="DestinationSettings_Field_Images" xml:space="preserve">
     <value>Изображения</value>
   </data>
@@ -516,9 +519,6 @@
   </data>
   <data name="DestinationSettings_Field_Login" xml:space="preserve">
     <value>Вход</value>
-  </data>
-  <data name="DestinationSettings_Field_name" xml:space="preserve">
-    <value>Имя</value>
   </data>
   <data name="DestinationSettings_Field_Object_Prefix" xml:space="preserve">
     <value>Префикс объекта</value>
@@ -631,6 +631,12 @@
   <data name="DestinationSettings_Field_Syntax_Highlighting" xml:space="preserve">
     <value>Подсветка синтаксиса</value>
   </data>
+  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
+    <value>Срок жизни</value>
+  </data>
+  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
+    <value>Единица срока жизни</value>
+  </data>
   <data name="DestinationSettings_Field_Tags" xml:space="preserve">
     <value>Теги</value>
   </data>
@@ -655,14 +661,8 @@
   <data name="DestinationSettings_Field_Token" xml:space="preserve">
     <value>Токен</value>
   </data>
-  <data name="DestinationSettings_Enter_current_two_factor_authentication_code" xml:space="preserve">
-    <value>Введите текущий код двухфакторной аутентификации</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL" xml:space="preserve">
-    <value>Срок жизни</value>
-  </data>
-  <data name="DestinationSettings_Field_TTL_Unit" xml:space="preserve">
-    <value>Единица срока жизни</value>
+  <data name="DestinationSettings_Field_URL" xml:space="preserve">
+    <value>Ссылка</value>
   </data>
   <data name="DestinationSettings_Field_Upload_Path" xml:space="preserve">
     <value>Путь отправки</value>
@@ -675,9 +675,6 @@
   </data>
   <data name="DestinationSettings_Field_Uploader" xml:space="preserve">
     <value>Загрузчик:</value>
-  </data>
-  <data name="DestinationSettings_Field_URL" xml:space="preserve">
-    <value>Ссылка</value>
   </data>
   <data name="DestinationSettings_Field_Use_AP_Iv1" xml:space="preserve">
     <value>Использовать API v1</value>
@@ -729,6 +726,12 @@
   </data>
   <data name="DestinationSettings_Field_Web_API_Key" xml:space="preserve">
     <value>Ключ Web API</value>
+  </data>
+  <data name="DestinationSettings_Field_id" xml:space="preserve">
+    <value>Идентификатор</value>
+  </data>
+  <data name="DestinationSettings_Field_name" xml:space="preserve">
+    <value>Имя</value>
   </data>
   <data name="DestinationSettings_Folder_count_plural" xml:space="preserve">
     <value>Папок: {0}</value>
@@ -841,9 +844,6 @@
   <data name="DestinationSettings_Verification_code" xml:space="preserve">
     <value>Код подтверждения:</value>
   </data>
-  <data name="DestinationSettingsWindow_ShareX_Destination_settings" xml:space="preserve">
-    <value>ShareX — Настройки назначений</value>
-  </data>
   <data name="Dropbox_API_upload_limit" xml:space="preserve">
     <value>Размер отправки через API ограничен 150 МБ.</value>
   </data>
@@ -856,9 +856,6 @@
   <data name="EmailWindow_Message" xml:space="preserve">
     <value>Сообщение</value>
   </data>
-  <data name="EmailWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="EmailWindow_Send" xml:space="preserve">
     <value>Отправить</value>
   </data>
@@ -870,6 +867,18 @@
   </data>
   <data name="EmailWindow_To_email" xml:space="preserve">
     <value>Адрес получателя</value>
+  </data>
+  <data name="EmailWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="FTPProtocol_FTP" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="FTPProtocol_FTPS" xml:space="preserve">
+    <value>FTPS (FTP через SSL)</value>
+  </data>
+  <data name="FTPProtocol_SFTP" xml:space="preserve">
+    <value>SFTP (SSH FTP)</value>
   </data>
   <data name="FileDestination_AmazonS3" xml:space="preserve">
     <value>Amazon S3</value>
@@ -916,11 +925,11 @@
   <data name="FileDestination_Localhostr" xml:space="preserve">
     <value>Hostr</value>
   </data>
-  <data name="FileDestination_Mega" xml:space="preserve">
-    <value>MEGA</value>
-  </data>
   <data name="FileDestination_MediaFire" xml:space="preserve">
     <value>MediaFire</value>
+  </data>
+  <data name="FileDestination_Mega" xml:space="preserve">
+    <value>MEGA</value>
   </data>
   <data name="FileDestination_OneDrive" xml:space="preserve">
     <value>OneDrive</value>
@@ -967,15 +976,6 @@
   <data name="FileSonic_Get_upload_URL_failed" xml:space="preserve">
     <value>Не удалось получить URL отправки.</value>
   </data>
-  <data name="FTPProtocol_FTP" xml:space="preserve">
-    <value>FTP</value>
-  </data>
-  <data name="FTPProtocol_FTPS" xml:space="preserve">
-    <value>FTPS (FTP через SSL)</value>
-  </data>
-  <data name="FTPProtocol_SFTP" xml:space="preserve">
-    <value>SFTP (SSH FTP)</value>
-  </data>
   <data name="GoogleDrive_My_drive" xml:space="preserve">
     <value>Мой диск</value>
   </data>
@@ -1003,12 +1003,6 @@
   <data name="ImageDestination_Vgyme" xml:space="preserve">
     <value>vgy.me</value>
   </data>
-  <data name="Imgur_Error_details" xml:space="preserve">
-    <value>Состояние: {0}, Запрос: {1}, Ошибка: {2}</value>
-  </data>
-  <data name="Imgur_Upload_failed" xml:space="preserve">
-    <value>Ошибка отправки в Imgur: ({0}) {1}</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Большой квадрат</value>
   </data>
@@ -1026,6 +1020,12 @@
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Маленькая миниатюра</value>
+  </data>
+  <data name="Imgur_Error_details" xml:space="preserve">
+    <value>Состояние: {0}, Запрос: {1}, Ошибка: {2}</value>
+  </data>
+  <data name="Imgur_Upload_failed" xml:space="preserve">
+    <value>Ошибка отправки в Imgur: ({0}) {1}</value>
   </data>
   <data name="Lambda_Upload_failed_check_API_key" xml:space="preserve">
     <value>Отправка не удалась по неизвестной причине. Проверьте ключ API.</value>
@@ -1072,15 +1072,6 @@
   <data name="OAuthInfo_New_account" xml:space="preserve">
     <value>Новый аккаунт</value>
   </data>
-  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
-    <value>Авторизация успешно завершена.</value>
-  </data>
-  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
-    <value>Авторизация не выполнена.</value>
-  </data>
-  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
-    <value>Недопустимый параметр состояния.</value>
-  </data>
   <data name="OAuthListenerWindow_Cancel" xml:space="preserve">
     <value>Отмена</value>
   </data>
@@ -1089,6 +1080,15 @@
   </data>
   <data name="OAuthListenerWindow_Waiting_for_authorization_in_your_browser_to_complete" xml:space="preserve">
     <value>Ожидание завершения авторизации в браузере...</value>
+  </data>
+  <data name="OAuthListener_Authorization_completed_successfully" xml:space="preserve">
+    <value>Авторизация успешно завершена.</value>
+  </data>
+  <data name="OAuthListener_Authorization_did_not_succeed" xml:space="preserve">
+    <value>Авторизация не выполнена.</value>
+  </data>
+  <data name="OAuthListener_Invalid_state_parameter" xml:space="preserve">
+    <value>Недопустимый параметр состояния.</value>
   </data>
   <data name="OAuthManager_Consumer_credentials_are_empty" xml:space="preserve">
     <value>Ключ, секрет или закрытый ключ потребителя пуст.</value>
@@ -1115,9 +1115,6 @@
   </data>
   <data name="ParserSelectWindow_ShareX_Select" xml:space="preserve">
     <value>ShareX — Выбор</value>
-  </data>
-  <data name="Pastebin_Login_failed" xml:space="preserve">
-    <value>Не удалось войти в Pastebin.</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>D1</value>
@@ -1149,11 +1146,11 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Доступ по ссылке</value>
   </data>
+  <data name="Pastebin_Login_failed" xml:space="preserve">
+    <value>Не удалось войти в Pastebin.</value>
+  </data>
   <data name="Plik_Host_is_empty" xml:space="preserve">
     <value>Сервер Plik не указан.</value>
-  </data>
-  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
-    <value>Сервер требует авторизации.</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 день</value>
@@ -1188,23 +1185,14 @@
   <data name="PrivateBinFormat_SyntaxHighlighting" xml:space="preserve">
     <value>подсветка синтаксиса</value>
   </data>
+  <data name="PrivateBin_Server_requires_authorization" xml:space="preserve">
+    <value>Сервер требует авторизации.</value>
+  </data>
   <data name="Pushbullet_Device_key_is_missing" xml:space="preserve">
     <value>Отсутствует ключ устройства.</value>
   </data>
   <data name="Pushbullet_No_device_selected" xml:space="preserve">
     <value>Устройство для отправки не выбрано.</value>
-  </data>
-  <data name="Puush_Authentication_failure" xml:space="preserve">
-    <value>Ошибка проверки подлинности.</value>
-  </data>
-  <data name="Puush_Checksum_error" xml:space="preserve">
-    <value>Ошибка контрольной суммы.</value>
-  </data>
-  <data name="Puush_Connection_error" xml:space="preserve">
-    <value>Ошибка подключения.</value>
-  </data>
-  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
-    <value>В учётной записи недостаточно свободного места.</value>
   </data>
   <data name="PuushLoginWindow_Cancel" xml:space="preserve">
     <value>Отмена</value>
@@ -1227,14 +1215,29 @@
   <data name="PuushLoginWindow_Login_failed" xml:space="preserve">
     <value>Вход не удался.</value>
   </data>
-  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
-    <value>name@example.com</value>
-  </data>
   <data name="PuushLoginWindow_Password" xml:space="preserve">
     <value>Пароль</value>
   </data>
   <data name="PuushLoginWindow_ShareX_puush_login" xml:space="preserve">
     <value>ShareX — Вход в puush</value>
+  </data>
+  <data name="PuushLoginWindow_name_example_com" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+  <data name="Puush_Authentication_failure" xml:space="preserve">
+    <value>Ошибка проверки подлинности.</value>
+  </data>
+  <data name="Puush_Checksum_error" xml:space="preserve">
+    <value>Ошибка контрольной суммы.</value>
+  </data>
+  <data name="Puush_Connection_error" xml:space="preserve">
+    <value>Ошибка подключения.</value>
+  </data>
+  <data name="Puush_Insufficient_account_storage" xml:space="preserve">
+    <value>В учётной записи недостаточно свободного места.</value>
+  </data>
+  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
+    <value>Копировать URL</value>
   </data>
   <data name="ResponseWindow_Copy_deletion_URL" xml:space="preserve">
     <value>Копировать URL удаления</value>
@@ -1250,9 +1253,6 @@
   </data>
   <data name="ResponseWindow_Copy_thumbnail_URL" xml:space="preserve">
     <value>Копировать URL миниатюры</value>
-  </data>
-  <data name="ResponseWindow_Copy_URL" xml:space="preserve">
-    <value>Копировать URL</value>
   </data>
   <data name="ResponseWindow_Deletion_URL" xml:space="preserve">
     <value>Ссылка на удаление</value>
@@ -1275,20 +1275,20 @@
   <data name="ResponseWindow_No_result_details_are_available" xml:space="preserve">
     <value>Сведения о результате отсутствуют.</value>
   </data>
+  <data name="ResponseWindow_Open_URL" xml:space="preserve">
+    <value>Открыть ссылку</value>
+  </data>
   <data name="ResponseWindow_Open_response_URL" xml:space="preserve">
     <value>Открыть URL ответа</value>
   </data>
-  <data name="ResponseWindow_Open_URL" xml:space="preserve">
-    <value>Открыть ссылку</value>
+  <data name="ResponseWindow_Response_URL" xml:space="preserve">
+    <value>URL ответа</value>
   </data>
   <data name="ResponseWindow_Response_info" xml:space="preserve">
     <value>Сведения об ответе</value>
   </data>
   <data name="ResponseWindow_Response_text" xml:space="preserve">
     <value>Текст ответа</value>
-  </data>
-  <data name="ResponseWindow_Response_URL" xml:space="preserve">
-    <value>URL ответа</value>
   </data>
   <data name="ResponseWindow_Result" xml:space="preserve">
     <value>Результат</value>
@@ -1308,17 +1308,20 @@
   <data name="ResponseWindow_Thumbnail_URL" xml:space="preserve">
     <value>Ссылка на миниатюру</value>
   </data>
-  <data name="ResponseWindow_Upload_response" xml:space="preserve">
-    <value>Ответ отправки</value>
-  </data>
   <data name="ResponseWindow_URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="ResponseWindow_Upload_response" xml:space="preserve">
+    <value>Ответ отправки</value>
   </data>
   <data name="ResponseWindow_XML_format" xml:space="preserve">
     <value>Форматировать XML</value>
   </data>
   <data name="ResponseWindow_XML_formatting_failed" xml:space="preserve">
     <value>Форматирование не удалось.</value>
+  </data>
+  <data name="SFTP_Key_file_not_found" xml:space="preserve">
+    <value>Файл ключа не существует.</value>
   </data>
   <data name="Seafile_API_URL_is_empty" xml:space="preserve">
     <value>URL API Seafile не указан.</value>
@@ -1338,9 +1341,6 @@
   </data>
   <data name="SendSpace_Upload_information_is_missing" xml:space="preserve">
     <value>Отсутствуют сведения об отправке.</value>
-  </data>
-  <data name="SFTP_Key_file_not_found" xml:space="preserve">
-    <value>Файл ключа не существует.</value>
   </data>
   <data name="Streamable_Could_not_create_video" xml:space="preserve">
     <value>Не удалось создать видео.</value>
@@ -1363,11 +1363,11 @@
   <data name="TextDestination_OneTimeSecret" xml:space="preserve">
     <value>OneTimeSecret</value>
   </data>
-  <data name="TextDestination_Paste_ee" xml:space="preserve">
-    <value>Paste.ee</value>
-  </data>
   <data name="TextDestination_Paste2" xml:space="preserve">
     <value>Paste2</value>
+  </data>
+  <data name="TextDestination_Paste_ee" xml:space="preserve">
+    <value>Paste.ee</value>
   </data>
   <data name="TextDestination_Pastebin" xml:space="preserve">
     <value>Pastebin</value>
@@ -1404,30 +1404,6 @@
   </data>
   <data name="TextUploadWindow_Upload" xml:space="preserve">
     <value>Загрузить</value>
-  </data>
-  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
-    <value>Отсутствуют сведения об авторизации. Сначала откройте URL авторизации.</value>
-  </data>
-  <data name="Uploader_Error_message" xml:space="preserve">
-    <value>Сообщение об ошибке:</value>
-  </data>
-  <data name="Uploader_Request_URL" xml:space="preserve">
-    <value>URL запроса:</value>
-  </data>
-  <data name="Uploader_Stack_trace" xml:space="preserve">
-    <value>Трассировка стека:</value>
-  </data>
-  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
-    <value>Необходимо войти.</value>
-  </data>
-  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
-    <value>Не удалось обновить токен доступа.</value>
-  </data>
-  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
-    <value>Необходимо войти в {0}.</value>
-  </data>
-  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
-    <value>Ошибка отправки.</value>
   </data>
   <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
     <value>Визуальный поиск Bing</value>
@@ -1467,6 +1443,30 @@
   </data>
   <data name="URLSharingServices_VK" xml:space="preserve">
     <value>VK</value>
+  </data>
+  <data name="UploaderErrors_Login_is_required" xml:space="preserve">
+    <value>Необходимо войти.</value>
+  </data>
+  <data name="UploaderErrors_Refresh_access_token_failed" xml:space="preserve">
+    <value>Не удалось обновить токен доступа.</value>
+  </data>
+  <data name="UploaderErrors_Service_login_is_required" xml:space="preserve">
+    <value>Необходимо войти в {0}.</value>
+  </data>
+  <data name="UploaderErrors_Upload_failed" xml:space="preserve">
+    <value>Ошибка отправки.</value>
+  </data>
+  <data name="Uploader_Authorization_information_missing" xml:space="preserve">
+    <value>Отсутствуют сведения об авторизации. Сначала откройте URL авторизации.</value>
+  </data>
+  <data name="Uploader_Error_message" xml:space="preserve">
+    <value>Сообщение об ошибке:</value>
+  </data>
+  <data name="Uploader_Request_URL" xml:space="preserve">
+    <value>URL запроса:</value>
+  </data>
+  <data name="Uploader_Stack_trace" xml:space="preserve">
+    <value>Трассировка стека:</value>
   </data>
   <data name="UrlShortenerType_BITLY" xml:space="preserve">
     <value>bit.ly</value>
@@ -1510,15 +1510,6 @@
   <data name="UrlShortenerType_ZeroWidthShortener" xml:space="preserve">
     <value>Сокращатель с невидимыми символами</value>
   </data>
-  <data name="Yourls_Credentials_missing" xml:space="preserve">
-    <value>Отсутствует подпись либо имя пользователя/пароль.</value>
-  </data>
-  <data name="YouTube_Upload_failed" xml:space="preserve">
-    <value>Ошибка отправки: {0}</value>
-  </data>
-  <data name="YouTube_Upload_rejected" xml:space="preserve">
-    <value>Отправка отклонена: {0}</value>
-  </data>
   <data name="YouTubeVideoOptionsWindow_Cancel" xml:space="preserve">
     <value>Отмена</value>
   </data>
@@ -1548,5 +1539,14 @@
   </data>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Доступ по ссылке</value>
+  </data>
+  <data name="YouTube_Upload_failed" xml:space="preserve">
+    <value>Ошибка отправки: {0}</value>
+  </data>
+  <data name="YouTube_Upload_rejected" xml:space="preserve">
+    <value>Отправка отклонена: {0}</value>
+  </data>
+  <data name="Yourls_Credentials_missing" xml:space="preserve">
+    <value>Отсутствует подпись либо имя пользователя/пароль.</value>
   </data>
 </root>

@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>ค้นหา การตั้งค่า</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>ไม่สามารถ ปรับขนาด เคอร์เซอร์ บิตแมป.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>ทรัพยากรเคอร์เซอร์เล็กเกินไป</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>เท่านั้น.cur เคอร์เซอร์ ทรัพยากร รองรับ.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>ไม่รองรับบิตแมปเคอร์เซอร์ที่บีบอัด</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>ทรัพยากรเคอร์เซอร์ไม่มีรูปภาพ</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>ทรัพยากรเคอร์เซอร์เล็กเกินไป</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>เพย์โหลดรูปภาพเคอร์เซอร์อยู่นอกช่วง</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>ไม่รองรับ เคอร์เซอร์ บิตแมป ส่วนหัว.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>ไม่สามารถ ปรับขนาด เคอร์เซอร์ บิตแมป.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>ไม่รองรับบิตแมปเคอร์เซอร์ที่บีบอัด</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>เท่านั้น.cur เคอร์เซอร์ ทรัพยากร รองรับ.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>ไม่รองรับ เคอร์เซอร์ ความลึกบิต: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>ตกลง</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>ยกเลิก</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>ไม่รองรับ เคอร์เซอร์ บิตแมป ส่วนหัว.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>หยุด</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>ลองใหม่</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>ดำเนินการต่อ</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>ละเว้น</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>ใช่</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>ไม่</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>ตกลง</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>ลองใหม่</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>ลองอีกครั้ง</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>ดำเนินการต่อ</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>ใช่</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>ค้นหา การตั้งค่า</value>
   </data>
 </root>

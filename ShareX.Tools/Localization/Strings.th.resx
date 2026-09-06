@@ -73,14 +73,14 @@
   <data name="AnalyzeImageOptionsViewModel_Testing" xml:space="preserve">
     <value>กำลังทดสอบ...</value>
   </data>
-  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
-    <value>วิเคราะห์ โดยอัตโนมัติ เมื่อ เปิดแล้ว</value>
-  </data>
   <data name="AnalyzeImageOptionsWindow_API_key" xml:space="preserve">
     <value>คีย์ API</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_API_key_page" xml:space="preserve">
     <value>คีย์ API หน้า...</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_Analyze_automatically_when_opened" xml:space="preserve">
+    <value>วิเคราะห์ โดยอัตโนมัติ เมื่อ เปิดแล้ว</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Behavior" xml:space="preserve">
     <value>ลักษณะการทำงาน</value>
@@ -102,9 +102,6 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Google_Gemini" xml:space="preserve">
     <value>Google Gemini</value>
-  </data>
-  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
-    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageOptionsWindow_Load_models" xml:space="preserve">
     <value>โหลด โมเดล</value>
@@ -135,6 +132,9 @@
   </data>
   <data name="AnalyzeImageOptionsWindow_Verbosity" xml:space="preserve">
     <value>ระดับรายละเอียด</value>
+  </data>
+  <data name="AnalyzeImageOptionsWindow_https_api_openai_com" xml:space="preserve">
+    <value>https://api.openai.com</value>
   </data>
   <data name="AnalyzeImageService_Connection_OK" xml:space="preserve">
     <value>การเชื่อมต่อ OK.</value>
@@ -373,14 +373,14 @@
   <data name="DirectoryIndexerWindow_Browse" xml:space="preserve">
     <value>เรียกดู...</value>
   </data>
+  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
+    <value>CSS ไฟล์</value>
+  </data>
   <data name="DirectoryIndexerWindow_Choose_a_folder_and_generate_output_Nothing_is_saved_until_you_use_Save_as_or_Upload" xml:space="preserve">
     <value>เลือกโฟลเดอร์และสร้างผลลัพธ์ จะไม่มีการบันทึกจนกว่าคุณจะใช้ บันทึกเป็น หรือ อัปโหลด</value>
   </data>
   <data name="DirectoryIndexerWindow_Create_parseable_structured_JSON" xml:space="preserve">
     <value>สร้าง parseable มีโครงสร้าง JSON</value>
-  </data>
-  <data name="DirectoryIndexerWindow_CSS_files" xml:space="preserve">
-    <value>CSS ไฟล์</value>
   </data>
   <data name="DirectoryIndexerWindow_Display_folder_paths" xml:space="preserve">
     <value>แสดงผล เส้นทางโฟลเดอร์s</value>
@@ -433,11 +433,11 @@
   <data name="DirectoryIndexerWindow_Save_directory_index_dialog" xml:space="preserve">
     <value>บันทึก ไดเรกทอรี ดัชนี</value>
   </data>
-  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
-    <value>เลือกไฟล์ CSS</value>
-  </data>
   <data name="DirectoryIndexerWindow_Select_CSS_file_dialog" xml:space="preserve">
     <value>เลือก CSS ไฟล์</value>
+  </data>
+  <data name="DirectoryIndexerWindow_Select_a_CSS_file" xml:space="preserve">
+    <value>เลือกไฟล์ CSS</value>
   </data>
   <data name="DirectoryIndexerWindow_Select_folder_to_index_dialog" xml:space="preserve">
     <value>เลือกโฟลเดอร์ที่จะสร้างดัชนี</value>
@@ -652,9 +652,6 @@
   <data name="IconConverterWindow_Image" xml:space="preserve">
     <value>รูปภาพ</value>
   </data>
-  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
-    <value>หรือใช้เรียกดูเพื่อเลือกไฟล์</value>
-  </data>
   <data name="IconConverterWindow_Save_icon_as_dialog" xml:space="preserve">
     <value>บันทึก ไอคอน เป็น</value>
   </data>
@@ -663,6 +660,9 @@
   </data>
   <data name="IconConverterWindow_Sizes" xml:space="preserve">
     <value>ขนาด</value>
+  </data>
+  <data name="IconConverterWindow_or_use_Browse_to_choose_a_file" xml:space="preserve">
+    <value>หรือใช้เรียกดูเพื่อเลือกไฟล์</value>
   </data>
   <data name="ImageCombinerViewModel_Add_two_images" xml:space="preserve">
     <value>เพิ่มรูปภาพอย่างน้อยสองรูปเพื่อรวม</value>
@@ -859,9 +859,6 @@
   <data name="ImageThumbnailerWindow_File_name_template" xml:space="preserve">
     <value>ชื่อไฟล์ แม่แบบ</value>
   </data>
-  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
-    <value>$filename_th</value>
-  </data>
   <data name="ImageThumbnailerWindow_Generate_thumbnails" xml:space="preserve">
     <value>สร้าง ภาพขนาดย่อ</value>
   </data>
@@ -882,6 +879,9 @@
   </data>
   <data name="ImageThumbnailerWindow_Width" xml:space="preserve">
     <value>ความกว้าง</value>
+  </data>
+  <data name="ImageThumbnailerWindow_filename_th" xml:space="preserve">
+    <value>$filename_th</value>
   </data>
   <data name="IndexerHtml_File_count" xml:space="preserve">
     <value>{0:n0} ไฟล์</value>
@@ -997,20 +997,20 @@
   <data name="LocalizedDisplayConverter_Backward_diagonal" xml:space="preserve">
     <value>แนวทแยงย้อนกลับ</value>
   </data>
-  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
-    <value>ลายตารางหมากรุก</value>
-  </data>
   <data name="LocalizedDisplayConverter_CPU" xml:space="preserve">
     <value>CPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Checkerboard" xml:space="preserve">
+    <value>ลายตารางหมากรุก</value>
   </data>
   <data name="LocalizedDisplayConverter_Forward_diagonal" xml:space="preserve">
     <value>แนวทแยงไปข้างหน้า</value>
   </data>
-  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
-    <value>Gemini</value>
-  </data>
   <data name="LocalizedDisplayConverter_GPU" xml:space="preserve">
     <value>GPU</value>
+  </data>
+  <data name="LocalizedDisplayConverter_Gemini" xml:space="preserve">
+    <value>Gemini</value>
   </data>
   <data name="LocalizedDisplayConverter_High" xml:space="preserve">
     <value>สูง</value>
@@ -1162,17 +1162,122 @@
   <data name="MonitorTestWindow_Pattern" xml:space="preserve">
     <value>รูปแบบ</value>
   </data>
-  <data name="MonitorTestWindow_Red" xml:space="preserve">
-    <value>แดง</value>
-  </data>
   <data name="MonitorTestWindow_RGB" xml:space="preserve">
     <value>RGB</value>
+  </data>
+  <data name="MonitorTestWindow_Red" xml:space="preserve">
+    <value>แดง</value>
   </data>
   <data name="MonitorTestWindow_ShareX_Monitor_Test" xml:space="preserve">
     <value>ShareX - ทดสอบจอภาพ</value>
   </data>
   <data name="MonitorTestWindow_Speed" xml:space="preserve">
     <value>ความเร็ว</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
+    <value>หมดเวลารอ {0}</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
+    <value>ไม่พบอินเทอร์เฟซเครือข่ายที่ใช้งานอยู่</value>
+  </data>
+  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
+    <value>ไม่มีปลายทางใดตอบสนอง</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
+    <value>อัตโนมัติ (แนะนำ)</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
+    <value>กำลังตรวจสอบ...</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
+    <value>เชื่อมต่อแล้ว.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
+    <value>ตัดการเชื่อมต่อแล้ว.</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
+    <value>15 นาทีล่าสุด</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
+    <value>5 นาทีล่าสุด</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
+    <value>6 ชั่วโมงล่าสุด</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
+    <value>ชั่วโมงล่าสุด</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
+    <value>{0:0} มิลลิวินาที</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
+    <value>หยุดชั่วคราว</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
+    <value>{0:0.0}%</value>
+  </data>
+  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
+    <value>เซสชัน</value>
+  </data>
+  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
+    <value>ความพร้อมใช้งาน</value>
+  </data>
+  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
+    <value>เวลาแฝงเฉลี่ย</value>
+  </data>
+  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
+    <value>ตรวจสอบทุก</value>
+  </data>
+  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
+    <value>ล้างบันทึก</value>
+  </data>
+  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
+    <value>เหตุการณ์การเชื่อมต่อ</value>
+  </data>
+  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
+    <value>คัดลอกทั้งหมด</value>
+  </data>
+  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
+    <value>เวลาแฝงปัจจุบัน</value>
+  </data>
+  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
+    <value>การตัดการเชื่อมต่อ</value>
+  </data>
+  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
+    <value>ประวัติเวลาแฝง</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
+    <value>ยังไม่มีการบันทึกการเปลี่ยนแปลงการเชื่อมต่อ</value>
+  </data>
+  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
+    <value>ยังไม่มีตัวอย่างเวลาแฝง</value>
+  </data>
+  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
+    <value>เปิดบันทึก...</value>
+  </data>
+  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
+    <value>หยุดชั่วคราว</value>
+  </data>
+  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
+    <value>ช่วง</value>
+  </data>
+  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
+    <value>ShareX - ตัวตรวจสอบเครือข่าย</value>
+  </data>
+  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
+    <value>เริ่ม</value>
+  </data>
+  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
+    <value>เป้าหมาย</value>
   </data>
   <data name="OCRHelper_Language_unavailable" xml:space="preserve">
     <value>ภาษา {0} ไม่พร้อมใช้งานสำหรับ OCR ในระบบนี้</value>
@@ -1462,11 +1567,11 @@
   <data name="QRCodeWindow_PNG_image" xml:space="preserve">
     <value>PNG รูปภาพ</value>
   </data>
-  <data name="QRCodeWindow_px" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="QRCodeWindow_QR_code_size" xml:space="preserve">
     <value>QR โค้ด ขนาด</value>
+  </data>
+  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
+    <value>SVG รูปภาพ</value>
   </data>
   <data name="QRCodeWindow_Save" xml:space="preserve">
     <value>บันทึก...</value>
@@ -1489,11 +1594,11 @@
   <data name="QRCodeWindow_ShareX_QR_Code" xml:space="preserve">
     <value>ShareX - คิวอาร์โค้ด</value>
   </data>
-  <data name="QRCodeWindow_SVG_image" xml:space="preserve">
-    <value>SVG รูปภาพ</value>
-  </data>
   <data name="QRCodeWindow_Upload" xml:space="preserve">
     <value>อัปโหลด</value>
+  </data>
+  <data name="QRCodeWindow_px" xml:space="preserve">
+    <value>px</value>
   </data>
   <data name="RulerOverlayControl_Tolerance" xml:space="preserve">
     <value>ค่าความคลาดเคลื่อน: {0}%</value>
@@ -1570,9 +1675,6 @@
   <data name="VideoConverterWindow_Input_file" xml:space="preserve">
     <value>ไฟล์อินพุต</value>
   </data>
-  <data name="VideoConverterWindow_kbps" xml:space="preserve">
-    <value>kbps</value>
-  </data>
   <data name="VideoConverterWindow_Open_the_output_folder_when_finished" xml:space="preserve">
     <value>เปิด โฟลเดอร์ผลลัพธ์ เมื่อ เสร็จแล้ว</value>
   </data>
@@ -1605,6 +1707,9 @@
   </data>
   <data name="VideoConverterWindow_Video_encoder" xml:space="preserve">
     <value>ตัวเข้ารหัสวิดีโอ</value>
+  </data>
+  <data name="VideoConverterWindow_kbps" xml:space="preserve">
+    <value>kbps</value>
   </data>
   <data name="VideoConverterWindow_video_output" xml:space="preserve">
     <value>วิดีโอ-ผลลัพธ์</value>
@@ -1705,109 +1810,112 @@
   <data name="VideoThumbnailerWindow_Video_files" xml:space="preserve">
     <value>ไฟล์วิดีโอ</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_failed" xml:space="preserve">
-    <value>{0}: {1}</value>
+  <data name="VideoTrimmer_CachedPreview" xml:space="preserve">
+    <value>ตัวอย่างจากแคชโดยประมาณ • จะแม่นยำขึ้นเมื่อคุณหยุด</value>
   </data>
-  <data name="NetworkMonitorProbe_Endpoint_timed_out" xml:space="preserve">
-    <value>หมดเวลารอ {0}</value>
+  <data name="VideoTrimmer_Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
   </data>
-  <data name="NetworkMonitorProbe_No_network_interface" xml:space="preserve">
-    <value>ไม่พบอินเทอร์เฟซเครือข่ายที่ใช้งานอยู่</value>
+  <data name="VideoTrimmer_Cancelled" xml:space="preserve">
+    <value>ยกเลิกแล้ว</value>
   </data>
-  <data name="NetworkMonitorProbe_No_response" xml:space="preserve">
-    <value>ไม่มีปลายทางใดตอบสนอง</value>
+  <data name="VideoTrimmer_ChooseVideo" xml:space="preserve">
+    <value>เปิดหรือลากวิดีโอมาวางเพื่อเริ่มต้น</value>
   </data>
-  <data name="NetworkMonitorViewModel_Automatic_recommended" xml:space="preserve">
-    <value>อัตโนมัติ (แนะนำ)</value>
+  <data name="VideoTrimmer_CopyHint" xml:space="preserve">
+    <value>คัดลอกสตรีมต้นฉบับโดยไม่เข้ารหัสใหม่ จุดตัดอาจเลื่อนไปยังคีย์เฟรมใกล้เคียง</value>
   </data>
-  <data name="NetworkMonitorViewModel_Checking" xml:space="preserve">
-    <value>กำลังตรวจสอบ...</value>
+  <data name="VideoTrimmer_Duration" xml:space="preserve">
+    <value>ระยะเวลา:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Connected" xml:space="preserve">
-    <value>เชื่อมต่อแล้ว.</value>
+  <data name="VideoTrimmer_EmptyOutput" xml:space="preserve">
+    <value>FFmpeg ไม่ได้สร้างวิดีโอผลลัพธ์</value>
   </data>
-  <data name="NetworkMonitorViewModel_Disconnected" xml:space="preserve">
-    <value>ตัดการเชื่อมต่อแล้ว.</value>
+  <data name="VideoTrimmer_End" xml:space="preserve">
+    <value>สิ้นสุด:</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_15_minutes" xml:space="preserve">
-    <value>15 นาทีล่าสุด</value>
+  <data name="VideoTrimmer_Export" xml:space="preserve">
+    <value>บันทึกวิดีโอที่ตัดแล้ว…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_5_minutes" xml:space="preserve">
-    <value>5 นาทีล่าสุด</value>
+  <data name="VideoTrimmer_Exporting" xml:space="preserve">
+    <value>กำลังบันทึกวิดีโอที่ตัดแล้ว…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_6_hours" xml:space="preserve">
-    <value>6 ชั่วโมงล่าสุด</value>
+  <data name="VideoTrimmer_FrameAt" xml:space="preserve">
+    <value>ตัวอย่างใกล้ {0} • ไม่มีการเล่นเสียง</value>
   </data>
-  <data name="NetworkMonitorViewModel_Last_hour" xml:space="preserve">
-    <value>ชั่วโมงล่าสุด</value>
+  <data name="VideoTrimmer_InvalidVideo" xml:space="preserve">
+    <value>เลือกวิดีโอที่ทราบระยะเวลาแน่นอน</value>
   </data>
-  <data name="NetworkMonitorViewModel_Milliseconds" xml:space="preserve">
-    <value>{0:0} มิลลิวินาที</value>
+  <data name="VideoTrimmer_KeyboardHint" xml:space="preserve">
+    <value>ลากที่จับเพื่อตัด หรือคลิกเพื่อเลื่อนตำแหน่ง ซ้าย/ขวา: เลื่อน Shift: 1 วินาที I/O: ตั้งจุดเริ่ม/สิ้นสุด Home/End: ไปยังขอบเขตที่เลือก</value>
   </data>
-  <data name="NetworkMonitorViewModel_Paused" xml:space="preserve">
-    <value>หยุดชั่วคราว</value>
+  <data name="VideoTrimmer_Loading" xml:space="preserve">
+    <value>กำลังเตรียมตัวอย่างไทม์ไลน์…</value>
   </data>
-  <data name="NetworkMonitorViewModel_Percentage" xml:space="preserve">
-    <value>{0:0.0}%</value>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>ไม่สูญเสียคุณภาพ (เร็ว)</value>
   </data>
-  <data name="NetworkMonitorViewModel_Session" xml:space="preserve">
-    <value>เซสชัน</value>
+  <data name="VideoTrimmer_NoFrame" xml:space="preserve">
+    <value>ไม่มีเฟรมตัวอย่างในตำแหน่งนี้</value>
   </data>
-  <data name="NetworkMonitorWindow_Availability" xml:space="preserve">
-    <value>ความพร้อมใช้งาน</value>
+  <data name="VideoTrimmer_Open" xml:space="preserve">
+    <value>เปิดวิดีโอ…</value>
   </data>
-  <data name="NetworkMonitorWindow_Average_latency" xml:space="preserve">
-    <value>เวลาแฝงเฉลี่ย</value>
+  <data name="VideoTrimmer_OutputExtension" xml:space="preserve">
+    <value>ใช้นามสกุล {0} สำหรับโหมดส่งออกนี้</value>
   </data>
-  <data name="NetworkMonitorWindow_Check_every" xml:space="preserve">
-    <value>ตรวจสอบทุก</value>
+  <data name="VideoTrimmer_Position" xml:space="preserve">
+    <value>ตำแหน่ง (วินาที)</value>
   </data>
-  <data name="NetworkMonitorWindow_Connection_events" xml:space="preserve">
-    <value>เหตุการณ์การเชื่อมต่อ</value>
+  <data name="VideoTrimmer_Precise" xml:space="preserve">
+    <value>แม่นยำ (เข้ารหัสใหม่)</value>
   </data>
-  <data name="NetworkMonitorWindow_Clear_log" xml:space="preserve">
-    <value>ล้างบันทึก</value>
+  <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
+    <value>เข้ารหัสใหม่เป็น H.264 / AAC MP4 เพื่อให้ได้จุดตัดที่แม่นยำ</value>
   </data>
-  <data name="NetworkMonitorWindow_Copy_all" xml:space="preserve">
-    <value>คัดลอกทั้งหมด</value>
+  <data name="VideoTrimmer_PreviewHint" xml:space="preserve">
+    <value>ตัวอย่างภาพนิ่ง • ไม่มีการเล่นเสียง</value>
   </data>
-  <data name="NetworkMonitorWindow_Current_latency" xml:space="preserve">
-    <value>เวลาแฝงปัจจุบัน</value>
+  <data name="VideoTrimmer_Ready" xml:space="preserve">
+    <value>ลากที่จับเพื่อเลือกส่วนที่ต้องการเก็บไว้</value>
   </data>
-  <data name="NetworkMonitorWindow_Date" xml:space="preserve">
-    <value>วันที่</value>
+  <data name="VideoTrimmer_Reset" xml:space="preserve">
+    <value>รีเซ็ตช่วงที่เลือก</value>
   </data>
-  <data name="NetworkMonitorWindow_Disconnects" xml:space="preserve">
-    <value>การตัดการเชื่อมต่อ</value>
+  <data name="VideoTrimmer_Saved" xml:space="preserve">
+    <value>บันทึกแล้ว: {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_Latency_history" xml:space="preserve">
-    <value>ประวัติเวลาแฝง</value>
+  <data name="VideoTrimmer_SeekHint" xml:space="preserve">
+    <value>ปุ่มลูกศร: 0.1 วินาที • Shift: 1 วินาที</value>
   </data>
-  <data name="NetworkMonitorWindow_No_events" xml:space="preserve">
-    <value>ยังไม่มีการบันทึกการเปลี่ยนแปลงการเชื่อมต่อ</value>
+  <data name="VideoTrimmer_Selection" xml:space="preserve">
+    <value>เก็บ {0}</value>
   </data>
-  <data name="NetworkMonitorWindow_No_samples" xml:space="preserve">
-    <value>ยังไม่มีตัวอย่างเวลาแฝง</value>
+  <data name="VideoTrimmer_SetEnd" xml:space="preserve">
+    <value>ตั้งจุดสิ้นสุดที่นี่</value>
   </data>
-  <data name="NetworkMonitorWindow_Open_log" xml:space="preserve">
-    <value>เปิดบันทึก...</value>
+  <data name="VideoTrimmer_SetStart" xml:space="preserve">
+    <value>ตั้งจุดเริ่มที่นี่</value>
   </data>
-  <data name="NetworkMonitorWindow_Pause" xml:space="preserve">
-    <value>หยุดชั่วคราว</value>
+  <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
+    <value>แสดงโฟลเดอร์ผลลัพธ์...</value>
   </data>
-  <data name="NetworkMonitorWindow_Range" xml:space="preserve">
-    <value>ช่วง</value>
+  <data name="VideoTrimmer_SourceOverwrite" xml:space="preserve">
+    <value>เลือกไฟล์ผลลัพธ์อื่น ไม่สามารถเขียนทับวิดีโอต้นฉบับได้</value>
   </data>
-  <data name="NetworkMonitorWindow_ShareX_Network_Monitor" xml:space="preserve">
-    <value>ShareX - ตัวตรวจสอบเครือข่าย</value>
+  <data name="VideoTrimmer_Start" xml:space="preserve">
+    <value>เริ่ม:</value>
   </data>
-  <data name="NetworkMonitorWindow_Start" xml:space="preserve">
-    <value>เริ่ม</value>
+  <data name="VideoTrimmer_Timeline" xml:space="preserve">
+    <value>ไทม์ไลน์วิดีโอและช่วงที่เลือกตัด</value>
   </data>
-  <data name="NetworkMonitorWindow_Status" xml:space="preserve">
-    <value>สถานะ</value>
+  <data name="VideoTrimmer_Title" xml:space="preserve">
+    <value>ShareX - เครื่องมือตัดวิดีโอ</value>
   </data>
-  <data name="NetworkMonitorWindow_Target" xml:space="preserve">
-    <value>เป้าหมาย</value>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>โหมดตัด:</value>
+  </data>
+  <data name="VideoTrimmer_VideoFiles" xml:space="preserve">
+    <value>ไฟล์วิดีโอ</value>
   </data>
 </root>

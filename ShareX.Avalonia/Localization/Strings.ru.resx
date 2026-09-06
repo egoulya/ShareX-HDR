@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>Поиск в настройках</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>Не удалось изменить размер растрового изображения курсора.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>Ресурс курсора слишком мал.</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>Поддерживаются только ресурсы курсора .cur.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>Сжатые растровые изображения курсора не поддерживаются.</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>Ресурс курсора не содержит изображений.</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>Ресурс курсора слишком мал.</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>Данные изображения курсора выходят за допустимый диапазон.</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>Неподдерживаемый заголовок растрового изображения курсора.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>Не удалось изменить размер растрового изображения курсора.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>Сжатые растровые изображения курсора не поддерживаются.</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>Поддерживаются только ресурсы курсора .cur.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>Неподдерживаемая глубина цвета курсора: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>ОК</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>Отменить</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>Неподдерживаемый заголовок растрового изображения курсора.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>Прервать</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>Повторить</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>Продолжить</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>Пропустить</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>Да</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>Нет</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>Повторить</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>Повторить попытку</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>Продолжить</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>Поиск в настройках</value>
   </data>
 </root>

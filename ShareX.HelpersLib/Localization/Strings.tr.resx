@@ -58,389 +58,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorPickerWindow_Title" xml:space="preserve">
-    <value>ShareX - Renk seçici</value>
-  </data>
-  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
-    <value>Renk modu</value>
-  </data>
-  <data name="ColorPickerWindow_Hue" xml:space="preserve">
-    <value>Ton</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
-    <value>Doygunluk</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
-    <value>Parlaklık</value>
-  </data>
-  <data name="ColorPickerWindow_Red" xml:space="preserve">
-    <value>Kırmızı</value>
-  </data>
-  <data name="ColorPickerWindow_Green" xml:space="preserve">
-    <value>Yeşil</value>
-  </data>
-  <data name="ColorPickerWindow_Blue" xml:space="preserve">
-    <value>Mavi</value>
-  </data>
-  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
-    <value>Renk adı</value>
-  </data>
-  <data name="ColorPickerWindow_Hex" xml:space="preserve">
-    <value>Onaltılık</value>
-  </data>
-  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
-    <value>Ondalık</value>
-  </data>
-  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
-    <value>Alfa</value>
-  </data>
-  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
-    <value>Ton °</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
-    <value>Doygunluk %</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
-    <value>Parlaklık %</value>
-  </data>
-  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
-    <value>Camgöbeği %</value>
-  </data>
-  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
-    <value>Macenta %</value>
-  </data>
-  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
-    <value>Sarı %</value>
-  </data>
-  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
-    <value>Siyah %</value>
-  </data>
-  <data name="ColorPickerWindow_Current" xml:space="preserve">
-    <value>Geçerli</value>
-  </data>
-  <data name="ColorPickerWindow_Previous" xml:space="preserve">
-    <value>Önceki</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
-    <value>Tüm ayrıntıları kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
-    <value>RGB'yi kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
-    <value>Onaltılık değeri kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
-    <value>HSB'yi kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
-    <value>CMYK'yi kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
-    <value>Ondalık değeri kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Copy" xml:space="preserve">
-    <value>Kopyala</value>
-  </data>
-  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
-    <value>Son kullanılan renkler</value>
-  </data>
-  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
-    <value>Standart renkler</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
-    <value>Ekrandan renk seç...</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
-    <value>Panodan renk seç</value>
-  </data>
-  <data name="ColorPickerWindow_OK" xml:space="preserve">
-    <value>Tamam</value>
-  </data>
-  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
-    <value>İptal</value>
-  </data>
-  <data name="ErrorWindow_Title" xml:space="preserve">
-    <value>ShareX - Hata</value>
-  </data>
-  <data name="ErrorWindow_Heading" xml:space="preserve">
-    <value>Bir hata oluştu</value>
-  </data>
-  <data name="ErrorWindow_Description" xml:space="preserve">
-    <value>Aşağıdaki ayrıntıları inceleyin veya kullanılabilir destek seçeneklerini kullanın.</value>
-  </data>
-  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
-    <value>Hata raporu gönder</value>
-  </data>
-  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
-    <value>Günlük dosyasını aç</value>
-  </data>
-  <data name="ErrorWindow_Continue" xml:space="preserve">
-    <value>Devam et</value>
-  </data>
-  <data name="ErrorWindow_Quit" xml:space="preserve">
-    <value>Çık</value>
-  </data>
-  <data name="ErrorWindow_OK" xml:space="preserve">
-    <value>Tamam</value>
-  </data>
-  <data name="ErrorWindow_Default_title" xml:space="preserve">
-    <value>Hata</value>
-  </data>
-  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
-    <value>Beklenmeyen bir hata oluştu.</value>
-  </data>
-  <data name="ImageViewerWindow_Title" xml:space="preserve">
-    <value>ShareX - Görüntüleyici</value>
-  </data>
-  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
-    <value>Görüntü aç</value>
-  </data>
-  <data name="InputBoxWindow_Default_title" xml:space="preserve">
-    <value>Girdi</value>
-  </data>
-  <data name="InputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
-    <value>Çıktı</value>
-  </data>
-  <data name="OutputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
-    <value>Tümünü kopyala</value>
-  </data>
-  <data name="OutputBoxWindow_Close" xml:space="preserve">
-    <value>Kapat</value>
-  </data>
-  <data name="PrintWindow_Title" xml:space="preserve">
-    <value>ShareX - Yazdırma seçenekleri</value>
-  </data>
-  <data name="PrintWindow_Heading" xml:space="preserve">
-    <value>Yazdırma seçenekleri</value>
-  </data>
-  <data name="PrintWindow_Description" xml:space="preserve">
-    <value>Görüntü konumunu ve ölçeklendirmeyi yapılandırın.</value>
-  </data>
-  <data name="PrintWindow_Margin" xml:space="preserve">
-    <value>Kenar boşluğu:</value>
-  </data>
-  <data name="PrintWindow_Pixels" xml:space="preserve">
-    <value>px</value>
-  </data>
-  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
-    <value>Görüntüyü otomatik döndür</value>
-  </data>
-  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
-    <value>Görüntüyü otomatik ölçeklendir</value>
-  </data>
-  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
-    <value>Görüntünün büyütülmesine izin ver</value>
-  </data>
-  <data name="PrintWindow_Center_image_position" xml:space="preserve">
-    <value>Görüntü konumunu ortala</value>
-  </data>
-  <data name="PrintWindow_Preview" xml:space="preserve">
-    <value>Önizleme...</value>
-  </data>
-  <data name="DownloaderWindow_Title" xml:space="preserve">
-    <value>ShareX - Dosya indirici</value>
-  </data>
-  <data name="DownloaderWindow_Heading" xml:space="preserve">
-    <value>Dosya indirici</value>
-  </data>
-  <data name="DownloaderWindow_Description" xml:space="preserve">
-    <value>ShareX güncellemelerini ve gereken diğer dosyaları indirin.</value>
-  </data>
-  <data name="DownloaderWindow_Download" xml:space="preserve">
-    <value>İndir</value>
-  </data>
-  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
-    <value>Değişiklik günlüğünü görüntüle</value>
-  </data>
-  <data name="UpdateMessageWindow_Header" xml:space="preserve">
-    <value>ShareX güncelleştirmesi mevcut</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
-    <value>Kırmızı renk (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
-    <value>Yeşil renk (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
-    <value>Mavi renk (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
-    <value>Kırmızı renk (0-1). Ondalık basamak hassasiyetini {n} ile belirtin; varsayılan değer 3'tür.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
-    <value>Yeşil renk (0-1). Ondalık basamak hassasiyetini {n} ile belirtin; varsayılan değer 3'tür.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
-    <value>Mavi renk (0-1). Ondalık basamak hassasiyetini {n} ile belirtin; varsayılan değer 3'tür.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
-    <value>Onaltılık renk değeri (küçük harf)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
-    <value>Kırmızı onaltılık renk değeri (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
-    <value>Yeşil onaltılık renk değeri (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
-    <value>Mavi onaltılık renk değeri (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
-    <value>Onaltılık renk değeri (büyük harf)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
-    <value>Kırmızı onaltılık renk değeri (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
-    <value>Yeşil onaltılık renk değeri (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
-    <value>Mavi onaltılık renk değeri (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
-    <value>Camgöbeği renk (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
-    <value>Macenta renk (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
-    <value>Sarı renk (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
-    <value>Siyah renk (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
-    <value>Renk adı</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
-    <value>X konumu</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
-    <value>Y konumu</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
-    <value>Yeni satır</value>
-  </data>
-  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="HotkeyInfo_Shift" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="HotkeyInfo_Alt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="HotkeyInfo_Win" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="HotkeyInfo_Backspace" xml:space="preserve">
-    <value>Backspace</value>
-  </data>
-  <data name="HotkeyInfo_Enter" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
-    <value>Caps Lock</value>
-  </data>
-  <data name="HotkeyInfo_Page_down" xml:space="preserve">
-    <value>Page Down</value>
-  </data>
-  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
-    <value>Scroll Lock</value>
-  </data>
-  <data name="HotkeyInfo_Numpad" xml:space="preserve">
-    <value>Sayısal tuş takımı</value>
-  </data>
-  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
-    <value>FFmpeg hatası</value>
-  </data>
-  <data name="Translator_Text" xml:space="preserve">
-    <value>Metin</value>
-  </data>
-  <data name="Translator_Binary" xml:space="preserve">
-    <value>İkili</value>
-  </data>
-  <data name="Translator_Hexadecimal" xml:space="preserve">
-    <value>Onaltılık</value>
-  </data>
-  <data name="Translator_ASCII" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="Translator_Base64" xml:space="preserve">
-    <value>Base64</value>
-  </data>
-  <data name="PingResult_Reply_from" xml:space="preserve">
-    <value>{0} yanıtı: bayt={1} süre={2} ms TTL={3}</value>
-  </data>
-  <data name="PingResult_Request_timed_out" xml:space="preserve">
-    <value>İstek zaman aşımına uğradı.</value>
-  </data>
-  <data name="PingResult_Ping_failed" xml:space="preserve">
-    <value>Ping başarısız oldu: {0}</value>
-  </data>
-  <data name="PingResult_Statistics" xml:space="preserve">
-    <value>En az = {0} ms, En fazla = {1} ms, Ortalama = {2} ms</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
-    <value>«{0}» yazıcısı mevcut değil. Windows varsayılan yazıcısıyla devam edilecek. Uygulama ayarlarından farklı bir varsayılan yazıcı belirleyebilirsiniz.</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
-    <value>Geçersiz yazıcı adı</value>
-  </data>
-  <data name="VideoInfo_Summary" xml:space="preserve">
-    <value>Dosya adı: {0}, Süre: {1}, Bit hızı: {2} kb/sn</value>
-  </data>
-  <data name="VideoInfo_Video_details" xml:space="preserve">
-    <value>, Video codec bileşeni: {0}, Çözünürlük: {1}x{2}, FPS: {3}</value>
-  </data>
-  <data name="VideoInfo_Audio_details" xml:space="preserve">
-    <value>, Ses codec bileşeni: {0}</value>
-  </data>
-  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
-    <value>Dosya yeniden adlandırma hatası:</value>
-  </data>
-  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
-    <value>Geçerli bir metin dosyası yolu gereklidir.</value>
-  </data>
-  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
-    <value>Geçersiz URL.</value>
-  </data>
-  <data name="ZipManager_Archive_too_large" xml:space="preserve">
-    <value>Bu arşivin sıkıştırılmamış boyutu izin verilen en büyük dosya boyutunu aşıyor.</value>
-  </data>
-  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
-    <value>Arşivin sıkıştırılmamış boyutu: {0}</value>
-  </data>
-  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
-    <value>İzin verilen en büyük dosya boyutu: {0}</value>
-  </data>
-  <data name="Helpers_Timeout" xml:space="preserve">
-    <value>Zaman aşımı</value>
-  </data>
-  <data name="ImageHelpers_Image_files" xml:space="preserve">
-    <value>Görüntü dosyaları</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
-    <value>En son proje derlemesi başarısız oldu.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
-    <value>Başarılı bir sürüm derlemesi bulunamadı.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
-    <value>«{0}» dosyası bulunamadı.</value>
-  </data>
   <data name="ActionsCodeMenuEntry_FilePath_File_path" xml:space="preserve">
     <value>Dosya yolu</value>
   </data>
   <data name="ActionsCodeMenuEntry_OutputFilePath_File_path_without_extension____Output_file_name_extension_" xml:space="preserve">
-    <value>Uzantısız dosya yolu + &quot;Çıkış dosya uzantısı&quot;</value>
+    <value>Uzantısız dosya yolu + "Çıkış dosya uzantısı"</value>
   </data>
   <data name="AfterCaptureTasks_AddImageEffects" xml:space="preserve">
     <value>Resim efekti ekle</value>
@@ -494,10 +116,10 @@
     <value>Resimi yazdır</value>
   </data>
   <data name="AfterCaptureTasks_ShowAfterCaptureWindow" xml:space="preserve">
-    <value>&quot;Yakalama sonrası&quot; penceresini göster</value>
+    <value>"Yakalama sonrası" penceresini göster</value>
   </data>
   <data name="AfterCaptureTasks_ShowBeforeUploadWindow" xml:space="preserve">
-    <value>&quot;Yükleme öncesi&quot; penceresini göster</value>
+    <value>"Yükleme öncesi" penceresini göster</value>
   </data>
   <data name="AfterCaptureTasks_ShowInExplorer" xml:space="preserve">
     <value>Dosyayı klasörde göster</value>
@@ -518,13 +140,22 @@
     <value>Adresi paylaş</value>
   </data>
   <data name="AfterUploadTasks_ShowAfterUploadWindow" xml:space="preserve">
-    <value>&quot;Yükleme sonrası&quot; penceresini göster</value>
+    <value>"Yükleme sonrası" penceresini göster</value>
   </data>
   <data name="AfterUploadTasks_ShowQRCode" xml:space="preserve">
     <value>QR kod penceresini göster</value>
   </data>
   <data name="AfterUploadTasks_UseURLShortener" xml:space="preserve">
     <value>Adresi kısalt</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
+    <value>«{0}» dosyası bulunamadı.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
+    <value>En son proje derlemesi başarısız oldu.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
+    <value>Başarılı bir sürüm derlemesi bulunamadı.</value>
   </data>
   <data name="ArrowHeadDirection_Both" xml:space="preserve">
     <value>İki taraf</value>
@@ -558,6 +189,174 @@
   </data>
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Rastgele hayvan</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
+    <value>Mavi renk (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
+    <value>Mavi onaltılık renk değeri (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
+    <value>Mavi onaltılık renk değeri (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
+    <value>Mavi renk (0-1). Ondalık basamak hassasiyetini {n} ile belirtin; varsayılan değer 3'tür.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
+    <value>Renk adı</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
+    <value>Camgöbeği renk (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
+    <value>Yeşil renk (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
+    <value>Yeşil onaltılık renk değeri (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
+    <value>Yeşil onaltılık renk değeri (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
+    <value>Yeşil renk (0-1). Ondalık basamak hassasiyetini {n} ile belirtin; varsayılan değer 3'tür.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
+    <value>Onaltılık renk değeri (küçük harf)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
+    <value>Onaltılık renk değeri (büyük harf)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
+    <value>Siyah renk (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
+    <value>Macenta renk (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
+    <value>Yeni satır</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
+    <value>Kırmızı renk (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
+    <value>Kırmızı onaltılık renk değeri (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
+    <value>Kırmızı onaltılık renk değeri (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
+    <value>Kırmızı renk (0-1). Ondalık basamak hassasiyetini {n} ile belirtin; varsayılan değer 3'tür.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
+    <value>X konumu</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
+    <value>Y konumu</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
+    <value>Sarı renk (0-100)</value>
+  </data>
+  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
+    <value>Alfa</value>
+  </data>
+  <data name="ColorPickerWindow_Blue" xml:space="preserve">
+    <value>Mavi</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
+    <value>Parlaklık</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
+    <value>Parlaklık %</value>
+  </data>
+  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
+    <value>Renk modu</value>
+  </data>
+  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
+    <value>Renk adı</value>
+  </data>
+  <data name="ColorPickerWindow_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
+    <value>CMYK'yi kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
+    <value>HSB'yi kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
+    <value>RGB'yi kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
+    <value>Tüm ayrıntıları kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
+    <value>Ondalık değeri kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
+    <value>Onaltılık değeri kopyala</value>
+  </data>
+  <data name="ColorPickerWindow_Current" xml:space="preserve">
+    <value>Geçerli</value>
+  </data>
+  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
+    <value>Camgöbeği %</value>
+  </data>
+  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
+    <value>Ondalık</value>
+  </data>
+  <data name="ColorPickerWindow_Green" xml:space="preserve">
+    <value>Yeşil</value>
+  </data>
+  <data name="ColorPickerWindow_Hex" xml:space="preserve">
+    <value>Onaltılık</value>
+  </data>
+  <data name="ColorPickerWindow_Hue" xml:space="preserve">
+    <value>Ton</value>
+  </data>
+  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
+    <value>Ton °</value>
+  </data>
+  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
+    <value>Siyah %</value>
+  </data>
+  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
+    <value>Macenta %</value>
+  </data>
+  <data name="ColorPickerWindow_OK" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
+    <value>Panodan renk seç</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
+    <value>Ekrandan renk seç...</value>
+  </data>
+  <data name="ColorPickerWindow_Previous" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
+  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
+    <value>Son kullanılan renkler</value>
+  </data>
+  <data name="ColorPickerWindow_Red" xml:space="preserve">
+    <value>Kırmızı</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
+    <value>Doygunluk</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
+    <value>Doygunluk %</value>
+  </data>
+  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
+    <value>Standart renkler</value>
+  </data>
+  <data name="ColorPickerWindow_Title" xml:space="preserve">
+    <value>ShareX - Renk seçici</value>
+  </data>
+  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
+    <value>Sarı %</value>
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Dosya yükleyici</value>
@@ -595,12 +394,6 @@
   <data name="DownloaderForm_DownloaderForm_Waiting_" xml:space="preserve">
     <value>Bekliyor...</value>
   </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
-    <value>İndirme tamamlandı.</value>
-  </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
-    <value>Yükle</value>
-  </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>İndirme hızı</value>
   </data>
@@ -618,6 +411,24 @@
   </data>
   <data name="DownloaderForm_StartDownload_Getting_file_size_" xml:space="preserve">
     <value>Dosya boyutu alınıyor...</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
+    <value>İndirme tamamlandı.</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
+    <value>Yükle</value>
+  </data>
+  <data name="DownloaderWindow_Description" xml:space="preserve">
+    <value>ShareX güncellemelerini ve gereken diğer dosyaları indirin.</value>
+  </data>
+  <data name="DownloaderWindow_Download" xml:space="preserve">
+    <value>İndir</value>
+  </data>
+  <data name="DownloaderWindow_Heading" xml:space="preserve">
+    <value>Dosya indirici</value>
+  </data>
+  <data name="DownloaderWindow_Title" xml:space="preserve">
+    <value>ShareX - Dosya indirici</value>
   </data>
   <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
     <value>Mutlak boyut</value>
@@ -649,6 +460,36 @@
   <data name="Error" xml:space="preserve">
     <value>Hata</value>
   </data>
+  <data name="ErrorWindow_Continue" xml:space="preserve">
+    <value>Devam et</value>
+  </data>
+  <data name="ErrorWindow_Default_title" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="ErrorWindow_Description" xml:space="preserve">
+    <value>Aşağıdaki ayrıntıları inceleyin veya kullanılabilir destek seçeneklerini kullanın.</value>
+  </data>
+  <data name="ErrorWindow_Heading" xml:space="preserve">
+    <value>Bir hata oluştu</value>
+  </data>
+  <data name="ErrorWindow_OK" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
+    <value>Günlük dosyasını aç</value>
+  </data>
+  <data name="ErrorWindow_Quit" xml:space="preserve">
+    <value>Çık</value>
+  </data>
+  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
+    <value>Hata raporu gönder</value>
+  </data>
+  <data name="ErrorWindow_Title" xml:space="preserve">
+    <value>ShareX - Hata</value>
+  </data>
+  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
+    <value>Beklenmeyen bir hata oluştu.</value>
+  </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Kopyala</value>
   </data>
@@ -669,6 +510,9 @@
   </data>
   <data name="Extensions_AddContextMenu_Undo" xml:space="preserve">
     <value>Geri al</value>
+  </data>
+  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
+    <value>FFmpeg hatası</value>
   </data>
   <data name="FileDestination_CustomFileUploader" xml:space="preserve">
     <value>Özel dosya yükleyici</value>
@@ -691,6 +535,9 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>Dosya adına numara ekle</value>
   </data>
+  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
+    <value>Dosya yeniden adlandırma hatası:</value>
+  </data>
   <data name="GIFQuality_Bit4" xml:space="preserve">
     <value>16 renk (Daha düşük boyut fakat kötü kalite)</value>
   </data>
@@ -702,6 +549,9 @@
   </data>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>256 gri tonlarda renk</value>
+  </data>
+  <data name="HSB_ToString_" xml:space="preserve">
+    <value>Renk tonu: {0:0.0}°, Doygunluk: {1:0.0}%, Parlaklık: {2:0.0}%</value>
   </data>
   <data name="Helpers_BrowseFile_Choose_file" xml:space="preserve">
     <value>Dosya seçiniz</value>
@@ -717,6 +567,39 @@
   </data>
   <data name="Helpers_OpenFolder_Folder_not_exist_" xml:space="preserve">
     <value>Klasör bulunamadı:</value>
+  </data>
+  <data name="Helpers_Timeout" xml:space="preserve">
+    <value>Zaman aşımı</value>
+  </data>
+  <data name="HotkeyInfo_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HotkeyInfo_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="HotkeyInfo_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="HotkeyInfo_Numpad" xml:space="preserve">
+    <value>Sayısal tuş takımı</value>
+  </data>
+  <data name="HotkeyInfo_Page_down" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="HotkeyInfo_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="HotkeyInfo_Win" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="HotkeyType_AbortScreenRecording" xml:space="preserve">
     <value>Ekran kaydetme iptal et</value>
@@ -834,6 +717,9 @@
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Monitör testi</value>
+  </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Ağ izleyicisi</value>
   </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Hiçbiri</value>
@@ -955,14 +841,20 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>Video küçük resim yapıcı</value>
   </data>
-  <data name="HSB_ToString_" xml:space="preserve">
-    <value>Renk tonu: {0:0.0}°, Doygunluk: {1:0.0}%, Parlaklık: {2:0.0}%</value>
-  </data>
   <data name="ImageDestination_CustomImageUploader" xml:space="preserve">
     <value>Özel resim yükleyici</value>
   </data>
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>Dosya yükleyici</value>
+  </data>
+  <data name="ImageHelpers_Image_files" xml:space="preserve">
+    <value>Görüntü dosyaları</value>
+  </data>
+  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
+    <value>Görüntü aç</value>
+  </data>
+  <data name="ImageViewerWindow_Title" xml:space="preserve">
+    <value>ShareX - Görüntüleyici</value>
   </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Büyük kare</value>
@@ -982,6 +874,12 @@
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Küçük küçük resim</value>
   </data>
+  <data name="InputBoxWindow_Default_title" xml:space="preserve">
+    <value>Girdi</value>
+  </data>
+  <data name="InputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
   <data name="MyMessageBox_MyMessageBox_Cancel" xml:space="preserve">
     <value>İptal</value>
   </data>
@@ -993,6 +891,33 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>Evet</value>
+  </data>
+  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
+    <value>Geçerli bir metin dosyası yolu gereklidir.</value>
+  </data>
+  <data name="OutputBoxWindow_Close" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
+    <value>Tümünü kopyala</value>
+  </data>
+  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
+    <value>Çıktı</value>
+  </data>
+  <data name="OutputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
+  <data name="PNGBitDepth_Automatic" xml:space="preserve">
+    <value>Otomatik olarak tespit et</value>
+  </data>
+  <data name="PNGBitDepth_Bit24" xml:space="preserve">
+    <value>24 bit</value>
+  </data>
+  <data name="PNGBitDepth_Bit32" xml:space="preserve">
+    <value>32 bit</value>
+  </data>
+  <data name="PNGBitDepth_Default" xml:space="preserve">
+    <value>Varsayılan</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 gün</value>
@@ -1024,20 +949,56 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Listelenmemiş</value>
   </data>
-  <data name="PNGBitDepth_Automatic" xml:space="preserve">
-    <value>Otomatik olarak tespit et</value>
+  <data name="PingResult_Ping_failed" xml:space="preserve">
+    <value>Ping başarısız oldu: {0}</value>
   </data>
-  <data name="PNGBitDepth_Bit24" xml:space="preserve">
-    <value>24 bit</value>
+  <data name="PingResult_Reply_from" xml:space="preserve">
+    <value>{0} yanıtı: bayt={1} süre={2} ms TTL={3}</value>
   </data>
-  <data name="PNGBitDepth_Bit32" xml:space="preserve">
-    <value>32 bit</value>
+  <data name="PingResult_Request_timed_out" xml:space="preserve">
+    <value>İstek zaman aşımına uğradı.</value>
   </data>
-  <data name="PNGBitDepth_Default" xml:space="preserve">
-    <value>Varsayılan</value>
+  <data name="PingResult_Statistics" xml:space="preserve">
+    <value>En az = {0} ms, En fazla = {1} ms, Ortalama = {2} ms</value>
   </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>Yazdır</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
+    <value>«{0}» yazıcısı mevcut değil. Windows varsayılan yazıcısıyla devam edilecek. Uygulama ayarlarından farklı bir varsayılan yazıcı belirleyebilirsiniz.</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
+    <value>Geçersiz yazıcı adı</value>
+  </data>
+  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
+    <value>Görüntünün büyütülmesine izin ver</value>
+  </data>
+  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
+    <value>Görüntüyü otomatik döndür</value>
+  </data>
+  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
+    <value>Görüntüyü otomatik ölçeklendir</value>
+  </data>
+  <data name="PrintWindow_Center_image_position" xml:space="preserve">
+    <value>Görüntü konumunu ortala</value>
+  </data>
+  <data name="PrintWindow_Description" xml:space="preserve">
+    <value>Görüntü konumunu ve ölçeklendirmeyi yapılandırın.</value>
+  </data>
+  <data name="PrintWindow_Heading" xml:space="preserve">
+    <value>Yazdırma seçenekleri</value>
+  </data>
+  <data name="PrintWindow_Margin" xml:space="preserve">
+    <value>Kenar boşluğu:</value>
+  </data>
+  <data name="PrintWindow_Pixels" xml:space="preserve">
+    <value>px</value>
+  </data>
+  <data name="PrintWindow_Preview" xml:space="preserve">
+    <value>Önizleme...</value>
+  </data>
+  <data name="PrintWindow_Title" xml:space="preserve">
+    <value>ShareX - Yazdırma seçenekleri</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 Gün</value>
@@ -1144,14 +1105,14 @@
   <data name="ReplCodeMenuEntry_height_Gets_image_height" xml:space="preserve">
     <value>Resim yüksekliği</value>
   </data>
+  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
+    <value>Otomatik artan alfanumerik büyük küçük harfe duyarlı ({n} başa n kadar 0 ekler)</value>
+  </data>
   <data name="ReplCodeMenuEntry_i_Auto_increment_number" xml:space="preserve">
     <value>Otomatik artan sayı ({n} başa n kadar 0 ekler)</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>Otomatik artan alfanumerik büyük küçük harfe duyarsız ({n} başa n kadar 0 ekler)</value>
-  </data>
-  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
-    <value>Otomatik artan alfanumerik büyük küçük harfe duyarlı ({n} başa n kadar 0 ekler)</value>
   </data>
   <data name="ReplCodeMenuEntry_ib_Auto_increment_base_alphanumeric" xml:space="preserve">
     <value>Otomatik artan {n} sayı tabanında alfanumerik (1 &lt; n &lt; 63)</value>
@@ -1165,11 +1126,11 @@
   <data name="ReplCodeMenuEntry_mo_Current_month" xml:space="preserve">
     <value>Güncel ay</value>
   </data>
-  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
-    <value>Güncel ay adı (Yerel dil)</value>
-  </data>
   <data name="ReplCodeMenuEntry_mon2_Current_month_name__English_" xml:space="preserve">
     <value>Güncel ay adı (İngilizce)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
+    <value>Güncel ay adı (Yerel dil)</value>
   </data>
   <data name="ReplCodeMenuEntry_ms_Current_millisecond" xml:space="preserve">
     <value>Güncel milisaniye</value>
@@ -1210,11 +1171,11 @@
   <data name="ReplCodeMenuEntry_unix_Unix_timestamp" xml:space="preserve">
     <value>Unix zaman imzası</value>
   </data>
-  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
-    <value>Güncel hafta adı (Yerel dil)</value>
-  </data>
   <data name="ReplCodeMenuEntry_w2_Current_week_name__English_" xml:space="preserve">
     <value>Güncel hafta adı (İngilizce)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
+    <value>Güncel hafta adı (Yerel dil)</value>
   </data>
   <data name="ReplCodeMenuEntry_width_Gets_image_width" xml:space="preserve">
     <value>Resim genişliği</value>
@@ -1312,6 +1273,36 @@
   <data name="ToastClickAction_Upload" xml:space="preserve">
     <value>Karşıya dosya yükle</value>
   </data>
+  <data name="Translator_ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="Translator_Base64" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Translator_Binary" xml:space="preserve">
+    <value>İkili</value>
+  </data>
+  <data name="Translator_Hexadecimal" xml:space="preserve">
+    <value>Onaltılık</value>
+  </data>
+  <data name="Translator_Text" xml:space="preserve">
+    <value>Metin</value>
+  </data>
+  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
+    <value>Geçersiz URL.</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>Bing görsel arama</value>
+  </data>
+  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
+    <value>Özel adres paylaşma servisi</value>
+  </data>
+  <data name="URLSharingServices_Email" xml:space="preserve">
+    <value>Eposta</value>
+  </data>
+  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
+    <value>Google resim arama</value>
+  </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>Dev</value>
   </data>
@@ -1336,20 +1327,23 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>Güncelleştirme mevcut</value>
   </data>
-  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
-    <value>Bing görsel arama</value>
+  <data name="UpdateMessageWindow_Header" xml:space="preserve">
+    <value>ShareX güncelleştirmesi mevcut</value>
   </data>
-  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
-    <value>Özel adres paylaşma servisi</value>
-  </data>
-  <data name="URLSharingServices_Email" xml:space="preserve">
-    <value>Eposta</value>
-  </data>
-  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
-    <value>Google resim arama</value>
+  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
+    <value>Değişiklik günlüğünü görüntüle</value>
   </data>
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
     <value>Özel adres kısaltıcı</value>
+  </data>
+  <data name="VideoInfo_Audio_details" xml:space="preserve">
+    <value>, Ses codec bileşeni: {0}</value>
+  </data>
+  <data name="VideoInfo_Summary" xml:space="preserve">
+    <value>Dosya adı: {0}, Süre: {1}, Bit hızı: {2} kb/sn</value>
+  </data>
+  <data name="VideoInfo_Video_details" xml:space="preserve">
+    <value>, Video codec bileşeni: {0}, Çözünürlük: {1}x{2}, FPS: {3}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Kişisel</value>
@@ -1360,11 +1354,20 @@
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Listelenmemiş</value>
   </data>
-  <data name="HdrCaptureMode_Off" xml:space="preserve">
-    <value>Kapalı</value>
+  <data name="ZipManager_Archive_too_large" xml:space="preserve">
+    <value>Bu arşivin sıkıştırılmamış boyutu izin verilen en büyük dosya boyutunu aşıyor.</value>
+  </data>
+  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
+    <value>Arşivin sıkıştırılmamış boyutu: {0}</value>
+  </data>
+  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
+    <value>İzin verilen en büyük dosya boyutu: {0}</value>
   </data>
   <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
     <value>Dinamik</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Kapalı</value>
   </data>
   <data name="HdrCaptureMode_On" xml:space="preserve">
     <value>Açık</value>

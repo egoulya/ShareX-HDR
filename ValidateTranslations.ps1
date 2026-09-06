@@ -812,3 +812,5 @@ if ($errors.Count -gt 0)
 
 Write-Host
 Write-Host "Translation validation succeeded for $($projects.Count) projects: $totalDefaultEntries English entries and $totalLocalizedEntries localized entries across $($supportedCatalogCultures.Count) cultures."
+
+& (Join-Path $repositoryDirectory 'FormatTranslations.ps1')

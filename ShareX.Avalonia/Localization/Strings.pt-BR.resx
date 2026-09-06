@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>Pesquisar nas configurações</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>Não foi possível redimensionar o bitmap do cursor.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>O recurso de cursor é muito pequeno.</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>Apenas recursos de cursor .cur são compatíveis.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>Bitmaps de cursor compactados não são compatíveis.</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>O recurso de cursor não contém imagens.</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>O recurso de cursor é muito pequeno.</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>Os dados de imagem do cursor estão fora do intervalo.</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>Cabeçalho de bitmap do cursor não compatível.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>Não foi possível redimensionar o bitmap do cursor.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>Bitmaps de cursor compactados não são compatíveis.</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>Apenas recursos de cursor .cur são compatíveis.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>Profundidade de bits do cursor não compatível: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>Cabeçalho de bitmap do cursor não compatível.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>Anular</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>Repetir</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>Continuar</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>Ignorar</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>Sim</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>Não</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>Repetir</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>Tentar novamente</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>Continuar</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>Pesquisar nas configurações</value>
   </data>
 </root>

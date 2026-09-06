@@ -58,384 +58,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorPickerWindow_Title" xml:space="preserve">
-    <value>ShareX - Sélecteur de couleur</value>
-  </data>
-  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
-    <value>Mode de couleur</value>
-  </data>
-  <data name="ColorPickerWindow_Hue" xml:space="preserve">
-    <value>Teinte</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
-    <value>Saturation</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
-    <value>Luminosité</value>
-  </data>
-  <data name="ColorPickerWindow_Red" xml:space="preserve">
-    <value>Rouge</value>
-  </data>
-  <data name="ColorPickerWindow_Green" xml:space="preserve">
-    <value>Vert</value>
-  </data>
-  <data name="ColorPickerWindow_Blue" xml:space="preserve">
-    <value>Bleu</value>
-  </data>
-  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
-    <value>Nom de la couleur</value>
-  </data>
-  <data name="ColorPickerWindow_Hex" xml:space="preserve">
-    <value>Hex</value>
-  </data>
-  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
-    <value>Décimal</value>
-  </data>
-  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
-    <value>Alpha</value>
-  </data>
-  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
-    <value>Teinte °</value>
-  </data>
-  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
-    <value>Saturation %</value>
-  </data>
-  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
-    <value>Luminosité %</value>
-  </data>
-  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
-    <value>Cyan %</value>
-  </data>
-  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
-    <value>Magenta %</value>
-  </data>
-  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
-    <value>Jaune %</value>
-  </data>
-  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
-    <value>Noir %</value>
-  </data>
-  <data name="ColorPickerWindow_Current" xml:space="preserve">
-    <value>Actuelle</value>
-  </data>
-  <data name="ColorPickerWindow_Previous" xml:space="preserve">
-    <value>Précédente</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
-    <value>Copier tous les détails</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
-    <value>Copier RVB</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
-    <value>Copier l’hexadécimal</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
-    <value>Copier TSL</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
-    <value>Copier CMJN</value>
-  </data>
-  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
-    <value>Copier la valeur décimale</value>
-  </data>
-  <data name="ColorPickerWindow_Copy" xml:space="preserve">
-    <value>Copier</value>
-  </data>
-  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
-    <value>Couleurs récentes</value>
-  </data>
-  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
-    <value>Couleurs standard</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
-    <value>Choisir une couleur à l’écran...</value>
-  </data>
-  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
-    <value>Choisir une couleur dans le presse-papiers</value>
-  </data>
-  <data name="ColorPickerWindow_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="ErrorWindow_Title" xml:space="preserve">
-    <value>ShareX - Erreur</value>
-  </data>
-  <data name="ErrorWindow_Heading" xml:space="preserve">
-    <value>Une erreur s’est produite</value>
-  </data>
-  <data name="ErrorWindow_Description" xml:space="preserve">
-    <value>Consultez les détails ci-dessous ou utilisez les options d’assistance disponibles.</value>
-  </data>
-  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
-    <value>Envoyer un rapport de bogue</value>
-  </data>
-  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
-    <value>Ouvrir le fichier journal</value>
-  </data>
-  <data name="ErrorWindow_Continue" xml:space="preserve">
-    <value>Continuer</value>
-  </data>
-  <data name="ErrorWindow_Quit" xml:space="preserve">
-    <value>Quitter</value>
-  </data>
-  <data name="ErrorWindow_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="ErrorWindow_Default_title" xml:space="preserve">
-    <value>Erreur</value>
-  </data>
-  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
-    <value>Une erreur inattendue s’est produite.</value>
-  </data>
-  <data name="ImageViewerWindow_Title" xml:space="preserve">
-    <value>ShareX - Visionneuse d’images</value>
-  </data>
-  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
-    <value>Ouvrir une image</value>
-  </data>
-  <data name="InputBoxWindow_Default_title" xml:space="preserve">
-    <value>Entrée</value>
-  </data>
-  <data name="InputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
-    <value>Sortie</value>
-  </data>
-  <data name="OutputBoxWindow_Title" xml:space="preserve">
-    <value>ShareX - {0}</value>
-  </data>
-  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
-    <value>Tout copier</value>
-  </data>
-  <data name="OutputBoxWindow_Close" xml:space="preserve">
-    <value>Fermer</value>
-  </data>
-  <data name="PrintWindow_Title" xml:space="preserve">
-    <value>ShareX - Options d’impression</value>
-  </data>
-  <data name="PrintWindow_Heading" xml:space="preserve">
-    <value>Options d’impression</value>
-  </data>
-  <data name="PrintWindow_Description" xml:space="preserve">
-    <value>Configurez la position et la mise à l’échelle de l’image.</value>
-  </data>
-  <data name="PrintWindow_Margin" xml:space="preserve">
-    <value>Marge :</value>
-  </data>
-  <data name="PrintWindow_Pixels" xml:space="preserve">
-    <value>px</value>
-  </data>
-  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
-    <value>Faire pivoter automatiquement l’image</value>
-  </data>
-  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
-    <value>Mettre automatiquement l’image à l’échelle</value>
-  </data>
-  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
-    <value>Autoriser l’agrandissement de l’image</value>
-  </data>
-  <data name="PrintWindow_Center_image_position" xml:space="preserve">
-    <value>Centrer la position de l’image</value>
-  </data>
-  <data name="PrintWindow_Preview" xml:space="preserve">
-    <value>Aperçu...</value>
-  </data>
-  <data name="DownloaderWindow_Title" xml:space="preserve">
-    <value>ShareX - Téléchargeur de fichiers</value>
-  </data>
-  <data name="DownloaderWindow_Heading" xml:space="preserve">
-    <value>Téléchargeur de fichiers</value>
-  </data>
-  <data name="DownloaderWindow_Description" xml:space="preserve">
-    <value>Téléchargez les mises à jour de ShareX et les autres fichiers requis.</value>
-  </data>
-  <data name="DownloaderWindow_Download" xml:space="preserve">
-    <value>Télécharger</value>
-  </data>
-  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
-    <value>Afficher le journal des modifications</value>
-  </data>
-  <data name="UpdateMessageWindow_Header" xml:space="preserve">
-    <value>Mise à jour de ShareX disponible</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
-    <value>Couleur rouge (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
-    <value>Couleur verte (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
-    <value>Couleur bleue (0-255)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
-    <value>Couleur rouge (0-1). Indiquez la précision décimale avec {n}, 3 par défaut.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
-    <value>Couleur verte (0-1). Indiquez la précision décimale avec {n}, 3 par défaut.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
-    <value>Couleur bleue (0-1). Indiquez la précision décimale avec {n}, 3 par défaut.</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
-    <value>Valeur hexadécimale de la couleur (minuscules)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
-    <value>Valeur hexadécimale rouge (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
-    <value>Valeur hexadécimale verte (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
-    <value>Valeur hexadécimale bleue (00-ff)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
-    <value>Valeur hexadécimale de la couleur (majuscules)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
-    <value>Valeur hexadécimale rouge (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
-    <value>Valeur hexadécimale verte (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
-    <value>Valeur hexadécimale bleue (00-FF)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
-    <value>Couleur cyan (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
-    <value>Couleur magenta (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
-    <value>Couleur jaune (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
-    <value>Couleur noire (0-100)</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
-    <value>Nom de la couleur</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
-    <value>Position X</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
-    <value>Position Y</value>
-  </data>
-  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
-    <value>Nouvelle ligne</value>
-  </data>
-  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="HotkeyInfo_Shift" xml:space="preserve">
-    <value>Maj</value>
-  </data>
-  <data name="HotkeyInfo_Alt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="HotkeyInfo_Win" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="HotkeyInfo_Backspace" xml:space="preserve">
-    <value>Retour arrière</value>
-  </data>
-  <data name="HotkeyInfo_Enter" xml:space="preserve">
-    <value>Entrée</value>
-  </data>
-  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
-    <value>Verr. Maj</value>
-  </data>
-  <data name="HotkeyInfo_Page_down" xml:space="preserve">
-    <value>Page suivante</value>
-  </data>
-  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
-    <value>Arrêt défil</value>
-  </data>
-  <data name="HotkeyInfo_Numpad" xml:space="preserve">
-    <value>Pavé numérique</value>
-  </data>
-  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
-    <value>Erreur FFmpeg</value>
-  </data>
-  <data name="Translator_Text" xml:space="preserve">
-    <value>Texte</value>
-  </data>
-  <data name="Translator_Binary" xml:space="preserve">
-    <value>Binaire</value>
-  </data>
-  <data name="Translator_Hexadecimal" xml:space="preserve">
-    <value>Hexadécimal</value>
-  </data>
-  <data name="Translator_ASCII" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="Translator_Base64" xml:space="preserve">
-    <value>Base64</value>
-  </data>
-  <data name="PingResult_Reply_from" xml:space="preserve">
-    <value>Réponse de {0} : octets={1} temps={2} ms TTL={3}</value>
-  </data>
-  <data name="PingResult_Request_timed_out" xml:space="preserve">
-    <value>Délai d’attente de la demande dépassé.</value>
-  </data>
-  <data name="PingResult_Ping_failed" xml:space="preserve">
-    <value>Échec du ping : {0}</value>
-  </data>
-  <data name="PingResult_Statistics" xml:space="preserve">
-    <value>Minimum = {0} ms, Maximum = {1} ms, Moyenne = {2} ms</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
-    <value>L’imprimante « {0} » n’existe pas. L’imprimante par défaut de Windows sera utilisée. Vous pouvez définir une autre imprimante par défaut dans les paramètres de l’application.</value>
-  </data>
-  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
-    <value>Nom d’imprimante non valide</value>
-  </data>
-  <data name="VideoInfo_Summary" xml:space="preserve">
-    <value>Nom du fichier : {0}, Durée : {1}, Débit : {2} kbit/s</value>
-  </data>
-  <data name="VideoInfo_Video_details" xml:space="preserve">
-    <value>, Codec vidéo : {0}, Résolution : {1}x{2}, IPS : {3}</value>
-  </data>
-  <data name="VideoInfo_Audio_details" xml:space="preserve">
-    <value>, Codec audio : {0}</value>
-  </data>
-  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
-    <value>Erreur lors du renommage du fichier :</value>
-  </data>
-  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
-    <value>Un chemin de fichier texte valide est requis.</value>
-  </data>
-  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
-    <value>URL non valide.</value>
-  </data>
-  <data name="ZipManager_Archive_too_large" xml:space="preserve">
-    <value>La taille décompressée de cette archive dépasse la taille de fichier maximale autorisée.</value>
-  </data>
-  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
-    <value>Taille décompressée de l’archive : {0}</value>
-  </data>
-  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
-    <value>Taille de fichier maximale autorisée : {0}</value>
-  </data>
-  <data name="Helpers_Timeout" xml:space="preserve">
-    <value>Délai dépassé</value>
-  </data>
-  <data name="ImageHelpers_Image_files" xml:space="preserve">
-    <value>Fichiers image</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
-    <value>La dernière compilation du projet a échoué.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
-    <value>Impossible de trouver une compilation de version réussie.</value>
-  </data>
-  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
-    <value>Impossible de trouver le fichier « {0} ».</value>
-  </data>
   <data name="ActionsCodeMenuEntry_FilePath_File_path" xml:space="preserve">
     <value>Chemin du fichier</value>
   </data>
@@ -443,13 +65,13 @@
     <value>Chemin du fichier sans extension + Option « Extension du nom de fichier de sortie »</value>
   </data>
   <data name="AfterCaptureTasks_AddImageEffects" xml:space="preserve">
-    <value>Ajouter des effets d&apos;image</value>
+    <value>Ajouter des effets d'image</value>
   </data>
   <data name="AfterCaptureTasks_AnalyzeImage" xml:space="preserve">
     <value>Analyser l’image</value>
   </data>
   <data name="AfterCaptureTasks_AnnotateImage" xml:space="preserve">
-    <value>Modifier l&apos;image</value>
+    <value>Modifier l'image</value>
   </data>
   <data name="AfterCaptureTasks_BeautifyImage" xml:space="preserve">
     <value>Embellir l’image</value>
@@ -464,7 +86,7 @@
     <value>Copier le chemin du dossier dans le presse-papiers</value>
   </data>
   <data name="AfterCaptureTasks_CopyImageToClipboard" xml:space="preserve">
-    <value>Copier l&apos;image dans le presse-papier</value>
+    <value>Copier l'image dans le presse-papier</value>
   </data>
   <data name="AfterCaptureTasks_DeleteFile" xml:space="preserve">
     <value>Supprimer le fichier local</value>
@@ -476,22 +98,22 @@
     <value>Effectuer des actions</value>
   </data>
   <data name="AfterCaptureTasks_PinToScreen" xml:space="preserve">
-    <value>Epingler à l&apos;écran</value>
+    <value>Epingler à l'écran</value>
   </data>
   <data name="AfterCaptureTasks_SaveImageToFile" xml:space="preserve">
-    <value>Enregistrer l&apos;image comme fichier</value>
+    <value>Enregistrer l'image comme fichier</value>
   </data>
   <data name="AfterCaptureTasks_SaveImageToFileWithDialog" xml:space="preserve">
-    <value>Enregistrer l&apos;image comme fichier en tant que...</value>
+    <value>Enregistrer l'image comme fichier en tant que...</value>
   </data>
   <data name="AfterCaptureTasks_SaveThumbnailImageToFile" xml:space="preserve">
-    <value>Enregistrer la miniature de l&apos;image comme fichier</value>
+    <value>Enregistrer la miniature de l'image comme fichier</value>
   </data>
   <data name="AfterCaptureTasks_ScanQRCode" xml:space="preserve">
     <value>Scanner code QR</value>
   </data>
   <data name="AfterCaptureTasks_SendImageToPrinter" xml:space="preserve">
-    <value>Imprimer l&apos;image</value>
+    <value>Imprimer l'image</value>
   </data>
   <data name="AfterCaptureTasks_ShowAfterCaptureWindow" xml:space="preserve">
     <value>Afficher la fenêtre « Après la capture »</value>
@@ -500,22 +122,22 @@
     <value>Afficher la fenêtre « Avant la mise en ligne »</value>
   </data>
   <data name="AfterCaptureTasks_ShowInExplorer" xml:space="preserve">
-    <value>Afficher le fichier dans l&apos;explorateur</value>
+    <value>Afficher le fichier dans l'explorateur</value>
   </data>
   <data name="AfterCaptureTasks_ShowQuickTaskMenu" xml:space="preserve">
     <value>Afficher le menu des tâches rapides</value>
   </data>
   <data name="AfterCaptureTasks_UploadImageToHost" xml:space="preserve">
-    <value>Mettre en ligne l&apos;image vers l&apos;hôte</value>
+    <value>Mettre en ligne l'image vers l'hôte</value>
   </data>
   <data name="AfterUploadTasks_CopyURLToClipboard" xml:space="preserve">
-    <value>Copier l&apos;URL dans le presse-papier</value>
+    <value>Copier l'URL dans le presse-papier</value>
   </data>
   <data name="AfterUploadTasks_OpenURL" xml:space="preserve">
-    <value>Ouvrir l&apos;URL</value>
+    <value>Ouvrir l'URL</value>
   </data>
   <data name="AfterUploadTasks_ShareURL" xml:space="preserve">
-    <value>Partager l&apos;URL</value>
+    <value>Partager l'URL</value>
   </data>
   <data name="AfterUploadTasks_ShowAfterUploadWindow" xml:space="preserve">
     <value>Afficher la fenêtre « Après la mise en ligne »</value>
@@ -524,7 +146,16 @@
     <value>Afficher la fenêtre code QR</value>
   </data>
   <data name="AfterUploadTasks_UseURLShortener" xml:space="preserve">
-    <value>Raccourcir l&apos;URL</value>
+    <value>Raccourcir l'URL</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Deployment_file_not_found" xml:space="preserve">
+    <value>Impossible de trouver le fichier « {0} ».</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Latest_build_unsuccessful" xml:space="preserve">
+    <value>La dernière compilation du projet a échoué.</value>
+  </data>
+  <data name="AppVeyorUpdateChecker_Release_build_not_found" xml:space="preserve">
+    <value>Impossible de trouver une compilation de version réussie.</value>
   </data>
   <data name="ArrowHeadDirection_Both" xml:space="preserve">
     <value>Les deux</value>
@@ -559,20 +190,188 @@
   <data name="CodeMenuEntryFilename_RandomAnimal" xml:space="preserve">
     <value>Animal aléatoire</value>
   </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_255" xml:space="preserve">
+    <value>Couleur bleue (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_lowercase" xml:space="preserve">
+    <value>Valeur hexadécimale bleue (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_hex_uppercase" xml:space="preserve">
+    <value>Valeur hexadécimale bleue (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Blue_normalized" xml:space="preserve">
+    <value>Couleur bleue (0-1). Indiquez la précision décimale avec {n}, 3 par défaut.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Color_name" xml:space="preserve">
+    <value>Nom de la couleur</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Cyan_100" xml:space="preserve">
+    <value>Couleur cyan (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_255" xml:space="preserve">
+    <value>Couleur verte (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_lowercase" xml:space="preserve">
+    <value>Valeur hexadécimale verte (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_hex_uppercase" xml:space="preserve">
+    <value>Valeur hexadécimale verte (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Green_normalized" xml:space="preserve">
+    <value>Couleur verte (0-1). Indiquez la précision décimale avec {n}, 3 par défaut.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_lowercase" xml:space="preserve">
+    <value>Valeur hexadécimale de la couleur (minuscules)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Hex_uppercase" xml:space="preserve">
+    <value>Valeur hexadécimale de la couleur (majuscules)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Key_100" xml:space="preserve">
+    <value>Couleur noire (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Magenta_100" xml:space="preserve">
+    <value>Couleur magenta (0-100)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_New_line" xml:space="preserve">
+    <value>Nouvelle ligne</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_255" xml:space="preserve">
+    <value>Couleur rouge (0-255)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_lowercase" xml:space="preserve">
+    <value>Valeur hexadécimale rouge (00-ff)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_hex_uppercase" xml:space="preserve">
+    <value>Valeur hexadécimale rouge (00-FF)</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Red_normalized" xml:space="preserve">
+    <value>Couleur rouge (0-1). Indiquez la précision décimale avec {n}, 3 par défaut.</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_X_position" xml:space="preserve">
+    <value>Position X</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Y_position" xml:space="preserve">
+    <value>Position Y</value>
+  </data>
+  <data name="CodeMenuEntryPixelInfo_Yellow_100" xml:space="preserve">
+    <value>Couleur jaune (0-100)</value>
+  </data>
+  <data name="ColorPickerWindow_Alpha" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
+  <data name="ColorPickerWindow_Blue" xml:space="preserve">
+    <value>Bleu</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness" xml:space="preserve">
+    <value>Luminosité</value>
+  </data>
+  <data name="ColorPickerWindow_Brightness_percent" xml:space="preserve">
+    <value>Luminosité %</value>
+  </data>
+  <data name="ColorPickerWindow_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="ColorPickerWindow_Color_mode" xml:space="preserve">
+    <value>Mode de couleur</value>
+  </data>
+  <data name="ColorPickerWindow_Color_name" xml:space="preserve">
+    <value>Nom de la couleur</value>
+  </data>
+  <data name="ColorPickerWindow_Copy" xml:space="preserve">
+    <value>Copier</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_CMYK" xml:space="preserve">
+    <value>Copier CMJN</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_HSB" xml:space="preserve">
+    <value>Copier TSL</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_RGB" xml:space="preserve">
+    <value>Copier RVB</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_all_details" xml:space="preserve">
+    <value>Copier tous les détails</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_decimal" xml:space="preserve">
+    <value>Copier la valeur décimale</value>
+  </data>
+  <data name="ColorPickerWindow_Copy_hexadecimal" xml:space="preserve">
+    <value>Copier l’hexadécimal</value>
+  </data>
+  <data name="ColorPickerWindow_Current" xml:space="preserve">
+    <value>Actuelle</value>
+  </data>
+  <data name="ColorPickerWindow_Cyan_percent" xml:space="preserve">
+    <value>Cyan %</value>
+  </data>
+  <data name="ColorPickerWindow_Decimal" xml:space="preserve">
+    <value>Décimal</value>
+  </data>
+  <data name="ColorPickerWindow_Green" xml:space="preserve">
+    <value>Vert</value>
+  </data>
+  <data name="ColorPickerWindow_Hex" xml:space="preserve">
+    <value>Hex</value>
+  </data>
+  <data name="ColorPickerWindow_Hue" xml:space="preserve">
+    <value>Teinte</value>
+  </data>
+  <data name="ColorPickerWindow_Hue_degrees" xml:space="preserve">
+    <value>Teinte °</value>
+  </data>
+  <data name="ColorPickerWindow_Key_percent" xml:space="preserve">
+    <value>Noir %</value>
+  </data>
+  <data name="ColorPickerWindow_Magenta_percent" xml:space="preserve">
+    <value>Magenta %</value>
+  </data>
+  <data name="ColorPickerWindow_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_clipboard" xml:space="preserve">
+    <value>Choisir une couleur dans le presse-papiers</value>
+  </data>
+  <data name="ColorPickerWindow_Pick_from_screen" xml:space="preserve">
+    <value>Choisir une couleur à l’écran...</value>
+  </data>
+  <data name="ColorPickerWindow_Previous" xml:space="preserve">
+    <value>Précédente</value>
+  </data>
+  <data name="ColorPickerWindow_Recent_colors" xml:space="preserve">
+    <value>Couleurs récentes</value>
+  </data>
+  <data name="ColorPickerWindow_Red" xml:space="preserve">
+    <value>Rouge</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="ColorPickerWindow_Saturation_percent" xml:space="preserve">
+    <value>Saturation %</value>
+  </data>
+  <data name="ColorPickerWindow_Standard_colors" xml:space="preserve">
+    <value>Couleurs standard</value>
+  </data>
+  <data name="ColorPickerWindow_Title" xml:space="preserve">
+    <value>ShareX - Sélecteur de couleur</value>
+  </data>
+  <data name="ColorPickerWindow_Yellow_percent" xml:space="preserve">
+    <value>Jaune %</value>
+  </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Service de mise en ligne de fichiers</value>
   </data>
   <data name="CustomUploaderDestinationType_ImageUploader" xml:space="preserve">
-    <value>Service de mise en ligne d&apos;images</value>
+    <value>Service de mise en ligne d'images</value>
   </data>
   <data name="CustomUploaderDestinationType_TextUploader" xml:space="preserve">
     <value>Service de mise en ligne de textes</value>
   </data>
   <data name="CustomUploaderDestinationType_URLSharingService" xml:space="preserve">
-    <value>Service de partage d&apos;URL</value>
+    <value>Service de partage d'URL</value>
   </data>
   <data name="CustomUploaderDestinationType_URLShortener" xml:space="preserve">
-    <value>Raccourcisseur d&apos;URL</value>
+    <value>Raccourcisseur d'URL</value>
   </data>
   <data name="CutOutEffectType_None" xml:space="preserve">
     <value>Aucun effet</value>
@@ -595,12 +394,6 @@
   <data name="DownloaderForm_DownloaderForm_Waiting_" xml:space="preserve">
     <value>En attente.</value>
   </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
-    <value>Téléchargement terminé.</value>
-  </data>
-  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
-    <value>Installer</value>
-  </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>Vitesse de téléchargement</value>
   </data>
@@ -619,6 +412,24 @@
   <data name="DownloaderForm_StartDownload_Getting_file_size_" xml:space="preserve">
     <value>Obtention de la taille du fichier.</value>
   </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Download_completed_" xml:space="preserve">
+    <value>Téléchargement terminé.</value>
+  </data>
+  <data name="DownloaderForm_fileDownloader_DownloadCompleted_Install" xml:space="preserve">
+    <value>Installer</value>
+  </data>
+  <data name="DownloaderWindow_Description" xml:space="preserve">
+    <value>Téléchargez les mises à jour de ShareX et les autres fichiers requis.</value>
+  </data>
+  <data name="DownloaderWindow_Download" xml:space="preserve">
+    <value>Télécharger</value>
+  </data>
+  <data name="DownloaderWindow_Heading" xml:space="preserve">
+    <value>Téléchargeur de fichiers</value>
+  </data>
+  <data name="DownloaderWindow_Title" xml:space="preserve">
+    <value>ShareX - Téléchargeur de fichiers</value>
+  </data>
   <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
     <value>Taille absolue</value>
   </data>
@@ -629,7 +440,7 @@
     <value>Pourcentage du canevas</value>
   </data>
   <data name="DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>Pourcentage de l&apos;image</value>
+    <value>Pourcentage de l'image</value>
   </data>
   <data name="EDataType_Default" xml:space="preserve">
     <value>Par défaut</value>
@@ -648,6 +459,36 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>Erreur</value>
+  </data>
+  <data name="ErrorWindow_Continue" xml:space="preserve">
+    <value>Continuer</value>
+  </data>
+  <data name="ErrorWindow_Default_title" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="ErrorWindow_Description" xml:space="preserve">
+    <value>Consultez les détails ci-dessous ou utilisez les options d’assistance disponibles.</value>
+  </data>
+  <data name="ErrorWindow_Heading" xml:space="preserve">
+    <value>Une erreur s’est produite</value>
+  </data>
+  <data name="ErrorWindow_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ErrorWindow_Open_log_file" xml:space="preserve">
+    <value>Ouvrir le fichier journal</value>
+  </data>
+  <data name="ErrorWindow_Quit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="ErrorWindow_Send_bug_report" xml:space="preserve">
+    <value>Envoyer un rapport de bogue</value>
+  </data>
+  <data name="ErrorWindow_Title" xml:space="preserve">
+    <value>ShareX - Erreur</value>
+  </data>
+  <data name="ErrorWindow_Unexpected_error" xml:space="preserve">
+    <value>Une erreur inattendue s’est produite.</value>
   </data>
   <data name="Extensions_AddContextMenu_Copy" xml:space="preserve">
     <value>Copier</value>
@@ -670,6 +511,9 @@
   <data name="Extensions_AddContextMenu_Undo" xml:space="preserve">
     <value>Annuler</value>
   </data>
+  <data name="FFmpegCLIManager_Error_title" xml:space="preserve">
+    <value>Erreur FFmpeg</value>
+  </data>
   <data name="FileDestination_CustomFileUploader" xml:space="preserve">
     <value>Service de mise en ligne de fichiers personnalisé</value>
   </data>
@@ -680,7 +524,7 @@
     <value>Dossier partagé</value>
   </data>
   <data name="FileExistAction_Ask" xml:space="preserve">
-    <value>Demander ce qu&apos;il faut faire</value>
+    <value>Demander ce qu'il faut faire</value>
   </data>
   <data name="FileExistAction_Cancel" xml:space="preserve">
     <value>Ne pas enregistrer</value>
@@ -691,17 +535,23 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>Ajouter un numéro au nom de fichier</value>
   </data>
+  <data name="FileHelpers_Rename_file_error" xml:space="preserve">
+    <value>Erreur lors du renommage du fichier :</value>
+  </data>
   <data name="GIFQuality_Bit4" xml:space="preserve">
-    <value>Quantificateur d&apos;octree 16 couleurs</value>
+    <value>Quantificateur d'octree 16 couleurs</value>
   </data>
   <data name="GIFQuality_Bit8" xml:space="preserve">
-    <value>Quantificateur d&apos;octree 256 couleurs (Encodage lent mais de meilleure qualité)</value>
+    <value>Quantificateur d'octree 256 couleurs (Encodage lent mais de meilleure qualité)</value>
   </data>
   <data name="GIFQuality_Default" xml:space="preserve">
     <value>Encodage par défaut .NET (Encodage rapide mais de qualité moyenne)</value>
   </data>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>Palette de quantification en niveaux de gris 256 couleurs</value>
+  </data>
+  <data name="HSB_ToString_" xml:space="preserve">
+    <value>Teinte : {0:0.0}° - Saturation : {1:0.0}% - Luminosité : {2:0.0}%</value>
   </data>
   <data name="Helpers_BrowseFile_Choose_file" xml:space="preserve">
     <value>Choisir un fichier</value>
@@ -710,19 +560,52 @@
     <value>Choisir le chemin du dossier</value>
   </data>
   <data name="Helpers_CreateDirectoryIfNotExist_Create_failed_" xml:space="preserve">
-    <value>Impossible de créer le dossier. Vérifiez votre chemin d&apos;accès.</value>
+    <value>Impossible de créer le dossier. Vérifiez votre chemin d'accès.</value>
   </data>
   <data name="Helpers_OpenFile_File_not_exist_" xml:space="preserve">
-    <value>Le fichier n&apos;existe pas :</value>
+    <value>Le fichier n'existe pas :</value>
   </data>
   <data name="Helpers_OpenFolder_Folder_not_exist_" xml:space="preserve">
-    <value>Le dossier n&apos;existe pas :</value>
+    <value>Le dossier n'existe pas :</value>
+  </data>
+  <data name="Helpers_Timeout" xml:space="preserve">
+    <value>Délai dépassé</value>
+  </data>
+  <data name="HotkeyInfo_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HotkeyInfo_Backspace" xml:space="preserve">
+    <value>Retour arrière</value>
+  </data>
+  <data name="HotkeyInfo_Caps_lock" xml:space="preserve">
+    <value>Verr. Maj</value>
+  </data>
+  <data name="HotkeyInfo_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="HotkeyInfo_Enter" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="HotkeyInfo_Numpad" xml:space="preserve">
+    <value>Pavé numérique</value>
+  </data>
+  <data name="HotkeyInfo_Page_down" xml:space="preserve">
+    <value>Page suivante</value>
+  </data>
+  <data name="HotkeyInfo_Scroll_lock" xml:space="preserve">
+    <value>Arrêt défil</value>
+  </data>
+  <data name="HotkeyInfo_Shift" xml:space="preserve">
+    <value>Maj</value>
+  </data>
+  <data name="HotkeyInfo_Win" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="HotkeyType_AbortScreenRecording" xml:space="preserve">
-    <value>Annuler l&apos;enregistrement d&apos;écran</value>
+    <value>Annuler l'enregistrement d'écran</value>
   </data>
   <data name="HotkeyType_ActiveMonitor" xml:space="preserve">
-    <value>Capturer l&apos;écran actif</value>
+    <value>Capturer l'écran actif</value>
   </data>
   <data name="HotkeyType_ActiveWindow" xml:space="preserve">
     <value>Capturer la fenêtre active</value>
@@ -746,10 +629,10 @@
     <value>Autre</value>
   </data>
   <data name="HotkeyType_Category_ScreenCapture" xml:space="preserve">
-    <value>Capture d&apos;écran</value>
+    <value>Capture d'écran</value>
   </data>
   <data name="HotkeyType_Category_ScreenRecord" xml:space="preserve">
-    <value>Enregistrer l&apos;écran</value>
+    <value>Enregistrer l'écran</value>
   </data>
   <data name="HotkeyType_Category_Tools" xml:space="preserve">
     <value>Outils</value>
@@ -785,10 +668,10 @@
     <value>Quitter ShareX</value>
   </data>
   <data name="HotkeyType_FileUpload" xml:space="preserve">
-    <value>Mise en ligne d&apos;un fichier</value>
+    <value>Mise en ligne d'un fichier</value>
   </data>
   <data name="HotkeyType_FolderUpload" xml:space="preserve">
-    <value>Mise en ligne d&apos;un dossier</value>
+    <value>Mise en ligne d'un dossier</value>
   </data>
   <data name="HotkeyType_HashCheck" xml:space="preserve">
     <value>Vérifier un hash</value>
@@ -800,22 +683,22 @@
     <value>Embellisseur d’image</value>
   </data>
   <data name="HotkeyType_ImageCombiner" xml:space="preserve">
-    <value>Combineur d&apos;images</value>
+    <value>Combineur d'images</value>
   </data>
   <data name="HotkeyType_ImageComparer" xml:space="preserve">
-    <value>Comparateur d&apos;images</value>
+    <value>Comparateur d'images</value>
   </data>
   <data name="HotkeyType_ImageEditor" xml:space="preserve">
-    <value>Éditeur d&apos;image</value>
+    <value>Éditeur d'image</value>
   </data>
   <data name="HotkeyType_ImageEffects" xml:space="preserve">
-    <value>Effets d&apos;image</value>
+    <value>Effets d'image</value>
   </data>
   <data name="HotkeyType_ImageSplitter" xml:space="preserve">
-    <value>Découpeur d&apos;image</value>
+    <value>Découpeur d'image</value>
   </data>
   <data name="HotkeyType_ImageThumbnailer" xml:space="preserve">
-    <value>Générateur de miniatures d&apos;image</value>
+    <value>Générateur de miniatures d'image</value>
   </data>
   <data name="HotkeyType_ImageViewer" xml:space="preserve">
     <value>Visionneuse d’images</value>
@@ -833,7 +716,10 @@
     <value>Métadonnées</value>
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
-    <value>Test d&apos;écran</value>
+    <value>Test d'écran</value>
+  </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Moniteur réseau</value>
   </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Aucun</value>
@@ -842,7 +728,7 @@
     <value>OCR</value>
   </data>
   <data name="HotkeyType_OpenHistory" xml:space="preserve">
-    <value>Afficher la fenêtre de l&apos;historique</value>
+    <value>Afficher la fenêtre de l'historique</value>
   </data>
   <data name="HotkeyType_OpenImageHistory" xml:space="preserve">
     <value>Afficher la fenêtre « Historique des images »</value>
@@ -851,13 +737,13 @@
     <value>Ouvrir la fenêtre principale</value>
   </data>
   <data name="HotkeyType_OpenScreenshotsFolder" xml:space="preserve">
-    <value>Ouvrir le dossier des captures d&apos;écran</value>
+    <value>Ouvrir le dossier des captures d'écran</value>
   </data>
   <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
     <value>Mettre l’enregistrement d’écran en pause</value>
   </data>
   <data name="HotkeyType_PinToScreen" xml:space="preserve">
-    <value>Epingler à l&apos;écran</value>
+    <value>Epingler à l'écran</value>
   </data>
   <data name="HotkeyType_PinToScreenCloseAll" xml:space="preserve">
     <value>Épingler à l’écran (tout fermer)</value>
@@ -872,13 +758,13 @@
     <value>Épingler à l’écran (depuis l’écran)</value>
   </data>
   <data name="HotkeyType_PrintScreen" xml:space="preserve">
-    <value>Capturer tout l&apos;écran</value>
+    <value>Capturer tout l'écran</value>
   </data>
   <data name="HotkeyType_QRCode" xml:space="preserve">
     <value>Code QR</value>
   </data>
   <data name="HotkeyType_QRCodeDecodeFromScreen" xml:space="preserve">
-    <value>Code QR (Décoder depuis l&apos;écran)</value>
+    <value>Code QR (Décoder depuis l'écran)</value>
   </data>
   <data name="HotkeyType_QRCodeScanRegion" xml:space="preserve">
     <value>Code QR (scanner une région)</value>
@@ -890,40 +776,40 @@
     <value>Règle</value>
   </data>
   <data name="HotkeyType_ScreenColorPicker" xml:space="preserve">
-    <value>Sélecteur de couleurs de l&apos;écran</value>
+    <value>Sélecteur de couleurs de l'écran</value>
   </data>
   <data name="HotkeyType_ScreenRecorder" xml:space="preserve">
-    <value>Enregistrement d&apos;écran</value>
+    <value>Enregistrement d'écran</value>
   </data>
   <data name="HotkeyType_ScreenRecorderActiveWindow" xml:space="preserve">
-    <value>Démarrer l&apos;enregistrement de l&apos;écran en utilisant la région de la fenêtre active</value>
+    <value>Démarrer l'enregistrement de l'écran en utilisant la région de la fenêtre active</value>
   </data>
   <data name="HotkeyType_ScreenRecorderCustomRegion" xml:space="preserve">
-    <value>Démarrer l&apos;enregistrement de l&apos;écran en utilisant la région personnalisée</value>
+    <value>Démarrer l'enregistrement de l'écran en utilisant la région personnalisée</value>
   </data>
   <data name="HotkeyType_ScreenRecorderGIF" xml:space="preserve">
-    <value>Enregistrement d&apos;écran (GIF)</value>
+    <value>Enregistrement d'écran (GIF)</value>
   </data>
   <data name="HotkeyType_ScreenRecorderGIFActiveWindow" xml:space="preserve">
-    <value>Démarrer l&apos;enregistrement de l&apos;écran (GIF) en utilisant la région de la fenêtre active</value>
+    <value>Démarrer l'enregistrement de l'écran (GIF) en utilisant la région de la fenêtre active</value>
   </data>
   <data name="HotkeyType_ScreenRecorderGIFCustomRegion" xml:space="preserve">
-    <value>Démarrer l&apos;enregistrement de l&apos;écran (GIF) en utilisant la région personnalisée</value>
+    <value>Démarrer l'enregistrement de l'écran (GIF) en utilisant la région personnalisée</value>
   </data>
   <data name="HotkeyType_ScrollingCapture" xml:space="preserve">
     <value>Capture avec défilement</value>
   </data>
   <data name="HotkeyType_ShortenURL" xml:space="preserve">
-    <value>Raccourcir l&apos;URL</value>
+    <value>Raccourcir l'URL</value>
   </data>
   <data name="HotkeyType_StartAutoCapture" xml:space="preserve">
     <value>Débuter la capture automatique en utilisant la dernière région</value>
   </data>
   <data name="HotkeyType_StartScreenRecorder" xml:space="preserve">
-    <value>Débuter l&apos;enregistrement de l&apos;écran en utilisant la dernière région</value>
+    <value>Débuter l'enregistrement de l'écran en utilisant la dernière région</value>
   </data>
   <data name="HotkeyType_StartScreenRecorderGIF" xml:space="preserve">
-    <value>Débuter l&apos;enregistrement de l&apos;écran (GIF) en utilisant la dernière région</value>
+    <value>Débuter l'enregistrement de l'écran (GIF) en utilisant la dernière région</value>
   </data>
   <data name="HotkeyType_StopAutoCapture" xml:space="preserve">
     <value>Arrêter la capture automatique</value>
@@ -938,7 +824,7 @@
     <value>Supprimer les métadonnées</value>
   </data>
   <data name="HotkeyType_ToggleActionsToolbar" xml:space="preserve">
-    <value>Activer la barre d&apos;outils des actions</value>
+    <value>Activer la barre d'outils des actions</value>
   </data>
   <data name="HotkeyType_ToggleTrayMenu" xml:space="preserve">
     <value>Basculer le menu de la zone de notification</value>
@@ -947,7 +833,7 @@
     <value>Mettre en ligne un texte</value>
   </data>
   <data name="HotkeyType_UploadURL" xml:space="preserve">
-    <value>Mise en ligne depuis l&apos;URL</value>
+    <value>Mise en ligne depuis l'URL</value>
   </data>
   <data name="HotkeyType_VideoConverter" xml:space="preserve">
     <value>Convertisseur vidéo</value>
@@ -955,14 +841,20 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>Générateur de miniatures de vidéo</value>
   </data>
-  <data name="HSB_ToString_" xml:space="preserve">
-    <value>Teinte : {0:0.0}° - Saturation : {1:0.0}% - Luminosité : {2:0.0}%</value>
-  </data>
   <data name="ImageDestination_CustomImageUploader" xml:space="preserve">
-    <value>Service de mise en ligne d&apos;images personnalisé</value>
+    <value>Service de mise en ligne d'images personnalisé</value>
   </data>
   <data name="ImageDestination_FileUploader" xml:space="preserve">
     <value>Service de mise en ligne de fichiers</value>
+  </data>
+  <data name="ImageHelpers_Image_files" xml:space="preserve">
+    <value>Fichiers image</value>
+  </data>
+  <data name="ImageViewerWindow_Open_image" xml:space="preserve">
+    <value>Ouvrir une image</value>
+  </data>
+  <data name="ImageViewerWindow_Title" xml:space="preserve">
+    <value>ShareX - Visionneuse d’images</value>
   </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Gros carré</value>
@@ -982,6 +874,12 @@
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Petites miniatures</value>
   </data>
+  <data name="InputBoxWindow_Default_title" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="InputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
   <data name="MyMessageBox_MyMessageBox_Cancel" xml:space="preserve">
     <value>Annuler</value>
   </data>
@@ -993,6 +891,33 @@
   </data>
   <data name="MyMessageBox_MyMessageBox_Yes" xml:space="preserve">
     <value>Oui</value>
+  </data>
+  <data name="NameParser_Valid_text_file_required" xml:space="preserve">
+    <value>Un chemin de fichier texte valide est requis.</value>
+  </data>
+  <data name="OutputBoxWindow_Close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="OutputBoxWindow_Copy_all" xml:space="preserve">
+    <value>Tout copier</value>
+  </data>
+  <data name="OutputBoxWindow_Default_title" xml:space="preserve">
+    <value>Sortie</value>
+  </data>
+  <data name="OutputBoxWindow_Title" xml:space="preserve">
+    <value>ShareX - {0}</value>
+  </data>
+  <data name="PNGBitDepth_Automatic" xml:space="preserve">
+    <value>Détecter automatiquement</value>
+  </data>
+  <data name="PNGBitDepth_Bit24" xml:space="preserve">
+    <value>24 bits</value>
+  </data>
+  <data name="PNGBitDepth_Bit32" xml:space="preserve">
+    <value>32 bits</value>
+  </data>
+  <data name="PNGBitDepth_Default" xml:space="preserve">
+    <value>Par défaut</value>
   </data>
   <data name="PastebinExpiration_D1" xml:space="preserve">
     <value>1 jour</value>
@@ -1024,20 +949,56 @@
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Non listés</value>
   </data>
-  <data name="PNGBitDepth_Automatic" xml:space="preserve">
-    <value>Détecter automatiquement</value>
+  <data name="PingResult_Ping_failed" xml:space="preserve">
+    <value>Échec du ping : {0}</value>
   </data>
-  <data name="PNGBitDepth_Bit24" xml:space="preserve">
-    <value>24 bits</value>
+  <data name="PingResult_Reply_from" xml:space="preserve">
+    <value>Réponse de {0} : octets={1} temps={2} ms TTL={3}</value>
   </data>
-  <data name="PNGBitDepth_Bit32" xml:space="preserve">
-    <value>32 bits</value>
+  <data name="PingResult_Request_timed_out" xml:space="preserve">
+    <value>Délai d’attente de la demande dépassé.</value>
   </data>
-  <data name="PNGBitDepth_Default" xml:space="preserve">
-    <value>Par défaut</value>
+  <data name="PingResult_Statistics" xml:space="preserve">
+    <value>Minimum = {0} ms, Maximum = {1} ms, Moyenne = {2} ms</value>
   </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>Imprimer</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_message" xml:space="preserve">
+    <value>L’imprimante « {0} » n’existe pas. L’imprimante par défaut de Windows sera utilisée. Vous pouvez définir une autre imprimante par défaut dans les paramètres de l’application.</value>
+  </data>
+  <data name="PrintHelper_Invalid_printer_name" xml:space="preserve">
+    <value>Nom d’imprimante non valide</value>
+  </data>
+  <data name="PrintWindow_Allow_image_to_enlarge" xml:space="preserve">
+    <value>Autoriser l’agrandissement de l’image</value>
+  </data>
+  <data name="PrintWindow_Auto_rotate_image" xml:space="preserve">
+    <value>Faire pivoter automatiquement l’image</value>
+  </data>
+  <data name="PrintWindow_Auto_scale_image" xml:space="preserve">
+    <value>Mettre automatiquement l’image à l’échelle</value>
+  </data>
+  <data name="PrintWindow_Center_image_position" xml:space="preserve">
+    <value>Centrer la position de l’image</value>
+  </data>
+  <data name="PrintWindow_Description" xml:space="preserve">
+    <value>Configurez la position et la mise à l’échelle de l’image.</value>
+  </data>
+  <data name="PrintWindow_Heading" xml:space="preserve">
+    <value>Options d’impression</value>
+  </data>
+  <data name="PrintWindow_Margin" xml:space="preserve">
+    <value>Marge :</value>
+  </data>
+  <data name="PrintWindow_Pixels" xml:space="preserve">
+    <value>px</value>
+  </data>
+  <data name="PrintWindow_Preview" xml:space="preserve">
+    <value>Aperçu...</value>
+  </data>
+  <data name="PrintWindow_Title" xml:space="preserve">
+    <value>ShareX - Options d’impression</value>
   </data>
   <data name="PrivateBinExpiration_D1" xml:space="preserve">
     <value>1 jour</value>
@@ -1091,7 +1052,7 @@
     <value>Annuler la capture</value>
   </data>
   <data name="RegionCaptureAction_CaptureActiveMonitor" xml:space="preserve">
-    <value>Capturer l&apos;écran actif</value>
+    <value>Capturer l'écran actif</value>
   </data>
   <data name="RegionCaptureAction_CaptureFullscreen" xml:space="preserve">
     <value>Capture plein écran</value>
@@ -1109,7 +1070,7 @@
     <value>Supprimer une forme ou annuler la capture</value>
   </data>
   <data name="RegionCaptureAction_SwapToolType" xml:space="preserve">
-    <value>Changer le type d&apos;outil</value>
+    <value>Changer le type d'outil</value>
   </data>
   <data name="ReplCodeMenuCategory_Computer" xml:space="preserve">
     <value>Ordinateur</value>
@@ -1130,7 +1091,7 @@
     <value>Fenêtre</value>
   </data>
   <data name="ReplCodeMenuEntry_cn_Computer_name" xml:space="preserve">
-    <value>Nom de l&apos;ordinateur</value>
+    <value>Nom de l'ordinateur</value>
   </data>
   <data name="ReplCodeMenuEntry_d_Current_day" xml:space="preserve">
     <value>Journée en cours</value>
@@ -1142,16 +1103,16 @@
     <value>Heure actuelle</value>
   </data>
   <data name="ReplCodeMenuEntry_height_Gets_image_height" xml:space="preserve">
-    <value>Hauteur de l&apos;image</value>
+    <value>Hauteur de l'image</value>
+  </data>
+  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
+    <value>Incrémentation alphanumérique automatique sensible à la casse. Ajoutez un 0 au début avec {n}</value>
   </data>
   <data name="ReplCodeMenuEntry_i_Auto_increment_number" xml:space="preserve">
     <value>Incrémentation automatique du numéro. Ajoutez un 0 au début avec {n}</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>Incrémentation alphanumérique automatique insensible à la casse. Ajoutez un 0 au début avec {n}</value>
-  </data>
-  <data name="ReplCodeMenuEntry_iAa_Auto_increment_alphanumeric_all" xml:space="preserve">
-    <value>Incrémentation alphanumérique automatique sensible à la casse. Ajoutez un 0 au début avec {n}</value>
   </data>
   <data name="ReplCodeMenuEntry_ib_Auto_increment_base_alphanumeric" xml:space="preserve">
     <value>Incrémentation automatique en base {n} (1 &lt; n &lt; 63)</value>
@@ -1165,11 +1126,11 @@
   <data name="ReplCodeMenuEntry_mo_Current_month" xml:space="preserve">
     <value>Mois en cours</value>
   </data>
-  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
-    <value>Nom du mois en cours (dans la langue locale)</value>
-  </data>
   <data name="ReplCodeMenuEntry_mon2_Current_month_name__English_" xml:space="preserve">
     <value>Nom du mois en cours (en anglais)</value>
+  </data>
+  <data name="ReplCodeMenuEntry_mon_Current_month_name__Local_language_" xml:space="preserve">
+    <value>Nom du mois en cours (dans la langue locale)</value>
   </data>
   <data name="ReplCodeMenuEntry_ms_Current_millisecond" xml:space="preserve">
     <value>Milliseconde actuelle</value>
@@ -1184,16 +1145,16 @@
     <value>Nom du processus de la fenêtre active</value>
   </data>
   <data name="ReplCodeMenuEntry_ra_Random_alphanumeric_char" xml:space="preserve">
-    <value>Caractère alphanumérique aléatoire. Recommencez à l&apos;aide de {n}</value>
+    <value>Caractère alphanumérique aléatoire. Recommencez à l'aide de {n}</value>
   </data>
   <data name="ReplCodeMenuEntry_rf_Random_line_from_file" xml:space="preserve">
     <value>Ligne aléatoire d’un fichier (utilisez {filepath} pour indiquer le fichier)</value>
   </data>
   <data name="ReplCodeMenuEntry_rn_Random_number_0_to_9" xml:space="preserve">
-    <value>Nombre aléatoire de 0 à 9. Recommencez à l&apos;aide de {n}</value>
+    <value>Nombre aléatoire de 0 à 9. Recommencez à l'aide de {n}</value>
   </data>
   <data name="ReplCodeMenuEntry_rx_Random_hexadecimal" xml:space="preserve">
-    <value>Caractère hexadécimal aléatoire. Recommencez à l&apos;aide de {n}</value>
+    <value>Caractère hexadécimal aléatoire. Recommencez à l'aide de {n}</value>
   </data>
   <data name="ReplCodeMenuEntry_s_Current_second" xml:space="preserve">
     <value>Seconde actuelle</value>
@@ -1202,25 +1163,25 @@
     <value>Titre de la fenêtre active</value>
   </data>
   <data name="ReplCodeMenuEntry_uln_User_login_name" xml:space="preserve">
-    <value>Identifiant de connexion de l&apos;utilisateur</value>
+    <value>Identifiant de connexion de l'utilisateur</value>
   </data>
   <data name="ReplCodeMenuEntry_un_User_name" xml:space="preserve">
-    <value>Nom d&apos;utilisateur</value>
+    <value>Nom d'utilisateur</value>
   </data>
   <data name="ReplCodeMenuEntry_unix_Unix_timestamp" xml:space="preserve">
     <value>Heure Unix</value>
   </data>
-  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
-    <value>Nom de la semaine en cours (dans la langue locale)</value>
-  </data>
   <data name="ReplCodeMenuEntry_w2_Current_week_name__English_" xml:space="preserve">
     <value>Nom de la semaine en cours (en anglais)</value>
   </data>
+  <data name="ReplCodeMenuEntry_w_Current_week_name__Local_language_" xml:space="preserve">
+    <value>Nom de la semaine en cours (dans la langue locale)</value>
+  </data>
   <data name="ReplCodeMenuEntry_width_Gets_image_width" xml:space="preserve">
-    <value>Largeur de l&apos;image</value>
+    <value>Largeur de l'image</value>
   </data>
   <data name="ReplCodeMenuEntry_wy_Week_of_year" xml:space="preserve">
-    <value>Semaine de l&apos;année</value>
+    <value>Semaine de l'année</value>
   </data>
   <data name="ReplCodeMenuEntry_y_Current_year" xml:space="preserve">
     <value>Année en cours</value>
@@ -1307,10 +1268,40 @@
     <value>Ouvrir le lien</value>
   </data>
   <data name="ToastClickAction_PinToScreen" xml:space="preserve">
-    <value>Epingler à l&apos;écran</value>
+    <value>Epingler à l'écran</value>
   </data>
   <data name="ToastClickAction_Upload" xml:space="preserve">
     <value>Téléverser le fichier</value>
+  </data>
+  <data name="Translator_ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="Translator_Base64" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Translator_Binary" xml:space="preserve">
+    <value>Binaire</value>
+  </data>
+  <data name="Translator_Hexadecimal" xml:space="preserve">
+    <value>Hexadécimal</value>
+  </data>
+  <data name="Translator_Text" xml:space="preserve">
+    <value>Texte</value>
+  </data>
+  <data name="URLHelpers_Invalid_URL" xml:space="preserve">
+    <value>URL non valide.</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>Recherche visuelle Bing</value>
+  </data>
+  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
+    <value>Service de partage d'URL personnalisé</value>
+  </data>
+  <data name="URLSharingServices_Email" xml:space="preserve">
+    <value>Adresse e-mail</value>
+  </data>
+  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
+    <value>Recherche d'images Google</value>
   </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>Développement</value>
@@ -1322,7 +1313,7 @@
     <value>Version stable</value>
   </data>
   <data name="UpdateMessageBox_UpdateMessageBox_" xml:space="preserve">
-    <value>Voulez-vous la télécharger et l&apos;installer ?</value>
+    <value>Voulez-vous la télécharger et l'installer ?</value>
   </data>
   <data name="UpdateMessageBox_UpdateMessageBox_CurrentVersion" xml:space="preserve">
     <value>Version actuelle</value>
@@ -1336,20 +1327,23 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>Mise à jour disponible</value>
   </data>
-  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
-    <value>Recherche visuelle Bing</value>
+  <data name="UpdateMessageWindow_Header" xml:space="preserve">
+    <value>Mise à jour de ShareX disponible</value>
   </data>
-  <data name="URLSharingServices_CustomURLSharingService" xml:space="preserve">
-    <value>Service de partage d&apos;URL personnalisé</value>
-  </data>
-  <data name="URLSharingServices_Email" xml:space="preserve">
-    <value>Adresse e-mail</value>
-  </data>
-  <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
-    <value>Recherche d&apos;images Google</value>
+  <data name="UpdateMessageWindow_View_changelog" xml:space="preserve">
+    <value>Afficher le journal des modifications</value>
   </data>
   <data name="UrlShortenerType_CustomURLShortener" xml:space="preserve">
-    <value>Raccourcisseur d&apos;URL personnalisé</value>
+    <value>Raccourcisseur d'URL personnalisé</value>
+  </data>
+  <data name="VideoInfo_Audio_details" xml:space="preserve">
+    <value>, Codec audio : {0}</value>
+  </data>
+  <data name="VideoInfo_Summary" xml:space="preserve">
+    <value>Nom du fichier : {0}, Durée : {1}, Débit : {2} kbit/s</value>
+  </data>
+  <data name="VideoInfo_Video_details" xml:space="preserve">
+    <value>, Codec vidéo : {0}, Résolution : {1}x{2}, IPS : {3}</value>
   </data>
   <data name="YouTubeVideoPrivacy_Private" xml:space="preserve">
     <value>Privé</value>
@@ -1360,11 +1354,20 @@
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Non listés</value>
   </data>
-  <data name="HdrCaptureMode_Off" xml:space="preserve">
-    <value>Désactivé</value>
+  <data name="ZipManager_Archive_too_large" xml:space="preserve">
+    <value>La taille décompressée de cette archive dépasse la taille de fichier maximale autorisée.</value>
+  </data>
+  <data name="ZipManager_Archive_uncompressed_file_size" xml:space="preserve">
+    <value>Taille décompressée de l’archive : {0}</value>
+  </data>
+  <data name="ZipManager_Maximum_allowed_file_size" xml:space="preserve">
+    <value>Taille de fichier maximale autorisée : {0}</value>
   </data>
   <data name="HdrCaptureMode_Dynamic" xml:space="preserve">
     <value>Dynamique</value>
+  </data>
+  <data name="HdrCaptureMode_Off" xml:space="preserve">
+    <value>Désactivé</value>
   </data>
   <data name="HdrCaptureMode_On" xml:space="preserve">
     <value>Activé</value>

@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>दिशा</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>विराम जोड़ें</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>रंग विराम</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>विराम जोड़ें</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>दिशा</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>हटाएँ</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>प्रभाव विकल्प</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>{0} विकल्प</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>किसी प्रभाव के विकल्प संपादित करने के लिए उसे चुनें।</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>इस प्रभाव में कॉन्फ़िगर करने योग्य गुण नहीं हैं।</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>ग्रेडिएंट संपादित करें...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>ब्राउज़ करें...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>{0} चुनें</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>ब</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>ऊ</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>दा</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>नी</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>चौ</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>ऊँ</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - छवि प्रभाव पैकेज करें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>प्रीसेट पैकेज करें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>एसेट फ़ोल्डर</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>पैकेज फ़ाइल</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>ब्राउज़ करें...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>मौजूदा पैकेज अधिलेखित करें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>प्रभाव फ़ोल्डर खोलें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>पैकेज बनाएँ</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>बंद करें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>प्रभाव एसेट फ़ोल्डर चुनें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>छवि प्रभाव पैकेज सहेजें</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>ShareX छवि प्रभाव</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>एसेट फ़ोल्डर ShareX छवि प्रभाव फ़ोल्डर के अंदर होना चाहिए।</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>पैकेज फ़ाइल पथ चुनें।</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>इस पथ पर पहले से एक पैकेज मौजूद है। इसे बदलने के लिए अधिलेखन सक्षम करें।</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>पैकेज सफलतापूर्वक बनाया गया।</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - पुष्टि</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>जारी रखें?</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>हाँ</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>नहीं</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - छवि प्रभाव</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} ms</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>प्रीसेट</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>नया प्रीसेट</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>प्रीसेट हटाएँ</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>प्रीसेट की प्रतिलिपि बनाएँ</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>ऊपर ले जाएँ</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>नीचे ले जाएँ</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>प्रीसेट नाम</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>प्रभाव</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>पूर्वावलोकन ताज़ा करें</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>अनुकूलित प्रभाव नाम</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>प्रभाव जोड़ें</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>प्रभाव हटाएँ</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>प्रभाव की प्रतिलिपि बनाएँ</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>प्रभाव साफ़ करें</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>छवि खोलें...</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>क्लिपबोर्ड से लोड करें</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>प्रीसेट पैकेज करें...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>छवि प्रभाव पृष्ठ...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>छवि सहेजें...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>छवि अपलोड करें</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>जारी रखें</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>रद्द करें</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>बंद करें</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>बेनाम प्रीसेट</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>पैकेज बनाने से पहले प्रीसेट नाम दर्ज करें।</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>चुने गए प्रीसेट से सभी प्रभाव साफ़ करें?</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>छवि प्रभाव पूर्वावलोकन</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>समायोजन</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>आरेखण</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>रूपांतरण</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>समायोजन</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>फ़िल्टर</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>रूपांतरण</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>पाठ</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>पाठ वॉटरमार्क</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>अल्फ़ा</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>नीचे</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>पिक्सेल अल्फ़ा = पिक्सेल अल्फ़ा * मान
-उदाहरण 0.5 पिक्सेल का अल्फ़ा 50% घटाएगा</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>बायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>कोई नहीं</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>दायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>ऊपर</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>अंदर</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>बाहर</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>निरपेक्ष आकार</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>कैनवास का प्रतिशत</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>स्रोत कॉपी</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>स्रोत ऊपर</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>नीचे केंद्र</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>नीचे बायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>नीचे दायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>मध्य केंद्र</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>मध्य बायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>मध्य दायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>ऊपर केंद्र</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>ऊपर बायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>ऊपर दायाँ</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>अनुकूलित</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>डैश</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>डैश बिंदु</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>डैश बिंदु बिंदु</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>बिंदु</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>ठोस</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>निरपेक्ष आकार</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>आकार न बदलें</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>कैनवास का प्रतिशत</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>वॉटरमार्क का प्रतिशत</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>काट-छाँट</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>बढ़ाएँ</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>बाइक्यूबिक</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>बाइलिनियर</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>उच्च गुणवत्ता बाइक्यूबिक</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>उच्च गुणवत्ता बाइलिनियर</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>निकटतम पड़ोसी</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>x पलटें</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>y पलटें</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>कोई नहीं</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>180 घुमाएँ</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>270 घुमाएँ</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>90 घुमाएँ</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>90 घुमाकर x पलटें</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>90 घुमाकर y पलटें</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>पीछे का विकर्ण</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>आगे का विकर्ण</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>क्षैतिज</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>लंबवत</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>सभी छवियों का आकार निर्दिष्ट आकार में बदलता है।</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>छवि निर्दिष्ट आकार से बड़ी हो तभी उसका आकार बदलें।</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>छवि निर्दिष्ट आकार से छोटी हो तभी उसका आकार बदलें।</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>एंटी-अलियास</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>एंटी-अलियास ग्रिड फ़िट</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType ग्रिड फ़िट</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>प्रति पिक्सेल एक बिट</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>प्रति पिक्सेल एक बिट ग्रिड फ़िट</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>सिस्टम डिफ़ॉल्ट</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>नी</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>ब्राउज़ करें...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>ग्रेडिएंट संपादित करें...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>प्रभाव विकल्प</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>{0} विकल्प</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>ऊँ</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>ब</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>इस प्रभाव में कॉन्फ़िगर करने योग्य गुण नहीं हैं।</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>दा</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>किसी प्रभाव के विकल्प संपादित करने के लिए उसे चुनें।</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>{0} चुनें</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>ऊ</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>चौ</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>इस पथ पर पहले से एक पैकेज मौजूद है। इसे बदलने के लिए अधिलेखन सक्षम करें।</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>एसेट फ़ोल्डर</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>एसेट फ़ोल्डर ShareX छवि प्रभाव फ़ोल्डर के अंदर होना चाहिए।</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>ब्राउज़ करें...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>पैकेज फ़ाइल पथ चुनें।</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>बंद करें</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>पैकेज बनाएँ</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>पैकेज सफलतापूर्वक बनाया गया।</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>ShareX छवि प्रभाव</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>प्रभाव फ़ोल्डर खोलें</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>मौजूदा पैकेज अधिलेखित करें</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>पैकेज फ़ाइल</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>प्रीसेट पैकेज करें</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>छवि प्रभाव पैकेज सहेजें</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>प्रभाव एसेट फ़ोल्डर चुनें</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - छवि प्रभाव पैकेज करें</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>पिक्सेल अल्फ़ा = पिक्सेल अल्फ़ा + जोड़
 उदाहरण 0.5 पिक्सेल का अल्फ़ा 127.5 बढ़ाएगा</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>स्वतः काट-छाँट</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>काला और सफ़ेद</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>धुंधला</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>चमक</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>पिक्सेल अल्फ़ा = पिक्सेल अल्फ़ा * मान
+उदाहरण 0.5 पिक्सेल का अल्फ़ा 50% घटाएगा</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>पिक्सेल रंग = पिक्सेल रंग + मान
 उदाहरण 0.5 पिक्सेल का रंग 127.5 बढ़ाएगा</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>कैनवास</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>कैनवास के चारों ओर हाशिए की गणना कैसे की जाएगी।</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>रंग गहराई</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>रंगीन करें</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>कंट्रास्ट</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>पिक्सेल रंग = पिक्सेल रंग * मान
 उदाहरण 1.5 पिक्सेल का रंग 50% बढ़ाएगा</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>काट-छाँट</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>पृष्ठभूमि</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>पृष्ठभूमि छवि</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>किनारा</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>शतरंजी पैटर्न</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>छवि</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>यदि छवि वॉटरमार्क स्रोत छवि से बड़ा हो तो उसे न बनाएँ।</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>छवि वॉटरमार्क का आकार कैसे बदला जाए, यदि आवश्यक हो।</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>यदि छवि वॉटरमार्क स्रोत छवि से बड़ा हो तो उसे न बनाएँ।</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>कण</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>पाठ वॉटरमार्क</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>यदि पाठ स्रोत छवि से बड़ा हो तो उसे न बनाएँ।</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>यदि पाठ वॉटरमार्क स्रोत छवि से बड़ा हो तो उसे न बनाएँ।</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>पाठ</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>यदि पाठ स्रोत छवि से बड़ा हो तो उसे न बनाएँ।</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>किनारा पहचानें</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>उभरा हुआ</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>पलटें</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>अनुपात बाध्य करें</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>गामा</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>न्यूनतम 0.1, अधिकतम 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>गॉसियन धुंधलापन</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>चमकीला प्रभाव</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>ग्रेस्केल</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>वर्ण</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>0 से 360 तक</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>उलटा</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>रंग मैट्रिक्स</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>लाल = (लाल * Rr) + (हरा * Rg) + (नीला * Rb) + (अल्फ़ा * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>कन्वोल्यूशन मैट्रिक्स</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>माध्य निष्कासन</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>रूपरेखा</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>पिक्सेलेट</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>पोलरॉइड</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>प्रतिबिंब</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>स्क्रीनशॉट की ऊँचाई के सापेक्ष प्रतिबिंब की ऊँचाई।
-मान 1 से 100 के बीच होना चाहिए।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>प्रतिबिंब की पारदर्शिता इस मान से न्यूनतम अल्फ़ा तक शुरू होती है।
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>प्रतिबिंब की आरंभिक स्थिति होगी: स्क्रीनशॉट ऊँचाई + ऑफ़सेट</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>स्क्रीनशॉट की ऊँचाई के सापेक्ष प्रतिबिंब की ऊँचाई।
+मान 1 से 100 के बीच होना चाहिए।</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>प्रतिबिंब में नीचे बाएँ से नीचे दाएँ तक तिरछापन जोड़ना।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>बाएँ से दाएँ कितने पिक्सेल तिरछे हों।</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>रंग बदलें</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>आकार बदलें</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>पक्षानुपात बनाए रखने के लिए ऊँचाई स्वतः समायोजित करने हेतु ऊँचाई 0 रखें।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>पक्षानुपात बनाए रखने के लिए चौड़ाई स्वतः समायोजित करने हेतु चौड़ाई 0 रखें।</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>पक्षानुपात बनाए रखने के लिए ऊँचाई स्वतः समायोजित करने हेतु ऊँचाई 0 रखें।</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>RGB विभाजन</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>घुमाएँ</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>-360 और 360 के बीच कोई मान चुनें।</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>यदि सही है, तो आउटपुट छवि इनपुट से बड़ी होगी और क्लिपिंग नहीं होगी।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>इस सेटिंग के काम करने के लिए आकार बढ़ाना बंद होना चाहिए। यदि सही है तो क्लिपिंग होगी, अन्यथा छवि का आकार घटेगा।</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>गोल कोने</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>संतृप्ति</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>मापक्रम</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>पक्षानुपात बनाए रखने के लिए चौड़ाई स्वतः समायोजित करने हेतु चौड़ाई प्रतिशत 0 रखें।</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>यदि सही है, तो आउटपुट छवि इनपुट से बड़ी होगी और क्लिपिंग नहीं होगी।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>पक्षानुपात बनाए रखने के लिए ऊँचाई स्वतः समायोजित करने हेतु ऊँचाई प्रतिशत 0 रखें।</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>चयनात्मक रंग</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>सीपिया</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>छाया</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>पक्षानुपात बनाए रखने के लिए चौड़ाई स्वतः समायोजित करने हेतु चौड़ाई प्रतिशत 0 रखें।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>0.1 और 1.0 के बीच कोई मान चुनें</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>तीक्ष्ण करें</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>तिरछा करें</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>बाएँ से दाएँ कितने पिक्सेल तिरछे हों।</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>ऊपर से नीचे कितने पिक्सेल तिरछे हों।</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>खंड</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>चिकना करें</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>फटा किनारा</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>लहरदार किनारा</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>बाहर</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>अल्फ़ा</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>अंदर</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>स्वतः काट-छाँट</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>उच्च गुणवत्ता बाइक्यूबिक</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>काला और सफ़ेद</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>बाइक्यूबिक</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>धुंधला</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>उच्च गुणवत्ता बाइलिनियर</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>चमक</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>बाइलिनियर</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>कैनवास</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>निकटतम पड़ोसी</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>रंग गहराई</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>निरपेक्ष आकार</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>रंगीन करें</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>कैनवास का प्रतिशत</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>कंट्रास्ट</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>आकार न बदलें</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>निरपेक्ष आकार</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>वॉटरमार्क का प्रतिशत</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>कैनवास का प्रतिशत</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>बढ़ाएँ</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>काट-छाँट</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>कोई नहीं</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>पृष्ठभूमि</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>90 घुमाएँ</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>पृष्ठभूमि छवि</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>180 घुमाएँ</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>किनारा</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>270 घुमाएँ</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>शतरंजी पैटर्न</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>x पलटें</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>छवि</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>90 घुमाकर x पलटें</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>कण</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>y पलटें</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>पाठ वॉटरमार्क</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>90 घुमाकर y पलटें</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>पाठ</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>सभी छवियों का आकार निर्दिष्ट आकार में बदलता है।</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>किनारा पहचानें</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>छवि निर्दिष्ट आकार से बड़ी हो तभी उसका आकार बदलें।</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>उभरा हुआ</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>छवि निर्दिष्ट आकार से छोटी हो तभी उसका आकार बदलें।</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>पलटें</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>ऊपर बायाँ</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>अनुपात बाध्य करें</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>ऊपर केंद्र</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>गामा</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>ऊपर दायाँ</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>गॉसियन धुंधलापन</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>मध्य बायाँ</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>चमकीला प्रभाव</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>मध्य केंद्र</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>ग्रेस्केल</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>मध्य दायाँ</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>वर्ण</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>नीचे बायाँ</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>उलटा</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>नीचे केंद्र</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>रंग मैट्रिक्स</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>नीचे दायाँ</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>कन्वोल्यूशन मैट्रिक्स</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>स्रोत ऊपर</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>माध्य निष्कासन</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>स्रोत कॉपी</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>रूपरेखा</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>ठोस</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>पिक्सेलेट</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>डैश</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>पोलरॉइड</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>बिंदु</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>RGB विभाजन</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>डैश बिंदु</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>प्रतिबिंब</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>डैश बिंदु बिंदु</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>रंग बदलें</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>अनुकूलित</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>आकार बदलें</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>क्षैतिज</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>घुमाएँ</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>लंबवत</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>गोल कोने</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>आगे का विकर्ण</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>संतृप्ति</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>पीछे का विकर्ण</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>मापक्रम</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>सिस्टम डिफ़ॉल्ट</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>चयनात्मक रंग</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>प्रति पिक्सेल एक बिट ग्रिड फ़िट</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>सीपिया</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>प्रति पिक्सेल एक बिट</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>छाया</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>एंटी-अलियास ग्रिड फ़िट</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>तीक्ष्ण करें</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>एंटी-अलियास</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>तिरछा करें</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType ग्रिड फ़िट</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>खंड</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>कोई नहीं</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>चिकना करें</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>ऊपर</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>फटा किनारा</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>नीचे</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>लहरदार किनारा</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>बायाँ</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>जारी रखें?</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>दायाँ</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>नहीं</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - पुष्टि</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>हाँ</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>प्रभाव जोड़ें</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>चुने गए प्रीसेट से सभी प्रभाव साफ़ करें?</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>प्रभाव साफ़ करें</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>बंद करें</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>जारी रखें</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>अनुकूलित प्रभाव नाम</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>प्रभाव की प्रतिलिपि बनाएँ</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>प्रीसेट की प्रतिलिपि बनाएँ</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>प्रभाव</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>पैकेज बनाने से पहले प्रीसेट नाम दर्ज करें।</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>छवि प्रभाव पृष्ठ...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>क्लिपबोर्ड से लोड करें</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>नीचे ले जाएँ</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>ऊपर ले जाएँ</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>नया प्रीसेट</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>छवि खोलें...</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>प्रीसेट पैकेज करें...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>प्रीसेट नाम</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>प्रीसेट</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>छवि प्रभाव पूर्वावलोकन</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>पूर्वावलोकन ताज़ा करें</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>प्रभाव हटाएँ</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>प्रीसेट हटाएँ</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>छवि सहेजें...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - छवि प्रभाव</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} ms</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>बेनाम प्रीसेट</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>छवि अपलोड करें</value>
   </data>
 </root>

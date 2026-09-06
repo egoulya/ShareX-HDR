@@ -58,58 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
-    <value>Cari pengaturan</value>
-  </data>
-  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
-    <value>Gagal mengubah ukuran bitmap kursor.</value>
-  </data>
-  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
-    <value>Aset kursor terlalu kecil.</value>
-  </data>
-  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
-    <value>Hanya aset kursor .cur yang didukung.</value>
+  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
+    <value>Bitmap kursor terkompresi tidak didukung.</value>
   </data>
   <data name="CursorAssetLoader_Cursor_asset_does_not_contain_any_images" xml:space="preserve">
     <value>Aset kursor tidak berisi gambar.</value>
   </data>
+  <data name="CursorAssetLoader_Cursor_asset_is_too_small" xml:space="preserve">
+    <value>Aset kursor terlalu kecil.</value>
+  </data>
   <data name="CursorAssetLoader_Cursor_image_payload_is_out_of_range" xml:space="preserve">
     <value>Data gambar kursor berada di luar rentang.</value>
   </data>
-  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
-    <value>Header bitmap kursor tidak didukung.</value>
+  <data name="CursorAssetLoader_Failed_to_resize_cursor_bitmap" xml:space="preserve">
+    <value>Gagal mengubah ukuran bitmap kursor.</value>
   </data>
-  <data name="CursorAssetLoader_Compressed_cursor_bitmaps_are_not_supported" xml:space="preserve">
-    <value>Bitmap kursor terkompresi tidak didukung.</value>
+  <data name="CursorAssetLoader_Only_cur_cursor_assets_are_supported" xml:space="preserve">
+    <value>Hanya aset kursor .cur yang didukung.</value>
   </data>
   <data name="CursorAssetLoader_Unsupported_cursor_bit_depth" xml:space="preserve">
     <value>Kedalaman bit kursor tidak didukung: {0}.</value>
   </data>
-  <data name="MessageBox_OK" xml:space="preserve">
-    <value>Oke</value>
-  </data>
-  <data name="MessageBox_Cancel" xml:space="preserve">
-    <value>Batal</value>
+  <data name="CursorAssetLoader_Unsupported_cursor_bitmap_header" xml:space="preserve">
+    <value>Header bitmap kursor tidak didukung.</value>
   </data>
   <data name="MessageBox_Abort" xml:space="preserve">
     <value>Hentikan</value>
   </data>
-  <data name="MessageBox_Retry" xml:space="preserve">
-    <value>Coba lagi</value>
+  <data name="MessageBox_Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="MessageBox_Continue" xml:space="preserve">
+    <value>Lanjutkan</value>
   </data>
   <data name="MessageBox_Ignore" xml:space="preserve">
     <value>Abaikan</value>
   </data>
-  <data name="MessageBox_Yes" xml:space="preserve">
-    <value>Ya</value>
-  </data>
   <data name="MessageBox_No" xml:space="preserve">
     <value>Tidak</value>
+  </data>
+  <data name="MessageBox_OK" xml:space="preserve">
+    <value>Oke</value>
+  </data>
+  <data name="MessageBox_Retry" xml:space="preserve">
+    <value>Coba lagi</value>
   </data>
   <data name="MessageBox_Try_again" xml:space="preserve">
     <value>Coba lagi</value>
   </data>
-  <data name="MessageBox_Continue" xml:space="preserve">
-    <value>Lanjutkan</value>
+  <data name="MessageBox_Yes" xml:space="preserve">
+    <value>Ya</value>
+  </data>
+  <data name="SettingsNavigation_Search_settings" xml:space="preserve">
+    <value>Cari pengaturan</value>
   </data>
 </root>

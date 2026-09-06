@@ -304,6 +304,8 @@ namespace ShareX
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         VideoConverter,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
+        VideoTrimmer,
+        [Category(EnumExtensions.HotkeyType_Category_Tools)]
         VideoThumbnailer,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         AnalyzeImage,
@@ -333,6 +335,8 @@ namespace ShareX
         ActiveWindowTopMost,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         InspectWindow,
+        [Category(EnumExtensions.HotkeyType_Category_Tools)]
+        NetworkMonitor,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         MonitorTest,
         // Development aid, not a shipping feature: no resx entry, so the [Description] is what the

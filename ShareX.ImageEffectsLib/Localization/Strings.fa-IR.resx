@@ -58,221 +58,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
-    <value>جهت</value>
+  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
+    <value>افزودن... توقف</value>
   </data>
   <data name="GradientOptionsPanel_Color_stops" xml:space="preserve">
     <value>توقف‌های رنگ</value>
   </data>
-  <data name="GradientOptionsPanel_Add_stop" xml:space="preserve">
-    <value>افزودن... توقف</value>
+  <data name="GradientOptionsPanel_Direction" xml:space="preserve">
+    <value>جهت</value>
   </data>
   <data name="GradientOptionsPanel_Remove" xml:space="preserve">
     <value>حذف</value>
   </data>
-  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
-    <value>گزینه‌های جلوه</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
-    <value>گزینه‌های {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
-    <value>برای ویرایش گزینه‌ها، یک جلوه انتخاب کنید.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
-    <value>این جلوه ویژگی قابل تنظیمی ندارد.</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
-    <value>ویرایش گرادیان...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
-    <value>مرور...</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
-    <value>انتخاب {0}</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
-    <value>چپ</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
-    <value>بالا</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
-    <value>راست</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
-    <value>پایین</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
-    <value>عرض</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
-    <value>ارتفاع</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
-    <value>ShareX - بسته‌بندی جلوه تصویر</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
-    <value>بسته‌بندی پیش‌تنظیم</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
-    <value>پوشه منابع</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
-    <value>فایل بسته</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
-    <value>مرور...</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
-    <value>بازنویسی بسته موجود</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
-    <value>باز کردن جلوه‌ها پوشه</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
-    <value>ایجاد بسته</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
-    <value>بستن</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
-    <value>انتخاب پوشه منابع جلوه</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
-    <value>ذخیره بسته جلوه تصویر</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
-    <value>جلوه تصویر ShareX</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
-    <value>پوشه منابع باید داخل پوشه جلوه‌های تصویر ShareX باشد.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
-    <value>مسیر فایل بسته را انتخاب کنید.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
-    <value>در این مسیر بسته‌ای وجود دارد. برای جایگزینی آن، بازنویسی را فعال کنید.</value>
-  </data>
-  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
-    <value>بسته با موفقیت ایجاد شد.</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
-    <value>ShareX - تأیید</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
-    <value>ادامه</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
-    <value>بله</value>
-  </data>
-  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
-    <value>خیر</value>
-  </data>
-  <data name="ImageEffectsWindow_Title" xml:space="preserve">
-    <value>ShareX - جلوه‌های تصویر</value>
-  </data>
-  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
-    <value>{0} - {1} × {2} - {3} میلی‌ثانیه</value>
-  </data>
-  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
-    <value>پیش‌تنظیم‌ها</value>
-  </data>
-  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
-    <value>جدید پیش‌تنظیم</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
-    <value>حذف پیش‌تنظیم</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
-    <value>تکثیر پیش‌تنظیم</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
-    <value>انتقال به بالا</value>
-  </data>
-  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
-    <value>انتقال به پایین</value>
-  </data>
-  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
-    <value>پیش‌تنظیم نام</value>
-  </data>
-  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
-    <value>جلوه‌ها</value>
-  </data>
-  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
-    <value>تازه‌سازی پیش‌نمایش...</value>
-  </data>
-  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
-    <value>نام جلوه سفارشی</value>
-  </data>
-  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
-    <value>افزودن جلوه</value>
-  </data>
-  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
-    <value>حذف جلوه</value>
-  </data>
-  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
-    <value>تکثیر جلوه</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
-    <value>پاک کردن جلوه‌ها</value>
-  </data>
-  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
-    <value>باز کردن تصویر</value>
-  </data>
-  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
-    <value>بارگیری از حافظه موقت</value>
-  </data>
-  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
-    <value>بسته‌بندی پیش‌تنظیم...</value>
-  </data>
-  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
-    <value>صفحه جلوه‌های تصویر...</value>
-  </data>
-  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
-    <value>ذخیره تصویر...</value>
-  </data>
-  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
-    <value>بارگذاری عکس</value>
-  </data>
-  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
-    <value>ادامه</value>
-  </data>
-  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
-    <value>انصراف</value>
-  </data>
-  <data name="ImageEffectsWindow_Close" xml:space="preserve">
-    <value>بستن</value>
-  </data>
-  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
-    <value>پیش‌تنظیم بی‌نام</value>
-  </data>
-  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
-    <value>پیش از ایجاد بسته، نام پیش‌تنظیم را وارد کنید.</value>
-  </data>
-  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
-    <value>همه جلوه‌های پیش‌تنظیم انتخاب‌شده پاک شوند؟</value>
-  </data>
-  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
-    <value>افکت های تصویر پیش‌نمایش...</value>
+  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
+    <value>تنظیمات</value>
   </data>
   <data name="ImageEffectCategory_Drawings" xml:space="preserve">
     <value>ترسیم‌ها</value>
   </data>
-  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
-    <value>تبدیل‌ها</value>
-  </data>
-  <data name="ImageEffectCategory_Adjustments" xml:space="preserve">
-    <value>تنظیمات</value>
-  </data>
   <data name="ImageEffectCategory_Filters" xml:space="preserve">
     <value>فیلترها</value>
+  </data>
+  <data name="ImageEffectCategory_Manipulations" xml:space="preserve">
+    <value>تبدیل‌ها</value>
   </data>
   <data name="ImageEffectDefault_Text" xml:space="preserve">
     <value>متن</value>
@@ -280,154 +88,312 @@
   <data name="ImageEffectDefault_Text_watermark" xml:space="preserve">
     <value>واترمارک متنی</value>
   </data>
-  <data name="ImageEffect_Alpha" xml:space="preserve">
-    <value>آلفا</value>
+  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
+    <value>پایین</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
-    <value>آلفای پیکسل = آلفای پیکسل * مقدار
-مثال: مقدار 0.5 آلفای پیکسل را 50٪ کاهش می‌دهد</value>
+  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
+    <value>چپ</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
+    <value>هیچ کدام</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
+    <value>راست</value>
+  </data>
+  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
+    <value>بالا</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
+    <value>داخلی</value>
+  </data>
+  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
+    <value>بیرونی</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
+    <value>اندازه مطلق</value>
+  </data>
+  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
+    <value>درصد بوم</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
+    <value>کپی منبع</value>
+  </data>
+  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
+    <value>منبع روی زمینه</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>پایین وسط</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>پایین چپ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
+    <value>پایین راست</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>مرکز میانی</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>وسط چپ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>وسط راست</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
+    <value>بالا وسط</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
+    <value>بالا چپ</value>
+  </data>
+  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
+    <value>بالا راست</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
+    <value>سفارشی</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
+    <value>خط‌چین</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
+    <value>خط‌نقطه</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
+    <value>خط‌نقطه‌نقطه</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
+    <value>نقطه</value>
+  </data>
+  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
+    <value>پیوسته</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>اندازه مطلق</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>تغییر اندازه نده</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>درصد بوم</value>
+  </data>
+  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>درصدی از واترمارک</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+    <value>برش</value>
+  </data>
+  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
+    <value>بزرگ‌کردن</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
+    <value>دو‌مکعبی</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
+    <value>دوخطی</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
+    <value>دو‌مکعبی با کیفیت بالا</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
+    <value>دوخطی با کیفیت بالا</value>
+  </data>
+  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
+    <value>نزدیک‌ترین همسایه</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
+    <value>وارونه‌سازی افقی</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
+    <value>وارونه‌سازی عمودی</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
+    <value>هیچ کدام</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
+    <value>۱۸۰ درجه بچرخان</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
+    <value>چرخش 270°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
+    <value>چرخش 90°</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
+    <value>چرخش 90° و وارونه‌سازی افقی</value>
+  </data>
+  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
+    <value>چرخش 90° و وارونه‌سازی عمودی</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
+    <value>مورب رو به عقب</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
+    <value>مورب رو به جلو</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
+    <value>افقی</value>
+  </data>
+  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
+    <value>عمودی</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
+    <value>اندازه همه تصاویر را به اندازه مشخص‌شده تغییر می‌دهد.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
+    <value>فقط اگر تصویر از اندازه مشخص‌شده بزرگ‌تر باشد، اندازه آن را تغییر می‌دهد.</value>
+  </data>
+  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
+    <value>فقط اگر تصویر از اندازه مشخص‌شده کوچک‌تر باشد، اندازه آن را تغییر می‌دهد.</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
+    <value>هموارسازی لبه</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
+    <value>هموارسازی لبه با انطباق شبکه</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
+    <value>ClearType با انطباق شبکه</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
+    <value>یک بیت در هر پیکسل</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
+    <value>یک بیت در هر پیکسل با انطباق شبکه</value>
+  </data>
+  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
+    <value>پیش‌فرض سیستم</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Bottom_short" xml:space="preserve">
+    <value>پایین</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Browse" xml:space="preserve">
+    <value>مرور...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Edit_gradient" xml:space="preserve">
+    <value>ویرایش گرادیان...</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options" xml:space="preserve">
+    <value>گزینه‌های جلوه</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Effect_options_format" xml:space="preserve">
+    <value>گزینه‌های {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Height_short" xml:space="preserve">
+    <value>ارتفاع</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Left_short" xml:space="preserve">
+    <value>چپ</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_No_configurable_properties" xml:space="preserve">
+    <value>این جلوه ویژگی قابل تنظیمی ندارد.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Right_short" xml:space="preserve">
+    <value>راست</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_an_effect" xml:space="preserve">
+    <value>برای ویرایش گزینه‌ها، یک جلوه انتخاب کنید.</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Select_property" xml:space="preserve">
+    <value>انتخاب {0}</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Top_short" xml:space="preserve">
+    <value>بالا</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Width_short" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_X_short" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="ImageEffectOptionsPanel_Y_short" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Already_exists" xml:space="preserve">
+    <value>در این مسیر بسته‌ای وجود دارد. برای جایگزینی آن، بازنویسی را فعال کنید.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_folder" xml:space="preserve">
+    <value>پوشه منابع</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Assets_must_be_inside" xml:space="preserve">
+    <value>پوشه منابع باید داخل پوشه جلوه‌های تصویر ShareX باشد.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Browse" xml:space="preserve">
+    <value>مرور...</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Choose_package_path" xml:space="preserve">
+    <value>مسیر فایل بسته را انتخاب کنید.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Close" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Create_package" xml:space="preserve">
+    <value>ایجاد بسته</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Created_successfully" xml:space="preserve">
+    <value>بسته با موفقیت ایجاد شد.</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_File_type" xml:space="preserve">
+    <value>جلوه تصویر ShareX</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Open_effects_folder" xml:space="preserve">
+    <value>باز کردن جلوه‌ها پوشه</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Overwrite_existing" xml:space="preserve">
+    <value>بازنویسی بسته موجود</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_file" xml:space="preserve">
+    <value>فایل بسته</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Package_preset" xml:space="preserve">
+    <value>بسته‌بندی پیش‌تنظیم</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Save_package" xml:space="preserve">
+    <value>ذخیره بسته جلوه تصویر</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Select_assets_folder" xml:space="preserve">
+    <value>انتخاب پوشه منابع جلوه</value>
+  </data>
+  <data name="ImageEffectPackagerWindow_Title" xml:space="preserve">
+    <value>ShareX - بسته‌بندی جلوه تصویر</value>
   </data>
   <data name="ImageEffectPropertyDescription_Alpha_Addition" xml:space="preserve">
     <value>آلفای پیکسل = آلفای پیکسل + مقدار افزوده
 مثال: مقدار 0.5 آلفای پیکسل را 127.5 افزایش می‌دهد</value>
   </data>
-  <data name="ImageEffect_AutoCrop" xml:space="preserve">
-    <value>خودکار برش</value>
-  </data>
-  <data name="ImageEffect_BlackWhite" xml:space="preserve">
-    <value>سیاه و سفید</value>
-  </data>
-  <data name="ImageEffect_Blur" xml:space="preserve">
-    <value>محو</value>
-  </data>
-  <data name="ImageEffect_Brightness" xml:space="preserve">
-    <value>روشنایی</value>
+  <data name="ImageEffectPropertyDescription_Alpha_Value" xml:space="preserve">
+    <value>آلفای پیکسل = آلفای پیکسل * مقدار
+مثال: مقدار 0.5 آلفای پیکسل را 50٪ کاهش می‌دهد</value>
   </data>
   <data name="ImageEffectPropertyDescription_Brightness_Value" xml:space="preserve">
     <value>رنگ پیکسل = رنگ پیکسل + مقدار
 مثال: مقدار 0.5 رنگ پیکسل را 127.5 افزایش می‌دهد</value>
   </data>
-  <data name="ImageEffect_Canvas" xml:space="preserve">
-    <value>بوم</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Canvas_MarginMode" xml:space="preserve">
     <value>نحوه محاسبه حاشیه اطراف بوم.</value>
-  </data>
-  <data name="ImageEffect_ColorDepth" xml:space="preserve">
-    <value>عمق رنگ</value>
-  </data>
-  <data name="ImageEffect_Colorize" xml:space="preserve">
-    <value>رنگی‌سازی</value>
-  </data>
-  <data name="ImageEffect_Contrast" xml:space="preserve">
-    <value>کنتراست</value>
   </data>
   <data name="ImageEffectPropertyDescription_Contrast_Value" xml:space="preserve">
     <value>رنگ پیکسل = رنگ پیکسل * مقدار
 مثال: مقدار 1.5 رنگ پیکسل را 50٪ افزایش می‌دهد</value>
   </data>
-  <data name="ImageEffect_Crop" xml:space="preserve">
-    <value>برش</value>
-  </data>
-  <data name="ImageEffect_DrawBackground" xml:space="preserve">
-    <value>پس‌زمینه</value>
-  </data>
-  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
-    <value>تصویر پس‌زمینه</value>
-  </data>
-  <data name="ImageEffect_DrawBorder" xml:space="preserve">
-    <value>کادر</value>
-  </data>
-  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
-    <value>شطرنجی</value>
-  </data>
-  <data name="ImageEffect_DrawImage" xml:space="preserve">
-    <value>عکس</value>
+  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
+    <value>اگر واترمارک تصویری از تصویر منبع بزرگ‌تر باشد، آن را رسم نکن.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawImage_SizeMode" xml:space="preserve">
     <value>نحوه تغییر اندازه واترمارک تصویری در صورت نیاز.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_DrawImage_AutoHide" xml:space="preserve">
-    <value>اگر واترمارک تصویری از تصویر منبع بزرگ‌تر باشد، آن را رسم نکن.</value>
-  </data>
-  <data name="ImageEffect_DrawParticles" xml:space="preserve">
-    <value>ذرات</value>
-  </data>
-  <data name="ImageEffect_DrawText" xml:space="preserve">
-    <value>واترمارک متنی</value>
+  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
+    <value>اگر متن از تصویر منبع بزرگ‌تر باشد، آن را رسم نکن.</value>
   </data>
   <data name="ImageEffectPropertyDescription_DrawText_AutoHide" xml:space="preserve">
     <value>اگر واترمارک متنی از تصویر منبع بزرگ‌تر باشد، آن را رسم نکن.</value>
   </data>
-  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
-    <value>متن</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_DrawTextEx_AutoHide" xml:space="preserve">
-    <value>اگر متن از تصویر منبع بزرگ‌تر باشد، آن را رسم نکن.</value>
-  </data>
-  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
-    <value>تشخیص لبه</value>
-  </data>
-  <data name="ImageEffect_Emboss" xml:space="preserve">
-    <value>برجسته‌سازی</value>
-  </data>
-  <data name="ImageEffect_Flip" xml:space="preserve">
-    <value>وارونه کردن</value>
-  </data>
-  <data name="ImageEffect_ForceProportions" xml:space="preserve">
-    <value>اجبار نسبت‌ها</value>
-  </data>
-  <data name="ImageEffect_Gamma" xml:space="preserve">
-    <value>گاما</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Gamma_Value" xml:space="preserve">
     <value>حداقل 0.1، حداکثر 5.0</value>
-  </data>
-  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
-    <value>محو گاوسی</value>
-  </data>
-  <data name="ImageEffect_Glow" xml:space="preserve">
-    <value>درخشش</value>
-  </data>
-  <data name="ImageEffect_Grayscale" xml:space="preserve">
-    <value>طیف خاکستری</value>
-  </data>
-  <data name="ImageEffect_Hue" xml:space="preserve">
-    <value>فام</value>
   </data>
   <data name="ImageEffectPropertyDescription_Hue_Angle" xml:space="preserve">
     <value>از 0 تا 360</value>
   </data>
-  <data name="ImageEffect_Inverse" xml:space="preserve">
-    <value>معکوس کردن رنگ‌ها</value>
-  </data>
-  <data name="ImageEffect_MatrixColor" xml:space="preserve">
-    <value>ماتریس رنگ</value>
-  </data>
   <data name="ImageEffectPropertyDescription_MatrixColor_Rr" xml:space="preserve">
     <value>قرمز = (قرمز * Rr) + (سبز * Rg) + (آبی * Rb) + (آلفا * Ra) + Ro</value>
-  </data>
-  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
-    <value>ماتریس کانولوشن</value>
-  </data>
-  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
-    <value>حذف میانگین</value>
-  </data>
-  <data name="ImageEffect_Outline" xml:space="preserve">
-    <value>خط پیرامونی</value>
-  </data>
-  <data name="ImageEffect_Pixelate" xml:space="preserve">
-    <value>پیکسلی کردن</value>
-  </data>
-  <data name="ImageEffect_Polaroid" xml:space="preserve">
-    <value>پولاروید</value>
-  </data>
-  <data name="ImageEffect_Reflection" xml:space="preserve">
-    <value>بازتاب</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
-    <value>ارتفاع بازتاب نسبت به ارتفاع تصویر صفحه.
-مقدار باید بین 1 و 100 باشد.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_MaxAlpha" xml:space="preserve">
     <value>شفافیت بازتاب از این مقدار تا MinAlpha تغییر می‌کند.
@@ -440,89 +406,45 @@
   <data name="ImageEffectPropertyDescription_Reflection_Offset" xml:space="preserve">
     <value>موقعیت آغاز بازتاب: ارتفاع تصویر صفحه + جابه‌جایی</value>
   </data>
+  <data name="ImageEffectPropertyDescription_Reflection_Percentage" xml:space="preserve">
+    <value>ارتفاع بازتاب نسبت به ارتفاع تصویر صفحه.
+مقدار باید بین 1 و 100 باشد.</value>
+  </data>
   <data name="ImageEffectPropertyDescription_Reflection_Skew" xml:space="preserve">
     <value>بازتاب را از پایین چپ به پایین راست کج می‌کند.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Reflection_SkewSize" xml:space="preserve">
     <value>میزان کج‌شدن پیکسل‌ها از چپ به راست.</value>
   </data>
-  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
-    <value>جایگزینی رنگ</value>
-  </data>
-  <data name="ImageEffect_Resize" xml:space="preserve">
-    <value>تغییر اندازه</value>
+  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
+    <value>برای تنظیم خودکار ارتفاع با حفظ نسبت تصویر، ارتفاع را روی 0 قرار دهید.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Resize_Width" xml:space="preserve">
     <value>برای تنظیم خودکار عرض با حفظ نسبت تصویر، عرض را روی 0 قرار دهید.</value>
   </data>
-  <data name="ImageEffectPropertyDescription_Resize_Height" xml:space="preserve">
-    <value>برای تنظیم خودکار ارتفاع با حفظ نسبت تصویر، ارتفاع را روی 0 قرار دهید.</value>
-  </data>
-  <data name="ImageEffect_RGBSplit" xml:space="preserve">
-    <value>جداسازی RGB</value>
-  </data>
-  <data name="ImageEffect_Rotate" xml:space="preserve">
-    <value>چرخش</value>
-  </data>
   <data name="ImageEffectPropertyDescription_Rotate_Angle" xml:space="preserve">
     <value>مقداری بین -360 و 360 انتخاب کنید.</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
-    <value>اگر فعال باشد، تصویر خروجی بزرگ‌تر از ورودی خواهد بود و برشی رخ نمی‌دهد.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Rotate_Clip" xml:space="preserve">
     <value>برای کارکرد این گزینه باید بزرگ‌سازی غیرفعال باشد. اگر فعال باشد تصویر برش می‌خورد، در غیر این صورت اندازه تصویر کاهش می‌یابد.</value>
   </data>
-  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
-    <value>گوشه‌های گرد</value>
-  </data>
-  <data name="ImageEffect_Saturation" xml:space="preserve">
-    <value>اشباع</value>
-  </data>
-  <data name="ImageEffect_Scale" xml:space="preserve">
-    <value>مقیاس</value>
-  </data>
-  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
-    <value>برای تنظیم خودکار عرض با حفظ نسبت تصویر، درصد عرض را روی 0 قرار دهید.</value>
+  <data name="ImageEffectPropertyDescription_Rotate_Upsize" xml:space="preserve">
+    <value>اگر فعال باشد، تصویر خروجی بزرگ‌تر از ورودی خواهد بود و برشی رخ نمی‌دهد.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Scale_HeightPercentage" xml:space="preserve">
     <value>برای تنظیم خودکار ارتفاع با حفظ نسبت تصویر، درصد ارتفاع را روی 0 قرار دهید.</value>
   </data>
-  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
-    <value>رنگ انتخابی</value>
-  </data>
-  <data name="ImageEffect_Sepia" xml:space="preserve">
-    <value>سپیا</value>
-  </data>
-  <data name="ImageEffect_Shadow" xml:space="preserve">
-    <value>سایه</value>
+  <data name="ImageEffectPropertyDescription_Scale_WidthPercentage" xml:space="preserve">
+    <value>برای تنظیم خودکار عرض با حفظ نسبت تصویر، درصد عرض را روی 0 قرار دهید.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Shadow_Opacity" xml:space="preserve">
     <value>مقداری بین 0.1 و 1.0 انتخاب کنید</value>
-  </data>
-  <data name="ImageEffect_Sharpen" xml:space="preserve">
-    <value>واضح‌سازی</value>
-  </data>
-  <data name="ImageEffect_Skew" xml:space="preserve">
-    <value>کج‌کردن</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Horizontally" xml:space="preserve">
     <value>میزان کج‌شدن پیکسل‌ها از چپ به راست.</value>
   </data>
   <data name="ImageEffectPropertyDescription_Skew_Vertically" xml:space="preserve">
     <value>میزان کج‌شدن پیکسل‌ها از بالا به پایین.</value>
-  </data>
-  <data name="ImageEffect_Slice" xml:space="preserve">
-    <value>برش نواری</value>
-  </data>
-  <data name="ImageEffect_Smooth" xml:space="preserve">
-    <value>هموارسازی</value>
-  </data>
-  <data name="ImageEffect_TornEdge" xml:space="preserve">
-    <value>لبه پاره</value>
-  </data>
-  <data name="ImageEffect_WaveEdge" xml:space="preserve">
-    <value>لبه موجی</value>
   </data>
   <data name="ImageEffectProperty_Aa" xml:space="preserve">
     <value>Aa</value>
@@ -932,178 +854,256 @@
   <data name="ImageEffectProperty_X2Y2" xml:space="preserve">
     <value>X 2 Y 2</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Outside" xml:space="preserve">
-    <value>بیرونی</value>
+  <data name="ImageEffect_Alpha" xml:space="preserve">
+    <value>آلفا</value>
   </data>
-  <data name="ImageEffectEnum_BorderType_Inside" xml:space="preserve">
-    <value>داخلی</value>
+  <data name="ImageEffect_AutoCrop" xml:space="preserve">
+    <value>خودکار برش</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBicubic" xml:space="preserve">
-    <value>دو‌مکعبی با کیفیت بالا</value>
+  <data name="ImageEffect_BlackWhite" xml:space="preserve">
+    <value>سیاه و سفید</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bicubic" xml:space="preserve">
-    <value>دو‌مکعبی</value>
+  <data name="ImageEffect_Blur" xml:space="preserve">
+    <value>محو</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_HighQualityBilinear" xml:space="preserve">
-    <value>دوخطی با کیفیت بالا</value>
+  <data name="ImageEffect_Brightness" xml:space="preserve">
+    <value>روشنایی</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_Bilinear" xml:space="preserve">
-    <value>دوخطی</value>
+  <data name="ImageEffect_Canvas" xml:space="preserve">
+    <value>بوم</value>
   </data>
-  <data name="ImageEffectEnum_ImageInterpolationMode_NearestNeighbor" xml:space="preserve">
-    <value>نزدیک‌ترین همسایه</value>
+  <data name="ImageEffect_ColorDepth" xml:space="preserve">
+    <value>عمق رنگ</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_AbsoluteSize" xml:space="preserve">
-    <value>اندازه مطلق</value>
+  <data name="ImageEffect_Colorize" xml:space="preserve">
+    <value>رنگی‌سازی</value>
   </data>
-  <data name="ImageEffectEnum_CanvasMarginMode_PercentageOfCanvas" xml:space="preserve">
-    <value>درصد بوم</value>
+  <data name="ImageEffect_Contrast" xml:space="preserve">
+    <value>کنتراست</value>
   </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_DontResize" xml:space="preserve">
-    <value>تغییر اندازه نده</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
-    <value>اندازه مطلق</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
-    <value>درصدی از واترمارک</value>
-  </data>
-  <data name="ImageEffectEnum_DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
-    <value>درصد بوم</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Grow" xml:space="preserve">
-    <value>بزرگ‌کردن</value>
-  </data>
-  <data name="ImageEffectEnum_ForceProportionsMethod_Crop" xml:space="preserve">
+  <data name="ImageEffect_Crop" xml:space="preserve">
     <value>برش</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_None" xml:space="preserve">
-    <value>هیچ کدام</value>
+  <data name="ImageEffect_DrawBackground" xml:space="preserve">
+    <value>پس‌زمینه</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90" xml:space="preserve">
-    <value>چرخش 90°</value>
+  <data name="ImageEffect_DrawBackgroundImage" xml:space="preserve">
+    <value>تصویر پس‌زمینه</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate180" xml:space="preserve">
-    <value>۱۸۰ درجه بچرخان</value>
+  <data name="ImageEffect_DrawBorder" xml:space="preserve">
+    <value>کادر</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate270" xml:space="preserve">
-    <value>چرخش 270°</value>
+  <data name="ImageEffect_DrawCheckerboard" xml:space="preserve">
+    <value>شطرنجی</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipX" xml:space="preserve">
-    <value>وارونه‌سازی افقی</value>
+  <data name="ImageEffect_DrawImage" xml:space="preserve">
+    <value>عکس</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipX" xml:space="preserve">
-    <value>چرخش 90° و وارونه‌سازی افقی</value>
+  <data name="ImageEffect_DrawParticles" xml:space="preserve">
+    <value>ذرات</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_FlipY" xml:space="preserve">
-    <value>وارونه‌سازی عمودی</value>
+  <data name="ImageEffect_DrawText" xml:space="preserve">
+    <value>واترمارک متنی</value>
   </data>
-  <data name="ImageEffectEnum_ImageRotateFlipType_Rotate90FlipY" xml:space="preserve">
-    <value>چرخش 90° و وارونه‌سازی عمودی</value>
+  <data name="ImageEffect_DrawTextEx" xml:space="preserve">
+    <value>متن</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeAll" xml:space="preserve">
-    <value>اندازه همه تصاویر را به اندازه مشخص‌شده تغییر می‌دهد.</value>
+  <data name="ImageEffect_EdgeDetect" xml:space="preserve">
+    <value>تشخیص لبه</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfBigger" xml:space="preserve">
-    <value>فقط اگر تصویر از اندازه مشخص‌شده بزرگ‌تر باشد، اندازه آن را تغییر می‌دهد.</value>
+  <data name="ImageEffect_Emboss" xml:space="preserve">
+    <value>برجسته‌سازی</value>
   </data>
-  <data name="ImageEffectEnum_ResizeMode_ResizeIfSmaller" xml:space="preserve">
-    <value>فقط اگر تصویر از اندازه مشخص‌شده کوچک‌تر باشد، اندازه آن را تغییر می‌دهد.</value>
+  <data name="ImageEffect_Flip" xml:space="preserve">
+    <value>وارونه کردن</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopLeft" xml:space="preserve">
-    <value>بالا چپ</value>
+  <data name="ImageEffect_ForceProportions" xml:space="preserve">
+    <value>اجبار نسبت‌ها</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopCenter" xml:space="preserve">
-    <value>بالا وسط</value>
+  <data name="ImageEffect_Gamma" xml:space="preserve">
+    <value>گاما</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_TopRight" xml:space="preserve">
-    <value>بالا راست</value>
+  <data name="ImageEffect_GaussianBlur" xml:space="preserve">
+    <value>محو گاوسی</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleLeft" xml:space="preserve">
-    <value>وسط چپ</value>
+  <data name="ImageEffect_Glow" xml:space="preserve">
+    <value>درخشش</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleCenter" xml:space="preserve">
-    <value>مرکز میانی</value>
+  <data name="ImageEffect_Grayscale" xml:space="preserve">
+    <value>طیف خاکستری</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_MiddleRight" xml:space="preserve">
-    <value>وسط راست</value>
+  <data name="ImageEffect_Hue" xml:space="preserve">
+    <value>فام</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomLeft" xml:space="preserve">
-    <value>پایین چپ</value>
+  <data name="ImageEffect_Inverse" xml:space="preserve">
+    <value>معکوس کردن رنگ‌ها</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomCenter" xml:space="preserve">
-    <value>پایین وسط</value>
+  <data name="ImageEffect_MatrixColor" xml:space="preserve">
+    <value>ماتریس رنگ</value>
   </data>
-  <data name="ImageEffectEnum_ContentAlignment_BottomRight" xml:space="preserve">
-    <value>پایین راست</value>
+  <data name="ImageEffect_MatrixConvolution" xml:space="preserve">
+    <value>ماتریس کانولوشن</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceOver" xml:space="preserve">
-    <value>منبع روی زمینه</value>
+  <data name="ImageEffect_MeanRemoval" xml:space="preserve">
+    <value>حذف میانگین</value>
   </data>
-  <data name="ImageEffectEnum_CompositingMode_SourceCopy" xml:space="preserve">
-    <value>کپی منبع</value>
+  <data name="ImageEffect_Outline" xml:space="preserve">
+    <value>خط پیرامونی</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Solid" xml:space="preserve">
-    <value>پیوسته</value>
+  <data name="ImageEffect_Pixelate" xml:space="preserve">
+    <value>پیکسلی کردن</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dash" xml:space="preserve">
-    <value>خط‌چین</value>
+  <data name="ImageEffect_Polaroid" xml:space="preserve">
+    <value>پولاروید</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Dot" xml:space="preserve">
-    <value>نقطه</value>
+  <data name="ImageEffect_RGBSplit" xml:space="preserve">
+    <value>جداسازی RGB</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDot" xml:space="preserve">
-    <value>خط‌نقطه</value>
+  <data name="ImageEffect_Reflection" xml:space="preserve">
+    <value>بازتاب</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_DashDotDot" xml:space="preserve">
-    <value>خط‌نقطه‌نقطه</value>
+  <data name="ImageEffect_ReplaceColor" xml:space="preserve">
+    <value>جایگزینی رنگ</value>
   </data>
-  <data name="ImageEffectEnum_DashStyle_Custom" xml:space="preserve">
-    <value>سفارشی</value>
+  <data name="ImageEffect_Resize" xml:space="preserve">
+    <value>تغییر اندازه</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Horizontal" xml:space="preserve">
-    <value>افقی</value>
+  <data name="ImageEffect_Rotate" xml:space="preserve">
+    <value>چرخش</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_Vertical" xml:space="preserve">
-    <value>عمودی</value>
+  <data name="ImageEffect_RoundedCorners" xml:space="preserve">
+    <value>گوشه‌های گرد</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_ForwardDiagonal" xml:space="preserve">
-    <value>مورب رو به جلو</value>
+  <data name="ImageEffect_Saturation" xml:space="preserve">
+    <value>اشباع</value>
   </data>
-  <data name="ImageEffectEnum_LinearGradientMode_BackwardDiagonal" xml:space="preserve">
-    <value>مورب رو به عقب</value>
+  <data name="ImageEffect_Scale" xml:space="preserve">
+    <value>مقیاس</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SystemDefault" xml:space="preserve">
-    <value>پیش‌فرض سیستم</value>
+  <data name="ImageEffect_SelectiveColor" xml:space="preserve">
+    <value>رنگ انتخابی</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixelGridFit" xml:space="preserve">
-    <value>یک بیت در هر پیکسل با انطباق شبکه</value>
+  <data name="ImageEffect_Sepia" xml:space="preserve">
+    <value>سپیا</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_SingleBitPerPixel" xml:space="preserve">
-    <value>یک بیت در هر پیکسل</value>
+  <data name="ImageEffect_Shadow" xml:space="preserve">
+    <value>سایه</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAliasGridFit" xml:space="preserve">
-    <value>هموارسازی لبه با انطباق شبکه</value>
+  <data name="ImageEffect_Sharpen" xml:space="preserve">
+    <value>واضح‌سازی</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_AntiAlias" xml:space="preserve">
-    <value>هموارسازی لبه</value>
+  <data name="ImageEffect_Skew" xml:space="preserve">
+    <value>کج‌کردن</value>
   </data>
-  <data name="ImageEffectEnum_TextRenderingHint_ClearTypeGridFit" xml:space="preserve">
-    <value>ClearType با انطباق شبکه</value>
+  <data name="ImageEffect_Slice" xml:space="preserve">
+    <value>برش نواری</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_None" xml:space="preserve">
-    <value>هیچ کدام</value>
+  <data name="ImageEffect_Smooth" xml:space="preserve">
+    <value>هموارسازی</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Top" xml:space="preserve">
-    <value>بالا</value>
+  <data name="ImageEffect_TornEdge" xml:space="preserve">
+    <value>لبه پاره</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Bottom" xml:space="preserve">
-    <value>پایین</value>
+  <data name="ImageEffect_WaveEdge" xml:space="preserve">
+    <value>لبه موجی</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Left" xml:space="preserve">
-    <value>چپ</value>
+  <data name="ImageEffectsConfirmationWindow_Continue" xml:space="preserve">
+    <value>ادامه</value>
   </data>
-  <data name="ImageEffectEnum_AnchorStyles_Right" xml:space="preserve">
-    <value>راست</value>
+  <data name="ImageEffectsConfirmationWindow_No" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Title" xml:space="preserve">
+    <value>ShareX - تأیید</value>
+  </data>
+  <data name="ImageEffectsConfirmationWindow_Yes" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="ImageEffectsWindow_Add_effect" xml:space="preserve">
+    <value>افزودن جلوه</value>
+  </data>
+  <data name="ImageEffectsWindow_Cancel" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_confirmation" xml:space="preserve">
+    <value>همه جلوه‌های پیش‌تنظیم انتخاب‌شده پاک شوند؟</value>
+  </data>
+  <data name="ImageEffectsWindow_Clear_effects" xml:space="preserve">
+    <value>پاک کردن جلوه‌ها</value>
+  </data>
+  <data name="ImageEffectsWindow_Close" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="ImageEffectsWindow_Continue" xml:space="preserve">
+    <value>ادامه</value>
+  </data>
+  <data name="ImageEffectsWindow_Custom_effect_name" xml:space="preserve">
+    <value>نام جلوه سفارشی</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_effect" xml:space="preserve">
+    <value>تکثیر جلوه</value>
+  </data>
+  <data name="ImageEffectsWindow_Duplicate_preset" xml:space="preserve">
+    <value>تکثیر پیش‌تنظیم</value>
+  </data>
+  <data name="ImageEffectsWindow_Effects" xml:space="preserve">
+    <value>جلوه‌ها</value>
+  </data>
+  <data name="ImageEffectsWindow_Enter_preset_name" xml:space="preserve">
+    <value>پیش از ایجاد بسته، نام پیش‌تنظیم را وارد کنید.</value>
+  </data>
+  <data name="ImageEffectsWindow_Image_effects_page" xml:space="preserve">
+    <value>صفحه جلوه‌های تصویر...</value>
+  </data>
+  <data name="ImageEffectsWindow_Load_from_clipboard" xml:space="preserve">
+    <value>بارگیری از حافظه موقت</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_down" xml:space="preserve">
+    <value>انتقال به پایین</value>
+  </data>
+  <data name="ImageEffectsWindow_Move_up" xml:space="preserve">
+    <value>انتقال به بالا</value>
+  </data>
+  <data name="ImageEffectsWindow_New_preset" xml:space="preserve">
+    <value>جدید پیش‌تنظیم</value>
+  </data>
+  <data name="ImageEffectsWindow_Open_image" xml:space="preserve">
+    <value>باز کردن تصویر</value>
+  </data>
+  <data name="ImageEffectsWindow_Package_preset" xml:space="preserve">
+    <value>بسته‌بندی پیش‌تنظیم...</value>
+  </data>
+  <data name="ImageEffectsWindow_Preset_name" xml:space="preserve">
+    <value>پیش‌تنظیم نام</value>
+  </data>
+  <data name="ImageEffectsWindow_Presets" xml:space="preserve">
+    <value>پیش‌تنظیم‌ها</value>
+  </data>
+  <data name="ImageEffectsWindow_Preview_name" xml:space="preserve">
+    <value>افکت های تصویر پیش‌نمایش...</value>
+  </data>
+  <data name="ImageEffectsWindow_Refresh_preview" xml:space="preserve">
+    <value>تازه‌سازی پیش‌نمایش...</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_effect" xml:space="preserve">
+    <value>حذف جلوه</value>
+  </data>
+  <data name="ImageEffectsWindow_Remove_preset" xml:space="preserve">
+    <value>حذف پیش‌تنظیم</value>
+  </data>
+  <data name="ImageEffectsWindow_Save_image" xml:space="preserve">
+    <value>ذخیره تصویر...</value>
+  </data>
+  <data name="ImageEffectsWindow_Title" xml:space="preserve">
+    <value>ShareX - جلوه‌های تصویر</value>
+  </data>
+  <data name="ImageEffectsWindow_Title_with_preview" xml:space="preserve">
+    <value>{0} - {1} × {2} - {3} میلی‌ثانیه</value>
+  </data>
+  <data name="ImageEffectsWindow_Unnamed_preset" xml:space="preserve">
+    <value>پیش‌تنظیم بی‌نام</value>
+  </data>
+  <data name="ImageEffectsWindow_Upload_image" xml:space="preserve">
+    <value>بارگذاری عکس</value>
   </data>
 </root>
